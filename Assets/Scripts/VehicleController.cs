@@ -4,11 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
 
+[RequireComponent(typeof(Rigidbody))]
 public class VehicleController : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float speed;
     [SerializeField] private float steeringStrength;
+
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void FixedUpdate()
     {
