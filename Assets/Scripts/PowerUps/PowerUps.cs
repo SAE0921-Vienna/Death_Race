@@ -10,7 +10,7 @@ public class PowerUps : MonoBehaviour
 
     public Image powerUpUI;
 
-  
+
 
     private void Update()
     {
@@ -28,9 +28,12 @@ public class PowerUps : MonoBehaviour
             powerUpList.Remove(powerUp);
             powerUpUI.color = new Color(0, 0, 0, 0);
             powerUp.PowerUpAction(this.gameObject);
+            this.powerUp = null;
+            powerUpList.Clear();
 
         }
     }
+
 
     /// <summary>
     /// Adds the powerUp to the list
