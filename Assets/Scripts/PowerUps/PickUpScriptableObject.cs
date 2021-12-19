@@ -23,11 +23,11 @@ public class PickUpScriptableObject : ScriptableObject
         {
             case powerUps.Shield:
                 Debug.Log("Shield");
-                ShieldPowerUp(player);
+                player.GetComponent<PlayerStats>().ShieldPowerUp();
                 break;
             case powerUps.Nitro:
                 Debug.Log("Nitro");
-                NitroPowerUp(player);
+                player.GetComponent<PlayerStats>().NitroPowerUp();
                 break;
             default:
                 break;
@@ -35,28 +35,6 @@ public class PickUpScriptableObject : ScriptableObject
 
     }
 
-    //---------Power Ups-----------------
-
-    private int shieldMin = 1;
-    private int shieldMax = 100;
-
-    private int nitroMin = 50;
-    private int nitroMax = 100;
-
-    private void ShieldPowerUp(GameObject player)
-    {
-        int rand = Random.Range(shieldMin, shieldMax);
-        player.GetComponent<PlayerStats>().shield += rand;
-        Debug.Log(player.GetComponent<PlayerStats>().shield);
-    }
-
-    private void NitroPowerUp(GameObject player)
-    {
-        int rand = Random.Range(nitroMin, nitroMax);
-        player.GetComponent<PlayerStats>().nitro += rand;
-        player.GetComponent<VehicleController>().speed += rand;
-        Debug.Log(player.GetComponent<PlayerStats>().nitro);
-    }
 
 
 }

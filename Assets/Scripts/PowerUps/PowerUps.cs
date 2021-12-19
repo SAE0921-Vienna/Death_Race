@@ -7,10 +7,9 @@ public class PowerUps : MonoBehaviour
 {
     public List<ScriptableObject> powerUpList;
     private PickUpScriptableObject powerUp;
+    private int powerUpListLength = 1;
 
     public Image powerUpUI;
-
-
 
     private void Update()
     {
@@ -29,8 +28,6 @@ public class PowerUps : MonoBehaviour
             powerUpUI.color = new Color(0, 0, 0, 0);
             powerUp.PowerUpAction(this.gameObject);
             this.powerUp = null;
-            powerUpList.Clear();
-
         }
     }
 
@@ -41,7 +38,7 @@ public class PowerUps : MonoBehaviour
     /// <param name="powerUp"></param>
     public void AddToPowerUpList(PickUpScriptableObject powerUp)
     {
-        if (powerUpList.Count >= 1)
+        if (powerUpList.Count >= powerUpListLength)
         {
             powerUpList.Clear();
         }
