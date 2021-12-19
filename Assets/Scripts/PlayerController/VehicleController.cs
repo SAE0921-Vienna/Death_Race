@@ -8,8 +8,8 @@ using PathCreation;
 public class VehicleController : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private float speed;
-    [SerializeField] private float steeringStrength;
+    [SerializeField] private float speed = 20f;
+    [SerializeField] private float steeringStrength = 50f;
 
 
     private void Awake()
