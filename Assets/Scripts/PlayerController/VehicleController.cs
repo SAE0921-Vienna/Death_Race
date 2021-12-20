@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -22,7 +23,12 @@ public class VehicleController : MonoBehaviour
         Accelerate(speed);
         Brake(speed);
         AntiGravity(GroundInfo());
-        SteerValue(maxSteerAngle, steerSpeed);
+        //SteerValue(maxSteerAngle, steerSpeed);
+        
+    }
+
+    private void Update()
+    {
         Steer(steeringStrength);
     }
 
@@ -56,36 +62,37 @@ public class VehicleController : MonoBehaviour
        
     }
 
-    private float t;
-    private void SteerValue(float maxSteerStrength, float steerSpeed)
+    private float t = 0.5f;
+    private float SteerValue(float maxSteerStrength, float steerSpeed)
     {
-        steeringStrength = Mathf.Clamp(steeringStrength, -maxSteerStrength, maxSteerStrength);
-        steeringStrength = Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
-        
+        t = Mathf.Clamp01(t);
         if (Input.GetKey(KeyCode.A))
         {
-            t += 0.01f * steerSpeed;
+            t -= .01f * steerSpeed * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            t -= 0.01f * steerSpeed;
+            t += .01f * steerSpeed * Time.deltaTime;
         }
         else
         {
-            steeringStrength = Mathf.MoveTowards(steeringStrength, 0.5f, steerSpeed);
+            t = Mathf.MoveTowards(t, 0.5f, .01f * steerSpeed);
         }
+        return steeringStrength = Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
     }
 
     private void Steer(float steerStrength)
     {
         var normal = GroundInfo().normal;
-        var steeringAngle = new Vector3(normal.x, steerStrength, normal.z);
+        var steeringAngle = new Vector3(normal.x, SteerValue(maxSteerAngle, steerSpeed), normal.z);
+
+        print(steeringAngle);
         
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(-steeringAngle * Time.fixedDeltaTime));
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
     }
 
     public float AngleGetter()
     {
-        return steeringStrength;
+        return t;
     }
 }
