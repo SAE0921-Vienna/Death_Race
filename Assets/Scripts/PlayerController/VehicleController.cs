@@ -9,6 +9,7 @@ public class VehicleController : MonoBehaviour
     
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float maxSteerAngle, steerSpeed;
+    [SerializeField] private float sideThrustAmount;
     
     private float steeringStrength;
 
@@ -24,7 +25,7 @@ public class VehicleController : MonoBehaviour
         Brake(speed);
         AntiGravity(GroundInfo());
         //SteerValue(maxSteerAngle, steerSpeed);
-        
+        SideThrust();
     }
 
     private void Update()
@@ -44,7 +45,19 @@ public class VehicleController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(new Vector3(0f, 0f, -brakeStrength), ForceMode.Force);
+            rb.AddForce(-transform.forward * brakeStrength, ForceMode.Force);
+        }
+    }
+
+    private void SideThrust()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.AddForce(-transform.right * sideThrustAmount * Time.fixedDeltaTime, ForceMode.Force);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce(transform.right* sideThrustAmount * Time.fixedDeltaTime, ForceMode.Force);
         }
     }
 
@@ -76,7 +89,7 @@ public class VehicleController : MonoBehaviour
         }
         else
         {
-            t = Mathf.MoveTowards(t, 0.5f, .01f * steerSpeed);
+            t = Mathf.MoveTowards(t, 0.5f, .01f * steerSpeed * Time.deltaTime);
         }
         return steeringStrength = Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
     }

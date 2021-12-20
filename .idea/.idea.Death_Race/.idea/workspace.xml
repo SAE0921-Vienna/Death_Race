@@ -5,57 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-Asset Main.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-Asset Main.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-Asset Main_Renderer.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/URP-Asset Main_Renderer.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Building.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Building.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_FlagGreen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_FlagGreen.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Gold.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Gold.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Landscape.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Landscape.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_LightIllum.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_LightIllum.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_LightMetal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_LightMetal.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_MountainGlow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_MountainGlow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Rock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Rock.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_SphereSkyReflect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_SphereSkyReflect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_TreeLeaves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_TreeLeaves.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_TreeTrunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_TreeTrunk.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/Landscape.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/Landscape.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/TreeLeaves.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/TreeLeaves.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/TreeTrunk.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/TreeTrunk.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/rock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/rock.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Customized Weapons - Low poly/Material/Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Customized Weapons - Low poly/Material/Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Corpus_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Corpus_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Corpus_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Corpus_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Frame.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Frame.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/LOWPOLY-Spaceship/Materials/Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Brown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Brown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Dark Grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Dark Grey.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Green.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/NitroMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/NitroMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PickUpBox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PickUpBox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PickUpMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PickUpMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/ShieldMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ShieldMaterial.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/SpaceshipRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/SpaceshipRotator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +73,7 @@
       <updated>1639955722832</updated>
       <workItem from="1639955727007" duration="475000" />
       <workItem from="1639998266102" duration="9346000" />
-      <workItem from="1640012172762" duration="3146000" />
+      <workItem from="1640012172762" duration="7725000" />
     </task>
     <servers />
   </component>
