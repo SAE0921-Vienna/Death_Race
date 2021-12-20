@@ -6,11 +6,13 @@ namespace PlayerController
     public class SpaceshipRotator : MonoBehaviour
     {
         [Range(0f, 90f)] [SerializeField] private float maxRotation;
+        private GameObject spaceShip;
         private VehicleController _vehicleController;
 
         private void Awake()
         {
-            _vehicleController = GameObject.Find("Spaceship").GetComponent<VehicleController>();
+            spaceShip = GameObject.Find("Spaceship");
+            _vehicleController = spaceShip.GetComponent<VehicleController>();
         }
 
         private void Update()
@@ -20,9 +22,7 @@ namespace PlayerController
 
         private void RotateSpaceship(float rotationStrength, float maxRotation)
         {
-            Vector3 targetRotation =
-                new Vector3(transform.localRotation.x, transform.localRotation.y, rotationStrength);
-            transform.localRotation = Quaternion.Euler(Vector3.Lerp(transform.localRotation.eulerAngles, targetRotation, rotationStrength));
+            transform.rotation = Quaternion.Euler(spaceShip.transform.rotation.eulerAngles + new Vector3(0f, 0f, Mathf.Lerp(maxRotation, -maxRotation, rotationStrength)));
         }
     }
 }
