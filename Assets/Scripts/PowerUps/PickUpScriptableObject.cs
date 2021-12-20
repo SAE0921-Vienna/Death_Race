@@ -23,11 +23,11 @@ public class PickUpScriptableObject : ScriptableObject
         {
             case powerUps.Shield:
                 Debug.Log("Shield");
-                player.GetComponent<PlayerStats>().ShieldPowerUp();
+                player.GetComponent<PowerUps>().ShieldPowerUp();
                 break;
             case powerUps.Nitro:
                 Debug.Log("Nitro");
-                player.GetComponent<PlayerStats>().NitroPowerUp();
+                player.GetComponent<PowerUps>().NitroPowerUp();
                 break;
             default:
                 break;

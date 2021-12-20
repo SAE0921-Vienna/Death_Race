@@ -7,13 +7,35 @@ public class PowerUps : MonoBehaviour
 {
     public List<ScriptableObject> powerUpList;
     private PickUpScriptableObject powerUp;
+    private PlayerStats player;
     private int powerUpListLength = 1;
 
     public Image powerUpUI;
 
+    private void Awake()
+    {
+        player = GetComponent<PlayerStats>();
+
+        player.speed = GetComponent<VehicleController>().speed;
+        transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
+
+    }
+
+
     private void Update()
     {
-        ActivatePowerUp(powerUp);
+        player.timer -= Time.deltaTime;
+        if (player.timer < 0)
+        {
+            player.timer = -1;
+            ResetPowerUps();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && powerUp != null)
+        {
+            ActivatePowerUp(powerUp);
+        }
+
     }
 
     /// <summary>
@@ -22,13 +44,11 @@ public class PowerUps : MonoBehaviour
     /// <param name="powerUp"></param>
     public void ActivatePowerUp(PickUpScriptableObject powerUp)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && powerUp != null)
-        {
-            powerUpList.Remove(powerUp);
-            powerUpUI.color = new Color(0, 0, 0, 0);
-            powerUp.PowerUpAction(this.gameObject);
-            this.powerUp = null;
-        }
+
+        powerUpList.Remove(powerUp);
+        powerUpUI.color = new Color(0, 0, 0, 0);
+        powerUp.PowerUpAction(this.gameObject);
+        this.powerUp = null;
     }
 
 
@@ -49,5 +69,43 @@ public class PowerUps : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Resets the powerups after some time
+    /// </summary>
+    public void ResetPowerUps()
+    {
+        if (player.shield)
+        {
+            player.shield = false;
+            transform.GetChild(0).gameObject.SetActive(false);
 
+        }
+        if (player.nitro)
+        {
+            player.nitro = false;
+            //transform.GetChild(1).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
+            GetComponent<VehicleController>().speed = player.speed;
+        }
+    }
+
+    #region Power Up Methods
+    public void ShieldPowerUp()
+    {
+        player.timer = player.timerCooldown;
+        transform.GetChild(0).gameObject.SetActive(true);
+        player.shield = true;
+    }
+
+    public void NitroPowerUp()
+    {
+        player.timer = player.timerCooldown;
+        //transform.GetChild(1).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
+        GetComponent<VehicleController>().speed += player.nitroSpeed;
+        player.nitro = true;
+
+    }
+
+    #endregion
 }
