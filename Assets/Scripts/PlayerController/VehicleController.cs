@@ -1,15 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using PathCreation;
 
 [RequireComponent(typeof(Rigidbody))]
 public class VehicleController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
+    // Encapsulate this.
     public float speed = 20f;
-    [SerializeField] private float steeringStrength = 50f;
+    
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private float maxSteerAngle, steerSpeed;
+    
+    private float steeringStrength;
 
 
     private void Awake()
@@ -21,7 +21,8 @@ public class VehicleController : MonoBehaviour
     {
         Accelerate(speed);
         Brake(speed);
-        AntiGravity(CheckGround());
+        AntiGravity(GroundInfo());
+        SteerValue(maxSteerAngle, steerSpeed);
         Steer(steeringStrength);
     }
 
@@ -29,7 +30,7 @@ public class VehicleController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(new Vector3(0f, 0f, accelerationSpeed), ForceMode.Force);
+            rb.AddForce(transform.forward * accelerationSpeed, ForceMode.Force);
         }
     }
 
@@ -41,32 +42,50 @@ public class VehicleController : MonoBehaviour
         }
     }
 
-    private RaycastHit CheckGround()
+    private RaycastHit GroundInfo()
     {
-        return Physics.Raycast(transform.position, -transform.up, out var hit) ? hit : new RaycastHit();
+        Physics.Raycast(transform.position, -transform.up, out var hit);
+        return hit;
     }
 
     private void AntiGravity(RaycastHit hit)
     {
-        //Smooth Interpolation towards target hit point
-        transform.position = Vector3.MoveTowards(transform.position, hit.point + hit.normal, 1);
-        //Rotates the Spaceship along the normal of the road
-        transform.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+        rb.AddForce(-GroundInfo().normal * 100, ForceMode.Force);
 
-        print(hit.normal);
+       // print(hit.normal);
+       
+    }
+
+    private float t;
+    private void SteerValue(float maxSteerStrength, float steerSpeed)
+    {
+        steeringStrength = Mathf.Clamp(steeringStrength, -maxSteerStrength, maxSteerStrength);
+        steeringStrength = Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
+        
+        if (Input.GetKey(KeyCode.A))
+        {
+            t += 0.01f * steerSpeed;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            t -= 0.01f * steerSpeed;
+        }
+        else
+        {
+            steeringStrength = Mathf.MoveTowards(steeringStrength, 0.5f, steerSpeed);
+        }
     }
 
     private void Steer(float steerStrength)
     {
-        var steeringAngle = new Vector3(0f, steerStrength, 0f);
+        var normal = GroundInfo().normal;
+        var steeringAngle = new Vector3(normal.x, steerStrength, normal.z);
+        
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(-steeringAngle * Time.fixedDeltaTime));
+    }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.MoveRotation(Quaternion.Euler(-steeringAngle * Time.fixedDeltaTime));
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.MoveRotation(Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
-        }
+    public float AngleGetter()
+    {
+        return steeringStrength;
     }
 }
