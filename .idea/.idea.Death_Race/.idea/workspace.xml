@@ -7,8 +7,6 @@
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/SpaceshipRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/SpaceshipRotator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +71,7 @@
       <updated>1639955722832</updated>
       <workItem from="1639955727007" duration="475000" />
       <workItem from="1639998266102" duration="9346000" />
-      <workItem from="1640012172762" duration="7725000" />
+      <workItem from="1640012172762" duration="8848000" />
     </task>
     <servers />
   </component>

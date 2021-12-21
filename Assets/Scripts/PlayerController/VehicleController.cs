@@ -10,6 +10,7 @@ public class VehicleController : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float maxSteerAngle, steerSpeed;
     [SerializeField] private float sideThrustAmount;
+    [SerializeField] private float brakeForce;
     
     private float steeringStrength;
 
@@ -22,7 +23,7 @@ public class VehicleController : MonoBehaviour
     private void FixedUpdate()
     {
         Accelerate(speed);
-        Brake(speed);
+        Brake(brakeForce);
         AntiGravity(GroundInfo());
         //SteerValue(maxSteerAngle, steerSpeed);
         SideThrust();
@@ -49,6 +50,9 @@ public class VehicleController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Adds force towards the steering direction, to make steering feel more responsive.
+    /// </summary>
     private void SideThrust()
     {
         if (Input.GetKey(KeyCode.A))
@@ -69,13 +73,15 @@ public class VehicleController : MonoBehaviour
 
     private void AntiGravity(RaycastHit hit)
     {
+        //This kinda sucks, but it will do for now.
         rb.AddForce(-GroundInfo().normal * 100, ForceMode.Force);
-
-       // print(hit.normal);
-       
     }
 
+    
     private float t = 0.5f;
+    /// <summary>
+    /// Returns a float between 0 and 1, which represents interpolator between 2 extremes of steering (-maxSteering, maxSteering).
+    /// </summary>
     private float SteerValue(float maxSteerStrength, float steerSpeed)
     {
         t = Mathf.Clamp01(t);
