@@ -7,6 +7,7 @@ public class PickUpScriptableObject : ScriptableObject
 {
     public new string name;
     public Sprite icon;
+    public GameObject powerUpPrefab;
     public powerUps powerUpType;
 
     public enum powerUps

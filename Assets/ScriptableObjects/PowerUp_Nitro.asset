@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Speed
   icon: {fileID: 21300000, guid: 1d0c62d5a61a2c5449e8bd69032ddbb8, type: 3}
+  powerUpPrefab: {fileID: 1823087282522076, guid: f1c03e36cea56a94fa6f58010cc58f51, type: 3}
   powerUpType: 1

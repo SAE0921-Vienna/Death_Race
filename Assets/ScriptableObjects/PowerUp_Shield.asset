@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: ShieldPowerUp
   icon: {fileID: 21300000, guid: 59af8c05fbb3f3e4cad9e7a9a4ae6168, type: 3}
+  powerUpPrefab: {fileID: 1052568736053524, guid: 8377235c67ae2dd43afcdc05fa8f96f0, type: 3}
+  powerUpType: 0
