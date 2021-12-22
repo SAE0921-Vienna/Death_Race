@@ -1,52 +1,63 @@
-using System;
 using UnityEngine;
+
+// Convert all this to the new input system.
 
 [RequireComponent(typeof(Rigidbody))]
 public class VehicleController : MonoBehaviour
 {
-    // Encapsulate this.
-    public float speed = 20f;
+    [Header("Acceleration and Braking")]
+    [Range(0.1f, 5f)]
+    public float mAccelerationConstant = 1f;
+    [Range(50f, 300f)]
+    public float mMaxSpeed;
     
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private float maxSteerAngle, steerSpeed;
-    [SerializeField] private float sideThrustAmount;
+    [Range(10f, 200f)]
     [SerializeField] private float brakeForce;
+    [Range(0.1f, 5f)]
+    [SerializeField] private float decelerationConstant;
+    [SerializeField] private AnimationCurve accelerationCurve;
     
-    private float steeringStrength;
-
-
+    [Header("Steering")]
+    [Range(0f, 1000f)]
+    [SerializeField] private float sideThrustAmount;
+    [Range(0f, 200f)]
+    [SerializeField] private float maxSteerAngle, steerSpeed;
+    
+    
+    
+    private Rigidbody rBody;
+    
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rBody = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
     {
-        Accelerate(speed);
+        Accelerate();
         Brake(brakeForce);
-        AntiGravity(GroundInfo());
-        //SteerValue(maxSteerAngle, steerSpeed);
+        AntiGravity();
         SideThrust();
     }
 
     private void Update()
     {
-        Steer(steeringStrength);
+        Steer();
     }
 
-    private void Accelerate(float accelerationSpeed)
+    private float currentSpeed;
+    
+    private void Accelerate()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.AddForce(transform.forward * accelerationSpeed, ForceMode.Force);
-        }
+        currentSpeed = Input.GetKey(KeyCode.W) ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant);
+        rBody.AddForce(transform.forward * mMaxSpeed * accelerationCurve.Evaluate(currentSpeed), ForceMode.Force);
     }
 
     private void Brake(float brakeStrength)
     {
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(-transform.forward * brakeStrength, ForceMode.Force);
+            rBody.AddForce(-transform.forward * brakeStrength, ForceMode.Force);
         }
     }
 
@@ -57,11 +68,11 @@ public class VehicleController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(-transform.right * sideThrustAmount * Time.fixedDeltaTime, ForceMode.Force);
+            rBody.AddForce(-transform.right * sideThrustAmount * Time.fixedDeltaTime, ForceMode.Force);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(transform.right* sideThrustAmount * Time.fixedDeltaTime, ForceMode.Force);
+            rBody.AddForce(transform.right * sideThrustAmount * Time.fixedDeltaTime, ForceMode.Force);
         }
     }
 
@@ -71,14 +82,14 @@ public class VehicleController : MonoBehaviour
         return hit;
     }
 
-    private void AntiGravity(RaycastHit hit)
+    private void AntiGravity()
     {
         //This kinda sucks, but it will do for now.
-        rb.AddForce(-GroundInfo().normal * 100, ForceMode.Force);
+        rBody.AddForce(-GroundInfo().normal * 100, ForceMode.Force);
     }
 
-    
     private float t = 0.5f;
+    
     /// <summary>
     /// Returns a float between 0 and 1, which represents interpolator between 2 extremes of steering (-maxSteering, maxSteering).
     /// </summary>
@@ -97,17 +108,21 @@ public class VehicleController : MonoBehaviour
         {
             t = Mathf.MoveTowards(t, 0.5f, .01f * steerSpeed * Time.deltaTime);
         }
-        return steeringStrength = Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
+        return Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
     }
 
-    private void Steer(float steerStrength)
+    /// <summary>
+    /// Applies the rotation of the Y-Axis combined with the normal of the road, to make steering work everywhere,
+    /// regardless of the world-coordinate rotation of the road.
+    /// </summary>
+    private void Steer()
     {
         var normal = GroundInfo().normal;
         var steeringAngle = new Vector3(normal.x, SteerValue(maxSteerAngle, steerSpeed), normal.z);
 
         print(steeringAngle);
         
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
+        rBody.MoveRotation(rBody.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
     }
 
     public float AngleGetter()

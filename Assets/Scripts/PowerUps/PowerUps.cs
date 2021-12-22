@@ -16,7 +16,7 @@ public class PowerUps : MonoBehaviour
     {
         player = GetComponent<PlayerStats>();
 
-        player.speed = GetComponent<VehicleController>().speed;
+        player.speed = GetComponent<VehicleController>().mAccelerationConstant;
         transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
 
     }
@@ -85,7 +85,7 @@ public class PowerUps : MonoBehaviour
             player.nitro = false;
             //transform.GetChild(1).gameObject.SetActive(false);
             transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
-            GetComponent<VehicleController>().speed = player.speed;
+            GetComponent<VehicleController>().mAccelerationConstant = player.speed;
         }
     }
 
@@ -102,7 +102,7 @@ public class PowerUps : MonoBehaviour
         player.timer = player.timerCooldown;
         //transform.GetChild(1).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
-        GetComponent<VehicleController>().speed += player.nitroSpeed;
+        GetComponent<VehicleController>().mAccelerationConstant += player.nitroSpeed;
         player.nitro = true;
 
     }
