@@ -22,6 +22,8 @@ public class VehicleController : MonoBehaviour
     [SerializeField] private float sideThrustAmount;
     [Range(0f, 200f)]
     [SerializeField] private float maxSteerAngle, steerSpeed;
+    [Range(50f, 1000f)]
+    [SerializeField] private float downForceMultiplier;
     
     
     
@@ -85,7 +87,7 @@ public class VehicleController : MonoBehaviour
     private void AntiGravity()
     {
         //This kinda sucks, but it will do for now.
-        rBody.AddForce(-GroundInfo().normal * 100, ForceMode.Force);
+        rBody.AddForce(-GroundInfo().normal * downForceMultiplier, ForceMode.Force);
     }
 
     private float t = 0.5f;
@@ -106,7 +108,7 @@ public class VehicleController : MonoBehaviour
         }
         else
         {
-            t = Mathf.MoveTowards(t, 0.5f, .01f * steerSpeed * Time.deltaTime);
+            t = Mathf.MoveTowards(t, 0.5f, .005f * steerSpeed * Time.deltaTime);
         }
         return Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
     }
