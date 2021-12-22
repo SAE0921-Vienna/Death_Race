@@ -6,9 +6,9 @@ using UnityEngine;
 public class VehicleController : MonoBehaviour
 {
     [Header("Acceleration and Braking")]
-    [Range(0.1f, 5f)]
+    [Range(0.1f, 20f)]
     public float mAccelerationConstant = 1f;
-    [Range(50f, 300f)]
+    [Range(50f, 1000f)]
     public float mMaxSpeed;
     
     [Range(10f, 200f)]

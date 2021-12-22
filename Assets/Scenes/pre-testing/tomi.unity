@@ -230,11 +230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06446622
+      value: 0.06446624
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.78353137
+      value: -0.7835313
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -498,11 +498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06446622
+      value: 0.06446624
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.78353137
+      value: -0.7835313
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1006,9 +1006,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a19594bcc1037b791fde9d9e823e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mAccelerationConstant: 5
-  mMaxSpeed: 300
-  brakeForce: 500
+  mAccelerationConstant: 9.9
+  mMaxSpeed: 1000
+  brakeForce: 200
   decelerationConstant: 2.55
   accelerationCurve:
     serializedVersion: 2
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   sideThrustAmount: 250
   maxSteerAngle: 100
   steerSpeed: 200
-  downForceMultiplier: 0
+  downForceMultiplier: 1000
 --- !u!54 &1150493393
 Rigidbody:
   m_ObjectHideFlags: 0
