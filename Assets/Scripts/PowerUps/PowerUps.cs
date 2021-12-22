@@ -2,37 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PowerUps : MonoBehaviour
 {
     public List<ScriptableObject> powerUpList;
     private PickUpScriptableObject powerUp;
-    private PlayerStats player;
+    private PlayerWeapon playerWeapon;
+    private PlayerStats playerStats;
     private Transform powerupParent;
     private int powerUpListLength = 1;
 
     public Image powerUpUI;
+    public TextMeshProUGUI ammoAmountUI;
 
     private void Awake()
     {
-        player = GetComponent<PlayerStats>();
+        playerStats = GetComponent<PlayerStats>();
         powerupParent = transform.GetChild(0);
 
-        player.speed = GetComponent<VehicleController>().mAccelerationConstant;
+        playerStats.normalSpeed = GetComponent<VehicleController>().mAccelerationConstant;
 
     }
 
 
     private void Update()
     {
-        player.timer -= Time.deltaTime;
-        if (player.timer < 0)
+        playerStats.timer -= Time.deltaTime;
+
+        ammoAmountUI.text = playerStats.ammo.ToString();
+
+        if (playerStats.timer < 0)
         {
-            player.timer = -1;
+            playerStats.timer = -1;
             ResetPowerUps();
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && powerUp != null)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && powerUp != null)
         {
             ActivatePowerUp(powerUp);
         }
@@ -75,37 +81,56 @@ public class PowerUps : MonoBehaviour
     /// </summary>
     public void ResetPowerUps()
     {
-        if (player.shield)
+
+        if (playerStats.shield)
         {
-            player.shield = false;
+            playerStats.shield = false;
             powerupParent.GetChild(0).gameObject.SetActive(false);
 
         }
-        if (player.nitro)
+        if (playerStats.nitro)
         {
-            player.nitro = false;
+            playerStats.nitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
             //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
-            GetComponent<VehicleController>().mAccelerationConstant = player.speed;
+            GetComponent<VehicleController>().mAccelerationConstant = playerStats.normalSpeed;
+        }
+        if (playerStats.canShoot && playerStats.ammo <= 0)
+        {
+            playerStats.canShoot = false;
+            ammoAmountUI.gameObject.SetActive(false);
+
         }
     }
 
     #region Power Up Methods
     public void ShieldPowerUp()
     {
-        player.timer = player.timerCooldown;
+        playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(0).gameObject.SetActive(true);
-        player.shield = true;
+        playerStats.shield = true;
     }
 
     public void NitroPowerUp()
     {
-        player.timer = player.timerCooldown;
+        playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(1).gameObject.SetActive(true);
         //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
-        GetComponent<VehicleController>().mAccelerationConstant += player.nitroSpeed;
-        player.nitro = true;
+        GetComponent<VehicleController>().mAccelerationConstant += playerStats.nitroSpeed;
+        playerStats.nitro = true;
 
+    }
+
+    public void AmmoPowerUp()
+    {
+        ammoAmountUI.gameObject.SetActive(true);
+        if (playerStats.ammo < playerStats.ammoLimit)
+        {
+            playerStats.ammo += playerStats.ammoAdd;
+            if (playerStats.ammo > playerStats.ammoLimit) playerStats.ammo = playerStats.ammoLimit;
+        }
+        ammoAmountUI.text = playerStats.ammo.ToString();
+        playerStats.canShoot = true;
     }
 
     #endregion

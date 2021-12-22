@@ -14,6 +14,7 @@ public class PickUpScriptableObject : ScriptableObject
     {
         Shield,
         Nitro,
+        Ammo,
 
     }
 
@@ -23,12 +24,16 @@ public class PickUpScriptableObject : ScriptableObject
         switch (powerUpType)
         {
             case powerUps.Shield:
-                Debug.Log("Shield");
+                //Debug.Log("Shield");
                 player.GetComponent<PowerUps>().ShieldPowerUp();
                 break;
             case powerUps.Nitro:
-                Debug.Log("Nitro");
+                //Debug.Log("Nitro");
                 player.GetComponent<PowerUps>().NitroPowerUp();
+                break;
+            case powerUps.Ammo:
+                //Debug.Log("Ammo");
+                player.GetComponent<PowerUps>().AmmoPowerUp();
                 break;
             default:
                 break;
