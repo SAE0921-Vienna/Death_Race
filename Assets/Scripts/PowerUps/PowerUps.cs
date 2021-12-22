@@ -8,6 +8,7 @@ public class PowerUps : MonoBehaviour
     public List<ScriptableObject> powerUpList;
     private PickUpScriptableObject powerUp;
     private PlayerStats player;
+    private Transform powerupParent;
     private int powerUpListLength = 1;
 
     public Image powerUpUI;
@@ -15,9 +16,9 @@ public class PowerUps : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<PlayerStats>();
+        powerupParent = transform.GetChild(0);
 
         player.speed = GetComponent<VehicleController>().mAccelerationConstant;
-        transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
 
     }
 
@@ -77,14 +78,14 @@ public class PowerUps : MonoBehaviour
         if (player.shield)
         {
             player.shield = false;
-            transform.GetChild(0).gameObject.SetActive(false);
+            powerupParent.GetChild(0).gameObject.SetActive(false);
 
         }
         if (player.nitro)
         {
             player.nitro = false;
-            //transform.GetChild(1).gameObject.SetActive(false);
-            transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
+            powerupParent.GetChild(1).gameObject.SetActive(false);
+            //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
             GetComponent<VehicleController>().mAccelerationConstant = player.speed;
         }
     }
@@ -93,15 +94,15 @@ public class PowerUps : MonoBehaviour
     public void ShieldPowerUp()
     {
         player.timer = player.timerCooldown;
-        transform.GetChild(0).gameObject.SetActive(true);
+        powerupParent.GetChild(0).gameObject.SetActive(true);
         player.shield = true;
     }
 
     public void NitroPowerUp()
     {
         player.timer = player.timerCooldown;
-        //transform.GetChild(1).gameObject.SetActive(true);
-        transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
+        powerupParent.GetChild(1).gameObject.SetActive(true);
+        //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
         GetComponent<VehicleController>().mAccelerationConstant += player.nitroSpeed;
         player.nitro = true;
 
