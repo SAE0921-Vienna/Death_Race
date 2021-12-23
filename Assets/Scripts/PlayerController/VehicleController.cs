@@ -6,9 +6,9 @@ using UnityEngine;
 public class VehicleController : MonoBehaviour
 {
     [Header("Acceleration and Braking")]
-    [Range(0.1f, 20f)]
+    [Range(0.1f, 3f)]
     public float mAccelerationConstant = 1f;
-    [Range(50f, 1000f)]
+    [Range(50f, 3000f)]
     public float mMaxSpeed;
     
     [Range(10f, 800f)]
@@ -22,7 +22,7 @@ public class VehicleController : MonoBehaviour
     [SerializeField] private float sideThrustAmount;
     [Range(0f, 200f)]
     [SerializeField] private float maxSteerAngle, steerSpeed;
-    [Range(50f, 1000f)]
+    [Range(50f, 2000f)]
     [SerializeField] private float downForceMultiplier;
     
     
@@ -46,7 +46,8 @@ public class VehicleController : MonoBehaviour
     {
         Steer();
     }
-
+    
+    [HideInInspector]
     public float currentSpeed;
     
     private void Accelerate()

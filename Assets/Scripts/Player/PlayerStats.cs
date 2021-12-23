@@ -33,7 +33,7 @@ public class PlayerStats : MonoBehaviour
     private void Update()
     {
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
-        speedUnit.text = currentSpeed.ToString();
+        if (speedUnit != null) speedUnit.text = currentSpeed.ToString();
     }
 
 }

@@ -8,7 +8,7 @@ public class PowerUps : MonoBehaviour
 {
     public List<ScriptableObject> powerUpList;
     private PickUpScriptableObject powerUp;
-    private PlayerWeapon playerWeapon;
+    //private PlayerWeapon playerWeapon;
     private PlayerStats playerStats;
     private Transform powerupParent;
     private int powerUpListLength = 1;
