@@ -21,7 +21,7 @@ public class PowerUps : MonoBehaviour
         playerStats = GetComponent<PlayerStats>();
         powerupParent = transform.GetChild(0);
 
-        playerStats.normalSpeed = GetComponent<VehicleController>().mAccelerationConstant;
+        playerStats.normalMaxSpeed = GetComponent<VehicleController>().mMaxSpeed;
 
     }
 
@@ -30,7 +30,10 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer -= Time.deltaTime;
 
-        ammoAmountUI.text = playerStats.ammo.ToString();
+        if (ammoAmountUI != null)
+        {
+            ammoAmountUI.text = playerStats.ammo.ToString();
+        }
 
         if (playerStats.timer < 0)
         {
@@ -93,7 +96,7 @@ public class PowerUps : MonoBehaviour
             playerStats.nitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
             //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
-            GetComponent<VehicleController>().mAccelerationConstant = playerStats.normalSpeed;
+            GetComponent<VehicleController>().mMaxSpeed = playerStats.normalMaxSpeed;
         }
         if (playerStats.canShoot && playerStats.ammo <= 0)
         {
@@ -116,9 +119,8 @@ public class PowerUps : MonoBehaviour
         playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(1).gameObject.SetActive(true);
         //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
-        GetComponent<VehicleController>().mAccelerationConstant += playerStats.nitroSpeed;
+        GetComponent<VehicleController>().mMaxSpeed += playerStats.nitroSpeed;
         playerStats.nitro = true;
-
     }
 
     public void AmmoPowerUp()

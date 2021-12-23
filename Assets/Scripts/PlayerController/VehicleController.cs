@@ -11,7 +11,7 @@ public class VehicleController : MonoBehaviour
     [Range(50f, 1000f)]
     public float mMaxSpeed;
     
-    [Range(10f, 200f)]
+    [Range(10f, 800f)]
     [SerializeField] private float brakeForce;
     [Range(0.1f, 5f)]
     [SerializeField] private float decelerationConstant;
@@ -47,7 +47,7 @@ public class VehicleController : MonoBehaviour
         Steer();
     }
 
-    private float currentSpeed;
+    public float currentSpeed;
     
     private void Accelerate()
     {
