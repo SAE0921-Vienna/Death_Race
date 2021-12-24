@@ -9,12 +9,14 @@ public class PickUpScriptableObject : ScriptableObject
     public Sprite icon;
     public GameObject powerUpPrefab;
     public powerUps powerUpType;
+    
 
     public enum powerUps
     {
         Shield,
         Nitro,
         Ammo,
+        Bomb
 
     }
 
@@ -34,6 +36,10 @@ public class PickUpScriptableObject : ScriptableObject
             case powerUps.Ammo:
                 //Debug.Log("Ammo");
                 player.GetComponent<PowerUps>().AmmoPowerUp();
+                break;
+            case powerUps.Bomb:
+                //Debug.Log("Bomb");
+                player.GetComponent<PowerUps>().BombPowerUp();
                 break;
             default:
                 break;

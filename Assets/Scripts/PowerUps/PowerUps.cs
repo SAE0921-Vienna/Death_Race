@@ -22,7 +22,6 @@ public class PowerUps : MonoBehaviour
         powerupParent = transform.GetChild(0);
 
         playerStats.normalMaxSpeed = GetComponent<VehicleController>().mMaxSpeed;
-
     }
 
 
@@ -104,6 +103,10 @@ public class PowerUps : MonoBehaviour
             ammoAmountUI.gameObject.SetActive(false);
 
         }
+        if (playerStats.bomb)
+        {
+            playerStats.bomb = false;
+        }
     }
 
     #region Power Up Methods
@@ -133,6 +136,17 @@ public class PowerUps : MonoBehaviour
         }
         ammoAmountUI.text = playerStats.ammo.ToString();
         playerStats.canShoot = true;
+    }
+
+    public void BombPowerUp()
+    {       
+        playerStats.timer = playerStats.timerCooldown;
+        GameObject bombClone = Instantiate(powerUp.powerUpPrefab, powerupParent.GetChild(2).transform.position , Quaternion.identity);
+        bombClone.transform.localScale = playerStats.bombScale;
+        bombClone.AddComponent<Rigidbody>();
+        bombClone.AddComponent<SphereCollider>();
+        playerStats.bomb = true;
+        Destroy(bombClone, playerStats.bombTimer);
     }
 
     #endregion
