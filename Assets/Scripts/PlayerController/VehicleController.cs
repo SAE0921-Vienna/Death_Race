@@ -24,6 +24,8 @@ public class VehicleController : MonoBehaviour
     [SerializeField] private float maxSteerAngle, steerSpeed;
     [Range(50f, 2000f)]
     [SerializeField] private float downForceMultiplier;
+
+    [Header("MISC")] [SerializeField] private float rotationalSmoothingDelta;
     
     
     
@@ -87,8 +89,12 @@ public class VehicleController : MonoBehaviour
 
     private void AntiGravity()
     {
-        //This kinda sucks, but it will do for now.
-        rBody.AddForce(-GroundInfo().normal * downForceMultiplier, ForceMode.Force);
+        var forceDirection =
+            Vector3.MoveTowards(-transform.up, -GroundInfo().normal, rotationalSmoothingDelta);
+
+        print(forceDirection);
+
+        rBody.AddForce(forceDirection * downForceMultiplier, ForceMode.Force);
     }
 
     private float t = 0.5f;
@@ -122,8 +128,7 @@ public class VehicleController : MonoBehaviour
     {
         var normal = GroundInfo().normal;
         var steeringAngle = new Vector3(normal.x, SteerValue(maxSteerAngle, steerSpeed), normal.z);
-
-        print(steeringAngle);
+        
         
         rBody.MoveRotation(rBody.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
     }

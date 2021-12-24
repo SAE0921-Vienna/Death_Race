@@ -1,3 +1,4 @@
+using Audio;
 using UnityEngine;
 
 namespace Weapons
@@ -12,6 +13,8 @@ namespace Weapons
         {
             GameObject projectile = Instantiate(laserPrefab, instantiationLocation.position, Quaternion.identity);
             projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed));
+            
+            AudioManager.PlaySound(AudioManager.Sound.LaserSound);
         }
     }
 }
