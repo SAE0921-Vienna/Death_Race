@@ -42,6 +42,7 @@ public class PlayerStats : MonoBehaviour
     {
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
         if (speedUnit != null) speedUnit.text = currentSpeed.ToString();
+      
     }
 
 }

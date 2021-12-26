@@ -88,6 +88,8 @@ public class PowerUps : MonoBehaviour
         {
             playerStats.shield = false;
             powerupParent.GetChild(0).gameObject.SetActive(false);
+            playerStats.gameObject.transform.tag = "Player";
+
 
         }
         if (playerStats.nitro)
@@ -114,6 +116,7 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(0).gameObject.SetActive(true);
+        playerStats.gameObject.transform.tag = "Untagged";
         playerStats.shield = true;
     }
 

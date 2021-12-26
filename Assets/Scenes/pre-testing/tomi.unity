@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 5654157430322735983, guid: e1a5065ec43a8f107bdf7b5efb981857, type: 3}
   instantiationLocation: {fileID: 915833326}
-  projectileSpeed: 4000
+  projectileSpeed: 100
   projectileLifeTime: 5
 --- !u!1 &966503277
 GameObject:

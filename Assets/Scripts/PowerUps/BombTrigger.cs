@@ -33,7 +33,8 @@ public class BombTrigger : MonoBehaviour
         if (hasBeenActivated && collision.transform.tag == "Player")
         {
             boomEffect.transform.parent = null;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }
