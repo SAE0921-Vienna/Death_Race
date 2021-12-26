@@ -139,14 +139,13 @@ public class PowerUps : MonoBehaviour
     }
 
     public void BombPowerUp()
-    {       
-        playerStats.timer = playerStats.timerCooldown;
-        GameObject bombClone = Instantiate(powerUp.powerUpPrefab, powerupParent.GetChild(2).transform.position , Quaternion.identity);
+    {
+        GameObject bombClone = Instantiate(powerUp.powerUpPrefab, powerupParent.GetChild(2).transform.position, Quaternion.identity);
         bombClone.transform.localScale = playerStats.bombScale;
         bombClone.AddComponent<Rigidbody>();
         bombClone.AddComponent<SphereCollider>();
+        bombClone.GetComponent<BombTrigger>().hasBeenActivated = true;
         playerStats.bomb = true;
-        Destroy(bombClone, playerStats.bombTimer);
     }
 
     #endregion
