@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0036645664, g: 0.0051948903, b: 0.007260641, a: 1}
+  m_IndirectSpecularColor: {r: 0.0036790755, g: 0.0051774327, b: 0.0072589843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3232,9 +3232,12 @@ MonoBehaviour:
   ammo: 0
   ammoAdd: 25
   ammoLimit: 100
+  bombTimer: 10
+  bombScale: {x: 5, y: 5, z: 5}
   shield: 0
   nitro: 0
   canShoot: 0
+  bomb: 0
   timer: 0
   timerCooldown: 5
 --- !u!54 &1243304242
@@ -3285,7 +3288,6 @@ GameObject:
   - component: {fileID: 1421340850}
   - component: {fileID: 1421340849}
   - component: {fileID: 1421340848}
-  - component: {fileID: 1421340855}
   m_Layer: 0
   m_Name: Spaceship 3
   m_TagString: Player
@@ -3374,7 +3376,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421340847}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b270207dfec64e4999f4563e155ed8f, type: 3}
   m_Name: 
@@ -3399,9 +3401,12 @@ MonoBehaviour:
   ammo: 0
   ammoAdd: 25
   ammoLimit: 100
+  bombTimer: 10
+  bombScale: {x: 5, y: 5, z: 5}
   shield: 0
   nitro: 0
   canShoot: 0
+  bomb: 0
   timer: 0
   timerCooldown: 5
 --- !u!54 &1421340853
@@ -3438,18 +3443,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1421340855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421340847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd48c87ca5e3483c82d026004d9b4dc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1438755006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4280,9 +4273,12 @@ MonoBehaviour:
   ammo: 0
   ammoAdd: 25
   ammoLimit: 100
+  bombTimer: 10
+  bombScale: {x: 5, y: 5, z: 5}
   shield: 0
   nitro: 0
   canShoot: 0
+  bomb: 0
   timer: 0
   timerCooldown: 5
 --- !u!54 &1754293314
@@ -4715,9 +4711,12 @@ MonoBehaviour:
   ammo: 0
   ammoAdd: 25
   ammoLimit: 100
+  bombTimer: 10
+  bombScale: {x: 5, y: 5, z: 5}
   shield: 0
   nitro: 0
   canShoot: 0
+  bomb: 0
   timer: 0
   timerCooldown: 5
 --- !u!54 &1840202645
@@ -4976,9 +4975,12 @@ MonoBehaviour:
   ammo: 0
   ammoAdd: 25
   ammoLimit: 100
+  bombTimer: 10
+  bombScale: {x: 5, y: 5, z: 5}
   shield: 0
   nitro: 0
   canShoot: 0
+  bomb: 0
   timer: 0
   timerCooldown: 5
 --- !u!54 &1857064608
@@ -5263,6 +5265,7 @@ MonoBehaviour:
   laserPrefab: {fileID: 5654157430322735983, guid: e1a5065ec43a8f107bdf7b5efb981857, type: 3}
   instantiationLocation: {fileID: 685741144}
   projectileSpeed: 4000
+  projectileLifeTime: 5
 --- !u!1001 &1971615265
 PrefabInstance:
   m_ObjectHideFlags: 0
