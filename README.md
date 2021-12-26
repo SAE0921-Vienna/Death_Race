@@ -1,6 +1,4 @@
 # Death_Race
-a cool game
-with cool people working on it
+A cool game with cool people working on it!
 
-
-branch test - 18.12.2021 - tomi
+#![Death Racer: Space](https://github.com/SAE0921-Vienna/Death_Race/blob/main/spaceship.png)
