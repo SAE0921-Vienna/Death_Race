@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
-using GameManagement;
+using Core;
 using UnityEngine;
 using Random = UnityEngine.Random;
+
+//Add de-spawner to this.
 
 namespace Audio
 {
@@ -21,13 +24,14 @@ namespace Audio
     
         public static void PlaySound(Sound sound){
             if (CanPlaySound(sound)){
-            
-
-                GameObject soundGameObject = new GameObject("Sound");
-                AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+                var soundGameObject = new GameObject("Sound");
+                var audioSource = soundGameObject.AddComponent<AudioSource>();
 
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.PlayOneShot(GetAudioClip(sound));
+                
+                var destroyer = soundGameObject.AddComponent<SoundDestroyer>();
+                destroyer.DestroySoundObject(soundGameObject, GetAudioClip(sound).length);
             }
         }
         //plays static sound without directional properties.
@@ -36,14 +40,17 @@ namespace Audio
         public static void PlaySound(Sound sound, Vector3 position){
             if (CanPlaySound(sound)){
             
-                GameObject soundGameObject = new GameObject("Sound");
+                var soundGameObject = new GameObject("Sound");
                 soundGameObject.transform.position = position;
-                AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-                
+                var audioSource = soundGameObject.AddComponent<AudioSource>();
+
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.clip = GetAudioClip(sound);
 
                 audioSource.Play(); 
+                
+                var destroyer = soundGameObject.AddComponent<SoundDestroyer>();
+                destroyer.DestroySoundObject(soundGameObject, GetAudioClip(sound).length);
             }
         }
     
@@ -51,12 +58,16 @@ namespace Audio
         public static void PlaySound(Sound sound, float volume){
             if (CanPlaySound(sound)){
             
-                GameObject soundGameObject = new GameObject("Sound");
-                AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+                var soundGameObject = new GameObject("Sound");
+                var audioSource = soundGameObject.AddComponent<AudioSource>();
+                
 
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.volume = volume;
                 audioSource.PlayOneShot(GetAudioClip(sound));
+                
+                var destroyer = soundGameObject.AddComponent<SoundDestroyer>();
+                destroyer.DestroySoundObject(soundGameObject, GetAudioClip(sound).length);
             }
         }
     
@@ -64,23 +75,26 @@ namespace Audio
         public static void PlaySound(Sound sound, Vector3 position, float volume){
             if (CanPlaySound(sound)){
             
-                GameObject soundGameObject = new GameObject("Sound");
+                var soundGameObject = new GameObject("Sound");
                 soundGameObject.transform.position = position;
-                AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-                
+                var audioSource = soundGameObject.AddComponent<AudioSource>();
+
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.volume = volume;
                 audioSource.PlayOneShot(GetAudioClip(sound));
+                
+                var destroyer = soundGameObject.AddComponent<SoundDestroyer>();
+                destroyer.DestroySoundObject(soundGameObject, GetAudioClip(sound).length);
             }
         }
     
         //Add variety to sounds by choosing a Random sound each time.
         public static void PlaySound(float volume, string soundArrayName = "", params Sound[] sounds)
         {
-            Sound sound = sounds[Random.Range(0, sounds.Length)];
+            var sound = sounds[Random.Range(0, sounds.Length)];
             if (CanPlaySound(soundArrayName, sounds)){
-                GameObject soundGameObject = new GameObject("Sound");
-                AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+                var soundGameObject = new GameObject("Sound");
+                var audioSource = soundGameObject.AddComponent<AudioSource>();
                 
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.volume = volume;
@@ -91,10 +105,10 @@ namespace Audio
         //Variety of sound, including the control of the replay time for walking / running for example
         public static void PlaySound(float volume, float pitch, float duration, string soundArrayName = "", params Sound[] sounds)
         {
-            Sound sound = sounds[Random.Range(0, sounds.Length)];
+            var sound = sounds[Random.Range(0, sounds.Length)];
             if (CanPlaySound(duration, soundArrayName, sounds)){
-                GameObject soundGameObject = new GameObject("Sound");
-                AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+                var soundGameObject = new GameObject("Sound");
+                var audioSource = soundGameObject.AddComponent<AudioSource>();
 
                 audioSource.pitch = pitch;
                 audioSource.volume = volume;
@@ -108,8 +122,8 @@ namespace Audio
                 case Sound.VehicleSound:
                     if (_soundTimerDictionary.ContainsKey(sound)){
                 
-                        float lastTimePlayed = _soundTimerDictionary[sound];
-                        float playerMoveTimerMax = GetAudioClip(Sound.VehicleSound).length;
+                        var lastTimePlayed = _soundTimerDictionary[sound];
+                        var playerMoveTimerMax = GetAudioClip(Sound.VehicleSound).length;
                 
                         if (lastTimePlayed + playerMoveTimerMax < Time.time){
                             _soundTimerDictionary[sound] = Time.time;
@@ -126,14 +140,14 @@ namespace Audio
     
         private static bool CanPlaySound(string soundArrayName = "", params Sound[]sounds)
         {
-            Sound sound = sounds[Random.Range(0, sounds.Length)];
+            var sound = sounds[Random.Range(0, sounds.Length)];
             switch(soundArrayName){
                 case "runSounds":
                     if (_soundTimerDictionary.ContainsKey(sound))
                     {
 
-                        float lastTimePlayed = 0f; 
-                        float playerMoveTimerMax = GetAudioClip(Sound.VehicleSound).length;
+                        var lastTimePlayed = 0f; 
+                        var playerMoveTimerMax = GetAudioClip(Sound.VehicleSound).length;
                 
                         if (lastTimePlayed + playerMoveTimerMax < Time.time){
                             _soundTimerDictionary[sound] = Time.time;
@@ -154,8 +168,8 @@ namespace Audio
                 case "runSounds":
                     if (_soundArrayTimerDictionary.ContainsKey(sounds))
                     {
-                        float lastTimePlayed = _soundArrayTimerDictionary[sounds];
-                        float playerMoveTimerMax = duration;
+                        var lastTimePlayed = _soundArrayTimerDictionary[sounds];
+                        var playerMoveTimerMax = duration;
                 
                         if (lastTimePlayed + playerMoveTimerMax < Time.time){
                             _soundArrayTimerDictionary[sounds] = Time.time;
@@ -172,7 +186,7 @@ namespace Audio
 
         //Loops through all audio clips, and returns the correct one for the instance.
         private static AudioClip GetAudioClip(Sound sound){
-            foreach(GameAssets.SoundAudioClip soundAudioClip in GameAssets.i.soundAudioClips){
+            foreach(var soundAudioClip in GameAssets.i.soundAudioClips){
                 if (soundAudioClip.sound == sound){
                     return soundAudioClip.audioClip;
                 }
@@ -180,5 +194,7 @@ namespace Audio
             return null;
         }
     }
+
+
 }
 

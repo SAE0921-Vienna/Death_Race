@@ -18,7 +18,7 @@ namespace Weapons
 
         private IEnumerator LaunchRocket()
         {
-            GameObject projectile = Instantiate(rocketPrefab, instantiationLocation.position, Quaternion.identity);
+            var projectile = Instantiate(rocketPrefab, instantiationLocation.position, Quaternion.identity);
             yield return new WaitForSeconds(rocketAccelaratonDelay);
             
             projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed), ForceMode.Force);

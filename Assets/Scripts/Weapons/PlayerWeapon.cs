@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -7,22 +5,18 @@ namespace Weapons
 {
     public class PlayerWeapon : MonoBehaviour
     {
-        private PowerUps powerUps;
-        private PlayerStats playerStats;
-        private Transform weaponPosition;
+        private PowerUps _powerUps;
+        private PlayerStats _playerStats;
+        private Transform _weaponPosition;
         private IWeapon _weapon;
 
 
         private void Awake()
         {
             _weapon = GetComponentInChildren<IWeapon>();
-
-            powerUps = GetComponent<PowerUps>();
-            playerStats = GetComponent<PlayerStats>();
-
-            weaponPosition = transform.GetChild(1);
-
-
+            _powerUps = GetComponent<PowerUps>();
+            _playerStats = GetComponent<PlayerStats>();
+            _weaponPosition = transform.GetChild(1);
         }
 
         private void Update()
@@ -33,25 +27,14 @@ namespace Weapons
         /// <summary>
         /// Shoot one single bullet/laser
         /// </summary>
-        public void Shoot()
+        private void Shoot()
         {
-
-            if (playerStats.canShoot)
+            if (!_playerStats.canShoot) return;
+            if (Input.GetMouseButtonDown(0))
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
-                {
-                    //Shoot
-                    playerStats.ammo -= 1;
-                    _weapon.Shoot();
-
-                }
-
-
-
+                _playerStats.ammo -= 1;
+                _weapon.Shoot();
             }
         }
-
-
-
     }
 }

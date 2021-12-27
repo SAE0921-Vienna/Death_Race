@@ -5,16 +5,18 @@ namespace PlayerController
 {
     public class VehicleMeshSmoothing : MonoBehaviour
     {
-        private Transform _target;
+        [SerializeField] Transform target;
+
+        private Rigidbody _rb;
 
         private void Awake()
         {
-            _target = GetComponentInParent<Transform>();
+            _rb = target.GetComponent<Rigidbody>();
         }
 
         private void FixedUpdate()
         {
-            transform.position = _target.position;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, _rb.velocity.magnitude);
         }
     }
 }

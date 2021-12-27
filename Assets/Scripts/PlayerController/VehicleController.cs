@@ -89,12 +89,7 @@ public class VehicleController : MonoBehaviour
 
     private void AntiGravity()
     {
-        var forceDirection =
-            Vector3.MoveTowards(-transform.up, -GroundInfo().normal, rotationalSmoothingDelta);
-
-        print(forceDirection);
-
-        rBody.AddForce(forceDirection * downForceMultiplier, ForceMode.Force);
+        rBody.AddForce(-GroundInfo().normal * downForceMultiplier, ForceMode.Force);
     }
 
     private float t = 0.5f;

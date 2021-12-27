@@ -3,22 +3,24 @@ using UnityEngine;
 
 namespace Weapons
 {
-    public class LaserWeaponInputResponse : MonoBehaviour, IWeapon
+    public class LaserWeaponInputResponse : MonoBehaviour, IWeapon, ISoundPlayer
     {
         [SerializeField] private GameObject laserPrefab;
         [SerializeField] private Transform instantiationLocation;
         [SerializeField] private float projectileSpeed;
         [SerializeField] private float projectileLifeTime = 5f;
+        private Camera _camera;
 
         private void Awake()
         {
+            _camera = Camera.main;
             instantiationLocation = GetComponent<Transform>();
         }
 
 
         public void Shoot()
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
             //RaycastHit hit;
             //if (Physics.Raycast(ray, out hit))
             //{
@@ -33,7 +35,12 @@ namespace Weapons
 
             Destroy(projectile, projectileLifeTime);
 
-            //AudioManager.PlaySound(AudioManager.Sound.LaserSound);
+            AudioManager.PlaySound(AudioManager.Sound.LaserSound, 0.1f);
+        }
+
+        public void PlaySound()
+        {
+            AudioManager.PlaySound(AudioManager.Sound.LaserSound, 0.1f);
         }
     }
 }
