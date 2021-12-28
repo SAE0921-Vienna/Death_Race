@@ -33,6 +33,7 @@ namespace Weapons
             if (Input.GetMouseButtonDown(0))
             {
                 _playerStats.ammo -= 1;
+                if (_weapon == null) return;
                 _weapon.Shoot();
             }
         }

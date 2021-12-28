@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.019120539, g: 0.009632148, b: 0.039120574, a: 1}
+  m_IndirectSpecularColor: {r: 0.019136017, g: 0.009631307, b: 0.039147314, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,6 +245,7 @@ MonoBehaviour:
   timer: 0
   timerCooldown: 5
   childObjectDeleted: 0
+  powerUpPrefabClone: {fileID: 0}
 --- !u!4 &58940520
 Transform:
   m_ObjectHideFlags: 0
@@ -1287,6 +1288,7 @@ MonoBehaviour:
   timer: 0
   timerCooldown: 5
   childObjectDeleted: 0
+  powerUpPrefabClone: {fileID: 0}
 --- !u!4 &712531758
 Transform:
   m_ObjectHideFlags: 0
@@ -1955,6 +1957,7 @@ MonoBehaviour:
   timer: 0
   timerCooldown: 5
   childObjectDeleted: 0
+  powerUpPrefabClone: {fileID: 0}
 --- !u!4 &1214147849
 Transform:
   m_ObjectHideFlags: 0
@@ -2416,6 +2419,14 @@ PrefabInstance:
       propertyPath: accelerationCurve.m_Curve.Array.data[1].outWeight
       value: 0.33333334
       objectReference: {fileID: 0}
+    - target: {fileID: 2305685658166473138, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
+      propertyPath: powerUpUI
+      value: 
+      objectReference: {fileID: 2139878332}
+    - target: {fileID: 2305685658166473138, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
+      propertyPath: ammoAmountUI
+      value: 
+      objectReference: {fileID: 1854570832}
     - target: {fileID: 2305685658166473140, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
       propertyPath: speedUnit
       value: 
@@ -3007,6 +3018,7 @@ MonoBehaviour:
   timer: 0
   timerCooldown: 5
   childObjectDeleted: 0
+  powerUpPrefabClone: {fileID: 0}
 --- !u!1 &1854570830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,6 +3215,7 @@ MonoBehaviour:
   timer: 0
   timerCooldown: 5
   childObjectDeleted: 0
+  powerUpPrefabClone: {fileID: 0}
 --- !u!1001 &1983854438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3216,7 +3229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023266133914222, guid: 4dc1eed87ce43e2419c218dea9ba7998, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4023266133914222, guid: 4dc1eed87ce43e2419c218dea9ba7998, type: 3}
       propertyPath: m_LocalScale.x
@@ -3325,6 +3338,7 @@ MonoBehaviour:
   timer: 0
   timerCooldown: 5
   childObjectDeleted: 0
+  powerUpPrefabClone: {fileID: 0}
 --- !u!4 &1989410643
 Transform:
   m_ObjectHideFlags: 0
@@ -3461,6 +3475,7 @@ MonoBehaviour:
   timer: 0
   timerCooldown: 5
   childObjectDeleted: 0
+  powerUpPrefabClone: {fileID: 0}
 --- !u!4 &2109345767
 Transform:
   m_ObjectHideFlags: 0

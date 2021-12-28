@@ -88,7 +88,6 @@ public class PowerUps : MonoBehaviour
         {
             playerStats.shield = false;
             powerupParent.GetChild(0).gameObject.SetActive(false);
-            playerStats.gameObject.transform.tag = "Player";
 
 
         }
@@ -109,6 +108,10 @@ public class PowerUps : MonoBehaviour
         {
             playerStats.bomb = false;
         }
+        if (playerStats.timeSlowed)
+        {
+            playerStats.timeSlowed = false;
+        }
     }
 
     #region Power Up Methods
@@ -116,7 +119,6 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(0).gameObject.SetActive(true);
-        playerStats.gameObject.transform.tag = "Untagged";
         playerStats.shield = true;
     }
 
@@ -150,6 +152,14 @@ public class PowerUps : MonoBehaviour
         bombClone.GetComponent<BombTrigger>().hasBeenActivated = true;
         playerStats.bomb = true;
     }
+
+    //public void SlowPowerUp()
+    //{
+    //    playerStats.timer = playerStats.timerCooldown;
+    //    Time.timeScale = playerStats.slowTimeValue;
+    //    playerStats.timeSlowed = true;
+
+    //}
 
     #endregion
 }

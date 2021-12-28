@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17052485, g: 0.16546176, b: 0.1599372, a: 1}
+  m_IndirectSpecularColor: {r: 0.17051643, g: 0.16545394, b: 0.15992856, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3726,10 +3726,12 @@ MonoBehaviour:
   ammoLimit: 100
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
+  slowTimeValue: 0.5
   shield: 0
   nitro: 0
   canShoot: 0
   bomb: 0
+  timeSlowed: 0
   timer: 0
   timerCooldown: 5
 --- !u!54 &1857064608

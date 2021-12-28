@@ -7,7 +7,7 @@ namespace Weapons
     {
         [SerializeField] private GameObject laserPrefab;
         [SerializeField] private Transform instantiationLocation;
-        [SerializeField] private float projectileSpeed;
+        [SerializeField] private float projectileSpeed = 100f;
         [SerializeField] private float projectileLifeTime = 5f;
         private Camera _camera;
 
@@ -27,7 +27,7 @@ namespace Weapons
             //    Debug.DrawLine(transform.position, hit.point);
             //}
 
-            GameObject projectile = Instantiate(laserPrefab, instantiationLocation.position, Quaternion.identity);
+            GameObject projectile = Instantiate(laserPrefab, instantiationLocation.position, instantiationLocation.rotation);
             //projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed));
             projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Impulse);
 

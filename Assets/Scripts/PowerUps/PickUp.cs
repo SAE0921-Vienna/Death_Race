@@ -31,6 +31,9 @@ public class PickUp : MonoBehaviour
     [SerializeField]
     private bool childObjectDeleted;
 
+    [SerializeField]
+    private GameObject powerUpPrefabClone;
+
     private void Awake()
     {
         powerUpManager = FindObjectOfType<PowerUpManager>();
@@ -108,7 +111,7 @@ public class PickUp : MonoBehaviour
         {
             int rand = Random.Range(0, powerUpManager.powerUps.Length);
             pickUpObject = powerUpManager.powerUps[rand];
-            GameObject powerUpPrefabClone = Instantiate(pickUpObject.powerUpPrefab, transform);
+            powerUpPrefabClone = Instantiate(pickUpObject.powerUpPrefab, transform);
             childObjectDeleted = false;
             RandomRotateHoverSpeed();
 

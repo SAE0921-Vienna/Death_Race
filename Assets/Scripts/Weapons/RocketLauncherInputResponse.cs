@@ -14,14 +14,21 @@ namespace Weapons
         public void Shoot()
         {
             StartCoroutine(LaunchRocket());
+            instantiationLocation = GetComponent<Transform>();
+
         }
 
         private IEnumerator LaunchRocket()
         {
             var projectile = Instantiate(rocketPrefab, instantiationLocation.position, Quaternion.identity);
             yield return new WaitForSeconds(rocketAccelaratonDelay);
-            
-            projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed), ForceMode.Force);
+
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Force);
+
+
+            //projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed), ForceMode.Force);
             yield return new WaitForSeconds(rocketDespawnTimer);
             Destroy(projectile);
         }

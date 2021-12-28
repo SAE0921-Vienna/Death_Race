@@ -22,11 +22,14 @@ public class PlayerStats : MonoBehaviour
     [Header("Bomb")]
     public float bombTimer = 10f;
     public Vector3 bombScale = new Vector3(5, 5, 5);
+    [Header("SlowTime")]
+    public float slowTimeValue = 0.5f;
     [Header("Activates")]
     public bool shield;
     public bool nitro;
     public bool canShoot;
     public bool bomb;
+    public bool timeSlowed;
 
     [Header("Power Up Timer")]
     public float timer;
