@@ -5,54 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MusicPlayer.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MusicPlayer.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceship 3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceship 3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George/ShipCamera Profile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George/ShipCamera Profile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest 1.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest 1.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/ISoundPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/ISoundPlayer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SoundDestroyer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SoundDestroyer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponInputManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponInputManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/meganeko - Velocity [u7pWEgNXJVE].mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/meganeko - Velocity [u7pWEgNXJVE].mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/GlobalNamespace.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UIElements.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.Cloud.Collaborate.Components.ChangeListEntries.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.Cloud.Collaborate.Components.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.Cloud.Collaborate.Views.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.PackageManager.UI.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Rendering.LookDev.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.ShaderGraph.Drawing.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.Debugger.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEngine.UIElements.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/CustomizationCameraBlend.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/CustomizationCameraBlend.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/CustomizationScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/CustomizationScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/tomi_weaponTesting 1.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/tomi_weaponTesting 1.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/IClickResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/IClickResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ObjectStateControllerResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ObjectStateControllerResponse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/OnClickFunctionDelegation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/OnClickFunctionDelegation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ShipConfigurationManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ShipConfigurationManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Laser_Shoot_SFX.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Laser_Shoot_SFX.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MM_Whoosh_SFX.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MM_Whoosh_SFX.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Wind_Ambient_SFX.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Wind_Ambient_SFX.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_04_E.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_04_E.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Ship_03_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Ship_03_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spaceship 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceship 3.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/tomi_weaponTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/tomi_weaponTesting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/tomi_weaponTesting.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/tomi_weaponTesting.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameAssets.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameAssets.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameAssets.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleMeshSmoothing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleMeshSmoothing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/LaserWeaponInputResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/LaserWeaponInputResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/PlayerWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/PlayerWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/RocketLauncherInputResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/RocketLauncherInputResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Laser.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Laser.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,6 +131,9 @@
       <workItem from="1640539564989" duration="669000" />
       <workItem from="1640557766115" duration="386000" />
       <workItem from="1640615569354" duration="3911000" />
+      <workItem from="1640636653102" duration="209000" />
+      <workItem from="1640637555788" duration="449000" />
+      <workItem from="1640690737786" duration="8794000" />
     </task>
     <servers />
   </component>
