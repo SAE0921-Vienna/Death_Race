@@ -1,12 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace UserInterface
 {
     public class ShipConfigurationManager : MonoBehaviour
     {
-        private List<Transform> allCameraAngles = new List<Transform>();
-
         public ShipConfiguration[] shipConfigurations;
         
         [System.Serializable]

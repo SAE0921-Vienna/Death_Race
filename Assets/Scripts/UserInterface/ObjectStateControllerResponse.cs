@@ -31,7 +31,7 @@ namespace UserInterface
         
         public void PlaySound()
         {
-            AudioManager.PlaySound(AudioManager.Sound.MMWhoosh, 0.4f);
+            AudioManager.PlaySound(AudioManager.Sound.MMWhoosh, 0.8f);
         }
     }
 }

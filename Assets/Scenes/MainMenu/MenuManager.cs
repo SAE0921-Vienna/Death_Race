@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.SceneManagement;
+using UserInterface;
 
 public class MenuManager : MonoBehaviour
 {
@@ -19,7 +21,7 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Scenes/pre-testing/George");
     }
     public void Settings()
     {
@@ -46,11 +48,18 @@ public class MenuManager : MonoBehaviour
     {
 
     }
+
+    public void LoadScene(GameObject responseGameObject)
+    {
+        responseGameObject.GetComponent<IClickResponse>().ExecuteFunctionality();
+    }
     #region IEnumeratorButton
     public IEnumerator ISettings()
     {
         DeactivateCurrentHUD();
         frameCam[1].gameObject.SetActive(true);
+        
+        AudioManager.PlaySound(AudioManager.Sound.MMWhoosh, .4f);
 
         yield return new WaitForSeconds(cameraMovingTime + additionalDelay);
 
@@ -60,6 +69,8 @@ public class MenuManager : MonoBehaviour
     {
         DeactivateCurrentHUD();
         frameCam[2].gameObject.SetActive(true);
+        
+        AudioManager.PlaySound(AudioManager.Sound.MMWhoosh, .4f);
 
         yield return new WaitForSeconds(cameraMovingTime + additionalDelay);
 
@@ -69,6 +80,8 @@ public class MenuManager : MonoBehaviour
     {
         DeactivateCurrentHUD();
         frameCam[3].gameObject.SetActive(true);
+        
+        AudioManager.PlaySound(AudioManager.Sound.MMWhoosh, .4f);
 
         yield return new WaitForSeconds(cameraMovingTime + additionalDelay);
 
@@ -79,6 +92,8 @@ public class MenuManager : MonoBehaviour
         DeactivateCurrentHUD();
 
         frameCam[0].gameObject.SetActive(true);
+        
+        AudioManager.PlaySound(AudioManager.Sound.MMWhoosh, .8f);
 
         yield return new WaitForSeconds(cameraMovingTime + additionalDelay);
 
@@ -88,6 +103,8 @@ public class MenuManager : MonoBehaviour
     {
         DeactivateCurrentHUD();
         frameCam[4].gameObject.SetActive(true);
+        
+        AudioManager.PlaySound(AudioManager.Sound.MMWhoosh, .4f);
 
         yield return new WaitForSeconds(cameraMovingTime);
 
