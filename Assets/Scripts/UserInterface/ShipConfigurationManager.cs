@@ -10,6 +10,7 @@ namespace UserInterface
         public class ShipConfiguration
         {
             public GameObject ship;
+            public GameObject shipWeapon;
             public Material shipColor;
             public Transform[] cameraConfigs;
         }

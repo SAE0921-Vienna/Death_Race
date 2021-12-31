@@ -13,7 +13,8 @@ namespace Audio
         public enum Sound{
             VehicleSound,
             LaserSound,
-            MMWhoosh
+            MMWhoosh,
+            EquipWeapon
         }
         private static Dictionary<Sound, float> _soundTimerDictionary;
         private static Dictionary<Sound[], float> _soundArrayTimerDictionary;

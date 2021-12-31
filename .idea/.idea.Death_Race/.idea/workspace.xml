@@ -5,49 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Material_01_A 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Material_01_A 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/MainMenuPostProcessing.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/MainMenuPostProcessing.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/SceneSwitchingResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/SceneSwitchingResponse.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Stellardrone - Light Years.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Stellardrone - Light Years.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Tineidae - Sky Burial [duuA9Gzg46k].mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Tineidae - Sky Burial [duuA9Gzg46k].mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/meganeko - Velocity.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/meganeko - Velocity.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Future_Factory_Full_Loop_SFX.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Future_Factory_Full_Loop_SFX.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Laser_Shoot_SFX.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Laser_Shoot_SFX.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/DFCK (Original Mix) [pnyp84kZQWw].mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/DFCK (Original Mix) [pnyp84kZQWw].mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/WipEout Omega Collection OST - David Tort &amp; Danielle Simeone - You Got To [N1-x467R2BY].mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/WipEout Omega Collection OST - David Tort &amp; Danielle Simeone - You Got To [N1-x467R2BY].mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Equip_Weapon_SFX.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Equip_Weapon_SFX.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_04_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_04_C.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_04_D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_04_D.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_04_E.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_04_E.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_Dirt_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_Dirt_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/FX_Materials/FX_HUD_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/FX_Materials/FX_HUD_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/FX_Materials/FX_HUD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/FX_Materials/FX_HUD.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Misc/PolygonScifiSpace_Cockpit_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Misc/PolygonScifiSpace_Cockpit_Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Material_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Material_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/URP_ExtractMe.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu/CinemachineBlenderSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu/CinemachineBlenderSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu/MenuManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/CustomizationScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/CustomizationScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ObjectStateControllerResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ObjectStateControllerResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ShipConfigurationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ShipConfigurationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Laser_Shoot_SFX.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Laser_Shoot_SFX.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Stellardrone - Light Years [Light Years].mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Stellardrone - Light Years [Light Years].mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/meganeko - Velocity [u7pWEgNXJVE].mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/meganeko - Velocity [u7pWEgNXJVE].mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/SFX/Future_Factory_Full_Loop_Roomtone.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sound/SFX/Future_Factory_Full_Loop_Roomtone.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +115,10 @@
       <workItem from="1640690737786" duration="8794000" />
       <workItem from="1640712641871" duration="353000" />
       <workItem from="1640785614240" duration="771000" />
-      <workItem from="1640796742936" duration="1942000" />
+      <workItem from="1640796742936" duration="3160000" />
+      <workItem from="1640952518542" duration="1734000" />
+      <workItem from="1640961631375" duration="1294000" />
+      <workItem from="1640968232974" duration="970000" />
     </task>
     <servers />
   </component>
