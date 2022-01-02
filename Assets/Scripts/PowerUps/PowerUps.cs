@@ -1,24 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class PowerUps : MonoBehaviour
 {
     public List<ScriptableObject> powerUpList;
     private PickUpScriptableObject powerUp;
-    //private PlayerWeapon playerWeapon;
-    private PlayerStats playerStats;
+    private UIManager uiManager;
+    private PlayerManager playerStats;
     private Transform powerupParent;
     private int powerUpListLength = 1;
 
-    public Image powerUpUI;
-    public TextMeshProUGUI ammoAmountUI;
 
     private void Awake()
     {
-        playerStats = GetComponent<PlayerStats>();
+        playerStats = GetComponent<PlayerManager>();
+        uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
         powerupParent = transform.GetChild(0);
 
         playerStats.normalMaxSpeed = GetComponent<VehicleController>().mMaxSpeed;
@@ -29,9 +26,9 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer -= Time.deltaTime;
 
-        if (ammoAmountUI != null)
+        if (uiManager.ammoAmountUI != null)
         {
-            ammoAmountUI.text = playerStats.ammo.ToString();
+            uiManager.ammoAmountUI.text = playerStats.ammo.ToString();
         }
 
         if (playerStats.timer < 0)
@@ -55,7 +52,7 @@ public class PowerUps : MonoBehaviour
     {
 
         powerUpList.Remove(powerUp);
-        powerUpUI.color = new Color(0, 0, 0, 0);
+        uiManager.powerUpUI.color = new Color(0, 0, 0, 0);
         powerUp.PowerUpAction(this.gameObject);
         this.powerUp = null;
     }
@@ -72,8 +69,8 @@ public class PowerUps : MonoBehaviour
             powerUpList.Clear();
         }
         powerUpList.Add(powerUp);
-        powerUpUI.sprite = powerUp.icon;
-        powerUpUI.color = new Color(1, 1, 1, 1);
+        uiManager.powerUpUI.sprite = powerUp.icon;
+        uiManager.powerUpUI.color = new Color(1, 1, 1, 1);
         this.powerUp = powerUp;
 
     }
@@ -87,6 +84,7 @@ public class PowerUps : MonoBehaviour
         if (playerStats.shield)
         {
             playerStats.shield = false;
+            playerStats.isImmortal = false;
             powerupParent.GetChild(0).gameObject.SetActive(false);
 
 
@@ -95,13 +93,12 @@ public class PowerUps : MonoBehaviour
         {
             playerStats.nitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
-            //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
             GetComponent<VehicleController>().mMaxSpeed = playerStats.normalMaxSpeed;
         }
         if (playerStats.canShoot && playerStats.ammo <= 0)
         {
             playerStats.canShoot = false;
-            ammoAmountUI.gameObject.SetActive(false);
+            uiManager.ammoAmountUI.gameObject.SetActive(false);
 
         }
         if (playerStats.bomb)
@@ -118,6 +115,7 @@ public class PowerUps : MonoBehaviour
     public void ShieldPowerUp()
     {
         playerStats.timer = playerStats.timerCooldown;
+        playerStats.isImmortal = true;
         powerupParent.GetChild(0).gameObject.SetActive(true);
         playerStats.shield = true;
     }
@@ -126,20 +124,19 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(1).gameObject.SetActive(true);
-        //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
         GetComponent<VehicleController>().mMaxSpeed += playerStats.nitroSpeed;
         playerStats.nitro = true;
     }
 
     public void AmmoPowerUp()
     {
-        ammoAmountUI.gameObject.SetActive(true);
+        uiManager.ammoAmountUI.gameObject.SetActive(true);
         if (playerStats.ammo < playerStats.ammoLimit)
         {
             playerStats.ammo += playerStats.ammoAdd;
             if (playerStats.ammo > playerStats.ammoLimit) playerStats.ammo = playerStats.ammoLimit;
         }
-        ammoAmountUI.text = playerStats.ammo.ToString();
+        uiManager.ammoAmountUI.text = playerStats.ammo.ToString();
         playerStats.canShoot = true;
     }
 

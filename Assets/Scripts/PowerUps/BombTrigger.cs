@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BombTrigger : MonoBehaviour
 {
-    private PlayerStats playerstats;
-    //private ParticleSystem boomEffect;
+    private PlayerManager playerstats;
+    private ParticleSystem boomEffect;
     public bool hasBeenActivated = false;
     public float bombTimer;
 
 
     private void Awake()
     {
-        //boomEffect = transform.GetChild(0).GetComponent<ParticleSystem>();
-        //boomEffect.Stop();
-        playerstats = FindObjectOfType<PlayerStats>();
-        //bombTimer = playerstats.bombTimer;
+        boomEffect = transform.GetChild(0).GetComponent<ParticleSystem>();
+        boomEffect.Stop();
+        playerstats = FindObjectOfType<PlayerManager>();
+        bombTimer = playerstats.bombTimer;
     }
 
     private void Update()
@@ -23,16 +23,16 @@ public class BombTrigger : MonoBehaviour
         bombTimer -= Time.deltaTime;
         if (bombTimer <= 0 && hasBeenActivated)
         {
-            //boomEffect.transform.parent = null;
+            boomEffect.transform.parent = null;
             Destroy(gameObject);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (hasBeenActivated && collision.transform.tag == "Player")
+        if (hasBeenActivated && collision.transform.tag == "Player" && !playerstats.isImmortal)
         {
-            //boomEffect.transform.parent = null;
+            boomEffect.transform.parent = null;
             //Destroy(collision.gameObject);
             collision.gameObject.SetActive(false);
             Destroy(gameObject);
@@ -40,8 +40,8 @@ public class BombTrigger : MonoBehaviour
     }
     private void OnDestroy()
     {
-        //boomEffect.Play();
-        //boomEffect.gameObject.AddComponent<DestroyParticle>();        
+        boomEffect.Play();
+        boomEffect.gameObject.AddComponent<DestroyParticle>();        
     }
 
 }
