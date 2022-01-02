@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/DFCK (Original Mix) [pnyp84kZQWw].mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/DFCK (Original Mix) [pnyp84kZQWw].mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/WipEout Omega Collection OST - David Tort &amp; Danielle Simeone - You Got To [N1-x467R2BY].mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/WipEout Omega Collection OST - David Tort &amp; Danielle Simeone - You Got To [N1-x467R2BY].mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Equip_Weapon_SFX.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Equip_Weapon_SFX.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/FX_Materials/FX_HUD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/FX_Materials/FX_HUD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Misc/PolygonScifiSpace_Cockpit_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Misc/PolygonScifiSpace_Cockpit_Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu/CinemachineBlenderSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu/CinemachineBlenderSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/CustomizationScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/CustomizationScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ObjectStateControllerResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ObjectStateControllerResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ShipConfigurationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/ShipConfigurationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
