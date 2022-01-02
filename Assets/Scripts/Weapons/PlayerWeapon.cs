@@ -6,7 +6,7 @@ namespace Weapons
     public class PlayerWeapon : MonoBehaviour
     {
         private PowerUps _powerUps;
-        private PlayerManager _playerStats;
+        private PlayerStats _playerStats;
         private Transform _weaponPosition;
         private IWeapon _weapon;
 
@@ -15,7 +15,7 @@ namespace Weapons
         {
             _weapon = GetComponentInChildren<IWeapon>();
             _powerUps = GetComponent<PowerUps>();
-            _playerStats = GetComponent<PlayerManager>();
+            _playerStats = GetComponent<PlayerStats>();
             _weaponPosition = transform.GetChild(1);
         }
 

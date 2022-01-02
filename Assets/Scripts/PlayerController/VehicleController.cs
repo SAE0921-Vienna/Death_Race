@@ -89,7 +89,6 @@ public class VehicleController : MonoBehaviour
 
     private void AntiGravity()
     {
-        //Debug.DrawRay(transform.position, -transform.up * downForceMultiplier, Color.green);
         rBody.AddForce(-GroundInfo().normal * downForceMultiplier, ForceMode.Force);
     }
 
