@@ -8,17 +8,18 @@ public class PowerUps : MonoBehaviour
 {
     public List<ScriptableObject> powerUpList;
     private PickUpScriptableObject powerUp;
+    private UIManager uIManager;
     //private PlayerWeapon playerWeapon;
-    private PlayerStats playerStats;
+    private PlayerManager playerStats;
     private Transform powerupParent;
     private int powerUpListLength = 1;
 
-    public Image powerUpUI;
-    public TextMeshProUGUI ammoAmountUI;
 
     private void Awake()
     {
-        playerStats = GetComponent<PlayerStats>();
+        playerStats = GetComponent<PlayerManager>();
+        uIManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
+
         powerupParent = transform.GetChild(0);
 
         playerStats.normalMaxSpeed = GetComponent<VehicleController>().mMaxSpeed;
@@ -29,9 +30,9 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer -= Time.deltaTime;
 
-        if (ammoAmountUI != null)
+        if (uIManager.ammoAmountUI != null)
         {
-            ammoAmountUI.text = playerStats.ammo.ToString();
+            uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
         }
 
         if (playerStats.timer < 0)
@@ -55,7 +56,7 @@ public class PowerUps : MonoBehaviour
     {
 
         powerUpList.Remove(powerUp);
-        powerUpUI.color = new Color(0, 0, 0, 0);
+        uIManager.powerUpUI.color = new Color(0, 0, 0, 0);
         powerUp.PowerUpAction(this.gameObject);
         this.powerUp = null;
     }
@@ -72,8 +73,8 @@ public class PowerUps : MonoBehaviour
             powerUpList.Clear();
         }
         powerUpList.Add(powerUp);
-        powerUpUI.sprite = powerUp.icon;
-        powerUpUI.color = new Color(1, 1, 1, 1);
+        uIManager.powerUpUI.sprite = powerUp.icon;
+        uIManager.powerUpUI.color = new Color(1, 1, 1, 1);
         this.powerUp = powerUp;
 
     }
@@ -101,7 +102,7 @@ public class PowerUps : MonoBehaviour
         if (playerStats.canShoot && playerStats.ammo <= 0)
         {
             playerStats.canShoot = false;
-            ammoAmountUI.gameObject.SetActive(false);
+            uIManager.ammoAmountUI.gameObject.SetActive(false);
 
         }
         if (playerStats.bomb)
@@ -133,13 +134,13 @@ public class PowerUps : MonoBehaviour
 
     public void AmmoPowerUp()
     {
-        ammoAmountUI.gameObject.SetActive(true);
+        uIManager.ammoAmountUI.gameObject.SetActive(true);
         if (playerStats.ammo < playerStats.ammoLimit)
         {
             playerStats.ammo += playerStats.ammoAdd;
             if (playerStats.ammo > playerStats.ammoLimit) playerStats.ammo = playerStats.ammoLimit;
         }
-        ammoAmountUI.text = playerStats.ammo.ToString();
+        uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
         playerStats.canShoot = true;
     }
 

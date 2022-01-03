@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
 
     private VehicleController vehicleController;
-    public TextMeshProUGUI speedUnit;
+    private UIManager uiManager;
     [Header("Health")]
     public int health = 100;
     [Header("Nitro")]
@@ -30,6 +30,7 @@ public class PlayerStats : MonoBehaviour
     public bool canShoot;
     public bool bomb;
     public bool timeSlowed;
+    public bool isImmortal;
 
     [Header("Power Up Timer")]
     public float timer;
@@ -39,13 +40,14 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         vehicleController = GetComponent<VehicleController>();
+        uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
     }
 
     private void Update()
     {
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
-        if (speedUnit != null) speedUnit.text = currentSpeed.ToString();
-      
+        if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString();
+
     }
 
 }
