@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Munition
   icon: {fileID: 21300000, guid: 30bb55a33d34b284189837abe9ffe09c, type: 3}
-  powerUpPrefab: {fileID: 1646637928674852, guid: 7bc14d437600a1e4ea3780b591a7e1bb, type: 3}
+  powerUpPrefab: {fileID: 1306215601444532, guid: 4a79c8ba55221be478e4ef109a43756d, type: 3}
   powerUpType: 2
