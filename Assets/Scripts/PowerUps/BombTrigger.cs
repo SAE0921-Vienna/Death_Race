@@ -30,7 +30,7 @@ public class BombTrigger : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (hasBeenActivated && collision.transform.tag == "Player" && !playerstats.isImmortal)
+        if ((hasBeenActivated && collision.transform.tag == "Player" && !playerstats.isImmortal) || hasBeenActivated && collision.transform.tag == "Bullet")
         {
             boomEffect.transform.parent = null;
             //Destroy(collision.gameObject);

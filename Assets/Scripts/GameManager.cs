@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        roundTimer += Time.deltaTime;
+        roundTimer = Time.time;
+        roundTimer = (float)System.Math.Round(roundTimer, 0);
 
         CheckLaps();
     }

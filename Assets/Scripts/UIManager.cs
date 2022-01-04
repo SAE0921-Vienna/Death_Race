@@ -23,8 +23,10 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        lapsAmountUI.text = gameManager.currentLap + "/" + gameManager.laps + " laps";
-        positionsUI.text = gameManager.playerPosition + "/" + gameManager.positions + " position";
+        lapsAmountUI.text = gameManager.currentLap + "/" + gameManager.laps + " LAPS";
+        //positionsUI.text = gameManager.playerPosition + "/" + gameManager.positions + " POSITION";
+        //switch, st, nd, rd, th,...
+        positionsUI.text = gameManager.playerPosition +"st";
         roundTimerUI.text = gameManager.roundTimer.ToString();
     }
 

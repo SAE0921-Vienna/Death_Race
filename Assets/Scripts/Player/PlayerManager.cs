@@ -24,7 +24,7 @@ public class PlayerManager : MonoBehaviour
     public Vector3 bombScale = new Vector3(5, 5, 5);
     [Header("SlowTime")]
     public float slowTimeValue = 0.5f;
-    [Header("Activates")]
+    [Header("PowerUp Activates")]
     public bool shield;
     public bool nitro;
     public bool canShoot;
@@ -47,7 +47,7 @@ public class PlayerManager : MonoBehaviour
     {
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
         if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString();
-
+       
     }
 
 }

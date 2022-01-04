@@ -817,7 +817,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -65.40759}
-  m_SizeDelta: {x: 425.03552, y: 130.81519}
+  m_SizeDelta: {x: 270.6515, y: 130.8152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548792184
 MonoBehaviour:
@@ -1339,7 +1339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1910942513890008, guid: 28afa4f8ca37a7540bcc6b01886c8f74, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4834026389170568, guid: 28afa4f8ca37a7540bcc6b01886c8f74, type: 3}
       propertyPath: m_RootOrder
@@ -2538,10 +2538,10 @@ RectTransform:
   m_Father: {fileID: 1836260847}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 195.14592, y: 0}
-  m_SizeDelta: {x: 333.5074, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357592971
 MonoBehaviour:
@@ -2626,7 +2626,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -1.6960754, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2640,32 +2640,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357592969}
   m_CullTransparentMesh: 1
---- !u!1 &1398272815 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1079316786754286, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
-  m_PrefabInstance: {fileID: 1469162719}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1398272816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4453692391769076, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
   m_PrefabInstance: {fileID: 1469162719}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1398272817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398272815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ea2a02737848d989cd895d7865889e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 5654157430322735983, guid: e1a5065ec43a8f107bdf7b5efb981857, type: 3}
-  instantiationLocation: {fileID: 1599622076}
-  projectileSpeed: 4000
-  projectileLifeTime: 5
 --- !u!1 &1406295764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,8 +2739,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5421107252817122920, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
+      propertyPath: instantiationLocation
+      value: 
+      objectReference: {fileID: 1599622076}
     m_RemovedComponents:
-    - {fileID: 64647977072671682, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
     - {fileID: 64500017162153078, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
     - {fileID: 64182247079121482, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
@@ -3274,7 +3256,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3352,8 +3334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 212.51782, y: -65.40759}
-  m_SizeDelta: {x: 425.03552, y: 130.81519}
+  m_AnchoredPosition: {x: 98.77161, y: -65.40759}
+  m_SizeDelta: {x: 197.543, y: 130.8152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836260848
 MonoBehaviour:
@@ -4101,9 +4083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponOnShip: {fileID: 0}
-  yrotationClamp: 90
-  rotationSpeed: 90
-  weaponAngle: 0
+  rotationSpeed: 1
+  currentRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &5297674321111969178
 Transform:
   m_ObjectHideFlags: 0

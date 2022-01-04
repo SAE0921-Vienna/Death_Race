@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+
 
 public class PowerUps : MonoBehaviour
 {
@@ -88,6 +87,7 @@ public class PowerUps : MonoBehaviour
         if (playerStats.shield)
         {
             playerStats.shield = false;
+            playerStats.isImmortal = false;
             powerupParent.GetChild(0).gameObject.SetActive(false);
 
 
@@ -96,12 +96,12 @@ public class PowerUps : MonoBehaviour
         {
             playerStats.nitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
-            //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Stop();
             GetComponent<VehicleController>().mMaxSpeed = playerStats.normalMaxSpeed;
         }
-        if (playerStats.canShoot && playerStats.ammo <= 0)
+        if (playerStats.ammo <= 0)
         {
             playerStats.canShoot = false;
+            playerStats.ammo = 0;
             uIManager.ammoAmountUI.gameObject.SetActive(false);
 
         }
@@ -109,6 +109,7 @@ public class PowerUps : MonoBehaviour
         {
             playerStats.bomb = false;
         }
+
         if (playerStats.timeSlowed)
         {
             playerStats.timeSlowed = false;
@@ -120,6 +121,7 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(0).gameObject.SetActive(true);
+        playerStats.isImmortal = true;
         playerStats.shield = true;
     }
 
@@ -149,6 +151,7 @@ public class PowerUps : MonoBehaviour
         GameObject bombClone = Instantiate(powerUp.powerUpPrefab, powerupParent.GetChild(2).transform.position, Quaternion.identity);
         bombClone.transform.localScale = playerStats.bombScale;
         bombClone.AddComponent<Rigidbody>();
+        bombClone.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
         bombClone.AddComponent<SphereCollider>();
         bombClone.GetComponent<BombTrigger>().hasBeenActivated = true;
         playerStats.bomb = true;
