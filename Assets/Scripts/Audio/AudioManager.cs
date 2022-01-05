@@ -11,7 +11,9 @@ namespace Audio
             VehicleSound,
             LaserSound,
             MMWhoosh,
-            EquipWeapon
+            EquipWeapon,
+            GunShotGeneric,
+            RocketLauncherLaunch
         }
         private static Dictionary<Sound, float> _soundTimerDictionary;
         private static Dictionary<Sound[], float> _soundArrayTimerDictionary;

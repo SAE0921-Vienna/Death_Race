@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponRotater : MonoBehaviour
+public class WeaponRotator : MonoBehaviour
 {
 
     public Transform weaponOnShip;
@@ -20,9 +20,8 @@ public class WeaponRotater : MonoBehaviour
     }
 
 
-    void Update()
+    private void Update()
     {
-
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -35,16 +34,9 @@ public class WeaponRotater : MonoBehaviour
 
         currentRotation = weaponOnShip.transform.rotation;
 
-        float angularDifference = Quaternion.Angle(currentRotation, targetRotation);
+        var angularDifference = Quaternion.Angle(currentRotation, targetRotation);
 
-        if (angularDifference > 0)
-        {
-            weaponOnShip.transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, (rotationSpeed * 180 * Time.deltaTime) / angularDifference);
-        }
-        else
-        {
-            weaponOnShip.transform.rotation = targetRotation;
-        }
+        weaponOnShip.transform.rotation = angularDifference > 0 ? Quaternion.Slerp(currentRotation, targetRotation, (rotationSpeed * 180 * Time.deltaTime) / angularDifference) : targetRotation;
 
 
 

@@ -36,17 +36,15 @@ namespace Weapons
                 Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
                 GameObject projectile = Instantiate(laserPrefab, instantiationLocation.position, instantiationLocation.rotation);
                 projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Impulse);
-
+                
+                PlaySound();
                 Destroy(projectile, projectileLifeTime);
-
-                AudioManager.PlaySound(AudioManager.Sound.LaserSound, 0.1f);
-            
         }
 
 
         public void PlaySound()
         {
-            AudioManager.PlaySound(AudioManager.Sound.LaserSound, 0.1f);
+            AudioManager.PlaySound(AudioManager.Sound.LaserSound, instantiationLocation.position,.5f);
         }
 
 

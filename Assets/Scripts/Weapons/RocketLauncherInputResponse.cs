@@ -1,9 +1,10 @@
 using System.Collections;
+using Audio;
 using UnityEngine;
 
 namespace Weapons
 {
-    public class RocketLauncherInputResponse : MonoBehaviour, IWeapon
+    public class RocketLauncherInputResponse : MonoBehaviour, IWeapon, ISoundPlayer
     {
         [SerializeField] private GameObject rocketPrefab;
         [SerializeField] private Transform instantiationLocation;
@@ -15,21 +16,15 @@ namespace Weapons
         [SerializeField] private float projectileFireRate = 0.5f;
         [SerializeField] private int ammoAdd = 15;
 
-        public int GetAmmo()
-        {
-            return ammoAdd;
-        }
-        public float GetFireRate()
-        {
-            return projectileFireRate;
-        }
-
+        public int GetAmmo() => ammoAdd;
+        public float GetFireRate() => projectileFireRate;
+        
         public void Shoot()
         {
-
-                StartCoroutine(LaunchRocket());
-                instantiationLocation = GetComponent<Transform>();
+            StartCoroutine(LaunchRocket()); 
+            instantiationLocation = GetComponent<Transform>();
             
+            PlaySound();
         }
 
         private IEnumerator LaunchRocket()
@@ -42,13 +37,17 @@ namespace Weapons
             yield return new WaitForSeconds(rocketAccelaratonDelay);
 
             projectile.GetComponent<Rigidbody>().AddForce(projectileRayDirection.direction * projectileSpeed, ForceMode.Impulse);
-
-
+            
             //projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed), ForceMode.Force);
             yield return new WaitForSeconds(rocketDespawnTimer);
+            
             Destroy(projectile);
         }
 
 
+        public void PlaySound()
+        {
+            AudioManager.PlaySound(AudioManager.Sound.RocketLauncherLaunch, instantiationLocation.position);
+        }
     }
 }

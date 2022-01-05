@@ -34,21 +34,16 @@ namespace Weapons
         /// </summary>
         private void Shoot()
         {
-
             if (!_playerStats.canShoot) return;
 
             if (Input.GetMouseButton(0) && Time.time > nextFire)
             {
-
                 nextFire = Time.time + 1 / fireRate;
 
                 _playerStats.ammo -= 1;
                 if (_weapon == null) return;
                 _weapon.Shoot();
             }
-
-
-
         }
     }
 }

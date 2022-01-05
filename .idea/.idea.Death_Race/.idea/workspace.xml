@@ -5,25 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Mine_PREFAB.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Mine_PREFAB.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseExplosionResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseExplosionResponse.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/IExplosion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/IExplosion.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/LaserGreeen_PREFAB.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/LaserGreeen_PREFAB.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/12991 rocket deploy shot.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/12991 rocket deploy shot.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/GunshotLrgCal GFX029604.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/GunshotLrgCal GFX029604.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/GunshotSubmachineGun_BW.58261.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/GunshotSubmachineGun_BW.58261.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/LaserGun_BW.47494.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/LaserGun_BW.47494.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/SnglShotImpac GFX020101.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/SnglShotImpac GFX020101.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Upgrades/Polygon Arsenal 2019.4 URP.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Ship_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Ship_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Prefabs/Props/SM_Prop_Mine_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Prefabs/Props/SM_Prop_Mine_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player (Spaceship 3).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player (Spaceship 3).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/CustomizationScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/CustomizationScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Prefabs/Combat/Missiles/Sci-Fi/Grenade/GrenadePurple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Prefabs/Combat/Missiles/Sci-Fi/Grenade/GrenadePurple.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_01_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_01_B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_01_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_01_C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_02_D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_02_D.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/FX_Materials/FX_Laser.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/FX_Materials/FX_Laser.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/tomi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/tomi.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/VehicleSoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/VehicleSoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/BombTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/BombTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/LaserWeaponInputResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/LaserWeaponInputResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/MachineGunInputResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/MachineGunInputResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/PlayerWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/PlayerWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/RocketLauncherInputResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/RocketLauncherInputResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponRotater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponRotater.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponRotator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +137,7 @@
       <workItem from="1641311966329" duration="1152000" />
       <workItem from="1641316968133" duration="42000" />
       <workItem from="1641317066269" duration="767000" />
-      <workItem from="1641371418322" duration="8125000" />
+      <workItem from="1641371418322" duration="15616000" />
     </task>
     <servers />
   </component>

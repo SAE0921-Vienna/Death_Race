@@ -3,11 +3,12 @@ using Weapons;
 
 public class BombTrigger : MonoBehaviour
 {
-    private PlayerManager _playerManager;
+    public bool hasBeenActivated;
+    
     private ParticleSystem _boomEffect;
-    public bool hasBeenActivated = false;
-    public float bombTimer;
+    private float _bombTimer;
 
+    private PlayerManager _playerManager;
     private IExplosion _explosion;
     
     private void Awake()
@@ -15,7 +16,7 @@ public class BombTrigger : MonoBehaviour
         _explosion = GetComponent<IExplosion>();
         
         _playerManager = FindObjectOfType<PlayerManager>();
-        bombTimer = _playerManager.bombTimer;
+        _bombTimer = _playerManager.bombTimer;
         
         _boomEffect = transform.GetChild(0).GetComponent<ParticleSystem>();
         _boomEffect.Stop();
@@ -23,18 +24,14 @@ public class BombTrigger : MonoBehaviour
 
     private void Update()
     {
-        bombTimer -= Time.deltaTime;
-        if (bombTimer <= 0 && hasBeenActivated)
-        {
+        _bombTimer -= Time.deltaTime;
+        if (_bombTimer <= 0 && hasBeenActivated)
             _explosion.Explode();
-        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if ((hasBeenActivated && collision.transform.CompareTag("Player") && !_playerManager.isImmortal) || hasBeenActivated && collision.transform.CompareTag("Bullet"))
-        {
             _explosion.Explode();
-        }
     }
 }
