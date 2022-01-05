@@ -9,7 +9,9 @@ namespace Weapons
         private PlayerManager _playerStats;
         private Transform _weaponPosition;
         private IWeapon _weapon;
-
+        public float nextFire = 0f;
+        public float fireRate;
+        public int ammoAdd;
 
         private void Awake()
         {
@@ -17,6 +19,9 @@ namespace Weapons
             _powerUps = GetComponent<PowerUps>();
             _playerStats = GetComponent<PlayerManager>();
             _weaponPosition = transform.GetChild(1);
+
+            fireRate = _weapon.GetFireRate();
+            ammoAdd = _weapon.GetAmmo();
         }
 
         private void Update()
@@ -32,15 +37,18 @@ namespace Weapons
 
             if (!_playerStats.canShoot) return;
 
-                if (Input.GetMouseButton(0))
-                {
-                    _playerStats.ammo -= 1;
-                    if (_weapon == null) return;
-                    _weapon.Shoot();
-                }
-            
+            if (Input.GetMouseButton(0) && Time.time > nextFire)
+            {
 
-            
+                nextFire = Time.time + 1 / fireRate;
+
+                _playerStats.ammo -= 1;
+                if (_weapon == null) return;
+                _weapon.Shoot();
+            }
+
+
+
         }
     }
 }

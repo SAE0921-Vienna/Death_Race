@@ -34,6 +34,12 @@ public class PowerUps : MonoBehaviour
             uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
         }
 
+        if(playerStats.ammo <= 0)
+        {
+            playerStats.ammo = 0;
+            uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
+        }
+
         if (playerStats.timer < 0)
         {
             playerStats.timer = -1;

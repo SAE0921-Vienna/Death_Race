@@ -12,13 +12,24 @@ namespace Weapons
         [SerializeField] private float rocketOffset = 10f;
         [SerializeField] private float rocketDespawnTimer;
         [SerializeField] private Ray projectileRayDirection;
+        [SerializeField] private float projectileFireRate = 0.5f;
+        [SerializeField] private int ammoAdd = 15;
 
-
+        public int GetAmmo()
+        {
+            return ammoAdd;
+        }
+        public float GetFireRate()
+        {
+            return projectileFireRate;
+        }
 
         public void Shoot()
         {
-            StartCoroutine(LaunchRocket());
-            instantiationLocation = GetComponent<Transform>();
+
+                StartCoroutine(LaunchRocket());
+                instantiationLocation = GetComponent<Transform>();
+            
         }
 
         private IEnumerator LaunchRocket()
@@ -37,5 +48,7 @@ namespace Weapons
             yield return new WaitForSeconds(rocketDespawnTimer);
             Destroy(projectile);
         }
+
+
     }
 }

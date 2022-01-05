@@ -12,8 +12,8 @@ namespace Weapons
         [SerializeField] private Transform instantiationLocation;
         [SerializeField] private float projectileSpeed = 200f;
         [SerializeField] private float projectileLifeTime = 5f;
-        [SerializeField] private float projectileFireRate = 1f;
-        [SerializeField] private float nextFire = 0f;
+        [SerializeField] private float projectileFireRate = 100f;
+        [SerializeField] private int ammoAdd = 200;
         private Camera _camera;
 
         private void Awake()
@@ -24,21 +24,26 @@ namespace Weapons
 
         public void Shoot()
         {
-            if (Time.time > nextFire)
-            {
-                nextFire = Time.time + 1 / projectileFireRate;
-
+            
                 Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
                 GameObject projectile = Instantiate(laserPrefab, instantiationLocation.position, instantiationLocation.rotation);
                 projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Impulse);
 
                 Destroy(projectile, projectileLifeTime);
-            }
+            
 
 
 
 
         }
 
+        public int GetAmmo()
+        {
+            return ammoAdd;
+        }
+        public float GetFireRate()
+        {
+            return projectileFireRate;
+        }
     }
 }
