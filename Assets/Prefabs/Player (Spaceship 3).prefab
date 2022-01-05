@@ -1,5 +1,149 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &230543824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230543825}
+  - component: {fileID: 230543826}
+  - component: {fileID: 230543827}
+  m_Layer: 6
+  m_Name: VehicleAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &230543825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230543824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2305685658166473142}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &230543826
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230543824}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a89204fc9a9e7a030a7b06f3a4e7318c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &230543827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230543824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7323846358f043c9b7428231e7ae94c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPitch: 0.5
+  maxPitch: 1.4
+  minVolume: 0.5
+  maxVolume: 0.8
 --- !u!1 &2305685657295639895
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2305685657295639896}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InstantiationLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2305685657355867058}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2305685657697340892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2305685657835572992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Nitro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +287,7 @@ GameObject:
   - component: {fileID: 2305685658166473138}
   - component: {fileID: 2305685658166473137}
   - component: {fileID: 2305685658166473136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player (Spaceship 3)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -163,6 +307,7 @@ Transform:
   m_Children:
   - {fileID: 2305685657355867058}
   - {fileID: 2305685658297259664}
+  - {fileID: 230543825}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -179,9 +324,9 @@ Rigidbody:
   m_AngularDrag: 2
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 2
+  m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &2305685658166473140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,10 +396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a19594bcc1037b791fde9d9e823e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mAccelerationConstant: 20
-  mMaxSpeed: 600
+  mAccelerationConstant: 0.3
+  mMaxSpeed: 2000
   brakeForce: 500
-  decelerationConstant: 2.55
+  decelerationConstant: 0.6
   accelerationCurve:
     serializedVersion: 2
     m_Curve:
@@ -268,6 +413,15 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
+      time: 0.14336875
+      value: 0.4560873
+      inSlope: 0.47343335
+      outSlope: 0.47343335
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.7965619
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
@@ -280,10 +434,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   sideThrustAmount: 250
-  maxSteerAngle: 100
-  steerSpeed: 200
+  maxSteerAngle: 60
+  steerSpeed: 115
   downForceMultiplier: 1000
-  rotationalSmoothingDelta: 0
+  rotationalSmoothingDelta: 1
   currentSpeed: 0
 --- !u!65 &2305685658166473136
 BoxCollider:
@@ -307,7 +461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2305685658279434596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2305685658297259664}
   - component: {fileID: 3349423022687411624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spaceship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +566,7 @@ GameObject:
   - component: {fileID: 2305685658417572848}
   - component: {fileID: 2305685658417572847}
   - component: {fileID: 2305685658417572846}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +775,7 @@ TrailRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 0
   m_Autodestruct: 0
   m_Emitting: 1
 --- !u!1 &3407297394005047285
@@ -750,7 +904,7 @@ TrailRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 0
   m_Autodestruct: 0
   m_Emitting: 1
 --- !u!1 &4302006689682055276
@@ -794,6 +948,10 @@ PrefabInstance:
     - target: {fileID: 1304531895744914, guid: fb3ddbd3e49630145a54fd458b731d1f, type: 3}
       propertyPath: m_Name
       value: SM_Ship_Fighter_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304531895744914, guid: fb3ddbd3e49630145a54fd458b731d1f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1304531895744914, guid: fb3ddbd3e49630145a54fd458b731d1f, type: 3}
       propertyPath: m_IsActive
@@ -843,6 +1001,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23751820544328072, guid: fb3ddbd3e49630145a54fd458b731d1f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 471818ee249267849bd3a01cfefe564a, type: 2}
     m_RemovedComponents:
     - {fileID: 64389636999594480, guid: fb3ddbd3e49630145a54fd458b731d1f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fb3ddbd3e49630145a54fd458b731d1f, type: 3}
@@ -861,6 +1023,10 @@ PrefabInstance:
     - target: {fileID: 1682439711449256, guid: ab22dfee5ddd2634f991aee1f95f050f, type: 3}
       propertyPath: m_Name
       value: Nitro_Flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682439711449256, guid: ab22dfee5ddd2634f991aee1f95f050f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4228550296906564, guid: ab22dfee5ddd2634f991aee1f95f050f, type: 3}
       propertyPath: m_RootOrder
@@ -933,8 +1099,20 @@ PrefabInstance:
       value: WEAPON_Minigun
       objectReference: {fileID: 0}
     - target: {fileID: 1054409225073040, guid: 121432c6b8493534cb89dae567754a46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054409225073040, guid: 121432c6b8493534cb89dae567754a46, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357088146602606, guid: 121432c6b8493534cb89dae567754a46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966969390404724, guid: 121432c6b8493534cb89dae567754a46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4860982568591162, guid: 121432c6b8493534cb89dae567754a46, type: 3}
       propertyPath: m_RootOrder
@@ -997,6 +1175,10 @@ PrefabInstance:
     - target: {fileID: 1780525546063992, guid: 1b1fbf5c6e21dcb4bb773f085e667393, type: 3}
       propertyPath: m_Name
       value: FX_WarpTunnel_Dots
+      objectReference: {fileID: 0}
+    - target: {fileID: 1780525546063992, guid: 1b1fbf5c6e21dcb4bb773f085e667393, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4954118487911938, guid: 1b1fbf5c6e21dcb4bb773f085e667393, type: 3}
       propertyPath: m_RootOrder
@@ -1077,8 +1259,20 @@ PrefabInstance:
       value: WEAPON_Missle
       objectReference: {fileID: 0}
     - target: {fileID: 1080393431634716, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080393431634716, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561816110152660, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785390970406498, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4761695672732282, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
       propertyPath: m_RootOrder
@@ -1130,14 +1324,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
---- !u!1 &2304431877420216008 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1561816110152660, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
-  m_PrefabInstance: {fileID: 2305685658267866396}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2301516511757120454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4452958460602074, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
+  m_PrefabInstance: {fileID: 2305685658267866396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2304431877420216008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1561816110152660, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
   m_PrefabInstance: {fileID: 2305685658267866396}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2301227668695080806 stripped
@@ -1177,6 +1371,10 @@ PrefabInstance:
     - target: {fileID: 1682439711449256, guid: ab22dfee5ddd2634f991aee1f95f050f, type: 3}
       propertyPath: m_Name
       value: Nitro_Flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682439711449256, guid: ab22dfee5ddd2634f991aee1f95f050f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4228550296906564, guid: ab22dfee5ddd2634f991aee1f95f050f, type: 3}
       propertyPath: m_RootOrder
@@ -1249,8 +1447,20 @@ PrefabInstance:
       value: WEAPON_Laser
       objectReference: {fileID: 0}
     - target: {fileID: 1079316786754286, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079316786754286, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091033378757932, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181764383423302, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4453692391769076, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
       propertyPath: m_RootOrder
@@ -1301,6 +1511,11 @@ PrefabInstance:
     - {fileID: 64500017162153078, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
     - {fileID: 64182247079121482, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
+--- !u!1 &2304898811938887702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1079316786754286, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
+  m_PrefabInstance: {fileID: 2305685658615343864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2301518079781873932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4453692391769076, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
@@ -1309,11 +1524,6 @@ Transform:
 --- !u!4 &2301436860979138956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4266390175103860, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
-  m_PrefabInstance: {fileID: 2305685658615343864}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2304898811938887702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1079316786754286, guid: d61d59b102c18fa4482acbb105b6a94b, type: 3}
   m_PrefabInstance: {fileID: 2305685658615343864}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2305685658707551645
@@ -1330,5 +1540,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 5654157430322735983, guid: e1a5065ec43a8f107bdf7b5efb981857, type: 3}
   instantiationLocation: {fileID: 2305685657295639896}
-  projectileSpeed: 4000
+  projectileSpeed: 2000
   projectileLifeTime: 5

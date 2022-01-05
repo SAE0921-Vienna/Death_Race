@@ -182,8 +182,8 @@ MonoBehaviour:
   - {fileID: 1856595299}
   - {fileID: 1192914219}
   - {fileID: 1857064602}
-  actionSound: 3
-  soundVolume: 0.5
+  actionSound: 2
+  soundVolume: 0
 --- !u!114 &10099533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,8 +1519,8 @@ MonoBehaviour:
   - {fileID: 1856595299}
   - {fileID: 1192914219}
   - {fileID: 1857064602}
-  actionSound: 3
-  soundVolume: 0.5
+  actionSound: 2
+  soundVolume: 0
 --- !u!114 &443928845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,8 +2233,8 @@ MonoBehaviour:
   - {fileID: 1856595299}
   - {fileID: 603413927}
   - {fileID: 1857064602}
-  actionSound: 3
-  soundVolume: 0.5
+  actionSound: 2
+  soundVolume: 0
 --- !u!114 &764472226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3837,7 +3837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedUnit: {fileID: 0}
   health: 100
   nitroSpeed: 50
   normalMaxSpeed: 0
@@ -3853,6 +3852,7 @@ MonoBehaviour:
   canShoot: 0
   bomb: 0
   timeSlowed: 0
+  isImmortal: 0
   timer: 0
   timerCooldown: 5
 --- !u!114 &1192914222
@@ -3868,8 +3868,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpList: []
-  powerUpUI: {fileID: 0}
-  ammoAmountUI: {fileID: 0}
 --- !u!114 &1192914223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5595,8 +5593,8 @@ MonoBehaviour:
   - {fileID: 1856595299}
   - {fileID: 1192914219}
   - {fileID: 603413927}
-  actionSound: 3
-  soundVolume: 0.5
+  actionSound: 2
+  soundVolume: 0
 --- !u!114 &1760872681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5741,7 +5739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedUnit: {fileID: 0}
   health: 100
   nitroSpeed: 50
   normalMaxSpeed: 0
@@ -5757,6 +5754,7 @@ MonoBehaviour:
   canShoot: 0
   bomb: 0
   timeSlowed: 0
+  isImmortal: 0
   timer: 0
   timerCooldown: 5
 --- !u!114 &1826074313
@@ -5772,8 +5770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpList: []
-  powerUpUI: {fileID: 0}
-  ammoAmountUI: {fileID: 0}
 --- !u!114 &1826074314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5942,7 +5938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedUnit: {fileID: 0}
   health: 100
   nitroSpeed: 50
   normalMaxSpeed: 0
@@ -5958,6 +5953,7 @@ MonoBehaviour:
   canShoot: 0
   bomb: 0
   timeSlowed: 0
+  isImmortal: 0
   timer: 0
   timerCooldown: 5
 --- !u!114 &1856595302
@@ -5973,8 +5969,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpList: []
-  powerUpUI: {fileID: 0}
-  ammoAmountUI: {fileID: 0}
 --- !u!114 &1856595303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6125,8 +6119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpList: []
-  powerUpUI: {fileID: 0}
-  ammoAmountUI: {fileID: 0}
 --- !u!114 &1857064606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6151,7 +6143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedUnit: {fileID: 0}
   health: 100
   nitroSpeed: 400
   normalMaxSpeed: 0
@@ -6167,6 +6158,7 @@ MonoBehaviour:
   canShoot: 0
   bomb: 0
   timeSlowed: 0
+  isImmortal: 0
   timer: 0
   timerCooldown: 5
 --- !u!54 &1857064608
@@ -6645,8 +6637,8 @@ MonoBehaviour:
   - {fileID: 603413927}
   - {fileID: 1192914219}
   - {fileID: 1857064602}
-  actionSound: 3
-  soundVolume: 0.5
+  actionSound: 2
+  soundVolume: 0
 --- !u!114 &2141805625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6748,6 +6740,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1370798706}
     m_Modifications:
+    - target: {fileID: 230543826, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2281938269894307896, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6887,7 +6883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6797271977572399084, guid: 3020d7f65d7b161dcb064f50cee66d0f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3020d7f65d7b161dcb064f50cee66d0f, type: 3}

@@ -5,7 +5,7 @@ namespace Audio
 {
     public class VehicleSoundManager : MonoBehaviour
     {
-        // Linearly Interpolates between min and max pitch and volume using the current speed.
+        // Linearly Interpolates between min/max PITCH and VOLUME with a normalized value of 0 and maxSpeed as t.
         
         private AudioSource _audioSource;
         private VehicleController _vehicleController;

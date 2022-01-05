@@ -128,8 +128,6 @@ public class VehicleController : MonoBehaviour
         rBody.MoveRotation(rBody.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
     }
 
-    public float AngleGetter()
-    {
-        return t;
-    }
+    public float AngleGetter() => t;
+
 }

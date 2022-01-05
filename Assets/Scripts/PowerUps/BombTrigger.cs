@@ -1,21 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Weapons;
 
 public class BombTrigger : MonoBehaviour
 {
-    private PlayerManager playerstats;
-    private ParticleSystem boomEffect;
+    private PlayerManager _playerManager;
+    private ParticleSystem _boomEffect;
     public bool hasBeenActivated = false;
     public float bombTimer;
 
-
+    private IExplosion _explosion;
+    
     private void Awake()
     {
-        boomEffect = transform.GetChild(0).GetComponent<ParticleSystem>();
-        boomEffect.Stop();
-        playerstats = FindObjectOfType<PlayerManager>();
-        bombTimer = playerstats.bombTimer;
+        _explosion = GetComponent<IExplosion>();
+        
+        _playerManager = FindObjectOfType<PlayerManager>();
+        bombTimer = _playerManager.bombTimer;
+        
+        _boomEffect = transform.GetChild(0).GetComponent<ParticleSystem>();
+        _boomEffect.Stop();
     }
 
     private void Update()
@@ -23,25 +26,15 @@ public class BombTrigger : MonoBehaviour
         bombTimer -= Time.deltaTime;
         if (bombTimer <= 0 && hasBeenActivated)
         {
-            boomEffect.transform.parent = null;
-            Destroy(gameObject);
+            _explosion.Explode();
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((hasBeenActivated && collision.transform.tag == "Player" && !playerstats.isImmortal) || hasBeenActivated && collision.transform.tag == "Bullet")
+        if ((hasBeenActivated && collision.transform.CompareTag("Player") && !_playerManager.isImmortal) || hasBeenActivated && collision.transform.CompareTag("Bullet"))
         {
-            boomEffect.transform.parent = null;
-            //Destroy(collision.gameObject);
-            collision.gameObject.SetActive(false);
-            Destroy(gameObject);
+            _explosion.Explode();
         }
     }
-    private void OnDestroy()
-    {
-        boomEffect.Play();
-        boomEffect.gameObject.AddComponent<DestroyParticle>();
-    }
-
 }
