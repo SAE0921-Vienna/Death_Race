@@ -29,13 +29,18 @@ namespace Weapons
         /// </summary>
         private void Shoot()
         {
+
             if (!_playerStats.canShoot) return;
-            if (Input.GetMouseButtonDown(0))
-            {
-                _playerStats.ammo -= 1;
-                if (_weapon == null) return;
-                _weapon.Shoot();
-            }
+
+                if (Input.GetMouseButton(0))
+                {
+                    _playerStats.ammo -= 1;
+                    if (_weapon == null) return;
+                    _weapon.Shoot();
+                }
+            
+
+            
         }
     }
 }

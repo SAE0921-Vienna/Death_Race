@@ -9,23 +9,28 @@ namespace Weapons
         [SerializeField] private Transform instantiationLocation;
         [SerializeField] private float projectileSpeed;
         [SerializeField] private float rocketAccelaratonDelay;
+        [SerializeField] private float rocketOffset = 10f;
         [SerializeField] private float rocketDespawnTimer;
-        
+        [SerializeField] private Ray projectileRayDirection;
+
+
+
         public void Shoot()
         {
             StartCoroutine(LaunchRocket());
             instantiationLocation = GetComponent<Transform>();
-
         }
 
         private IEnumerator LaunchRocket()
         {
+            projectileRayDirection = Camera.main.ScreenPointToRay(Input.mousePosition);
+
             var projectile = Instantiate(rocketPrefab, instantiationLocation.position, Quaternion.identity);
+            Vector3 offset = new Vector3(projectile.transform.position.x, projectile.transform.position.y + rocketOffset, projectile.transform.position.z);
+            projectile.transform.position = offset;
             yield return new WaitForSeconds(rocketAccelaratonDelay);
 
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Force);
+            projectile.GetComponent<Rigidbody>().AddForce(projectileRayDirection.direction * projectileSpeed, ForceMode.Impulse);
 
 
             //projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed), ForceMode.Force);
