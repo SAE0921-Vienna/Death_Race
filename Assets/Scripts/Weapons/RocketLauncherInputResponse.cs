@@ -40,9 +40,12 @@ namespace Weapons
             
             //projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed), ForceMode.Force);
             yield return new WaitForSeconds(rocketDespawnTimer);
-            
+       
+
             Destroy(projectile);
         }
+
+
 
 
         public void PlaySound()

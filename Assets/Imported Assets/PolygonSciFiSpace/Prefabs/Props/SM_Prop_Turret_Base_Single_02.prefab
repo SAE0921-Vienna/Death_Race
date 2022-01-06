@@ -111,11 +111,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 1626321002503286, guid: f53a4f6f9d769cc46a9afc0538f454c4, type: 3}
-  instantiationLocation: {fileID: 4679944013624156}
-  projectileSpeed: 200
+  instantiationLocation: {fileID: 4335574609296154}
+  projectileSpeed: 400
   projectileLifeTime: 5
-  projectileFireRate: 100
+  projectileFireRate: 20
+  barrelRotationSpeed: 0
   ammoAdd: 350
+  barrel: {fileID: 1357088146602606}
 --- !u!1 &1357088146602606
 GameObject:
   m_ObjectHideFlags: 0

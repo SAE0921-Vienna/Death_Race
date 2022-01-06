@@ -156,7 +156,8 @@ public class PowerUps : MonoBehaviour
     {
         GameObject bombClone = Instantiate(powerUp.powerUpPrefab, powerupParent.GetChild(2).transform.position, Quaternion.identity);
         bombClone.transform.localScale = playerStats.bombScale;
-        bombClone.AddComponent<SphereCollider>();
+        bombClone.GetComponent<SphereCollider>().enabled = true;
+        bombClone.GetComponent<Rigidbody>().useGravity = true;
         bombClone.GetComponent<BombTrigger>().hasBeenActivated = true;
         playerStats.bomb = true;
     }

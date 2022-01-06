@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject finishLine;
 
+    private CheckpointManager checkpointManager;
+
     public int laps = 3;
     public int currentLap;
     public int positions = 5;
@@ -14,10 +16,15 @@ public class GameManager : MonoBehaviour
     public int checkpoints;
     public int currentCheckpoint;
 
-
     public float roundTimer;
 
     public bool isFacingCorrectWay;
+
+    private void Awake()
+    {
+        checkpointManager = FindObjectOfType<CheckpointManager>().GetComponent<CheckpointManager>();
+        checkpoints = checkpointManager.checkpoints;
+    }
 
     private void Update()
     {
@@ -25,6 +32,7 @@ public class GameManager : MonoBehaviour
         roundTimer = (float)System.Math.Round(roundTimer, 0);
 
         CheckLaps();
+        CheckCurrentCheckpoint();
     }
 
 
@@ -38,6 +46,12 @@ public class GameManager : MonoBehaviour
         {
             currentLap = 0;
         }
+
+    }
+
+    public void CheckCurrentCheckpoint()
+    {
+
 
     }
 

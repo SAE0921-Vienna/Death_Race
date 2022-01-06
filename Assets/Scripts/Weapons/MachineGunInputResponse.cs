@@ -19,7 +19,7 @@ namespace Weapons
         private void Awake()
         {
             _camera = Camera.main;
-            instantiationLocation = GetComponent<Transform>();
+            //instantiationLocation = GetComponent<Transform>();
         }
 
         public void Shoot()

@@ -19,10 +19,13 @@ public class FinishLineManager : MonoBehaviour
         if(other.tag == "Player" && vehicleController.currentSpeed > 0)
         {
             gameManager.currentLap += 1;
+            Debug.Log("Finishline (+1 Lap)");
         }
         if (other.tag == "Player" && vehicleController.currentSpeed <= 0)
         {
             gameManager.currentLap -= 1;
+            Debug.Log("Finishline (-1 Lap)");
+
         }
     }
 
