@@ -15,6 +15,8 @@ public class CheckpointManager : MonoBehaviour
 
     private Transform checkpointParent;
 
+    private Quaternion tempSpawnPlayerRotation;
+
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();

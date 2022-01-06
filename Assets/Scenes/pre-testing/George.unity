@@ -1201,6 +1201,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6797271977572399083, guid: 3020d7f65d7b161dcb064f50cee66d0f, type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797271977572399083, guid: 3020d7f65d7b161dcb064f50cee66d0f, type: 3}
       propertyPath: m_Volume
       value: 0.3
       objectReference: {fileID: 0}
@@ -3054,7 +3058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226889407250873794, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
       propertyPath: barrelRotationSpeed
-      value: 200
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1226889407250873794, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
       propertyPath: instantiationLocation
@@ -3126,23 +3130,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2304898811938887702, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304900175081047552, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304900175081047552, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304943717464561676, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304943717464561676, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
+      propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2304900175081047552, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2304900175081047552, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2304943717464561676, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2304943717464561676, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2305685656681787827, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
       propertyPath: maxRotation

@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public bool isFacingCorrectWay;
 
     public Vector3 spawnPlayerPosition;
+    public Quaternion spawnPlayerRotation;
     public float spawnPlayerYOffset = 5f;
 
     private void Awake()
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         checkpoints = checkpointManager.checkpoints;
 
         spawnPlayerPosition = new Vector3(playerManager.transform.position.x, playerManager.transform.position.y + spawnPlayerYOffset, playerManager.transform.position.z);
+        spawnPlayerRotation = new Quaternion(playerManager.transform.rotation.x, playerManager.transform.rotation.y, playerManager.transform.rotation.z, playerManager.transform.rotation.w) ;
     }
 
     private void Update()
@@ -112,6 +114,7 @@ public class GameManager : MonoBehaviour
 
         spawnPlayerPosition = new Vector3(spawnPlayerPosition.x, spawnPlayerPosition.y + spawnPlayerYOffset, spawnPlayerPosition.z);
         playerManager.transform.position = spawnPlayerPosition;
+        //playerManager.transform.rotation = spawnPlayerRotation;
         playerManager.gameObject.SetActive(true);
 
     }

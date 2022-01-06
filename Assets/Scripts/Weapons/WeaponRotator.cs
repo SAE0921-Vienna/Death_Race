@@ -22,13 +22,12 @@ public class WeaponRotator : MonoBehaviour
 
     private void Update()
     {
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        var ray = _camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
-        {
             Debug.DrawLine(transform.position, hit.point);
-        }
+        
 
         targetRotation = Quaternion.LookRotation(ray.direction);
 
@@ -37,14 +36,5 @@ public class WeaponRotator : MonoBehaviour
         var angularDifference = Quaternion.Angle(currentRotation, targetRotation);
 
         weaponOnShip.transform.rotation = angularDifference > 0 ? Quaternion.Slerp(currentRotation, targetRotation, (rotationSpeed * 180 * Time.deltaTime) / angularDifference) : targetRotation;
-
-
-
-
-
     }
-
-
-
-
 }
