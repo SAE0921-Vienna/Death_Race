@@ -413,8 +413,13 @@ MonoBehaviour:
   playerPosition: 1
   checkpoints: 0
   currentCheckpoint: 0
+  nextCheckpoint: 0
   roundTimer: 0
+  offTrackTimer: 0
+  offTrackTimerLimit: 5
   isFacingCorrectWay: 0
+  spawnPlayerPosition: {x: 0, y: 0, z: 0}
+  spawnPlayerYOffset: 5
 --- !u!1 &222877706
 GameObject:
   m_ObjectHideFlags: 0
@@ -5517,6 +5522,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
   checkpoints: 0
+  currentCheckpoint: 0
+  nextCheckpointIndex: 0
 --- !u!1 &500531136
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,7 +6733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1080393431634716, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4761695672732282, guid: c56e1ea930d4baa448ee4cebf772899f, type: 3}
       propertyPath: m_RootOrder
@@ -6955,7 +6962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1054409225073040, guid: 121432c6b8493534cb89dae567754a46, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4860982568591162, guid: 121432c6b8493534cb89dae567754a46, type: 3}
       propertyPath: m_RootOrder
@@ -7172,6 +7179,7 @@ MonoBehaviour:
   steerSpeed: 150
   downForceMultiplier: 1000
   rotationalSmoothingDelta: 0
+  isOnRoadtrack: 0
   currentSpeed: 0
 --- !u!54 &1150493393
 Rigidbody:
@@ -7259,6 +7267,7 @@ MonoBehaviour:
   bomb: 0
   timeSlowed: 0
   isImmortal: 0
+  isOnRoadtrack: 0
   timer: 0
   timerCooldown: 5
 --- !u!114 &1150493398

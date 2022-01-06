@@ -34,6 +34,7 @@ public class PlayerManager : MonoBehaviour
     public bool bomb;
     public bool timeSlowed;
     public bool isImmortal;
+    public bool isOnRoadtrack;
 
     [Header("Power Up Timer")]
     public float timer;
@@ -58,6 +59,7 @@ public class PlayerManager : MonoBehaviour
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
         if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString();
         if (health <= 0) gameObject.SetActive(false);
+        isOnRoadtrack = vehicleController.isOnRoadtrack;
 
     }
 

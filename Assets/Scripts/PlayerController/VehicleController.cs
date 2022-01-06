@@ -26,6 +26,9 @@ public class VehicleController : MonoBehaviour
     [SerializeField] private float downForceMultiplier;
 
     [Header("MISC")] [SerializeField] private float rotationalSmoothingDelta;
+
+    [Header("Is on Track")] public bool isOnRoadtrack;
+
     
     
     
@@ -47,8 +50,18 @@ public class VehicleController : MonoBehaviour
     private void Update()
     {
         Steer();
+
+        if(Physics.Raycast(transform.position, -transform.up, out var hit))
+        {
+            isOnRoadtrack = true;
+        }
+        else
+        {
+            isOnRoadtrack = false;
+        }
+
     }
-    
+
     [HideInInspector]
     public float currentSpeed;
     
@@ -83,7 +96,7 @@ public class VehicleController : MonoBehaviour
 
     private RaycastHit GroundInfo()
     {
-        Physics.Raycast(transform.position, -transform.up, out var hit);
+        Physics.Raycast(transform.position, -transform.up, out var hit);        
         return hit;
     }
 

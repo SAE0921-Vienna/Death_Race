@@ -5,15 +5,21 @@ using UnityEditor;
 
 public class CheckpointManager : MonoBehaviour
 {
+    private GameManager gameManager;
+
     public List<Checkpoint> checkpointsInWorldList;
 
     public int checkpoints;
+    public int currentCheckpoint;
+    public int nextCheckpointIndex;
 
     private Transform checkpointParent;
 
     private void Awake()
     {
-        checkpoints = checkpointsInWorldList.Count;
+        gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+
+
         checkpointParent = this.transform;
 
         checkpointsInWorldList = new List<Checkpoint>();
@@ -28,12 +34,30 @@ public class CheckpointManager : MonoBehaviour
 
         }
 
+        checkpoints = checkpointsInWorldList.Count;
+
+        nextCheckpointIndex = 0;
+
     }
 
     public void PlayerThroughCheckpoint(Checkpoint checkpoint)
     {
         //Debug.Log(checkpoint.transform.name);
-        Debug.Log(checkpointsInWorldList.IndexOf(checkpoint));
+        if(checkpointsInWorldList.IndexOf(checkpoint) == nextCheckpointIndex)
+        {
+            currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
+            nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
+            gameManager.CheckCurrentCheckpoint();
+            gameManager.spawnPlayerPosition = checkpoint.transform.position;
+
+            Debug.Log("correct");
+        }
+        else
+        {
+
+            Debug.Log("no");
+
+        }
 
     }
 
