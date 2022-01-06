@@ -115,7 +115,7 @@ MonoBehaviour:
   projectileSpeed: 400
   projectileLifeTime: 5
   projectileFireRate: 20
-  barrelRotationSpeed: 0
+  barrelRotationSpeed: 80
   ammoAdd: 350
   barrel: {fileID: 1357088146602606}
 --- !u!1 &1357088146602606

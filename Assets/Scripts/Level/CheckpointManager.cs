@@ -35,6 +35,7 @@ public class CheckpointManager : MonoBehaviour
         }
 
         checkpoints = checkpointsInWorldList.Count;
+        gameManager.checkpoints = checkpoints;
 
         nextCheckpointIndex = 0;
 

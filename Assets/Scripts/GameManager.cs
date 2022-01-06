@@ -58,9 +58,11 @@ public class GameManager : MonoBehaviour
 
     public void CheckLaps()
     {
-        if (currentLap >= laps)
+        if (currentLap > laps)
         {
             currentLap = laps;
+            //Game Finish
+            Debug.Log("YAY FINISH");
         }
         if (currentLap < 0)
         {
