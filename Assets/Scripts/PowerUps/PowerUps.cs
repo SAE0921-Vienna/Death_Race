@@ -14,13 +14,13 @@ public class PowerUps : MonoBehaviour
     private int powerUpListLength = 1;
 
 
+
     private void Awake()
     {
         playerStats = GetComponent<PlayerManager>();
         uIManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
 
         powerupParent = transform.GetChild(0);
-
         playerStats.normalMaxSpeed = GetComponent<VehicleController>().mMaxSpeed;
     }
 
@@ -116,10 +116,7 @@ public class PowerUps : MonoBehaviour
             playerStats.bomb = false;
         }
 
-        if (playerStats.timeSlowed)
-        {
-            playerStats.timeSlowed = false;
-        }
+
     }
 
     #region Power Up Methods
@@ -162,13 +159,7 @@ public class PowerUps : MonoBehaviour
         playerStats.bomb = true;
     }
 
-    //public void SlowPowerUp()
-    //{
-    //    playerStats.timer = playerStats.timerCooldown;
-    //    Time.timeScale = playerStats.slowTimeValue;
-    //    playerStats.timeSlowed = true;
-
-    //}
+ 
 
     #endregion
 }

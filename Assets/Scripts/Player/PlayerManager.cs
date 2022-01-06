@@ -25,14 +25,11 @@ public class PlayerManager : MonoBehaviour
     public int ammoLimit;
     public float bombTimer = 10f;
     public Vector3 bombScale = new Vector3(5, 5, 5);
-    [Header("SlowTime")]
-    public float slowTimeValue = 0.5f;
     [Header("PowerUp Activates")]
     public bool shield;
     public bool nitro;
     public bool canShoot;
     public bool bomb;
-    public bool timeSlowed;
     public bool isImmortal;
     public bool isOnRoadtrack;
 

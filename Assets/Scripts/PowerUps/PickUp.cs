@@ -76,11 +76,21 @@ public class PickUp : MonoBehaviour
             if (!childObjectDeleted)
             {
                 #region Manually Add one specific PowerUp
-                if (pickUpObject != null)
+                if (pickUpObject != null && pickUpObject.powerUpType == PickUpScriptableObject.powerUps.Random)
                 {
+                    int rand = Random.Range(0, powerUpManager.powerUps.Length - 1);
+                    pickUpObject = powerUpManager.powerUps[rand];
                     other.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
                 }
+                else if (pickUpObject != null)
+                {
+                    other.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+
+                }
+
                 #endregion
+
+
 
                 #region Randomly Add one PowerUp from the PowerUps List
                 //int rand = Random.Range(0, powerUpManager.powerUps.Length);

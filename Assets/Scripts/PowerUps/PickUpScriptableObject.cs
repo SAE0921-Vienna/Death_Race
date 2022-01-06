@@ -11,12 +11,15 @@ public class PickUpScriptableObject : ScriptableObject
     public powerUps powerUpType;
     
 
+    //Random muss immer das letzte sein!
+
     public enum powerUps
     {
         Shield,
         Nitro,
         Ammo,
-        Bomb
+        Bomb,
+        Random
 
     }
 

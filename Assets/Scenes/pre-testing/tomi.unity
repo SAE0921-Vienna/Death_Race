@@ -665,6 +665,7 @@ MonoBehaviour:
   offTrackTimerLimit: 3
   isFacingCorrectWay: 0
   spawnPlayerPosition: {x: 0, y: 0, z: 0}
+  spawnPlayerRotation: {x: 0, y: 0, z: 0, w: 0}
   spawnPlayerYOffset: 5
 --- !u!1 &222877706
 GameObject:
@@ -6947,6 +6948,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 502fe3a0d4858ff45ac07e109a8803a3, type: 2}
   - {fileID: 11400000, guid: 0c0c5ee01780e344b80f324e9b09ff9c, type: 2}
   - {fileID: 11400000, guid: 01bb50931deea5d48abe16a8c303b0d5, type: 2}
+  - {fileID: 11400000, guid: e29437f521ffaa641816f77b8cd8efc5, type: 2}
 --- !u!4 &753743085
 Transform:
   m_ObjectHideFlags: 0
@@ -8609,12 +8611,10 @@ MonoBehaviour:
   ammoLimit: 25
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
-  slowTimeValue: 0.5
   shield: 0
   nitro: 0
   canShoot: 0
   bomb: 0
-  timeSlowed: 0
   isImmortal: 0
   isOnRoadtrack: 0
   timer: 0
