@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
 
     private VehicleController vehicleController;
     private UIManager uiManager;
+    private GameManager gameManager;
     private PlayerWeapon playerWeapon;
     [Header("Health")]
     public int health = 100;
@@ -32,6 +33,7 @@ public class PlayerManager : MonoBehaviour
     public bool bomb;
     public bool isImmortal;
     public bool isOnRoadtrack;
+    public bool isFacingCorrectDirection;
 
     [Header("Power Up Timer")]
     public float timer;
@@ -43,6 +45,7 @@ public class PlayerManager : MonoBehaviour
         vehicleController = GetComponent<VehicleController>();
         uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
         playerWeapon = GetComponent<PlayerWeapon>();
+        gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
 
     }
     private void Start()
@@ -58,6 +61,16 @@ public class PlayerManager : MonoBehaviour
         if (health <= 0) gameObject.SetActive(false);
         isOnRoadtrack = vehicleController.isOnRoadtrack;
 
+        Debug.DrawLine(transform.position, FacingInfo().point);
+      
+
+    }
+
+    public RaycastHit FacingInfo()
+    {
+        Physics.Raycast(transform.position, transform.forward, out var hit);
+
+        return hit;
     }
 
 }

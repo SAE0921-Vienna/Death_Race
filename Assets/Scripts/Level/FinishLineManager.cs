@@ -14,12 +14,12 @@ public class FinishLineManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && gameManager.currentLap == 0 && gameManager.currentCheckpoint == 0)
+        if (other.CompareTag("Player") && gameManager.currentLap == 0 && gameManager.currentCheckpoint == 0)
         {
             gameManager.currentLap += 1;
         }
 
-        if (other.tag == "Player" && gameManager.currentCheckpoint == gameManager.checkpoints - 1)
+        if (other.CompareTag("Player") && gameManager.currentCheckpoint == gameManager.checkpoints - 1)
         {
             gameManager.currentLap += 1;
             gameManager.CheckLaps();

@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI lapsAmountUI;
     public TextMeshProUGUI positionsUI;
     public TextMeshProUGUI roundTimerUI;
+    public RectTransform wrongDirectionUI;
 
 
     private void Awake()

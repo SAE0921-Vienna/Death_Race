@@ -15,7 +15,7 @@ public class Checkpoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             //Debug.Log("Checkpoint");
             checkpointManager.PlayerThroughCheckpoint(this);
@@ -24,10 +24,6 @@ public class Checkpoint : MonoBehaviour
      
     }
 
-    //public void SetTrackCheckPoints(CheckpointManager trackCheckpoints)
-    //{
-    //    this.checkpointManager = trackCheckpoints;
-    //}
 
 
 }

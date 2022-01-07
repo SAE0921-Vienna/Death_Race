@@ -15,8 +15,6 @@ public class CheckpointManager : MonoBehaviour
 
     private Transform checkpointParent;
 
-    private Quaternion tempSpawnPlayerRotation;
-
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
@@ -31,7 +29,6 @@ public class CheckpointManager : MonoBehaviour
         {
             //Debug.Log(checkpointsInWorld);
             Checkpoint checkpoint = checkpointsInWorld.GetComponent<Checkpoint>();
-            //checkpoint.SetTrackCheckPoints(this);
             checkpointsInWorldList.Add(checkpoint);
 
         }
@@ -48,17 +45,18 @@ public class CheckpointManager : MonoBehaviour
         //Debug.Log(checkpoint.transform.name);
         if(checkpointsInWorldList.IndexOf(checkpoint) == nextCheckpointIndex)
         {
+
             currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
             nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
             gameManager.CheckCurrentCheckpoint();
             gameManager.spawnPlayerPosition = checkpoint.transform.position;
-
-            Debug.Log("correct");
+            gameManager.spawnPlayerRotation = checkpoint.transform.rotation;
+    
+            //Debug.Log("correct direction");
         }
         else
-        {
-
-            Debug.Log("no");
+        {     
+            //Debug.Log("wrong direction or missed checkpoint");
 
         }
 

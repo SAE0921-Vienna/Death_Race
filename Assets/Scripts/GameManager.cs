@@ -29,8 +29,6 @@ public class GameManager : MonoBehaviour
     public float offTrackTimer;
     public float offTrackTimerLimit = 5f;
 
-    public bool isFacingCorrectWay;
-
     public Vector3 spawnPlayerPosition;
     public Quaternion spawnPlayerRotation;
     public float spawnPlayerYOffset = 5f;
@@ -114,7 +112,7 @@ public class GameManager : MonoBehaviour
 
         spawnPlayerPosition = new Vector3(spawnPlayerPosition.x, spawnPlayerPosition.y + spawnPlayerYOffset, spawnPlayerPosition.z);
         playerManager.transform.position = spawnPlayerPosition;
-        //playerManager.transform.rotation = spawnPlayerRotation;
+        playerManager.transform.rotation = spawnPlayerRotation;
         playerManager.gameObject.SetActive(true);
 
     }
