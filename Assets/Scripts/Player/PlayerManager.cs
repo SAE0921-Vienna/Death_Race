@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using PlayerController;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -8,7 +9,7 @@ using Weapons;
 public class PlayerManager : MonoBehaviour
 {
 
-    private VehicleController vehicleController;
+    public VehicleController vehicleController;
     private UIManager uiManager;
     private GameManager gameManager;
     private PlayerWeapon playerWeapon;

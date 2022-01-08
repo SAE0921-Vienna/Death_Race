@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bomb
   icon: {fileID: 21300000, guid: 29bbe28145113ef49b4eb5192fe86c0e, type: 3}
-  powerUpPrefab: {fileID: 1574806725768970, guid: 60baff5026f41fca0874c3f6aa311611, type: 3}
+  powerUpPrefab: {fileID: 1574806725768970, guid: b1d9322be573b484b8d301c58ab78af9, type: 3}
   powerUpType: 3

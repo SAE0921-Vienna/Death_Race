@@ -617,11 +617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.60933065
+      value: 0.6093307
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000472107
+      value: 0.0004721123
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -629,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.022546621
+      value: 0.022546627
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -763,8 +763,8 @@ MonoBehaviour:
   roundTimer: 0
   offTrackTimer: 0
   offTrackTimerLimit: 3
-  isFacingCorrectWay: 0
   spawnPlayerPosition: {x: 0, y: 0, z: 0}
+  spawnPlayerRotation: {x: 0, y: 0, z: 0, w: 0}
   spawnPlayerYOffset: 5
 --- !u!4 &211075211
 Transform:
@@ -1202,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6797271977572399083, guid: 3020d7f65d7b161dcb064f50cee66d0f, type: 3}
       propertyPath: Priority
-      value: 256
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6797271977572399083, guid: 3020d7f65d7b161dcb064f50cee66d0f, type: 3}
       propertyPath: m_Volume
@@ -1218,7 +1218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6797271977572399084, guid: 3020d7f65d7b161dcb064f50cee66d0f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3020d7f65d7b161dcb064f50cee66d0f, type: 3}
@@ -1537,11 +1537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.60933065
+      value: 0.6093307
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000472107
+      value: 0.0004721123
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1549,7 +1549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.022546621
+      value: 0.022546627
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2762,6 +2762,7 @@ MonoBehaviour:
   lapsAmountUI: {fileID: 665344570}
   positionsUI: {fileID: 131536007}
   roundTimerUI: {fileID: 535350143}
+  wrongDirectionUI: {fileID: 0}
 --- !u!4 &1247704216
 Transform:
   m_ObjectHideFlags: 0

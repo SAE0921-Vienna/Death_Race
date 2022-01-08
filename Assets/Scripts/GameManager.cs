@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using PlayerController;
 using UnityEngine;
 using Weapons;
 
@@ -111,9 +112,10 @@ public class GameManager : MonoBehaviour
         offTrackTimer = 0;
 
         spawnPlayerPosition = new Vector3(spawnPlayerPosition.x, spawnPlayerPosition.y + spawnPlayerYOffset, spawnPlayerPosition.z);
+        playerManager.vehicleController.currentSpeed = 0;
+        playerManager.vehicleController.GetComponent<Rigidbody>().velocity = Vector3.zero;
         playerManager.transform.position = spawnPlayerPosition;
         playerManager.transform.rotation = spawnPlayerRotation;
         playerManager.gameObject.SetActive(true);
-
     }
 }

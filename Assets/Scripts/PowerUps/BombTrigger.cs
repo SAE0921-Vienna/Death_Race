@@ -15,8 +15,7 @@ public class BombTrigger : MonoBehaviour
     {
         gameObject.GetComponent<SphereCollider>().enabled = false;
         gameObject.GetComponent<Rigidbody>().useGravity = false;
-
-
+        
         _explosion = GetComponent<IExplosion>();
 
         _playerManager = FindObjectOfType<PlayerManager>();
@@ -43,8 +42,6 @@ public class BombTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (hasBeenActivated && other.transform.CompareTag("Bullet"))
-        {
             _explosion.Explode();
-        }
     }
 }
