@@ -8777,7 +8777,6 @@ MonoBehaviour:
   maxSteerAngle: 70
   steerSpeed: 150
   downForceMultiplier: 1000
-  rotationalSmoothingDelta: 0
   isOnRoadtrack: 0
   currentSpeed: 0
 --- !u!54 &1150493393
@@ -8850,6 +8849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleController: {fileID: 0}
   health: 100
   nitroSpeed: 800
   normalMaxSpeed: 0
@@ -11891,9 +11891,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46acff2adc847f409662b55762086bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponOnShip: {fileID: 0}
   rotationSpeed: 1
   currentRotation: {x: 0, y: 0, z: 0, w: 0}
+  weaponOnShip: {fileID: 0}
 --- !u!4 &5297674321111969178
 Transform:
   m_ObjectHideFlags: 0
