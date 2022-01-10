@@ -44,9 +44,12 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         vehicleController = GetComponent<VehicleController>();
-        uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
         playerWeapon = GetComponent<PlayerWeapon>();
+
         gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
+       
+
 
     }
     private void Start()
@@ -63,7 +66,7 @@ public class PlayerManager : MonoBehaviour
         isOnRoadtrack = vehicleController.isOnRoadtrack;
 
         Debug.DrawLine(transform.position, FacingInfo().point);
-      
+
 
     }
 

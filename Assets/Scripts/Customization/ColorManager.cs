@@ -6,8 +6,9 @@ using Nicrom.PM;
 
 public class ColorManager : MonoBehaviour
 {
-
-    public GameObject spaceShip;
+    [SerializeField]
+    private GameObject spaceShip;
+    public GameObject spaceShipsParentMesh;
 
     public FlexibleColorPicker flexibleColorpicker;
 
@@ -26,6 +27,15 @@ public class ColorManager : MonoBehaviour
 
     private void Awake()
     {
+
+       for (int i = 0; i < spaceShipsParentMesh.transform.childCount; i++)
+        {
+            if (spaceShipsParentMesh.transform.GetChild(i).gameObject.activeSelf == true)
+            {
+                spaceShip = spaceShipsParentMesh.transform.GetChild(i).gameObject;
+            }
+        }
+
 
         paletteInColorManager = spaceShip.GetComponent<PaletteModifier>().palettesList;
 
@@ -87,14 +97,14 @@ public class ColorManager : MonoBehaviour
 
     }
 
-    public void ResetColor()
-    {
-        cellstorage[siblingIndex].previousCellColor = previouscolor;
-        chosencolor = cellstorage[siblingIndex].previousCellColor;
-        cellstorage[siblingIndex].currentCellColor = chosencolor;
+    //public void ResetColor()
+    //{
+    //    cellstorage[siblingIndex].previousCellColor = previouscolor;
+    //    chosencolor = cellstorage[siblingIndex].previousCellColor;
+    //    cellstorage[siblingIndex].currentCellColor = chosencolor;
 
 
-    }
+    //}
 
 
 }

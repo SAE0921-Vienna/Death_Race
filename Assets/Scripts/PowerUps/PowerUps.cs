@@ -21,6 +21,7 @@ public class PowerUps : MonoBehaviour
         playerStats = GetComponent<PlayerManager>();
         uIManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
 
+
         powerupParent = transform.GetChild(0);
         playerStats.normalMaxSpeed = GetComponent<VehicleController>().mMaxSpeed;
     }
