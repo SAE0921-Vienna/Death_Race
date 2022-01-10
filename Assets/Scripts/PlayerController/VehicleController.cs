@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 // Convert all this to the new input system.
 
@@ -24,18 +26,41 @@ namespace PlayerController
         [SerializeField] private float sideThrustAmount;
         [Range(0f, 200f)]
         [SerializeField] private float maxSteerAngle, steerSpeed;
-        [Range(50f, 2000f)]
+        
+        [Header("Anti Gravity")]
+        [Range(1, 2000f)]
         [SerializeField] private float downForceMultiplier;
+        [Range(1, 2000f)]
+        [SerializeField] private float hoverMultiplier;
 
+        [SerializeField] private float hoverHeight;
+        [SerializeField] private PIDController pidController;
+        
         [Header("Is on Track")] public bool isOnRoadtrack;
         
-        private Rigidbody rBody;
-    
+        private Rigidbody _rBody;
+        private InputActions _controls;
+        
         private void Awake()
         {
-            rBody = GetComponent<Rigidbody>();
+            _rBody = GetComponent<Rigidbody>();
         }
 
+        private void OnEnable()
+        {
+            _controls = new InputActions();
+            _controls.Enable();
+        }
+
+        private void OnDisable()
+        {
+            _controls.Disable();
+        }
+
+        [HideInInspector] public float currentSpeed;
+        private float AccelerationValue => _controls.Player.AccelerateDecelerate.ReadValue<float>();
+        private float SteerValueRaw => _controls.Player.Steer.ReadValue<float>();
+        
         private void FixedUpdate()
         {
             Accelerate();
@@ -49,21 +74,15 @@ namespace PlayerController
             Steer();
         }
 
-        [HideInInspector]
-        public float currentSpeed;
-    
         private void Accelerate()
         {
-            currentSpeed = Input.GetKey(KeyCode.W) ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant);
-            rBody.AddForce(transform.forward * mMaxSpeed * accelerationCurve.Evaluate(currentSpeed), ForceMode.Force);
+            currentSpeed = AccelerationValue >= 0.01f ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant);
+            _rBody.AddForce(transform.forward * mMaxSpeed * accelerationCurve.Evaluate(currentSpeed), ForceMode.Force);
         }
 
         private void Brake()
         {
-            if (Input.GetKey(KeyCode.S))
-            {
-                rBody.AddForce(-transform.forward * brakeForce, ForceMode.Force);
-            }
+            _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue), ForceMode.Force);
         }
 
         /// <summary>
@@ -71,14 +90,7 @@ namespace PlayerController
         /// </summary>
         private void SideThrust()
         {
-            if (Input.GetKey(KeyCode.A))
-            {
-                rBody.AddForce(-transform.right * sideThrustAmount * Time.fixedDeltaTime, ForceMode.Force);
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                rBody.AddForce(transform.right * sideThrustAmount * Time.fixedDeltaTime, ForceMode.Force);
-            }
+            _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime), ForceMode.Force);
         }
 
         private RaycastHit GroundInfo()
@@ -89,7 +101,56 @@ namespace PlayerController
 
         private void AntiGravity()
         {
-            rBody.AddForce(-GroundInfo().normal * downForceMultiplier, ForceMode.Force);
+            Vector3 groundNormal;
+            if (isOnRoadtrack)
+            {
+                //...determine how high off the ground it is...
+                float height = GroundInfo().distance;
+                //...save the normal of the ground...21
+                groundNormal = GroundInfo().normal.normalized;
+                //...use the PID controller to determine the amount of hover force needed...
+                float forcePercent = pidController.Seek(hoverHeight, height);
+			
+                //...calulcate the total amount of hover force based on normal (or "up") of the ground...
+                Vector3 force = groundNormal * hoverMultiplier * forcePercent;
+                //...calculate the force and direction of gravity to adhere the ship to the 
+                //track (which is not always straight down in the world)...
+                Vector3 gravity = -groundNormal * downForceMultiplier * (height / 100);
+
+                //...and finally apply the hover and gravity forces
+                _rBody.AddForce(force, ForceMode.Acceleration);
+                _rBody.AddForce(gravity, ForceMode.Acceleration);
+            }
+            //...Otherwise...
+            else
+            {
+                //...use Up to represent the "ground normal". This will cause our ship to
+                //self-right itself in a case where it flips over
+                groundNormal = Vector3.up;
+
+                //Calculate and apply the stronger falling gravity straight down on the ship
+                Vector3 gravity = -groundNormal * downForceMultiplier;
+                _rBody.AddForce(gravity, ForceMode.Acceleration);
+            }
+            //Calculate the amount of pitch and roll the ship needs to match its orientation
+            //with that of the ground. This is done by creating a projection and then calculating
+            //the rotation needed to face that projection
+            Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
+            Quaternion rotation = Quaternion.LookRotation(projection, groundNormal);
+
+            //Move the ship over time to match the desired rotation to match the ground. This is 
+            //done smoothly (using Lerp) to make it feel more realistic
+            _rBody.MoveRotation(Quaternion.Lerp(_rBody.rotation, rotation, Time.deltaTime * 10f));
+
+            //Calculate the angle we want the ship's body to bank into a turn based on the current rudder.
+            //It is worth noting that these next few steps are completetly optional and are cosmetic.
+            //It just feels so darn cool
+            //float angle = angleOfRoll * -input.rudder;
+
+            //Calculate the rotation needed for this new angle
+            //Quaternion bodyRotation = transform.rotation * Quaternion.Euler(0f, 0f, angle);
+            //Finally, apply this angle to the ship's body
+            //shipBody.rotation = Quaternion.Lerp(shipBody.rotation, bodyRotation, Time.deltaTime * 10f);
         }
         
         /// <summary>
@@ -101,7 +162,7 @@ namespace PlayerController
             var normal = GroundInfo().normal;
             var steeringAngle = new Vector3(normal.x, SteerValue(maxSteerAngle, steerSpeed), normal.z);
             
-            rBody.MoveRotation(rBody.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
+            _rBody.MoveRotation(_rBody.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
         }
 
         private float t = 0.5f;
@@ -111,17 +172,13 @@ namespace PlayerController
         private float SteerValue(float maxSteerStrength, float steerSpeed)
         {
             t = Mathf.Clamp01(t);
-            if (Input.GetKey(KeyCode.A))
+            if (Mathf.Approximately(SteerValueRaw, 0f))
             {
-                t -= .01f * steerSpeed * Time.deltaTime;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                t += .01f * steerSpeed * Time.deltaTime;
+                t = Mathf.MoveTowards(t, 0.5f, .005f * steerSpeed * Time.deltaTime);
             }
             else
             {
-                t = Mathf.MoveTowards(t, 0.5f, .005f * steerSpeed * Time.deltaTime);
+                t += .01f * steerSpeed * SteerValueRaw * Time.deltaTime;
             }
             return Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
         }

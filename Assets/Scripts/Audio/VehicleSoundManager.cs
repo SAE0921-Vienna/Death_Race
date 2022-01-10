@@ -8,7 +8,7 @@ namespace Audio
     {
         // Linearly Interpolates between min/max PITCH and VOLUME with a normalized value of 0 and maxSpeed as t.
         
-        private AudioSource _audioSource;
+        [SerializeField] AudioSource _audioSource;
         private VehicleController _vehicleController;
 
         [SerializeField] [Range(0, 2)] private float minPitch, maxPitch;
@@ -17,7 +17,6 @@ namespace Audio
         private void Awake()
         {
             _vehicleController = GetComponentInParent<VehicleController>();
-            _audioSource = GetComponent<AudioSource>();
         }
 
         private void Update()

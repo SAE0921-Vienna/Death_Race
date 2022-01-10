@@ -5,1059 +5,214 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_bamboo_p19.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_bamboo_p19.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_blue_p19.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_blue_p19.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_gold_p19.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_gold_p19.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_red_p19.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_red_p19.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_wood_p19.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_wood_p19.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bone_02_p4.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bone_02_p4.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_01.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_01.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_02.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_02.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_03.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_03.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_04.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_04.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_05.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_05.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_06.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_06.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_holes.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_holes.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/corn_p22.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/corn_p22.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crack_floor.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crack_floor.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crack_wall.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crack_wall.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crater.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crater.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_01_p17.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_01_p17.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_02_p17.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_02_p17.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_03_p17.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_03_p17.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_03b_p17.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_03b_p17.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_04_p17.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_04_p17.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_05_p17.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_05_p17.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_textures_p17.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_textures_p17.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/destroyed.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/destroyed.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_01_p3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_01_p3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_02_p3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_02_p3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_p22.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_p22.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_plowed_p22.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_plowed_p22.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_dry_yellow_splintery_p20.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_dry_yellow_splintery_p20.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_rough_dried_cracked_brown_p20.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_rough_dried_cracked_brown_p20.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_rough_metal_fittings_p20.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_rough_metal_fittings_p20.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_10_p4.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_10_p4.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_19_p8.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_19_p8.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_20_p8.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_20_p8.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_21_p8.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_21_p8.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_dirt_earth_rocks_p21.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_dirt_earth_rocks_p21.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_dirt_roots_edgy.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_dirt_roots_edgy.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_grass_flowers_stones.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_grass_flowers_stones.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_grass_rock.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_grass_rock.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_leafs_brown.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_leafs_brown.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p13.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p13.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p16.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p16.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p13.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p13.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p4.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p4.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_03_p13.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_03_p13.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_03_p3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_03_p3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_04_p13.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_04_p13.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_04_p3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_04_p3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grate_15_p11.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grate_15_p11.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_01_p16.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_01_p16.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_02_p16.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_02_p16.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_03_p16.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_03_p16.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_09_p12.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_09_p12.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_10_p12.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_10_p12.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_11_p12.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_11_p12.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_12_p12.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_12_p12.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ice_01_p15.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ice_01_p15.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ice_01_p9.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ice_01_p9.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p18.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p18.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p4.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p4.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p9.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p9.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_02_p18.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_02_p18.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_03_p18.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_03_p18.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_04_p18.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_04_p18.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_05_p18.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_05_p18.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lavender_p22.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lavender_p22.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_01.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_01.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_02.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_02.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_03.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_03.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_01.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_01.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_02.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_02.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_03.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_03.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaves_13_p12.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaves_13_p12.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/metal_bindings_p4.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/metal_bindings_p4.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_01_p7.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_01_p7.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_02_p7.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_02_p7.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_03_p7.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_03_p7.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_04_p7.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_04_p7.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/poppy_p22.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/poppy_p22.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_01_p13.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_01_p13.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_01_p15.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_01_p15.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_02_p15.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_02_p15.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_03_p15.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_03_p15.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_04_p15.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_04_p15.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_06_p11.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_06_p11.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_08_p11.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_08_p11.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_01_p16.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_01_p16.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_02_p16.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_02_p16.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_03_p16.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_03_p16.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/skull_bones_01_p2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/skull_bones_01_p2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/snow_01_p9.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/snow_01_p9.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/snowy_rock_01_p9.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/snowy_rock_01_p9.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/spiderweb_p17.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/spiderweb_p17.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_01_p1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_01_p1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_02_p1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_02_p1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_03_p1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_03_p1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p10.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p10.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p16.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p16.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p10.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p10.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_03_p1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_03_p1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_03_p10.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_03_p10.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p10.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p10.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p8.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p8.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_05_p1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_05_p1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_05_p10.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_05_p10.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_06_p2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_06_p2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_07_p11.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_07_p11.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_07_p2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_07_p2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_08_p2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_08_p2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_11_p5.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_11_p5.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_12_p5.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_12_p5.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_13_p5.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_13_p5.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_14_p11.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_14_p11.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_14_p5.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_14_p5.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_15_p5.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_15_p5.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_floor_rough_purple_diagonal_pattern_p20.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_floor_rough_purple_diagonal_pattern_p20.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_floor_round_purple_boulders_p20.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_floor_round_purple_boulders_p20.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/water_01_p9.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/water_01_p9.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wheat_p22.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wheat_p22.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_01_p14.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_01_p14.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_02_p14.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_02_p14.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_02_p6.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_02_p6.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_03_p14.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_03_p14.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_03_p6.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_03_p6.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_04_p14.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_04_p14.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_04_p6.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_04_p6.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_05_p14.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_05_p14.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_05_p7.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_05_p7.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_06_p8.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_06_p8.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_01_p2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_01_p2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_02_p2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_02_p2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_03_p2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_03_p2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_17_p6.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_17_p6.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_18_p6.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_18_p6.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_01.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_01.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_01_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_01_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_02.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_02.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_02_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_02_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_03.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_03.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_03_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leaf_heap_03_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_01.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_01.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_01_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_01_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_02.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_02.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_02_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_02_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_03.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_03.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_03_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Dead_Leaves_01/leafs_floor_03_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_01.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_01.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_01_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_01_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_02.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_02.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_02_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_02_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_03.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_03.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_03_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_03_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_04.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_04.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_04_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_04_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_05.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_05.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_05_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_05_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_06.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_06.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_06_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_hole_06_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_holes.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_holes.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_holes_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/bullet_holes_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crack_floor.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crack_floor.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crack_floor_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crack_floor_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crack_wall.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crack_wall.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crack_wall_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crack_wall_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crater.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crater.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crater_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/crater_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/destroyed.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/destroyed.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/destroyed_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Decal_Pack_01/destroyed_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_01_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_01_p1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_01_p1_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_01_p1_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_02_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_02_p1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_02_p1_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_02_p1_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_03_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_03_p1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_03_p1_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_03_p1_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_p1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_p1_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_01_p1_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_02_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_02_p1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_02_p1_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_02_p1_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_03_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_03_p1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_03_p1_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_03_p1_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_04_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_04_p1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_04_p1_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_04_p1_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_05_p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_05_p1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_05_p1_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_01/stone_05_p1_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/skull_bones_01_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/skull_bones_01_p2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/skull_bones_01_p2_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/skull_bones_01_p2_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_06_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_06_p2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_06_p2_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_06_p2_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_07_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_07_p2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_07_p2_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_07_p2_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_08_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_08_p2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_08_p2_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/stone_08_p2_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_01_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_01_p2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_01_p2_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_01_p2_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_02_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_02_p2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_02_p2_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_02_p2_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_03_p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_03_p2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_03_p2_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_02/wood_09_03_p2_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/dirt_01_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/dirt_01_p3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/dirt_01_p3_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/dirt_01_p3_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/dirt_02_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/dirt_02_p3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/dirt_02_p3_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/dirt_02_p3_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_01_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_01_p3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_01_p3_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_01_p3_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_02_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_02_p3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_02_p3_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_02_p3_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_03_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_03_p3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_03_p3_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_03_p3_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_04_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_04_p3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_04_p3_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/grass_04_p3_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/stone_01_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/stone_01_p3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/stone_01_p3_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/stone_01_p3_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/stone_02_p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/stone_02_p3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/stone_02_p3_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_03/stone_02_p3_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/bone_02_p4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/bone_02_p4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/bone_02_p4_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/bone_02_p4_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/floor_10_p4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/floor_10_p4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/floor_10_p4_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/floor_10_p4_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/grass_02_p4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/grass_02_p4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/grass_02_p4_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/grass_02_p4_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/lava_01_p4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/lava_01_p4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/lava_01_p4_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/lava_01_p4_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/metal_bindings_p4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/metal_bindings_p4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/metal_bindings_p4_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_04/metal_bindings_p4_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_11_p5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_11_p5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_11_p5_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_11_p5_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_12_p5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_12_p5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_12_p5_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_12_p5_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_13_p5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_13_p5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_13_p5_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_13_p5_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_14_p5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_14_p5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_14_p5_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_14_p5_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_15_p5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_15_p5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_15_p5_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_05/stone_15_p5_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_02_p6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_02_p6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_02_p6_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_02_p6_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_03_p6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_03_p6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_03_p6_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_03_p6_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_04_p6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_04_p6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_04_p6_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_04_p6_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_17_p6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_17_p6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_17_p6_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_17_p6_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_18_p6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_18_p6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_18_p6_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_06/wood_18_p6_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_01_p7.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_01_p7.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_01_p7_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_01_p7_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_02_p7.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_02_p7.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_02_p7_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_02_p7_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_03_p7.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_03_p7.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_03_p7_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_03_p7_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_04_p7.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_04_p7.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_04_p7_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/ornaments_04_p7_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/wood_05_p7.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/wood_05_p7.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/wood_05_p7_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_07/wood_05_p7_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_19_p8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_19_p8.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_19_p8_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_19_p8_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_20_p8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_20_p8.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_20_p8_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_20_p8_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_21_p8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_21_p8.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_21_p8_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/floor_21_p8_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/stone_04_p8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/stone_04_p8.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/stone_04_p8_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/stone_04_p8_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/wood_06_p8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/wood_06_p8.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/wood_06_p8_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_08/wood_06_p8_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/ice_01_p9.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/ice_01_p9.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/ice_01_p9_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/ice_01_p9_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/lava_01_p9.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/lava_01_p9.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/lava_01_p9_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/lava_01_p9_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/snow_01_p9.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/snow_01_p9.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/snow_01_p9_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/snow_01_p9_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/snowy_rock_01_p9.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/snowy_rock_01_p9.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/snowy_rock_01_p9_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/snowy_rock_01_p9_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/water_01_p9.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/water_01_p9.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/water_01_p9_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_09/water_01_p9_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_01_p10.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_01_p10.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_01_p10_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_01_p10_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_02_p10.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_02_p10.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_02_p10_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_02_p10_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_03_p10.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_03_p10.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_03_p10_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_03_p10_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_04_p10.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_04_p10.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_04_p10_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_04_p10_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_05_p10.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_05_p10.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_05_p10_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_10/stone_05_p10_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/grate_15_p11.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/grate_15_p11.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/grate_15_p11_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/grate_15_p11_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/rock_06_p11.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/rock_06_p11.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/rock_06_p11_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/rock_06_p11_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/rock_08_p11.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/rock_08_p11.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/rock_08_p11_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/rock_08_p11_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/stone_07_p11.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/stone_07_p11.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/stone_07_p11_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/stone_07_p11_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/stone_14_p11.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/stone_14_p11.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/stone_14_p11_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_11/stone_14_p11_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_09_p12.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_09_p12.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_09_p12_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_09_p12_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_10_p12.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_10_p12.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_10_p12_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_10_p12_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_11_p12.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_11_p12.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_11_p12_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_11_p12_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_12_p12.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_12_p12.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_12_p12_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/ground_12_p12_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/leaves_13_p12.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/leaves_13_p12.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/leaves_13_p12_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_12/leaves_13_p12_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_01_p13.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_01_p13.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_01_p13_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_01_p13_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_02_p13.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_02_p13.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_02_p13_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_02_p13_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_03_p13.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_03_p13.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_03_p13_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_03_p13_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_04_p13.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_04_p13.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_04_p13_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/grass_04_p13_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/rocks_01_p13.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/rocks_01_p13.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/rocks_01_p13_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_13/rocks_01_p13_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_01_p14.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_01_p14.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_01_p14_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_01_p14_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_02_p14.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_02_p14.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_02_p14_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_02_p14_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_03_p14.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_03_p14.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_03_p14_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_03_p14_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_04_p14.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_04_p14.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_04_p14_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_04_p14_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_05_p14.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_05_p14.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_05_p14_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_14/wood_05_p14_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/ice_01_p15.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/ice_01_p15.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/ice_01_p15_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/ice_01_p15_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_01_p15.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_01_p15.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_01_p15_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_01_p15_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_02_p15.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_02_p15.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_02_p15_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_02_p15_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_03_p15.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_03_p15.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_03_p15_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_03_p15_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_04_p15.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_04_p15.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_04_p15_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_15/rock_04_p15_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/grass_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/grass_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/grass_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/grass_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/grass_3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/grass_3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_4.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_4.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_5.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_5.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_6.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/Models/rock_6.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/grass_01_p16.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/grass_01_p16.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/grass_01_p16_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/grass_01_p16_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_01_p16.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_01_p16.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_01_p16_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_01_p16_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_02_p16.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_02_p16.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_02_p16_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_02_p16_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_03_p16.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_03_p16.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_03_p16_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/ground_03_p16_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_01_p16.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_01_p16.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_01_p16_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_01_p16_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_02_p16.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_02_p16.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_02_p16_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_02_p16_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_03_p16.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_03_p16.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_03_p16_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/sand_03_p16_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/stone_01_p16.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/stone_01_p16.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/stone_01_p16_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_16/stone_01_p16_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/all_in_one.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/all_in_one.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/altar_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/altar_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/altar_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/altar_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_01.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_01.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_02.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_02.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_03.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_03.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_04.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_04.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_05.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_05.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_06.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_06.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_07.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_07.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_4.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_4.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_5.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/bone_arrangement_5.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/plinth_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/plinth_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/plinth_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/plinth_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/plinth_3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/plinth_3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_01.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_01.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_02.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_02.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_03.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_03.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_04.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_04.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_05.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_05.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_06.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_06.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_07.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_07.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_08.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_08.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_09.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/rock_09.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/skull_pile.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/skull_pile.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_01.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_01.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_02.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_02.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_03.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_03.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_04.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_04.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_05.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/Models/spiderweb_05.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_01_p17.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_01_p17.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_01_p17_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_01_p17_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_02_p17.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_02_p17.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_02_p17_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_02_p17_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_03_p17.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_03_p17.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_03_p17_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_03_p17_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_03b_p17.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_03b_p17.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_03b_p17_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_03b_p17_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_04_p17.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_04_p17.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_04_p17_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_04_p17_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_05_p17.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_05_p17.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_05_p17_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_texture_05_p17_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_textures_p17.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_textures_p17.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_textures_p17_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/crypt_textures_p17_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/spiderweb_p17.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/spiderweb_p17.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/spiderweb_p17_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_17/spiderweb_p17_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_01_p18.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_01_p18.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_01_p18_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_01_p18_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_02_p18.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_02_p18.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_02_p18_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_02_p18_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_03_p18.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_03_p18.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_03_p18_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_03_p18_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_04_p18.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_04_p18.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_04_p18_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_04_p18_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_05_p18.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_05_p18.tga.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_05_p18_png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_18/lava_05_p18_png.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_bamboo_p19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_bamboo_p19.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_blue_p19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_blue_p19.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_gold_p19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_gold_p19.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_red_p19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_red_p19.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_wood_p19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_19/asian_roof_wood_p19.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/earth_floor_dry_yellow_splintery_p20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/earth_floor_dry_yellow_splintery_p20.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/earth_floor_rough_dried_cracked_brown_p20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/earth_floor_rough_dried_cracked_brown_p20.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/earth_floor_rough_metal_fittings_p20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/earth_floor_rough_metal_fittings_p20.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/stone_floor_rough_purple_diagonal_pattern_p20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/stone_floor_rough_purple_diagonal_pattern_p20.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/stone_floor_round_purple_boulders_p20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_20/stone_floor_round_purple_boulders_p20.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_dirt_earth_rocks_p21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_dirt_earth_rocks_p21.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_dirt_roots_edgy_p21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_dirt_roots_edgy_p21.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_grass_flowers_stones_p21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_grass_flowers_stones_p21.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_grass_rock_p21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_grass_rock_p21.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_leafs_brown_p21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_21/floor_forest_leafs_brown_p21.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/corn_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/corn_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/corn_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/corn_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/corn_3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/corn_3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/lavender_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/lavender_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/lavender_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/lavender_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/lavender_3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/lavender_3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/poppy_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/poppy_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/poppy_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/poppy_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/poppy_3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/poppy_3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_3.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_3.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_4.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_4.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_5.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/Models/wheat_5.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/corn_p22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/corn_p22.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/dirt_p22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/dirt_p22.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/dirt_plowed_diffuse_p22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/dirt_plowed_diffuse_p22.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/lavender_p22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/lavender_p22.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/poppy_p22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/poppy_p22.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/wheat_p22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Textures/Texture_Pack_22/wheat_p22.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/CHANGELOG.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Documentation.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Documentation.pdf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/Heatmap.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/Heatmap.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/HeatmapPreview.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/HeatmapPreview.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/ModifierEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/ModifierEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/PropertyDrawers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/PropertyDrawers.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/TerrainPainterInspector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/TerrainPainterInspector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/sc.terrain.painter.editor.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Editor/sc.terrain.painter.editor.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Attributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Attributes.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/LayerSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/LayerSettings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/ModifierStack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/ModifierStack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Curvature.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Curvature.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Height.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Height.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Modifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Modifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Noise.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Noise.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Slope.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/Slope.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/TextureMask.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Modifiers/TextureMask.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/TerrainChangeListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/TerrainChangeListener.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/TerrainPainter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/TerrainPainter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Utilities.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/Utilities.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/sc.terrain.painter.runtime.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Runtime/sc.terrain.painter.runtime.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Shaders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Shaders/Filters.hlsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Shaders/Filters.hlsl.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Shaders/Modifier.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Shaders/Modifier.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Shaders/Noise.hlsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/Shaders/Noise.hlsl.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ProceduralTerrainPainter/package.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/LightingData.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/LightingData.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/Lightmap-0_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/Main Camera Profile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/Main Camera Profile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/ReflectionProbe-0.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map/ReflectionProbe-0.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Gras_Layer_Bottom.terrainlayer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Gras_Layer_Bottom.terrainlayer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Gras_Layer_Middle.terrainlayer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Gras_Layer_Middle.terrainlayer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Gras_Layer_Top.terrainlayer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Gras_Layer_Top.terrainlayer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Rock_Layer.terrainlayer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Rock_Layer.terrainlayer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Sand_Layer_Bottom.terrainlayer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Sand_Layer_Bottom.terrainlayer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Sand_Layer_LST.terrainlayer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Sand_Layer_LST.terrainlayer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Sand_Layer_Middle.terrainlayer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Sand_Layer_Middle.terrainlayer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Sand_Layer_Top.terrainlayer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Terrain Layers/Sand_Layer_Top.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/InputActions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/InputActions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/InputActions.inputactions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/InputActions.inputactions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/InputSystem.inputsettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/InputSystem.inputsettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Mine.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Mine.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Munition.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Munition.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Nitro.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Nitro.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Random.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Random.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Shield.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/PowerUp_Shield.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/URP.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/URP/URP-Asset Main.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/URP/URP-Asset Main.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/URP/URP-Asset Main_Renderer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/URP/URP-Asset Main_Renderer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ForceShield/Misc/alien character/animation/Materials/03 - Default 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Imported Assets/ForceShield/Misc/alien character/animation/Materials/03 - Default 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Road.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Road.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceship 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceship 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George_InputSystem.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George_InputSystem.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/PIDController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/PIDController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleControllerOld.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleControllerOld.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Commercial_Jet_CU_Idle_Sharp_Engine_Whine_OCP-1170-06.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Commercial_Jet_CU_Idle_Sharp_Engine_Whine_OCP-1170-06.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/Deep Dusk/Deep Dusk Equirect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/Deep Dusk/Deep Dusk Equirect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Upgrades/Polygon Arsenal 2019.4 URP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_bamboo_p19.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_bamboo_p19.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_blue_p19.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_blue_p19.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_gold_p19.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_gold_p19.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_red_p19.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_red_p19.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_wood_p19.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/asian_roof_wood_p19.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bone_02_p4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bone_02_p4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_04.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_05.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_05.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_06.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_hole_06.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_holes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/bullet_holes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crack_floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crack_floor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crack_wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crack_wall.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crater.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crater.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_01_p17.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_01_p17.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_02_p17.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_02_p17.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_03_p17.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_03_p17.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_03b_p17.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_03b_p17.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_04_p17.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_04_p17.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_05_p17.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_texture_05_p17.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_textures_p17.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/crypt_textures_p17.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/destroyed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/destroyed.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_01_p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_01_p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_02_p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_02_p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_p22.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_p22.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_plowed_p22.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/dirt_plowed_p22.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_dry_yellow_splintery_p20.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_dry_yellow_splintery_p20.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_rough_dried_cracked_brown_p20.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_rough_dried_cracked_brown_p20.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_rough_metal_fittings_p20.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/earth_floor_rough_metal_fittings_p20.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_10_p4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_10_p4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_19_p8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_19_p8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_20_p8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_20_p8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_21_p8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_21_p8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_dirt_earth_rocks_p21.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_dirt_earth_rocks_p21.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_dirt_roots_edgy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_dirt_roots_edgy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_grass_flowers_stones.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_grass_flowers_stones.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_grass_rock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_grass_rock.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_leafs_brown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/floor_forest_leafs_brown.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p13.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p13.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_01_p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p13.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p13.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_02_p4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_03_p13.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_03_p13.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_03_p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_03_p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_04_p13.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_04_p13.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_04_p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grass_04_p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grate_15_p11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/grate_15_p11.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_01_p16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_01_p16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_02_p16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_02_p16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_03_p16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_03_p16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_09_p12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_09_p12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_10_p12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_10_p12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_11_p12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_11_p12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_12_p12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ground_12_p12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ice_01_p15.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ice_01_p15.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ice_01_p9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ice_01_p9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p18.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p18.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_01_p9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_02_p18.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_02_p18.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_03_p18.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_03_p18.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_04_p18.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_04_p18.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_05_p18.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_05_p18.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_floor_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaf_heap_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaves_13_p12.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/leaves_13_p12.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/metal_bindings_p4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/metal_bindings_p4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_01_p7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_01_p7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_02_p7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_02_p7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_03_p7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_03_p7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_04_p7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/ornaments_04_p7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_01_p13.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_01_p13.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_01_p15.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_01_p15.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_02_p15.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_02_p15.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_03_p15.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_03_p15.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_04_p15.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_04_p15.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_06_p11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_06_p11.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_08_p11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/rock_08_p11.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_01_p16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_01_p16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_02_p16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_02_p16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_03_p16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/sand_03_p16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/skull_bones_01_p2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/skull_bones_01_p2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/snow_01_p9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/snow_01_p9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/snowy_rock_01_p9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/snowy_rock_01_p9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/spiderweb_p17.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/spiderweb_p17.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_01_p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_01_p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_02_p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_02_p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_03_p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_03_p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_01_p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_02_p3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_03_p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_03_p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_03_p10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_03_p10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_04_p8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_05_p1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_05_p1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_05_p10.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_05_p10.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_06_p2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_06_p2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_07_p11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_07_p11.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_07_p2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_07_p2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_08_p2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_08_p2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_11_p5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_11_p5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_12_p5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_12_p5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_13_p5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_13_p5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_14_p11.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_14_p11.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_14_p5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_14_p5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_15_p5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_15_p5.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_floor_rough_purple_diagonal_pattern_p20.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_floor_rough_purple_diagonal_pattern_p20.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_floor_round_purple_boulders_p20.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/stone_floor_round_purple_boulders_p20.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/water_01_p9.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/water_01_p9.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_01_p14.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_01_p14.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_02_p14.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_02_p14.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_02_p6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_02_p6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_03_p14.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_03_p14.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_03_p6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_03_p6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_04_p14.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_04_p14.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_04_p6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_04_p6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_05_p14.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_05_p14.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_05_p7.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_05_p7.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_06_p8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_06_p8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_01_p2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_01_p2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_02_p2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_02_p2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_03_p2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_09_03_p2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_17_p6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_17_p6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_18_p6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/wood_18_p6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Hover/AntigravityVehicle.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Hover/AntigravityVehicle.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mine_PREFAB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mine_PREFAB.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Maps/Alien_Planet_Testing_Map.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/George.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Mine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Mine.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/pre-testing/TestingScene/PostProcessingVolumeTest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Mine.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Mine.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Munition.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Munition.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Nitro.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Nitro.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Random.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Random.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Shield.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PowerUp_Shield.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/VehicleSoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/VehicleSoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DestroyParticle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DestroyParticle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/BombTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/BombTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/LaserWeaponInputResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/LaserWeaponInputResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponRotator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/URP-Asset Main.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/URP-Asset Main.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/URP-Asset Main.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/URP-Asset Main.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/URP-Asset Main_Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/URP-Asset Main_Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -1072,6 +227,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/PIDController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -1178,7 +336,12 @@
       <workItem from="1641469448201" duration="5473000" />
       <workItem from="1641488103491" duration="652000" />
       <workItem from="1641662904910" duration="571000" />
-      <workItem from="1641663490657" duration="8086000" />
+      <workItem from="1641663490657" duration="9609000" />
+      <workItem from="1641687312703" duration="635000" />
+      <workItem from="1641716146939" duration="1003000" />
+      <workItem from="1641717569119" duration="5074000" />
+      <workItem from="1641723656149" duration="16938000" />
+      <workItem from="1641767640508" duration="2093000" />
     </task>
     <servers />
   </component>
