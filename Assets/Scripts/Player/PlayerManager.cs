@@ -46,9 +46,30 @@ public class PlayerManager : MonoBehaviour
         vehicleController = GetComponent<VehicleController>();
         playerWeapon = GetComponent<PlayerWeapon>();
 
-        gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
-        uiManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
-       
+        #region  gameManager FindObjectOfType
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager)
+        {
+            //gameManager Found
+        }
+        else
+        {
+            Debug.LogWarning("GameManager NOT Found");
+        }
+        #endregion
+
+        #region uiManager FindObjectOfType
+        uiManager = FindObjectOfType<UIManager>();
+        if (uiManager)
+        {
+            //UIManager Found
+        }
+        else
+        {
+            Debug.LogWarning("UIManager NOT Found");
+        }
+        #endregion
+
 
 
     }

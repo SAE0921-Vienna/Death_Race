@@ -1,7 +1,6 @@
 using UnityEngine;
 
-namespace PlayerController
-{
+
     //Proportional Integral Derivative Controller
     [System.Serializable]
     public class PIDController
@@ -34,5 +33,5 @@ namespace PlayerController
 
             return value;
         }
-    }
+    
 }

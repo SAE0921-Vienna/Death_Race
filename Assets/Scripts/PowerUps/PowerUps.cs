@@ -19,7 +19,18 @@ public class PowerUps : MonoBehaviour
     private void Awake()
     {
         playerStats = GetComponent<PlayerManager>();
-        uIManager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
+
+        #region uiManager  FindObjectOfType
+        uIManager = FindObjectOfType<UIManager>();
+        if (uIManager)
+        {
+            //UIManager Found
+        }
+        else
+        {
+            Debug.LogWarning("UIManager NOT Found");
+        }
+        #endregion
 
 
         powerupParent = transform.GetChild(0);
@@ -36,7 +47,7 @@ public class PowerUps : MonoBehaviour
             uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
         }
 
-        if(playerStats.ammo <= 0)
+        if (playerStats.ammo <= 0)
         {
             playerStats.ammo = 0;
             uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
@@ -161,7 +172,7 @@ public class PowerUps : MonoBehaviour
         playerStats.bomb = true;
     }
 
- 
+
 
     #endregion
 }

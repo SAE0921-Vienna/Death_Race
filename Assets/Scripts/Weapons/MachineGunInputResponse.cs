@@ -23,7 +23,17 @@ namespace Weapons
         {
             _camera = Camera.main;
             //instantiationLocation = GetComponent<Transform>();
-            player = FindObjectOfType<PlayerManager>().GetComponent<PlayerManager>();
+            #region playerManager FindObjectOfType
+            player = FindObjectOfType<PlayerManager>();
+            if (player)
+            {
+                //Player Found
+            }
+            else
+            {
+                Debug.LogWarning("PlayerManager NOT found");
+            }
+            #endregion
         }
 
         public void Shoot()

@@ -1887,6 +1887,42 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2305685658166473135, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
   m_PrefabInstance: {fileID: 2305685656880169216}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &603413929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603413927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9707340b37e54f3ab06d22966a3bb89b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mAccelerationConstant: 1
+  mMaxSpeed: 0
+  brakeForce: 0
+  decelerationConstant: 0
+  accelerationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sideThrustAmount: 0
+  maxSteerAngle: 0
+  steerSpeed: 0
+  downForceMultiplier: 0
+  hoverMultiplier: 0
+  hoverHeight: 0
+  pidController:
+    pCoeff: 0.8
+    iCoeff: 0.0002
+    dCoeff: 0.2
+    minimum: -1
+    maximum: 1
+  isOnRoadtrack: 0
+  currentSpeed: 0
 --- !u!1 &626702673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,6 +3873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleController: {fileID: 0}
   health: 100
   nitroSpeed: 50
   normalMaxSpeed: 0
@@ -3846,13 +3883,13 @@ MonoBehaviour:
   ammoLimit: 100
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
-  slowTimeValue: 0.5
   shield: 0
   nitro: 0
   canShoot: 0
   bomb: 0
-  timeSlowed: 0
   isImmortal: 0
+  isOnRoadtrack: 0
+  isFacingCorrectDirection: 0
   timer: 0
   timerCooldown: 5
 --- !u!114 &1192914222
@@ -3909,7 +3946,7 @@ MonoBehaviour:
   maxSteerAngle: 0
   steerSpeed: 0
   downForceMultiplier: 0
-  rotationalSmoothingDelta: 0
+  isOnRoadtrack: 0
   currentSpeed: 0
 --- !u!54 &1192914225
 Rigidbody:
@@ -5742,6 +5779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleController: {fileID: 0}
   health: 100
   nitroSpeed: 50
   normalMaxSpeed: 0
@@ -5751,13 +5789,13 @@ MonoBehaviour:
   ammoLimit: 100
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
-  slowTimeValue: 0.5
   shield: 0
   nitro: 0
   canShoot: 0
   bomb: 0
-  timeSlowed: 0
   isImmortal: 0
+  isOnRoadtrack: 0
+  isFacingCorrectDirection: 0
   timer: 0
   timerCooldown: 5
 --- !u!114 &1826074313
@@ -5814,7 +5852,7 @@ MonoBehaviour:
   maxSteerAngle: 0
   steerSpeed: 0
   downForceMultiplier: 0
-  rotationalSmoothingDelta: 0
+  isOnRoadtrack: 0
   currentSpeed: 0
 --- !u!54 &1826074316
 Rigidbody:
@@ -5944,6 +5982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleController: {fileID: 0}
   health: 100
   nitroSpeed: 50
   normalMaxSpeed: 0
@@ -5953,13 +5992,13 @@ MonoBehaviour:
   ammoLimit: 100
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
-  slowTimeValue: 0.5
   shield: 0
   nitro: 0
   canShoot: 0
   bomb: 0
-  timeSlowed: 0
   isImmortal: 0
+  isOnRoadtrack: 0
+  isFacingCorrectDirection: 0
   timer: 0
   timerCooldown: 5
 --- !u!114 &1856595302
@@ -6016,7 +6055,7 @@ MonoBehaviour:
   maxSteerAngle: 0
   steerSpeed: 0
   downForceMultiplier: 0
-  rotationalSmoothingDelta: 0
+  isOnRoadtrack: 0
   currentSpeed: 0
 --- !u!54 &1856595305
 Rigidbody:
@@ -6113,7 +6152,7 @@ MonoBehaviour:
   maxSteerAngle: 100
   steerSpeed: 200
   downForceMultiplier: 1000
-  rotationalSmoothingDelta: 0
+  isOnRoadtrack: 0
   currentSpeed: 0
 --- !u!114 &1857064605
 MonoBehaviour:
@@ -6155,6 +6194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleController: {fileID: 0}
   health: 100
   nitroSpeed: 400
   normalMaxSpeed: 0
@@ -6164,13 +6204,13 @@ MonoBehaviour:
   ammoLimit: 100
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
-  slowTimeValue: 0.5
   shield: 0
   nitro: 0
   canShoot: 0
   bomb: 0
-  timeSlowed: 0
   isImmortal: 0
+  isOnRoadtrack: 0
+  isFacingCorrectDirection: 0
   timer: 0
   timerCooldown: 5
 --- !u!54 &1857064608
@@ -6843,6 +6883,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2305685658267866400, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
     - {fileID: 2305685658707551645, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
+    - {fileID: 2305685658166473137, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cec2bd358b2e356b7b88fd6e3312e4d1, type: 3}
 --- !u!1001 &6797271977792052983
 PrefabInstance:

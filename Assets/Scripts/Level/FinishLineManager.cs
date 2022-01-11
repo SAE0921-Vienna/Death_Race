@@ -6,10 +6,34 @@ public class FinishLineManager : MonoBehaviour
 {
 
     private GameManager gameManager;
+    private AIManager aIManager;
 
     private void Awake()
     {
-        gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        #region gameManager FindObjectOfType
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager)
+        {
+            //GameManager Found
+        }
+        else
+        {
+            Debug.LogWarning("GameManager NOT Found");
+        }
+        #endregion
+
+        #region aiManager FindObjectOfType
+        aIManager = FindObjectOfType<AIManager>();
+        if (aIManager)
+        {
+            //AIManager Found
+        }
+        else
+        {
+            Debug.LogWarning("AIManager NOT Found");
+
+        }
+        #endregion
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,6 +47,18 @@ public class FinishLineManager : MonoBehaviour
         {
             gameManager.currentLap += 1;
             gameManager.CheckLaps();
+
+        }
+
+        if (other.CompareTag("AI") && aIManager.currentLap == 0 && aIManager.currentCheckpoint == 0)
+        {
+            aIManager.currentLap += 1;
+        }
+
+        if (other.CompareTag("AI") && aIManager.currentCheckpoint == aIManager.checkpoints - 1)
+        {
+            aIManager.currentLap += 1;
+            aIManager.CheckLaps();
 
         }
 
