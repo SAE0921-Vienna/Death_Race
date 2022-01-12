@@ -130,6 +130,7 @@ public class PowerUps : MonoBehaviour
         }
 
 
+
     }
 
     #region Power Up Methods
@@ -172,7 +173,14 @@ public class PowerUps : MonoBehaviour
         playerStats.bomb = true;
     }
 
-
+    public void HealPowerUp()
+    {
+        playerStats.health += playerStats.healValue;
+        if (playerStats.health >= playerStats.healthLimit)
+        {
+            playerStats.health = playerStats.healthLimit;
+        }
+    }
 
     #endregion
 }

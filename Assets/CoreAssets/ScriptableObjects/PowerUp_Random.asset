@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Random
   icon: {fileID: 21300000, guid: e3b931a609527a24da9a6e715b82de20, type: 3}
   powerUpPrefab: {fileID: 1126493862438144, guid: dfa88b163ebe1dc41b2d41ef939de73d, type: 3}
-  powerUpType: 4
+  powerUpType: 5

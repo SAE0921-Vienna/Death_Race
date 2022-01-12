@@ -19,6 +19,7 @@ public class PickUpScriptableObject : ScriptableObject
         Nitro,
         Ammo,
         Bomb,
+        Heal,
         Random
 
     }
@@ -43,6 +44,10 @@ public class PickUpScriptableObject : ScriptableObject
             case powerUps.Bomb:
                 //Debug.Log("Bomb");
                 player.GetComponent<PowerUps>().BombPowerUp();
+                break;
+            case powerUps.Heal:
+                //Debug.Log("Heal");
+                player.GetComponent<PowerUps>().HealPowerUp();
                 break;
             default:
                 break;
