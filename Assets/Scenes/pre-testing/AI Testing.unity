@@ -270,9 +270,10 @@ GameObject:
   m_Component:
   - component: {fileID: 125516426}
   - component: {fileID: 125516427}
+  - component: {fileID: 125516428}
   m_Layer: 3
   m_Name: SpaceShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,6 +332,20 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   spaceShip: {fileID: 1150493391}
+--- !u!64 &125516428
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125516425}
+  m_Material: {fileID: 13400000, guid: 79b1067785b283447b121aeb7fca9fad, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8e5b88cba81fe614885fb83581396427, type: 3}
 --- !u!1001 &132343303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10772,7 +10787,6 @@ GameObject:
   - component: {fileID: 382245272}
   - component: {fileID: 382245265}
   - component: {fileID: 382245267}
-  - component: {fileID: 382245266}
   m_Layer: 8
   m_Name: AI
   m_TagString: AI
@@ -10800,20 +10814,6 @@ MonoBehaviour:
   reachedTargetDistance: 40
   stoppingDistance: 200
   stoppingSpeed: 0.1
---- !u!64 &382245266
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382245264}
-  m_Material: {fileID: 13400000, guid: 79b1067785b283447b121aeb7fca9fad, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 8e5b88cba81fe614885fb83581396427, type: 3}
 --- !u!114 &382245267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12960,7 +12960,7 @@ GameObject:
   - component: {fileID: 906545473}
   - component: {fileID: 906545472}
   - component: {fileID: 906545471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13898,6 +13898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vehicleController: {fileID: 0}
   health: 100
+  healthLimit: 100
   nitroSpeed: 800
   normalMaxSpeed: 0
   currentSpeed: 0
@@ -13906,6 +13907,7 @@ MonoBehaviour:
   ammoLimit: 25
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
+  healValue: 45
   shield: 0
   nitro: 0
   canShoot: 1
@@ -13991,6 +13993,10 @@ MonoBehaviour:
     dCoeff: 0.2
     minimum: -2
     maximum: 2
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  maxRaycastDistance: 1000
   isOnRoadtrack: 1
   currentSpeed: 0
 --- !u!64 &1150493400
@@ -14002,7 +14008,7 @@ MeshCollider:
   m_GameObject: {fileID: 1150493391}
   m_Material: {fileID: 13400000, guid: 79b1067785b283447b121aeb7fca9fad, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -16371,9 +16377,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1867563575}
   - component: {fileID: 1867563576}
+  - component: {fileID: 1867563577}
   m_Layer: 8
   m_Name: SpaceShip
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16432,6 +16439,20 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   spaceShip: {fileID: 382245264}
+--- !u!64 &1867563577
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867563574}
+  m_Material: {fileID: 13400000, guid: 79b1067785b283447b121aeb7fca9fad, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8e5b88cba81fe614885fb83581396427, type: 3}
 --- !u!4 &1903738977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4885778898748748, guid: 020a3c5324a85e54aa57f312e6924dc6, type: 3}

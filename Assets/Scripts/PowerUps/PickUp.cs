@@ -8,6 +8,8 @@ public class PickUp : MonoBehaviour
     private PickUpScriptableObject pickUpObject;
     private PowerUpManager powerUpManager;
 
+    private GameObject player;
+
     #region Rotate and Hover Points
     Vector3 pointA;
     Vector3 pointB;
@@ -37,6 +39,9 @@ public class PickUp : MonoBehaviour
     private void Awake()
     {
         powerUpManager = FindObjectOfType<PowerUpManager>();
+
+        PlayerManager playermanager = FindObjectOfType<PlayerManager>();
+        player = playermanager.gameObject;
     }
 
     private void Start()
@@ -80,7 +85,7 @@ public class PickUp : MonoBehaviour
                 {
                     int rand = Random.Range(0, powerUpManager.powerUps.Length - 1);
                     pickUpObject = powerUpManager.powerUps[rand];
-                    other.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+                    player.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
                 }
                 else if (pickUpObject != null)
                 {
