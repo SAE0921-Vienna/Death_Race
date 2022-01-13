@@ -14,19 +14,19 @@ namespace PlayerController
         public float mAccelerationConstant = 1f;
         [Range(50f, 3000f)]
         public float mMaxSpeed;
-    
+
         [Range(10f, 800f)]
         [SerializeField] private float brakeForce;
         [Range(0.1f, 5f)]
         [SerializeField] private float decelerationConstant;
         [SerializeField] private AnimationCurve accelerationCurve;
-    
+
         [Header("Steering")]
         [Range(0f, 1000f)]
         [SerializeField] private float sideThrustAmount;
         [Range(0f, 200f)]
         [SerializeField] private float maxSteerAngle, steerSpeed;
-        
+
         [Header("Anti Gravity")]
         [Range(1, 2000f)]
         [SerializeField] private float downForceMultiplier;
@@ -35,12 +35,15 @@ namespace PlayerController
 
         [SerializeField] private float hoverHeight;
         [SerializeField] private PIDController pidController;
-        
-        [Header("Is on Track")] public bool isOnRoadtrack;
-        
+
+        [Header("Track Information")]
+        [SerializeField] private LayerMask layerMask;
+        [SerializeField] private float maxRaycastDistance;
+        public bool isOnRoadtrack;
+
         private Rigidbody _rBody;
         private InputActions _controls;
-        
+
         private void Awake()
         {
             _rBody = GetComponent<Rigidbody>();
@@ -60,7 +63,7 @@ namespace PlayerController
         [HideInInspector] public float currentSpeed;
         private float AccelerationValue => _controls.Player.AccelerateDecelerate.ReadValue<float>();
         private float SteerValueRaw => _controls.Player.Steer.ReadValue<float>();
-        
+
         private void FixedUpdate()
         {
             Accelerate();
@@ -95,7 +98,7 @@ namespace PlayerController
 
         private RaycastHit GroundInfo()
         {
-            isOnRoadtrack = Physics.Raycast(transform.position, -transform.up, out var hit);        
+            isOnRoadtrack = Physics.Raycast(transform.position, -transform.up, out var hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
             return hit;
         }
 
@@ -110,7 +113,7 @@ namespace PlayerController
                 groundNormal = GroundInfo().normal.normalized;
                 //...use the PID controller to determine the amount of hover force needed...
                 float forcePercent = pidController.Seek(hoverHeight, height);
-			
+
                 //...calulcate the total amount of hover force based on normal (or "up") of the ground...
                 Vector3 force = groundNormal * hoverMultiplier * forcePercent;
                 //...calculate the force and direction of gravity to adhere the ship to the 
@@ -152,7 +155,7 @@ namespace PlayerController
             //Finally, apply this angle to the ship's body
             //shipBody.rotation = Quaternion.Lerp(shipBody.rotation, bodyRotation, Time.deltaTime * 10f);
         }
-        
+
         /// <summary>
         /// Applies the rotation of the Y-Axis combined with the normal of the road, to make steering work everywhere,
         /// regardless of the world-coordinate rotation of the road.
@@ -161,7 +164,7 @@ namespace PlayerController
         {
             var normal = GroundInfo().normal;
             var steeringAngle = new Vector3(normal.x, SteerValue(maxSteerAngle, steerSpeed), normal.z);
-            
+
             _rBody.MoveRotation(_rBody.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
         }
 
@@ -182,7 +185,7 @@ namespace PlayerController
             }
             return Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
         }
-        
+
         public float AngleGetter() => t;
     }
 }
