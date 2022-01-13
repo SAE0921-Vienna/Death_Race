@@ -144,16 +144,6 @@ namespace PlayerController
             //Move the ship over time to match the desired rotation to match the ground. This is 
             //done smoothly (using Lerp) to make it feel more realistic
             _rBody.MoveRotation(Quaternion.Lerp(_rBody.rotation, rotation, Time.deltaTime * 10f));
-
-            //Calculate the angle we want the ship's body to bank into a turn based on the current rudder.
-            //It is worth noting that these next few steps are completetly optional and are cosmetic.
-            //It just feels so darn cool
-            //float angle = angleOfRoll * -input.rudder;
-
-            //Calculate the rotation needed for this new angle
-            //Quaternion bodyRotation = transform.rotation * Quaternion.Euler(0f, 0f, angle);
-            //Finally, apply this angle to the ship's body
-            //shipBody.rotation = Quaternion.Lerp(shipBody.rotation, bodyRotation, Time.deltaTime * 10f);
         }
 
         /// <summary>

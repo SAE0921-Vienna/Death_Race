@@ -4,15 +4,15 @@ namespace PlayerController
 {
     public class SpaceshipRotator : MonoBehaviour
     {
-        [Range(0f, 90f)] [SerializeField] private float maxRotation;
+        [Range(0f, 90f)] 
+        [SerializeField] private float maxRotation;
         [SerializeField] private AnimationCurve rotationalCurve;
-        [SerializeField] GameObject spaceShip;
+        
         private VehicleController _vehicleController;
 
         private void Awake()
         {
-            //spaceShip = GetComponentInParent<GameObject>();
-            _vehicleController = spaceShip.GetComponent<VehicleController>();
+            _vehicleController = GetComponentInParent<VehicleController>();
         }
 
         private void Update()
@@ -20,9 +20,12 @@ namespace PlayerController
             RotateSpaceship(_vehicleController.AngleGetter(), maxRotation);
         }
 
-        private void RotateSpaceship(float rotationStrength, float maxRotation)
+        private void RotateSpaceship(float rotationStrength, float maximumRotation)
         {
-            transform.rotation = Quaternion.Euler(spaceShip.transform.rotation.eulerAngles + new Vector3(0f, 0f, Mathf.Lerp(maxRotation, -maxRotation, rotationalCurve.Evaluate(rotationStrength))));
+            var rotationVector = new Vector3(0f, 0f,
+                Mathf.Lerp(maximumRotation, -maximumRotation, rotationalCurve.Evaluate(rotationStrength)));
+            
+            transform.rotation = Quaternion.Euler(_vehicleController.transform.rotation.eulerAngles + rotationVector);
         }
     }
 }

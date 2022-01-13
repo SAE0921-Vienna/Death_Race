@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using PlayerController;
 using UnityEngine;
 using UnityEngine.UI;
@@ -85,20 +86,16 @@ public class PlayerManager : MonoBehaviour
     private void Update()
     {
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
-        if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString();
+        if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
         if (health <= 0) gameObject.SetActive(false);
         isOnRoadtrack = vehicleController.isOnRoadtrack;
 
         Debug.DrawLine(transform.position, FacingInfo().point);
-
-
     }
 
-    public RaycastHit FacingInfo()
+    private RaycastHit FacingInfo()
     {
         Physics.Raycast(transform.position, transform.forward, out var hit);
-
         return hit;
     }
-
 }

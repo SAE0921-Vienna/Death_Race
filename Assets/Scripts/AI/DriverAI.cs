@@ -71,7 +71,6 @@ public class DriverAI : MonoBehaviour
                     //"brake" - move backwards
                     forwardAmount = -forwardPlusValue;
                 }
-
             }
             else
             {
