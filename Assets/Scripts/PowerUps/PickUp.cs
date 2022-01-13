@@ -89,7 +89,7 @@ public class PickUp : MonoBehaviour
                 }
                 else if (pickUpObject != null)
                 {
-                    other.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+                    player.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
 
                 }
 
