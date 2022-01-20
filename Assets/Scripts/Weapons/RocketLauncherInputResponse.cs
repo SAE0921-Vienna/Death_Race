@@ -29,25 +29,13 @@ namespace Weapons
 
         private IEnumerator LaunchRocket()
         {
-            projectileRayDirection = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Camera.main != null) projectileRayDirection = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             var projectile = Instantiate(rocketPrefab, instantiationLocation.position, Quaternion.identity);
-            Vector3 offset = new Vector3(projectile.transform.position.x, projectile.transform.position.y + rocketOffset, projectile.transform.position.z);
-            projectile.transform.position = offset;
-            yield return new WaitForSeconds(rocketAccelaratonDelay);
-
-            projectile.GetComponent<Rigidbody>().AddForce(projectileRayDirection.direction * projectileSpeed, ForceMode.Impulse);
-            
-            //projectile.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, projectileSpeed), ForceMode.Force);
-            yield return new WaitForSeconds(rocketDespawnTimer);
-       
-
-            Destroy(projectile);
+            projectile.GetComponent<Rigidbody>().AddForce(projectileRayDirection.direction * projectileSpeed, ForceMode.Acceleration);
+            yield return null;
         }
-
-
-
-
+        
         public void PlaySound()
         {
             AudioManager.PlaySound(AudioManager.Sound.RocketLauncherLaunch, instantiationLocation.position);

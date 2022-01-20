@@ -1,3 +1,4 @@
+using Audio;
 using UnityEngine;
 
 namespace Weapons
@@ -38,6 +39,8 @@ namespace Weapons
             boomEffect.transform.parent = null;
             boomEffect.Play();
             boomEffect.gameObject.AddComponent<DestroyParticle>();
+            
+            AudioManager.PlaySound(AudioManager.Sound.RocketExplosion, transform.position);
             
             Destroy(gameObject);
         }

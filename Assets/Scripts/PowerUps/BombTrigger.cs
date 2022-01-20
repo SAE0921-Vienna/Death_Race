@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Weapons;
 
@@ -13,9 +14,12 @@ public class BombTrigger : MonoBehaviour
 
     private void Awake()
     {
-        gameObject.GetComponent<SphereCollider>().enabled = false;
-        gameObject.GetComponent<Rigidbody>().useGravity = false;
-        
+        if (gameObject != null)
+        {
+            //gameObject.GetComponent<SphereCollider>().enabled = false;
+            //gameObject.GetComponent<Rigidbody>().useGravity = false;
+        }
+
         _explosion = GetComponent<IExplosion>();
 
         _playerManager = FindObjectOfType<PlayerManager>();
@@ -45,3 +49,4 @@ public class BombTrigger : MonoBehaviour
             _explosion.Explode();
     }
 }
+

@@ -1,8 +1,7 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem;
-
-// Convert all this to the new input system.
 
 namespace PlayerController
 {
@@ -39,14 +38,18 @@ namespace PlayerController
         [Header("Track Information")]
         [SerializeField] private LayerMask layerMask;
         [SerializeField] private float maxRaycastDistance;
+        [SerializeField] private float trackSearchRadius;
         public bool isOnRoadtrack;
 
         private Rigidbody _rBody;
+        private Ray _ray;
         private InputActions _controls;
+        private List<float> trackDistances = new List<float>();
 
         private void Awake()
         {
             _rBody = GetComponent<Rigidbody>();
+            StartCoroutine(PrintDotProduct());
         }
 
         private void OnEnable()
@@ -96,53 +99,62 @@ namespace PlayerController
             _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime), ForceMode.Force);
         }
 
+        private RaycastHit hit;
         private RaycastHit GroundInfo()
         {
-            isOnRoadtrack = Physics.Raycast(transform.position, -transform.up, out var hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
+            var ray = new Ray(transform.position, -transform.up);
+            if (!isOnRoadtrack)
+            {
+                var availableTracks = Physics.SphereCastAll(ray, trackSearchRadius, 1f, layerMask);
+                var sortedTracks = availableTracks.OrderBy(tracks => tracks.distance).ToList();
+                
+                
+            }
+            
+            isOnRoadtrack = Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance,layerMask,
+                QueryTriggerInteraction.Ignore);
             return hit;
         }
 
+        /// <summary>
+        /// Uses PID Controller to create a constant balance between gravity (down on local y-axis) and force (up on local y-axis).
+        /// This creates a smooth flying experience. If it detects no ground underneath, it automatically uses the world y-axis as the gravitational direction.
+        /// The ship itself gets rotated along a Vector that gets projected on a plane. (With interpolation)
+        /// </summary>
         private void AntiGravity()
         {
             Vector3 groundNormal;
             if (isOnRoadtrack)
             {
-                //...determine how high off the ground it is...
-                float height = GroundInfo().distance;
-                //...save the normal of the ground...21
+                var height = GroundInfo().distance;
                 groundNormal = GroundInfo().normal.normalized;
+                
                 //...use the PID controller to determine the amount of hover force needed...
-                float forcePercent = pidController.Seek(hoverHeight, height);
+                var forcePercent = pidController.Seek(hoverHeight, height);
 
-                //...calulcate the total amount of hover force based on normal (or "up") of the ground...
-                Vector3 force = groundNormal * hoverMultiplier * forcePercent;
-                //...calculate the force and direction of gravity to adhere the ship to the 
-                //track (which is not always straight down in the world)...
-                Vector3 gravity = -groundNormal * downForceMultiplier * (height / 100);
+                //...calculate the total amount of hover force based on normal (or "up") of the ground...
+                var force = groundNormal * hoverMultiplier * forcePercent;
+                //...calculate the force and direction of gravity to adhere the ship to the track.
+                var gravity = -groundNormal * downForceMultiplier * (height / 100);
 
                 //...and finally apply the hover and gravity forces
                 _rBody.AddForce(force, ForceMode.Acceleration);
                 _rBody.AddForce(gravity, ForceMode.Acceleration);
             }
-            //...Otherwise...
             else
             {
-                //...use Up to represent the "ground normal". This will cause our ship to
-                //self-right itself in a case where it flips over
+                //...use Up to represent the ground normal.
                 groundNormal = Vector3.up;
 
                 //Calculate and apply the stronger falling gravity straight down on the ship
-                Vector3 gravity = -groundNormal * downForceMultiplier;
+                var gravity = -groundNormal * downForceMultiplier;
                 _rBody.AddForce(gravity, ForceMode.Acceleration);
             }
-            //Calculate the amount of pitch and roll the ship needs to match its orientation
-            //with that of the ground. This is done by creating a projection and then calculating
-            //the rotation needed to face that projection
-            Vector3 projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
-            Quaternion rotation = Quaternion.LookRotation(projection, groundNormal);
+            //Calculate the amount of pitch and roll the ship needs to match its orientation with that of the ground. 
+            var projection = Vector3.ProjectOnPlane(transform.forward, groundNormal);
+            var rotation = Quaternion.LookRotation(projection, groundNormal);
 
-            //Move the ship over time to match the desired rotation to match the ground. This is 
-            //done smoothly (using Lerp) to make it feel more realistic
+            //Move the ship over time to match the desired rotation to match the ground.
             _rBody.MoveRotation(Quaternion.Lerp(_rBody.rotation, rotation, Time.deltaTime * 10f));
         }
 
@@ -156,6 +168,29 @@ namespace PlayerController
             var steeringAngle = new Vector3(normal.x, SteerValue(maxSteerAngle, steerSpeed), normal.z);
 
             _rBody.MoveRotation(_rBody.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
+        }
+        
+        private void OnCollisionStay(Collision collision)
+        {
+            //If the ship has collided with an object on the Wall layer...
+            if (collision.gameObject.layer == layerMask)
+            {
+                //...calculate how much upward impulse is generated and then push the vehicle down by that amount 
+                //to keep it stuck on the track (instead up popping up over the wall)
+                var up = transform.up;
+                var upwardForceFromCollision = Vector3.Dot(collision.impulse, up) * up;
+                _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
+            }
+        }
+
+        private IEnumerator PrintDotProduct()
+        {
+            while (true)
+            {
+                var lastNormal = GroundInfo().normal;
+                yield return new WaitForSeconds(Time.deltaTime);
+                print (Vector3.Dot(lastNormal, GroundInfo().normal));
+            }
         }
 
         private float t = 0.5f;
