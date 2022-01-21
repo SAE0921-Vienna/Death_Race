@@ -5443,14 +5443,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111c84d85643ab1498cb0736a7157e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionTransform: {fileID: 1454582030}
+  targetPositionTransform: {fileID: 1150493394}
   forwardAmount: 0
   turnAmount: 0
   forwardPlusValue: 1
   turnPlusValue: 1
-  reachedTargetDistance: 40
+  reachedTargetDistance: 60
   stoppingDistance: 200
-  stoppingSpeed: 0.1
+  stoppingSpeed: 0.2
 --- !u!114 &382245267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5458,7 +5458,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382245264}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19058cc23e3e80a479ff1d6d9647b5d5, type: 3}
   m_Name: 
@@ -5482,7 +5482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aivehicleController: {fileID: 0}
-  health: 100
+  health: 1000
   nitroSpeed: 800
   normalMaxSpeed: 0
   currentSpeed: 0
@@ -5558,8 +5558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAccelerationConstant: 0.12
-  mMaxSpeed: 2500
-  brakeForce: 500
+  mMaxSpeed: 600
+  brakeForce: 800
   decelerationConstant: 0.5
   accelerationCurve:
     serializedVersion: 2
@@ -5595,8 +5595,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   sideThrustAmount: 10
-  maxSteerAngle: 120
-  steerSpeed: 100
+  maxSteerAngle: 200
+  steerSpeed: 200
   downForceMultiplier: 100
   hoverMultiplier: 250
   hoverHeight: 12
@@ -5608,8 +5608,8 @@ MonoBehaviour:
     maximum: 2
   isOnRoadtrack: 1
   currentSpeed: 0
-  AccelerationValue: 1
-  SteerValueRaw: 1
+  AccelerationValue: 0
+  SteerValueRaw: 0
 --- !u!1 &414343045
 GameObject:
   m_ObjectHideFlags: 0
