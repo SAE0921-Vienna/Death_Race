@@ -42,6 +42,11 @@ public class PickUp : MonoBehaviour
 
         PlayerManager playermanager = FindObjectOfType<PlayerManager>();
         player = playermanager.gameObject;
+
+        if (!playermanager)
+        {
+            Debug.LogWarning("PlayerManager has NOT been found");
+        }
     }
 
     private void Start()

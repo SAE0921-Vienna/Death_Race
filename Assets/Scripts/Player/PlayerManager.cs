@@ -50,6 +50,12 @@ public class PlayerManager : MonoBehaviour
         vehicleController = GetComponent<VehicleController>();
         playerWeapon = GetComponent<PlayerWeapon>();
 
+        if (!playerWeapon)
+        {
+            Debug.LogWarning("PlayerWeapon NOT Found");
+        }
+
+
         #region  gameManager FindObjectOfType
         gameManager = FindObjectOfType<GameManager>();
         if (gameManager)
@@ -79,8 +85,10 @@ public class PlayerManager : MonoBehaviour
     }
     private void Start()
     {
-        ammoAdd = playerWeapon.ammoAdd;
-        ammoLimit = playerWeapon.ammoAdd;
+   
+            ammoAdd = playerWeapon.ammoAdd;
+            ammoLimit = playerWeapon.ammoAdd;
+
     }
 
     private void Update()
