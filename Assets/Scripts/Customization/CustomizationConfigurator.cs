@@ -7,7 +7,6 @@ namespace Customization
     {
         [SerializeField] private CustomizationData customizationData;
 
-        
         // Set all the values in the scriptable object, to the MonoBehavior object.
         private void Awake()
         {

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6f85141e3a4e9d967a55f16f11b914, type: 3}
   m_Name: Sample Ship Customization Data
   m_EditorClassIdentifier: 
-  vehicleMesh: {fileID: 4300000, guid: 8498b1fefdcebad45b1bc8019463b20e, type: 3}
+  vehicleMesh: {fileID: 4300000, guid: 1290ad08151088a4ba9e63b023e74e9b, type: 3}
   vehicleWeapon: {fileID: 8078879089874771854, guid: 2d8214dc75418044a9c33bdd917699af, type: 3}
-  vehicleMaterial: {fileID: 2100000, guid: 5a927ef3930ae7348b5606a356f02ebe, type: 2}
+  vehicleMaterial: {fileID: 2100000, guid: 9cc05dbbc727f27499fdb727a4d10523, type: 2}

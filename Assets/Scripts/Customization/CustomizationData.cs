@@ -3,7 +3,7 @@ using Weapons;
 
 namespace Customization
 {
-    [CreateAssetMenu (fileName = "Customization Data")]
+    [CreateAssetMenu (menuName = "Scriptables", fileName = "Customization Data")]
     public class CustomizationData : ScriptableObject
     {
         //Set these in Main Menu, or randomly generate them during runtime.
@@ -11,7 +11,7 @@ namespace Customization
         public Mesh vehicleMesh;
         public GameObject vehicleWeapon;
         public Material vehicleMaterial;
-
+        
         [HideInInspector] 
         public IWeapon vehicleWeaponScript;
 
