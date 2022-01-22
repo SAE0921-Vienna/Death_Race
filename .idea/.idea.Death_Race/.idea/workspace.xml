@@ -5,9 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Hologram/_Hologram_Rim_Red 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Hologram/_Hologram_Rim_Red 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Hologram/_Hologram_Rim_Red 2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Hologram/_Hologram_Rim_Red 2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Metal_Railing_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Metal_Railing_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road_Pipes_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road_Pipes_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Insane_Backup.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Insane_Backup.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Track_01_Prototype.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Track_01_Prototype.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/tunnel.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/tunnel.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map/NavMesh.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map/NavMesh.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 3.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 3.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 4.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 4.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Daniel Deluxe - InfiltratDaniel Deluxe - Infiltrator.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Daniel Deluxe - InfiltratDaniel Deluxe - Infiltrator.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor/metal_plate_diff_4k.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor/metal_plate_diff_4k.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor/metal_plate_disp_4k.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor/metal_plate_disp_4k.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor/metal_plate_nor_gl_4k.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor/metal_plate_nor_gl_4k.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor/metal_plate_rough_4k.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Metal_Floor/metal_plate_rough_4k.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/RaceTrack/Asphalt/Asphalt_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/RaceTrack/Asphalt/Asphalt_MAT.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Customization/CustomizationConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Customization/CustomizationConfigurator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Customization/CustomizationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Customization/CustomizationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Sample Ship Customization Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Sample Ship Customization Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/Deep Dusk/Deep Dusk Equirect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/Deep Dusk/Deep Dusk Equirect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/Space_AnotherPlanet/Materials/AllSky_Space_AnotherPlanet Equirect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/AllSkyFree/Space_AnotherPlanet/Materials/AllSky_Space_AnotherPlanet Equirect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_05_p18.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Bitgem/Materials/lava_05_p18.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/DeepSpaceSkyboxPack/GalacticGreen/Material/GalacticGreenMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/DeepSpaceSkyboxPack/GalacticGreen/Material/GalacticGreenMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/ForceShield/Misc/alien character/animation/Materials/03 - Default 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/ForceShield/Misc/alien character/animation/Materials/03 - Default 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Upgrades/Polygon Arsenal 2019.4 URP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_03_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/Alts/PolygonScifiSpace_Material_03_B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road_MAT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu Prefabs/Weapons/WEAPON_Laser.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu Prefabs/Weapons/WEAPON_Laser.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Empty_Ship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Empty_Ship.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/SpaceshipRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/SpaceshipRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +215,9 @@
       <workItem from="1642436043945" duration="3515000" />
       <workItem from="1642444945427" duration="2407000" />
       <workItem from="1642699383866" duration="4677000" />
+      <workItem from="1642814392234" duration="441000" />
+      <workItem from="1642814856156" duration="37000" />
+      <workItem from="1642814913075" duration="3129000" />
     </task>
     <servers />
   </component>

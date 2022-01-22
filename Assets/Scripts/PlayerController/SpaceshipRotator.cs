@@ -5,10 +5,14 @@ namespace PlayerController
     public class SpaceshipRotator : MonoBehaviour
     {
         [Range(0f, 90f)] 
-        [SerializeField] private float maxRotation;
+        [SerializeField] private float maxRotationZ, maxRotationX;
         [SerializeField] private AnimationCurve rotationalCurve;
         
         private VehicleController _vehicleController;
+        private Vector3 rotationVector;
+
+        private float xRotationInterpolator;
+
 
         private void Awake()
         {
@@ -17,15 +21,35 @@ namespace PlayerController
 
         private void Update()
         {
-            RotateSpaceship(_vehicleController.AngleGetter(), maxRotation);
+            RotateSpaceshipZ(_vehicleController.AngleGetter(), maxRotationZ);
         }
 
-        private void RotateSpaceship(float rotationStrength, float maximumRotation)
+        private void RotateSpaceshipZ(float rotationStrength, float maximumRotation)
         {
-            var rotationVector = new Vector3(0f, 0f,
+            rotationVector = new Vector3(RotateSpaceshipX(_vehicleController.AccelerationValue), 0f,
                 Mathf.Lerp(maximumRotation, -maximumRotation, rotationalCurve.Evaluate(rotationStrength)));
             
             transform.rotation = Quaternion.Euler(_vehicleController.transform.rotation.eulerAngles + rotationVector);
+        }
+
+        private float RotateSpaceshipX(float brakeValue)
+        {
+            if (brakeValue >= 0f)
+            {
+                xRotationInterpolator =
+                    Mathf.Clamp01(xRotationInterpolator - Time.deltaTime);
+                print("brake value higher or equal to 0");
+            }
+            else
+            {
+                xRotationInterpolator =
+                    Mathf.Clamp01(xRotationInterpolator + Time.deltaTime);
+            }
+                
+
+            print(xRotationInterpolator);
+            //print(_vehicleController.currentSpeed);
+            return Mathf.Lerp(0f, -maxRotationX, rotationalCurve.Evaluate(xRotationInterpolator));
         }
     }
 }

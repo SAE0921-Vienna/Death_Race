@@ -64,7 +64,7 @@ namespace PlayerController
         }
 
         [HideInInspector] public float currentSpeed;
-        private float AccelerationValue => _controls.Player.AccelerateDecelerate.ReadValue<float>();
+        public float AccelerationValue => _controls.Player.AccelerateDecelerate.ReadValue<float>();
         private float SteerValueRaw => _controls.Player.Steer.ReadValue<float>();
 
         private void FixedUpdate()
@@ -189,7 +189,7 @@ namespace PlayerController
             {
                 var lastNormal = GroundInfo().normal;
                 yield return new WaitForSeconds(Time.deltaTime);
-                print (Vector3.Dot(lastNormal, GroundInfo().normal));
+                //print (Vector3.Dot(lastNormal, GroundInfo().normal));
             }
         }
 
