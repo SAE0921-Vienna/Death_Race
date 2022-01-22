@@ -1,0 +1,480 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e385b20f6cdf54f89b327c2248de7a, type: 3}
+  m_Name: TG_Ship Universal 5
+  m_EditorClassIdentifier: 
+  gridColorMode: 1
+  gridColor: {r: 0.40927503, g: 1, b: 0.3820755, a: 1}
+  gridsList:
+  - handlesPos: 0
+    vLinesOnCanvasGrid:
+    - 0
+    - 15.076172
+    - 29.666016
+    - 44.25586
+    - 59.33203
+    - 74.4082
+    - 89.484375
+    - 104.56055
+    - 119.63672
+    - 134.22656
+    - 142.00781
+    - 149.78906
+    - 165.35156
+    - 179.9414
+    - 195.01758
+    - 210.09375
+    - 225.16992
+    - 239.75977
+    - 255.8086
+    - 270.39844
+    - 285.96094
+    - 300.06445
+    - 315.62695
+    - 330.70312
+    - 345.29297
+    - 352.5879
+    - 360.85547
+    - 376.41797
+    - 391.98047
+    - 407.54297
+    - 425.05078
+    - 440.61328
+    - 460.0664
+    - 479.0332
+    - 497.02734
+    hLinesOnCanvasGrid:
+    - 107.96484
+    - 89.9707
+    - 65.6543
+    - 40.851562
+    - 16.535156
+    - 0
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 0
+      y: 498.48633
+      width: 497.02734
+      height: 107.96484
+    mouseInsideRectPos: {x: 1282, y: -2866}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4284612456
+    gridLabel: Flat Color Grid
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 1
+    isHandleSelected: 0
+    isGridPosLocked: 1
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 000000001f0000003d0000005b0000007a00000099000000b8000000d7000000f6000000140100002401000034010000540100007201000091010000b0010000cf010000ed0100000e0200002c0200004c0200006902000089020000a8020000c6020000d5020000e60200000603000026030000460300006a0300008a030000b2030000d9030000fe030000
+    hLinesOnTexGrid: 0000000025000000570000008a000000bc000000de000000
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 0, y: 801}
+    gridWidth: 1022
+    gridHeight: 222
+    gridColumns: 34
+    gridRows: 5
+    hasEmptySpace: 0
+    isTexPattern: 0
+  - handlesPos: 0
+    vLinesOnCanvasGrid: []
+    hLinesOnCanvasGrid: []
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 433.31836
+      y: 606.4512
+      width: 63.708984
+      height: 309.79102
+    mouseInsideRectPos: {x: 246, y: -1084}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4284612456
+    gridLabel: Texture Rect
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 0
+    isHandleSelected: 0
+    isGridPosLocked: 0
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 
+    hLinesOnTexGrid: 
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 891, y: 164}
+    gridWidth: 131
+    gridHeight: 637
+    gridColumns: 1
+    gridRows: 1
+    hasEmptySpace: 0
+    isTexPattern: 1
+  - handlesPos: 2
+    vLinesOnCanvasGrid:
+    - 0
+    - 10.699219
+    - 21.398438
+    - 31.611328
+    - 43.283203
+    - 53.009766
+    - 63.708984
+    - 74.89453
+    - 84.62109
+    - 96.29297
+    - 106.99219
+    - 118.177734
+    - 128.39062
+    - 139.08984
+    - 149.78906
+    - 160.48828
+    - 171.67383
+    - 180.91406
+    - 191.12695
+    - 194.53125
+    - 203.77148
+    - 214.4707
+    - 225.65625
+    - 229.06055
+    - 239.27344
+    - 249.48633
+    - 260.18555
+    hLinesOnCanvasGrid:
+    - 170.70117
+    - 145.89844
+    - 121.58203
+    - 97.265625
+    - 72.94922
+    - 48.632812
+    - 24.316406
+    - 0
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 0
+      y: 607.4238
+      width: 260.18555
+      height: 170.70117
+    mouseInsideRectPos: {x: 895, y: -1155}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4284612456
+    gridLabel: Flat Color Grid
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 1
+    isHandleSelected: 0
+    isGridPosLocked: 1
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 00000000160000002c00000041000000590000006d000000830000009a000000ae000000c6000000dc000000f3000000080100001e010000340100004a01000061010000740100008901000090010000a3010000b9010000d0010000d7010000ec0100000102000017020000
+    hLinesOnTexGrid: 00000000330000006500000097000000c9000000fb0000002d0100005f010000
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 0, y: 448}
+    gridWidth: 535
+    gridHeight: 351
+    gridColumns: 26
+    gridRows: 7
+    hasEmptySpace: 0
+    isTexPattern: 0
+  - handlesPos: 2
+    vLinesOnCanvasGrid:
+    - 0
+    - 36.47461
+    - 41.33789
+    - 55.927734
+    - 74.89453
+    - 88.51172
+    - 105.046875
+    - 118.177734
+    - 130.82227
+    - 143.4668
+    - 156.11133
+    - 168.75586
+    - 181.40039
+    - 194.04492
+    - 206.68945
+    - 219.82031
+    - 231.49219
+    - 244.13672
+    - 256.78125
+    - 264.5625
+    hLinesOnCanvasGrid:
+    - 61.76367
+    - 49.11914
+    - 36.960938
+    - 24.316406
+    - 12.158203
+    - 0
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 0
+      y: 778.125
+      width: 264.5625
+      height: 61.76367
+    mouseInsideRectPos: {x: 839, y: -1516}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4284612456
+    gridLabel: Flat Color Grid
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 0
+    isHandleSelected: 0
+    isGridPosLocked: 1
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 000000004b00000055000000730000009a000000b6000000d8000000f30000000d01000027010000410100005b010000750100008f010000a9010000c4010000dc010000f60100001002000020020000
+    hLinesOnTexGrid: 000000001a000000330000004d000000660000007f000000
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 0, y: 321}
+    gridWidth: 544
+    gridHeight: 127
+    gridColumns: 19
+    gridRows: 5
+    hasEmptySpace: 0
+    isTexPattern: 0
+  - handlesPos: 2
+    vLinesOnCanvasGrid:
+    - 0
+    - 30.152344
+    - 61.76367
+    - 92.88867
+    - 124.01367
+    - 155.625
+    - 186.26367
+    - 217.875
+    - 248.02734
+    hLinesOnCanvasGrid:
+    - 21.884766
+    - 10.699219
+    - 0
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 249.97266
+      y: 952.23047
+      width: 248.02734
+      height: 21.884766
+    mouseInsideRectPos: {x: 131, y: -4451}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4284612456
+    gridLabel: Flat Color Grid
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 0
+    isHandleSelected: 0
+    isGridPosLocked: 1
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 000000003e0000007f000000bf000000ff000000400100007f010000c0010000fe010000
+    hLinesOnTexGrid: 00000000170000002d000000
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 514, y: 45}
+    gridWidth: 510
+    gridHeight: 45
+    gridColumns: 8
+    gridRows: 2
+    hasEmptySpace: 0
+    isTexPattern: 0
+  - handlesPos: 1
+    vLinesOnCanvasGrid:
+    - 0
+    - 20.91211
+    - 44.742188
+    - 62.25
+    hLinesOnCanvasGrid:
+    - 27.234375
+    - 13.130859
+    - 0
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 274.7754
+      y: 606.9375
+      width: 62.25
+      height: 27.234375
+    mouseInsideRectPos: {x: -284, y: -2724}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4284612456
+    gridLabel: Flat Color Grid
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 0
+    isHandleSelected: 0
+    isGridPosLocked: 1
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 000000002b0000005c00000080000000
+    hLinesOnTexGrid: 000000001d00000038000000
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 565, y: 744}
+    gridWidth: 128
+    gridHeight: 56
+    gridColumns: 3
+    gridRows: 2
+    hasEmptySpace: 0
+    isTexPattern: 0
+  - handlesPos: 2
+    vLinesOnCanvasGrid:
+    - 0
+    - 31.125
+    - 62.25
+    - 93.375
+    - 124.5
+    - 155.625
+    - 185.77734
+    - 217.38867
+    - 249
+    - 279.63867
+    - 309.79102
+    - 341.40234
+    - 372.52734
+    - 404.13867
+    - 434.77734
+    - 466.38867
+    - 498
+    hLinesOnCanvasGrid:
+    - 20.91211
+    - 0
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 0
+      y: 975.0879
+      width: 498
+      height: 20.91211
+    mouseInsideRectPos: {x: 1025, y: -4186}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4284612456
+    gridLabel: Flat Color Grid
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 0
+    isHandleSelected: 0
+    isGridPosLocked: 1
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 000000004000000080000000c000000000010000400100007e010000bf010000000200003f0200007d020000be020000fe0200003f0300007e030000bf03000000040000
+    hLinesOnTexGrid: 000000002b000000
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 0, y: 0}
+    gridWidth: 1024
+    gridHeight: 43
+    gridColumns: 16
+    gridRows: 1
+    hasEmptySpace: 0
+    isTexPattern: 0
+  - handlesPos: 0
+    vLinesOnCanvasGrid:
+    - 0
+    - 7.294922
+    hLinesOnCanvasGrid:
+    - 12.644531
+    - 0
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 257.26758
+      y: 840.375
+      width: 7.294922
+      height: 12.644531
+    mouseInsideRectPos: {x: 448, y: -1331}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4284612456
+    gridLabel: Flat Color Grid
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 0
+    isHandleSelected: 0
+    isGridPosLocked: 1
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 000000000f000000
+    hLinesOnTexGrid: 000000001a000000
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 529, y: 294}
+    gridWidth: 15
+    gridHeight: 26
+    gridColumns: 1
+    gridRows: 1
+    hasEmptySpace: 0
+    isTexPattern: 0
+  copyList: []
+  texAtlas: {fileID: 2800000, guid: 4aba17c9fa77d2d47ab42a8cac606c0f, type: 3}
+  originTexAtlas: {fileID: 0}
+  originOffset: {x: 559, y: -198}
+  sizeOffset: {x: -1052, y: -1052}
+  showShortcuts: 0
+  zoomSpeed: 80
+  handleSize: 10
+  canvasBorder: 50
+  panelDefaultWidth: 250
+  sidePanelWidth: 250
+  showPanel: 1
+  drawAxes: 1
+  drawGrid: 1
+  texAtlasSize: {x: 0, y: 0}
