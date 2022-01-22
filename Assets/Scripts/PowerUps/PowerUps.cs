@@ -11,6 +11,7 @@ public class PowerUps : MonoBehaviour
     private UIManager uIManager;
     //private PlayerWeapon playerWeapon;
     private PlayerManager playerStats;
+    private GameManager gameManager;
     private Transform powerupParent;
     private int powerUpListLength = 1;
 
@@ -19,6 +20,15 @@ public class PowerUps : MonoBehaviour
     private void Awake()
     {
         playerStats = GetComponent<PlayerManager>();
+
+        #region GameManager  FindObjectOfType
+        gameManager = FindObjectOfType<GameManager>();
+        if (!gameManager)
+        {
+            Debug.LogWarning("GameManager NOT Found");
+
+        }      
+        #endregion
 
         #region uiManager  FindObjectOfType
         uIManager = FindObjectOfType<UIManager>();
@@ -115,6 +125,7 @@ public class PowerUps : MonoBehaviour
         {
             playerStats.nitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
+            gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV;
             GetComponent<VehicleController>().mMaxSpeed = playerStats.normalMaxSpeed;
         }
         if (playerStats.ammo <= 0)
@@ -146,7 +157,7 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(1).gameObject.SetActive(true);
-        //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
+        gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV + playerStats.mainCamPOVboost;
         GetComponent<VehicleController>().mMaxSpeed += playerStats.nitroSpeed;
         playerStats.nitro = true;
     }

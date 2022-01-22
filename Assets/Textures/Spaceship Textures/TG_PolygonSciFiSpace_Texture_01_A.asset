@@ -18,54 +18,54 @@ MonoBehaviour:
   - handlesPos: 2
     vLinesOnCanvasGrid:
     - 0
-    - 8.733887
-    - 16.904297
-    - 25.356445
-    - 34.37207
-    - 43.387695
-    - 51.558105
-    - 60.57373
-    - 69.30762
-    - 77.759766
-    - 82.26758
-    - 87.05713
-    - 95.791016
-    - 104.243164
-    - 113.25879
-    - 121.71094
-    - 130.72656
-    - 138.89697
-    - 148.19434
-    - 156.64648
-    - 165.66211
-    - 174.11426
-    - 183.12988
-    - 191.3003
-    - 200.03418
-    - 203.97852
-    - 209.0498
-    - 218.06543
-    - 226.79932
-    - 235.81494
-    - 246.23926
-    - 254.97314
-    - 266.24268
-    - 277.23047
-    - 288.21826
+    - 41.1416
+    - 79.62891
+    - 119.44336
+    - 161.91211
+    - 204.38086
+    - 242.86816
+    - 285.3369
+    - 326.47852
+    - 366.29297
+    - 387.52734
+    - 410.08887
+    - 451.23047
+    - 491.04492
+    - 533.5137
+    - 573.3281
+    - 615.7969
+    - 654.2842
+    - 698.0801
+    - 737.89453
+    - 780.3633
+    - 820.17773
+    - 862.6465
+    - 901.1338
+    - 942.2754
+    - 960.85547
+    - 984.74414
+    - 1027.2129
+    - 1068.3545
+    - 1110.8232
+    - 1159.9277
+    - 1201.0693
+    - 1254.1553
+    - 1305.9141
+    - 1357.6729
     hLinesOnCanvasGrid:
-    - 62.827637
-    - 50.149414
-    - 37.47119
-    - 25.074707
-    - 12.396484
+    - 295.9541
+    - 236.23242
+    - 176.51074
+    - 118.11621
+    - 58.39453
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
       x: 0
-      y: 288.78174
-      width: 288.21826
-      height: 62.827637
+      y: 1360.3271
+      width: 1357.6729
+      height: 295.9541
     mouseInsideRectPos: {x: 1630, y: -2507}
     gridColor:
       serializedVersion: 2
@@ -97,21 +97,21 @@ MonoBehaviour:
   - handlesPos: 1
     vLinesOnCanvasGrid:
     - 0
-    - 2.2539062
-    - 11.55127
-    - 13.805176
+    - 10.6171875
+    - 54.413086
+    - 65.03027
     hLinesOnCanvasGrid:
-    - 195.24463
-    - 97.76318
-    - 74.37891
+    - 919.71387
+    - 460.5205
+    - 350.3672
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
-      x: 236.66016
-      y: 354.7085
-      width: 13.805176
-      height: 195.24463
+      x: 1114.8047
+      y: 1670.8799
+      width: 65.03027
+      height: 919.71387
     mouseInsideRectPos: {x: -817, y: -2248}
     gridColor:
       serializedVersion: 2
@@ -143,50 +143,50 @@ MonoBehaviour:
   - handlesPos: 1
     vLinesOnCanvasGrid:
     - 0
-    - 5.916504
-    - 12.396484
-    - 18.594727
-    - 25.074707
-    - 30.709473
-    - 36.907715
-    - 43.669434
-    - 49.585938
-    - 55.50244
-    - 61.98242
-    - 68.180664
-    - 74.37891
-    - 80.57715
-    - 86.77539
-    - 92.97363
-    - 99.171875
-    - 104.80664
-    - 110.723145
-    - 112.413574
-    - 118.04834
-    - 123.683105
-    - 130.44482
-    - 132.41699
-    - 138.61523
-    - 144.53174
-    - 150.72998
-    - 152.70215
-    - 159.18213
+    - 27.870117
+    - 58.39453
+    - 87.5918
+    - 118.11621
+    - 144.65918
+    - 173.85645
+    - 205.70801
+    - 233.57812
+    - 261.44824
+    - 291.97266
+    - 321.16992
+    - 350.3672
+    - 379.56445
+    - 408.76172
+    - 437.95898
+    - 467.15625
+    - 493.69922
+    - 521.56934
+    - 529.5322
+    - 556.0752
+    - 582.61816
+    - 614.4697
+    - 623.75977
+    - 652.95703
+    - 680.82715
+    - 710.0244
+    - 719.31445
+    - 749.83887
     hLinesOnCanvasGrid:
-    - 98.6084
-    - 85.64844
-    - 71.84326
-    - 57.47461
-    - 43.105957
-    - 29.019043
-    - 14.368652
+    - 464.50195
+    - 403.45312
+    - 338.42285
+    - 270.73828
+    - 203.05371
+    - 136.69629
+    - 67.68457
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
       x: 0
-      y: 351.60938
-      width: 159.18213
-      height: 98.6084
+      y: 1656.2812
+      width: 749.83887
+      height: 464.50195
     mouseInsideRectPos: {x: 1137, y: -1397}
     gridColor:
       serializedVersion: 2
@@ -218,22 +218,22 @@ MonoBehaviour:
   - handlesPos: 1
     vLinesOnCanvasGrid:
     - 0
-    - 58.8833
-    - 65.36328
-    - 129.88135
+    - 277.37402
+    - 307.89844
+    - 611.8154
     hLinesOnCanvasGrid:
-    - 131.29004
-    - 98.89014
-    - 87.90234
-    - 56.911133
+    - 618.4512
+    - 465.8291
+    - 414.0703
+    - 268.08398
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
-      x: 447.11865
-      y: 314.13818
-      width: 129.88135
-      height: 131.29004
+      x: 2106.1846
+      y: 1479.7705
+      width: 611.8154
+      height: 618.4512
     mouseInsideRectPos: {x: -278, y: -345}
     gridColor:
       serializedVersion: 2
@@ -265,19 +265,19 @@ MonoBehaviour:
   - handlesPos: 1
     vLinesOnCanvasGrid:
     - 0
-    - 4.226074
+    - 19.907227
     hLinesOnCanvasGrid:
-    - 42.54248
-    - 28.737305
-    - 14.086914
+    - 200.39941
+    - 135.36914
+    - 66.35742
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
-      x: 149.03955
-      y: 451.9082
-      width: 4.226074
-      height: 42.54248
+      x: 702.0615
+      y: 2128.746
+      width: 19.907227
+      height: 200.39941
     mouseInsideRectPos: {x: -387, y: -4192}
     gridColor:
       serializedVersion: 2
@@ -309,32 +309,32 @@ MonoBehaviour:
   - handlesPos: 1
     vLinesOnCanvasGrid:
     - 0
-    - 7.3251953
-    - 14.650391
-    - 21.975586
-    - 29.300781
-    - 36.625977
-    - 43.95117
-    - 51.276367
-    - 58.601562
-    - 65.92676
-    - 73.25195
-    - 80.57715
-    - 87.90234
+    - 34.50586
+    - 69.01172
+    - 103.51758
+    - 138.02344
+    - 172.5293
+    - 207.03516
+    - 241.54102
+    - 276.04688
+    - 310.55273
+    - 345.0586
+    - 379.56445
+    - 414.0703
     hLinesOnCanvasGrid:
-    - 34.935547
-    - 29.864258
-    - 21.975586
-    - 14.650391
-    - 7.6069336
+    - 164.5664
+    - 140.67773
+    - 103.51758
+    - 69.01172
+    - 35.833008
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
-      x: 61.137207
-      y: 451.62646
-      width: 87.90234
-      height: 34.935547
+      x: 287.9912
+      y: 2127.419
+      width: 414.0703
+      height: 164.5664
     mouseInsideRectPos: {x: 782, y: -349}
     gridColor:
       serializedVersion: 2
@@ -366,20 +366,20 @@ MonoBehaviour:
   - handlesPos: 2
     vLinesOnCanvasGrid:
     - 0
-    - 20.848633
-    - 24.229492
+    - 98.208984
+    - 114.134766
     hLinesOnCanvasGrid:
-    - 36.0625
-    - 25.074707
-    - 9.86084
+    - 169.875
+    - 118.11621
+    - 46.450195
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
       x: 0
-      y: 450.4995
-      width: 24.229492
-      height: 36.0625
+      y: 2122.1104
+      width: 114.134766
+      height: 169.875
     mouseInsideRectPos: {x: 726, y: -4295}
     gridColor:
       serializedVersion: 2
@@ -411,23 +411,23 @@ MonoBehaviour:
   - handlesPos: 1
     vLinesOnCanvasGrid:
     - 0
-    - 8.452148
-    - 18.312988
-    - 27.046875
-    - 36.0625
+    - 39.814453
+    - 86.26465
+    - 127.40625
+    - 169.875
     hLinesOnCanvasGrid:
-    - 28.737305
-    - 23.666016
-    - 19.158203
-    - 10.142578
+    - 135.36914
+    - 111.48047
+    - 90.24609
+    - 47.777344
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
-      x: 24.51123
-      y: 450.4995
-      width: 36.0625
-      height: 28.737305
+      x: 115.461914
+      y: 2122.1104
+      width: 169.875
+      height: 135.36914
     mouseInsideRectPos: {x: 568, y: -4251}
     gridColor:
       serializedVersion: 2
@@ -459,21 +459,21 @@ MonoBehaviour:
   - handlesPos: 2
     vLinesOnCanvasGrid:
     - 0
-    - 7.6069336
-    - 14.932129
-    - 22.257324
-    - 29.58252
-    - 36.0625
+    - 35.833008
+    - 70.33887
+    - 104.84473
+    - 139.35059
+    - 169.875
     hLinesOnCanvasGrid:
-    - 7.3251953
+    - 34.50586
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
-      x: 24.51123
-      y: 479.51855
-      width: 36.0625
-      height: 7.3251953
+      x: 115.461914
+      y: 2258.8066
+      width: 169.875
+      height: 34.50586
     mouseInsideRectPos: {x: 307, y: -8237}
     gridColor:
       serializedVersion: 2
@@ -505,33 +505,33 @@ MonoBehaviour:
   - handlesPos: 2
     vLinesOnCanvasGrid:
     - 0
-    - 1.1269531
-    - 17.749512
-    - 19.158203
-    - 36.0625
-    - 37.189453
-    - 53.81201
-    - 55.220703
-    - 72.125
-    - 72.970215
-    - 90.43799
-    - 91.2832
-    - 108.46924
-    - 109.31445
-    - 126.50049
-    - 127.3457
-    - 144.53174
+    - 5.3085938
+    - 83.61035
+    - 90.24609
+    - 169.875
+    - 175.1836
+    - 253.48535
+    - 260.1211
+    - 339.75
+    - 343.73145
+    - 426.01465
+    - 429.9961
+    - 510.95215
+    - 514.9336
+    - 595.88965
+    - 599.8711
+    - 680.82715
     hLinesOnCanvasGrid:
-    - 14.368652
-    - 7.6069336
+    - 67.68457
+    - 35.833008
     - 0
     tg: {fileID: 11400000}
     gridOnCanvas:
       serializedVersion: 2
-      x: 143.96826
-      y: 550.23486
-      width: 144.53174
-      height: 14.368652
+      x: 678.17285
+      y: 2591.921
+      width: 680.82715
+      height: 67.68457
     mouseInsideRectPos: {x: 587, y: -3766}
     gridColor:
       serializedVersion: 2
@@ -560,11 +560,49 @@ MonoBehaviour:
     gridRows: 2
     hasEmptySpace: 0
     isTexPattern: 0
+  - handlesPos: 0
+    vLinesOnCanvasGrid: []
+    hLinesOnCanvasGrid: []
+    tg: {fileID: 11400000}
+    gridOnCanvas:
+      serializedVersion: 2
+      x: 180.49219
+      y: 414.0703
+      width: 281.35547
+      height: 236.23242
+    mouseInsideRectPos: {x: 756, y: -52}
+    gridColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridLabel: Texture Rect
+    editGridName: 0
+    isSelected: 0
+    showGridOptions: 1
+    isSelectionLocked: 0
+    isHandleSelected: 0
+    isGridPosLocked: 0
+    isOverlapping: 0
+    handleID: -1
+    vLinesOnTexGrid: 
+    hLinesOnTexGrid: 
+    tintColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    emptySpaceColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    gridPos: {x: 136, y: 1558}
+    gridWidth: 212
+    gridHeight: 178
+    gridColumns: 1
+    gridRows: 1
+    hasEmptySpace: 0
+    isTexPattern: 1
   copyList: []
   texAtlas: {fileID: 2800000, guid: 936bffa65ef866a43969ea77c103adb3, type: 3}
   originTexAtlas: {fileID: 0}
-  originOffset: {x: 854, y: 191}
-  sizeOffset: {x: -1471, y: -1471}
+  originOffset: {x: 547, y: -193}
+  sizeOffset: {x: 670, y: 670}
   showShortcuts: 0
   zoomSpeed: 80
   handleSize: 10

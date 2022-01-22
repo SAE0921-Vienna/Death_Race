@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using PlayerController;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using Weapons;
 
 public class PlayerManager : MonoBehaviour
@@ -21,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     public float nitroSpeed = 50f;
     public float normalMaxSpeed;
     public float currentSpeed;
+    public float mainCamPOVboost = 20f;
     [Header("Ammo")]
     public int ammo;
     //public int ammoAdd = 25;
@@ -58,13 +57,10 @@ public class PlayerManager : MonoBehaviour
 
         #region  gameManager FindObjectOfType
         gameManager = FindObjectOfType<GameManager>();
-        if (gameManager)
-        {
-            //gameManager Found
-        }
-        else
+        if (!gameManager)
         {
             Debug.LogWarning("GameManager NOT Found");
+
         }
         #endregion
 

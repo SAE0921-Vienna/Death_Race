@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using PlayerController;
 using UnityEngine;
 using Weapons;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class GameManager : MonoBehaviour
     private FinishLineManager finishLineManager;
 
     private PlayerManager playerManager;
+    public CinemachineVirtualCamera vCam;
+    public float vCamPOV = 70f;
+
+
 
     [Header("Laps")]
     public int laps = 3;
@@ -36,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
         checkpointManager = FindObjectOfType<CheckpointManager>().GetComponent<CheckpointManager>();
         finishLineManager = FindObjectOfType<FinishLineManager>().GetComponent<FinishLineManager>();
         playerManager = FindObjectOfType<PlayerManager>().GetComponent<PlayerManager>();
@@ -43,6 +49,10 @@ public class GameManager : MonoBehaviour
 
         spawnPlayerPosition = new Vector3(playerManager.transform.position.x, playerManager.transform.position.y + spawnPlayerYOffset, playerManager.transform.position.z);
         spawnPlayerRotation = new Quaternion(playerManager.transform.rotation.x, playerManager.transform.rotation.y, playerManager.transform.rotation.z, playerManager.transform.rotation.w) ;
+
+        vCam = FindObjectOfType<CinemachineVirtualCamera>();
+
+        vCam.m_Lens.FieldOfView = vCamPOV;
     }
 
     private void Update()
