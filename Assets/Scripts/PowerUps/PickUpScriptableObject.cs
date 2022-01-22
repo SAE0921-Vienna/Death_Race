@@ -21,7 +21,6 @@ public class PickUpScriptableObject : ScriptableObject
         Bomb,
         Heal,
         Random
-
     }
 
     public void PowerUpAction(GameObject player)
