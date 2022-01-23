@@ -3,7 +3,7 @@ using Weapons;
 
 namespace Customization
 {
-    [CreateAssetMenu (menuName = "Scriptables", fileName = "Customization Data")]
+    [CreateAssetMenu (menuName = "Customization Data", fileName = "Ship_Customization_Data")]
     public class CustomizationData : ScriptableObject
     {
         //Set these in Main Menu, or randomly generate them during runtime.

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6f85141e3a4e9d967a55f16f11b914, type: 3}
+  m_Name: Ship_Customization_Data
+  m_EditorClassIdentifier: 
+  vehicleMesh: {fileID: 0}
+  vehicleWeapon: {fileID: 0}
+  vehicleMaterial: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0036790755, g: 0.0051774327, b: 0.0072589843, a: 1}
+  m_IndirectSpecularColor: {r: 0.0036645893, g: 0.0051949015, b: 0.0072606485, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -357,7 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c59f128e8994fdca9f13d0cf37fd9ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRotation: 45
+  maxRotationZ: 0
+  maxRotationX: 0
   rotationalCurve:
     serializedVersion: 2
     m_Curve:
@@ -382,7 +383,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  spaceShip: {fileID: 1150493391}
 --- !u!1001 &132343303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -406,6 +406,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1150493394}
+    - target: {fileID: 8482835735354933241, guid: 0015467c9cc322103900948415cd301a, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -428,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.078090444
+      value: 0.07809043
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -436,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09397017
+      value: 0.09397019
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6570,6 +6574,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3965160609210042293, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
+      propertyPath: field of view
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042295, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -6604,7 +6612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.078090444
+      value: 0.07809043
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
@@ -6612,7 +6620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09397017
+      value: 0.09397019
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8985,6 +8993,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   maxRaycastDistance: 1000
+  trackSearchRadius: 0
   isOnRoadtrack: 1
   currentSpeed: 0
 --- !u!64 &1150493400

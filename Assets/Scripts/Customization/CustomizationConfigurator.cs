@@ -10,6 +10,11 @@ namespace Customization
         // Set all the values in the scriptable object, to the MonoBehavior object.
         private void Awake()
         {
+            ChangeShipData();   
+        }
+
+        public void ChangeShipData()
+        {
             GetComponentInChildren<MeshFilter>().mesh = customizationData.vehicleMesh;
             Instantiate(customizationData.vehicleWeapon, GameObject.Find("WeaponPosition").transform, true);
             GetComponentInChildren<MeshRenderer>().material = customizationData.vehicleMaterial;

@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Core/MainMenu/MainMenu.unity
-    guid: 39f71a3fa1dfc8743846659a64f382dd
-  - enabled: 1
-    path: Assets/Scenes/Core/Maps/Alien_Planet_Testing_Map.unity
-    guid: 988b7eb99d1812b2f99180318252d601
+    path: Assets/Scenes/Core/Maps/George_Testing_Map.unity
+    guid: 3644b3cf663efb3e78ffc2248406a188
   m_configObjects: {}

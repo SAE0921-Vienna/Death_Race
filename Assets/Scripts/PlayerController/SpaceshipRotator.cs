@@ -34,21 +34,7 @@ namespace PlayerController
 
         private float RotateSpaceshipX(float brakeValue)
         {
-            if (brakeValue >= 0f)
-            {
-                xRotationInterpolator =
-                    Mathf.Clamp01(xRotationInterpolator - Time.deltaTime);
-                print("brake value higher or equal to 0");
-            }
-            else
-            {
-                xRotationInterpolator =
-                    Mathf.Clamp01(xRotationInterpolator + Time.deltaTime);
-            }
-                
-
-            print(xRotationInterpolator);
-            //print(_vehicleController.currentSpeed);
+            xRotationInterpolator = brakeValue >= 0f ? Mathf.Clamp01(xRotationInterpolator - 2 * Time.deltaTime) : Mathf.Clamp01(xRotationInterpolator + 2 * Time.deltaTime);
             return Mathf.Lerp(0f, -maxRotationX, rotationalCurve.Evaluate(xRotationInterpolator));
         }
     }

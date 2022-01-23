@@ -41,7 +41,7 @@ MonoBehaviour:
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.6
     min: 0
     max: 1
   clamp:
@@ -85,12 +85,12 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: 30
+    m_Value: 25
     min: -100
     max: 100
   tint:
     m_OverrideState: 1
-    m_Value: -5
+    m_Value: 10
     min: -100
     max: 100
 --- !u!114 &11400000
@@ -133,7 +133,7 @@ MonoBehaviour:
     m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.05
+    m_Value: 0.25
     min: 0
     max: 1
   response:
@@ -169,12 +169,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.31
+    m_Value: 0.25
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.439
+    m_Value: 0.25
     min: 0.01
     max: 1
   rounded:
@@ -214,8 +214,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.482
-          value: 0.55648535
+          time: 0.5816733
+          value: 0.6390041
           inSlope: 1.1308378
           outSlope: 1.1308378
           tangentMode: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0.05
     min: 0
     max: 1
 --- !u!114 &8178713084775297303
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: -0.5
+    m_Value: -0.3
   contrast:
     m_OverrideState: 1
     m_Value: 2

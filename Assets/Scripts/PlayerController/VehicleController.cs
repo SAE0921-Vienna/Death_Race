@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace PlayerController
@@ -37,6 +38,7 @@ namespace PlayerController
 
         [Header("Track Information")]
         [SerializeField] private LayerMask layerMask;
+        [SerializeField] private LayerMask wallLayerMask;
         [SerializeField] private float maxRaycastDistance;
         [SerializeField] private float trackSearchRadius;
         public bool isOnRoadtrack;
@@ -49,7 +51,6 @@ namespace PlayerController
         private void Awake()
         {
             _rBody = GetComponent<Rigidbody>();
-            StartCoroutine(PrintDotProduct());
         }
 
         private void OnEnable()
@@ -82,13 +83,13 @@ namespace PlayerController
 
         private void Accelerate()
         {
-            currentSpeed = AccelerationValue >= 0.01f ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant);
+            currentSpeed = AccelerationValue >= 0.01f ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
             _rBody.AddForce(transform.forward * mMaxSpeed * accelerationCurve.Evaluate(currentSpeed), ForceMode.Force);
         }
 
         private void Brake()
         {
-            _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue), ForceMode.Force);
+            _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue * Time.fixedDeltaTime * 10), ForceMode.Force);
         }
 
         /// <summary>
@@ -96,7 +97,7 @@ namespace PlayerController
         /// </summary>
         private void SideThrust()
         {
-            _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime), ForceMode.Force);
+            _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime * 100), ForceMode.Force);
         }
 
         private RaycastHit hit;
@@ -107,8 +108,6 @@ namespace PlayerController
             {
                 var availableTracks = Physics.SphereCastAll(ray, trackSearchRadius, 1f, layerMask);
                 var sortedTracks = availableTracks.OrderBy(tracks => tracks.distance).ToList();
-                
-                
             }
             
             isOnRoadtrack = Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance,layerMask,
@@ -167,32 +166,9 @@ namespace PlayerController
             var normal = GroundInfo().normal;
             var steeringAngle = new Vector3(normal.x, SteerValue(maxSteerAngle, steerSpeed), normal.z);
 
-            _rBody.MoveRotation(_rBody.rotation * Quaternion.Euler(steeringAngle * Time.fixedDeltaTime));
+            _rBody.MoveRotation(_rBody.rotation * Quaternion.Euler(steeringAngle * Time.deltaTime));
         }
         
-        private void OnCollisionStay(Collision collision)
-        {
-            //If the ship has collided with an object on the Wall layer...
-            if (collision.gameObject.layer == layerMask)
-            {
-                //...calculate how much upward impulse is generated and then push the vehicle down by that amount 
-                //to keep it stuck on the track (instead up popping up over the wall)
-                var up = transform.up;
-                var upwardForceFromCollision = Vector3.Dot(collision.impulse, up) * up;
-                _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
-            }
-        }
-
-        private IEnumerator PrintDotProduct()
-        {
-            while (true)
-            {
-                var lastNormal = GroundInfo().normal;
-                yield return new WaitForSeconds(Time.deltaTime);
-                //print (Vector3.Dot(lastNormal, GroundInfo().normal));
-            }
-        }
-
         private float t = 0.5f;
         /// <summary>
         /// Returns a float between 0 and 1, which represents interpolator between 2 extremes of steering (-maxSteering, maxSteering).
@@ -209,6 +185,21 @@ namespace PlayerController
                 t += .01f * steerSpeed * SteerValueRaw * Time.deltaTime;
             }
             return Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
+        }
+        
+        private void OnCollisionStay(Collision collision)
+        {
+            //If the ship has collided with an object on the Wall layer...
+            if (collision.gameObject.layer == wallLayerMask)
+            {
+                //...calculate how much upward impulse is generated and then push the vehicle down by that amount 
+                //to keep it stuck on the track (instead up popping up over the wall)
+                var up = transform.up;
+                var upwardForceFromCollision = Vector3.Dot(collision.impulse, up) * up;
+                _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
+
+                print(collision.impulse.z);
+            }
         }
 
         public float AngleGetter() => t;
