@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 7407631128536340476}
   - component: {fileID: 4994923076051618822}
   - component: {fileID: 4881123415644648286}
-  - component: {fileID: 6273278567509678597}
   m_Layer: 0
   m_Name: WEAPON_Railgun
   m_TagString: Untagged
@@ -179,17 +178,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6273278567509678597
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3881376463280638287}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43408167137704066, guid: 68381cc577c754c47a6b749dd59ef8fa, type: 2}

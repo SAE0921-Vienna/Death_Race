@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using Audio;
-using UnityEditor;
-using UnityEngine.SceneManagement;
-using UserInterface;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -95,10 +92,7 @@ public class CameraMovement : MonoBehaviour
             aObject.SetActive(true);
         }
     }
-    public void LoadScene(string _name)
-    {
-        SceneManager.LoadScene(_name);
-    }
+ 
 }
 
 [System.Serializable]

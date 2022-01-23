@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8100189912622412356}
   - component: {fileID: 8091486215703073244}
   - component: {fileID: 8140384982409764468}
+  - component: {fileID: 1672861773057185964}
   m_Layer: 6
   m_Name: SM_Prop_Turret_Missile_Base_01
   m_TagString: Untagged
@@ -97,6 +98,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43332715803586464, guid: c6570ed4684c2bf4eabd44c00b4ef15c, type: 2}
+--- !u!114 &1672861773057185964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077330088312916720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46acff2adc847f409662b55762086bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 80
+  currentRotation: {x: 0, y: 0, z: 0, w: 0}
+  weaponOnShip: {fileID: 0}
 --- !u!1 &8078238718509971270
 GameObject:
   m_ObjectHideFlags: 0

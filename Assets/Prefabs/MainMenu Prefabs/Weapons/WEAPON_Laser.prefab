@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 4507100595597911233}
   - component: {fileID: 4536457439791365951}
   - component: {fileID: 4526126404711746235}
+  - component: {fileID: 4357654906791441738}
   m_Layer: 6
   m_Name: SM_Prop_Turret_Gattling_Base_01
   m_TagString: Untagged
@@ -185,6 +186,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4357654906791441738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4503736045416828647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46acff2adc847f409662b55762086bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 80
+  currentRotation: {x: 0, y: 0, z: 0, w: 0}
+  weaponOnShip: {fileID: 0}
 --- !u!1 &4505761914621782157
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using PlayerController;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using Weapons;
 
 public class PlayerManager : MonoBehaviour
@@ -21,11 +19,10 @@ public class PlayerManager : MonoBehaviour
     public float nitroSpeed = 50f;
     public float normalMaxSpeed;
     public float currentSpeed;
+    public float mainCamPOVboost = 20f;
     [Header("Ammo")]
     public int ammo;
-    //public int ammoAdd = 25;
     public int ammoAdd;
-    //public int ammoLimit = 100;
     public int ammoLimit;
     public float bombTimer = 10f;
     public Vector3 bombScale = new Vector3(5, 5, 5);
@@ -54,47 +51,44 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.LogWarning("PlayerWeapon NOT Found");
         }
+        else
+        {
+            ammoAdd = playerWeapon.ammoAdd;
+            ammoLimit = playerWeapon.ammoAdd;
+
+        }
 
 
         #region  gameManager FindObjectOfType
         gameManager = FindObjectOfType<GameManager>();
-        if (gameManager)
-        {
-            //gameManager Found
-        }
-        else
+        if (!gameManager)
         {
             Debug.LogWarning("GameManager NOT Found");
+
         }
         #endregion
 
         #region uiManager FindObjectOfType
         uiManager = FindObjectOfType<UIManager>();
-        if (uiManager)
-        {
-            //UIManager Found
-        }
-        else
+        if (!uiManager)
         {
             Debug.LogWarning("UIManager NOT Found");
+
         }
+
         #endregion
 
 
-
-    }
-    private void Start()
-    {
-   
-            ammoAdd = playerWeapon.ammoAdd;
-            ammoLimit = playerWeapon.ammoAdd;
 
     }
 
     private void Update()
     {
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
-        if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
+        if (uiManager)
+        {
+            if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
+        }
         if (health <= 0) gameObject.SetActive(false);
         isOnRoadtrack = vehicleController.isOnRoadtrack;
 

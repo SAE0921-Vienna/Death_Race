@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WeaponRotator : MonoBehaviour
 {
@@ -10,8 +11,15 @@ public class WeaponRotator : MonoBehaviour
     private Camera _camera;
     private Quaternion _targetRotation;
 
+
     private void Awake()
     {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            GetComponent<WeaponRotator>().enabled = false;
+        }
+  
+
         weaponOnShip = GetComponent<Transform>();
         _camera = Camera.main;
     }

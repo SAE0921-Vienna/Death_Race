@@ -458,6 +458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 8482835735354933247, guid: 0015467c9cc322103900948415cd301a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0015467c9cc322103900948415cd301a, type: 3}
 --- !u!1 &153054269
@@ -657,6 +661,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishLine: {fileID: 859624541}
+  vCam: {fileID: 0}
+  vCamPOV: 70
   laps: 3
   currentLap: 0
   positions: 5
@@ -8898,6 +8904,7 @@ MonoBehaviour:
   nitroSpeed: 800
   normalMaxSpeed: 0
   currentSpeed: 0
+  mainCamPOVboost: 20
   ammo: 350
   ammoAdd: 25
   ammoLimit: 25
