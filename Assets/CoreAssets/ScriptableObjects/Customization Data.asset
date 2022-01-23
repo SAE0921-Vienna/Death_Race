@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: Customization Data
   m_EditorClassIdentifier: 
   vehicleMaterials:
-  - {fileID: 2100000, guid: 5a927ef3930ae7348b5606a356f02ebe, type: 2}
-  - {fileID: 2100000, guid: 79446fc81f39ce94384e69adb692d4cf, type: 2}
-  - {fileID: 2100000, guid: 8ee070c78afbd8047b6739e05de4b48c, type: 2}
-  - {fileID: 2100000, guid: 6dac9b8103f28614abd1e988804cacd0, type: 2}
-  - {fileID: 2100000, guid: beb9a7ad7de273e41be20de9c0c19f28, type: 2}
-  - {fileID: 2100000, guid: d5b005d42223e17458f8f9abaec2e579, type: 2}
-  materialType: 5
+  - name: Base
+    material: {fileID: 2100000, guid: 5a927ef3930ae7348b5606a356f02ebe, type: 2}
+  - name: Angel
+    material: {fileID: 2100000, guid: 79446fc81f39ce94384e69adb692d4cf, type: 2}
+  - name: Soldier
+    material: {fileID: 2100000, guid: 8ee070c78afbd8047b6739e05de4b48c, type: 2}
+  - name: Lava
+    material: {fileID: 2100000, guid: 6dac9b8103f28614abd1e988804cacd0, type: 2}
+  - name: Water
+    material: {fileID: 2100000, guid: beb9a7ad7de273e41be20de9c0c19f28, type: 2}
+  - name: Agent
+    material: {fileID: 2100000, guid: d5b005d42223e17458f8f9abaec2e579, type: 2}
+  - name: Unavailable
+    material: {fileID: 2100000, guid: ed11dd3c02087df4383dfab6b22b37a2, type: 2}

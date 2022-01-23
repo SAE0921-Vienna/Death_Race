@@ -6,6 +6,7 @@ public class ShipData : ScriptableObject
 {
     public new string name;
 
+
     [Header("Visual")]
     public Mesh vehicleMesh;
     public Mesh vehicleColliderMesh;

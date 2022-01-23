@@ -6,22 +6,29 @@ using Weapons;
 public class CustomizationData : ScriptableObject
 {
 
-    public Material[] vehicleMaterials;
-    public MaterialType materialType;
+    public MaterialName[]  vehicleMaterials;
+    //public Material[] vehicleMaterials;
 
-    public enum MaterialType
+    [System.Serializable]
+    public class MaterialName
     {
-        Base,
-        Angel,
-        Soldier,
-        Lava,
-        Water,
-        Agent
+        public string name;
+        public Material material;
 
     }
 
+    //public MaterialType materialType;
 
-
+    //public enum MaterialType
+    //{
+    //    Base,
+    //    Angel,
+    //    Soldier,
+    //    Lava,
+    //    Water,
+    //    Agent,
+    //    Unavailable
+    //}
 
 
 
