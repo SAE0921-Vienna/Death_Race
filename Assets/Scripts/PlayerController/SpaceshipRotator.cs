@@ -12,6 +12,7 @@ namespace PlayerController
         private Vector3 rotationVector;
 
         private float xRotationInterpolator;
+        private const float interpolationConstant = 2;
 
 
         private void Awake()
@@ -21,7 +22,7 @@ namespace PlayerController
 
         private void Update()
         {
-            RotateSpaceshipZ(_vehicleController.AngleGetter(), maxRotationZ);
+            RotateSpaceshipZ(_vehicleController.SteeringAnimationValue(), maxRotationZ);
         }
 
         private void RotateSpaceshipZ(float rotationStrength, float maximumRotation)
@@ -29,12 +30,12 @@ namespace PlayerController
             rotationVector = new Vector3(RotateSpaceshipX(_vehicleController.AccelerationValue), 0f,
                 Mathf.Lerp(maximumRotation, -maximumRotation, rotationalCurve.Evaluate(rotationStrength)));
             
-            transform.rotation = Quaternion.Euler(_vehicleController.transform.rotation.eulerAngles + rotationVector);
+            transform.rotation = Quaternion.Euler(_vehicleController.transform.localEulerAngles + rotationVector);
         }
 
         private float RotateSpaceshipX(float brakeValue)
         {
-            xRotationInterpolator = brakeValue >= 0f ? Mathf.Clamp01(xRotationInterpolator - 2 * Time.deltaTime) : Mathf.Clamp01(xRotationInterpolator + 2 * Time.deltaTime);
+            xRotationInterpolator = brakeValue >= 0f ? Mathf.Clamp01(xRotationInterpolator - interpolationConstant * Time.deltaTime) : Mathf.Clamp01(xRotationInterpolator + 2 * Time.deltaTime);
             return Mathf.Lerp(0f, -maxRotationX, rotationalCurve.Evaluate(xRotationInterpolator));
         }
     }

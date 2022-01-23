@@ -4,13 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/Core/Maps/George_Testing_Map.unity
-    guid: 3644b3cf663efb3e78ffc2248406a188
-=======
-    path: Assets/Scenes/Dev/tomi/_ShopMainMenu.unity
-    guid: 9e0c59f77a4c914498eeef0b1cc008a6
->>>>>>> main
+  m_Scenes: []
   m_configObjects: {}

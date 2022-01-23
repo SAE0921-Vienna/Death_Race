@@ -9,23 +9,29 @@ namespace PlayerController
     [RequireComponent(typeof(Rigidbody))]
     public class VehicleController : MonoBehaviour
     {
+        #region Variables
+
         [Header("Acceleration and Braking")]
         [Range(0.1f, 3f)]
         public float mAccelerationConstant = 1f;
         [Range(50f, 3000f)]
         public float mMaxSpeed;
+        [HideInInspector] public float currentSpeed;
 
         [Range(10f, 800f)]
         [SerializeField] private float brakeForce;
         [Range(0.1f, 5f)]
         [SerializeField] private float decelerationConstant;
         [SerializeField] private AnimationCurve accelerationCurve;
-
+        
         [Header("Steering")]
         [Range(0f, 1000f)]
         [SerializeField] private float sideThrustAmount;
         [Range(0f, 200f)]
-        [SerializeField] private float maxSteerAngle, steerSpeed;
+        [SerializeField] private float animationSteerSpeed;
+        [Range(0f, 1f)]
+        [SerializeField] private float idleSteeringAnimationSpeedMultiplier, steeringAnimationSpeedMultiplier;
+        private const float steerAnimationConstant = 2f;
 
         [Header("Anti Gravity")]
         [Range(1, 2000f)]
@@ -42,12 +48,18 @@ namespace PlayerController
         [SerializeField] private float maxRaycastDistance;
         [SerializeField] private float trackSearchRadius;
         public bool isOnRoadtrack;
+        
 
         private Rigidbody _rBody;
         private Ray _ray;
         private InputActions _controls;
         private List<float> trackDistances = new List<float>();
+        private RaycastHit hit;
 
+        #endregion
+
+        #region De-Initialization
+        
         private void Awake()
         {
             _rBody = GetComponent<Rigidbody>();
@@ -64,27 +76,25 @@ namespace PlayerController
             _controls.Disable();
         }
 
-        [HideInInspector] public float currentSpeed;
+        
         public float AccelerationValue => _controls.Player.AccelerateDecelerate.ReadValue<float>();
         private float SteerValueRaw => _controls.Player.Steer.ReadValue<float>();
+
+        #endregion
 
         private void FixedUpdate()
         {
             Accelerate();
             Brake();
+            Steer();
             AntiGravity();
             SideThrust();
         }
 
-        private void Update()
-        {
-            Steer();
-        }
-
         private void Accelerate()
         {
-            currentSpeed = AccelerationValue >= 0.01f ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
-            _rBody.AddForce(transform.forward * mMaxSpeed * accelerationCurve.Evaluate(currentSpeed), ForceMode.Force);
+            currentSpeed = AccelerationValue >= 0.01f && isOnRoadtrack ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
+            _rBody.AddForce(transform.forward * mMaxSpeed * accelerationCurve.Evaluate(currentSpeed), ForceMode.Acceleration);
         }
 
         private void Brake()
@@ -99,8 +109,6 @@ namespace PlayerController
         {
             _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime * 100), ForceMode.Force);
         }
-
-        private RaycastHit hit;
         private RaycastHit GroundInfo()
         {
             var ray = new Ray(transform.position, -transform.up);
@@ -110,8 +118,7 @@ namespace PlayerController
                 var sortedTracks = availableTracks.OrderBy(tracks => tracks.distance).ToList();
             }
             
-            isOnRoadtrack = Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance,layerMask,
-                QueryTriggerInteraction.Ignore);
+            isOnRoadtrack = Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance);
             return hit;
         }
 
@@ -157,51 +164,54 @@ namespace PlayerController
             _rBody.MoveRotation(Quaternion.Lerp(_rBody.rotation, rotation, Time.deltaTime * 10f));
         }
 
+        #region Steering
+        
         /// <summary>
-        /// Applies the rotation of the Y-Axis combined with the normal of the road, to make steering work everywhere,
-        /// regardless of the world-coordinate rotation of the road.
+        /// Applies the rotation of the local Y-Axis, by adding a torque towards an angle, resulting in somewhat realistic flying turn behavior.
+        /// It then calculates the friction of the turn, by taking the dot-product of the current velocity * transform.right to get the magnitude of sidewards-movement.
+        /// Finally the calculated force gets applied via Acceleration.
         /// </summary>
         private void Steer()
         {
-            var normal = GroundInfo().normal;
-            var steeringAngle = new Vector3(normal.x, SteerValue(maxSteerAngle, steerSpeed), normal.z);
+            var steeringAngle = Vector3.up * animationSteerSpeed * SteerValueRaw * Time.fixedDeltaTime;
+            _rBody.AddRelativeTorque(steeringAngle, ForceMode.VelocityChange);
+            
+            var right = transform.right;
+            var sidewaysSpeed = Vector3.Dot(_rBody.velocity, right);
+            
+            var sideFriction = -right * (sidewaysSpeed / Time.fixedDeltaTime / 4f); 
 
-            _rBody.MoveRotation(_rBody.rotation * Quaternion.Euler(steeringAngle * Time.deltaTime));
+            //Finally, apply the sideways friction
+            _rBody.AddForce(sideFriction, ForceMode.Acceleration);
         }
-        
+
         private float t = 0.5f;
         /// <summary>
         /// Returns a float between 0 and 1, which represents interpolator between 2 extremes of steering (-maxSteering, maxSteering).
         /// </summary>
-        private float SteerValue(float maxSteerStrength, float steerSpeed)
+        public float SteeringAnimationValue()
         {
             t = Mathf.Clamp01(t);
             if (Mathf.Approximately(SteerValueRaw, 0f))
             {
-                t = Mathf.MoveTowards(t, 0.5f, .005f * steerSpeed * Time.deltaTime);
+                t = Mathf.MoveTowards(t, 0.5f, steerAnimationConstant * idleSteeringAnimationSpeedMultiplier * Time.deltaTime);
             }
             else
             {
-                t += .01f * steerSpeed * SteerValueRaw * Time.deltaTime;
+                t += steerAnimationConstant * steeringAnimationSpeedMultiplier * SteerValueRaw * Time.deltaTime;
             }
-            return Mathf.Lerp(-maxSteerStrength, maxSteerStrength, t);
+            return t;
         }
+        #endregion
         
         private void OnCollisionStay(Collision collision)
         {
             //If the ship has collided with an object on the Wall layer...
-            if (collision.gameObject.layer == wallLayerMask)
-            {
-                //...calculate how much upward impulse is generated and then push the vehicle down by that amount 
-                //to keep it stuck on the track (instead up popping up over the wall)
-                var up = transform.up;
-                var upwardForceFromCollision = Vector3.Dot(collision.impulse, up) * up;
-                _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
+            if (collision.gameObject.layer != wallLayerMask) return;
 
-                print(collision.impulse.z);
-            }
+            var up = transform.up;
+            var upwardForceFromCollision = Vector3.Dot(collision.impulse, up) * up;
+            _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
         }
-
-        public float AngleGetter() => t;
     }
 }
