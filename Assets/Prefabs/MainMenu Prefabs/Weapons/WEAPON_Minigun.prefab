@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1619055252175820495}
   - component: {fileID: 1611286019023704779}
   - component: {fileID: 1651232490368796331}
+  - component: {fileID: 1595572259075698996}
   m_Layer: 6
   m_Name: SM_Prop_Turret_Gattling_Base_02
   m_TagString: Untagged
@@ -97,6 +98,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43168067379209552, guid: f114b8a79efa90942bc15769013d55a4, type: 2}
+--- !u!114 &1595572259075698996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588000055429002301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46acff2adc847f409662b55762086bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 80
+  currentRotation: {x: 0, y: 0, z: 0, w: 0}
+  weaponOnShip: {fileID: 0}
 --- !u!1 &1588533795391396391
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +220,6 @@ GameObject:
   - component: {fileID: 1593724890428178291}
   - component: {fileID: 1619156945287460761}
   - component: {fileID: 1611212431143467919}
-  - component: {fileID: 1651627866498837919}
   - component: {fileID: 1798889912976143383}
   m_Layer: 6
   m_Name: WEAPON_Minigun
@@ -277,20 +292,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1651627866498837919
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588917084508066265}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43043793431104772, guid: b9b845662f4ccba49b124cad8d2bbd99, type: 2}
 --- !u!114 &1798889912976143383
 MonoBehaviour:
   m_ObjectHideFlags: 0

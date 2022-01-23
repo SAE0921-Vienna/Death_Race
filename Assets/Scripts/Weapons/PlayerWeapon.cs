@@ -13,15 +13,24 @@ namespace Weapons
         public float fireRate;
         public int ammoAdd;
 
-        private void Awake()
+        private void Start()
         {
             _weapon = GetComponentInChildren<IWeapon>();
             _powerUps = GetComponent<PowerUps>();
             _playerStats = GetComponent<PlayerManager>();
             _weaponPosition = transform.GetChild(1);
 
-            fireRate = _weapon.GetFireRate();
-            ammoAdd = _weapon.GetAmmo();
+            if (_weapon != null)
+            {
+                fireRate = _weapon.GetFireRate();
+                ammoAdd = _weapon.GetAmmo();
+            }
+            else
+            {
+                Debug.LogWarning("PlayerWeapon has NOT been found");
+            }
+
+
         }
 
         private void Update()

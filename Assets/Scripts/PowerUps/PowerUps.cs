@@ -51,17 +51,21 @@ public class PowerUps : MonoBehaviour
     private void Update()
     {
         playerStats.timer -= Time.deltaTime;
-
-        if (uIManager.ammoAmountUI != null)
+        if (uIManager)
         {
-            uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
+            if (uIManager.ammoAmountUI != null)
+            {
+                uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
+            }
+            if (playerStats.ammo <= 0)
+            {
+                playerStats.ammo = 0;
+                uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
+            }
         }
 
-        if (playerStats.ammo <= 0)
-        {
-            playerStats.ammo = 0;
-            uIManager.ammoAmountUI.text = playerStats.ammo.ToString();
-        }
+
+      
 
         if (playerStats.timer < 0)
         {
@@ -128,7 +132,7 @@ public class PowerUps : MonoBehaviour
             gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV;
             GetComponent<VehicleController>().mMaxSpeed = playerStats.normalMaxSpeed;
         }
-        if (playerStats.ammo <= 0)
+        if (playerStats.ammo <= 0 && uIManager)
         {
             playerStats.canShoot = false;
             playerStats.ammo = 0;

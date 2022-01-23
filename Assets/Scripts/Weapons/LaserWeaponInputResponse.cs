@@ -11,15 +11,20 @@ namespace Weapons
         [SerializeField] private float projectileDefaultSpeed = 200f;
         [SerializeField] private float projectileLifeTime = 5f;
         [SerializeField] private float projectileFireRate = 1f;
-        [SerializeField] private int ammoAdd = 20;
+        [SerializeField] private int ammoAdd;
         
         private Camera _camera;
         private PlayerManager _player;
 
         private void Awake()
         {
+
             _camera = Camera.main;
-            _player = FindObjectOfType<PlayerManager>().GetComponent<PlayerManager>();
+            _player = FindObjectOfType<PlayerManager>();
+            if (!_player)
+            {
+                Debug.LogWarning("PlayerManager has NOT been found");
+            }
         }
         
         public int GetAmmo() => ammoAdd;

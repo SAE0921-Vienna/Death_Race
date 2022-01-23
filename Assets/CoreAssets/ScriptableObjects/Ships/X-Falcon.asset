@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6f85141e3a4e9d967a55f16f11b914, type: 3}
-  m_Name: Sample Ship Customization Data
+  m_Script: {fileID: 11500000, guid: 1807d5053abac38408dafaaa8f1f2056, type: 3}
+  m_Name: X-Falcon
   m_EditorClassIdentifier: 
+  name: X-Falcon
   vehicleMesh: {fileID: 4300000, guid: 6fbfc36663d880e468973876def3846c, type: 3}
-  vehicleWeapon: {fileID: 4503680966675882277, guid: 54d2e98263f68bf4babfb11a8c67bf62, type: 3}
-  vehicleMaterial: {fileID: 2100000, guid: 728ef3e766113a548b37d0d7c2f4483a, type: 2}
+  vehicleColliderMesh: {fileID: 4300000, guid: b9cd94a24f904184e81989744300be87, type: 3}
+  health: 150
+  nitroSpeed: 300
+  maxSpeed: 1600
