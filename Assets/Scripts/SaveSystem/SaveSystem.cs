@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEditor;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -6,21 +7,21 @@ using System.Runtime.Serialization.Formatters.Binary;
 public static class SaveSystem
 {
 
-    public static void SaveCustomizationData(Mesh vehicleMesh, Mesh vehicleColliderMesh, GameObject vehicleWeapon, Material vehicleMaterial)
+    public static void SaveSaveData(int _lastEquippedVehicleMesh, int _lastEquippedVehicleColliderMesh, int _lastEquippedWeaponPrefab, int _lastEquippedMaterial)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/data.deathrace";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        //CustomizationData data = new CustomizationData(vehicleMesh, vehicleColliderMesh, vehicleWeapon, vehicleMaterial);
+        SaveData data = new SaveData(_lastEquippedVehicleMesh, _lastEquippedVehicleColliderMesh, _lastEquippedWeaponPrefab, _lastEquippedMaterial);
 
-        //formatter.Serialize(stream, data);
+        formatter.Serialize(stream, data);
         stream.Close();
-        
+
     }
 
 
-    public static CustomizationData LoadPlayerData()
+    public static SaveData LoadSaveData()
     {
         string path = Application.persistentDataPath + "/data.deathrace";
         if (File.Exists(path))
@@ -34,7 +35,7 @@ public static class SaveSystem
                 Debug.LogWarning("Stream empty");
             }
 
-            CustomizationData data = formatter.Deserialize(stream) as CustomizationData;
+            SaveData data = formatter.Deserialize(stream) as SaveData;
             stream.Close();
 
             return data;
