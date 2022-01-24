@@ -16,7 +16,8 @@ public class ShipData : ScriptableObject
     public int nitroSpeed = 300;
     public int maxSpeed = 2000;
 
-
+    [Header("Stats")]
+    public Vector3 WeaponPosition;
 
 
 }

@@ -18,3 +18,4 @@ MonoBehaviour:
   health: 100
   nitroSpeed: 200
   maxSpeed: 1800
+  WeaponPosition: {x: 0, y: 0.5, z: 1.13}

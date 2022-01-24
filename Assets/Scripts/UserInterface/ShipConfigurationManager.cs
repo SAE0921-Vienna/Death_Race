@@ -11,6 +11,7 @@ namespace UserInterface
         {
             public GameObject ship;
             public GameObject shipWeapon;
+            public Vector3 WeaponPosition;
             public Material shipColor;
             public Transform[] cameraConfigs;
         }

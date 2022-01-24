@@ -75,6 +75,7 @@ public class SpaceShipConfigurator : MonoBehaviour
         if (weaponClone.GetComponent<IWeapon>() == null) return;
         vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
         weaponClone.GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
+        weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition; //
         weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
         weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
 
@@ -92,6 +93,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     private void ShipCustomization()
     {
         GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
+        weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition; //
         GameObject.Find("SpaceShip").GetComponent<MeshCollider>().convex = allShips[currentShip].vehicleColliderMesh;
     }
 
