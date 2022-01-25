@@ -8,20 +8,15 @@ public class SaveLoadScript : MonoBehaviour
     //public List<WeaponData> boughtWeapons;
     ////Skins
 
-    ////Equipped Last
-    //public Mesh lastEquippedVehicleMesh;
-    //public Mesh lastEquippedVehicleColliderMesh;
-    //public GameObject lastEquippedWeaponPrefab;
-    //public Material lastEquippedMaterial;
-
     public int lastEquippedVehicleMesh;
     public int lastEquippedVehicleColliderMesh;
     public int lastEquippedWeaponPrefab;
     public int lastEquippedMaterial;
+    public bool[] boughtShips;
 
     public void SaveSaveData()
     {
-        SaveSystem.SaveSaveData(lastEquippedVehicleMesh, lastEquippedVehicleColliderMesh, lastEquippedWeaponPrefab, lastEquippedMaterial);
+        SaveSystem.SaveSaveData(lastEquippedVehicleMesh, lastEquippedVehicleColliderMesh, lastEquippedWeaponPrefab, lastEquippedMaterial, boughtShips);
     }
     public void LoadSaveData()
     {
@@ -36,6 +31,7 @@ public class SaveLoadScript : MonoBehaviour
             lastEquippedVehicleColliderMesh = data.lastEquippedVehicleColliderMeshIndex;
             lastEquippedWeaponPrefab = data.lastEquippedWeaponPrefabIndex;
             lastEquippedMaterial = data.lastEquippedMaterialIndex;
+            boughtShips = data.boughtShips;
         }
     }
 }

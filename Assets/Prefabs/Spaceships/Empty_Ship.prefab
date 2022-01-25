@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 8160920351205007060}
   - component: {fileID: 8160920351205007063}
   - component: {fileID: 834595121822034919}
-  - component: {fileID: 5167248215365586691}
+  - component: {fileID: 1571016415406662682}
   m_Layer: 3
   m_Name: Empty_Ship
   m_TagString: Player
@@ -450,6 +450,7 @@ MonoBehaviour:
   nitroSpeed: 800
   normalMaxSpeed: 0
   currentSpeed: 0
+  mainCamPOVboost: 20
   ammo: 350
   ammoAdd: 25
   ammoLimit: 25
@@ -507,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mAccelerationConstant: 0.15
   mMaxSpeed: 3000
+  currentSpeed: 0
   brakeForce: 500
   decelerationConstant: 0.5
   accelerationCurve:
@@ -543,8 +545,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   sideThrustAmount: 1000
-  maxSteerAngle: 120
-  steerSpeed: 120
+  animationSteerSpeed: 0
+  idleSteeringAnimationSpeedMultiplier: 0
+  steeringAnimationSpeedMultiplier: 0
   downForceMultiplier: 100
   hoverMultiplier: 450
   hoverHeight: 13
@@ -557,10 +560,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   maxRaycastDistance: 1000
   trackSearchRadius: 300
   isOnRoadtrack: 1
-  currentSpeed: 0
 --- !u!114 &834595121822034919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +672,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5167248215365586691
+--- !u!114 &1571016415406662682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -676,10 +681,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 8160920351205007055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4fa085cb6e64aecbde6a87f82d36faa, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e35aa29f2f9e154ba19584852f70b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allShips:
+  - {fileID: 11400000, guid: c78fb7984cc6fb142a5870453fe02e8c, type: 2}
+  - {fileID: 11400000, guid: 73deb3db3bc83af418dd98fe8cfe50ca, type: 2}
+  - {fileID: 11400000, guid: c49b77d23bb41fa4197f99fd9787e6b1, type: 2}
+  - {fileID: 11400000, guid: 39dddf19457ee81419265cf4245e2b91, type: 2}
+  - {fileID: 11400000, guid: 7789a5cccd0d3544a8314002c8d28824, type: 2}
+  allWeapons:
+  - {fileID: 11400000, guid: 75fd9d0c7c95bef40b8e17c688b1bf56, type: 2}
+  - {fileID: 11400000, guid: b4b5cd22924ba7043887fbfff242caf7, type: 2}
+  - {fileID: 11400000, guid: bb5626462c3c1ca499f573572cb08bda, type: 2}
   customizationData: {fileID: 11400000, guid: 55a26a32afedf089693bb6cdc8c919c0, type: 2}
+  saveLoadScript: {fileID: 0}
+  currentShip: 0
+  currentWeapon: 0
+  currentMaterial: 0
 --- !u!1 &8160920351792699245
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +779,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c59f128e8994fdca9f13d0cf37fd9ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRotation: 40
+  maxRotationZ: 0
+  maxRotationX: 0
   rotationalCurve:
     serializedVersion: 2
     m_Curve:

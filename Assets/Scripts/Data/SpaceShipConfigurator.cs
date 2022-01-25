@@ -17,6 +17,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     private List<ShipData> allShips;
     public List<ShipConfig> ships;
     public int currentShip = 0;
+    public int boughtShips;
     public int maxShips;
 
     [SerializeField]
@@ -43,14 +44,8 @@ public class SpaceShipConfigurator : MonoBehaviour
         maxWeapons = allWeapons.Count;
         maxMaterials = customizationData.vehicleMaterials.Length - 1;
 
-        for (int i = 0; i < maxShips; i++)
-        {
-            ships[i].ship = allShips[i];
-        }
-        for (int i = 0; i < maxWeapons; i++)
-        {
-            weapons[i].weapon = allWeapons[i];
-        }
+
+
 
         if (saveLoadScript)
         {
@@ -61,23 +56,31 @@ public class SpaceShipConfigurator : MonoBehaviour
             currentWeapon = saveLoadScript.lastEquippedWeaponPrefab;
 
             currentMaterial = saveLoadScript.lastEquippedMaterial;
+
+        }
+
+        for (int i = 0; i < maxShips; i++)
+        {
+            ships[i].ship = allShips[i];
+            //ships[i].shipBought = saveLoadScript.boughtShips[i];
+        }
+        for (int i = 0; i < maxWeapons; i++)
+        {
+            weapons[i].weapon = allWeapons[i];
         }
 
 
-        GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
-        GameObject.Find("SpaceShip").GetComponent<MeshCollider>().convex = allShips[currentShip].vehicleColliderMesh;
+        //GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
+        //GameObject.Find("SpaceShip").GetComponent<MeshCollider>().convex = allShips[currentShip].vehicleColliderMesh;
 
+        ShipCustomization();
 
         GetComponentInChildren<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
 
+        WeaponCustomization();
+        weaponClone.transform.parent.localPosition = ships[currentShip].ship.WeaponPosition;
 
-        weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab, GameObject.Find("WeaponPosition").transform, false);
-        if (weaponClone.GetComponent<IWeapon>() == null) return;
-        vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
-        weaponClone.GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
-        weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition; //
-        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
-        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
+
 
         if (garageManager)
         {
@@ -85,16 +88,14 @@ public class SpaceShipConfigurator : MonoBehaviour
             garageManager.materialName.text = customizationData.vehicleMaterials[currentMaterial].name;
             garageManager.weaponName.text = allWeapons[currentWeapon].name;
         }
-       
 
     }
 
 
     private void ShipCustomization()
     {
-        GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
-        weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition; //
-        GameObject.Find("SpaceShip").GetComponent<MeshCollider>().convex = allShips[currentShip].vehicleColliderMesh;
+        GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].ship.vehicleMesh;
+        GameObject.Find("SpaceShip").GetComponent<MeshCollider>().sharedMesh = ships[currentShip].ship.vehicleColliderMesh;
     }
 
     public void NextShip()
@@ -103,6 +104,7 @@ public class SpaceShipConfigurator : MonoBehaviour
         if (currentShip >= maxShips) currentShip = 0;
 
         ShipCustomization();
+        weaponClone.transform.parent.localPosition = ships[currentShip].ship.WeaponPosition;
 
         if (garageManager)
         {
@@ -122,6 +124,7 @@ public class SpaceShipConfigurator : MonoBehaviour
         if (currentShip < 0) currentShip = maxShips - 1;
 
         ShipCustomization();
+        weaponClone.transform.parent.localPosition = ships[currentShip].ship.WeaponPosition;
 
         if (garageManager)
         {
@@ -137,8 +140,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     private void WeaponCustomization()
     {
-        Destroy(weaponClone);
-        weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab, GameObject.Find("WeaponPosition").transform, false);
+        weaponClone = Instantiate(weapons[currentWeapon].weapon.vehicleWeaponPrefab, GameObject.Find("WeaponPosition").transform, false);
         if (weaponClone.GetComponent<IWeapon>() == null) return;
         vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
         weaponClone.GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
@@ -150,6 +152,7 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentWeapon++;
         if (currentWeapon >= maxWeapons) currentWeapon = 0;
 
+        Destroy(weaponClone);
         WeaponCustomization();
 
         if (garageManager)
@@ -168,6 +171,7 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentWeapon--;
         if (currentWeapon < 0) currentWeapon = maxWeapons - 1;
 
+        Destroy(weaponClone);
         WeaponCustomization();
 
         if (garageManager)
