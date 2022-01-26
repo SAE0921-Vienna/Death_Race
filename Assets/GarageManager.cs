@@ -12,6 +12,9 @@ public class GarageManager : MonoBehaviour
     public TextMeshProUGUI weaponName;
     public TextMeshProUGUI materialName;
 
+    public Button materialNext;
+    public Button materialPrevious;
+    public Button saveAndCloseGarage;
 
     public void LoadScene(string _name)
     {

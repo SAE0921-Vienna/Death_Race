@@ -30,6 +30,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     [Header("Skins")]
     public List<MaterialData> allMaterials;
     public List<MaterialConfig> materials;
+    public MaterialData unavailableMaterial;
     public int currentMaterial = 0;
     public int maxMaterials;
 
@@ -37,7 +38,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     {
         maxShips = allShips.Count;
         maxWeapons = allWeapons.Count;
-        maxMaterials = allMaterials.Count - 1;
+        maxMaterials = allMaterials.Count;
 
         CheckSaveLoadScript();
 
@@ -55,11 +56,11 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         }
 
-        ShipCustomization();
+        ChangeShip();
 
-        GetComponentInChildren<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+        ChangeShipMaterial(currentMaterial);
 
-        WeaponCustomization();
+        ChangeWeapon();
         weaponClone.transform.parent.localPosition = ships[currentShip].shipData.WeaponPosition;
 
         if (garageManager)
@@ -125,10 +126,26 @@ public class SpaceShipConfigurator : MonoBehaviour
     }
 
 
-    private void ShipCustomization()
+    private void ChangeShip()
     {
         GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].shipData.vehicleMesh;
         GameObject.Find("SpaceShip").GetComponent<MeshCollider>().sharedMesh = ships[currentShip].shipData.vehicleColliderMesh;
+
+        
+        if (ships[currentShip].shipBought)
+        {
+            ChangeShipMaterial(currentMaterial);
+            garageManager.materialNext.interactable = true;
+            garageManager.materialPrevious.interactable = true;
+            garageManager.saveAndCloseGarage.interactable = true;
+        }
+        else
+        {
+            ChangeShipMaterial(unavailableMaterial);
+            garageManager.materialNext.interactable = false;
+            garageManager.materialPrevious.interactable = false;
+            garageManager.saveAndCloseGarage.interactable = false;
+        }
     }
 
     public void NextShip()
@@ -136,7 +153,7 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentShip++;
         if (currentShip >= maxShips) currentShip = 0;
 
-        ShipCustomization();
+        ChangeShip();
         weaponClone.transform.parent.localPosition = ships[currentShip].shipData.WeaponPosition;
 
         if (garageManager)
@@ -156,7 +173,7 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentShip--;
         if (currentShip < 0) currentShip = maxShips - 1;
 
-        ShipCustomization();
+        ChangeShip();
         weaponClone.transform.parent.localPosition = ships[currentShip].shipData.WeaponPosition;
 
         if (garageManager)
@@ -171,22 +188,38 @@ public class SpaceShipConfigurator : MonoBehaviour
     }
 
 
-    private void WeaponCustomization()
+    private void ChangeWeapon()
     {
         weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, GameObject.Find("WeaponPosition").transform, false);
         if (weaponClone.GetComponent<IWeapon>() == null) return;
         vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
-        weaponClone.GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
-        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
-        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+
+        if (weapons[currentWeapon].weaponBought)
+        {
+            ChangeWeaponMaterial(currentMaterial);
+            garageManager.materialNext.interactable = true;
+            garageManager.materialPrevious.interactable = true;
+            garageManager.saveAndCloseGarage.interactable = true;
+        }
+        else
+        {
+            ChangeWeaponMaterial(unavailableMaterial);
+            garageManager.materialNext.interactable = false;
+            garageManager.materialPrevious.interactable = false;
+            garageManager.saveAndCloseGarage.interactable = false;
+        }
+
     }
+
+
     public void NextWeapon()
     {
         currentWeapon++;
         if (currentWeapon >= maxWeapons) currentWeapon = 0;
 
         Destroy(weaponClone);
-        WeaponCustomization();
+
+        ChangeWeapon();
 
         if (garageManager)
         {
@@ -196,7 +229,6 @@ public class SpaceShipConfigurator : MonoBehaviour
         {
             saveLoadScript.lastEquippedWeaponPrefab = currentWeapon;
         }
-
 
     }
     public void PreviousWeapon()
@@ -205,7 +237,7 @@ public class SpaceShipConfigurator : MonoBehaviour
         if (currentWeapon < 0) currentWeapon = maxWeapons - 1;
 
         Destroy(weaponClone);
-        WeaponCustomization();
+        ChangeWeapon();
 
         if (garageManager)
         {
@@ -217,17 +249,55 @@ public class SpaceShipConfigurator : MonoBehaviour
         }
     }
 
-    private void MaterialCustomization(int currentMaterial)
+    private void ChangeMaterialAll(int materialIndex)
     {
 
-        GetComponentInChildren<MeshRenderer>().material = materials[currentMaterial].materialData.material;
-        weaponClone.GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
-        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
-        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+        ChangeShipMaterial(materialIndex);
 
-
-
+        ChangeWeaponMaterial(materialIndex);
     }
+
+    /// <summary>
+    /// Change the Ships Material with materialIndex
+    /// </summary>
+    /// <param name="materialIndex"></param>
+    private void ChangeShipMaterial(int materialIndex)
+    {
+        GetComponentInChildren<MeshRenderer>().material = materials[materialIndex].materialData.material;
+    }
+
+    /// <summary>
+    /// Change the Ships Material with material
+    /// </summary>
+    /// <param name="material"></param>
+    private void ChangeShipMaterial(MaterialData material)
+    {
+        GetComponentInChildren<MeshRenderer>().material = material.material;
+    }
+
+    /// <summary>
+    /// Change the Weapons Material with materialIndex
+    /// </summary>
+    /// <param name="materialIndex"></param>
+    private void ChangeWeaponMaterial(int materialIndex)
+    {
+        weaponClone.GetComponent<MeshRenderer>().material = materials[materialIndex].materialData.material;
+        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = materials[materialIndex].materialData.material;
+        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materials[materialIndex].materialData.material;
+    }
+
+    /// <summary>
+    /// Change the Weapons Material with a material
+    /// </summary>
+    /// <param name="material"></param>
+    private void ChangeWeaponMaterial(MaterialData material)
+    {
+        weaponClone.GetComponent<MeshRenderer>().material = material.material;
+        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = material.material;
+        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = material.material;
+    }
+
+
 
     public void NextMaterial()
     {
@@ -236,7 +306,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         if (materials[currentMaterial].materialBought)
         {
-            MaterialCustomization(currentMaterial);
+            ChangeMaterialAll(currentMaterial);
 
             if (garageManager)
             {
@@ -249,37 +319,14 @@ public class SpaceShipConfigurator : MonoBehaviour
         }
         else
         {
-            //for (int i = currentMaterial+ 1; i < maxMaterials; i++)
-            //{
-            //    if (i >= maxMaterials) i = 0;
+            while (!materials[currentMaterial].materialBought)
+            {
+                NextMaterial();
+            }
 
-            //    if (materials[i].materialBought)
-            //    {
-            //        MaterialCustomization(i);
-
-            //        if (garageManager)
-            //        {
-            //            garageManager.materialName.text = materials[currentMaterial].materialData.name;
-            //        }
-            //        if (saveLoadScript)
-            //        {
-            //            saveLoadScript.lastEquippedMaterial = currentMaterial;
-            //        }
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        i++;
-            //        if (i >= maxMaterials) currentMaterial = 0;
-
-            //    }
-            //}
-            currentMaterial--;
-            if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
+            //currentMaterial--;
+            //if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
         }
-
-
-
 
     }
 
@@ -290,7 +337,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         if (materials[currentMaterial].materialBought)
         {
-            MaterialCustomization(currentMaterial);
+            ChangeMaterialAll(currentMaterial);
 
             if (garageManager)
             {
@@ -303,8 +350,12 @@ public class SpaceShipConfigurator : MonoBehaviour
         }
         else
         {
-            currentMaterial++;
-            if (currentMaterial >= maxMaterials) currentMaterial = 0;
+            while (!materials[currentMaterial].materialBought)
+            {
+                PreviousMaterial();
+            }
+            //currentMaterial++;
+            //if (currentMaterial >= maxMaterials) currentMaterial = 0;
 
         }
 
