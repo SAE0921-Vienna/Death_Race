@@ -6,8 +6,6 @@ using Weapons;
 
 public class SpaceShipConfigurator : MonoBehaviour
 {
-    //[SerializeField] private ShipData shipData;
-    //[SerializeField] private WeaponData weaponData;
 
     public GarageManager garageManager;
     [SerializeField]
@@ -17,7 +15,6 @@ public class SpaceShipConfigurator : MonoBehaviour
     private List<ShipData> allShips;
     public List<ShipConfig> ships;
     public int currentShip = 0;
-    public int boughtShips;
     public int maxShips;
 
     [SerializeField]
@@ -31,71 +28,107 @@ public class SpaceShipConfigurator : MonoBehaviour
     public IWeapon vehicleWeaponScript;
 
     [Header("Skins")]
-    public CustomizationData customizationData;
+    public List<MaterialData> allMaterials;
+    public List<MaterialConfig> materials;
     public int currentMaterial = 0;
     public int maxMaterials;
 
 
-
     private void Awake()
     {
-
         maxShips = allShips.Count;
         maxWeapons = allWeapons.Count;
-        maxMaterials = customizationData.vehicleMaterials.Length - 1;
-
-
-
-
-        if (saveLoadScript)
-        {
-            saveLoadScript.LoadSaveData();
-            currentShip = saveLoadScript.lastEquippedVehicleMesh;
-            currentShip = saveLoadScript.lastEquippedVehicleColliderMesh;
-
-            currentWeapon = saveLoadScript.lastEquippedWeaponPrefab;
-
-            currentMaterial = saveLoadScript.lastEquippedMaterial;
-
-        }
+        maxMaterials = allMaterials.Count;
 
         for (int i = 0; i < maxShips; i++)
         {
-            ships[i].ship = allShips[i];
-            //ships[i].shipBought = saveLoadScript.boughtShips[i];
+            ships[i].shipData = allShips[i];
         }
         for (int i = 0; i < maxWeapons; i++)
         {
-            weapons[i].weapon = allWeapons[i];
+            weapons[i].weaponData = allWeapons[i];
+        }
+        for (int i = 0; i < maxMaterials; i++)
+        {
+            materials[i].materialData = allMaterials[i];
         }
 
-
-        //GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
-        //GameObject.Find("SpaceShip").GetComponent<MeshCollider>().convex = allShips[currentShip].vehicleColliderMesh;
+        CheckSaveLoadScript();
 
         ShipCustomization();
 
-        GetComponentInChildren<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
+        GetComponentInChildren<MeshRenderer>().material = materials[currentMaterial].materialData.material;
 
         WeaponCustomization();
-        weaponClone.transform.parent.localPosition = ships[currentShip].ship.WeaponPosition;
-
-
+        weaponClone.transform.parent.localPosition = ships[currentShip].shipData.WeaponPosition;
 
         if (garageManager)
         {
-            garageManager.shipName.text = allShips[currentShip].name;
-            garageManager.materialName.text = customizationData.vehicleMaterials[currentMaterial].name;
-            garageManager.weaponName.text = allWeapons[currentWeapon].name;
+            garageManager.shipName.text = ships[currentShip].shipData.name;
+            garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            garageManager.weaponName.text = weapons[currentWeapon].weaponData.name;
         }
 
+    }
+
+    private void CheckSaveLoadScript()
+    {
+        if (saveLoadScript)
+        {
+            saveLoadScript.LoadSaveData();
+            if (saveLoadScript.hasSaveData)
+            {
+                currentShip = saveLoadScript.lastEquippedVehicleMesh;
+                currentShip = saveLoadScript.lastEquippedVehicleColliderMesh;
+                currentWeapon = saveLoadScript.lastEquippedWeaponPrefab;
+                currentMaterial = saveLoadScript.lastEquippedMaterial;
+                for (int i = 0; i < maxShips; i++)
+                {
+                    ships[i].shipBought = saveLoadScript.boughtShips[i];
+                }
+                for (int i = 0; i < maxWeapons; i++)
+                {
+                    weapons[i].weaponBought = saveLoadScript.boughtWeapons[i];
+                }
+                for (int i = 0; i < maxMaterials; i++)
+                {
+                    materials[i].materialBought = saveLoadScript.boughtMaterials[i];
+
+                }
+            }
+            else
+            {
+                currentShip = 0;
+                currentShip = 0;
+                currentWeapon = 0;
+                currentMaterial = 0;
+                for (int i = 1; i < maxShips; i++)
+                {
+                    ships[i].shipBought = false;
+                }
+                for (int i = 1; i < maxWeapons; i++)
+                {
+                    weapons[i].weaponBought = false;
+                }
+                for (int i = 1; i < maxMaterials; i++)
+                {
+                    materials[i].materialBought = false;
+
+                }
+            }
+        }
+        else
+        {
+            Debug.LogWarning("SaveLoadScript has NOT been found");
+
+        }
     }
 
 
     private void ShipCustomization()
     {
-        GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].ship.vehicleMesh;
-        GameObject.Find("SpaceShip").GetComponent<MeshCollider>().sharedMesh = ships[currentShip].ship.vehicleColliderMesh;
+        GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].shipData.vehicleMesh;
+        GameObject.Find("SpaceShip").GetComponent<MeshCollider>().sharedMesh = ships[currentShip].shipData.vehicleColliderMesh;
     }
 
     public void NextShip()
@@ -104,11 +137,11 @@ public class SpaceShipConfigurator : MonoBehaviour
         if (currentShip >= maxShips) currentShip = 0;
 
         ShipCustomization();
-        weaponClone.transform.parent.localPosition = ships[currentShip].ship.WeaponPosition;
+        weaponClone.transform.parent.localPosition = ships[currentShip].shipData.WeaponPosition;
 
         if (garageManager)
         {
-            garageManager.shipName.text = allShips[currentShip].name;
+            garageManager.shipName.text = ships[currentShip].shipData.name;
         }
         if (saveLoadScript)
         {
@@ -124,11 +157,11 @@ public class SpaceShipConfigurator : MonoBehaviour
         if (currentShip < 0) currentShip = maxShips - 1;
 
         ShipCustomization();
-        weaponClone.transform.parent.localPosition = ships[currentShip].ship.WeaponPosition;
+        weaponClone.transform.parent.localPosition = ships[currentShip].shipData.WeaponPosition;
 
         if (garageManager)
         {
-            garageManager.shipName.text = allShips[currentShip].name;
+            garageManager.shipName.text = ships[currentShip].shipData.name;
         }
         if (saveLoadScript)
         {
@@ -140,12 +173,12 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     private void WeaponCustomization()
     {
-        weaponClone = Instantiate(weapons[currentWeapon].weapon.vehicleWeaponPrefab, GameObject.Find("WeaponPosition").transform, false);
+        weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, GameObject.Find("WeaponPosition").transform, false);
         if (weaponClone.GetComponent<IWeapon>() == null) return;
         vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
-        weaponClone.GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
-        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
-        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
+        weaponClone.GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
     }
     public void NextWeapon()
     {
@@ -157,7 +190,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         if (garageManager)
         {
-            garageManager.weaponName.text = allWeapons[currentWeapon].name;
+            garageManager.weaponName.text = weapons[currentWeapon].weaponData.name;
         }
         if (saveLoadScript)
         {
@@ -176,7 +209,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         if (garageManager)
         {
-            garageManager.weaponName.text = allWeapons[currentWeapon].name;
+            garageManager.weaponName.text = weapons[currentWeapon].weaponData.name;
         }
         if (saveLoadScript)
         {
@@ -186,10 +219,10 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     private void MaterialCustomization()
     {
-        GetComponentInChildren<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
-        weaponClone.GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
-        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
-        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = customizationData.vehicleMaterials[currentMaterial].material;
+        GetComponentInChildren<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+        weaponClone.GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
     }
 
     public void NextMaterial()
@@ -202,7 +235,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         if (garageManager)
         {
-            garageManager.materialName.text = customizationData.vehicleMaterials[currentMaterial].name;
+            garageManager.materialName.text = materials[currentMaterial].materialData.name;
         }
         if (saveLoadScript)
         {
@@ -220,7 +253,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         if (garageManager)
         {
-            garageManager.materialName.text = customizationData.vehicleMaterials[currentMaterial].name;
+            garageManager.materialName.text = materials[currentMaterial].materialData.name;
         }
         if (saveLoadScript)
         {
@@ -231,27 +264,23 @@ public class SpaceShipConfigurator : MonoBehaviour
 
 
 
-    [System.Serializable]
-    public class ShipConfig
-    {
-        public ShipData ship;
-        public bool shipBought;
-    }
-
-    [System.Serializable]
-    public class WeaponConfig
-    {
-        public WeaponData weapon;
-        public bool weaponBought;
-    }
-
-    [System.Serializable]
-    public class MaterialConfig
-    {
-        public Material[] materials;
-        public bool materialBought;
-    }
-
-
-
 }
+[System.Serializable]
+public class ShipConfig
+{
+    public ShipData shipData;
+    public bool shipBought;
+}
+[System.Serializable]
+public class WeaponConfig
+{
+    public WeaponData weaponData;
+    public bool weaponBought;
+}
+[System.Serializable]
+public class MaterialConfig
+{
+    public MaterialData materialData;
+    public bool materialBought;
+}
+

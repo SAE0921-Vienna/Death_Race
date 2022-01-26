@@ -685,16 +685,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allShips:
-  - {fileID: 11400000, guid: c78fb7984cc6fb142a5870453fe02e8c, type: 2}
-  - {fileID: 11400000, guid: 73deb3db3bc83af418dd98fe8cfe50ca, type: 2}
-  - {fileID: 11400000, guid: c49b77d23bb41fa4197f99fd9787e6b1, type: 2}
   - {fileID: 11400000, guid: 39dddf19457ee81419265cf4245e2b91, type: 2}
+  - {fileID: 11400000, guid: c49b77d23bb41fa4197f99fd9787e6b1, type: 2}
   - {fileID: 11400000, guid: 7789a5cccd0d3544a8314002c8d28824, type: 2}
+  - {fileID: 11400000, guid: 73deb3db3bc83af418dd98fe8cfe50ca, type: 2}
+  - {fileID: 11400000, guid: c78fb7984cc6fb142a5870453fe02e8c, type: 2}
   allWeapons:
-  - {fileID: 11400000, guid: 75fd9d0c7c95bef40b8e17c688b1bf56, type: 2}
   - {fileID: 11400000, guid: b4b5cd22924ba7043887fbfff242caf7, type: 2}
+  - {fileID: 11400000, guid: 75fd9d0c7c95bef40b8e17c688b1bf56, type: 2}
   - {fileID: 11400000, guid: bb5626462c3c1ca499f573572cb08bda, type: 2}
-  customizationData: {fileID: 11400000, guid: 55a26a32afedf089693bb6cdc8c919c0, type: 2}
+  allMaterials:
+  - {fileID: 11400000, guid: e465cf17d6b3cc54c8fef917f12168bc, type: 2}
+  - {fileID: 11400000, guid: 2d1f933a35881754cb988d2ccd6329d4, type: 2}
+  - {fileID: 11400000, guid: a62cdf3dc1aa55948938259176b54439, type: 2}
+  - {fileID: 11400000, guid: ec3f5cf026a0d614fbfbd53bbf3aca42, type: 2}
+  - {fileID: 11400000, guid: 2566e6a7bd3c3314a9c72429065b41b5, type: 2}
+  - {fileID: 11400000, guid: 222a1b428f7015d4d8e7b78cb8cc17cb, type: 2}
+  - {fileID: 11400000, guid: b83bd12b9e8bf3f49ad97068db3cb9df, type: 2}
   saveLoadScript: {fileID: 0}
   currentShip: 0
   currentWeapon: 0
