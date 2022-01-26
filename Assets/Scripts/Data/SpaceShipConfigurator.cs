@@ -33,12 +33,13 @@ public class SpaceShipConfigurator : MonoBehaviour
     public int currentMaterial = 0;
     public int maxMaterials;
 
-
     private void Awake()
     {
         maxShips = allShips.Count;
         maxWeapons = allWeapons.Count;
-        maxMaterials = allMaterials.Count;
+        maxMaterials = allMaterials.Count - 1;
+
+        CheckSaveLoadScript();
 
         for (int i = 0; i < maxShips; i++)
         {
@@ -51,9 +52,8 @@ public class SpaceShipConfigurator : MonoBehaviour
         for (int i = 0; i < maxMaterials; i++)
         {
             materials[i].materialData = allMaterials[i];
-        }
 
-        CheckSaveLoadScript();
+        }
 
         ShipCustomization();
 
@@ -217,12 +217,16 @@ public class SpaceShipConfigurator : MonoBehaviour
         }
     }
 
-    private void MaterialCustomization()
+    private void MaterialCustomization(int currentMaterial)
     {
+
         GetComponentInChildren<MeshRenderer>().material = materials[currentMaterial].materialData.material;
         weaponClone.GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
         weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
         weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materials[currentMaterial].materialData.material;
+
+
+
     }
 
     public void NextMaterial()
@@ -230,17 +234,52 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentMaterial++;
         if (currentMaterial >= maxMaterials) currentMaterial = 0;
 
-
-        MaterialCustomization();
-
-        if (garageManager)
+        if (materials[currentMaterial].materialBought)
         {
-            garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            MaterialCustomization(currentMaterial);
+
+            if (garageManager)
+            {
+                garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            }
+            if (saveLoadScript)
+            {
+                saveLoadScript.lastEquippedMaterial = currentMaterial;
+            }
         }
-        if (saveLoadScript)
+        else
         {
-            saveLoadScript.lastEquippedMaterial = currentMaterial;
+            //for (int i = currentMaterial+ 1; i < maxMaterials; i++)
+            //{
+            //    if (i >= maxMaterials) i = 0;
+
+            //    if (materials[i].materialBought)
+            //    {
+            //        MaterialCustomization(i);
+
+            //        if (garageManager)
+            //        {
+            //            garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            //        }
+            //        if (saveLoadScript)
+            //        {
+            //            saveLoadScript.lastEquippedMaterial = currentMaterial;
+            //        }
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        i++;
+            //        if (i >= maxMaterials) currentMaterial = 0;
+
+            //    }
+            //}
+            currentMaterial--;
+            if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
         }
+
+
+
 
     }
 
@@ -249,16 +288,27 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentMaterial--;
         if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
 
-        MaterialCustomization();
+        if (materials[currentMaterial].materialBought)
+        {
+            MaterialCustomization(currentMaterial);
 
-        if (garageManager)
-        {
-            garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            if (garageManager)
+            {
+                garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            }
+            if (saveLoadScript)
+            {
+                saveLoadScript.lastEquippedMaterial = currentMaterial;
+            }
         }
-        if (saveLoadScript)
+        else
         {
-            saveLoadScript.lastEquippedMaterial = currentMaterial;
+            currentMaterial++;
+            if (currentMaterial >= maxMaterials) currentMaterial = 0;
+
         }
+
+
 
     }
 
