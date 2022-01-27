@@ -6086,6 +6086,8 @@ MonoBehaviour:
   lastEquippedWeaponPrefab: 0
   lastEquippedMaterial: 0
   boughtShips: 
+  boughtWeapons: 
+  boughtMaterials: 
   spaceConfig: {fileID: 0}
   hasSaveData: 0
 --- !u!4 &360780221
@@ -6241,6 +6243,10 @@ PrefabInstance:
       propertyPath: saveLoadScript
       value: 
       objectReference: {fileID: 360780220}
+    - target: {fileID: 1571016415406662682, guid: 35f84aa9bb097f901a5d755b83856e9d, type: 3}
+      propertyPath: allMaterials.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2458776714193478446, guid: 35f84aa9bb097f901a5d755b83856e9d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.302

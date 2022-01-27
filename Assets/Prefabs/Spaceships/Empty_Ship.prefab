@@ -701,7 +701,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec3f5cf026a0d614fbfbd53bbf3aca42, type: 2}
   - {fileID: 11400000, guid: 2566e6a7bd3c3314a9c72429065b41b5, type: 2}
   - {fileID: 11400000, guid: 222a1b428f7015d4d8e7b78cb8cc17cb, type: 2}
-  - {fileID: 11400000, guid: b83bd12b9e8bf3f49ad97068db3cb9df, type: 2}
+  - {fileID: 11400000, guid: c93a02ec09ac0a34f8075a9de0fa5d3a, type: 2}
   saveLoadScript: {fileID: 0}
   currentShip: 0
   currentWeapon: 0
