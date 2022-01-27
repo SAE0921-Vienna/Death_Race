@@ -4,9 +4,9 @@ using UnityEngine.Audio;
 using TMPro;
 
 /// <summary>
-/// Enum-Holder für Audios-Settings
+/// Enum-Holder for Audios-Settings
 /// </summary>
-public enum EAudioTypes 
+public enum EAudioTypes
 {
     NONE,
     MASTER,
@@ -15,7 +15,7 @@ public enum EAudioTypes
 }
 
 /// <summary>
-/// Hier werden die Optionen konfiguriert
+/// Option Configurator (PauseCanvas)
 /// </summary>
 public class VolumeSlider : MonoBehaviour
 {
@@ -26,15 +26,15 @@ public class VolumeSlider : MonoBehaviour
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private TextMeshProUGUI textVolume;
 
-    private int m_AudioDisplayPuffer = 70;
+    private int AudioDisplayPuffer = 70; //Audio Volume Display Puffer
     #endregion Variables
 
     /// <summary>
-    /// Spieler-Settings werden geladen
+    /// Load Player-Settings
     /// </summary>
     private void Awake()
     {
-        switch(EAudioTypes)
+        switch (EAudioTypes)
         {
             case EAudioTypes.MASTER:
                 //volumeSlider.value = PlayerPrefs.GetFloat("MasterVolume");
@@ -53,9 +53,10 @@ public class VolumeSlider : MonoBehaviour
     private void Update()
     {
         VolumeDisplay();
+
     }
     /// <summary>
-    /// Hier wird der Slider als Wert angezeit und die Audio(Dezibel) darauf angepasst
+    /// Change Volume Slider Value (Display) and Audio(Dezibel) Puffer?
     /// </summary>
     public void VolumeDisplay()
     {
@@ -76,26 +77,26 @@ public class VolumeSlider : MonoBehaviour
         }
     }
     /// <summary>
-    /// Hier wird die Lautstärke des Volumes angepasst
+    /// Changes the volume of the MasterMixer
     /// </summary>
-    /// <param name="_volume">Wird über den Slider reguliert</param>
+    /// <param name="_volume">Is regulated via slider</param>
     public void SetVolume(float _volume)
     {
         string m_VolumeName = string.Empty;
         switch (EAudioTypes)
         {
             case EAudioTypes.MASTER:
-                m_VolumeName = "MasterVolume";           
+                m_VolumeName = "MasterVolume";
                 break;
             case EAudioTypes.MUSIC:
-                m_VolumeName = "MusicVolume";           
+                m_VolumeName = "MusicVolume";
                 break;
             case EAudioTypes.EFFECT:
                 m_VolumeName = "EffectVolume";
                 break;
         }
-        audioMixer.SetFloat(m_VolumeName,_volume);
-        
+        audioMixer.SetFloat(m_VolumeName, _volume);
+
         //PlayerPrefs.SetFloat(m_VolumeName, _volume);
         //PlayerPrefs.Save();
     }
