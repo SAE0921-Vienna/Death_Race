@@ -30,13 +30,13 @@ public class PauseMenuScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && pausePanel.gameObject.activeInHierarchy == false && optionsPanel.gameObject.activeInHierarchy == false)
         {
             pausePanel.gameObject.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.lockState = CursorLockMode.None;
             
             isPause = true;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && pausePanel.gameObject.activeInHierarchy == true || Input.GetKeyDown(KeyCode.Escape) && optionsPanel.gameObject.activeInHierarchy == true)
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
             pausePanel.gameObject.SetActive(false);
             optionsPanel.gameObject.SetActive(false);
             isPause = false;
@@ -46,7 +46,7 @@ public class PauseMenuScript : MonoBehaviour
     {
         pausePanel.gameObject.SetActive(false);
         isPause = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
     public void BackToMenu()
     {
