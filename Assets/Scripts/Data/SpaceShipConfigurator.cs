@@ -56,12 +56,14 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         }
 
+        ChangeWeapon();
+        weaponClone.transform.parent.localPosition = ships[currentShip].shipData.WeaponPosition;
+
         ChangeShip();
 
         ChangeShipMaterial(currentMaterial);
 
-        ChangeWeapon();
-        weaponClone.transform.parent.localPosition = ships[currentShip].shipData.WeaponPosition;
+        
 
         if (garageManager)
         {
@@ -131,21 +133,31 @@ public class SpaceShipConfigurator : MonoBehaviour
         GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].shipData.vehicleMesh;
         GameObject.Find("SpaceShip").GetComponent<MeshCollider>().sharedMesh = ships[currentShip].shipData.vehicleColliderMesh;
 
-        
+
         if (ships[currentShip].shipBought)
         {
+            if (ships[currentShip].shipBought && weapons[currentWeapon].weaponBought)
+            {
+                ChangeWeaponMaterial(currentMaterial);
+            }
             ChangeShipMaterial(currentMaterial);
-            garageManager.materialNext.interactable = true;
-            garageManager.materialPrevious.interactable = true;
+            //garageManager.materialNext.interactable = true;
+            //garageManager.materialPrevious.interactable = true;
             garageManager.saveAndCloseGarage.interactable = true;
+
         }
         else
         {
+
             ChangeShipMaterial(unavailableMaterial);
-            garageManager.materialNext.interactable = false;
-            garageManager.materialPrevious.interactable = false;
+            ChangeWeaponMaterial(unavailableMaterial);
+            //garageManager.materialNext.interactable = false;
+            //garageManager.materialPrevious.interactable = false;
             garageManager.saveAndCloseGarage.interactable = false;
+
         }
+      
+
     }
 
     public void NextShip()
@@ -194,18 +206,18 @@ public class SpaceShipConfigurator : MonoBehaviour
         if (weaponClone.GetComponent<IWeapon>() == null) return;
         vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
 
-        if (weapons[currentWeapon].weaponBought)
+        if (weapons[currentWeapon].weaponBought && ships[currentShip].shipBought)
         {
             ChangeWeaponMaterial(currentMaterial);
-            garageManager.materialNext.interactable = true;
-            garageManager.materialPrevious.interactable = true;
+            //garageManager.materialNext.interactable = true;
+            //garageManager.materialPrevious.interactable = true;
             garageManager.saveAndCloseGarage.interactable = true;
         }
         else
         {
             ChangeWeaponMaterial(unavailableMaterial);
-            garageManager.materialNext.interactable = false;
-            garageManager.materialPrevious.interactable = false;
+            //garageManager.materialNext.interactable = false;
+            //garageManager.materialPrevious.interactable = false;
             garageManager.saveAndCloseGarage.interactable = false;
         }
 
@@ -304,9 +316,33 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentMaterial++;
         if (currentMaterial >= maxMaterials) currentMaterial = 0;
 
-        if (materials[currentMaterial].materialBought)
+        //if (materials[currentMaterial].materialBought)
+        //{
+        //    ChangeMaterialAll(currentMaterial);
+
+        //    if (garageManager)
+        //    {
+        //        garageManager.materialName.text = materials[currentMaterial].materialData.name;
+        //    }
+        //    if (saveLoadScript)
+        //    {
+        //        saveLoadScript.lastEquippedMaterial = currentMaterial;
+        //    }
+        //}
+        //else
+        //{
+        //    while (!materials[currentMaterial].materialBought)
+        //    {
+        //        NextMaterial();
+        //    }
+
+        //    //currentMaterial--;
+        //    //if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
+        //}
+
+        if (materials[currentMaterial].materialBought && ships[currentShip].shipBought)
         {
-            ChangeMaterialAll(currentMaterial);
+            ChangeShipMaterial(currentMaterial);
 
             if (garageManager)
             {
@@ -324,8 +360,30 @@ public class SpaceShipConfigurator : MonoBehaviour
                 NextMaterial();
             }
 
-            //currentMaterial--;
-            //if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
+
+        }
+
+        if (materials[currentMaterial].materialBought && weapons[currentWeapon].weaponBought && ships[currentShip].shipBought)
+        {
+            ChangeWeaponMaterial(currentMaterial);
+
+            if (garageManager)
+            {
+                garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            }
+            if (saveLoadScript)
+            {
+                saveLoadScript.lastEquippedMaterial = currentMaterial;
+            }
+        }
+        else
+        {
+            while (!materials[currentMaterial].materialBought)
+            {
+                NextMaterial();
+            }
+
+
         }
 
     }
@@ -335,9 +393,32 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentMaterial--;
         if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
 
-        if (materials[currentMaterial].materialBought)
+        //if (materials[currentMaterial].materialBought)
+        //{
+        //    ChangeMaterialAll(currentMaterial);
+
+        //    if (garageManager)
+        //    {
+        //        garageManager.materialName.text = materials[currentMaterial].materialData.name;
+        //    }
+        //    if (saveLoadScript)
+        //    {
+        //        saveLoadScript.lastEquippedMaterial = currentMaterial;
+        //    }
+        //}
+        //else
+        //{
+        //    while (!materials[currentMaterial].materialBought)
+        //    {
+        //        PreviousMaterial();
+        //    }
+        //    //currentMaterial++;
+        //    //if (currentMaterial >= maxMaterials) currentMaterial = 0;
+
+        //}
+        if (materials[currentMaterial].materialBought && ships[currentShip].shipBought)
         {
-            ChangeMaterialAll(currentMaterial);
+            ChangeShipMaterial(currentMaterial);
 
             if (garageManager)
             {
@@ -354,12 +435,32 @@ public class SpaceShipConfigurator : MonoBehaviour
             {
                 PreviousMaterial();
             }
-            //currentMaterial++;
-            //if (currentMaterial >= maxMaterials) currentMaterial = 0;
+
 
         }
 
+        if (materials[currentMaterial].materialBought && weapons[currentWeapon].weaponBought && ships[currentShip].shipBought)
+        {
+            ChangeWeaponMaterial(currentMaterial);
 
+            if (garageManager)
+            {
+                garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            }
+            if (saveLoadScript)
+            {
+                saveLoadScript.lastEquippedMaterial = currentMaterial;
+            }
+        }
+        else
+        {
+            while (!materials[currentMaterial].materialBought)
+            {
+                PreviousMaterial();
+            }
+
+
+        }
 
     }
 

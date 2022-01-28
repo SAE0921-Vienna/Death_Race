@@ -16,11 +16,14 @@ public class GarageManager : MonoBehaviour
     public Button materialPrevious;
     public Button saveAndCloseGarage;
 
+
+
     public void LoadScene(string _name)
     {
         SceneManager.LoadScene(_name);
     }
 
+    
 
 
 }
