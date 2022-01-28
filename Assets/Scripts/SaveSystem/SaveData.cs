@@ -11,8 +11,6 @@ public class SaveData
     public bool[] boughtWeapons;
     public bool[] boughtMaterials;
 
-
-
     public int lastEquippedVehicleMeshIndex;
     public int lastEquippedVehicleColliderMeshIndex;
     public int lastEquippedWeaponPrefabIndex;

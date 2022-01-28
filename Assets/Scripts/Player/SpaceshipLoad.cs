@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using Weapons;
 
 public class SpaceshipLoad : MonoBehaviour
 {
     [SerializeField]
-    private List<ShipData> allShips;
+    protected List<ShipData> allShips;
     [SerializeField]
-    private List<WeaponData> allWeapons;
+    protected List<WeaponData> allWeapons;
     [SerializeField]
-    private List<MaterialData> allMaterials;
+    protected List<MaterialData> allMaterials;
 
 
     [Header("Info")]
@@ -18,11 +19,11 @@ public class SpaceshipLoad : MonoBehaviour
     private SaveLoadScript saveLoadScript;
 
     [SerializeField]
-    private int currentShip;
+    protected int currentShip;
     [SerializeField]
-    private int currentWeapon;
+    protected int currentWeapon;
     [SerializeField]
-    private int currentMaterial;
+    protected int currentMaterial;
 
     [HideInInspector]
     public IWeapon vehicleWeaponScript;
@@ -39,11 +40,11 @@ public class SpaceshipLoad : MonoBehaviour
 
 
             GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
-            GameObject.Find("SpaceShip").GetComponent<MeshCollider>().sharedMesh = allShips[currentShip].vehicleColliderMesh;
+            GetComponentInChildren<MeshCollider>().sharedMesh = allShips[currentShip].vehicleColliderMesh;
 
             GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
 
-            GameObject weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab, GameObject.Find("WeaponPosition").transform, false);
+            GameObject weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab, transform.GetChild(1).GetChild(1).transform, false);
             if (weaponClone.GetComponent<IWeapon>() == null) return;
             vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
             weaponClone.GetComponent<MeshRenderer>().material = allMaterials[currentMaterial].material;
@@ -58,6 +59,8 @@ public class SpaceshipLoad : MonoBehaviour
         {
             Debug.LogWarning("SaveLoadScript NOT found");
         }
+
+
     }
 
 
