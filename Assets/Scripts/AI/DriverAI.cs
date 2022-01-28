@@ -1,132 +1,126 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using AIVehicleController;
 
-public class DriverAI : MonoBehaviour
+namespace AI
 {
-    [SerializeField] private Transform targetPositionTransform;
-
-    private AI_VehicleController aiVehicleController;
-    private Vector3 targetPosition;
-
-    [SerializeField]
-    private float forwardAmount = 0f;
-    [SerializeField]
-    private float turnAmount = 0f;
-
-    [SerializeField]
-    private float forwardPlusValue = 1f;
-    [SerializeField]
-    private float turnPlusValue = 1f;
-
-
-    [SerializeField]
-    [Range(0, 100)]
-    private float reachedTargetDistance = 40f;
-
-    [SerializeField]
-    [Range(0, 300f)]
-    private float stoppingDistance = 100f;
-    [SerializeField]
-    [Range(0, 1)]
-    private float stoppingSpeed = 0.1f;
-
-
-
-    private void Awake()
+    public class DriverAI : MonoBehaviour
     {
-        aiVehicleController = GetComponent<AI_VehicleController>();
-    }
+        [SerializeField] private Transform targetPositionTransform;
+
+        private AI_VehicleController aiVehicleController;
+        private Vector3 targetPosition;
+
+        [SerializeField] private float forwardAmount;
+        public float ForwardAmount => forwardAmount;
+        
+        [SerializeField] private float turnAmount;
+        public float TurnAmount => turnAmount;
+
+        [SerializeField]
+        private float forwardPlusValue = 1f;
+        [SerializeField]
+        private float turnPlusValue = 1f;
 
 
-    private void Update()
-    {
-        SetTargetPosition(targetPositionTransform.position);
+        [SerializeField]
+        [Range(0, 100)]
+        private float minDistanceToTarget = 40f;
 
-        //distance to the target..
-        float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+        [SerializeField]
+        [Range(0, 300f)]
+        private float stoppingDistance = 100f;
+        [SerializeField]
+        [Range(0, 1)]
+        private float stoppingSpeed = 0.1f;
 
 
-        //if distance to target is greater than the reachedTarget --> too far
-        if (distanceToTarget > reachedTargetDistance)
+
+        private void Awake()
         {
-            //Too far
+            aiVehicleController = GetComponent<AI_VehicleController>();
+        }
 
-            Vector3 dirToMovePosition = (targetPosition - transform.position).normalized;
 
-            //if above 1 its infront, if below 0 its behind
-            float dot = Vector3.Dot(transform.forward, dirToMovePosition);
-            //Debug.Log(dot);
+        private void Update()
+        {
+            SetTargetPosition(targetPositionTransform.position);
 
-            //if target is infront
-            if (dot > 0)
+            //distance to the target..
+            var distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+            
+            //if distance to target is greater than the reachedTarget --> too far
+            if (distanceToTarget > minDistanceToTarget)
             {
-                //move forward
-                forwardAmount = forwardPlusValue;
+                //Too far
+                var dirToMovePosition = (targetPosition - transform.position).normalized;
 
-                //if distancetarget is smaller than stoppingdistance and the currentspeed is greater than the stoppingspeed
-                if (distanceToTarget < stoppingDistance && aiVehicleController.currentSpeed > stoppingSpeed)
+                //if above 1 its infront, if below 0 its behind
+                var dot = Vector3.Dot(transform.forward, dirToMovePosition);
+                //Debug.Log(dot);
+
+                //if target is infront
+                if (dot > 0)
                 {
-                    //"brake" - move backwards
-                    forwardAmount = -forwardPlusValue;
-                }
-            }
-            else
-            {
-                //if target is behind
-                float reverseDistance = 25f;                
-                if (distanceToTarget > reverseDistance)
-                {
-                    //Too far to reverse
+                    //move forward
                     forwardAmount = forwardPlusValue;
+
+                    //if distance to target is smaller than stopping distance and the current speed is greater than the stopping speed
+                    if (distanceToTarget < stoppingDistance && aiVehicleController.currentSpeed > stoppingSpeed)
+                    {
+                        //"brake" - move backwards
+                        forwardAmount = -forwardPlusValue;
+                    }
                 }
                 else
                 {
-                    forwardAmount = -forwardPlusValue;
+                    //if target is behind
+                    var reverseDistance = 25f;                
+                    if (distanceToTarget > reverseDistance)
+                    {
+                        //Too far to reverse
+                        forwardAmount = forwardPlusValue;
+                    }
+                    else
+                    {
+                        forwardAmount = -forwardPlusValue;
+                    }
+                }
+
+                //for turning
+                //this bit needs Fixing!!!
+                var angleToDir = Vector3.SignedAngle(transform.forward, dirToMovePosition, Vector3.up);
+                //Debug.Log(angleToDir);
+                if (angleToDir > 0)
+                {
+                    turnAmount = turnPlusValue;
+                }
+                else
+                {
+                    turnAmount = -turnPlusValue;
                 }
             }
-
-            //for turning
-            //this bit needs Fixing!!!
-            float angleToDir = Vector3.SignedAngle(transform.forward, dirToMovePosition, Vector3.up);
-            //Debug.Log(angleToDir);
-            if (angleToDir > 0)
-            {
-                turnAmount = turnPlusValue;
-            }
             else
             {
-                turnAmount = -turnPlusValue;
+                //Reached target
+                if (aiVehicleController.currentSpeed > 0.1f)
+                {
+                    forwardAmount = -forwardPlusValue;
+                }
+                else
+                {
+                    forwardAmount = 0f;
+                }
+                turnAmount = 0f;
             }
         }
-        else
+
+        /// <summary>
+        /// Sets the targetposition
+        /// </summary>
+        /// <param name="targetPositionTmp"></param>
+        private void SetTargetPosition(Vector3 targetPositionTmp)
         {
-            //Reached target
-            if (aiVehicleController.currentSpeed > 0.1f)
-            {
-                forwardAmount = -forwardPlusValue;
-            }
-            else
-            {
-                forwardAmount = 0f;
-
-            }
-            turnAmount = 0f;
+            targetPosition = targetPositionTmp;
         }
 
-
-        aiVehicleController.AccelerationValue = forwardAmount;
-        aiVehicleController.SteerValueRaw = turnAmount;
     }
-
-    /// <summary>
-    /// Sets the targetposition
-    /// </summary>
-    /// <param name="targetPosition"></param>
-    public void SetTargetPosition(Vector3 targetPosition)
-    {
-        this.targetPosition = targetPosition;
-    }
-
 }

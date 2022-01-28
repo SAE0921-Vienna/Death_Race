@@ -786,8 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c59f128e8994fdca9f13d0cf37fd9ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRotationZ: 0
-  maxRotationX: 0
+  maxRotationZ: 30
+  maxRotationX: 15
   rotationalCurve:
     serializedVersion: 2
     m_Curve:

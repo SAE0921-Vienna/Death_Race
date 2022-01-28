@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Customization/CustomizationConfigurator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Customization/CustomizationData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Hover/AntigravityVehicle.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Hover/AntigravityVehicle.physicMaterial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Upgrades/Polygon Arsenal 2019.4 URP.unitypackage.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Customization.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Metal_Railing_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Metal_Railing_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/SpaceshipRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/SpaceshipRotator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map/OcclusionCullingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/Maps/George_Testing_Map/OcclusionCullingData.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +171,12 @@
       <workItem from="1642957476651" duration="1502000" />
       <workItem from="1642964739321" duration="11645000" />
       <workItem from="1642977078535" duration="2166000" />
+      <workItem from="1643290030159" duration="181000" />
+      <workItem from="1643303934741" duration="1467000" />
+      <workItem from="1643311049835" duration="5107000" />
+      <workItem from="1643327080962" duration="2935000" />
+      <workItem from="1643371228043" duration="299000" />
+      <workItem from="1643377065705" duration="754000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -11,77 +9,75 @@ namespace PlayerController
         #region Variables
 
         [Header("Acceleration and Braking")]
-        [Range(0.1f, 3f)]
+        [Range(0.1f, 1f)]
         public float mAccelerationConstant = 1f;
-        [Range(50f, 3000f)]
+        [Range(50f, 1500f)]
         public float mMaxSpeed;
         [HideInInspector] public float currentSpeed;
 
         [Range(10f, 800f)]
-        [SerializeField] private float brakeForce;
-        [Range(0.1f, 5f)]
-        [SerializeField] private float decelerationConstant;
-        [SerializeField] private AnimationCurve accelerationCurve;
+        [SerializeField] protected float brakeForce;
+        [Range(0.1f, 1f)]
+        [SerializeField] protected float decelerationConstant;
+        [SerializeField] protected AnimationCurve accelerationCurve;
         
         [Header("Steering")]
         [Range(0f, 1000f)]
-        [SerializeField] private float sideThrustAmount;
-        [Range(0f, 200f)]
-        [SerializeField] private float animationSteerSpeed;
+        [SerializeField] protected float sideThrustAmount;
+        [Range(0f, 15f)]
+        [SerializeField] protected float steeringSpeed;
         [Range(0f, 1f)]
-        [SerializeField] private float idleSteeringAnimationSpeedMultiplier, steeringAnimationSpeedMultiplier;
-        private const float steerAnimationConstant = 2f;
+        [SerializeField] protected float idleSteeringAnimationSpeedMultiplier, steeringAnimationSpeedMultiplier;
 
         [Header("Anti Gravity")]
         [Range(1, 2000f)]
-        [SerializeField] private float downForceMultiplier;
+        [SerializeField] protected float downForceMultiplier;
         [Range(1, 2000f)]
-        [SerializeField] private float hoverMultiplier;
+        [SerializeField] protected float hoverMultiplier;
 
-        [SerializeField] private float hoverHeight;
-        [SerializeField] private PIDController pidController;
+        [SerializeField] protected float hoverHeight;
+        [SerializeField] protected PIDController pidController;
 
         [Header("Track Information")]
-        [SerializeField] private LayerMask layerMask;
-        [SerializeField] private LayerMask wallLayerMask;
-        [SerializeField] private float maxRaycastDistance;
-        [SerializeField] private float trackSearchRadius;
+        [SerializeField] protected LayerMask layerMask;
+        [SerializeField] protected LayerMask wallLayerMask;
+        [SerializeField] protected float maxRaycastDistance;
+        [SerializeField] protected float trackSearchRadius;
         public bool isOnRoadtrack;
         
 
-        private Rigidbody _rBody;
-        private Ray _ray;
-        private InputActions _controls;
-        private List<float> trackDistances = new List<float>();
-        private RaycastHit hit;
+        protected Rigidbody _rBody;
+        protected InputActions _controls;
+        protected RaycastHit hit;
+        protected const float steerAnimationConstant = 2f;
 
         #endregion
 
         #region De-Initialization
         
-        private void Awake()
+        protected virtual void Awake()
         {
             _rBody = GetComponent<Rigidbody>();
         }
 
-        private void OnEnable()
+        protected void OnEnable()
         {
             _controls = new InputActions();
             _controls.Enable();
         }
 
-        private void OnDisable()
+        protected void OnDisable()
         {
             _controls.Disable();
         }
 
         
-        public float AccelerationValue => _controls.Player.AccelerateDecelerate.ReadValue<float>();
-        private float SteerValueRaw => _controls.Player.Steer.ReadValue<float>();
+        public virtual float AccelerationValue => _controls.Player.AccelerateDecelerate.ReadValue<float>();
+        protected virtual float SteerValueRaw => _controls.Player.Steer.ReadValue<float>();
 
         #endregion
 
-        private void FixedUpdate()
+        protected void FixedUpdate()
         {
             Accelerate();
             Brake();
@@ -89,26 +85,36 @@ namespace PlayerController
             AntiGravity();
             SideThrust();
         }
-
-        private void Accelerate()
+        
+        
+        /// <summary>
+        /// Checks if the current acceleration axis is above threshold, if true, increments interpolator of acceleration curve.
+        /// It also functions as an idle-slow-down, because if false, the interpolator decrements, resulting in a loss of movement speed.
+        /// </summary>
+        protected void Accelerate()
         {
             currentSpeed = AccelerationValue >= 0.01f && isOnRoadtrack ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
             _rBody.AddForce(transform.forward * mMaxSpeed * accelerationCurve.Evaluate(currentSpeed), ForceMode.Acceleration);
         }
 
-        private void Brake()
+        /// <summary>
+        /// Adds a force, towards the negative of the Z-Axis. This functions as a brake and a reverse gear at the same time.
+        /// (Reversing currently broken)
+        /// </summary>
+        protected void Brake()
         {
+            if (AccelerationValue > 0f) return;
             _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue * Time.fixedDeltaTime * 10), ForceMode.Force);
         }
 
         /// <summary>
         /// Adds force towards the steering direction, to make steering feel more responsive.
         /// </summary>
-        private void SideThrust()
+        protected void SideThrust()
         {
             _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime * 100), ForceMode.Force);
         }
-        private RaycastHit GroundInfo()
+        protected RaycastHit GroundInfo()
         {
             var ray = new Ray(transform.position, -transform.up);
             if (!isOnRoadtrack)
@@ -126,7 +132,7 @@ namespace PlayerController
         /// This creates a smooth flying experience. If it detects no ground underneath, it automatically uses the world y-axis as the gravitational direction.
         /// The ship itself gets rotated along a Vector that gets projected on a plane. (With interpolation)
         /// </summary>
-        private void AntiGravity()
+        protected void AntiGravity()
         {
             Vector3 groundNormal;
             if (isOnRoadtrack)
@@ -170,21 +176,21 @@ namespace PlayerController
         /// It then calculates the friction of the turn, by taking the dot-product of the current velocity * transform.right to get the magnitude of sidewards-movement.
         /// Finally the calculated force gets applied via Acceleration.
         /// </summary>
-        private void Steer()
+        protected void Steer()
         {
-            var steeringAngle = Vector3.up * animationSteerSpeed * SteerValueRaw * Time.fixedDeltaTime;
+            var steeringAngle = Vector3.up * steeringSpeed * SteerValueRaw * Time.fixedDeltaTime;
             _rBody.AddRelativeTorque(steeringAngle, ForceMode.VelocityChange);
             
             var right = transform.right;
             var sidewaysSpeed = Vector3.Dot(_rBody.velocity, right);
             
-            var sideFriction = -right * (sidewaysSpeed / Time.fixedDeltaTime / 4f); 
+            var sideFriction = -right * (sidewaysSpeed / Time.fixedDeltaTime / 2f); 
 
             //Finally, apply the sideways friction
             _rBody.AddForce(sideFriction, ForceMode.Acceleration);
         }
 
-        private float t = 0.5f;
+        protected float t = 0.5f;
         /// <summary>
         /// Returns a float between 0 and 1, which represents interpolator between 2 extremes of steering (-maxSteering, maxSteering).
         /// </summary>
@@ -203,7 +209,7 @@ namespace PlayerController
         }
         #endregion
         
-        private void OnCollisionStay(Collision collision)
+        protected void OnCollisionStay(Collision collision)
         {
             //If the ship has collided with an object on the Wall layer...
             if (collision.gameObject.layer != wallLayerMask) return;

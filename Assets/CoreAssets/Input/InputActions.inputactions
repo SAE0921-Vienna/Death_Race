@@ -220,7 +220,7 @@
                     "name": "Navigate",
                     "type": "PassThrough",
                     "id": "a8baeeea-bf76-4d45-9661-dcde31371e69",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false

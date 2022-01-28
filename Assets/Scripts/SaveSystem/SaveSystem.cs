@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
-using UnityEditor;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 

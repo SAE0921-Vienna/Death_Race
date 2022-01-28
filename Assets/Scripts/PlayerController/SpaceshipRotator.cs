@@ -5,22 +5,22 @@ namespace PlayerController
     public class SpaceshipRotator : MonoBehaviour
     {
         [Range(0f, 90f)] 
-        [SerializeField] private float maxRotationZ, maxRotationX;
-        [SerializeField] private AnimationCurve rotationalCurve;
-        
-        private VehicleController _vehicleController;
+        [SerializeField] protected float maxRotationZ, maxRotationX;
+        [SerializeField] protected AnimationCurve rotationalCurve;
+
+        protected VehicleController _vehicleController;
         private Vector3 rotationVector;
 
         private float xRotationInterpolator;
         private const float interpolationConstant = 2;
 
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _vehicleController = GetComponentInParent<VehicleController>();
         }
 
-        private void Update()
+        protected void Update()
         {
             RotateSpaceshipZ(_vehicleController.SteeringAnimationValue(), maxRotationZ);
         }

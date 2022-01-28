@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using PlayerController;
 using UnityEngine;
-using Weapons;
 using Cinemachine;
 
 public class GameManager : MonoBehaviour

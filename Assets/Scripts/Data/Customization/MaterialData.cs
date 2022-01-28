@@ -1,5 +1,4 @@
 using UnityEngine;
-using Weapons;
 
 
 [CreateAssetMenu(menuName = "Scriptables/Material", fileName = "Material")]
