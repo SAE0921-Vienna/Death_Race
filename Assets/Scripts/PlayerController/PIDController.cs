@@ -28,7 +28,7 @@ using UnityEngine;
                 _integral += proportional * deltaTime;
                 _lastProportional = proportional;
 
-                //This is the actual PID formula. This gives us the value that is returned
+                //The actual PID formula
                 var value = pCoeff * proportional + iCoeff * _integral + dCoeff * derivative;
                 value = Mathf.Clamp(value, minimum, maximum);
 

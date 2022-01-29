@@ -22,7 +22,7 @@ namespace PlayerController
 
         protected void Update()
         {
-            RotateSpaceshipZ(_vehicleController.SteeringAnimationValue(), maxRotationZ);
+            RotateSpaceshipZ(_vehicleController.AnimationInterpolator(), maxRotationZ);
         }
 
         private void RotateSpaceshipZ(float rotationStrength, float maximumRotation)

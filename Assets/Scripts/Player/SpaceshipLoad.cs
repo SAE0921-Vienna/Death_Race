@@ -51,8 +51,6 @@ public class SpaceshipLoad : MonoBehaviour
             weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = allMaterials[currentMaterial].material;
 
             weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
-
-
         }
         else
         {

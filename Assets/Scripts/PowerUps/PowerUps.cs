@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using PlayerController;
 using UnityEngine;
+using UserInterface;
 
 
 public class PowerUps : MonoBehaviour

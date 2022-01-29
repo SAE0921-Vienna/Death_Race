@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dev/tomi/MainMenu.unity
     guid: 9e0c59f77a4c914498eeef0b1cc008a6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dev/tomi/tomi.unity
     guid: 3c90d008fed6ace48804d0d860f7bc13
   - enabled: 1

@@ -1,3 +1,4 @@
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using UnityEngine;
 
@@ -45,11 +46,11 @@ namespace PlayerController
         [SerializeField] protected float trackSearchRadius;
         public bool isOnRoadtrack;
         
-
-        protected Rigidbody _rBody;
-        protected InputActions _controls;
-        protected RaycastHit hit;
-        protected const float steerAnimationConstant = 2f;
+        private Rigidbody _rBody;
+        private InputActions _controls;
+        private RaycastHit hit;
+        private const float steerAnimationConstant = 2f;
+        private float drag;
 
         #endregion
 
@@ -58,6 +59,7 @@ namespace PlayerController
         protected virtual void Awake()
         {
             _rBody = GetComponent<Rigidbody>();
+            drag = mAccelerationConstant * 10 / mMaxSpeed;
         }
 
         protected void OnEnable()
@@ -93,8 +95,9 @@ namespace PlayerController
         /// </summary>
         protected void Accelerate()
         {
-            currentSpeed = AccelerationValue >= 0.01f && isOnRoadtrack ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100) : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
-            _rBody.AddForce(transform.forward * mMaxSpeed * accelerationCurve.Evaluate(currentSpeed), ForceMode.Acceleration);
+            currentSpeed = AccelerationValue >= 0.01f && isOnRoadtrack ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100) 
+                : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
+            _rBody.AddForce(transform.forward * (mMaxSpeed * accelerationCurve.Evaluate(currentSpeed) - drag), ForceMode.Acceleration);
         }
 
         /// <summary>
@@ -104,7 +107,9 @@ namespace PlayerController
         protected void Brake()
         {
             if (AccelerationValue > 0f) return;
-            _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue * Time.fixedDeltaTime * 10), ForceMode.Force);
+            _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue * Time.fixedDeltaTime * 10), ForceMode.Acceleration);
+
+            print(AccelerationValue);
         }
 
         /// <summary>
@@ -116,14 +121,9 @@ namespace PlayerController
         }
         protected RaycastHit GroundInfo()
         {
-            var ray = new Ray(transform.position, -transform.up);
-            if (!isOnRoadtrack)
-            {
-                var availableTracks = Physics.SphereCastAll(ray, trackSearchRadius, 1f, layerMask);
-                var sortedTracks = availableTracks.OrderBy(tracks => tracks.distance).ToList();
-            }
+            Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance);
+            isOnRoadtrack = hit.collider.gameObject.layer == LayerMask.NameToLayer("Roadtrack");
             
-            isOnRoadtrack = Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance);
             return hit;
         }
 
@@ -194,7 +194,7 @@ namespace PlayerController
         /// <summary>
         /// Returns a float between 0 and 1, which represents interpolator between 2 extremes of steering (-maxSteering, maxSteering).
         /// </summary>
-        public float SteeringAnimationValue()
+        public float AnimationInterpolator()
         {
             t = Mathf.Clamp01(t);
             if (Mathf.Approximately(SteerValueRaw, 0f))
@@ -209,14 +209,21 @@ namespace PlayerController
         }
         #endregion
         
+        public float GetSpeedPercentage()
+        {
+            //Returns the total percentage of speed the ship is traveling
+            return _rBody.velocity.magnitude / mMaxSpeed; //no
+        }
+        
         protected void OnCollisionStay(Collision collision)
         {
-            //If the ship has collided with an object on the Wall layer...
-            if (collision.gameObject.layer != wallLayerMask) return;
-
+            if (collision.gameObject.layer != LayerMask.NameToLayer("Wall")) return;
+            
             var up = transform.up;
             var upwardForceFromCollision = Vector3.Dot(collision.impulse, up) * up;
             _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
+
+            currentSpeed = Mathf.Clamp01(currentSpeed - collision.impulse.magnitude);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Globalization;
 using PlayerController;
 using UnityEngine;
+using UserInterface;
 using Weapons;
 
 public class PlayerManager : MonoBehaviour
@@ -85,7 +86,7 @@ public class PlayerManager : MonoBehaviour
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
         if (uiManager)
         {
-            if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
+            if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture); 
         }
         if (health <= 0) gameObject.SetActive(false);
         isOnRoadtrack = vehicleController.isOnRoadtrack;
