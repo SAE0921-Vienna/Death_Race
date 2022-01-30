@@ -60,9 +60,6 @@ namespace AI
             aivehicleController = GetComponent<AI_VehicleController>();
 
         }
-        private void Start()
-        {
-        }
 
         private void Update()
         {

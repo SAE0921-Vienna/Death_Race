@@ -38,13 +38,28 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
 
-        checkpointManager = FindObjectOfType<CheckpointManager>().GetComponent<CheckpointManager>();
-        finishLineManager = FindObjectOfType<FinishLineManager>().GetComponent<FinishLineManager>();
-        playerManager = FindObjectOfType<PlayerManager>().GetComponent<PlayerManager>();
-        checkpoints = checkpointManager.checkpoints;
+        checkpointManager = FindObjectOfType<CheckpointManager>();
+        if (!checkpointManager)
+        {
+            Debug.LogWarning("Checkpoint Manager was NOT found");
+        }
+        else
+        {
+            checkpoints = checkpointManager.checkpoints;
+        }
+        finishLineManager = FindObjectOfType<FinishLineManager>();
+        if (!finishLineManager)
+        {
+            Debug.LogWarning("FinishLine Manager was NOT found");
+        }
+        playerManager = FindObjectOfType<PlayerManager>();
+        if (!playerManager)
+        {
+            Debug.LogWarning("Player Manager was NOT found");
+        }
 
         spawnPlayerPosition = new Vector3(playerManager.transform.position.x, playerManager.transform.position.y + spawnPlayerYOffset, playerManager.transform.position.z);
-        spawnPlayerRotation = new Quaternion(playerManager.transform.rotation.x, playerManager.transform.rotation.y, playerManager.transform.rotation.z, playerManager.transform.rotation.w) ;
+        spawnPlayerRotation = new Quaternion(playerManager.transform.rotation.x, playerManager.transform.rotation.y, playerManager.transform.rotation.z, playerManager.transform.rotation.w);
 
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
 

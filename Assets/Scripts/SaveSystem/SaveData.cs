@@ -12,6 +12,9 @@ public class SaveData
     public int lastEquippedWeaponPrefabIndex;
     public int lastEquippedMaterialIndex;
 
+    public int milkyCoins;
+    public int starCoins;
+
     public SaveData(int _lastEquippedVehicleMesh, int _lastEquippedVehicleColliderMesh, int _lastEquippedWeaponPrefab, int _lastEquippedMaterial, bool[] _boughtShips, bool[] _boughtWeapons, bool[] _boughtMaterials)
     {
         this.lastEquippedVehicleMeshIndex = _lastEquippedVehicleMesh;
@@ -22,7 +25,11 @@ public class SaveData
         this.boughtWeapons = _boughtWeapons;
         this.boughtMaterials = _boughtMaterials;
     }
-
+    public SaveData(int milkyCoins, int starCoins)
+    {
+        this.milkyCoins = milkyCoins;
+        this.starCoins = starCoins;
+    }
 
 
 }

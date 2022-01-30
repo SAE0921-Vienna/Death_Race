@@ -72,7 +72,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     }
 
-    private void CheckSaveLoadScript()
+    public void CheckSaveLoadScript()
     {
         if (saveLoadScript)
         {
@@ -129,7 +129,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     private void ChangeShip()
     {
         GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].shipData.vehicleMesh;
-        GameObject.Find("SpaceShip").GetComponent<MeshCollider>().sharedMesh = ships[currentShip].shipData.vehicleColliderMesh;
+        GetComponentInChildren<MeshCollider>().sharedMesh = ships[currentShip].shipData.vehicleColliderMesh;
 
 
         if (ships[currentShip].shipBought)
@@ -137,11 +137,10 @@ public class SpaceShipConfigurator : MonoBehaviour
             if (ships[currentShip].shipBought && weapons[currentWeapon].weaponBought)
             {
                 ChangeWeaponMaterial(currentMaterial);
+                garageManager.saveAndCloseGarage.interactable = true;
             }
             ChangeShipMaterial(currentMaterial);
-            //garageManager.materialNext.interactable = true;
-            //garageManager.materialPrevious.interactable = true;
-            garageManager.saveAndCloseGarage.interactable = true;
+            
 
         }
         else
@@ -149,8 +148,6 @@ public class SpaceShipConfigurator : MonoBehaviour
 
             ChangeShipMaterial(unavailableMaterial);
             ChangeWeaponMaterial(unavailableMaterial);
-            //garageManager.materialNext.interactable = false;
-            //garageManager.materialPrevious.interactable = false;
             garageManager.saveAndCloseGarage.interactable = false;
 
         }
@@ -200,22 +197,19 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     private void ChangeWeapon()
     {
-        weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, GameObject.Find("WeaponPosition").transform, false);
+        weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, transform.GetChild(1).GetChild(1).transform, false);
         if (weaponClone.GetComponent<IWeapon>() == null) return;
         vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
+        weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
 
         if (weapons[currentWeapon].weaponBought && ships[currentShip].shipBought)
         {
             ChangeWeaponMaterial(currentMaterial);
-            //garageManager.materialNext.interactable = true;
-            //garageManager.materialPrevious.interactable = true;
             garageManager.saveAndCloseGarage.interactable = true;
         }
         else
         {
             ChangeWeaponMaterial(unavailableMaterial);
-            //garageManager.materialNext.interactable = false;
-            //garageManager.materialPrevious.interactable = false;
             garageManager.saveAndCloseGarage.interactable = false;
         }
 

@@ -5443,12 +5443,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111c84d85643ab1498cb0736a7157e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPositionTransform: {fileID: 1287828241}
+  targetPositionTransform: {fileID: 1454582030}
   forwardAmount: 0
   turnAmount: 0
   forwardPlusValue: 1
   turnPlusValue: 1
-  reachedTargetDistance: 60
+  minDistanceToTarget: 40
   stoppingDistance: 200
   stoppingSpeed: 0.2
 --- !u!114 &382245267
@@ -5458,7 +5458,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382245264}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19058cc23e3e80a479ff1d6d9647b5d5, type: 3}
   m_Name: 
@@ -5559,6 +5559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mAccelerationConstant: 0.12
   mMaxSpeed: 600
+  currentSpeed: 0
   brakeForce: 800
   decelerationConstant: 0.5
   accelerationCurve:
@@ -5595,8 +5596,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   sideThrustAmount: 10
-  maxSteerAngle: 200
-  steerSpeed: 200
+  steeringSpeed: 0
+  idleSteeringAnimationSpeedMultiplier: 0
+  steeringAnimationSpeedMultiplier: 0
   downForceMultiplier: 100
   hoverMultiplier: 250
   hoverHeight: 12
@@ -5606,10 +5608,15 @@ MonoBehaviour:
     dCoeff: 0.2
     minimum: -2
     maximum: 2
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  maxRaycastDistance: 0
+  trackSearchRadius: 0
   isOnRoadtrack: 1
-  currentSpeed: 0
-  AccelerationValue: 0
-  SteerValueRaw: 0
 --- !u!1 &414343045
 GameObject:
   m_ObjectHideFlags: 0
@@ -8120,7 +8127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454582027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.1, y: 0, z: 18.4}
+  m_LocalPosition: {x: 8.1, y: 13, z: 55.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8995,7 +9002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f376a21ea1599478fb270e33d0df32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRotation: 45
+  maxRotationZ: 0
+  maxRotationX: 0
   rotationalCurve:
     serializedVersion: 2
     m_Curve:
@@ -9020,7 +9028,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  spaceShip: {fileID: 382245264}
 --- !u!64 &1867563577
 MeshCollider:
   m_ObjectHideFlags: 0

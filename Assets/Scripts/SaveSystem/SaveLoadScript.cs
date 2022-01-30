@@ -13,6 +13,9 @@ public class SaveLoadScript : MonoBehaviour
     public SpaceShipConfigurator spaceConfig;
 
 
+    public int milkyCoins;
+    public int starCoins;
+
     public bool[] GetBoughtShips()
     {
         if (spaceConfig)
@@ -72,9 +75,8 @@ public class SaveLoadScript : MonoBehaviour
 
     public void SaveSaveData()
     {
-        SaveSystem.SaveSaveData(lastEquippedVehicleMesh, lastEquippedVehicleColliderMesh, lastEquippedWeaponPrefab, lastEquippedMaterial, GetBoughtShips(), GetBoughtWeapons(),GetBoughtMaterials());
+        SaveSystem.SaveSaveData(lastEquippedVehicleMesh, lastEquippedVehicleColliderMesh, lastEquippedWeaponPrefab, lastEquippedMaterial, GetBoughtShips(), GetBoughtWeapons(), GetBoughtMaterials());
     }
-
     public void LoadSaveData()
     {
         SaveData data = SaveSystem.LoadSaveData();
@@ -95,6 +97,25 @@ public class SaveLoadScript : MonoBehaviour
             boughtMaterials = data.boughtMaterials;
         }
     }
+
+    public void SaveMoneyData()
+    {
+        SaveSystem.SaveMoneyData(milkyCoins, starCoins);
+    }
+    public void LoadMoneyData()
+    {
+        SaveData data = SaveSystem.LoadMoneyData();
+        if (data == null)
+        {
+            Debug.LogWarning("Data empty");
+        }
+        else
+        {
+            milkyCoins = data.milkyCoins;
+            starCoins = data.starCoins;
+        }
+    }
+
 }
 
 
