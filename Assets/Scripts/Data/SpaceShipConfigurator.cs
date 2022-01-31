@@ -5,6 +5,10 @@ using Weapons;
 public class SpaceShipConfigurator : MonoBehaviour
 {
 
+    [ContextMenuItem(name:"Unlock All", function:"UnlockAll")]
+    [ContextMenuItem(name:"Reset All", function: "ResetAll")]
+
+
     public GarageManager garageManager;
     [SerializeField]
     private SaveLoadScript saveLoadScript;
@@ -61,7 +65,7 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         ChangeShipMaterial(currentMaterial);
 
-        
+
 
         if (garageManager)
         {
@@ -140,7 +144,7 @@ public class SpaceShipConfigurator : MonoBehaviour
                 garageManager.saveAndCloseGarage.interactable = true;
             }
             ChangeShipMaterial(currentMaterial);
-            
+
 
         }
         else
@@ -151,7 +155,7 @@ public class SpaceShipConfigurator : MonoBehaviour
             garageManager.saveAndCloseGarage.interactable = false;
 
         }
-      
+
 
     }
 
@@ -454,6 +458,49 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         }
 
+    }
+
+    [ContextMenu(itemName:"Unlock All")]
+    public void UnlockAll()
+    {
+        currentShip = 0;
+        currentShip = 0;
+        currentWeapon = 0;
+        currentMaterial = 0;
+        for (int i = 1; i < maxShips; i++)
+        {
+            ships[i].shipBought = true;
+        }
+        for (int i = 1; i < maxWeapons; i++)
+        {
+            weapons[i].weaponBought = true;
+        }
+        for (int i = 1; i < maxMaterials; i++)
+        {
+            materials[i].materialBought = true;
+        }
+    }
+
+    [ContextMenu(itemName: "Reset All")]
+    public void ResetAll()
+    {
+        currentShip = 0;
+        currentShip = 0;
+        currentWeapon = 0;
+        currentMaterial = 0;
+        for (int i = 1; i < maxShips; i++)
+        {
+            ships[i].shipBought = false;
+        }
+        for (int i = 1; i < maxWeapons; i++)
+        {
+            weapons[i].weaponBought = false;
+        }
+        for (int i = 1; i < maxMaterials; i++)
+        {
+            materials[i].materialBought = false;
+
+        }
     }
 
 
