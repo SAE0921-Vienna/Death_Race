@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Soldier
   m_EditorClassIdentifier: 
   name: Soldier
+  priceInShop: 400
   material: {fileID: 2100000, guid: 8ee070c78afbd8047b6739e05de4b48c, type: 2}

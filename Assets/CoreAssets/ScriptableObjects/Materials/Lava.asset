@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Lava
   m_EditorClassIdentifier: 
   name: Lava
+  priceInShop: 400
   material: {fileID: 2100000, guid: 6dac9b8103f28614abd1e988804cacd0, type: 2}

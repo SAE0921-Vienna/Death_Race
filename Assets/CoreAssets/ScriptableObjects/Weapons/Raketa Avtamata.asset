@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Raketa Avtamata
   m_EditorClassIdentifier: 
   name: Raketa Avtamata
+  priceInShop: 2000
   vehicleWeaponPrefab: {fileID: 8078879089874771854, guid: 2d8214dc75418044a9c33bdd917699af, type: 3}

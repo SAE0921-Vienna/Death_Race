@@ -4,21 +4,26 @@ using Weapons;
 
 public class SpaceShipConfigurator : MonoBehaviour
 {
+    #region Editor Menu
+    [ContextMenuItem(name: "Unlock All", function: "UnlockAll")]
+    [ContextMenuItem(name: "Reset All", function: "ResetAll")]
+    #endregion
 
-    [ContextMenuItem(name:"Unlock All", function:"UnlockAll")]
-    [ContextMenuItem(name:"Reset All", function: "ResetAll")]
-
-
+    #region UI and SaveManager
     public GarageManager garageManager;
     [SerializeField]
     private SaveLoadScript saveLoadScript;
+    #endregion
 
+    #region Ships
     [SerializeField]
     private List<ShipData> allShips;
     public List<ShipConfig> ships;
     public int currentShip = 0;
     public int maxShips;
+    #endregion
 
+    #region Weapons
     [SerializeField]
     private List<WeaponData> allWeapons;
     public List<WeaponConfig> weapons;
@@ -28,14 +33,20 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     [HideInInspector]
     public IWeapon vehicleWeaponScript;
+    #endregion
 
+    #region Materials
     [Header("Skins")]
     public List<MaterialData> allMaterials;
     public List<MaterialConfig> materials;
     public MaterialData unavailableMaterial;
     public int currentMaterial = 0;
     public int maxMaterials;
+    #endregion
 
+    /// <summary>
+    /// Gets all the ships, weapons and materials in the game from the saved data
+    /// </summary>
     private void Awake()
     {
         maxShips = allShips.Count;
@@ -76,6 +87,9 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Checks for a save data in the saveloadscript - gets all the information from the savedata or loads a new game
+    /// </summary>
     public void CheckSaveLoadScript()
     {
         if (saveLoadScript)
@@ -129,7 +143,9 @@ public class SpaceShipConfigurator : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Changes the ship (mesh, material and UIs)
+    /// </summary>
     private void ChangeShip()
     {
         GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].shipData.vehicleMesh;
@@ -142,6 +158,8 @@ public class SpaceShipConfigurator : MonoBehaviour
             {
                 ChangeWeaponMaterial(currentMaterial);
                 garageManager.saveAndCloseGarage.interactable = true;
+                garageManager.unavailablePanel.SetActive(false);
+
             }
             ChangeShipMaterial(currentMaterial);
 
@@ -153,12 +171,16 @@ public class SpaceShipConfigurator : MonoBehaviour
             ChangeShipMaterial(unavailableMaterial);
             ChangeWeaponMaterial(unavailableMaterial);
             garageManager.saveAndCloseGarage.interactable = false;
+            garageManager.unavailablePanel.SetActive(true);
 
         }
 
 
     }
 
+    /// <summary>
+    /// Changes the ship to the next ship
+    /// </summary>
     public void NextShip()
     {
         currentShip++;
@@ -179,6 +201,10 @@ public class SpaceShipConfigurator : MonoBehaviour
 
 
     }
+
+    /// <summary>
+    /// Changes the ship to the previous ship
+    /// </summary>
     public void PreviousShip()
     {
         currentShip--;
@@ -198,7 +224,9 @@ public class SpaceShipConfigurator : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Changes the weapon (prefab, material and UIs)
+    /// </summary>
     private void ChangeWeapon()
     {
         weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, transform.GetChild(1).GetChild(1).transform, false);
@@ -210,16 +238,22 @@ public class SpaceShipConfigurator : MonoBehaviour
         {
             ChangeWeaponMaterial(currentMaterial);
             garageManager.saveAndCloseGarage.interactable = true;
+            garageManager.unavailablePanel.SetActive(false);
+
         }
         else
         {
             ChangeWeaponMaterial(unavailableMaterial);
             garageManager.saveAndCloseGarage.interactable = false;
+            garageManager.unavailablePanel.SetActive(true);
+
         }
 
     }
 
-
+    /// <summary>
+    /// Changes the weapon to the next weapon
+    /// </summary>
     public void NextWeapon()
     {
         currentWeapon++;
@@ -239,6 +273,10 @@ public class SpaceShipConfigurator : MonoBehaviour
         }
 
     }
+
+    /// <summary>
+    /// Changes the weapon to the previous weapon
+    /// </summary>
     public void PreviousWeapon()
     {
         currentWeapon--;
@@ -255,14 +293,6 @@ public class SpaceShipConfigurator : MonoBehaviour
         {
             saveLoadScript.lastEquippedWeaponPrefab = currentWeapon;
         }
-    }
-
-    private void ChangeMaterialAll(int materialIndex)
-    {
-
-        ChangeShipMaterial(materialIndex);
-
-        ChangeWeaponMaterial(materialIndex);
     }
 
     /// <summary>
@@ -305,37 +335,14 @@ public class SpaceShipConfigurator : MonoBehaviour
         weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = material.material;
     }
 
-
-
+    /// <summary>
+    /// Changes the material to the next material for the ship and the weapon in the garage
+    /// </summary>
     public void NextMaterial()
     {
         currentMaterial++;
         if (currentMaterial >= maxMaterials) currentMaterial = 0;
 
-        //if (materials[currentMaterial].materialBought)
-        //{
-        //    ChangeMaterialAll(currentMaterial);
-
-        //    if (garageManager)
-        //    {
-        //        garageManager.materialName.text = materials[currentMaterial].materialData.name;
-        //    }
-        //    if (saveLoadScript)
-        //    {
-        //        saveLoadScript.lastEquippedMaterial = currentMaterial;
-        //    }
-        //}
-        //else
-        //{
-        //    while (!materials[currentMaterial].materialBought)
-        //    {
-        //        NextMaterial();
-        //    }
-
-        //    //currentMaterial--;
-        //    //if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
-        //}
-
         if (materials[currentMaterial].materialBought && ships[currentShip].shipBought)
         {
             ChangeShipMaterial(currentMaterial);
@@ -384,34 +391,14 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Changes the material to the previous material for the ship and the weapon in the garage
+    /// </summary>
     public void PreviousMaterial()
     {
         currentMaterial--;
         if (currentMaterial < 0) currentMaterial = maxMaterials - 1;
 
-        //if (materials[currentMaterial].materialBought)
-        //{
-        //    ChangeMaterialAll(currentMaterial);
-
-        //    if (garageManager)
-        //    {
-        //        garageManager.materialName.text = materials[currentMaterial].materialData.name;
-        //    }
-        //    if (saveLoadScript)
-        //    {
-        //        saveLoadScript.lastEquippedMaterial = currentMaterial;
-        //    }
-        //}
-        //else
-        //{
-        //    while (!materials[currentMaterial].materialBought)
-        //    {
-        //        PreviousMaterial();
-        //    }
-        //    //currentMaterial++;
-        //    //if (currentMaterial >= maxMaterials) currentMaterial = 0;
-
-        //}
         if (materials[currentMaterial].materialBought && ships[currentShip].shipBought)
         {
             ChangeShipMaterial(currentMaterial);
@@ -460,13 +447,22 @@ public class SpaceShipConfigurator : MonoBehaviour
 
     }
 
-    [ContextMenu(itemName:"Unlock All")]
+    /// <summary>
+    /// Unlocks All Ships, Weapons and Materials in the game
+    /// </summary>
+    [ContextMenu(itemName: "Unlock All")]
     public void UnlockAll()
     {
         currentShip = 0;
         currentShip = 0;
         currentWeapon = 0;
         currentMaterial = 0;
+
+        saveLoadScript.lastEquippedVehicleMesh = 0;
+        saveLoadScript.lastEquippedVehicleColliderMesh = 0;
+        saveLoadScript.lastEquippedWeaponPrefab = 0;
+        saveLoadScript.lastEquippedMaterial = 0;
+
         for (int i = 1; i < maxShips; i++)
         {
             ships[i].shipBought = true;
@@ -479,8 +475,29 @@ public class SpaceShipConfigurator : MonoBehaviour
         {
             materials[i].materialBought = true;
         }
+
+        saveLoadScript.SaveSaveData();
+        CheckSaveLoadScript();
+
+        ChangeShip();
+        Destroy(weaponClone);
+        ChangeWeapon();
+
+        if (garageManager)
+        {
+            garageManager.shipName.text = ships[currentShip].shipData.name;
+            garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            garageManager.weaponName.text = weapons[currentWeapon].weaponData.name;
+
+            garageManager.unavailablePanel.SetActive(false);
+
+        }
+
     }
 
+    /// <summary>
+    /// Resets the game (all Ships, Weapons and Materials to zero)
+    /// </summary>
     [ContextMenu(itemName: "Reset All")]
     public void ResetAll()
     {
@@ -488,6 +505,12 @@ public class SpaceShipConfigurator : MonoBehaviour
         currentShip = 0;
         currentWeapon = 0;
         currentMaterial = 0;
+
+        saveLoadScript.lastEquippedVehicleMesh = 0;
+        saveLoadScript.lastEquippedVehicleColliderMesh = 0;
+        saveLoadScript.lastEquippedWeaponPrefab = 0;
+        saveLoadScript.lastEquippedMaterial = 0;
+
         for (int i = 1; i < maxShips; i++)
         {
             ships[i].shipBought = false;
@@ -501,23 +524,53 @@ public class SpaceShipConfigurator : MonoBehaviour
             materials[i].materialBought = false;
 
         }
+        saveLoadScript.SaveSaveData();
+        CheckSaveLoadScript();
+
+        ChangeShip();
+        Destroy(weaponClone);
+        ChangeWeapon();
+
+        if (garageManager)
+        {
+            garageManager.shipName.text = ships[currentShip].shipData.name;
+            garageManager.materialName.text = materials[currentMaterial].materialData.name;
+            garageManager.weaponName.text = weapons[currentWeapon].weaponData.name;
+
+            garageManager.unavailablePanel.SetActive(false);
+
+        }
+
     }
 
-
-
 }
+
+
+/// <summary>
+/// A Ship class with information from a scriptableobject (shipdata) and a bool if it has been bought
+/// </summary>
 [System.Serializable]
 public class ShipConfig
 {
     public ShipData shipData;
     public bool shipBought;
 }
+
+
+/// <summary>
+///  A Weapon class with information from a scriptableobject (weapondata) and a bool if it has been bought
+/// </summary>
 [System.Serializable]
 public class WeaponConfig
 {
     public WeaponData weaponData;
     public bool weaponBought;
 }
+
+
+/// <summary>
+///  A Material class with information from a scriptableobject (materialdata) and a bool if it has been bought
+/// </summary>
 [System.Serializable]
 public class MaterialConfig
 {

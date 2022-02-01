@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipData : ScriptableObject
 {
     public new string name;
-
+    public int priceInShop;
 
     [Header("Visual")]
     public Mesh vehicleMesh;

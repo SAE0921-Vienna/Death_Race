@@ -15,6 +15,9 @@ public class SaveLoadScript : MonoBehaviour
 
     public int milkyCoins;
     public int starCoins;
+    public int maxMilkyCoins = 9999999;
+    public int maxStarCoins = 9999999;
+
 
     public bool[] GetBoughtShips()
     {
@@ -116,6 +119,8 @@ public class SaveLoadScript : MonoBehaviour
         }
     }
 
+
+  
 }
 
 

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Speeder
   m_EditorClassIdentifier: 
   name: Speeder
+  priceInShop: 3000
   vehicleMesh: {fileID: 4300000, guid: 94e352ca883451f41b9ae790c282fc37, type: 3}
   vehicleColliderMesh: {fileID: 4300000, guid: 8e5b88cba81fe614885fb83581396427, type: 3}
   health: 100

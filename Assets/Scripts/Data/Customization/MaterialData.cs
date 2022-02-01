@@ -5,6 +5,7 @@ using UnityEngine;
 public class MaterialData : ScriptableObject
 {
     public new string name;
+    public int priceInShop;
     public Material material;
 
 }

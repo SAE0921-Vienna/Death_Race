@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Prince
   m_EditorClassIdentifier: 
   name: Prince
+  priceInShop: 400
   material: {fileID: 2100000, guid: 778331cdae475ca4fae8b95d60cad024, type: 2}

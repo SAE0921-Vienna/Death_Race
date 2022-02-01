@@ -14,14 +14,22 @@ public class GarageManager : MonoBehaviour
     public Button materialPrevious;
     public Button saveAndCloseGarage;
 
+    public GameObject unavailablePanel;
 
+    public Button buttonBuyShip;
+    public Button buttonBuyWeapon;
+    public Button buttonBuyMaterial;
+
+    public TextMeshProUGUI milkyCoins;
+    public TextMeshProUGUI starCoins;
+    public string maxCoinsUI = "9999999";
 
     public void LoadScene(string _name)
     {
         SceneManager.LoadScene(_name);
     }
 
-    
+
 
 
 }

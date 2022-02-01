@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Agent
   m_EditorClassIdentifier: 
   name: Agent
+  priceInShop: 400
   material: {fileID: 2100000, guid: d5b005d42223e17458f8f9abaec2e579, type: 2}

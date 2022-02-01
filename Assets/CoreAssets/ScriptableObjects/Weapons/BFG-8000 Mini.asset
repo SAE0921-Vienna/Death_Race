@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: BFG-8000 Mini
   m_EditorClassIdentifier: 
   name: BFG-8000 Mini
+  priceInShop: 1500
   vehicleWeaponPrefab: {fileID: 1588917084508066265, guid: d65741091db9c234fbc0d8fc75d0af8b, type: 3}

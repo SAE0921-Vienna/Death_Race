@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: X-Falcon
   m_EditorClassIdentifier: 
   name: X-Falcon
+  priceInShop: 2800
   vehicleMesh: {fileID: 4300000, guid: 6fbfc36663d880e468973876def3846c, type: 3}
   vehicleColliderMesh: {fileID: 4300000, guid: b9cd94a24f904184e81989744300be87, type: 3}
   health: 150

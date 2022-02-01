@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   name: Water
+  priceInShop: 400
   material: {fileID: 2100000, guid: beb9a7ad7de273e41be20de9c0c19f28, type: 2}
