@@ -225,14 +225,17 @@ public class ShopManager : MonoBehaviour
         {
             case 0:
                 ChangeShipShop();
+                automaticRotation = false;
                 break;
             case 1:
                 Destroy(weaponClone);
                 ChangeWeaponShop();
+                automaticRotation = false;
                 break;
             case 2:
                 currentSW = 0;
                 automaticRotation = true;
+                timer = timerCooldown;
                 break;
             default:
                 Debug.LogWarning("Error in the Shop - Switch Prefab");
