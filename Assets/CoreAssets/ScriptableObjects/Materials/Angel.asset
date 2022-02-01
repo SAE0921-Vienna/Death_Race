@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Angel
   m_EditorClassIdentifier: 
   name: Angel
-  priceInShop: 400
+  priceInShop: 500
   material: {fileID: 2100000, guid: 79446fc81f39ce94384e69adb692d4cf, type: 2}

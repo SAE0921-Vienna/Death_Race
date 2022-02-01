@@ -8,4 +8,10 @@ public class MaterialData : ScriptableObject
     public int priceInShop;
     public Material material;
 
+
+    public string GetPrice()
+    {
+        return @$"Price: {priceInShop}";
+
+    }
 }

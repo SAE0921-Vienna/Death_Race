@@ -11,6 +11,19 @@ public class WeaponData : ScriptableObject
     [Header("Visual")]
     public GameObject vehicleWeaponPrefab;
 
+    [Header("Stats")]
+    public int ammoSize;
+    public float fireRate;
+
+    public string GetStats()
+    {
+        return @$"Price: {priceInShop}
+Ammo: {ammoSize}
+FireRate: {fireRate}
+";
+
+    }
+
 }
 
 

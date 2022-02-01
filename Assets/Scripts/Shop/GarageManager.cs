@@ -24,6 +24,10 @@ public class GarageManager : MonoBehaviour
     public TextMeshProUGUI starCoins;
     public string maxCoinsUI = "9999999";
 
+    public TextMeshProUGUI shipStats;
+    public TextMeshProUGUI weaponStats;
+    public TextMeshProUGUI materialPrice;
+
     public void LoadScene(string _name)
     {
         SceneManager.LoadScene(_name);

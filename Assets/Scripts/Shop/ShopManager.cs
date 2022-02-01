@@ -48,6 +48,22 @@ public class ShopManager : MonoBehaviour
         automaticRotation = false;
         timer = timerCooldown;
 
+        garageManager.shipName.text = shipsShop[currentShipPrefab].shipData.name;
+        garageManager.shipStats.text = shipsShop[currentShipPrefab].shipData.GetStats();
+
+        if (shipsShop[currentShipPrefab].shipBought)
+        {
+            garageManager.buttonBuyShip.interactable = false;
+            garageManager.buttonBuyShip.GetComponentInChildren<TextMeshProUGUI>().text = "Bought";
+        }
+        else
+        {
+            garageManager.buttonBuyShip.interactable = true;
+            garageManager.buttonBuyShip.GetComponentInChildren<TextMeshProUGUI>().text = "Buy";
+        }
+
+        garageManager.materialPrice.text = materialsShop[currentMaterial].materialData.GetPrice();
+
         ChangeMoneyUI();
 
     }
@@ -78,6 +94,7 @@ public class ShopManager : MonoBehaviour
             }
         }
     }
+
 
     public void AutomaticSWRotation()
     {
@@ -231,6 +248,8 @@ public class ShopManager : MonoBehaviour
         transform.GetChild(0).GetComponent<MeshFilter>().mesh = shipsShop[currentShipPrefab].shipData.vehicleMesh;
         shipName.text = shipsShop[currentShipPrefab].shipData.name;
 
+        garageManager.shipStats.text = shipsShop[currentShipPrefab].shipData.GetStats();
+
         if (shipsShop[currentShipPrefab].shipBought)
         {
             garageManager.buttonBuyShip.interactable = false;
@@ -275,6 +294,9 @@ public class ShopManager : MonoBehaviour
         weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = hologramMAT;
         weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = hologramMAT;
         weaponName.text = weaponsShop[currentWeaponPrefab].weaponData.name;
+
+        garageManager.weaponStats.text = weaponsShop[currentWeaponPrefab].weaponData.GetStats();
+
 
         if (weaponsShop[currentWeaponPrefab].weaponBought)
         {
@@ -325,6 +347,8 @@ public class ShopManager : MonoBehaviour
         }
         timer = 0;
         materialName.text = materialsShop[currentMaterial].materialData.name;
+        garageManager.materialPrice.text = materialsShop[currentMaterial].materialData.GetPrice();
+
 
         if (materialsShop[currentMaterial].materialBought)
         {
@@ -348,6 +372,8 @@ public class ShopManager : MonoBehaviour
         }
         timer = 0;
         materialName.text = materialsShop[currentMaterial].materialData.name;
+        garageManager.materialPrice.text = materialsShop[currentMaterial].materialData.GetPrice();
+
 
         if (materialsShop[currentMaterial].materialBought)
         {
