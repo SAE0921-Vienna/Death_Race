@@ -22,7 +22,7 @@ public class SpaceshipLoad : MonoBehaviour
     [SerializeField]
     protected int currentWeapon;
     [SerializeField]
-    protected int currentMaterial;
+    public int currentMaterial;
 
     [HideInInspector]
     public IWeapon vehicleWeaponScript;

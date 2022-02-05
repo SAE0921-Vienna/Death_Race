@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -11,30 +13,52 @@ public class PauseMenuScript : MonoBehaviour
     //Pause Menu
     [Header("Loading/Pause/Options Menu Settings")]
     [SerializeField] RectTransform pausePanel;
+    [SerializeField] GameObject pausePanelObject;
     [SerializeField] RectTransform optionsPanel;
+    [SerializeField] GameObject optionsPanelObject;
     [SerializeField] private bool isPause = false;
+    [SerializeField] private List<HUDColor> hudColors;
+    private InputActions inputActions;
+    private int currentMaterial;
 
-
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        if (!isPause)
-        {
-            //PlayerDriveFunction()
-            //PlayShootFunction()
-        }
-        PauseMenu();
+        inputActions = new InputActions();
+        inputActions.UI.PauseMenu.performed += ctx => PauseMenu();
     }
+    private void Start()
+    {
+        currentMaterial = GetComponent<SpaceshipLoad>().currentMaterial;
+        pausePanelObject.GetComponent<Image>().color = new Color(hudColors[currentMaterial].R, hudColors[currentMaterial].G, hudColors[currentMaterial].B, hudColors[currentMaterial].A);
+        optionsPanelObject.GetComponent<Image>().color = new Color(hudColors[currentMaterial].R, hudColors[currentMaterial].G, hudColors[currentMaterial].B, hudColors[currentMaterial].A);
+    }
+    //void Update()
+    //{
+    //    if (!isPause)
+    //    {
+    //        //PlayerDriveFunction()
+    //        //PlayShootFunction()
+    //    }
+    //}
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+    private void OnDisable()
+    {
+        inputActions.Disable();
+    }
+
     private void PauseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && pausePanel.gameObject.activeInHierarchy == false && optionsPanel.gameObject.activeInHierarchy == false)
+        if (pausePanel.gameObject.activeInHierarchy == false && optionsPanel.gameObject.activeInHierarchy == false)
         {
             pausePanel.gameObject.SetActive(true);
             //Cursor.lockState = CursorLockMode.None;
             
             isPause = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && pausePanel.gameObject.activeInHierarchy == true || Input.GetKeyDown(KeyCode.Escape) && optionsPanel.gameObject.activeInHierarchy == true)
+        else if (pausePanel.gameObject.activeInHierarchy == true || optionsPanel.gameObject.activeInHierarchy == true)
         {
             //Cursor.lockState = CursorLockMode.Locked;
             pausePanel.gameObject.SetActive(false);
