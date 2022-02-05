@@ -52,10 +52,10 @@ public class VolumeSlider : MonoBehaviour
     }
     private void Update()
     {
-        if(GetComponentInParent<GameObject>().activeInHierarchy)
-        {
+        //if(GetComponentInParent<GameObject>().activeInHierarchy)
+        //{
             VolumeDisplay();
-        }
+        //}
 
     }
     /// <summary>
