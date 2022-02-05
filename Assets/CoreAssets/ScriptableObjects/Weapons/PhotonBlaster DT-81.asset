@@ -17,3 +17,4 @@ MonoBehaviour:
   vehicleWeaponPrefab: {fileID: 4503680966675882277, guid: 54d2e98263f68bf4babfb11a8c67bf62, type: 3}
   ammoSize: 20
   fireRate: 10
+  damage: 5

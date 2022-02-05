@@ -7,6 +7,9 @@ public class FinishLineManager : MonoBehaviour
     private GameManager gameManager;
     private AIManager aIManager;
 
+    public Transform checkpointParent;
+
+    
     private void Awake()
     {
         #region gameManager FindObjectOfType
@@ -33,6 +36,8 @@ public class FinishLineManager : MonoBehaviour
 
         }
         #endregion
+
+   
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,12 +45,23 @@ public class FinishLineManager : MonoBehaviour
         if (other.CompareTag("Player") && gameManager.currentLap == 0 && gameManager.currentCheckpoint == 0)
         {
             gameManager.currentLap += 1;
+
         }
 
         if (other.CompareTag("Player") && gameManager.currentCheckpoint == gameManager.checkpoints - 1)
         {
             gameManager.currentLap += 1;
-            gameManager.CheckLaps();
+
+            for (int i = 0; i < checkpointParent.childCount; i++)
+            {
+                Checkpoint checkpoint = checkpointParent.GetChild(i).GetComponent<Checkpoint>();
+                if (checkpoint.GetComponentInChildren<SkinnedMeshRenderer>())
+                {
+                    checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().material = checkpointParent.GetComponent<CheckpointManager>().normalCheckpointMAT;
+                }
+            }
+
+
 
         }
 
@@ -62,6 +78,8 @@ public class FinishLineManager : MonoBehaviour
         }
 
     }
+
+
 
 
 }

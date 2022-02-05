@@ -14,12 +14,14 @@ public class WeaponData : ScriptableObject
     [Header("Stats")]
     public int ammoSize;
     public float fireRate;
+    public int damage;
 
     public string GetStats()
     {
         return @$"Price: {priceInShop}
 Ammo: {ammoSize}
 FireRate: {fireRate}
+Damage: {damage}
 ";
 
     }

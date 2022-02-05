@@ -13,6 +13,9 @@ public class CheckpointManager : MonoBehaviour
 
     private Transform checkpointParent;
 
+    public Material currentCheckpointMAT;
+    public Material normalCheckpointMAT;
+
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
@@ -41,25 +44,29 @@ public class CheckpointManager : MonoBehaviour
     public void PlayerThroughCheckpoint(Checkpoint checkpoint)
     {
         //Debug.Log(checkpoint.transform.name);
-        if(checkpointsInWorldList.IndexOf(checkpoint) == nextCheckpointIndex)
+        if (checkpointsInWorldList.IndexOf(checkpoint) == nextCheckpointIndex)
         {
+            if (checkpoint.GetComponentInChildren<SkinnedMeshRenderer>())
+            {
+                checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().material = currentCheckpointMAT;
+            }
 
             currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
             nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
             gameManager.CheckCurrentCheckpoint();
             gameManager.spawnPlayerPosition = checkpoint.transform.position;
             gameManager.spawnPlayerRotation = checkpoint.transform.rotation;
-    
+
             //Debug.Log("correct direction");
         }
         else
-        {     
+        {
             //Debug.Log("wrong direction or missed checkpoint");
 
         }
 
     }
 
- 
+
 
 }

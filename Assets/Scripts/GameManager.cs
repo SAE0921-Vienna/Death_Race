@@ -57,13 +57,17 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("Player Manager was NOT found");
         }
+        else
+        {
+            spawnPlayerPosition = new Vector3(playerManager.transform.position.x, playerManager.transform.position.y + spawnPlayerYOffset, playerManager.transform.position.z);
+            spawnPlayerRotation = new Quaternion(playerManager.transform.rotation.x, playerManager.transform.rotation.y, playerManager.transform.rotation.z, playerManager.transform.rotation.w);
+        }
 
-        spawnPlayerPosition = new Vector3(playerManager.transform.position.x, playerManager.transform.position.y + spawnPlayerYOffset, playerManager.transform.position.z);
-        spawnPlayerRotation = new Quaternion(playerManager.transform.rotation.x, playerManager.transform.rotation.y, playerManager.transform.rotation.z, playerManager.transform.rotation.w);
+
 
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
 
-        vCam.m_Lens.FieldOfView = vCamPOV;
+       vCamPOV = vCam.m_Lens.FieldOfView;
     }
 
     private void Update()

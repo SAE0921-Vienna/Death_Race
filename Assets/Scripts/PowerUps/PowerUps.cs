@@ -27,7 +27,7 @@ public class PowerUps : MonoBehaviour
         {
             Debug.LogWarning("GameManager NOT Found");
 
-        }      
+        }
         #endregion
 
         #region uiManager  FindObjectOfType
@@ -65,7 +65,7 @@ public class PowerUps : MonoBehaviour
         }
 
 
-      
+
 
         if (playerStats.timer < 0)
         {
@@ -130,7 +130,9 @@ public class PowerUps : MonoBehaviour
             playerStats.nitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
             gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV;
-            GetComponent<VehicleController>().mMaxSpeed = playerStats.normalMaxSpeed;
+            VehicleController vehicleContr = GetComponent<VehicleController>();
+            vehicleContr.mMaxSpeed -= playerStats.nitroSpeed;
+            vehicleContr.mAccelerationConstant -= playerStats.nitroAccelerationBoost;
         }
         if (playerStats.ammo <= 0 && uIManager)
         {
@@ -161,8 +163,12 @@ public class PowerUps : MonoBehaviour
     {
         playerStats.timer = playerStats.timerCooldown;
         powerupParent.GetChild(1).gameObject.SetActive(true);
-        gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV + playerStats.mainCamPOVboost;
-        GetComponent<VehicleController>().mMaxSpeed += playerStats.nitroSpeed;
+        gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV + playerStats.mainCamPovBoost;
+        //gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(gameManager.vCamPOV, gameManager.vCamPOV + playerStats.mainCamPovBoost, Time.deltaTime);
+        VehicleController vehicleContr = GetComponent<VehicleController>();
+        vehicleContr.mMaxSpeed += playerStats.nitroSpeed;
+        vehicleContr.mAccelerationConstant += playerStats.nitroAccelerationBoost;
+
         playerStats.nitro = true;
     }
 
@@ -183,7 +189,7 @@ public class PowerUps : MonoBehaviour
         GameObject bombClone = Instantiate(powerUp.powerUpPrefab, powerupParent.GetChild(2).transform.position, Quaternion.identity);
         bombClone.transform.localScale = playerStats.bombScale;
         bombClone.GetComponent<SphereCollider>().enabled = true;
-        bombClone.GetComponent<Rigidbody>().useGravity = true;
+        //bombClone.GetComponent<Rigidbody>().useGravity = true;
         bombClone.GetComponent<BombTrigger>().hasBeenActivated = true;
         playerStats.bomb = true;
     }

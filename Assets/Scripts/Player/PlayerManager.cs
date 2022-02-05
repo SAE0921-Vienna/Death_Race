@@ -16,9 +16,10 @@ public class PlayerManager : MonoBehaviour
     public int healthLimit = 100;
     [Header("Nitro")]
     public float nitroSpeed = 50f;
+    public float nitroAccelerationBoost = 0.05f;
     public float normalMaxSpeed;
     public float currentSpeed;
-    public float mainCamPOVboost = 20f;
+    public float mainCamPovBoost = 20f;
     [Header("Ammo")]
     public int ammo;
     public int ammoAdd;
@@ -76,8 +77,6 @@ public class PlayerManager : MonoBehaviour
         }
 
         #endregion
-
-
 
     }
 

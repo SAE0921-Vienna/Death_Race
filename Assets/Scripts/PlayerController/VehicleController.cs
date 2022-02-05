@@ -121,7 +121,7 @@ namespace PlayerController
         }
         protected RaycastHit GroundInfo()
         {
-            Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance);
+            Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
             isOnRoadtrack = hit.collider.gameObject.layer == LayerMask.NameToLayer("Roadtrack");
             
             return hit;
