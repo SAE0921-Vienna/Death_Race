@@ -9,6 +9,7 @@ public class LoadCustomAI : SpaceshipLoad
 
     private void Awake()
     {
+
         int shiprand = Random.Range(0, allShips.Count);
         int weaponrand = Random.Range(0, allWeapons.Count);
         int materialrand = Random.Range(0, allMaterials.Count);

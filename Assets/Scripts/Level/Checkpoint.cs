@@ -43,6 +43,10 @@ public class Checkpoint : MonoBehaviour
         {
             //Debug.Log("Checkpoint");
             checkpointManager.PlayerThroughCheckpoint(this);
+            if (gameManager.nextCheckpoint == 0 && gameManager.currentLap >= gameManager.laps)
+            {
+                FindObjectOfType<FinishLineManager>().transform.GetChild(0).gameObject.SetActive(true);
+            }
 
         }
         if (other.CompareTag("AI"))

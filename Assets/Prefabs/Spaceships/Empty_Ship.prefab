@@ -448,9 +448,10 @@ MonoBehaviour:
   health: 100
   healthLimit: 100
   nitroSpeed: 800
+  nitroAccelerationBoost: 0.05
   normalMaxSpeed: 0
   currentSpeed: 0
-  mainCamPOVboost: 20
+  mainCamPovBoost: 20
   ammo: 350
   ammoAdd: 25
   ammoLimit: 25
@@ -545,7 +546,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   sideThrustAmount: 1000
-  animationSteerSpeed: 0
+  steeringSpeed: 0
   idleSteeringAnimationSpeedMultiplier: 0
   steeringAnimationSpeedMultiplier: 0
   downForceMultiplier: 100
@@ -751,6 +752,7 @@ GameObject:
   - component: {fileID: 8160920352285558411}
   - component: {fileID: 8160920352285558412}
   - component: {fileID: 834595121347659768}
+  - component: {fileID: 6510546671871086242}
   m_Layer: 3
   m_Name: SpaceShip
   m_TagString: Player
@@ -839,6 +841,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 3, z: 14}
   m_Center: {x: -0.23647504, y: 6.747439e-10, z: -6.8508116e-11}
+--- !u!114 &6510546671871086242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8160920352285558409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76010972dc0f0046b41bfe5aa80b997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recorderState: 0
+  recorderSettings: {fileID: 11400000, guid: 3969d758a533e3b478953a7942bf2910, type: 2}
+  dataNodes:
+    Nodes: []
+    timeStep: 0.1
+    totalTimeStep: 0
+    distanceThreshold: 0.2
+    angleThreshold: 2
+  bestBenefitOfDataNodes:
+    Nodes: []
+    timeStep: 0.1
+    totalTimeStep: 0
+    distanceThreshold: 0.2
+    angleThreshold: 2
+  timeStep: 0
 --- !u!1 &8160920352489071990
 GameObject:
   m_ObjectHideFlags: 0

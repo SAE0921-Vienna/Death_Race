@@ -9,7 +9,6 @@ public class FinishLineManager : MonoBehaviour
 
     public Transform checkpointParent;
 
-    
     private void Awake()
     {
         #region gameManager FindObjectOfType
@@ -37,33 +36,39 @@ public class FinishLineManager : MonoBehaviour
         }
         #endregion
 
-   
     }
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Player") && gameManager.currentLap == 0 && gameManager.currentCheckpoint == 0)
         {
             gameManager.currentLap += 1;
-
+            checkpointParent.GetComponent<CheckpointManager>().SetFirstCheckpointMAT();
+            transform.GetChild(0).gameObject.SetActive(false);
         }
 
         if (other.CompareTag("Player") && gameManager.currentCheckpoint == gameManager.checkpoints - 1)
         {
             gameManager.currentLap += 1;
+            transform.GetChild(0).gameObject.SetActive(false);
+            gameManager.CheckLaps();
 
-            for (int i = 0; i < checkpointParent.childCount; i++)
-            {
-                Checkpoint checkpoint = checkpointParent.GetChild(i).GetComponent<Checkpoint>();
-                if (checkpoint.GetComponentInChildren<SkinnedMeshRenderer>())
-                {
-                    checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().material = checkpointParent.GetComponent<CheckpointManager>().normalCheckpointMAT;
-                }
-            }
+            #region Reactivate All checkpoint materials
+            //for (int i = 0; i < checkpointParent.childCount; i++)
+            //{
+            //    Checkpoint checkpoint = checkpointParent.GetChild(i).GetComponent<Checkpoint>();
+            //    if (checkpoint.GetComponentInChildren<SkinnedMeshRenderer>())
+            //    {
+            //        checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
 
-
+            //    }
+            //}
+            #endregion
 
         }
+
+
 
         if (other.CompareTag("AI") && aIManager.currentLap == 0 && aIManager.currentCheckpoint == 0)
         {

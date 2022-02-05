@@ -29,6 +29,7 @@ public class SpaceshipLoad : MonoBehaviour
 
     private void Awake()
     {
+
         if (saveLoadScript)
         {
             saveLoadScript.LoadSaveData();

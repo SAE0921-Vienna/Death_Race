@@ -6534,7 +6534,6 @@ MonoBehaviour:
   checkpoints: 0
   currentCheckpoint: 0
   nextCheckpointIndex: 0
-  currentCheckpointMAT: {fileID: 2100000, guid: 2bebbf9fb6fb86849a045831d47f19eb, type: 2}
   normalCheckpointMAT: {fileID: 2100000, guid: 91f21d47c2b9b7d4e946b81b5b39f0af, type: 2}
 --- !u!4 &429363674 stripped
 Transform:
@@ -7221,10 +7220,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 427680167}
     m_Modifications:
-    - target: {fileID: 6856894519982140816, guid: 2b4153d24e98e5b4c8a00a256bfc802b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 41.04
-      objectReference: {fileID: 0}
     - target: {fileID: 6861742743635137588, guid: 2b4153d24e98e5b4c8a00a256bfc802b, type: 3}
       propertyPath: m_Name
       value: Checkpoint (1)
@@ -7232,14 +7227,6 @@ PrefabInstance:
     - target: {fileID: 6861742743635137593, guid: 2b4153d24e98e5b4c8a00a256bfc802b, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6861742743635137593, guid: 2b4153d24e98e5b4c8a00a256bfc802b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6861742743635137593, guid: 2b4153d24e98e5b4c8a00a256bfc802b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6861742743635137593, guid: 2b4153d24e98e5b4c8a00a256bfc802b, type: 3}
       propertyPath: m_LocalPosition.x

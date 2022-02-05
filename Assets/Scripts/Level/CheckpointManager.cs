@@ -13,7 +13,6 @@ public class CheckpointManager : MonoBehaviour
 
     private Transform checkpointParent;
 
-    public Material currentCheckpointMAT;
     public Material normalCheckpointMAT;
 
     private void Awake()
@@ -34,6 +33,9 @@ public class CheckpointManager : MonoBehaviour
 
         }
 
+
+
+
         checkpoints = checkpointsInWorldList.Count;
         gameManager.checkpoints = checkpoints;
 
@@ -48,8 +50,13 @@ public class CheckpointManager : MonoBehaviour
         {
             if (checkpoint.GetComponentInChildren<SkinnedMeshRenderer>())
             {
-                checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().material = currentCheckpointMAT;
-            }
+                checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+                if ((checkpointsInWorldList.IndexOf(checkpoint) + 1) < checkpointsInWorldList.Count)
+                {
+                    Checkpoint nextcheckpoint = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
+                    nextcheckpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;                 
+                }
+            }     
 
             currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
             nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
@@ -67,6 +74,10 @@ public class CheckpointManager : MonoBehaviour
 
     }
 
-
+    public void SetFirstCheckpointMAT()
+    {
+        Checkpoint nextcheckpoint = checkpointsInWorldList[0];
+        nextcheckpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+    }
 
 }
