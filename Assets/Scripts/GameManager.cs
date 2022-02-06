@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public int laps = 3;
     public int currentLap;
     [Header("Positions")]
-    public int positions = 5;
+    public float[] positions = new float[5];
     public int playerPosition;
     [Header("Checkpoints")]
     public int checkpoints;
@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
 
 
         CheckIfOnTrack();
+ 
 
 
     }
@@ -104,6 +105,8 @@ public class GameManager : MonoBehaviour
     {
         currentCheckpoint = checkpointManager.currentCheckpoint;
         nextCheckpoint = checkpointManager.nextCheckpointIndex;
+
+
     }
 
     public void CheckPosition()

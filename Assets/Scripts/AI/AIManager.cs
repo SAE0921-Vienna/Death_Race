@@ -34,7 +34,6 @@ namespace AI
         public int laps = 3;
         public int currentLap;
         [Header("Positions")]
-        public int positions = 5;
         public int aiPosition;
         [Header("Checkpoints")]
         public int checkpoints;
@@ -63,9 +62,13 @@ namespace AI
 
         private void Update()
         {
-            currentSpeed = Mathf.RoundToInt(aivehicleController.currentSpeed * aivehicleController.mMaxSpeed);
+            if (aivehicleController)
+            {
+                currentSpeed = Mathf.RoundToInt(aivehicleController.currentSpeed * aivehicleController.mMaxSpeed);
+                isOnRoadtrack = aivehicleController.isOnRoadtrack;
+
+            }
             if (health <= 0) gameObject.SetActive(false);
-            isOnRoadtrack = aivehicleController.isOnRoadtrack;
 
 
             Debug.DrawLine(transform.position, FacingInfo().point, Color.red);

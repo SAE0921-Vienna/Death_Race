@@ -37,10 +37,10 @@ public class PlayerManager : MonoBehaviour
     public bool isOnRoadtrack;
     public bool isFacingCorrectDirection;
 
+
     [Header("Power Up Timer")]
     public float timer;
     public float timerCooldown = 5f;
-
 
     private void Awake()
     {
@@ -80,22 +80,27 @@ public class PlayerManager : MonoBehaviour
 
     }
 
+
     private void Update()
     {
         currentSpeed = Mathf.RoundToInt(vehicleController.currentSpeed * vehicleController.mMaxSpeed);
         if (uiManager)
         {
-            if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture); 
+            if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
         }
         if (health <= 0) gameObject.SetActive(false);
         isOnRoadtrack = vehicleController.isOnRoadtrack;
 
-        Debug.DrawLine(transform.position, FacingInfo().point);
+        //Debug.DrawLine(transform.position, FacingInfo().point);
+
     }
+
 
     private RaycastHit FacingInfo()
     {
         Physics.Raycast(transform.position, transform.forward, out var hit);
         return hit;
     }
+
+
 }

@@ -126,10 +126,10 @@ public class Ghost : MonoBehaviour
     public void loadFromFile()
     {
         //Check if Ghost file exists. If it does load it
-        if (File.Exists(Application.persistentDataPath + "/Ghost"))
+        if (File.Exists(Application.persistentDataPath + "/ghost.deathrace"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/Ghost", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/ghost.deathrace", FileMode.Open);
             lastReplayList = (List<GhostShot>)bf.Deserialize(file);
             file.Close();
             hasData = true;
@@ -230,8 +230,8 @@ public class Ghost : MonoBehaviour
     {
         // Prepare to write
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/Ghost");
-        Debug.Log("File Location: " + Application.persistentDataPath + "/Ghost");
+        FileStream file = File.Create(Application.persistentDataPath + "/ghost.deathrace");
+        Debug.Log("File Location: " + Application.persistentDataPath + "/ghost.deathrace");
         // Write data to disk
         bf.Serialize(file, lastReplayList);
         file.Close();
@@ -243,9 +243,9 @@ public class Ghost : MonoBehaviour
         //Check if ghost exists or not, no reason to destroy and create it everytime.
         if (GameObject.FindWithTag("Ghost") == null)
         {
-            theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject))) as GameObject;
-            theGhost.GetComponentInChildren<MeshCollider>().enabled = false;
-            theGhost.GetComponentInChildren<BoxCollider>().enabled = false;
+            theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject)), FindObjectOfType<PositionHandler>().transform) as GameObject;
+            theGhost.GetComponentInChildren<MeshCollider>().isTrigger = true;
+            theGhost.GetComponentInChildren<BoxCollider>().isTrigger = true;
             theGhost.gameObject.tag = "Ghost";
 
             //Disable RigidBody
