@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Water_MAT
   SkinID: 4
   R: 0
-  G: 160
-  B: 255
+  G: 100
+  B: 190
   A: 0.23

@@ -109,7 +109,7 @@ namespace PlayerController
             if (AccelerationValue > 0f) return;
             _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue * Time.fixedDeltaTime * 10), ForceMode.Acceleration);
 
-            print(AccelerationValue);
+            //print(AccelerationValue);
         }
 
         /// <summary>

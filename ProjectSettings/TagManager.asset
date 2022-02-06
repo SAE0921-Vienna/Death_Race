@@ -8,6 +8,7 @@ TagManager:
   - Checkpoint
   - AI
   - Ghost
+  - Ship
   layers:
   - Default
   - TransparentFX
