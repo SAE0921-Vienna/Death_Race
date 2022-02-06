@@ -7,6 +7,7 @@ namespace UserInterface
     public class UIManager : MonoBehaviour
     {
         private GameManager gameManager;
+        public PlayerManager playerManager;
 
         public TextMeshProUGUI speedUnit;
         public TextMeshProUGUI ammoAmountUI;

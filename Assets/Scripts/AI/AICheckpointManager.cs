@@ -31,6 +31,7 @@ namespace AI
 
             checkpoints = checkpointsInWorldList.Count;
 
+
             targetPosition = checkpointsInWorldList[nextCheckpointIndex].transform.position;
             aisTarget.transform.position = targetPosition;
 

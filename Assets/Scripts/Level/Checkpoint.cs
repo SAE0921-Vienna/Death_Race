@@ -49,7 +49,7 @@ public class Checkpoint : MonoBehaviour
             }
 
         }
-        if (other.CompareTag("AI"))
+        if (other.CompareTag("AI") )
         {
             //Debug.Log("Checkpoint");
             aicheckpointManager.AIThroughCheckpoint(this);
@@ -57,6 +57,7 @@ public class Checkpoint : MonoBehaviour
         }
 
     }
+
 
 
 
