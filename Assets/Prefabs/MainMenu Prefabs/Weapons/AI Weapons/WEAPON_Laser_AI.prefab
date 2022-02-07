@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4526419272420770757}
   - component: {fileID: 5500045499160922827}
   m_Layer: 6
-  m_Name: WEAPON_Lase_AI
+  m_Name: WEAPON_Laser_AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,6 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21dc0d9c1307cc94581c6e59ba5950c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 80
+  currentRotation: {x: 0, y: 0, z: 0, w: 0}
+  weaponOnShip: {fileID: 0}
 --- !u!1 &4505761914621782157
 GameObject:
   m_ObjectHideFlags: 0
