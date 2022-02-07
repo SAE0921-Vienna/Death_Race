@@ -1019,6 +1019,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   volumeSlider: {fileID: 287039485}
   textVolume: {fileID: 1224783219}
+  saveLoadScript: {fileID: 360780220}
 --- !u!114 &135770336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1886,7 +1887,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1522031728}
         m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
         m_MethodName: SetVolume
-        m_Mode: 0
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1988,7 +1989,7 @@ MonoBehaviour:
       - m_Target: {fileID: 135770335}
         m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
         m_MethodName: SetVolume
-        m_Mode: 0
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2412,6 +2413,9 @@ MonoBehaviour:
   starCoins: 0
   maxMilkyCoins: 9999999
   maxStarCoins: 9999999
+  masterVolume: 20
+  musicVolume: 20
+  effectVolume: 20
   hasSaveData: 0
 --- !u!4 &360780221
 Transform:
@@ -16582,17 +16586,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 1537489579}
   m_HandleRect: {fileID: 109801395}
   m_Direction: 0
-  m_MinValue: -70
-  m_MaxValue: 30
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 30
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1886532377}
         m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
         m_MethodName: SetVolume
-        m_Mode: 0
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17081,10 +17085,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10fa4a238f5b04419c887b4be8c775a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EAudioTypes: 0
+  EAudioTypes: 2
   audioMixer: {fileID: 24100000, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   volumeSlider: {fileID: 272942584}
   textVolume: {fileID: 179105876}
+  saveLoadScript: {fileID: 360780220}
 --- !u!114 &1522031729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19223,10 +19228,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10fa4a238f5b04419c887b4be8c775a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EAudioTypes: 0
+  EAudioTypes: 1
   audioMixer: {fileID: 24100000, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   volumeSlider: {fileID: 1388102208}
   textVolume: {fileID: 173763706}
+  saveLoadScript: {fileID: 360780220}
 --- !u!114 &1886532378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21240,7 +21246,7 @@ AudioSource:
   m_GameObject: {fileID: 834595121362430095}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   m_audioClip: {fileID: 8300000, guid: a89204fc9a9e7a030a7b06f3a4e7318c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

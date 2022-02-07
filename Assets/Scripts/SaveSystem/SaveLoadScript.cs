@@ -19,6 +19,10 @@ public class SaveLoadScript : MonoBehaviour
     public int maxStarCoins = 9999999;
 
 
+    public float masterVolume = 20f;
+    public float musicVolume = 20f;
+    public float effectVolume = 20f;
+
     public bool[] GetBoughtShips()
     {
         if (spaceConfig)
@@ -119,8 +123,26 @@ public class SaveLoadScript : MonoBehaviour
         }
     }
 
+    public void SaveOptionsData(float _masterVolume, float _musicVolume, float _effectVolume)
+    {
+        SaveSystem.SaveOptionsData(_masterVolume, _musicVolume, _effectVolume);
+    }
+    public void LoadOptionsData()
+    {
+        SaveData data = SaveSystem.LoadOptionsData();
+        if (data == null)
+        {
+            Debug.LogWarning("Data empty");
+        }
+        else
+        {
+            masterVolume = data.masterVolume;
+            musicVolume = data.musicVolume;
+            effectVolume = data.effectVolume;
+        }
+    }
 
-  
+
 }
 
 

@@ -19,7 +19,6 @@ public static class SaveSystem
     }
 
 
-
     public static SaveData LoadSaveData()
     {
         string path = Application.persistentDataPath + "/data.deathrace";
@@ -85,5 +84,43 @@ public static class SaveSystem
         }
 
     }
+    public static void SaveOptionsData(float _masterVolume, float _musicVolume, float _effectVolume)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/options.deathrace";
+        FileStream stream = new FileStream(path, FileMode.Create);
 
+        SaveData data = new SaveData( _masterVolume,  _musicVolume,  _effectVolume);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+
+    public static SaveData LoadOptionsData()
+    {
+        string path = Application.persistentDataPath + "/options.deathrace";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            if (stream == null)
+            {
+                stream.Close();
+                Debug.LogWarning("Stream empty");
+            }
+
+            SaveData data = formatter.Deserialize(stream) as SaveData;
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.LogWarning("Save file not found in " + path);
+            return null;
+        }
+
+    }
 }

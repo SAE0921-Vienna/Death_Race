@@ -15,9 +15,9 @@ public class SaveData
     public int milkyCoins;
     public int starCoins;
 
-    public int masterVolume;
-    public int musicVolume;
-    public int effectVolume;
+    public float masterVolume;
+    public float musicVolume;
+    public float effectVolume;
 
     //SpaceShip/Progress
     public SaveData(int _lastEquippedVehicleMesh, int _lastEquippedVehicleColliderMesh, int _lastEquippedWeaponPrefab, int _lastEquippedMaterial, bool[] _boughtShips, bool[] _boughtWeapons, bool[] _boughtMaterials)
@@ -39,7 +39,7 @@ public class SaveData
     }
 
     //Options
-    public SaveData(int _masterVolume, int _musicVolume, int _effectVolume)
+    public SaveData(float _masterVolume, float _musicVolume, float _effectVolume)
     {
         this.masterVolume = _masterVolume;
         this.musicVolume = _musicVolume;
