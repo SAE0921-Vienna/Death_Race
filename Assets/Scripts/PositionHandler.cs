@@ -62,24 +62,24 @@ public class PositionHandler : MonoBehaviour
         gameManager.positions[1] = DistanceToNextCheckpoint(racersParent.GetChild(1).transform, nextcheckpoint.transform);
         gameManager.positions[2] = DistanceToNextCheckpoint(racersParent.GetChild(2).transform, nextcheckpoint.transform);
 
-        //Array.Sort(gameManager.positions);
+        Array.Sort(gameManager.positions);
 
-        //int x = Array.IndexOf(gameManager.positions, playerPosition);
+        int x = Array.IndexOf(gameManager.positions, playerPosition);
 
-        //switch (x)
-        //{
-        //    case 0:
-        //        gameManager.playerPosition = 1;
-        //        break;
-        //    case 1:
-        //        gameManager.playerPosition = 2;
-        //        break;
-        //    case 2:
-        //        gameManager.playerPosition = 3;
-        //        break;
-        //    default:
-        //        break;
-        //}
+        switch (x)
+        {
+            case 0:
+                gameManager.playerPosition = 1;
+                break;
+            case 1:
+                gameManager.playerPosition = 2;
+                break;
+            case 2:
+                gameManager.playerPosition = 3;
+                break;
+            default:
+                break;
+        }
 
     }
 

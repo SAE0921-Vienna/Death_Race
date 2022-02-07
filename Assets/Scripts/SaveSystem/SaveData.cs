@@ -15,6 +15,11 @@ public class SaveData
     public int milkyCoins;
     public int starCoins;
 
+    public int masterVolume;
+    public int musicVolume;
+    public int effectVolume;
+
+    //SpaceShip/Progress
     public SaveData(int _lastEquippedVehicleMesh, int _lastEquippedVehicleColliderMesh, int _lastEquippedWeaponPrefab, int _lastEquippedMaterial, bool[] _boughtShips, bool[] _boughtWeapons, bool[] _boughtMaterials)
     {
         this.lastEquippedVehicleMeshIndex = _lastEquippedVehicleMesh;
@@ -25,11 +30,20 @@ public class SaveData
         this.boughtWeapons = _boughtWeapons;
         this.boughtMaterials = _boughtMaterials;
     }
+
+    //Progress (money)
     public SaveData(int milkyCoins, int starCoins)
     {
         this.milkyCoins = milkyCoins;
         this.starCoins = starCoins;
     }
 
+    //Options
+    public SaveData(int _masterVolume, int _musicVolume, int _effectVolume)
+    {
+        this.masterVolume = _masterVolume;
+        this.musicVolume = _musicVolume;
+        this.effectVolume = _effectVolume;
+    }
 
 }

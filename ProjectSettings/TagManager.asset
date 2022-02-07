@@ -8,11 +8,7 @@ TagManager:
   - Checkpoint
   - AI
   - Ghost
-<<<<<<< HEAD
-  - Ship
-=======
   - GameManager
->>>>>>> main
   layers:
   - Default
   - TransparentFX
