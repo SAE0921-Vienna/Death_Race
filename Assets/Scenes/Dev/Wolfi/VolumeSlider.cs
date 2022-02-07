@@ -21,13 +21,13 @@ public class VolumeSlider : MonoBehaviour
 {
     #region Variables
     [Header("Audio Settings")]
+    [SerializeField] private GameObject PauseOptionsMenu;
     [SerializeField] private EAudioTypes EAudioTypes;
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private TextMeshProUGUI textVolume;
 
     public SaveLoadScript saveLoadScript;
-    private int AudioDisplayPuffer = 90; //Audio Volume Display Puffer
     #endregion Variables
 
 
@@ -42,31 +42,28 @@ public class VolumeSlider : MonoBehaviour
         switch (EAudioTypes)
         {
             case EAudioTypes.MASTER:
+                Debug.Log(saveLoadScript.masterVolume);
                 volumeSlider.value = saveLoadScript.masterVolume;
-                audioMixer.SetFloat("MasterVolume", Mathf.Log10(saveLoadScript.masterVolume)*20);
-                //volumeSlider.value = PlayerPrefs.GetFloat("MasterVolume");
-                //audioMixer.SetFloat("MasterVolume", PlayerPrefs.GetFloat("MasterVolume"));
+                audioMixer.SetFloat("MasterVolume", ((Mathf.Log10(saveLoadScript.masterVolume)) * 20));
                 break;
             case EAudioTypes.MUSIC:
+                Debug.Log(saveLoadScript.musicVolume);
                 volumeSlider.value = saveLoadScript.musicVolume;
-                audioMixer.SetFloat("MusicVolume", Mathf.Log10(saveLoadScript.musicVolume) * 20);
-                //volumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
-                //audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
+                audioMixer.SetFloat("MusicVolume", (Mathf.Log10(saveLoadScript.musicVolume)) * 20);
                 break;
             case EAudioTypes.EFFECT:
+                Debug.Log(saveLoadScript.effectVolume);
                 volumeSlider.value = saveLoadScript.effectVolume;
-                audioMixer.SetFloat("EffectsVolume", Mathf.Log10(saveLoadScript.effectVolume) * 20);
-                //volumeSlider.value = PlayerPrefs.GetFloat("EffectVolume");
-                //audioMixer.SetFloat("EffectsVolume", PlayerPrefs.GetFloat("EffectVolume"));
+                audioMixer.SetFloat("EffectsVolume", (Mathf.Log10(saveLoadScript.effectVolume)) * 20);
                 break;
         }
     }
     private void Update()
     {
-        //if(GetComponentInParent<GameObject>().activeInHierarchy)
-        //{
-        VolumeDisplay();
-        //}
+        if(PauseOptionsMenu.gameObject.activeInHierarchy)
+        {
+            VolumeDisplay();
+        }
 
     }
     /// <summary>
@@ -78,21 +75,12 @@ public class VolumeSlider : MonoBehaviour
         {
             case EAudioTypes.MASTER:
                 textVolume.text = "" + Mathf.Round(volumeSlider.value*100);
-                //volumeSlider.value = saveLoadScript.masterVolume;
-                //textVolume.text = "" + (PlayerPrefs.GetFloat("MasterVolume") + m_AudioDisplayPuffer);
-                //volumeSlider.value = PlayerPrefs.GetFloat("MasterVolume");
                 break;
             case EAudioTypes.MUSIC:
                 textVolume.text = "" + Mathf.Round(volumeSlider.value*100);
-                //volumeSlider.value = saveLoadScript.musicVolume;
-                //textVolume.text = "" + (PlayerPrefs.GetFloat("MusicVolume") + m_AudioDisplayPuffer);
-                //volumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
                 break;
             case EAudioTypes.EFFECT:
                 textVolume.text = "" + Mathf.Round(volumeSlider.value*100);
-                //volumeSlider.value = saveLoadScript.effectVolume;
-                //textVolume.text = "" + (PlayerPrefs.GetFloat("EffectVolume") + m_AudioDisplayPuffer);
-                //volumeSlider.value = PlayerPrefs.GetFloat("EffectVolume");
                 break;
         }
     }
@@ -108,20 +96,20 @@ public class VolumeSlider : MonoBehaviour
             case EAudioTypes.MASTER:
                 volumeName = "MasterVolume";
                 saveLoadScript.SaveOptionsData(_volume, saveLoadScript.musicVolume, saveLoadScript.effectVolume);
+                Debug.Log("MasterVolume" + _volume);
                 break;
             case EAudioTypes.MUSIC:
                 volumeName = "MusicVolume";
                 saveLoadScript.SaveOptionsData(saveLoadScript.masterVolume, _volume, saveLoadScript.effectVolume);
+                Debug.Log("MusicVolume" + _volume);
                 break;
             case EAudioTypes.EFFECT:
                 volumeName = "EffectVolume";
                 saveLoadScript.SaveOptionsData(saveLoadScript.masterVolume, saveLoadScript.musicVolume, _volume);
+                Debug.Log("EffectVolume" + _volume);
                 break;
         }
         audioMixer.SetFloat(volumeName, Mathf.Log10(_volume) * 20);
-
-        //PlayerPrefs.SetFloat(m_VolumeName, _volume);
-        //PlayerPrefs.Save();
 
     }
 }

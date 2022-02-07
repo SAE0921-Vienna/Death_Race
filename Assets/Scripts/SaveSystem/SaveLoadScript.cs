@@ -18,10 +18,12 @@ public class SaveLoadScript : MonoBehaviour
     public int maxMilkyCoins = 9999999;
     public int maxStarCoins = 9999999;
 
-
+    [Range(0.0001f,1f)]
     public float masterVolume = 0.0001f;
-    public float musicVolume = 10f;
-    public float effectVolume = 10f;
+    [Range(0.0001f,1f)]
+    public float musicVolume = 0.0001f;
+    [Range(0.0001f,1f)]
+    public float effectVolume = 0.0001f;
 
     public bool[] GetBoughtShips()
     {

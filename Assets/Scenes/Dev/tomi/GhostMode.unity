@@ -2000,9 +2000,9 @@ MonoBehaviour:
   starCoins: 0
   maxMilkyCoins: 9999999
   maxStarCoins: 9999999
-  masterVolume: 20
-  musicVolume: 20
-  effectVolume: 20
+  masterVolume: 1
+  musicVolume: 1
+  effectVolume: 1
   hasSaveData: 0
 --- !u!4 &360780221
 Transform:
@@ -8067,6 +8067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10fa4a238f5b04419c887b4be8c775a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseOptionsMenu: {fileID: 1632963625}
   EAudioTypes: 1
   audioMixer: {fileID: 24100000, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   volumeSlider: {fileID: 201241510}
@@ -17846,6 +17847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10fa4a238f5b04419c887b4be8c775a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseOptionsMenu: {fileID: 1632963625}
   EAudioTypes: 2
   audioMixer: {fileID: 24100000, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   volumeSlider: {fileID: 2004007170}
@@ -20734,6 +20736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10fa4a238f5b04419c887b4be8c775a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseOptionsMenu: {fileID: 1632963625}
   EAudioTypes: 3
   audioMixer: {fileID: 24100000, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   volumeSlider: {fileID: 776510128}
