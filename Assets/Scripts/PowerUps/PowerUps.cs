@@ -7,7 +7,7 @@ using UserInterface;
 public class PowerUps : MonoBehaviour
 {
     public List<ScriptableObject> powerUpList;
-    private PickUpScriptableObject powerUp;
+    public PickUpScriptableObject powerUp;
     private UIManager uIManager;
     //private PlayerWeapon playerWeapon;
     private PlayerManager playerStats;
@@ -204,4 +204,6 @@ public class PowerUps : MonoBehaviour
     }
 
     #endregion
+
+
 }

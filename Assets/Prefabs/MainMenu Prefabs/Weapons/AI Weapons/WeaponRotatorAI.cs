@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class WeaponRotatorAI : WeaponRotator
 {
-    private FieldOfView fieldOfView;
-    Vector3 weaponToTarget;
+    public FieldOfView fieldOfView;
+    public Vector3 weaponToTarget;
 
     private void Awake()
     {
         fieldOfView = GetComponentInParent<FieldOfView>();
+        weaponToTarget = new Vector3(0f, 0f, 0f);
+        weaponOnShip = GetComponent<Transform>();
+
     }
     private void Update()
     {
@@ -20,7 +23,7 @@ public class WeaponRotatorAI : WeaponRotator
         //base.RotateWeapon();
         if(fieldOfView.nearestObject != null)
         {
-            weaponToTarget = new Vector3(0f, 0f, 0f);
+            
             weaponToTarget.x = fieldOfView.nearestObject.transform.position.x - weaponOnShip.transform.position.x;
             weaponToTarget.y = fieldOfView.nearestObject.transform.position.y - weaponOnShip.transform.position.y;
             weaponToTarget.z = fieldOfView.nearestObject.transform.position.z - weaponOnShip.transform.position.z;

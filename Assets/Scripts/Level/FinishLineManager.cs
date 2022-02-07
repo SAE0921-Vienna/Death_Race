@@ -36,10 +36,14 @@ public class FinishLineManager : MonoBehaviour
         }
         #endregion
 
+        transform.GetChild(0).gameObject.SetActive(true);
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        transform.GetChild(0).gameObject.SetActive(false);
+
 
         if (other.CompareTag("Player") && gameManager.currentLap == 0 && gameManager.currentCheckpoint == 0)
         {

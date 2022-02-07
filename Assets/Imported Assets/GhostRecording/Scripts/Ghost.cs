@@ -179,7 +179,7 @@ public class Ghost : MonoBehaviour
         replayIndex = 0;
         recordTime = Time.time * 1000;
         recordingFrame = true;
-        playRecording = false;
+        //playRecording = false;
     }
 
     public void StopRecordingGhost()
@@ -190,7 +190,6 @@ public class Ghost : MonoBehaviour
         //This will overwrite any previous Save
         //Run function if new highscore achieved or change filename in function
         //SaveGhostToFile(); //Save Ghost to file on device/computer
-
     }
 
     public void playGhostRecording()

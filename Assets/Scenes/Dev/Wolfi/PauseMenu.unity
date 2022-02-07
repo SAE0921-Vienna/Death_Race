@@ -7408,6 +7408,43 @@ MonoBehaviour:
   timerCooldown: 5
   childObjectDeleted: 0
   powerUpPrefabClone: {fileID: 0}
+--- !u!1 &455213024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7913080179350055547, guid: 0535333968b71ef4192a8e5d64adb201, type: 3}
+  m_PrefabInstance: {fileID: 3170220046877826589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &455213026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455213024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ccad24a96a4d148bbc86b6b322ee3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allShips:
+  - {fileID: 11400000, guid: c78fb7984cc6fb142a5870453fe02e8c, type: 2}
+  - {fileID: 11400000, guid: 73deb3db3bc83af418dd98fe8cfe50ca, type: 2}
+  - {fileID: 11400000, guid: c49b77d23bb41fa4197f99fd9787e6b1, type: 2}
+  - {fileID: 11400000, guid: 39dddf19457ee81419265cf4245e2b91, type: 2}
+  - {fileID: 11400000, guid: 7789a5cccd0d3544a8314002c8d28824, type: 2}
+  allWeapons:
+  - {fileID: 11400000, guid: b61b8325cea78164683383af7437609e, type: 2}
+  allMaterials:
+  - {fileID: 11400000, guid: 222a1b428f7015d4d8e7b78cb8cc17cb, type: 2}
+  - {fileID: 11400000, guid: 2d1f933a35881754cb988d2ccd6329d4, type: 2}
+  - {fileID: 11400000, guid: e465cf17d6b3cc54c8fef917f12168bc, type: 2}
+  - {fileID: 11400000, guid: ec3f5cf026a0d614fbfbd53bbf3aca42, type: 2}
+  - {fileID: 11400000, guid: c93a02ec09ac0a34f8075a9de0fa5d3a, type: 2}
+  - {fileID: 11400000, guid: a62cdf3dc1aa55948938259176b54439, type: 2}
+  - {fileID: 11400000, guid: 2566e6a7bd3c3314a9c72429065b41b5, type: 2}
+  saveLoadScript: {fileID: 0}
+  currentShip: 0
+  currentWeapon: 0
+  currentMaterial: 0
 --- !u!1 &478010560
 GameObject:
   m_ObjectHideFlags: 0
@@ -11604,6 +11641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpList: []
+  powerUp: {fileID: 0}
 --- !u!114 &1150493397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13676,6 +13714,7 @@ MonoBehaviour:
   positionsUI: {fileID: 1357592971}
   roundTimerUI: {fileID: 1814761999}
   wrongDirectionUI: {fileID: 1117215896}
+  highscoreUI: {fileID: 0}
 --- !u!4 &1617549260
 Transform:
   m_ObjectHideFlags: 0
@@ -22479,7 +22518,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty_Ship_AI
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 674658919277367470, guid: 0535333968b71ef4192a8e5d64adb201, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0535333968b71ef4192a8e5d64adb201, type: 3}
 --- !u!1 &3229070178409048947
 GameObject:
@@ -23091,6 +23131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpList: []
+  powerUp: {fileID: 0}
 --- !u!114 &8160920351366770618
 MonoBehaviour:
   m_ObjectHideFlags: 0

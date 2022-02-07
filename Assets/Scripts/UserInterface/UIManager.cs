@@ -16,7 +16,7 @@ namespace UserInterface
         public TextMeshProUGUI positionsUI;
         public TextMeshProUGUI roundTimerUI;
         public RectTransform wrongDirectionUI;
-
+        public TextMeshProUGUI highscoreUI;
 
         private void Awake()
         {

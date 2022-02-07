@@ -6,6 +6,7 @@ public class PickUpScriptableObject : ScriptableObject
     public new string name;
     public Sprite icon;
     public GameObject powerUpPrefab;
+    public GameObject powerUpEffect;
     public powerUps powerUpType;
     
 

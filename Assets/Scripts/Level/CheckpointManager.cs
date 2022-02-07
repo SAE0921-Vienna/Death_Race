@@ -53,11 +53,12 @@ public class CheckpointManager : MonoBehaviour
         {
             if (checkpoint.GetComponentInChildren<SkinnedMeshRenderer>())
             {
-                checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+                //checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+                checkpoint.transform.GetChild(0).gameObject.SetActive(false);
                 if ((checkpointsInWorldList.IndexOf(checkpoint) + 1) < checkpointsInWorldList.Count)
                 {
                     nextcheckpoint = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
-                    nextcheckpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+                    nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
                 }
             }
 
@@ -79,8 +80,9 @@ public class CheckpointManager : MonoBehaviour
 
     public void SetFirstCheckpointMAT()
     {
-        Checkpoint nextcheckpoint = checkpointsInWorldList[0];
-        nextcheckpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+        Checkpoint nextcheckpoint = checkpointsInWorldList[1];
+        //nextcheckpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+        nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
     }
 
 

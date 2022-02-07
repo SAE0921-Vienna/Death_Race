@@ -1,58 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MyRecorder;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using UserInterface;
 
 public class GhostManager : MonoBehaviour
 {
 
     public GameManager gameManager;
+    public UIManager uimanager;
+    public bool hasData;
 
-
-    #region Recorder
-
-    public Recorder recorder;
-    //void Start()
-    //{
-
-    //    recorder.autoLoad();
-    //    recorder.Load();
-    //    if (recorder.hasData)
-    //    {
-    //        recorder.Play();
-    //    }
-
-    //}
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-
-    //    if (other.tag == "Player" && gameManager.currentLap == 0)
-    //    {
-    //        recorder.recorderState = RecorderState.Recording;
-
-    //    }
-    //    if (other.tag == "Player" && gameManager.currentLap >= gameManager.laps)
-    //    {
-    //        recorder.recorderState = RecorderState.Idle;
-
-    //        recorder.autoSave();
-    //        recorder.Save();
-
-    //    }
-    //}
-
-    #endregion
 
     public Ghost ghost;
 
     private void Start()
     {
+
+        //uimanager.highscoreUI.text = highScoreTime.ToString();
+
+
         ghost.loadFromFile();
-        if (ghost.hasData)
-        {
-            ghost.playGhostRecording();
-        }
+      
 
     }
 
@@ -63,15 +33,24 @@ public class GhostManager : MonoBehaviour
         {
             ghost.StartRecording();
             ghost.StartRecordingGhost();
+            if (ghost.hasData)
+            {
+                ghost.playGhostRecording();
+            }
 
         }
         if (other.tag == "Player" && gameManager.currentLap >= gameManager.laps)
         {
             ghost.StopRecordingGhost();
-            ghost.SaveGhostToFile();
+            //highScoreTime = (int)gameManager.roundTimer;
+            //if (highScoreTime < savedHighScoreTime)
+            //{
+            //    ghost.SaveGhostToFile();
+            //}
 
         }
     }
 
- 
+
+
 }
