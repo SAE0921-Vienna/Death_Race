@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56df29482487c54fb1ffc9298d48af3, type: 3}
   m_Name: Raketa Avtamata_AI
   m_EditorClassIdentifier: 
-  name: Raketa Avtamata_AI
+  name: Raketa Avtamata
   priceInShop: 2000
   vehicleWeaponPrefab: {fileID: 8078879089874771854, guid: b66905b94f153064685cc7eb0eba343e, type: 3}
   ammoSize: 6

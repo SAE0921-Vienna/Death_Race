@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56df29482487c54fb1ffc9298d48af3, type: 3}
   m_Name: BFG-8000 Mini_AI
   m_EditorClassIdentifier: 
-  name: BFG-8000 Mini_AI
+  name: BFG-8000 Mini
   priceInShop: 1500
   vehicleWeaponPrefab: {fileID: 1588917084508066265, guid: cd0b736eab6a9ba40b08cd0b22880126, type: 3}
   ammoSize: 100
