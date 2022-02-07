@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Core;
 using UnityEngine;
+using UnityEngine.Audio;
+using Unity;
 using Random = UnityEngine.Random;
 
 namespace Audio
@@ -63,7 +65,6 @@ namespace Audio
                 var soundGameObject = new GameObject("Sound");
                 var audioSource = soundGameObject.AddComponent<AudioSource>();
                 
-
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.volume = volume;
                 audioSource.PlayOneShot(GetAudioClip(sound));

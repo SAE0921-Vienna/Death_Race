@@ -19,9 +19,9 @@ public class SaveLoadScript : MonoBehaviour
     public int maxStarCoins = 9999999;
 
 
-    public float masterVolume = 20f;
-    public float musicVolume = 20f;
-    public float effectVolume = 20f;
+    public float masterVolume = 0.0001f;
+    public float musicVolume = 10f;
+    public float effectVolume = 10f;
 
     public bool[] GetBoughtShips()
     {
