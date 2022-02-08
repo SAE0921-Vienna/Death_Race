@@ -4,7 +4,7 @@ using UnityEngine;
 using UserInterface;
 using Weapons;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour, IDamageable
 {
 
     public VehicleController vehicleController;
@@ -91,16 +91,11 @@ public class PlayerManager : MonoBehaviour
         if (health <= 0) gameObject.SetActive(false);
         isOnRoadtrack = vehicleController.isOnRoadtrack;
 
-        //Debug.DrawLine(transform.position, FacingInfo().point);
-
     }
 
-
-    private RaycastHit FacingInfo()
+    public void GetDamage(int _damage)
     {
-        Physics.Raycast(transform.position, transform.forward, out var hit);
-        return hit;
+        health -= _damage;
+        Debug.Log("FUCK");
     }
-
-
 }

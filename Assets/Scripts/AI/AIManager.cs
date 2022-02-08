@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace AI
 {
-    public class AIManager : MonoBehaviour
+    public class AIManager : MonoBehaviour, IDamageable
     {
 
         public AI_VehicleController aivehicleController;
@@ -83,7 +83,6 @@ namespace AI
             return hit;
         }
 
-
         public void CheckLaps()
         {
             if (currentLap > laps)
@@ -97,6 +96,12 @@ namespace AI
                 currentLap = 0;
             }
 
+        }
+
+        public void GetDamage(int _damage)
+        {
+            health -= _damage;
+            Debug.Log("Ich füge mir selber SCHADEN ZU");
         }
     }
 }

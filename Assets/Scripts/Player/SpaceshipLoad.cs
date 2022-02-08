@@ -7,6 +7,7 @@ public class SpaceshipLoad : MonoBehaviour
 {
     [SerializeField]
     protected List<ShipData> allShips;
+    public ShipData CurrentShip { get { return allShips[currentShip];} }
     [SerializeField]
     protected List<WeaponData> allWeapons;
     [SerializeField]

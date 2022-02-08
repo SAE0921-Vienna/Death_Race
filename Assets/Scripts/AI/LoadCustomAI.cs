@@ -19,7 +19,7 @@ public class LoadCustomAI : SpaceshipLoad
         currentMaterial = materialrand;
 
         GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
-        GetComponentInChildren<MeshCollider>().sharedMesh = allShips[currentShip].vehicleColliderMesh;
+        //GetComponentInChildren<MeshCollider>().sharedMesh = allShips[currentShip].vehicleColliderMesh;
 
         GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
 

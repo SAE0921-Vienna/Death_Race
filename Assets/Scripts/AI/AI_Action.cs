@@ -11,6 +11,7 @@ public class AI_Action : MonoBehaviour
     private PlayerManager playerManager;
     private PlayerWeapon playerWeapon;
     private VehicleController vehicleController;
+    private ShipWeapon shipweapon;
 
     private void Awake()
     {
@@ -18,17 +19,19 @@ public class AI_Action : MonoBehaviour
         fieldOfView = GetComponent<FieldOfView>();
         vehicleController = GetComponent<VehicleController>();
         playerWeapon = GetComponent<PlayerWeapon>();
+        shipweapon = GetComponent<ShipWeapon>();
     }
     void Update()
     {
         if (fieldOfView.nearestObject)
         {
-            Debug.Log("AI Shooting");
             ShootingAI();
+            Debug.Log("BLYAT");
         }
     }
     private void ShootingAI()
     {
-        //playerWeapon.Shoot();
+        shipweapon.Shoot();
+        Debug.Log("SUUKA");
     }
 }

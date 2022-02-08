@@ -70,7 +70,7 @@ public class FieldOfView : MonoBehaviour
                     }
                 }
             }
-            Debug.Log(nearestObject.position);
+            //Debug.Log(nearestObject.position);
         }
     }
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)

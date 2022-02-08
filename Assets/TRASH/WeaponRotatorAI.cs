@@ -26,7 +26,6 @@ public class WeaponRotatorAI : WeaponRotator
     }
     protected override void RotateWeapon()
     {
-        //base.RotateWeapon();
         if (fieldOfView.nearestObject != null)
         {
 

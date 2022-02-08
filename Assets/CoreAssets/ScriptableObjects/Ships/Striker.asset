@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Striker
   m_EditorClassIdentifier: 
   name: Striker
+  priceInShop: 0
   vehicleMesh: {fileID: 4300000, guid: 841b1167232b829478d9d19650b6adec, type: 3}
   vehicleColliderMesh: {fileID: 4300000, guid: d8004ebbc859d8a4aa82c160e9391368, type: 3}
   health: 100
