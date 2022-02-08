@@ -33,22 +33,22 @@ namespace Weapons
 
         //public void Shoot()
         //{
-        //    if (_player.currentSpeed >= projectileDefaultSpeed)
-        //    {
-        //        projectileSpeed = _player.currentSpeed + projectileDefaultSpeed;
-        //    }
-        //    else
-        //    {
-        //        projectileSpeed = projectileDefaultSpeed;
-        //    }
+            //if (_player.currentSpeed >= projectileDefaultSpeed)
+            //{
+            //    projectileSpeed = _player.currentSpeed + projectileDefaultSpeed;
+            //}
+            //else
+            //{
+            //    projectileSpeed = projectileDefaultSpeed;
+            //}
 
-        //    var ray = _camera.ScreenPointToRay(Input.mousePosition);
-            
-        //    var projectile = Instantiate(laserPrefab, instantiationLocation.position, instantiationLocation.rotation);
-        //    projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Impulse);
+            //var ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-        //    PlaySound();
-        //    Destroy(projectile, projectileLifeTime);
+            //var projectile = Instantiate(laserPrefab, instantiationLocation.position, instantiationLocation.rotation);
+            //projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Impulse);
+
+            //PlaySound();
+            //Destroy(projectile, projectileLifeTime);
         //}
     }
 }
