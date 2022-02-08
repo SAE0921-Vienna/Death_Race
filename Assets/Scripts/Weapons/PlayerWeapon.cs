@@ -25,10 +25,7 @@ namespace Weapons
                 fireRate = _weapon.GetFireRate();
                 ammoAdd = _weapon.GetAmmo();
             }
-            else
-            {
-                Debug.LogWarning("PlayerWeapon has NOT been found");
-            }
+    
 
 
         }

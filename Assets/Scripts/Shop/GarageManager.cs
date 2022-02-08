@@ -33,7 +33,11 @@ public class GarageManager : MonoBehaviour
         SceneManager.LoadScene(_name);
     }
 
-
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quit Game");
+    }
 
 
 }

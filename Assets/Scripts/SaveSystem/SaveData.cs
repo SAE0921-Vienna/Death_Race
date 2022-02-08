@@ -16,6 +16,9 @@ public class SaveData
     public int starCoins;
 
     public float highScore;
+    public int lastGhostVehicleIndex;
+    public int lastGhostMaterialIndex;
+
 
     public float masterVolume;
     public float musicVolume;
@@ -41,9 +44,11 @@ public class SaveData
     }
 
 
-    public SaveData(float highScore)
+    public SaveData(float highScore, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
     {
         this.highScore = highScore;
+        this.lastGhostVehicleIndex = _lastGhostVehicleIndex;
+        this.lastGhostMaterialIndex = _lastGhostMaterialIndex;
     }
 
     //Options

@@ -120,6 +120,7 @@ public class Ghost : MonoBehaviour
     public bool hasData;
 
     public PositionHandler positionHandler;
+    public IconFollow iconFollow;
 
 
     //Check whether we should be recording or not
@@ -138,7 +139,7 @@ public class Ghost : MonoBehaviour
         }
         else
         {
-            Debug.Log("No Ghost Found");
+            //Debug.Log("No Ghost Found");
             hasData = false;
 
         }
@@ -250,6 +251,7 @@ public class Ghost : MonoBehaviour
         {
             theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject)), FindObjectOfType<PositionHandler>().transform) as GameObject;
             theGhost.GetComponentInChildren<BoxCollider>().isTrigger = true;
+            
             theGhost.gameObject.tag = "Ghost";
 
             //Disable RigidBody
@@ -258,6 +260,8 @@ public class Ghost : MonoBehaviour
             MeshRenderer mr = theGhost.gameObject.GetComponentInChildren<MeshRenderer>();
             mr.material = Resources.Load("Ghost_Shader", typeof(Material)) as Material;
             positionHandler.enabled = true;
+            iconFollow.followTarget = theGhost;
+            
         }
     }
 }

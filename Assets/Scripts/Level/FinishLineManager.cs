@@ -9,6 +9,8 @@ public class FinishLineManager : MonoBehaviour
 
     public Transform checkpointParent;
 
+    public Transform minimap;
+
     private void Awake()
     {
         #region gameManager FindObjectOfType
@@ -51,6 +53,7 @@ public class FinishLineManager : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
             gameManager.StartRoundTimer();
             gameManager.CheckLaps();
+            minimap.gameObject.SetActive(true);
 
         }
 

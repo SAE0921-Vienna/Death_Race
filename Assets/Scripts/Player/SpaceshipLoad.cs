@@ -16,7 +16,7 @@ public class SpaceshipLoad : MonoBehaviour
 
     [Header("Info")]
     [SerializeField]
-    private SaveLoadScript saveLoadScript;
+    protected SaveLoadScript saveLoadScript;
 
     [SerializeField]
     protected int currentShip;
