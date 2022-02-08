@@ -41,7 +41,7 @@ namespace Weapons
         /// <summary>
         /// Shoot one single bullet/laser
         /// </summary>
-        private void Shoot()
+        protected void Shoot()
         {
             if (!_playerStats.canShoot) return;
 

@@ -5693,8 +5693,9 @@ GameObject:
   - component: {fileID: 7913080179350055522}
   - component: {fileID: 7913080179350055520}
   - component: {fileID: 7913080179350055523}
-  - component: {fileID: 5946760539887659042}
   - component: {fileID: 5545047785510087550}
+  - component: {fileID: 5946760539887659042}
+  - component: {fileID: 4393457375686960315}
   m_Layer: 3
   m_Name: Empty_Ship_AI
   m_TagString: Player
@@ -5871,28 +5872,6 @@ MonoBehaviour:
   maxRaycastDistance: 1000
   trackSearchRadius: 300
   isOnRoadtrack: 1
---- !u!114 &5946760539887659042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7913080179350055547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604e033212ec7c045a85c0d2b3d647bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewRadius: 100
-  viewAngle: 100
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 72
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  visibleTargets: []
-  nearestObject: {fileID: 0}
 --- !u!114 &5545047785510087550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5925,6 +5904,40 @@ MonoBehaviour:
   currentShip: 0
   currentWeapon: 0
   currentMaterial: 0
+--- !u!114 &5946760539887659042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913080179350055547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604e033212ec7c045a85c0d2b3d647bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 100
+  viewAngle: 100
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 72
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  visibleTargets: []
+  nearestObject: {fileID: 0}
+--- !u!114 &4393457375686960315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913080179350055547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462979e50755aeb4c8b3b55a9ef5963d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7913080179413369273
 GameObject:
   m_ObjectHideFlags: 0
