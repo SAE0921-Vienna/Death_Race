@@ -20,7 +20,6 @@ public class GhostManager : MonoBehaviour
 
         //uimanager.highscoreUI.text = highScoreTime.ToString();
 
-
         ghost.loadFromFile();
       
 
@@ -39,7 +38,7 @@ public class GhostManager : MonoBehaviour
             }
 
         }
-        if (other.tag == "Player" && gameManager.currentLap >= gameManager.laps)
+        if (other.tag == "Player" && gameManager.currentLap > gameManager.laps)
         {
             ghost.StopRecordingGhost();
             //highScoreTime = (int)gameManager.roundTimer;

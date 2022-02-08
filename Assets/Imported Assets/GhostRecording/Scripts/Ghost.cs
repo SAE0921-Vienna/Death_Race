@@ -243,7 +243,6 @@ public class Ghost : MonoBehaviour
         if (GameObject.FindWithTag("Ghost") == null)
         {
             theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject)), FindObjectOfType<PositionHandler>().transform) as GameObject;
-            theGhost.GetComponentInChildren<MeshCollider>().isTrigger = true;
             theGhost.GetComponentInChildren<BoxCollider>().isTrigger = true;
             theGhost.gameObject.tag = "Ghost";
 
