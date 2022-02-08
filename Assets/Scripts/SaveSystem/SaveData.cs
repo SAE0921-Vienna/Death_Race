@@ -15,6 +15,8 @@ public class SaveData
     public int milkyCoins;
     public int starCoins;
 
+    public float highScore;
+
     public float masterVolume;
     public float musicVolume;
     public float effectVolume;
@@ -38,6 +40,12 @@ public class SaveData
         this.starCoins = starCoins;
     }
 
+
+    public SaveData(float highScore)
+    {
+        this.highScore = highScore;
+    }
+
     //Options
     public SaveData(float _masterVolume, float _musicVolume, float _effectVolume)
     {
@@ -47,3 +55,4 @@ public class SaveData
     }
 
 }
+

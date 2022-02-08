@@ -48,19 +48,16 @@ public class CheckpointManager : MonoBehaviour
 
     public void PlayerThroughCheckpoint(Checkpoint checkpoint)
     {
-        //Debug.Log(checkpoint.transform.name);
         if (checkpointsInWorldList.IndexOf(checkpoint) == nextCheckpointIndex)
         {
-            if (checkpoint.GetComponentInChildren<SkinnedMeshRenderer>())
+
+            checkpoint.transform.GetChild(0).gameObject.SetActive(false);
+            if ((checkpointsInWorldList.IndexOf(checkpoint) + 1) < checkpointsInWorldList.Count)
             {
-                //checkpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
-                checkpoint.transform.GetChild(0).gameObject.SetActive(false);
-                if ((checkpointsInWorldList.IndexOf(checkpoint) + 1) < checkpointsInWorldList.Count)
-                {
-                    nextcheckpoint = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
-                    nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
-                }
+                nextcheckpoint = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
+                nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
             }
+
 
             currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
             nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;

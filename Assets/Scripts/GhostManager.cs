@@ -9,19 +9,20 @@ public class GhostManager : MonoBehaviour
 {
 
     public GameManager gameManager;
+    public SaveLoadScript saveLoadScript;
     public UIManager uimanager;
-    public bool hasData;
 
 
     public Ghost ghost;
 
     private void Start()
     {
-
-        //uimanager.highscoreUI.text = highScoreTime.ToString();
-
-
         ghost.loadFromFile();
+        saveLoadScript.LoadHighScoreData();
+
+
+        uimanager.highscoreUI.text = "Highscore: " +saveLoadScript.highScore.ToString();
+
       
 
     }
@@ -31,26 +32,28 @@ public class GhostManager : MonoBehaviour
 
         if (other.tag == "Player" && gameManager.currentLap == 0)
         {
-            ghost.StartRecording();
-            ghost.StartRecordingGhost();
             if (ghost.hasData)
             {
                 ghost.playGhostRecording();
             }
-
+            ghost.StartRecording();
+            ghost.StartRecordingGhost();
+            
         }
-        if (other.tag == "Player" && gameManager.currentLap >= gameManager.laps)
-        {
-            ghost.StopRecordingGhost();
-            //highScoreTime = (int)gameManager.roundTimer;
-            //if (highScoreTime < savedHighScoreTime)
-            //{
-            //    ghost.SaveGhostToFile();
-            //}
 
-        }
     }
 
+    public void StopRecording()
+    {
+        ghost.StopRecordingGhost();
+        if (saveLoadScript.highScore > gameManager.roundTimer || !ghost.hasData)
+        {
+            ghost.SaveGhostToFile();
+            saveLoadScript.highScore = gameManager.roundTimer;
+            saveLoadScript.SaveHighScore(gameManager.roundTimer);
+        }
+
+    }
 
 
 }

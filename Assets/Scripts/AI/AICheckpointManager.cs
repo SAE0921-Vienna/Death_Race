@@ -18,7 +18,9 @@ namespace AI
         private AIManager aIManager;
 
         public List<Checkpoint> checkpointsInWorldList;
+        public Checkpoint nextCheckpointAI;
         private int nextCheckpointIndex;
+
 
 
         private void Start()
@@ -47,6 +49,7 @@ namespace AI
             {
 
                 currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
+                nextCheckpointAI = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
                 nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
                 nextCheckpoint = nextCheckpointIndex;
                 aIManager.spawnAIPosition = checkpoint.transform.position;

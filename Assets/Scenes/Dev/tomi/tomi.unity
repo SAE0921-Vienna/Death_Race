@@ -668,6 +668,7 @@ MonoBehaviour:
   finishLine: {fileID: 859624541}
   vCam: {fileID: 0}
   vCamPOV: 70
+  raceHasStarted: 0
   laps: 3
   currentLap: 0
   positions: []
@@ -676,6 +677,7 @@ MonoBehaviour:
   currentCheckpoint: 0
   nextCheckpoint: 0
   roundTimer: 0
+  timeSinceStart: 0
   offTrackTimer: 0
   offTrackTimerLimit: 3
   spawnPlayerPosition: {x: 0, y: 0, z: 0}
@@ -6213,7 +6215,7 @@ Transform:
   - {fileID: 1219034176}
   - {fileID: 1411984061}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &427680168
 MonoBehaviour:
@@ -7734,7 +7736,7 @@ Transform:
   m_LocalScale: {x: 12, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 6.2, y: 71.6, z: -0.01}
 --- !u!65 &859624545
 BoxCollider:
@@ -7761,7 +7763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484eeebc9ee90964bb0f17f839195c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointParent: {fileID: 0}
+  checkpointParent: {fileID: 427680167}
 --- !u!1 &862063697
 GameObject:
   m_ObjectHideFlags: 0
