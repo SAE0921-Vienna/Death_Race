@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-   
+
 
     public static void SaveSaveData(int _lastEquippedVehicleMesh, int _lastEquippedVehicleColliderMesh, int _lastEquippedWeaponPrefab, int _lastEquippedMaterial, bool[] _boughtShips, bool[] _boughtWeapons, bool[] _boughtMaterials)
     {
@@ -79,7 +79,7 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogWarning("Save file not found in " + path);
+            //Debug.LogWarning("Save file not found in " + path);
             return null;
         }
 
@@ -90,7 +90,7 @@ public static class SaveSystem
         string path = Application.persistentDataPath + "/options.deathrace";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        SaveData data = new SaveData( _masterVolume,  _musicVolume,  _effectVolume);
+        SaveData data = new SaveData(_masterVolume, _musicVolume, _effectVolume);
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -118,19 +118,19 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogWarning("Save file not found in " + path);
+            //Debug.LogWarning("Save file not found in " + path);
             return null;
         }
 
     }
 
-    public static void SaveHighscoreData(float _highScore)
+    public static void SaveHighscoreData(float highScore, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/score.deathrace";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        SaveData data = new SaveData(_highScore);
+        SaveData data = new SaveData(highScore, _lastGhostVehicleIndex, _lastGhostMaterialIndex);
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -158,7 +158,7 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogWarning("Save file not found in " + path);
+            //Debug.LogWarning("Save file not found in " + path);
             return null;
         }
 

@@ -19,12 +19,14 @@ public class SaveLoadScript : MonoBehaviour
     public int maxStarCoins = 9999999;
 
     public float highScore;
+    public int lastGhostVehicleIndex;
+    public int lastGhostMaterialIndex;
 
-    [Range(0.0001f,1f)]
+    [Range(0.0001f, 1f)]
     public float masterVolume = 0.0001f;
-    [Range(0.0001f,1f)]
+    [Range(0.0001f, 1f)]
     public float musicVolume = 0.0001f;
-    [Range(0.0001f,1f)]
+    [Range(0.0001f, 1f)]
     public float effectVolume = 0.0001f;
 
     public bool[] GetBoughtShips()
@@ -146,20 +148,22 @@ public class SaveLoadScript : MonoBehaviour
         }
     }
 
-    public void SaveHighScore(float _highScore)
+    public void SaveHighScore(float highScore, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
     {
-        SaveSystem.SaveHighscoreData(_highScore);
+        SaveSystem.SaveHighscoreData(highScore, _lastGhostVehicleIndex, _lastGhostMaterialIndex);
     }
     public void LoadHighScoreData()
     {
         SaveData data = SaveSystem.LoadHighscoreData();
         if (data == null)
         {
-            Debug.LogWarning("Data empty");
+            //Debug.LogWarning("Data empty");
         }
         else
         {
             highScore = data.highScore;
+            lastGhostVehicleIndex = data.lastGhostVehicleIndex;
+            lastGhostMaterialIndex = data.lastGhostMaterialIndex;
 
         }
     }
