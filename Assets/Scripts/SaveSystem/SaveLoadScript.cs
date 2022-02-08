@@ -18,6 +18,8 @@ public class SaveLoadScript : MonoBehaviour
     public int maxMilkyCoins = 9999999;
     public int maxStarCoins = 9999999;
 
+    public float highScore;
+
     [Range(0.0001f,1f)]
     public float masterVolume = 0.0001f;
     [Range(0.0001f,1f)]
@@ -144,7 +146,23 @@ public class SaveLoadScript : MonoBehaviour
         }
     }
 
+    public void SaveHighScore(float _highScore)
+    {
+        SaveSystem.SaveHighscoreData(_highScore);
+    }
+    public void LoadHighScoreData()
+    {
+        SaveData data = SaveSystem.LoadHighscoreData();
+        if (data == null)
+        {
+            Debug.LogWarning("Data empty");
+        }
+        else
+        {
+            highScore = data.highScore;
 
+        }
+    }
 }
 
 

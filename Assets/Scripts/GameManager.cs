@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public float vCamPOV = 70f;
 
     public bool raceHasStarted;
+    public bool raceFinished;
 
     [Header("Laps")]
     public int laps = 3;
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         raceHasStarted = false;
+        raceFinished = false;
 
         checkpointManager = FindObjectOfType<CheckpointManager>();
         if (!checkpointManager)
@@ -95,13 +97,17 @@ public class GameManager : MonoBehaviour
     public void CheckLaps()
     {
         if (currentLap > laps)
-        {          
+        {
 
             currentLap = laps;
 
+            raceFinished = true;
+            if (FindObjectOfType<GhostManager>())
+            {
+                FindObjectOfType<GhostManager>().StopRecording();
+            }
             //Game Finish
             Debug.Log("YAY FINISH");
-
             for (int i = 0; i < finishLineManager.checkpointParent.childCount; i++)
             {
                 Checkpoint checkpoint = finishLineManager.checkpointParent.GetChild(i).GetComponent<Checkpoint>();

@@ -119,6 +119,8 @@ public class Ghost : MonoBehaviour
     private float replayTime = 0.0f;
     public bool hasData;
 
+    public PositionHandler positionHandler;
+
 
     //Check whether we should be recording or not
     bool startRecording = false, recordingFrame = false, playRecording = false;
@@ -186,6 +188,8 @@ public class Ghost : MonoBehaviour
     {
         recordingFrame = false;
         lastReplayList = new List<GhostShot>(framesList);
+        playRecording = false;
+        Debug.Log("Recording Stopped");
 
         //This will overwrite any previous Save
         //Run function if new highscore achieved or change filename in function
@@ -228,6 +232,8 @@ public class Ghost : MonoBehaviour
     public void SaveGhostToFile()
     {
         // Prepare to write
+        Debug.Log("Recording Saved");
+
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/ghost.deathrace");
         Debug.Log("File Location: " + Application.persistentDataPath + "/ghost.deathrace");
@@ -251,6 +257,7 @@ public class Ghost : MonoBehaviour
 
             MeshRenderer mr = theGhost.gameObject.GetComponentInChildren<MeshRenderer>();
             mr.material = Resources.Load("Ghost_Shader", typeof(Material)) as Material;
+            positionHandler.enabled = true;
         }
     }
 }

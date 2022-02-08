@@ -12,14 +12,13 @@ public class PositionHandler : MonoBehaviour
 
     public float playerPosition;
 
-    public Checkpoint nextcheckpoint;
 
     private Transform racersParent;
     public List<GameObject> racers;
 
     private void Start()
     {
-        nextcheckpoint = checkpointManager.nextcheckpoint;
+        //nextcheckpoint = checkpointManager.nextcheckpoint;
 
         racersParent = this.transform;
 
@@ -54,32 +53,31 @@ public class PositionHandler : MonoBehaviour
 
     public void PositionCalc()
     {
-        playerPosition = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, nextcheckpoint.transform);
+        //playerPosition = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, nextcheckpoint.transform);
 
-        //player
-        gameManager.positions[0] = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, nextcheckpoint.transform);
-        //ai -s
-        gameManager.positions[1] = DistanceToNextCheckpoint(racersParent.GetChild(1).transform, nextcheckpoint.transform);
-        gameManager.positions[2] = DistanceToNextCheckpoint(racersParent.GetChild(2).transform, nextcheckpoint.transform);
+        ////player
+        //gameManager.positions[0] = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, nextcheckpoint.transform);
+        ////ai -s
+        //gameManager.positions[1] = DistanceToNextCheckpoint(racersParent.GetChild(1).transform, nextcheckpoint.transform);
 
-        Array.Sort(gameManager.positions);
+        //Array.Sort(gameManager.positions);
 
-        int x = Array.IndexOf(gameManager.positions, playerPosition);
+        //int x = Array.IndexOf(gameManager.positions, playerPosition);
 
-        switch (x)
-        {
-            case 0:
-                gameManager.playerPosition = 1;
-                break;
-            case 1:
-                gameManager.playerPosition = 2;
-                break;
-            case 2:
-                gameManager.playerPosition = 3;
-                break;
-            default:
-                break;
-        }
+        //switch (x)
+        //{
+        //    case 0:
+        //        gameManager.playerPosition = 1;
+        //        break;
+        //    case 1:
+        //        gameManager.playerPosition = 2;
+        //        break;
+        //    case 2:
+        //        gameManager.playerPosition = 3;
+        //        break;
+        //    default:
+        //        break;
+        //}
 
     }
 
