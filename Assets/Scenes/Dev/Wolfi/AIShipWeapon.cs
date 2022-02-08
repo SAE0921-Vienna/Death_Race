@@ -9,21 +9,23 @@ public class AIShipWeapon : ShipWeapon
     protected override void Awake()
     {
         aIManager = GetComponent<AIManager>();
+        base.Awake();
     }
     
     public override void Shoot()
     {
         if (!aIManager.canShoot) return;
-
+        
         if (Time.time > nextFire)
         {
+            PlaySound();
             Debug.Log("NEXTFIRE" + nextFire);
             nextFire = Time.time + 1 / fireRate;
 
             ammoSize -= 1;
 
             var tempobj = HitTarget();
-            if (tempobj != null && tempobj != this)
+            if (tempobj != null && HitTarget().GetComponent<IDamageable>() != null)
             {
                 tempobj.GetComponent<IDamageable>().GetDamage(projectileDamage);
                 Debug.Log("Ich Gengner SCHADEN");

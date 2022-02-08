@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using Audio;
+using static Audio.AudioManager;
 
 [CreateAssetMenu(menuName = "Scriptables/Weapon", fileName = "Weapon")]
 public class WeaponData : ScriptableObject
@@ -10,6 +11,10 @@ public class WeaponData : ScriptableObject
 
     [Header("Visual")]
     public GameObject vehicleWeaponPrefab;
+
+    [Header("Projectile Settings")]
+    public GameObject laserPrefab;
+    public Sound WeaponSound;
 
     [Header("Stats")]
     public int ammoSize;

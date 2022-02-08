@@ -18,3 +18,4 @@ MonoBehaviour:
   ammoSize: 6
   fireRate: 0.5
   damage: 40
+  WeaponSound: 5

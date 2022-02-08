@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Weapons;
+using Audio;
 
-public abstract class ShipWeapon : MonoBehaviour
+public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 {
     [SerializeField] 
     protected int ammoSize;
@@ -12,7 +13,7 @@ public abstract class ShipWeapon : MonoBehaviour
     [SerializeField]
     protected int projectileDamage;
     [SerializeField]
-    protected GameObject prefabWeapon;
+    protected GameObject projectilePrefab;
     [SerializeField]
     protected WeaponData currentWeapon;
     [SerializeField]
@@ -32,7 +33,9 @@ public abstract class ShipWeapon : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Awake()
     {
+        currentWeapon = GetComponent<SpaceshipLoad>().CurrentWeapon;
         shipWeaponPosition = GetComponent<SpaceshipLoad>().CurrentShip.WeaponPosition;
+        
         //shipWeaponTransform = transform.GetChild(1).GetChild(1).transform;
         SetEquippedWeapon();
     }
@@ -57,7 +60,7 @@ public abstract class ShipWeapon : MonoBehaviour
         ammoSize = currentWeapon.ammoSize;
         fireRate = currentWeapon.fireRate;
         projectileDamage = currentWeapon.damage;
-        prefabWeapon = currentWeapon.vehicleWeaponPrefab;
+        projectilePrefab = currentWeapon.laserPrefab;
     }
     protected abstract void RotateWeapon();
 
@@ -69,11 +72,24 @@ public abstract class ShipWeapon : MonoBehaviour
         if (hitTarget)
         {
             Debug.Log(hit.collider.gameObject);
-            return hit.collider.gameObject;
+            return hit.transform.root.gameObject;
         }
         else
         {
-            return null;
+            var myGameObject = new GameObject();
+            myGameObject.name = "TEST";
+            return myGameObject;
         }
+    }
+    protected void InstantiateProjectile()
+    {
+        var tempobj = Instantiate(projectilePrefab, shipWeaponTransform.position, Quaternion.identity);
+        var temprb = tempobj.GetComponent<Rigidbody>();
+        temprb.AddForce(GetComponent<Rigidbody>().velocity * 20);
+    }
+
+    public void PlaySound()
+    {
+        AudioManager.PlaySound(currentWeapon.WeaponSound);
     }
 }

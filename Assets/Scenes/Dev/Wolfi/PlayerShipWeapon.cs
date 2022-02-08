@@ -15,7 +15,7 @@ public class PlayerShipWeapon : ShipWeapon
 
     void Update()
     {
-        Debug.DrawRay(shipWeaponTransform.position, shipWeaponTransform.forward*400, Color.green);
+        //Debug.DrawRay(shipWeaponTransform.position, shipWeaponTransform.forward*400, Color.green);
         Shoot();
     }
     public override void Shoot()
@@ -24,18 +24,23 @@ public class PlayerShipWeapon : ShipWeapon
 
         if (Input.GetMouseButton(0) && Time.time > nextFire)
         {
+            PlaySound();
+            InstantiateProjectile();
             nextFire = Time.time + 1 / fireRate;
 
             ammoSize -= 1;
-            var tempobj = HitTarget();
-            if(tempobj != null)
+            //var tempobj = HitTarget();
+            if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
             {
-                tempobj.GetComponent<IDamageable>().GetDamage(projectileDamage);
+
+                HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
+                //tempobj.GetComponent<IDamageable>().GetDamage(projectileDamage);
             }
             else
             {
                 Debug.Log("MAMAMAAAAAA");
             }
+            Debug.Log(HitTarget().name);
         }
         //Projectile instanzieren?
     }

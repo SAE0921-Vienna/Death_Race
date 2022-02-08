@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Raketa Avtamata
   priceInShop: 2000
   vehicleWeaponPrefab: {fileID: 8078879089874771854, guid: b66905b94f153064685cc7eb0eba343e, type: 3}
+  laserPrefab: {fileID: 5654157430322735983, guid: e1a5065ec43a8f107bdf7b5efb981857, type: 3}
+  WeaponSound: 5
   ammoSize: 6
   fireRate: 0.5
   damage: 40
