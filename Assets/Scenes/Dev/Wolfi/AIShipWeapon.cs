@@ -39,7 +39,6 @@ public class AIShipWeapon : ShipWeapon
         if (Time.time > nextFire)
         {
             PlaySound();
-            Debug.Log("NEXTFIRE" + nextFire);
             nextFire = Time.time + 1 / fireRate;
 
             ammoSize -= 1;
@@ -97,8 +96,7 @@ public class AIShipWeapon : ShipWeapon
     }
     protected override void InstantiateProjectile()
     {
-        Debug.Log(shipWeaponTransform.localEulerAngles);
         GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.localEulerAngles * projectileSpeed, ForceMode.Impulse);
+        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed, ForceMode.Impulse);
     }
 }

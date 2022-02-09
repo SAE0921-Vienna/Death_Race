@@ -68,8 +68,8 @@ public class PlayerShipWeapon : ShipWeapon
         {
             projectileSpeed = projectileDefaultSpeed;
         }
-        Debug.Log(ray.direction);
+
         GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.position* projectileSpeed, ForceMode.Impulse);
+        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed, ForceMode.Impulse);
     }
 }
