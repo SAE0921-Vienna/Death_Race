@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     private CheckpointManager checkpointManager;
     private FinishLineManager finishLineManager;
 
+    public GameObject audioManager;
+
     private PlayerManager playerManager;
     public CinemachineVirtualCamera vCam;
     public float vCamPOV = 70f;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
         raceHasStarted = false;
         raceFinished = false;
 
@@ -72,6 +75,13 @@ public class GameManager : MonoBehaviour
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
 
         vCamPOV = vCam.m_Lens.FieldOfView;
+    }
+
+    private void Start()
+    {
+        audioManager.transform.GetChild(0).GetComponent<VolumeSlider>().GetAudiosAtStart();
+        audioManager.transform.GetChild(1).GetComponent<VolumeSlider>().GetAudiosAtStart();
+        audioManager.transform.GetChild(2).GetComponent<VolumeSlider>().GetAudiosAtStart();
     }
 
     private void Update()
