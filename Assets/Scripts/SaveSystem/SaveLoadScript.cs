@@ -131,7 +131,10 @@ public class SaveLoadScript : MonoBehaviour
 
     public void SaveOptionsData(float _masterVolume, float _musicVolume, float _effectVolume)
     {
-        SaveSystem.SaveOptionsData(_masterVolume, _musicVolume, _effectVolume);
+        masterVolume = _masterVolume;
+        musicVolume = _musicVolume;
+        effectVolume = _effectVolume;
+        SaveSystem.SaveOptionsData(masterVolume, musicVolume, effectVolume);
     }
     public void LoadOptionsData()
     {

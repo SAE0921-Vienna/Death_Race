@@ -28,9 +28,17 @@ public class GarageManager : MonoBehaviour
     public TextMeshProUGUI weaponStats;
     public TextMeshProUGUI materialPrice;
 
+    public GameObject audioManager;
     public void LoadScene(string _name)
     {
         SceneManager.LoadScene(_name);
+    }
+
+    private void Start()
+    {
+        audioManager.transform.GetChild(0).GetComponent<VolumeSlider>().GetAudiosAtStart();
+        audioManager.transform.GetChild(1).GetComponent<VolumeSlider>().GetAudiosAtStart();
+        audioManager.transform.GetChild(2).GetComponent<VolumeSlider>().GetAudiosAtStart();
     }
 
     public void QuitGame()
