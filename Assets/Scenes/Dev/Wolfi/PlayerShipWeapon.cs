@@ -17,6 +17,7 @@ public class PlayerShipWeapon : ShipWeapon
     void Update()
     {
         //Debug.DrawRay(shipWeaponTransform.position, shipWeaponTransform.forward*400, Color.green);
+        RotateWeapon();
         Shoot();
     }
     public override void Shoot()
