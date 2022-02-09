@@ -20,7 +20,7 @@ namespace Weapons
         {
 
             _camera = Camera.main;
-            _player = GetComponent<PlayerManager>(); //HEIßt eigentlich ShipManager
+            _player = GetComponentInParent<PlayerManager>(); //HEIßt eigentlich ShipManager
             if (!_player)
             {
                 Debug.LogWarning("PlayerManager has NOT been found");

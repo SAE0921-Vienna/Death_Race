@@ -4,9 +4,9 @@ public class DestroyParticle : MonoBehaviour
 {
     [SerializeField] private float durationMultiplier = 10f;
 
-    private void Update()
+    public void DestroyParticleGameobject()
     {
         Destroy(gameObject, gameObject.GetComponent<ParticleSystem>().main.duration * durationMultiplier);
     }
-    
+
 }
