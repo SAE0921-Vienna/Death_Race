@@ -34,18 +34,28 @@ public class BombTrigger : MonoBehaviour
         if (_bombTimer <= 0 && hasBeenActivated)
         {
             _explosion.Explode();
+            _boomEffect.Play();
+            _boomEffect.GetComponent<DestroyParticle>().DestroyParticleGameobject();
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if ((hasBeenActivated && collision.transform.CompareTag("Player") && !_playerManager.isImmortal))
+        {
             _explosion.Explode();
+            _boomEffect.Play();
+            _boomEffect.GetComponent<DestroyParticle>().DestroyParticleGameobject();
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (hasBeenActivated && other.transform.CompareTag("Bullet"))
+        {
             _explosion.Explode();
+            _boomEffect.Play();
+            _boomEffect.GetComponent<DestroyParticle>().DestroyParticleGameobject();
+        }
     }
 }
 

@@ -201,50 +201,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 198009975391485926, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: lengthInSec
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198009975391485926, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198009975391485926, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198009975391485926, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198059370558133848, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198393606974994562, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198859146066003590, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199139269707214854, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199712978855893458, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199729413739153660, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199831857397119366, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
 --- !u!4 &8603697562941307570 stripped
