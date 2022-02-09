@@ -31,24 +31,24 @@ namespace Weapons
         public float GetFireRate() => projectileFireRate;
         public void PlaySound() => AudioManager.PlaySound(AudioManager.Sound.LaserSound, instantiationLocation.position, .5f);
 
-        //public void Shoot()
-        //{
-            //if (_player.currentSpeed >= projectileDefaultSpeed)
-            //{
-            //    projectileSpeed = _player.currentSpeed + projectileDefaultSpeed;
-            //}
-            //else
-            //{
-            //    projectileSpeed = projectileDefaultSpeed;
-            //}
+        public void Shoot()
+        {
+            if (_player.currentSpeed >= projectileDefaultSpeed)
+            {
+                projectileSpeed = _player.currentSpeed + projectileDefaultSpeed;
+            }
+            else
+            {
+                projectileSpeed = projectileDefaultSpeed;
+            }
 
-            //var ray = _camera.ScreenPointToRay(Input.mousePosition);
+            var ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-            //var projectile = Instantiate(laserPrefab, instantiationLocation.position, instantiationLocation.rotation);
-            //projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Impulse);
+            var projectile = Instantiate(laserPrefab, instantiationLocation.position, instantiationLocation.rotation);
+            projectile.GetComponent<Rigidbody>().AddForce(ray.direction * projectileSpeed, ForceMode.Impulse);
 
-            //PlaySound();
-            //Destroy(projectile, projectileLifeTime);
-        //}
+            PlaySound();
+            Destroy(projectile, projectileLifeTime);
+        }
     }
 }

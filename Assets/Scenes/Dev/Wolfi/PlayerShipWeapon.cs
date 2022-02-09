@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShipWeapon : ShipWeapon
 {
     [SerializeField]private Camera _camera;
+    Ray ray;
     protected PlayerManager playerManager;
 
     protected override void Awake()
@@ -25,39 +26,50 @@ public class PlayerShipWeapon : ShipWeapon
         if (Input.GetMouseButton(0) && Time.time > nextFire)
         {
             PlaySound();
-            InstantiateProjectile();
             nextFire = Time.time + 1 / fireRate;
 
             ammoSize -= 1;
-            //var tempobj = HitTarget();
+            InstantiateProjectile();
+
             if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
             {
-
                 HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
-                //tempobj.GetComponent<IDamageable>().GetDamage(projectileDamage);
             }
             else
             {
                 Debug.Log("MAMAMAAAAAA");
             }
-            Debug.Log(HitTarget().name);
+            //Debug.Log(HitTarget().name);
         }
-        //Projectile instanzieren?
     }
 
     protected override void RotateWeapon()
     {
-        var ray = _camera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out var hit))
+        ray = _camera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit))
             Debug.DrawLine(transform.position, hit.point);
 
         _targetRotation = Quaternion.LookRotation(ray.direction);
         currentRotation = shipWeaponTransform.rotation;
 
-        var angularDifference = Quaternion.Angle(currentRotation, _targetRotation);
+        float angularDifference = Quaternion.Angle(currentRotation, _targetRotation);
 
         shipWeaponTransform.rotation = angularDifference > 0
             ? Quaternion.Slerp(currentRotation, _targetRotation, (rotationSpeed * 180 * Time.deltaTime) / angularDifference)
             : _targetRotation;
+    }
+    protected override void InstantiateProjectile()
+    {
+        if (playerManager.currentSpeed >= projectileDefaultSpeed)
+        {
+            projectileSpeed = playerManager.currentSpeed + projectileDefaultSpeed;
+        }
+        else
+        {
+            projectileSpeed = projectileDefaultSpeed;
+        }
+        Debug.Log(ray.direction);
+        GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
+        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.position* projectileSpeed, ForceMode.Impulse);
     }
 }

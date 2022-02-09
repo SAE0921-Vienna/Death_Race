@@ -6,29 +6,27 @@ using Audio;
 
 public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 {
-    [SerializeField] 
-    protected int ammoSize;
-    [SerializeField] 
-    protected float fireRate;
-    [SerializeField]
-    protected int projectileDamage;
-    [SerializeField]
-    protected GameObject projectilePrefab;
-    [SerializeField]
-    protected WeaponData currentWeapon;
-    [SerializeField]
-    protected LayerMask targetLayer;
-
-    protected float nextFire = 0f;
-
+    //Weapon
+    [Header("Weapon")]
+    [SerializeField] protected WeaponData currentWeapon;
+    [SerializeField] protected LayerMask targetLayer;
     protected Vector3 shipWeaponPosition;
     [SerializeField]protected Transform shipWeaponTransform;
-
     [Range(0, 100)]
     [SerializeField] protected float rotationSpeed = 100;
     [SerializeField] protected Quaternion currentRotation;
-
     protected Quaternion _targetRotation;
+
+    // Projectil
+    [Header("Projectil")]
+    [SerializeField] protected GameObject projectilePrefab;
+    [SerializeField] protected int ammoSize;
+    [SerializeField] protected float fireRate;
+    [SerializeField] protected int projectileDamage;
+    [SerializeField] protected float projectileSpeed;
+    [SerializeField] protected float projectileDefaultSpeed = 200f;
+    [SerializeField] protected float projectileLifeTime = 5f;
+    protected float nextFire = 0f;
 
     // Start is called before the first frame update
     protected virtual void Awake()
@@ -36,7 +34,6 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
         currentWeapon = GetComponent<SpaceshipLoad>().CurrentWeapon;
         shipWeaponPosition = GetComponent<SpaceshipLoad>().CurrentShip.WeaponPosition;
         
-        //shipWeaponTransform = transform.GetChild(1).GetChild(1).transform;
         SetEquippedWeapon();
     }
     private void Start()
@@ -69,6 +66,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
         Ray ray = new Ray(shipWeaponTransform.position, shipWeaponTransform.forward);
         float distance = 1000f;
         bool hitTarget = Physics.Raycast(ray, out RaycastHit hit, distance, targetLayer);
+
         if (hitTarget)
         {
             Debug.Log(hit.collider.gameObject);
@@ -76,17 +74,13 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
         }
         else
         {
-            var myGameObject = new GameObject();
-            myGameObject.name = "TEST";
-            return myGameObject;
+            //var myGameObject = new GameObject();
+            //myGameObject.name = "TEST";
+            return null;
         }
     }
-    protected void InstantiateProjectile()
-    {
-        var tempobj = Instantiate(projectilePrefab, shipWeaponTransform.position, Quaternion.identity);
-        var temprb = tempobj.GetComponent<Rigidbody>();
-        temprb.AddForce(GetComponent<Rigidbody>().velocity * 20);
-    }
+
+    protected abstract void InstantiateProjectile();
 
     public void PlaySound()
     {
