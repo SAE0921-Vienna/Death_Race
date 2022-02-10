@@ -2352,7 +2352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69791177}
   m_LocalRotation: {x: 0.0015468458, y: -0.9976235, z: 0.06624548, w: 0.018880576}
-  m_LocalPosition: {x: 3531.89, y: -825.65, z: 479.51}
+  m_LocalPosition: {x: 3531.77, y: -826.08, z: 476.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1226698428}
@@ -2413,7 +2413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAccelerationConstant: 0.12
-  mMaxSpeed: 50
+  mMaxSpeed: 500
   currentSpeed: 0
   brakeForce: 800
   decelerationConstant: 0.5
@@ -16892,7 +16892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 198.12122, y: 82.665344}
+  m_AnchoredPosition: {x: 1432, y: 82.665}
   m_SizeDelta: {x: 396.2425, y: 165.3307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681585965
@@ -35164,7 +35164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1513007599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35180,10 +35180,10 @@ RectTransform:
   m_Father: {fileID: 1102426407}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 98.77161, y: -65.40759}
-  m_SizeDelta: {x: 197.543, y: 130.8152}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 98.7715, y: 65.40759}
+  m_SizeDelta: {x: 197.543, y: 130.81519}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513007600
 MonoBehaviour:
@@ -51215,7 +51215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 157, y: -146.46}
+  m_AnchoredPosition: {x: 133.48, y: -125}
   m_SizeDelta: {x: 211, y: 211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1948612030
@@ -57043,7 +57043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAccelerationConstant: 0.2
-  mMaxSpeed: 1000
+  mMaxSpeed: 500
   currentSpeed: 0
   brakeForce: 800
   decelerationConstant: 0.2

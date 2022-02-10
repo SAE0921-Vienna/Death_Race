@@ -21055,7 +21055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAccelerationConstant: 0.2
-  mMaxSpeed: 1000
+  mMaxSpeed: 500
   currentSpeed: 0
   brakeForce: 800
   decelerationConstant: 0.2
