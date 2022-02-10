@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Dev/tomi/MainMenu.unity
+    guid: 9e0c59f77a4c914498eeef0b1cc008a6
+  - enabled: 1
+    path: Assets/Scenes/Dev/tomi/vsAI.unity
+    guid: 06ed26338bdebce40b3772a0ac9cc031
+  - enabled: 1
     path: Assets/Scenes/Dev/tomi/GhostMode.unity
     guid: 0affae0df21ac124ea6455de67a68328
+  - enabled: 1
+    path: Assets/Scenes/Dev/tomi/Sandbox.unity
+    guid: 4ec371442da43944bab3bbdb092da9a7
   m_configObjects: {}

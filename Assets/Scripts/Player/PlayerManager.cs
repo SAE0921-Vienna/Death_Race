@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
     public VehicleController vehicleController;
     private UIManager uiManager;
     private GameManager gameManager;
-    private PlayerWeapon playerWeapon;
+    private PlayerShipWeapon playerWeapon;
     [Header("Health")]
     public int health = 100;
     public int healthLimit = 100;
@@ -51,7 +51,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
     private void Awake()
     {
         vehicleController = GetComponent<VehicleController>();
-        playerWeapon = GetComponent<PlayerWeapon>();
+        playerWeapon = GetComponent<PlayerShipWeapon>();
 
         if (!playerWeapon)
         {
@@ -59,8 +59,8 @@ public class PlayerManager : MonoBehaviour, IDamageable
         }
         else
         {
-            ammoAdd = playerWeapon.ammoAdd;
-            ammoLimit = playerWeapon.ammoAdd;
+            ammoAdd = playerWeapon.GetAmmo();
+            ammoLimit = playerWeapon.GetAmmo();
 
         }
 

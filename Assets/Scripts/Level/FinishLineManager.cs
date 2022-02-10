@@ -15,6 +15,7 @@ public class FinishLineManager : MonoBehaviour
     public UIManager uiManager;
 
 
+
     private void Awake()
     {
         #region gameManager FindObjectOfType

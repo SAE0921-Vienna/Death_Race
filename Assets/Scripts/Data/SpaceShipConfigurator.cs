@@ -230,8 +230,6 @@ public class SpaceShipConfigurator : MonoBehaviour
     private void ChangeWeapon()
     {
         weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, transform.GetChild(1).GetChild(1).transform, false);
-        if (weaponClone.GetComponent<IWeapon>() == null) return;
-        vehicleWeaponScript = weaponClone.GetComponent<IWeapon>();
         weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
 
         if (weapons[currentWeapon].weaponBought && ships[currentShip].shipBought)

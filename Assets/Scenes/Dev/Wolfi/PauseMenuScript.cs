@@ -32,14 +32,22 @@ public class PauseMenuScript : MonoBehaviour
         pausePanelObject.GetComponent<Image>().color = new Color(hudColors[currentMaterial].R, hudColors[currentMaterial].G, hudColors[currentMaterial].B, hudColors[currentMaterial].A);
         optionsPanelObject.GetComponent<Image>().color = new Color(hudColors[currentMaterial].R, hudColors[currentMaterial].G, hudColors[currentMaterial].B, hudColors[currentMaterial].A);
     }
-    //void Update()
-    //{
-    //    if (!isPause)
-    //    {
-    //        //PlayerDriveFunction()
-    //        //PlayShootFunction()
-    //    }
-    //}
+
+    void Update()
+    {
+        if (isPause)
+        {
+            //PlayerDriveFunction()
+            //PlayShootFunction()
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+
+        }
+    }
+
     private void OnEnable()
     {
         inputActions.Enable();
@@ -55,7 +63,7 @@ public class PauseMenuScript : MonoBehaviour
         {
             pausePanel.gameObject.SetActive(true);
             //Cursor.lockState = CursorLockMode.None;
-            
+
             isPause = true;
         }
         else if (pausePanel.gameObject.activeInHierarchy == true || optionsPanel.gameObject.activeInHierarchy == true)

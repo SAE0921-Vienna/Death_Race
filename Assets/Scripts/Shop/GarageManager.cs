@@ -34,6 +34,13 @@ public class GarageManager : MonoBehaviour
         SceneManager.LoadScene(_name);
     }
 
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+
+    }
+
     private void Start()
     {
         audioManager.transform.GetChild(0).GetComponent<VolumeSlider>().GetAudiosAtStart();

@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 
     private PlayerManager playerManager;
     public CinemachineVirtualCamera vCam;
+
+    public GameObject gameOverCanvas;
+
     public float vCamPOV = 70f;
 
     public bool raceHasStarted;
@@ -41,8 +44,12 @@ public class GameManager : MonoBehaviour
     public Quaternion spawnPlayerRotation;
     public float spawnPlayerYOffset = 5f;
 
+
+
     private void Awake()
     {
+        Time.timeScale = 1;
+
 
         raceHasStarted = false;
         raceFinished = false;
@@ -122,6 +129,9 @@ public class GameManager : MonoBehaviour
                 FindObjectOfType<GhostManager>().StopRecording();
             }
             //Game Finish
+
+            gameOverCanvas.gameObject.SetActive(true);
+
             Debug.Log("YAY FINISH");
             for (int i = 0; i < finishLineManager.checkpointParent.childCount; i++)
             {
@@ -194,5 +204,10 @@ public class GameManager : MonoBehaviour
     public void ReplayLevel()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void BackToMainMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }

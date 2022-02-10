@@ -58,6 +58,7 @@ namespace AI
         private void Awake()
         {
             aivehicleController = GetComponent<AI_VehicleController>();
+            RespawnAI();
 
         }
 

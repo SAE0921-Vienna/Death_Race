@@ -44,7 +44,7 @@ namespace UserInterface
                 default:
                     break;
             }
-            roundTimerUI.text = gameManager.roundTimer.ToString();
+            roundTimerUI.text =  "TIME: " + gameManager.roundTimer.ToString();
         }
 
     }

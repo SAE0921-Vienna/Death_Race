@@ -25,7 +25,7 @@ public class GhostManager : MonoBehaviour
         ghostVehicleMaterialIndex = saveLoadScript.lastGhostVehicleIndex;
         ghostVehicleMaterialIndex = saveLoadScript.lastGhostMaterialIndex;
 
-        uimanager.highscoreUI.text = "Highscore: " + saveLoadScript.highScore.ToString();
+        uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.highScore.ToString();
 
 
 
