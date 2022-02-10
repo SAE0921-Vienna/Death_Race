@@ -17,6 +17,6 @@ MonoBehaviour:
   vehicleWeaponPrefab: {fileID: 1588917084508066265, guid: 07d4fa70c20a1f7479baeb4af34be01b, type: 3}
   laserPrefab: {fileID: 5654157430322735983, guid: e1a5065ec43a8f107bdf7b5efb981857, type: 3}
   WeaponSound: 4
-  ammoSize: 100
+  ammoSize: 50
   fireRate: 20
   damage: 2
