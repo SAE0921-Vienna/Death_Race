@@ -15,8 +15,7 @@ public class BombTrigger : MonoBehaviour
     {
         if (gameObject != null)
         {
-            //gameObject.GetComponent<SphereCollider>().enabled = false;
-            //gameObject.GetComponent<Rigidbody>().useGravity = false;
+            gameObject.GetComponent<SphereCollider>().enabled = false;
         }
 
         _explosion = GetComponent<IExplosion>();

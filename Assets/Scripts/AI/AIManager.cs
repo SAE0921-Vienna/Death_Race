@@ -58,7 +58,8 @@ namespace AI
         private void Awake()
         {
             aivehicleController = GetComponent<AI_VehicleController>();
-
+            spawnAIPosition = transform.position;
+            spawnAIRotation = transform.rotation;
         }
 
         private void Update()
@@ -66,6 +67,7 @@ namespace AI
             if (aivehicleController)
             {
                 currentSpeed = Mathf.RoundToInt(aivehicleController.currentSpeed * aivehicleController.mMaxSpeed);
+
                 isOnRoadtrack = aivehicleController.isOnRoadtrack;
 
             }
@@ -73,8 +75,8 @@ namespace AI
 
 
             Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
-
             CheckIfOnTrack();
+
         }
 
         public RaycastHit FacingInfo()
