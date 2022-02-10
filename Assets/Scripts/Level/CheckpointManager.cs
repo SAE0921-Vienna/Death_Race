@@ -51,17 +51,27 @@ public class CheckpointManager : MonoBehaviour
         if (checkpointsInWorldList.IndexOf(checkpoint) == nextCheckpointIndex)
         {
 
-            checkpoint.transform.GetChild(0).gameObject.SetActive(false);
+            if (gameManager.ghostmode)
+            {
+                checkpoint.transform.GetChild(0).gameObject.SetActive(false);
+
+            }
             if ((checkpointsInWorldList.IndexOf(checkpoint) + 1) < checkpointsInWorldList.Count)
             {
                 nextcheckpoint = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
-                nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
+                if (gameManager.ghostmode)
+                {
+                    nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
+                }
+
             }
+
+
 
 
             currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
             nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
-            gameManager.CheckCurrentCheckpoint();
+            gameManager.CheckCheckpoint();
             gameManager.spawnPlayerPosition = checkpoint.transform.position;
             gameManager.spawnPlayerRotation = checkpoint.transform.rotation;
 

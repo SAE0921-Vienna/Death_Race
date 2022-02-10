@@ -37,6 +37,12 @@ public class PlayerManager : MonoBehaviour, IDamageable
     public bool isOnRoadtrack;
     public bool isFacingCorrectDirection;
 
+    [Header("Position")]
+    public int currentlap;
+    public int currentCheckpointIndex;
+    public int nextCheckpointIndex;
+    public Checkpoint nextCheckpoint;
+
 
     [Header("Power Up Timer")]
     public float timer;

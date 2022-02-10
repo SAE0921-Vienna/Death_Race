@@ -12,11 +12,22 @@ public class IconFollow : MonoBehaviour
     private void Start()
     {
         icon = this.gameObject;
+        if (followTarget == null)
+        {
+            icon.GetComponent<MeshRenderer>().enabled = false;
+        }
+
     }
 
     private void Update()
     {
-        FollowObject(followTarget);
+        if (followTarget != null)
+        {
+            FollowObject(followTarget);
+            icon.GetComponent<MeshRenderer>().enabled = true;
+        }
+
+
     }
 
 

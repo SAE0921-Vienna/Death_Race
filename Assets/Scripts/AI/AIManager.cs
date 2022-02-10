@@ -37,8 +37,9 @@ namespace AI
         public int aiPosition;
         [Header("Checkpoints")]
         public int checkpoints;
-        public int currentCheckpoint;
-        public int nextCheckpoint;
+        public int currentCheckpointIndex;
+        public int nextCheckpointIndex;
+        public Checkpoint nextCheckpoint;
         [Header("Round Timer")]
         public float roundTimer;
         [Header("Off Track Timer")]
@@ -73,7 +74,7 @@ namespace AI
 
             Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
 
-
+            CheckIfOnTrack();
         }
 
         public RaycastHit FacingInfo()
@@ -102,6 +103,40 @@ namespace AI
         {
             health -= _damage;
             Debug.Log("Ich füge mir selber SCHADEN ZU");
+        }
+
+        public void CheckIfOnTrack()
+        {
+           
+            
+                if (!this.isOnRoadtrack)
+                {
+                    offTrackTimer += Time.deltaTime;
+                }
+                else
+                {
+                    offTrackTimer = 0;
+                }
+
+                if (offTrackTimer > offTrackTimerLimit)
+                {
+                    this.gameObject.SetActive(false);
+                    RespawnAI();
+                }
+            
+        }
+
+        public void RespawnAI()
+        {
+            offTrackTimer = 0;
+
+            spawnAIPosition = new Vector3(spawnAIPosition.x, spawnAIPosition.y + spawnAIYOffset, spawnAIPosition.z);
+            this.aivehicleController.currentSpeed = 0;
+            this.aivehicleController.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            this.aivehicleController.isOnRoadtrack = true;
+            this.transform.position = spawnAIPosition;
+            this.transform.rotation = spawnAIRotation;
+            this.gameObject.SetActive(true);
         }
     }
 }

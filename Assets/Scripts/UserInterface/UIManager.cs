@@ -18,6 +18,8 @@ namespace UserInterface
         public RectTransform wrongDirectionUI;
         public TextMeshProUGUI highscoreUI;
 
+        public GameObject gameOverUI;
+
         private void Awake()
         {
             gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
@@ -28,7 +30,20 @@ namespace UserInterface
             lapsAmountUI.text = gameManager.currentLap + "/" + gameManager.laps + " LAPS";
             //positionsUI.text = gameManager.playerPosition + "/" + gameManager.positions + " POSITION";
             //switch, st, nd, rd, th,...
-            positionsUI.text = gameManager.playerPosition +"st";
+            switch (gameManager.playerPosition)
+            {
+                case 1:
+                    positionsUI.text = gameManager.playerPosition + "st";
+                    break;
+                case 2:
+                    positionsUI.text = gameManager.playerPosition + "nd";
+                    break;
+                case 3:
+                    positionsUI.text = gameManager.playerPosition + "rd";
+                    break;
+                default:
+                    break;
+            }
             roundTimerUI.text = gameManager.roundTimer.ToString();
         }
 

@@ -259,7 +259,7 @@ public class Ghost : MonoBehaviour
 
             MeshRenderer mr = theGhost.gameObject.GetComponentInChildren<MeshRenderer>();
             mr.material = Resources.Load("Ghost_Shader", typeof(Material)) as Material;
-            positionHandler.enabled = true;
+            //positionHandler.enabled = true;
             iconFollow.followTarget = theGhost;
             
         }

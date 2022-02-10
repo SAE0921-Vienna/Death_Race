@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     public float offTrackTimer;
     public float offTrackTimerLimit = 5f;
 
+    public bool ghostmode;
+
     public Vector3 spawnPlayerPosition;
     public Quaternion spawnPlayerRotation;
     public float spawnPlayerYOffset = 5f;
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
 
         raceHasStarted = false;
         raceFinished = false;
+
 
         checkpointManager = FindObjectOfType<CheckpointManager>();
         if (!checkpointManager)
@@ -70,6 +73,7 @@ public class GameManager : MonoBehaviour
             spawnPlayerRotation = new Quaternion(playerManager.transform.rotation.x, playerManager.transform.rotation.y, playerManager.transform.rotation.z, playerManager.transform.rotation.w);
         }
 
+        CheckCheckpoint();
 
 
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour
 
     public void CheckLaps()
     {
+
         if (currentLap > laps)
         {
 
@@ -133,16 +138,21 @@ public class GameManager : MonoBehaviour
             currentLap = 0;
         }
 
+        playerManager.currentlap = currentLap;
+
     }
 
     /// <summary>
     /// Checks the currentcheckpoint and sets it
     /// </summary>
-    public void CheckCurrentCheckpoint()
+    public void CheckCheckpoint()
     {
         currentCheckpoint = checkpointManager.currentCheckpoint;
         nextCheckpoint = checkpointManager.nextCheckpointIndex;
 
+        playerManager.currentCheckpointIndex = currentCheckpoint;
+        playerManager.nextCheckpoint = checkpointManager.nextcheckpoint;
+        playerManager.nextCheckpointIndex = checkpointManager.nextCheckpointIndex;
 
     }
 
@@ -179,5 +189,10 @@ public class GameManager : MonoBehaviour
         playerManager.transform.position = spawnPlayerPosition;
         playerManager.transform.rotation = spawnPlayerRotation;
         playerManager.gameObject.SetActive(true);
+    }
+
+    public void ReplayLevel()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -16,9 +16,12 @@ public class PositionHandler : MonoBehaviour
     private Transform racersParent;
     public List<GameObject> racers;
 
+
+    public int[] checkpointArray;
+
+
     private void Start()
     {
-        //nextcheckpoint = checkpointManager.nextcheckpoint;
 
         racersParent = this.transform;
 
@@ -26,6 +29,10 @@ public class PositionHandler : MonoBehaviour
         {
             racers.Add(racersParent.GetChild(0).gameObject);
         }
+
+        //PositionCalc();
+        PositionTest();
+
     }
 
     private void Update()
@@ -45,20 +52,43 @@ public class PositionHandler : MonoBehaviour
 
         ////-------------------------------
 
-        PositionCalc();
+        //PositionCalc();
+
+        //only against one ai
+        PositionTest();
+
+
 
     }
 
+    public void PositionTest()
+    {
 
+        //Player
+        checkpointArray[0] = racersParent.GetChild(0).GetComponent<PlayerManager>().nextCheckpointIndex;
+        //AI
+        checkpointArray[1] = racersParent.GetChild(1).GetComponent<AIManager>().nextCheckpointIndex;
+
+
+        if (checkpointArray[0] > checkpointArray[1])
+        {
+            gameManager.playerPosition = 1;
+        }
+        if (checkpointArray[1] > checkpointArray[0])
+        {
+            gameManager.playerPosition = 2;
+        }
+
+    }
 
     public void PositionCalc()
     {
-        //playerPosition = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, nextcheckpoint.transform);
+        //playerPosition = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, racersParent.GetChild(0).GetComponent<PlayerManager>().nextCheckpoint.transform);
 
         ////player
-        //gameManager.positions[0] = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, nextcheckpoint.transform);
+        //gameManager.positions[0] = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, racersParent.GetChild(0).GetComponent<PlayerManager>().nextCheckpoint.transform);
         ////ai -s
-        //gameManager.positions[1] = DistanceToNextCheckpoint(racersParent.GetChild(1).transform, nextcheckpoint.transform);
+        //gameManager.positions[1] = DistanceToNextCheckpoint(racersParent.GetChild(1).transform, racersParent.GetChild(1).GetComponent<AIManager>().nextCheckpoint.transform);
 
         //Array.Sort(gameManager.positions);
 
@@ -110,7 +140,7 @@ public class PositionHandler : MonoBehaviour
     {
         if (racer.CompareTag("AI"))
         {
-            return racer.GetComponent<AIManager>().currentCheckpoint;
+            return racer.GetComponent<AIManager>().currentCheckpointIndex;
         }
         if (racer.CompareTag("Player"))
         {

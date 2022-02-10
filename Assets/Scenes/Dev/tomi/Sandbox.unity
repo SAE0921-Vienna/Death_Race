@@ -12113,6 +12113,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 755337595971927419, guid: aefbf8fff22990a4fa71b9d78516dfa2, type: 3}
   m_PrefabInstance: {fileID: 755337597335970734}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1407342054 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1945081802183222873, guid: 11715c23b52d00fc88139d1cffdc84e6, type: 3}
+  m_PrefabInstance: {fileID: 1945081800575218066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9374b8c1ac81d2f4c8bb27bac54a7b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454582027
 GameObject:
   m_ObjectHideFlags: 0
@@ -16911,6 +16922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishLine
       objectReference: {fileID: 0}
+    - target: {fileID: 6195616294318465845, guid: 076367074737b9844a7a768ebf79800f, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 1407342054}
     - target: {fileID: 6195616294318465845, guid: 076367074737b9844a7a768ebf79800f, type: 3}
       propertyPath: checkpointParent
       value: 

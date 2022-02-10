@@ -1,4 +1,5 @@
 using AI;
+using UserInterface;
 using UnityEngine;
 
 public class FinishLineManager : MonoBehaviour
@@ -10,6 +11,9 @@ public class FinishLineManager : MonoBehaviour
     public Transform checkpointParent;
 
     public Transform minimap;
+
+    public UIManager uiManager;
+
 
     private void Awake()
     {
@@ -49,8 +53,11 @@ public class FinishLineManager : MonoBehaviour
         if (other.CompareTag("Player") && gameManager.currentLap == 0 && gameManager.currentCheckpoint == 0)
         {
             gameManager.currentLap += 1;
-            checkpointParent.GetComponent<CheckpointManager>().SetFirstCheckpointMAT();
-            transform.GetChild(0).gameObject.SetActive(false);
+            if (gameManager.ghostmode)
+            {
+                checkpointParent.GetComponent<CheckpointManager>().SetFirstCheckpointMAT();
+                transform.GetChild(0).gameObject.SetActive(false);
+            }
             gameManager.StartRoundTimer();
             gameManager.CheckLaps();
             minimap.gameObject.SetActive(true);
@@ -60,21 +67,23 @@ public class FinishLineManager : MonoBehaviour
         if (other.CompareTag("Player") && gameManager.currentCheckpoint == gameManager.checkpoints - 1)
         {
             gameManager.currentLap += 1;
-
-            transform.GetChild(0).gameObject.SetActive(false);
-            checkpointParent.GetChild(0).GetChild(0).gameObject.SetActive(true);
+            if (gameManager.ghostmode)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+                checkpointParent.GetChild(0).GetChild(0).gameObject.SetActive(true);
+            }           
             gameManager.CheckLaps();
 
         }
 
 
 
-        if (other.CompareTag("AI") && aIManager.currentLap == 0 && aIManager.currentCheckpoint == 0)
+        if (other.CompareTag("AI") && aIManager.currentLap == 0 && aIManager.currentCheckpointIndex == 0)
         {
             aIManager.currentLap += 1;
         }
 
-        if (other.CompareTag("AI") && aIManager.currentCheckpoint == aIManager.checkpoints - 1)
+        if (other.CompareTag("AI") && aIManager.currentCheckpointIndex == aIManager.checkpoints - 1)
         {
             aIManager.currentLap += 1;
             aIManager.CheckLaps();
