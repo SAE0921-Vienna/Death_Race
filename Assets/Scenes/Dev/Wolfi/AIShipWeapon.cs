@@ -34,14 +34,19 @@ public class AIShipWeapon : ShipWeapon
 
     public override void Shoot()
     {
+        if (aIManager.ammo <= 0)
+            aIManager.canShoot = false;
+        else
+            aIManager.canShoot = true;
+
         if (!aIManager.canShoot) return;
-        
+
         if (Time.time > nextFire)
         {
             PlaySound();
             nextFire = Time.time + 1 / fireRate;
 
-            ammoSize -= 1;
+            aIManager.ammo -= 1;
             InstantiateProjectile();
 
             if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
@@ -96,7 +101,18 @@ public class AIShipWeapon : ShipWeapon
     }
     protected override void InstantiateProjectile()
     {
+        if (aIManager.currentSpeed >= 20)
+        {
+            projectileSpeed = (aIManager.currentSpeed * 150) + projectileDefaultSpeed;
+        }
+        else
+        {
+            projectileSpeed = projectileDefaultSpeed;
+        }
+
         GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed, ForceMode.Impulse);
+        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.deltaTime, ForceMode.Impulse);
+
+        Destroy(projectile, projectileLifeTime);
     }
 }

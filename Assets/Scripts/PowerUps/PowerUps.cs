@@ -13,6 +13,7 @@ public class PowerUps : MonoBehaviour
     private PlayerManager playerStats;
     private GameManager gameManager;
     private Transform powerupParent;
+    private PlayerShipWeapon playerShipWeapon;
     private int powerUpListLength = 1;
 
 

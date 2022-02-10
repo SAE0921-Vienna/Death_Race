@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
     public VehicleController vehicleController;
     private UIManager uiManager;
     private GameManager gameManager;
-    private PlayerShipWeapon playerWeapon;
+    private PlayerShipWeapon playerShipWeapon;
     [Header("Health")]
     public int health = 100;
     public int healthLimit = 100;
@@ -51,19 +51,7 @@ public class PlayerManager : MonoBehaviour, IDamageable
     private void Awake()
     {
         vehicleController = GetComponent<VehicleController>();
-        playerWeapon = GetComponent<PlayerShipWeapon>();
-
-        if (!playerWeapon)
-        {
-            Debug.LogWarning("PlayerWeapon NOT Found");
-        }
-        else
-        {
-            ammoAdd = playerWeapon.GetAmmo();
-            ammoLimit = playerWeapon.GetAmmo();
-
-        }
-
+        playerShipWeapon = GetComponent<PlayerShipWeapon>();
 
         #region  gameManager FindObjectOfType
         gameManager = FindObjectOfType<GameManager>();
@@ -85,7 +73,21 @@ public class PlayerManager : MonoBehaviour, IDamageable
         #endregion
 
     }
+    private void Start()
+    {
+        if (!playerShipWeapon)
+        {
+            Debug.LogWarning("PlayerWeapon NOT Found");
+        }
+        else
+        {
+            Debug.Log("Munition wurde geadded" + playerShipWeapon.GetAmmo());
+            ammo = playerShipWeapon.GetAmmo();
+            ammoAdd = playerShipWeapon.GetAmmo();
+            ammoLimit = playerShipWeapon.GetAmmo() * 3;
 
+        }
+    }
 
     private void Update()
     {
@@ -96,12 +98,11 @@ public class PlayerManager : MonoBehaviour, IDamageable
         }
         if (health <= 0) gameObject.SetActive(false);
         isOnRoadtrack = vehicleController.isOnRoadtrack;
-
     }
 
     public void GetDamage(int _damage)
     {
         health -= _damage;
-        Debug.Log("FUCK");
+        Debug.Log(this.gameObject.name + "bekommt Schaden: " + _damage);
     }
 }

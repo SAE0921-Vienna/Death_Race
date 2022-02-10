@@ -4,7 +4,6 @@ namespace AI
 {
     public class AIManager : MonoBehaviour, IDamageable
     {
-
         public AI_VehicleController aivehicleController;
         [Header("Health")]
         public int health = 100;
@@ -73,7 +72,6 @@ namespace AI
             }
             if (health <= 0) gameObject.SetActive(false);
 
-
             Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
             CheckIfOnTrack();
 
@@ -104,13 +102,11 @@ namespace AI
         public void GetDamage(int _damage)
         {
             health -= _damage;
-            Debug.Log("Ich füge mir selber SCHADEN ZU");
+            Debug.Log(this.gameObject.name + "bekommt Schaden: " + _damage);
         }
 
         public void CheckIfOnTrack()
         {
-           
-            
                 if (!this.isOnRoadtrack)
                 {
                     offTrackTimer += Time.deltaTime;
@@ -125,7 +121,6 @@ namespace AI
                     this.gameObject.SetActive(false);
                     RespawnAI();
                 }
-            
         }
 
         public void RespawnAI()

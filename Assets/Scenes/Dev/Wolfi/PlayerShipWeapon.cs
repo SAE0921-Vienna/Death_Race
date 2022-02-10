@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShipWeapon : ShipWeapon
 {
-    [SerializeField]private Camera _camera;
+    [SerializeField] private Camera _camera;
     Ray ray;
     protected PlayerManager playerManager;
 
@@ -26,10 +26,19 @@ public class PlayerShipWeapon : ShipWeapon
 
         if (Input.GetMouseButton(0) && Time.time > nextFire)
         {
+            if (playerManager.ammo <= 0)
+            {
+                playerManager.canShoot = false;
+                Debug.Log("No Ammo");
+                return;
+            }
+            else
+                playerManager.canShoot = true;
+
             PlaySound();
             nextFire = Time.time + 1 / fireRate;
 
-            ammoSize -= 1;
+            playerManager.ammo -= 1;
             InstantiateProjectile();
 
             if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
@@ -61,9 +70,9 @@ public class PlayerShipWeapon : ShipWeapon
     }
     protected override void InstantiateProjectile()
     {
-        if (playerManager.currentSpeed >= projectileDefaultSpeed)
+        if (playerManager.currentSpeed >= 20)
         {
-            projectileSpeed = playerManager.currentSpeed + projectileDefaultSpeed;
+            projectileSpeed = (playerManager.currentSpeed * 150) + projectileDefaultSpeed;
         }
         else
         {
@@ -71,6 +80,8 @@ public class PlayerShipWeapon : ShipWeapon
         }
 
         GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed, ForceMode.Impulse);
+        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.deltaTime, ForceMode.Impulse);
+
+        Destroy(projectile, projectileLifeTime);
     }
 }

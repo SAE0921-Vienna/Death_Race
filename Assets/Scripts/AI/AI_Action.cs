@@ -26,12 +26,11 @@ public class AI_Action : MonoBehaviour
         if (fieldOfView.nearestObject)
         {
             ShootingAI();
-            Debug.Log("BLYAT");
+            Debug.Log(this.gameObject.name + " shootet auf " + fieldOfView.nearestObject.gameObject.name);
         }
     }
     private void ShootingAI()
     {
         shipweapon.Shoot();
-        Debug.Log("SUUKA");
     }
 }

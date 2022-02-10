@@ -23,7 +23,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
     [SerializeField] protected int ammoSize;
     [SerializeField] protected float fireRate;
     [SerializeField] protected int projectileDamage;
-    [SerializeField] protected float projectileSpeed;
+    [SerializeField] protected float projectileSpeed = 10000f;
     [SerializeField] protected float projectileDefaultSpeed = 200f;
     [SerializeField] protected float projectileLifeTime = 5f;
     protected float nextFire = 0f;
