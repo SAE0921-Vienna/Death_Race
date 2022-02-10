@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AI;
 
 public class PlayerShipWeapon : ShipWeapon
 {
@@ -43,6 +44,7 @@ public class PlayerShipWeapon : ShipWeapon
 
             if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
             {
+                //if(!HitTarget().GetComponent<AIManager>().isImmortal) //Gilt nur für 1 Spieler gegen X AI's
                 HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
             }
             else
