@@ -84,6 +84,6 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 
     public void PlaySound()
     {
-        AudioManager.PlaySound(currentWeapon.WeaponSound);
+        //AudioManager.PlaySound(currentWeapon.WeaponSound);
     }
 }

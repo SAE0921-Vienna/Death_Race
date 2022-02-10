@@ -36,7 +36,6 @@ public class PlayerShipWeapon : ShipWeapon
             else
                 playerManager.canShoot = true;
 
-            PlaySound();
             nextFire = Time.time + 1 / fireRate;
 
             playerManager.ammo -= 1;
@@ -81,7 +80,7 @@ public class PlayerShipWeapon : ShipWeapon
         {
             projectileSpeed = projectileDefaultSpeed;
         }
-
+        //PlaySound();
         GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
         projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.deltaTime, ForceMode.Impulse);
 
