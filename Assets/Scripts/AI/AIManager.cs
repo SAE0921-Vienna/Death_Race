@@ -28,7 +28,6 @@ namespace AI
         public bool isOnRoadtrack;
         public bool isFacingCorrectDirection;
 
-
         [Header("Laps")]
         public int laps = 3;
         public int currentLap;

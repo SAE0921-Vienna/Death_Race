@@ -65,9 +65,9 @@ public class PositionHandler : MonoBehaviour
     {
 
         //Player
-        checkpointArray[0] = racersParent.GetChild(0).GetComponent<PlayerManager>().nextCheckpointIndex;
+        checkpointArray[0] = racers[0].GetComponent<PlayerManager>().nextCheckpointIndex;
         //AI
-        checkpointArray[1] = racersParent.GetChild(1).GetComponent<AIManager>().nextCheckpointIndex;
+        checkpointArray[1] = racers[1].GetComponent<AIManager>().nextCheckpointIndex;
 
 
         if (checkpointArray[0] > checkpointArray[1])

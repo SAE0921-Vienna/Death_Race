@@ -51,12 +51,13 @@ public class AIShipWeapon : ShipWeapon
 
             if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
             {
-                HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
-                Debug.Log("Ich Gengner SCHADEN");
+                if (!HitTarget().GetComponent<PlayerManager>().isImmortal) //Gilt nur für 1 Spieler gegen X AI's
+                    HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
+                Debug.Log(this.gameObject.name + " macht "+ HitTarget().gameObject.name + "Schaden");
             }
             else
             {
-                Debug.Log("MAMAMAAAAAA");
+                Debug.Log("HitTarget für IDamageable nicht gefunden (root - no parent?)");
             }
         }
     }
