@@ -69,7 +69,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 
         if (hitTarget)
         {
-            Debug.Log(hit.collider.gameObject);
+            Debug.Log(hit.transform.root.gameObject.name);
             return hit.transform.root.gameObject;
         }
         else

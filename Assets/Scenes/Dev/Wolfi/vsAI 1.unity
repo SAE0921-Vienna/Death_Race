@@ -2352,13 +2352,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69791177}
   m_LocalRotation: {x: 0.0015468458, y: -0.9976235, z: 0.06624548, w: 0.018880576}
-  m_LocalPosition: {x: 3521, y: -813.7, z: 791.7}
+  m_LocalPosition: {x: 3504.7, y: -832.4, z: 652.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1226698428}
   - {fileID: 52685182}
-  m_Father: {fileID: 1408672766}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 2.472, y: 180, z: 0.178}
 --- !u!114 &69791179
 MonoBehaviour:
@@ -3346,7 +3346,7 @@ Transform:
   - {fileID: 911936219}
   - {fileID: 1813386698}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &101649264
 PrefabInstance:
@@ -34474,9 +34474,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8160920351366770623}
-  - {fileID: 69791178}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34496,7 +34494,9 @@ MonoBehaviour:
   checkpointManager: {fileID: 59431891}
   gameManager: {fileID: 219298089}
   playerPosition: 0
-  racers: []
+  racers:
+  - {fileID: 69791177}
+  - {fileID: 8160920351366770594}
   checkpointArray: 0000000000000000
 --- !u!4 &1411798994 stripped
 Transform:
@@ -59192,8 +59192,8 @@ MonoBehaviour:
   ammoSize: 0
   fireRate: 0
   projectileDamage: 0
-  projectileSpeed: 1000
-  projectileDefaultSpeed: 500
+  projectileSpeed: 0
+  projectileDefaultSpeed: 10000
   projectileLifeTime: 5
   _camera: {fileID: 2089485221}
 --- !u!114 &8160920351366770597
@@ -59366,15 +59366,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8160920351366770594}
-  m_LocalRotation: {x: 0, y: 0.9998214, z: -0, w: -0.018900618}
+  m_LocalRotation: {x: -0, y: 0.9998214, z: -0, w: -0.018900618}
   m_LocalPosition: {x: 3501.64, y: -834.33, z: 524.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8160920351684978179}
   - {fileID: 8160920352391755751}
   - {fileID: 834595121362430080}
-  m_Father: {fileID: 1408672766}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 182.166, z: 0}
 --- !u!1 &8160920351684978176
 GameObject:

@@ -41,11 +41,12 @@ public class PlayerShipWeapon : ShipWeapon
 
             playerManager.ammo -= 1;
             InstantiateProjectile();
+            var tempobj = HitTarget();
 
-            if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
+            if (tempobj != null && tempobj.GetComponent<IDamageable>() != null)
             {
                 //if(!HitTarget().GetComponent<AIManager>().isImmortal) //Gilt nur für 1 Spieler gegen X AI's
-                HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
+                tempobj.GetComponent<IDamageable>().GetDamage(projectileDamage);
             }
             else
             {
