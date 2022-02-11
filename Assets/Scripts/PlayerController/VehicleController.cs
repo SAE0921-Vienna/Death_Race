@@ -49,6 +49,7 @@ namespace PlayerController
         private Rigidbody _rBody;
         private InputActions _controls;
         private RaycastHit hit;
+
         private const float steerAnimationConstant = 2f;
         private float drag;
 
@@ -121,9 +122,17 @@ namespace PlayerController
         }
         protected RaycastHit GroundInfo()
         {
-            Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
-            isOnRoadtrack = hit.collider.gameObject.layer == LayerMask.NameToLayer("Roadtrack");
-            
+            //Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
+            //isOnRoadtrack = hit.collider.gameObject.layer == LayerMask.NameToLayer("Roadtrack");
+
+            //return hit;
+            var myTransform = transform;
+            var position = myTransform.position;
+            var up = myTransform.up;
+
+            Physics.Raycast(position, -up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
+            Debug.DrawRay(position, -up, new Color(0.43f, 1f, 0f));
+
             return hit;
         }
 

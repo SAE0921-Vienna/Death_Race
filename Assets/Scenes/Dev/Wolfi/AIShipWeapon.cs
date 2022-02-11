@@ -43,7 +43,7 @@ public class AIShipWeapon : ShipWeapon
 
         if (Time.time > nextFire)
         {
-            PlaySound();
+            //PlaySound();
             nextFire = Time.time + 1 / fireRate;
 
             aIManager.ammo -= 1;

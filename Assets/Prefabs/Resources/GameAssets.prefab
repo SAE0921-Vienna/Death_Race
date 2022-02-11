@@ -46,15 +46,22 @@ MonoBehaviour:
   soundAudioClips:
   - sound: 4
     audioClip: {fileID: 8300000, guid: 6754603f22656b39f89387b7ba5099e4, type: 3}
+    audiomixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   - sound: 1
     audioClip: {fileID: 8300000, guid: e5f46fb2a3a1c4dc99a308d4215c0619, type: 3}
+    audiomixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   - sound: 2
     audioClip: {fileID: 8300000, guid: 60cef9bf2fd1ad9c2927d8666cd55e99, type: 3}
+    audiomixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   - sound: 3
     audioClip: {fileID: 8300000, guid: 5f31c03d59cdc33d58b1d1f92ca38169, type: 3}
+    audiomixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   - sound: 4
     audioClip: {fileID: 8300000, guid: 6754603f22656b39f89387b7ba5099e4, type: 3}
+    audiomixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   - sound: 5
     audioClip: {fileID: 8300000, guid: 3ba30a0786c478df29c518b3688ebcf8, type: 3}
+    audiomixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   - sound: 6
     audioClip: {fileID: 8300000, guid: c63c97718a9532c45903f33e38d138ce, type: 3}
+    audiomixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using Cinemachine;
 using Audio;
 
@@ -11,7 +12,8 @@ public class CameraMovement : MonoBehaviour
     public float cinemachineBrainBlendtime;
     public List<CameraMove> cameraMove;
     public List<MoveToTargetCam> moveToTargetCam;
-    
+
+    public AudioMixerGroup effectVolumeGroup;
 
     private void Start()
     {
@@ -37,6 +39,7 @@ public class CameraMovement : MonoBehaviour
             }
 
             AudioManager.PlaySound(AudioManager.Sound.MMWhoosh, .4f);
+            
             cameraMove[_cameraMoveElementNumber].endpointCam.gameObject.SetActive(true);
 
             yield return new WaitForSeconds(cinemachineBrainBlendtime + cameraMove[_cameraMoveElementNumber].additionalDelay);

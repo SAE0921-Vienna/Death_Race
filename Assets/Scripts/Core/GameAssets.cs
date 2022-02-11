@@ -1,6 +1,7 @@
 using System;
 using Audio;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Core
 {
@@ -23,6 +24,7 @@ namespace Core
         public class SoundAudioClip{
             public AudioManager.Sound sound;
             public AudioClip audioClip;
+            public AudioMixerGroup audiomixerGroup;
         }
 
         private void Start() {

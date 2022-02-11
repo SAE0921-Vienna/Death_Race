@@ -9,6 +9,7 @@ namespace Audio
 {
     public static class AudioManager
     {
+
         public enum Sound
         {
             VehicleSound,
@@ -21,6 +22,8 @@ namespace Audio
         }
         private static Dictionary<Sound, float> _soundTimerDictionary;
         private static Dictionary<Sound[], float> _soundArrayTimerDictionary;
+
+
 
         public static void Initialize()
         {
@@ -72,10 +75,12 @@ namespace Audio
 
                 var soundGameObject = new GameObject("Sound");
                 var audioSource = soundGameObject.AddComponent<AudioSource>();
+                
 
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.volume = volume;
                 audioSource.PlayOneShot(GetAudioClip(sound));
+                audioSource.GetComponent<AudioSource>().outputAudioMixerGroup = GetAudioMixerGroup(sound);
 
                 var destroyer = soundGameObject.AddComponent<SoundDestroyer>();
                 destroyer.DestroySoundObject(soundGameObject, GetAudioClip(sound).length);
@@ -214,11 +219,24 @@ namespace Audio
             {
                 if (soundAudioClip.sound == sound)
                 {
+                    
                     return soundAudioClip.audioClip;
                 }
             }
             return null;
         }
+        private static AudioMixerGroup GetAudioMixerGroup(Sound sound)
+        {
+            foreach (var soundAudioClip in GameAssets.i.soundAudioClips)
+            {
+                if (soundAudioClip.sound == sound)
+                {
+                    return soundAudioClip.audiomixerGroup;
+                }
+            }
+            return null;
+        }
+
     }
 }
 
