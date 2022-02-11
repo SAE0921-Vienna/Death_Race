@@ -59,6 +59,8 @@ namespace Audio
 
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.clip = GetAudioClip(sound);
+                audioSource.outputAudioMixerGroup = GetAudioMixerGroup(sound);
+
 
                 audioSource.Play();
 
@@ -80,7 +82,7 @@ namespace Audio
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.volume = volume;
                 audioSource.PlayOneShot(GetAudioClip(sound));
-                audioSource.GetComponent<AudioSource>().outputAudioMixerGroup = GetAudioMixerGroup(sound);
+                audioSource.outputAudioMixerGroup = GetAudioMixerGroup(sound);
 
                 var destroyer = soundGameObject.AddComponent<SoundDestroyer>();
                 destroyer.DestroySoundObject(soundGameObject, GetAudioClip(sound).length);
@@ -100,6 +102,7 @@ namespace Audio
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.volume = volume;
                 audioSource.PlayOneShot(GetAudioClip(sound));
+                audioSource.outputAudioMixerGroup = GetAudioMixerGroup(sound);
 
                 var destroyer = soundGameObject.AddComponent<SoundDestroyer>();
                 destroyer.DestroySoundObject(soundGameObject, GetAudioClip(sound).length);
@@ -114,6 +117,7 @@ namespace Audio
             {
                 var soundGameObject = new GameObject("Sound");
                 var audioSource = soundGameObject.AddComponent<AudioSource>();
+                audioSource.outputAudioMixerGroup = GetAudioMixerGroup(sound);
 
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.volume = volume;
@@ -129,6 +133,7 @@ namespace Audio
             {
                 var soundGameObject = new GameObject("Sound");
                 var audioSource = soundGameObject.AddComponent<AudioSource>();
+                audioSource.outputAudioMixerGroup = GetAudioMixerGroup(sound);
 
                 audioSource.pitch = pitch;
                 audioSource.volume = volume;
