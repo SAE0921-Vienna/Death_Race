@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Time.timeScale = 2;
+        Time.timeScale = 1;
 
 
         raceHasStarted = false;

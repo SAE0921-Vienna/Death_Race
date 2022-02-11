@@ -72,7 +72,7 @@ public class PlayerShipWeapon : ShipWeapon
     }
     protected override void InstantiateProjectile()
     {
-        if (playerManager.currentSpeed >= 20)
+        if (playerManager.currentSpeed > 0)
         {
             projectileSpeed = (playerManager.currentSpeed * 150) + projectileDefaultSpeed;
         }

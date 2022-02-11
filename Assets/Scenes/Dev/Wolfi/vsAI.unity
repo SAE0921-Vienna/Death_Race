@@ -58795,9 +58795,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 73deb3db3bc83af418dd98fe8cfe50ca, type: 2}
   - {fileID: 11400000, guid: c78fb7984cc6fb142a5870453fe02e8c, type: 2}
   allWeapons:
+  - {fileID: 11400000, guid: 324da42874bb52c49855aefa4e124888, type: 2}
   - {fileID: 11400000, guid: 543bea3634f5836469341c8cd34e4f20, type: 2}
   - {fileID: 11400000, guid: 3615c40cbe8d24c4a91980bd8ddf46fb, type: 2}
-  - {fileID: 11400000, guid: 324da42874bb52c49855aefa4e124888, type: 2}
   allMaterials:
   - {fileID: 11400000, guid: e465cf17d6b3cc54c8fef917f12168bc, type: 2}
   - {fileID: 11400000, guid: 2d1f933a35881754cb988d2ccd6329d4, type: 2}
@@ -59193,8 +59193,8 @@ MonoBehaviour:
   ammoSize: 0
   fireRate: 0
   projectileDamage: 0
-  projectileSpeed: 10000
-  projectileDefaultSpeed: 10000
+  projectileSpeed: 30000
+  projectileDefaultSpeed: 30000
   projectileLifeTime: 5
   _camera: {fileID: 2089485221}
 --- !u!114 &8160920351366770597
