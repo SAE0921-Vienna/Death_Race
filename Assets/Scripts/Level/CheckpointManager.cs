@@ -39,6 +39,7 @@ public class CheckpointManager : MonoBehaviour
                 checkpointsInWorld.rotation);
             checkpointEffect.transform.parent = checkpoint.transform;
             checkpointEffect.transform.localPosition = Vector3.zero;
+            checkpointEffect.SetActive(false);
         }
 
 
