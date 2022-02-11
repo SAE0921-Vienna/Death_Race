@@ -5,38 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/AI Testing_George.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/AI Testing_George.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-15959.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-15959.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-19760.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-19760.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-21267.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-21267.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-65855.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-65855.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-76570.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/VehicleDriving-76570.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/checkpoint.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/events.out.tfevents.1644418726.desktop.56341.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/events.out.tfevents.1644422333.desktop.58434.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/events.out.tfevents.1644423434.desktop.60616.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/events.out.tfevents.1644424046.desktop.61686.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/events.out.tfevents.1644424359.desktop.62162.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/VehicleDriving/events.out.tfevents.1644429511.desktop.69217.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/configuration.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/run_logs/timers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-env/venv/bin/results/killme/run_logs/training_status.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/CameraPosition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/CameraPosition.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/Main Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/vsAI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/vsAI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/LightSetting/GhostMode.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/LightSetting/GhostMode.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/LightSetting/Sandbox.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/LightSetting/Sandbox.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Road_Wall.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Road_Wall.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Checkpoints.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Checkpoints.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Main.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Main.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Main_Inside.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Main_Inside.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Pipes.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Pipes.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Tunnel.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Tunnel.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Tunnel_Top.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Tunnel_Top.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Tunnel_Wireframe.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_New_Prototype/Track_Tunnel_Wireframe.fbx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
