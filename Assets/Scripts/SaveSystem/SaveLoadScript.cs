@@ -23,11 +23,11 @@ public class SaveLoadScript : MonoBehaviour
     public int lastGhostMaterialIndex;
 
     [Range(0.0001f, 1f)]
-    public float masterVolume = 0.0001f;
+    public float masterVolume = 1f;
     [Range(0.0001f, 1f)]
-    public float musicVolume = 0.0001f;
+    public float musicVolume = 1f;
     [Range(0.0001f, 1f)]
-    public float effectVolume = 0.0001f;
+    public float effectVolume = 1f;
 
     public bool[] GetBoughtShips()
     {
