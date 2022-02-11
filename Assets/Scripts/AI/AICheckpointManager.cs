@@ -38,7 +38,7 @@ namespace AI
             targetPosition = checkpointsInWorldList[nextCheckpointIndex].transform.position;
             aisTarget.transform.position = targetPosition;
 
-      
+
 
             for (int i = 0; i < aiCheckpointParent.transform.childCount; i++)
             {
@@ -73,7 +73,12 @@ namespace AI
                     aIManager.spawnAIRotation = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1].transform.rotation;
                     aIManager.RespawnAI();
                 }
+                if (nextCheckpointIndex == checkpoints - 2)
+                {
+                    targetPosition = aiCheckpointsList[0].transform.position;
+                    aisTarget.transform.position = targetPosition;
 
+                }
 
 
                 aIManager.checkpoints = checkpoints;

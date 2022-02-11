@@ -9766,8 +9766,9 @@ GameObject:
   - component: {fileID: 6257447165978332429}
   - component: {fileID: 199252748927851184}
   - component: {fileID: 7076662653776401066}
-  - component: {fileID: 8168222509353625797}
-  - component: {fileID: 7132581779252435939}
+  - component: {fileID: 5489655024334704530}
+  - component: {fileID: 8533430506148979667}
+  - component: {fileID: 5853700305824354620}
   m_Layer: 0
   m_Name: GrenadePurple_Prefab
   m_TagString: Bullet
@@ -9784,7 +9785,7 @@ Transform:
   m_GameObject: {fileID: 1851811668642196}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4302254712915374}
   - {fileID: 4936716187576980}
@@ -14718,7 +14719,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &8168222509353625797
+--- !u!114 &5489655024334704530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14730,7 +14731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170a4bfab0e1469e96e4430ed7a3e4ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7132581779252435939
+--- !u!114 &8533430506148979667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14742,12 +14743,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5c530fc9f94766a02fd36c776b1307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionDamage: 15
-  explosionForce: 10
-  explosionRadius: 20
-  upwardsModifier: 30
+  explosionDamage: 33
+  explosionForce: 15
+  explosionRadius: 1000
+  upwardsModifier: 0
   forceMode: 1
   boomEffect: {fileID: 3754146698322088054}
+--- !u!114 &5853700305824354620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851811668642196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa5c1e37409a9344a344c0468db383d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabSound: {fileID: 1297775994297274, guid: 95270ff779ec9ed4889c50b8d4f2812e, type: 3}
+  destroyWhenDone: 1
+  soundPrefabIsChild: 0
+  pitchRandomMultiplier: 1
 --- !u!1001 &3937854226318815120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14758,6 +14775,10 @@ PrefabInstance:
     - target: {fileID: 1290715649332758, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
       propertyPath: m_Name
       value: FX_Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290715649332758, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4587786598044862, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
       propertyPath: m_RootOrder

@@ -13,11 +13,15 @@ namespace Weapons
 
         private void OnCollisionEnter(Collision other)
         {
-            if (other.collider.CompareTag("Player")) return;
-            if (other.collider.CompareTag("Bullet")) return;
+            //if (other.collider.CompareTag("Player")) return;
+            //if (other.collider.CompareTag("Bullet")) return;
 
             print("Collision Detected");
-            _explosion.Explode();
+            if(other.gameObject.layer == 9 || other.gameObject.layer == 10 || other.gameObject.layer == 8 || other.gameObject.layer == 6)
+            {
+                _explosion.Explode();
+
+            }
         }
     }
 }

@@ -82,6 +82,9 @@ public class FinishLineManager : MonoBehaviour
         if (other.CompareTag("AI") && aIManager.currentLap == 0 && aIManager.currentCheckpointIndex == 0)
         {
             aIManager.currentLap += 1;
+            
+            aIManager.CheckLaps();
+
         }
 
         if (other.CompareTag("AI") && aIManager.currentCheckpointIndex == aIManager.checkpoints - 1)

@@ -7,6 +7,7 @@ namespace AI
         public AI_VehicleController aivehicleController;
         [Header("Health")]
         public int health = 100;
+        public int healthLimit = 100;
         [Header("Nitro")]
         public float nitroSpeed = 50f;
         public float normalMaxSpeed;
@@ -73,6 +74,12 @@ namespace AI
 
             Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
             CheckIfOnTrack();
+
+            if (health <= 0)
+            {
+                RespawnAI();
+                health = healthLimit;
+            }
 
         }
 

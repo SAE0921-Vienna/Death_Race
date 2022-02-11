@@ -98,6 +98,12 @@ public class PlayerManager : MonoBehaviour, IDamageable
         }
         if (health <= 0) gameObject.SetActive(false);
         isOnRoadtrack = vehicleController.isOnRoadtrack;
+
+        if (health <= 0)
+        {
+            gameManager.RespawnPlayer();
+            health = healthLimit;
+        }
     }
 
     public void GetDamage(int _damage)
