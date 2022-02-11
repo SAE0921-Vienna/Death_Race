@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1644435016",
+        "python_version": "3.7.9 (default, Jan 30 2022, 17:35:39) \n[GCC 11.1.0]",
+        "command_line_arguments": "/home/gecovin/Development/Death_Race/python-env/venv/bin/mlagents-learn --run-id=killme --resume",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.8.1+cu102",
+        "numpy_version": "1.21.5",
+        "end_time_seconds": "1644435026"
+    },
+    "total": 10.021045693000133,
+    "count": 1,
+    "self": 0.0027677779999066843,
+    "children": {
+        "run_training.setup": {
+            "total": 0.011173905000077866,
+            "count": 1,
+            "self": 0.011173905000077866
+        },
+        "TrainerController.start_learning": {
+            "total": 10.007104010000148,
+            "count": 1,
+            "self": 0.00029384899994511215,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 10.006798819000096,
+                    "count": 1,
+                    "self": 10.006798819000096
+                },
+                "trainer_threads": {
+                    "total": 1.3230001059127972e-06,
+                    "count": 1,
+                    "self": 1.3230001059127972e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 1.001900000119349e-05,
+                    "count": 1,
+                    "self": 1.001900000119349e-05
+                }
+            }
+        }
+    }
+}

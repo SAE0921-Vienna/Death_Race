@@ -75,9 +75,10 @@ namespace AI
                 }
                 if (nextCheckpointIndex == checkpoints - 2)
                 {
-                    targetPosition = aiCheckpointsList[0].transform.position;
+                    currentCheckpoint = 0;
+                    nextCheckpointIndex = 1;
+                    targetPosition = aiCheckpointsList[nextCheckpointIndex].transform.position;
                     aisTarget.transform.position = targetPosition;
-
                 }
 
 
@@ -93,10 +94,6 @@ namespace AI
                 //Debug.Log("wrong direction or missed checkpoint");
 
             }
-
         }
-
-
-
     }
 }

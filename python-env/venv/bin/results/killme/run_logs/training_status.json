@@ -1,0 +1,65 @@
+{
+    "VehicleDriving": {
+        "checkpoints": [
+            {
+                "steps": 15959,
+                "file_path": "results/killme/VehicleDriving/VehicleDriving-15959.onnx",
+                "reward": null,
+                "creation_time": 1644422841.601923,
+                "auxillary_file_paths": [
+                    "results/killme/VehicleDriving/VehicleDriving-15959.pt"
+                ]
+            },
+            {
+                "steps": 19760,
+                "file_path": "results/killme/VehicleDriving/VehicleDriving-19760.onnx",
+                "reward": null,
+                "creation_time": 1644424013.3910718,
+                "auxillary_file_paths": [
+                    "results/killme/VehicleDriving/VehicleDriving-19760.pt"
+                ]
+            },
+            {
+                "steps": 21267,
+                "file_path": "results/killme/VehicleDriving/VehicleDriving-21267.onnx",
+                "reward": null,
+                "creation_time": 1644424260.8886282,
+                "auxillary_file_paths": [
+                    "results/killme/VehicleDriving/VehicleDriving-21267.pt"
+                ]
+            },
+            {
+                "steps": 65855,
+                "file_path": "results/killme/VehicleDriving/VehicleDriving-65855.onnx",
+                "reward": null,
+                "creation_time": 1644427982.2083364,
+                "auxillary_file_paths": [
+                    "results/killme/VehicleDriving/VehicleDriving-65855.pt"
+                ]
+            },
+            {
+                "steps": 76570,
+                "file_path": "results/killme/VehicleDriving/VehicleDriving-76570.onnx",
+                "reward": null,
+                "creation_time": 1644430618.4691303,
+                "auxillary_file_paths": [
+                    "results/killme/VehicleDriving/VehicleDriving-76570.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 76570,
+            "file_path": "results/killme/VehicleDriving.onnx",
+            "reward": null,
+            "creation_time": 1644430618.4691303,
+            "auxillary_file_paths": [
+                "results/killme/VehicleDriving/VehicleDriving-76570.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.1+cu102"
+    }
+}

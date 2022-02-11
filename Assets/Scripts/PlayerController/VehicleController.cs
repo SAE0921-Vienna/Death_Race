@@ -48,8 +48,8 @@ namespace PlayerController
         
         private Rigidbody _rBody;
         private InputActions _controls;
+        //private VehicleAgent _vehicleAgent;
         private RaycastHit hit;
-
         private const float steerAnimationConstant = 2f;
         private float drag;
 
@@ -60,6 +60,7 @@ namespace PlayerController
         protected virtual void Awake()
         {
             _rBody = GetComponent<Rigidbody>();
+            //_vehicleAgent = GetComponent<VehicleAgent>();
             drag = mAccelerationConstant * 10 / mMaxSpeed;
         }
 
@@ -103,39 +104,15 @@ namespace PlayerController
 
         /// <summary>
         /// Adds a force, towards the negative of the Z-Axis. This functions as a brake and a reverse gear at the same time.
-        /// (Reversing currently broken)
         /// </summary>
         protected void Brake()
         {
             if (AccelerationValue > 0f) return;
             _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue * Time.fixedDeltaTime * 10), ForceMode.Acceleration);
 
-            //print(AccelerationValue);
+            print(AccelerationValue);
         }
-
-        /// <summary>
-        /// Adds force towards the steering direction, to make steering feel more responsive.
-        /// </summary>
-        protected void SideThrust()
-        {
-            _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime * 100), ForceMode.Force);
-        }
-        protected RaycastHit GroundInfo()
-        {
-            //Physics.Raycast(transform.position, -transform.up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
-            //isOnRoadtrack = hit.collider.gameObject.layer == LayerMask.NameToLayer("Roadtrack");
-
-            //return hit;
-            var myTransform = transform;
-            var position = myTransform.position;
-            var up = myTransform.up;
-
-            Physics.Raycast(position, -up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
-            Debug.DrawRay(position, -up, new Color(0.43f, 1f, 0f));
-
-            return hit;
-        }
-
+        
         /// <summary>
         /// Uses PID Controller to create a constant balance between gravity (down on local y-axis) and force (up on local y-axis).
         /// This creates a smooth flying experience. If it detects no ground underneath, it automatically uses the world y-axis as the gravitational direction.
@@ -178,6 +155,26 @@ namespace PlayerController
             _rBody.MoveRotation(Quaternion.Lerp(_rBody.rotation, rotation, Time.deltaTime * 10f));
         }
 
+        /// <summary>
+        /// Adds force towards the steering direction, to make steering feel more responsive.
+        /// </summary>
+        protected void SideThrust()
+        {
+            _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime * 100), ForceMode.Force);
+        }
+        protected RaycastHit GroundInfo()
+        {
+            var myTransform = transform;
+            var position = myTransform.position;
+            var up = myTransform.up;
+            
+            //isOnRoadtrack = Physics.Raycast(position, -up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
+            isOnRoadtrack =
+                Physics.SphereCast(position, 1f, -up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
+            Debug.DrawRay(position, -up, new Color(0.43f, 1f, 0f));
+
+            return hit;
+        }
         #region Steering
         
         /// <summary>
@@ -187,15 +184,13 @@ namespace PlayerController
         /// </summary>
         protected void Steer()
         {
-            var steeringAngle = Vector3.up * steeringSpeed * SteerValueRaw * Time.fixedDeltaTime;
+            var steeringAngle = Vector3.up * (steeringSpeed * SteerValueRaw * Time.fixedDeltaTime);
             _rBody.AddRelativeTorque(steeringAngle, ForceMode.VelocityChange);
             
             var right = transform.right;
             var sidewaysSpeed = Vector3.Dot(_rBody.velocity, right);
             
-            var sideFriction = -right * (sidewaysSpeed / Time.fixedDeltaTime / 2f); 
-
-            //Finally, apply the sideways friction
+            var sideFriction = -right * (sidewaysSpeed / Time.fixedDeltaTime / 2f);
             _rBody.AddForce(sideFriction, ForceMode.Acceleration);
         }
 
