@@ -1719,6 +1719,7 @@ MonoBehaviour:
   checkpoints: 0
   currentCheckpoint: 0
   nextCheckpointIndex: 0
+  checkpointEffectPrefab: {fileID: 0}
   normalCheckpointMAT: {fileID: 2100000, guid: 91f21d47c2b9b7d4e946b81b5b39f0af, type: 2}
   nextcheckpoint: {fileID: 0}
 --- !u!4 &59431892
@@ -4123,6 +4124,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 8160920351366770623}
+    - target: {fileID: 8482835735354933241, guid: 0015467c9cc322103900948415cd301a, type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 20000
+      objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4141,11 +4146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.01888886
+      value: -0.018888824
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0006469053
+      value: -0.0006469036
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4153,7 +4158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0342218
+      value: -0.034221772
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14113,6 +14118,10 @@ PrefabInstance:
       propertyPath: field of view
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 3965160609210042293, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042295, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -14135,11 +14144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.01888886
+      value: -0.018888824
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0006469053
+      value: -0.0006469036
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
@@ -14147,7 +14156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0342218
+      value: -0.034221772
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

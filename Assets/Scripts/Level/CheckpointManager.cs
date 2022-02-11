@@ -12,6 +12,8 @@ public class CheckpointManager : MonoBehaviour
     public int nextCheckpointIndex;
 
     private Transform checkpointParent;
+    [SerializeField]
+    private GameObject checkpointEffectPrefab;
 
     public Material normalCheckpointMAT;
 
@@ -32,7 +34,11 @@ public class CheckpointManager : MonoBehaviour
             //Debug.Log(checkpointsInWorld);
             Checkpoint checkpoint = checkpointsInWorld.GetComponent<Checkpoint>();
             checkpointsInWorldList.Add(checkpoint);
-
+            
+            var checkpointEffect = Instantiate(checkpointEffectPrefab, checkpointsInWorld.position,
+                checkpointsInWorld.rotation);
+            checkpointEffect.transform.parent = checkpoint.transform;
+            checkpointEffect.transform.localPosition = Vector3.zero;
         }
 
 
