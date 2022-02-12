@@ -5,16 +5,125 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 4.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_MAT 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_MAT 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Glow 3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Glow 3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/HeatDistortion.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/HeatDistortion.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/ImpactShape.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/ImpactShape.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/ParticleAfterburner.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/ParticleAfterburner.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Sparks.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Sparks.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Outside.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Outside.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Pipes.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Pipes.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Redo_Segments.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Redo_Segments.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Redo_Wall.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Redo_Wall.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/HeatDistortionPS.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/HeatDistortionPS.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/ThrusterPS.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/ThrusterPS.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Trails.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Trails.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/WallGrindPS.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/WallGrindPS.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Main Camera Profile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Main Camera Profile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VFX/ShipVfxController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VFX/ShipVfxController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VFX/SparkCollisionParticles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VFX/SparkCollisionParticles.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MISC_SFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MISC_SFX/GameCompleted_SFX.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MISC_SFX/GameCompleted_SFX.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MISC_SFX/LapCompleted_SFX.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MISC_SFX/LapCompleted_SFX.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MISC_SFX/WallSparks_SFX.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/MISC_SFX/WallSparks_SFX.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Vehicles_SFX/EngineHum_SFX.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Vehicles_SFX/EngineHum_SFX.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Road.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Road/Road_Sci-Fi.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Road/Road_Sci-Fi.jpeg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/Glow_01.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/Glow_01.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/Glow_02.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/Glow_02.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/Glow_04.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/Glow_04.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/ImpactShape_01.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/ImpactShape_01.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/Sparks_01.tga" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/VFX/Sparks_01.tga.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/textures/asphaltTextureNo10085_1024x768_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/textures/asphaltTextureNo10085_1024x768_n.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/URP/URP-Asset Main.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/URP/URP-Asset Main.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Hover/AntigravityVehicle.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Hover/AntigravityVehicle.physicMaterial" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road01_MAT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/MusicPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/MusicPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/vsAI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/vsAI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Metal_Railing_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Metal_Railing_MAT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Piping_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Piping_MAT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT 4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road01_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road_MAT 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road_MAT 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road_Pipes_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road_Pipes_MAT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Track_Asphalt_Sides_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Track_Asphalt_Sides_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/ShipCamera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/ShipCamera Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/MainMenuPostProcessing.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/MainMenuPostProcessing.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/TestingScene/PostProcessingVolumeTest.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-0.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/LightSetting/GhostMode.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/LightSetting/GhostMode.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +140,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/PIDController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -185,6 +295,7 @@
       <workItem from="1643371228043" duration="299000" />
       <workItem from="1643377065705" duration="18207000" />
       <workItem from="1643422455967" duration="376000" />
+      <workItem from="1644662218772" duration="12186000" />
     </task>
     <servers />
   </component>

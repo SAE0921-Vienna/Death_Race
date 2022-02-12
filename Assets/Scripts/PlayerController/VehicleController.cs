@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using UnityEngine;
@@ -41,9 +42,10 @@ namespace PlayerController
 
         [Header("Track Information")]
         [SerializeField] protected LayerMask layerMask;
-        [SerializeField] protected LayerMask wallLayerMask;
-        [SerializeField] protected float maxRaycastDistance;
-        [SerializeField] protected float trackSearchRadius;
+        //[SerializeField] protected LayerMask wallLayerMask;
+        [SerializeField] protected float maxSphereCastDistance;
+        [SerializeField] protected float sphereCastRadius;
+        //[SerializeField] protected float trackSearchRadius;
         public bool isOnRoadtrack;
         
         private Rigidbody _rBody;
@@ -166,12 +168,10 @@ namespace PlayerController
         {
             var myTransform = transform;
             var position = myTransform.position;
-            var up = myTransform.up;
-            
-            //isOnRoadtrack = Physics.Raycast(position, -up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
-            isOnRoadtrack =
-                Physics.SphereCast(position, 1f, -up, out hit, maxRaycastDistance, layerMask, QueryTriggerInteraction.Ignore);
-            Debug.DrawRay(position, -up, new Color(0.43f, 1f, 0f));
+            var down = -myTransform.up;
+
+            isOnRoadtrack = 
+                Physics.SphereCast(position, sphereCastRadius, down, out hit, maxSphereCastDistance, layerMask, QueryTriggerInteraction.Ignore);
 
             return hit;
         }
@@ -228,6 +228,11 @@ namespace PlayerController
             _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
 
             currentSpeed = Mathf.Clamp01(currentSpeed - collision.impulse.magnitude);
+        }
+
+        protected void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(GroundInfo().point , sphereCastRadius);
         }
     }
 }
