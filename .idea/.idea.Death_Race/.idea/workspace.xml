@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Bottom.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Bottom.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/GhostRecording/Resources/GhostPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/GhostRecording/Resources/GhostPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Hover/AntigravityVehicle.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Hover/AntigravityVehicle.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 4.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/HeatDistortion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/VFX/HeatDistortion.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Redo_Segments.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_One_Piece/Track_Redo_Segments.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/ShipCamera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/ShipCamera Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Main Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Main Camera Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX/ShipVfxController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX/ShipVfxController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX/SparkCollisionParticles.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX/SparkCollisionParticles.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +188,7 @@
       <workItem from="1643377065705" duration="18207000" />
       <workItem from="1643422455967" duration="376000" />
       <workItem from="1644662218772" duration="12186000" />
-      <workItem from="1644737597581" duration="1859000" />
+      <workItem from="1644737597581" duration="4552000" />
     </task>
     <servers />
   </component>

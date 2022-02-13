@@ -113,8 +113,6 @@ namespace PlayerController
         {
             if (AccelerationValue > 0f) return;
             _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue * Time.fixedDeltaTime * 10), ForceMode.Acceleration);
-
-            print(AccelerationValue);
         }
         
         /// <summary>
@@ -230,7 +228,8 @@ namespace PlayerController
             var upwardForceFromCollision = Vector3.Dot(collision.impulse, up) * up;
             _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
 
-            currentSpeed = Mathf.Clamp01(currentSpeed - collision.impulse.magnitude);
+            currentSpeed = Mathf.Clamp01(currentSpeed - 0.001f * Mathf.Clamp(collision.impulse.magnitude, 0f, float.MaxValue));
+            print(collision.impulse.magnitude);
         }
 
         protected void OnDrawGizmos()

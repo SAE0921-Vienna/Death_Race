@@ -8,7 +8,7 @@ namespace VFX
         /*Controller Responsible for Various VFX on the Ship*/
         [Header("Thrusters")]
         [SerializeField] private ParticleSystem[] thrusterParticleSystems;
-        [SerializeField] [Range(0, 20)] private float minLifeTime, maxLifeTime;
+        [SerializeField] [Range(0, 5)] private float minLifeTime, maxLifeTime;
         [SerializeField] private AnimationCurve thrusterAnimationCurve;
         
         [Header("Trails")]
