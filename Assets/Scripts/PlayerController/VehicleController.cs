@@ -44,7 +44,7 @@ namespace PlayerController
 
         [Header("Track Information")]
         [SerializeField] protected LayerMask layerMask;
-        //[SerializeField] protected LayerMask wallLayerMask;
+        [SerializeField] protected LayerMask wallLayerMask;
         [SerializeField] protected float maxSphereCastDistance;
         [SerializeField] protected float sphereCastRadius;
         //[SerializeField] protected float trackSearchRadius;
@@ -52,8 +52,8 @@ namespace PlayerController
         
         private Rigidbody _rBody;
         private InputActions _controls;
-        //private VehicleAgent _vehicleAgent;
         private RaycastHit hit;
+        private RaycastHit wallHit;
         private const float steerAnimationConstant = 2f;
         private float drag;
 
@@ -173,6 +173,10 @@ namespace PlayerController
             isOnRoadtrack = 
                 Physics.SphereCast(position, sphereCastRadius, down, out hit, maxSphereCastDistance, layerMask, QueryTriggerInteraction.Ignore);
 
+            if (Physics.SphereCast(position, sphereCastRadius, down, out wallHit, maxSphereCastDistance, wallLayerMask, QueryTriggerInteraction.Ignore))
+            {
+                _rBody.AddForce(wallHit.normal * 100, ForceMode.Impulse);
+            }
             return hit;
         }
         #region Steering

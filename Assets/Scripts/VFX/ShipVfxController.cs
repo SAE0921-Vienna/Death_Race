@@ -1,3 +1,4 @@
+using Audio;
 using PlayerController;
 using UnityEngine;
 
@@ -73,13 +74,13 @@ namespace VFX
             
             sparkParticleSystem.gameObject.transform.position = collision.contacts[0].point;
             sparkParticleSystem.Play(true);
-            print("Collided with wall");
+
+            AudioManager.PlaySound(AudioManager.Sound.HitWall, 0.5f);
         }
     
         private void OnCollisionExit()
         {
             sparkParticleSystem.Stop(true);
-            print("stopped colliding with wall");
         }
     }
 }
