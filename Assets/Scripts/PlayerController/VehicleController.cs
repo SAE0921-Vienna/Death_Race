@@ -28,6 +28,8 @@ namespace PlayerController
         [SerializeField] protected float sideThrustAmount;
         [Range(0f, 15f)]
         [SerializeField] protected float steeringSpeed;
+
+        [Range(0f, 5)] [SerializeField] protected float speedDependentAngularDragMagnitude;
         [Range(0f, 1f)]
         [SerializeField] protected float idleSteeringAnimationSpeedMultiplier, steeringAnimationSpeedMultiplier;
 
@@ -179,12 +181,13 @@ namespace PlayerController
         
         /// <summary>
         /// Applies the rotation of the local Y-Axis, by adding a torque towards an angle, resulting in somewhat realistic flying turn behavior.
+        /// The amount of torque is dependent on the current speed variable, as higher speed equals higher angular drag (not of the rigidbody but added locally here).
         /// It then calculates the friction of the turn, by taking the dot-product of the current velocity * transform.right to get the magnitude of sidewards-movement.
         /// Finally the calculated force gets applied via Acceleration.
         /// </summary>
         protected void Steer()
         {
-            var steeringAngle = Vector3.up * (steeringSpeed * SteerValueRaw * Time.fixedDeltaTime);
+            var steeringAngle = Vector3.up * ((steeringSpeed - speedDependentAngularDragMagnitude * currentSpeed) * SteerValueRaw * Time.fixedDeltaTime);
             _rBody.AddRelativeTorque(steeringAngle, ForceMode.VelocityChange);
             
             var right = transform.right;
