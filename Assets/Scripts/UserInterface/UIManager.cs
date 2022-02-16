@@ -15,6 +15,7 @@ namespace UserInterface
         public TextMeshProUGUI lapsAmountUI;
         public TextMeshProUGUI positionsUI;
         public TextMeshProUGUI roundTimerUI;
+        public TextMeshProUGUI roundDeciTimerUI;
         public RectTransform wrongDirectionUI;
         public TextMeshProUGUI highscoreUI;
 
@@ -44,7 +45,8 @@ namespace UserInterface
                 default:
                     break;
             }
-            roundTimerUI.text =  "TIME: " + gameManager.roundTimer.ToString();
+            roundTimerUI.text =  "TIME: " + gameManager.roundTimerAsSecString;
+            roundDeciTimerUI.text = gameManager.roundTimerAsDeciString;
         }
 
     }

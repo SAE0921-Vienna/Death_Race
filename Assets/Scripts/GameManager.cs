@@ -33,7 +33,15 @@ public class GameManager : MonoBehaviour
     public int nextCheckpoint;
     [Header("Round Timer")]
     public float roundTimer;
+    public string roundTimerAsSecString;
+    public string roundTimerAsDeciString;
     public float timeSinceStart;
+
+    float currentTimer = 0f;
+    float currentMin =0f;
+    float currentSec = 0f;
+    float currentMilliSec = 0f;
+
     [Header("Off Track Timer")]
     public float offTrackTimer;
     public float offTrackTimerLimit = 5f;
@@ -97,15 +105,53 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
         if (raceHasStarted)
         {
             roundTimer = Time.time - timeSinceStart;
-            roundTimer = (float)System.Math.Round(roundTimer, 0);
+            ConvertTime();
         }
 
         CheckIfOnTrack();
 
+    }
+    private void ConvertTime()
+    {
+        string currentMinAsString;
+        string currentSecAsString;
+        string currentMiliAsString;
+
+        currentTimer += Time.deltaTime;
+
+        currentMilliSec = Mathf.RoundToInt(currentTimer * 100);
+        if (currentSec >= 60f)
+        {
+            currentSec = 0;
+            currentMin++;
+        }
+        if(currentMilliSec >= 100f)
+        {
+            currentSec++;
+            currentTimer = 0;
+        }
+
+        if (currentMin < 10)
+            currentMinAsString = "0" + currentMin;
+        else
+            currentMinAsString = "" + currentMin;
+
+        if (currentSec < 10)
+            currentSecAsString = "0" + currentSec;
+        else
+            currentSecAsString = "" + currentSec;
+
+        if (currentMilliSec < 10)
+            currentMiliAsString = "0" + currentMilliSec;
+        else
+            currentMiliAsString = "" + currentMilliSec;
+
+        //roundTimerAsString = currentMinAsString + ":" + currentSecAsString + ":" + currentMiliAsString;
+        roundTimerAsSecString = currentMinAsString + ":" + currentSecAsString + ":";
+        roundTimerAsDeciString = currentMiliAsString;
     }
 
     public void StartRoundTimer()
@@ -118,16 +164,16 @@ public class GameManager : MonoBehaviour
     public void CheckLaps()
     {
 
-        if (currentLap > laps)
+        if (currentLap > laps && !ghostmode)
         {
 
             currentLap = laps;
 
             raceFinished = true;
-            if (FindObjectOfType<GhostManager>())
-            {
-                FindObjectOfType<GhostManager>().StopRecording();
-            }
+            //if (FindObjectOfType<GhostManager>())
+            //{
+            //    FindObjectOfType<GhostManager>().StopRecording();
+            //}
             //Game Finish
 
             gameOverCanvas.gameObject.SetActive(true);
@@ -149,7 +195,6 @@ public class GameManager : MonoBehaviour
         }
 
         playerManager.currentlap = currentLap;
-
     }
 
     /// <summary>
