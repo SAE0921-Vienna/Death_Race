@@ -13,7 +13,7 @@ namespace PlayerController
         [Header("Acceleration and Braking")]
         [Range(0.1f, 1f)]
         public float mAccelerationConstant = 1f;
-        [Range(50f, 1500f)]
+        [Range(50f, 2500f)]
         public float mMaxSpeed;
         [HideInInspector] public float currentSpeed;
 
@@ -172,11 +172,6 @@ namespace PlayerController
 
             isOnRoadtrack = 
                 Physics.SphereCast(position, sphereCastRadius, down, out hit, maxSphereCastDistance, layerMask, QueryTriggerInteraction.Ignore);
-
-            if (Physics.SphereCast(position, sphereCastRadius, down, out wallHit, maxSphereCastDistance, wallLayerMask, QueryTriggerInteraction.Ignore))
-            {
-                _rBody.AddForce(wallHit.normal * 100, ForceMode.Impulse);
-            }
             return hit;
         }
         #region Steering

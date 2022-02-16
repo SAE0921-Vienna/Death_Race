@@ -33,7 +33,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.102
+    m_Value: 0.15
     min: 0
     max: 1
 --- !u!114 &-4856212924313738184
@@ -70,8 +70,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.6169014
-          value: 0.67536235
+          time: 0.5449102
+          value: 0.75
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1.69
+    m_Value: 2
     min: 0
   scatter:
     m_OverrideState: 1
