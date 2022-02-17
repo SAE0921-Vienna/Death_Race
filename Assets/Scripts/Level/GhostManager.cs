@@ -34,7 +34,7 @@ public class GhostManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag == "Player" && gameManager.currentLap == 0)
+        if (other.tag == "Player" )
         {
             if (ghost.hasData)
             {
@@ -55,6 +55,8 @@ public class GhostManager : MonoBehaviour
     public void StopRecording()
     {
         ghost.StopRecordingGhost();
+  
+
         if (saveLoadScript.highScore > gameManager.roundTimer || !ghost.hasData)
         {
             ghost.SaveGhostToFile();
@@ -62,6 +64,9 @@ public class GhostManager : MonoBehaviour
             saveLoadScript.SaveHighScore(gameManager.roundTimer, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
             
         }
+        ghost.loadFromFile();
+        saveLoadScript.LoadHighScoreData();
+        uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.highScore.ToString();
 
     }
 

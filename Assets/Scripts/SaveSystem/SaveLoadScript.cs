@@ -14,9 +14,7 @@ public class SaveLoadScript : MonoBehaviour
 
 
     public int milkyCoins;
-    public int starCoins;
     public int maxMilkyCoins = 9999999;
-    public int maxStarCoins = 9999999;
 
     public float highScore;
     public int lastGhostVehicleIndex;
@@ -113,7 +111,7 @@ public class SaveLoadScript : MonoBehaviour
 
     public void SaveMoneyData()
     {
-        SaveSystem.SaveMoneyData(milkyCoins, starCoins);
+        SaveSystem.SaveMoneyData(milkyCoins);
     }
     public void LoadMoneyData()
     {
@@ -125,7 +123,6 @@ public class SaveLoadScript : MonoBehaviour
         else
         {
             milkyCoins = data.milkyCoins;
-            starCoins = data.starCoins;
         }
     }
 

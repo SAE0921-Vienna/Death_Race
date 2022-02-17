@@ -47,6 +47,7 @@ public class FinishLineManager : MonoBehaviour
 
     }
 
+ 
     private void OnTriggerEnter(Collider other)
     {
         transform.GetChild(0).gameObject.SetActive(false);
@@ -74,6 +75,13 @@ public class FinishLineManager : MonoBehaviour
                 checkpointParent.GetChild(0).GetChild(0).gameObject.SetActive(true);
             }           
             gameManager.CheckLaps();
+
+            if (gameManager.ghostmode)
+            {
+                FindObjectOfType<GhostManager>().StopRecording();
+                FindObjectOfType<GhostManager>().ghost.playGhostRecording();
+                gameManager.roundTimer = 0;
+            }
 
         }
 

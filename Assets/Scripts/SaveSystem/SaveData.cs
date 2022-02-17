@@ -13,7 +13,6 @@ public class SaveData
     public int lastEquippedMaterialIndex;
 
     public int milkyCoins;
-    public int starCoins;
 
     public float highScore;
     public int lastGhostVehicleIndex;
@@ -37,10 +36,9 @@ public class SaveData
     }
 
     //Progress (money)
-    public SaveData(int milkyCoins, int starCoins)
+    public SaveData(int milkyCoins)
     {
         this.milkyCoins = milkyCoins;
-        this.starCoins = starCoins;
     }
 
 

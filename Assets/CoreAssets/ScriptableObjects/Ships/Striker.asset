@@ -18,5 +18,8 @@ MonoBehaviour:
   vehicleColliderMesh: {fileID: 4300000, guid: d8004ebbc859d8a4aa82c160e9391368, type: 3}
   health: 100
   nitroSpeed: 200
-  maxSpeed: 1800
+  maxSpeed: 1050
+  accelerationSpeed: 0.2
+  turnSpeed: 8
+  speedBasedAngularDrag: 3.5
   WeaponPosition: {x: 0, y: 0.5, z: 1.13}

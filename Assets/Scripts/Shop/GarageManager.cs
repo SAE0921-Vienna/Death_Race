@@ -21,12 +21,14 @@ public class GarageManager : MonoBehaviour
     public Button buttonBuyMaterial;
 
     public TextMeshProUGUI milkyCoins;
-    public TextMeshProUGUI starCoins;
     public string maxCoinsUI = "9999999";
 
-    public TextMeshProUGUI shipStats;
-    public TextMeshProUGUI weaponStats;
+    public TextMeshProUGUI shipStatsShop;
+    public TextMeshProUGUI weaponStatsShop;
     public TextMeshProUGUI materialPrice;
+
+    public TextMeshProUGUI shipStatsGarage;
+    public TextMeshProUGUI weaponStatsGarage;
 
     public GameObject audioManager;
     public void LoadScene(string _name)

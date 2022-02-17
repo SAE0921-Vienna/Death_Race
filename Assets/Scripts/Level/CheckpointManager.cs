@@ -72,8 +72,6 @@ public class CheckpointManager : MonoBehaviour
             }
 
 
-
-
             currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
             nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
             gameManager.CheckCheckpoint();

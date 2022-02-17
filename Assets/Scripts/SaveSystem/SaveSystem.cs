@@ -46,13 +46,13 @@ public static class SaveSystem
 
     }
 
-    public static void SaveMoneyData(int _milkyCoins, int _starCoins)
+    public static void SaveMoneyData(int _milkyCoins)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/money.deathrace";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        SaveData data = new SaveData(_milkyCoins, _starCoins);
+        SaveData data = new SaveData(_milkyCoins);
 
         formatter.Serialize(stream, data);
         stream.Close();

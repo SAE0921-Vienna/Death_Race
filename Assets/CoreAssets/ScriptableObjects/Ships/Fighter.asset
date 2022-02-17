@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Fighter
   m_EditorClassIdentifier: 
   name: Fighter
-  priceInShop: 2500
+  priceInShop: 2200
   vehicleMesh: {fileID: 4300000, guid: df183b756c0d6f542852af3c753d4e80, type: 3}
   vehicleColliderMesh: {fileID: 4300000, guid: 0bcc36066aa526046b4c97f1aea7e2c9, type: 3}
-  health: 120
-  nitroSpeed: 500
-  maxSpeed: 1900
+  health: 110
+  nitroSpeed: 200
+  maxSpeed: 1050
+  accelerationSpeed: 0.175
+  turnSpeed: 7
+  speedBasedAngularDrag: 3
   WeaponPosition: {x: 0, y: -0.25, z: 1.23}

@@ -41,6 +41,23 @@ public class ShopManager : MonoBehaviour
     public float timerCooldown = 5f;
     public bool automaticRotation;
 
+    [SerializeField]
+    private Slider healthSlider;
+    [SerializeField]
+    private Slider maxSpeedSlider;
+    [SerializeField]
+    private Slider acceleration;
+    [SerializeField]
+    private Slider turnSpeed;
+    [SerializeField]
+    private Slider angularDrag;
+
+    [SerializeField]
+    private Slider damageSlider;
+    [SerializeField]
+    private Slider ammoSlider;
+    [SerializeField]
+    private Slider firerateSlider;
 
     private void Awake()
     {
@@ -49,7 +66,8 @@ public class ShopManager : MonoBehaviour
         timer = timerCooldown;
 
         garageManager.shipName.text = shipsShop[currentShipPrefab].shipData.name;
-        garageManager.shipStats.text = shipsShop[currentShipPrefab].shipData.GetStats();
+        garageManager.shipStatsShop.text = shipsShop[currentShipPrefab].shipData.GetShipPrice() + "\n" + shipsShop[currentShipPrefab].shipData.GetShipStats();
+        SetShipStatSliders();
 
         if (shipsShop[currentShipPrefab].shipBought)
         {
@@ -83,15 +101,11 @@ public class ShopManager : MonoBehaviour
         {
             saveLoadScript.LoadMoneyData();
             garageManager.milkyCoins.text = saveLoadScript.milkyCoins.ToString();
-            garageManager.starCoins.text = saveLoadScript.starCoins.ToString();
             if (saveLoadScript.milkyCoins > int.Parse(garageManager.milkyCoins.text))
             {
                 garageManager.milkyCoins.text = garageManager.maxCoinsUI;
             }
-            if (saveLoadScript.starCoins > int.Parse(garageManager.starCoins.text))
-            {
-                garageManager.starCoins.text = garageManager.maxCoinsUI;
-            }
+
         }
     }
 
@@ -152,6 +166,24 @@ public class ShopManager : MonoBehaviour
         }
         timer = 0;
     }
+
+
+    public void SetShipStatSliders()
+    {
+        healthSlider.value = shipsShop[currentShipPrefab].shipData.health;
+        maxSpeedSlider.value = shipsShop[currentShipPrefab].shipData.maxSpeed;
+        acceleration.value = shipsShop[currentShipPrefab].shipData.accelerationSpeed;
+        turnSpeed.value = shipsShop[currentShipPrefab].shipData.turnSpeed;
+        angularDrag.value = shipsShop[currentShipPrefab].shipData.speedBasedAngularDrag;
+    }
+
+    public void SetWeaponStatSliders()
+    {
+        damageSlider.value = weaponsShop[currentWeaponPrefab].weaponData.damage;
+        ammoSlider.value = weaponsShop[currentWeaponPrefab].weaponData.ammoSize;
+        firerateSlider.value = weaponsShop[currentWeaponPrefab].weaponData.fireRate;
+    }
+
 
 
     public void GetElementsGManager()
@@ -233,9 +265,9 @@ public class ShopManager : MonoBehaviour
                 automaticRotation = false;
                 break;
             case 2:
-                currentSW = 0;
+                //currentSW = 0;
                 automaticRotation = true;
-                timer = timerCooldown;
+                timer = 0;
                 break;
             default:
                 Debug.LogWarning("Error in the Shop - Switch Prefab");
@@ -251,7 +283,8 @@ public class ShopManager : MonoBehaviour
         transform.GetChild(0).GetComponent<MeshFilter>().mesh = shipsShop[currentShipPrefab].shipData.vehicleMesh;
         shipName.text = shipsShop[currentShipPrefab].shipData.name;
 
-        garageManager.shipStats.text = shipsShop[currentShipPrefab].shipData.GetStats();
+        garageManager.shipStatsShop.text = shipsShop[currentShipPrefab].shipData.GetShipPrice() + "\n" + shipsShop[currentShipPrefab].shipData.GetShipStats();
+        SetShipStatSliders();
 
         if (shipsShop[currentShipPrefab].shipBought)
         {
@@ -298,7 +331,8 @@ public class ShopManager : MonoBehaviour
         weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = hologramMAT;
         weaponName.text = weaponsShop[currentWeaponPrefab].weaponData.name;
 
-        garageManager.weaponStats.text = weaponsShop[currentWeaponPrefab].weaponData.GetStats();
+        garageManager.weaponStatsShop.text = weaponsShop[currentWeaponPrefab].weaponData.GetWeaponPrice() + "\n" + weaponsShop[currentWeaponPrefab].weaponData.GetWeaponStats();
+        SetWeaponStatSliders();
 
 
         if (weaponsShop[currentWeaponPrefab].weaponBought)
@@ -439,7 +473,6 @@ public class ShopManager : MonoBehaviour
     public void ResetMoney()
     {
         saveLoadScript.milkyCoins = 0;
-        saveLoadScript.starCoins = 0;
         saveLoadScript.SaveMoneyData();
         ChangeMoneyUI();
 
@@ -452,7 +485,6 @@ public class ShopManager : MonoBehaviour
     public void InfiniteMoney()
     {
         saveLoadScript.milkyCoins = saveLoadScript.maxMilkyCoins;
-        saveLoadScript.starCoins = saveLoadScript.maxStarCoins;
         saveLoadScript.SaveMoneyData();
         ChangeMoneyUI();
     }

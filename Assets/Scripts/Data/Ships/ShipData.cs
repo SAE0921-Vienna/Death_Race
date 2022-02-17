@@ -12,19 +12,42 @@ public class ShipData : ScriptableObject
     public Mesh vehicleColliderMesh;
 
     [Header("Stats")]
-    public int health = 100;
-    public int nitroSpeed = 300;
-    public int maxSpeed = 2000;
+    [Range(75, 125)]
+    public int health;
+
+    public int nitroSpeed;
+    [Range(950f, 1200f)]
+    public float maxSpeed;
+    [Range(0.15f,0.3f)]
+    public float accelerationSpeed;
+    [Range(5f, 12f)]
+    public float turnSpeed;
+    [Range(2f, 5f)]
+    public float speedBasedAngularDrag;
 
     [Header("WeaponPosition")]
     public Vector3 WeaponPosition;
 
-    public string GetStats()
+
+
+    public string GetShipPrice()
+    {
+       return @$"Price: {priceInShop}";
+    }
+
+    public string GetShipStats()
     {
 
-        return @$"Price: {priceInShop}
-Speed: {maxSpeed}
-Health: {health}
+        return @$"Health: {health}
+
+Max Speed: {maxSpeed}
+
+Acceleration: {accelerationSpeed}
+
+Turn Speed: {turnSpeed}
+
+Angular Drag: {speedBasedAngularDrag}
+
 ";
 
     }

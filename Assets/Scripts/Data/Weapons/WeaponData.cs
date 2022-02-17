@@ -1,5 +1,4 @@
 using UnityEngine;
-using Audio;
 using static Audio.AudioManager;
 
 [CreateAssetMenu(menuName = "Scriptables/Weapon", fileName = "Weapon")]
@@ -17,16 +16,27 @@ public class WeaponData : ScriptableObject
     public Sound WeaponSound;
 
     [Header("Stats")]
+    [Range(3, 60)]
     public int ammoSize;
+    [Range(1, 20)]
     public float fireRate;
+    [Range(2, 75)]
     public int damage;
 
-    public string GetStats()
+    public string GetWeaponPrice()
     {
-        return @$"Price: {priceInShop}
+        return @$"Price: {priceInShop}";
+    }
+
+
+    public string GetWeaponStats()
+    {
+        return @$"Damage: {damage}
+
 Ammo: {ammoSize}
+
 FireRate: {fireRate}
-Damage: {damage}
+
 ";
 
     }

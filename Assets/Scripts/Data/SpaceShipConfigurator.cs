@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Weapons;
 
 public class SpaceShipConfigurator : MonoBehaviour
@@ -43,6 +44,26 @@ public class SpaceShipConfigurator : MonoBehaviour
     public int currentMaterial = 0;
     public int maxMaterials;
     #endregion
+
+    [SerializeField]
+    private Slider healthSlider;
+    [SerializeField]
+    private Slider maxSpeedSlider;
+    [SerializeField]
+    private Slider acceleration;
+    [SerializeField]
+    private Slider turnSpeed;
+    [SerializeField]
+    private Slider angularDrag;
+
+    [SerializeField]
+    private Slider damageSlider;
+    [SerializeField]
+    private Slider ammoSlider;
+    [SerializeField]
+    private Slider firerateSlider;
+
+
 
     /// <summary>
     /// Gets all the ships, weapons and materials in the game from the saved data
@@ -151,6 +172,8 @@ public class SpaceShipConfigurator : MonoBehaviour
         GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].shipData.vehicleMesh;
         GetComponentInChildren<MeshCollider>().sharedMesh = ships[currentShip].shipData.vehicleColliderMesh;
 
+        garageManager.shipStatsGarage.text = ships[currentShip].shipData.GetShipStats();
+        SetShipStatSliders();
 
         if (ships[currentShip].shipBought)
         {
@@ -231,6 +254,9 @@ public class SpaceShipConfigurator : MonoBehaviour
     {
         weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, transform.GetChild(1).GetChild(1).transform, false);
         weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
+
+        garageManager.weaponStatsGarage.text = weapons[currentWeapon].weaponData.GetWeaponStats();
+        SetWeaponStatSliders();
 
         if (weapons[currentWeapon].weaponBought && ships[currentShip].shipBought)
         {
@@ -444,6 +470,25 @@ public class SpaceShipConfigurator : MonoBehaviour
         }
 
     }
+
+
+    public void SetShipStatSliders()
+    {
+        healthSlider.value = ships[currentShip].shipData.health;
+        maxSpeedSlider.value = ships[currentShip].shipData.maxSpeed;
+        acceleration.value = ships[currentShip].shipData.accelerationSpeed;
+        turnSpeed.value = ships[currentShip].shipData.turnSpeed;
+        angularDrag.value = ships[currentShip].shipData.speedBasedAngularDrag;
+    }
+
+    public void SetWeaponStatSliders()
+    {
+        damageSlider.value = weapons[currentWeapon].weaponData.damage;
+        ammoSlider.value = weapons[currentWeapon].weaponData.ammoSize;
+        firerateSlider.value = weapons[currentWeapon].weaponData.fireRate;
+    }
+
+
 
     /// <summary>
     /// Unlocks All Ships, Weapons and Materials in the game
