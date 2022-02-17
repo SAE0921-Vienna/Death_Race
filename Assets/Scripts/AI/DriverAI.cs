@@ -10,10 +10,10 @@ namespace AI
         private Vector3 targetPosition;
 
         [SerializeField] private float forwardAmount;
-        public float ForwardAmount => forwardAmount;
+        public float ForwardAmount => forwardAmount; //This is what is passed into the Vehicle Controller
         
         [SerializeField] private float turnAmount;
-        public float TurnAmount => turnAmount;
+        public float TurnAmount => turnAmount; //This is what is passed into the Vehicle Controller
 
         [SerializeField]
         private float forwardPlusValue = 1f;
@@ -43,26 +43,29 @@ namespace AI
         private void Update()
         {
             SetTargetPosition(targetPositionTransform.position);
+            SetForwardAndTurnAmount();
+        }
 
+        private void SetForwardAndTurnAmount()
+        {
             //distance to the target..
             var distanceToTarget = Vector3.Distance(transform.position, targetPosition);
-            
-            //if distance to target is greater than the reachedTarget --> too far
+
+            //if driver hasn't reached target yet.
             if (distanceToTarget > minDistanceToTarget)
             {
                 //Too far
                 var dirToMovePosition = (targetPosition - transform.position).normalized;
 
-                //if above 1 its infront, if below 0 its behind
+                //calculate the dot product of the difference of direction to move and current transform.position.
+                //if above 1 its in front, if below 0 its behind
                 var dot = Vector3.Dot(transform.forward, dirToMovePosition);
-                //Debug.Log(dot);
 
-                //if target is infront
+                //if target is in front
                 if (dot > 0)
                 {
                     //move forward
                     forwardAmount = forwardPlusValue;
-
                     //if distance to target is smaller than stopping distance and the current speed is greater than the stopping speed
                     if (distanceToTarget < stoppingDistance && aiVehicleController.currentSpeed > stoppingSpeed)
                     {
@@ -73,7 +76,7 @@ namespace AI
                 else
                 {
                     //if target is behind
-                    var reverseDistance = 25f;                
+                    var reverseDistance = 25f; //max distance to reverse.
                     if (distanceToTarget > reverseDistance)
                     {
                         //Too far to reverse
@@ -85,9 +88,9 @@ namespace AI
                     }
                 }
 
-                //for turning
-                //this bit needs Fixing!!!
-                var angleToDir = Vector3.SignedAngle(transform.forward, dirToMovePosition, Vector3.up);
+                //Returns the angle difference between current forward and direction to move towards.
+                var angleToDir = Vector3.SignedAngle(transform.forward, dirToMovePosition, Vector3.up); //returns between -180 and 180.
+
                 //Debug.Log(angleToDir);
                 if (angleToDir > 0)
                 {
@@ -109,12 +112,13 @@ namespace AI
                 {
                     forwardAmount = 0f;
                 }
+
                 turnAmount = 0f;
             }
         }
 
         /// <summary>
-        /// Sets the targetposition
+        /// Sets the target position
         /// </summary>
         /// <param name="targetPositionTmp"></param>
         private void SetTargetPosition(Vector3 targetPositionTmp)

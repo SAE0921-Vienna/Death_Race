@@ -71,7 +71,7 @@ namespace AI
                 {
                     aIManager.spawnAIPosition = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1].transform.position;
                     aIManager.spawnAIRotation = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1].transform.rotation;
-                    aIManager.RespawnAI();
+                    //aIManager.RespawnAI();
                 }
                 if (nextCheckpointIndex == checkpoints - 2)
                 {

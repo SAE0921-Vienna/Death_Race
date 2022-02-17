@@ -5,265 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Hologram/_Hologram_Rim_Flicker_Blue_MAT 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/Hologram/_Hologram_Rim_Flicker_Blue_MAT 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/New Folder.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Tracks.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Tracks/Track_Prototype_Prefab.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Tracks/Track_Prototype_Prefab.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-0_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-1_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-1_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-1_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-1_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-2_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-2_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-2_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Lightmap-2_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ShipSmoothDamp.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ShipSmoothDamp.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ML-Agents.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode 1_timers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode 1_timers.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads/Track_Redo_Segments.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads/Track_Redo_Segments.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads/Training_Track_Checkpoints.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads/Training_Track_Checkpoints.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Machine Learning.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Machine Learning/Empty_Ship_AI.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Machine Learning/Empty_Ship_AI.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/AI Testing 1.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/AI Testing 1.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode 1.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode 1.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManagerMachine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManagerMachine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AI_VehicleController_ML.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AI_VehicleController_ML.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/IDriverAI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/IDriverAI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo_0.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo_1.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo_2.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo_3.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo_4.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo_5.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo_6.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demos/VehicleDemo_7.demo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/URP/URP-Asset Main.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/URP/URP-Asset Main.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Examples/Materials/Road Underside.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Basic_Road.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Basic_Road.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Road.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Road.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Road_Insane_Backup.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Road_Insane_Backup.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_01_Prototype.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_01_Prototype.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Antennas_v0.1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Antennas_v0.1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Decorative_Cylinder_v0.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Decorative_Cylinder_v0.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Main_Inside_v0.1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Main_Inside_v0.1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Main_v0.1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Main_v0.1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Pipes_v0.1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Pipes_v0.1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Tunnel_v0.1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Tunnel_v0.1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Walls_v0.1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Walls_v0.1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/detailed_road.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/detailed_road.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/tunnel.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/tunnel.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/ShipCamera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/ShipCamera Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Main Camera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Main Camera Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-0.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-1.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-1.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-10.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-10.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-11.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-11.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-12.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-12.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-13.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-13.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-14.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-14.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-15.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-15.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-16.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-16.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-17.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-17.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-18.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-18.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-19.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-19.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-2.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-2.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-20.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-20.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-21.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-21.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-22.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-22.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-23.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-23.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-24.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-24.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-25.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-25.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-26.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-26.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-27.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-27.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-28.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-28.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-29.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-29.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-3.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-3.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-30.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-30.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-31.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-31.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-32.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-32.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-33.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-33.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-34.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-34.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-35.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-35.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-36.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-36.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-37.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-37.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-38.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-38.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-39.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-39.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-4.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-4.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-40.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-40.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-41.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-41.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-42.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-42.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-43.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-43.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-44.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-44.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-45.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-45.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-46.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-46.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-47.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-47.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-48.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-48.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-49.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-49.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-5.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-5.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-50.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-50.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-51.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-51.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-52.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-52.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-53.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-53.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-54.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-54.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-55.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-55.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-56.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-56.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-57.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-57.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-58.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-58.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-59.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-59.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-6.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-6.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-60.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-60.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-61.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-61.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-62.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-62.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-63.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-63.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-64.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-64.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-65.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-65.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-66.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-66.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-67.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-67.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-68.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-68.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-69.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-69.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-7.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-7.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-70.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-70.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-71.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-71.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-72.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-72.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-73.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-73.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-74.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-74.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-75.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-75.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-76.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-76.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-77.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-77.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-78.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-78.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-79.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-79.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-8.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-8.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-80.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-80.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-81.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-81.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-82.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-82.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-83.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-83.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-84.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-84.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-85.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-85.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-86.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-86.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-87.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-87.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-88.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-88.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-89.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-89.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-9.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-9.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-90.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-90.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-91.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-91.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-92.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-92.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-93.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-93.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-94.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-94.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-95.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-95.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-96.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-96.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-97.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-97.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-98.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-98.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-99.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/ReflectionProbe-99.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/LightSetting/GhostMode.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/LightSetting/GhostMode.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/DriverAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/DriverAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Checkpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Checkpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -436,7 +221,9 @@
       <workItem from="1643422455967" duration="376000" />
       <workItem from="1644662218772" duration="12186000" />
       <workItem from="1644737597581" duration="6088000" />
-      <workItem from="1645022201814" duration="2593000" />
+      <workItem from="1645022201814" duration="3903000" />
+      <workItem from="1645051004581" duration="2301000" />
+      <workItem from="1645092199720" duration="18582000" />
     </task>
     <servers />
   </component>

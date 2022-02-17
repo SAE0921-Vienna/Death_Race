@@ -22,10 +22,7 @@ public class CheckpointManager : MonoBehaviour
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
-
-
-        checkpointParent = this.transform;
-
+        checkpointParent = transform;
         checkpointsInWorldList = new List<Checkpoint>();
 
         //Order here is very important - in the hiearchy
@@ -34,12 +31,15 @@ public class CheckpointManager : MonoBehaviour
             //Debug.Log(checkpointsInWorld);
             Checkpoint checkpoint = checkpointsInWorld.GetComponent<Checkpoint>();
             checkpointsInWorldList.Add(checkpoint);
-            
-            var checkpointEffect = Instantiate(checkpointEffectPrefab, checkpointsInWorld.position,
-                checkpointsInWorld.rotation);
-            checkpointEffect.transform.parent = checkpoint.transform;
-            checkpointEffect.transform.localPosition = Vector3.zero;
-            checkpointEffect.SetActive(false);
+
+            if (gameManager.ghostmode) 
+            {
+                var checkpointEffect = Instantiate(checkpointEffectPrefab, checkpointsInWorld.position,
+                    checkpointsInWorld.rotation);
+                checkpointEffect.transform.parent = checkpoint.transform;
+                checkpointEffect.transform.localPosition = Vector3.zero;
+                checkpointEffect.SetActive(false);
+            }
         }
 
 
@@ -48,7 +48,6 @@ public class CheckpointManager : MonoBehaviour
 
         nextcheckpoint = checkpointsInWorldList[0];
         nextCheckpointIndex = 0;
-
     }
 
     public void PlayerThroughCheckpoint(Checkpoint checkpoint)
@@ -68,7 +67,6 @@ public class CheckpointManager : MonoBehaviour
                 {
                     nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
                 }
-
             }
 
 
@@ -80,12 +78,6 @@ public class CheckpointManager : MonoBehaviour
 
             //Debug.Log("correct direction");
         }
-        else
-        {
-            //Debug.Log("wrong direction or missed checkpoint");
-
-        }
-
     }
 
     public void SetFirstCheckpointMAT()
@@ -94,6 +86,4 @@ public class CheckpointManager : MonoBehaviour
         //nextcheckpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
         nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
     }
-
-
 }

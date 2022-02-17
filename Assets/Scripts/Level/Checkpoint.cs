@@ -6,6 +6,7 @@ public class Checkpoint : MonoBehaviour
     private GameManager gameManager;
     private CheckpointManager checkpointManager;
     private AICheckpointManager aicheckpointManager;
+    private AICheckpointManagerMachine mlCheckpointManager;
 
 
     private void Awake()
@@ -25,8 +26,9 @@ public class Checkpoint : MonoBehaviour
         checkpointManager = GetComponentInParent<CheckpointManager>();
 
         #region aicheckpointManager FindObjectOfType
-        aicheckpointManager = FindObjectOfType<AICheckpointManager>();
-        if (aicheckpointManager)
+        //aicheckpointManager = FindObjectOfType<AICheckpointManager>();
+        mlCheckpointManager = FindObjectOfType<AICheckpointManagerMachine>();
+        if (mlCheckpointManager)
         {
             //AIManager Found
         }
@@ -48,8 +50,8 @@ public class Checkpoint : MonoBehaviour
         if (other.CompareTag("AI") )
         {
             //Debug.Log("Checkpoint");
-            aicheckpointManager.AIThroughCheckpoint(this);
-
+            //aicheckpointManager.AIThroughCheckpoint(this);
+            mlCheckpointManager.AIThroughCheckpoint(this);
         }
 
     }
