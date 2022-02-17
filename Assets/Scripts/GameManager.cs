@@ -198,7 +198,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks the currentcheckpoint and sets it
+    /// Checks the current checkpoint and sets it
     /// </summary>
     public void CheckCheckpoint()
     {
@@ -208,7 +208,6 @@ public class GameManager : MonoBehaviour
         playerManager.currentCheckpointIndex = currentCheckpoint;
         playerManager.nextCheckpoint = checkpointManager.nextcheckpoint;
         playerManager.nextCheckpointIndex = checkpointManager.nextCheckpointIndex;
-
     }
 
 

@@ -1,10 +1,11 @@
+using PlayerController;
 using UnityEngine;
 
 namespace AI
 {
     public class AIManager : MonoBehaviour, IDamageable
     {
-        public AI_VehicleController aivehicleController;
+        public VehicleController ai_vehicleController;
         [Header("Health")]
         public int health = 100;
         public int healthLimit = 100;
@@ -56,18 +57,18 @@ namespace AI
 
         private void Awake()
         {
-            aivehicleController = GetComponent<AI_VehicleController>();
+            ai_vehicleController = GetComponent(typeof(VehicleController)) as AI_VehicleController_ML;
             spawnAIPosition = transform.position;
             spawnAIRotation = transform.rotation;
         }
 
         private void Update()
         {
-            if (aivehicleController)
+            if (ai_vehicleController)
             {
-                currentSpeed = Mathf.RoundToInt(aivehicleController.currentSpeed * aivehicleController.mMaxSpeed);
+                currentSpeed = Mathf.RoundToInt(ai_vehicleController.currentSpeed * ai_vehicleController.mMaxSpeed);
 
-                isOnRoadtrack = aivehicleController.isOnRoadtrack;
+                isOnRoadtrack = ai_vehicleController.isOnRoadtrack;
 
             }
             if (health <= 0) gameObject.SetActive(false);
@@ -124,8 +125,8 @@ namespace AI
 
                 if (offTrackTimer > offTrackTimerLimit)
                 {
-                    this.gameObject.SetActive(false);
-                    RespawnAI();
+                    //this.gameObject.SetActive(false);
+                    //RespawnAI();
                 }
         }
 
@@ -134,9 +135,9 @@ namespace AI
             offTrackTimer = 0;
 
             spawnAIPosition = new Vector3(spawnAIPosition.x, spawnAIPosition.y + spawnAIYOffset, spawnAIPosition.z);
-            this.aivehicleController.currentSpeed = 0;
-            this.aivehicleController.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            this.aivehicleController.isOnRoadtrack = true;
+            this.ai_vehicleController.currentSpeed = 0;
+            this.ai_vehicleController.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            this.ai_vehicleController.isOnRoadtrack = true;
             this.transform.position = spawnAIPosition;
             this.transform.rotation = spawnAIRotation;
             this.gameObject.SetActive(true);

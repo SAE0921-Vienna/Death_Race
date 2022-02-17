@@ -9,6 +9,8 @@ TagManager:
   - AI
   - Ghost
   - GameManager
+  - Road
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - AI
   - Roadtrack
   - Wall
-  - 
+  - Checkpoint
   - 
   - 
   - 
