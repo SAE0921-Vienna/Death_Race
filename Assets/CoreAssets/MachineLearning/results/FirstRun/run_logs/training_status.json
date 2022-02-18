@@ -1,0 +1,47 @@
+{
+    "VehicleAI": {
+        "checkpoints": [
+            {
+                "steps": 44898,
+                "file_path": "results/FirstRun/VehicleAI/VehicleAI-44898.onnx",
+                "reward": 5.5,
+                "creation_time": 1645128973.613726,
+                "auxillary_file_paths": [
+                    "results/FirstRun/VehicleAI/VehicleAI-44898.pt"
+                ]
+            },
+            {
+                "steps": 45630,
+                "file_path": "results/FirstRun/VehicleAI/VehicleAI-45630.onnx",
+                "reward": null,
+                "creation_time": 1645129259.0452082,
+                "auxillary_file_paths": [
+                    "results/FirstRun/VehicleAI/VehicleAI-45630.pt"
+                ]
+            },
+            {
+                "steps": 49592,
+                "file_path": "results/FirstRun/VehicleAI/VehicleAI-49592.onnx",
+                "reward": 5.25,
+                "creation_time": 1645134242.9115953,
+                "auxillary_file_paths": [
+                    "results/FirstRun/VehicleAI/VehicleAI-49592.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 49592,
+            "file_path": "results/FirstRun/VehicleAI.onnx",
+            "reward": 5.25,
+            "creation_time": 1645134242.9115953,
+            "auxillary_file_paths": [
+                "results/FirstRun/VehicleAI/VehicleAI-49592.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.1+cu102"
+    }
+}

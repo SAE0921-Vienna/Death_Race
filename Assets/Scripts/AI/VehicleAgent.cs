@@ -12,6 +12,7 @@ namespace AI
         private Transform _spawnTransform;
         private Vector3 _spawnPositionVector;
         private AI_VehicleController_ML _aiVehicleController;
+        private AICheckpointManagerMachine _aiCheckpointManager;
     
         [HideInInspector]
         public float[] inputActions = new float[2]; //These are the input actions for the 
@@ -21,6 +22,7 @@ namespace AI
         {
             _checkpointManager = FindObjectOfType<CheckpointManager>();
             _aiVehicleController = GetComponent<AI_VehicleController_ML>();
+            _aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
             
             var myTransform = transform;
             
@@ -54,7 +56,9 @@ namespace AI
         public override void OnEpisodeBegin()
         {
             transform.position = transform.position = _spawnPositionVector + new Vector3(Random.Range(-50, 50), 0f, Random.Range(-50, 50));
-            transform.rotation = _spawnTransform.rotation;
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            
+            _aiCheckpointManager.ResetCheckpoints();
         }
         
         /* Add (magnitude) reward to agent.
@@ -79,6 +83,7 @@ namespace AI
         {
             if (collision.collider.CompareTag("Wall"))
             {
+                AddAgentReward(-.5F);
                 EndEpisode();
             }
         }

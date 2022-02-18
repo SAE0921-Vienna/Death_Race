@@ -19,9 +19,6 @@ namespace AI
             {
                 _vehicleAgent.ResetOnFalloff();
             }
-
-            print(AccelerationValue);
-            print(SteerValueRaw);
         }
 
         public override float AccelerationValue => _vehicleAgent.inputActions[0];

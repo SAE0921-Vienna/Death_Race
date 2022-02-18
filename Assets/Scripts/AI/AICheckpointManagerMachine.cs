@@ -9,7 +9,7 @@ namespace AI
         public int checkpointCount;
         public int currentCheckpointIndex;
 
-        public Transform aisTarget;
+        //public Transform aisTarget;
         public Vector3 targetPosition;
 
 
@@ -18,7 +18,7 @@ namespace AI
         private VehicleAgent _vehicleAgent;
 
         public List<Checkpoint> checkpointsInWorldList;
-        public List<GameObject> aiCheckpointsList;
+        //public List<GameObject> aiCheckpointsList;
         public GameObject aiCheckpointParent;
         public Checkpoint nextCheckpointAI;
         private int nextCheckpointIndex;
@@ -37,15 +37,15 @@ namespace AI
             checkpointCount = checkpointsInWorldList.Count;
 
 
-            targetPosition = checkpointsInWorldList[nextCheckpointIndex].transform.position;
-            aisTarget.transform.position = targetPosition;
+            //targetPosition = checkpointsInWorldList[nextCheckpointIndex].transform.position;
+            //aisTarget.transform.position = targetPosition;
 
 
 
-            for (int i = 0; i < aiCheckpointParent.transform.childCount; i++)
-            {
-                aiCheckpointsList.Add(aiCheckpointParent.transform.GetChild(i).gameObject);
-            }
+            //for (int i = 0; i < aiCheckpointParent.transform.childCount; i++)
+            //{
+            //    aiCheckpointsList.Add(aiCheckpointParent.transform.GetChild(i).gameObject);
+            //}
 
             aIManager.nextCheckpoint = checkpointsInWorldList[0];
             nextCheckpointIndex = 0;
@@ -63,8 +63,8 @@ namespace AI
                 nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
                 
                 //targetPosition = checkpointsInWorldList[nextCheckpointIndex].transform.position;
-                targetPosition = aiCheckpointsList[nextCheckpointIndex].transform.position;
-                aisTarget.transform.position = targetPosition;
+                //targetPosition = aiCheckpointsList[nextCheckpointIndex].transform.position;
+                //aisTarget.transform.position = targetPosition;
                 
                 aIManager.checkpoints = checkpointCount;
                 aIManager.currentCheckpointIndex = currentCheckpointIndex;
@@ -76,6 +76,11 @@ namespace AI
                 
                 _vehicleAgent.AddAgentReward(1f); //This adds a reward to the agent.
             }
+        }
+
+        public void ResetCheckpoints()
+        {
+            Start();
         }
     }
 }

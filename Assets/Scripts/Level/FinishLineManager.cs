@@ -13,6 +13,7 @@ public class FinishLineManager : MonoBehaviour
     public Transform minimap;
 
     public UIManager uiManager;
+    private AICheckpointManagerMachine _aiCheckpointManager;
 
 
 
@@ -44,13 +45,15 @@ public class FinishLineManager : MonoBehaviour
         #endregion
 
         transform.GetChild(0).gameObject.SetActive(true);
+        _aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
 
     }
 
  
     private void OnTriggerEnter(Collider other)
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        if (transform.GetChild(0) != null)
+            transform.GetChild(0).gameObject.SetActive(false);
 
         if (other.CompareTag("Player") && gameManager.currentLap == 0 && gameManager.currentCheckpoint == 0)
         {
@@ -63,7 +66,6 @@ public class FinishLineManager : MonoBehaviour
             gameManager.StartRoundTimer();
             gameManager.CheckLaps();
             minimap.gameObject.SetActive(true);
-
         }
 
         if (other.CompareTag("Player") && gameManager.currentCheckpoint == gameManager.checkpoints - 1)
@@ -90,9 +92,9 @@ public class FinishLineManager : MonoBehaviour
         if (other.CompareTag("AI") && aIManager.currentLap == 0 && aIManager.currentCheckpointIndex == 0)
         {
             aIManager.currentLap += 1;
-            
             aIManager.CheckLaps();
-
+            
+            _aiCheckpointManager.ResetCheckpoints();
         }
 
         if (other.CompareTag("AI") && aIManager.currentCheckpointIndex == aIManager.checkpoints - 1)
@@ -100,6 +102,7 @@ public class FinishLineManager : MonoBehaviour
             aIManager.currentLap += 1;
             aIManager.CheckLaps();
 
+            _aiCheckpointManager.ResetCheckpoints();
         }
 
     }
