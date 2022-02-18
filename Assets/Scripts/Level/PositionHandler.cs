@@ -72,13 +72,12 @@ public class PositionHandler : MonoBehaviour
 
         if (checkpointArray[0] > checkpointArray[1])
         {
-            gameManager.playerPosition = 1;
+            playerManager.currentPositionIndex = 1;
         }
         if (checkpointArray[1] > checkpointArray[0])
         {
-            gameManager.playerPosition = 2;
+            playerManager.currentPositionIndex = 2;
         }
-
     }
 
     public void PositionCalc()
@@ -108,7 +107,6 @@ public class PositionHandler : MonoBehaviour
         //    default:
         //        break;
         //}
-
     }
 
     public float DistanceToNextCheckpoint(Transform originPosition, Transform nextCheckpointPosition)
@@ -123,11 +121,11 @@ public class PositionHandler : MonoBehaviour
 
         if (racer.CompareTag("AI"))
         {
-            return racer.GetComponent<AIManager>().currentLap;
+            return racer.GetComponent<AIManager>().currentLapIndex;
         }
         if (racer.CompareTag("Player"))
         {
-            return gameManager.currentLap;
+            return racer.GetComponent<PlayerManager>().currentLapIndex;
         }
         else
         {
@@ -144,7 +142,7 @@ public class PositionHandler : MonoBehaviour
         }
         if (racer.CompareTag("Player"))
         {
-            return gameManager.currentCheckpoint;
+            return racer.GetComponent<PlayerManager>().currentCheckpointIndex;
         }
         else
         {

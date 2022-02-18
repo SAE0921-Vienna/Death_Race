@@ -5,16 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode 1_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode 1_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/vsAI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/vsAI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Main Camera Profile 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode/Main Camera Profile 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManagerMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManagerMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/LoadCustomAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/LoadCustomAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Checkpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Checkpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/FinishLineManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/FinishLineManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/PositionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/PositionHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceshipLoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceshipLoad.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +200,7 @@
       <workItem from="1645092199720" duration="23512000" />
       <workItem from="1645134755584" duration="511000" />
       <workItem from="1645183703224" duration="3512000" />
-      <workItem from="1645188759081" duration="1110000" />
+      <workItem from="1645188759081" duration="18018000" />
     </task>
     <servers />
   </component>

@@ -1,38 +1,41 @@
 using System.Collections.Generic;
+using AI;
 using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    private GameManager gameManager;
-
+    private GameManager _gameManager;
     public List<Checkpoint> checkpointsInWorldList;
 
-    public int checkpoints;
-    public int currentCheckpoint;
+    public int checkpointCount;
+    public int currentCheckpointIndex;
     public int nextCheckpointIndex;
+    public Checkpoint nextCheckpoint;
 
     private Transform checkpointParent;
     [SerializeField]
     private GameObject checkpointEffectPrefab;
+    
 
-    public Material normalCheckpointMAT;
-
-    public Checkpoint nextcheckpoint;
-
-    private void Awake()
+    protected void Awake()
     {
-        gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+        _gameManager = FindObjectOfType<GameManager>();
+        GetAllCheckpoints();
+    }
+
+    protected void GetAllCheckpoints()
+    {
         checkpointParent = transform;
         checkpointsInWorldList = new List<Checkpoint>();
 
-        //Order here is very important - in the hiearchy
+        //Order here is very important - in the hierarchy
         foreach (Transform checkpointsInWorld in checkpointParent)
         {
             //Debug.Log(checkpointsInWorld);
             Checkpoint checkpoint = checkpointsInWorld.GetComponent<Checkpoint>();
             checkpointsInWorldList.Add(checkpoint);
 
-            if (gameManager.ghostmode) 
+            if (_gameManager.ghostMode)
             {
                 var checkpointEffect = Instantiate(checkpointEffectPrefab, checkpointsInWorld.position,
                     checkpointsInWorld.rotation);
@@ -41,49 +44,46 @@ public class CheckpointManager : MonoBehaviour
                 checkpointEffect.SetActive(false);
             }
         }
+        checkpointCount = checkpointsInWorldList.Count;
 
-
-        checkpoints = checkpointsInWorldList.Count;
-        gameManager.checkpoints = checkpoints;
-
-        nextcheckpoint = checkpointsInWorldList[0];
+        nextCheckpoint = checkpointsInWorldList[0];
         nextCheckpointIndex = 0;
     }
 
-    public void PlayerThroughCheckpoint(Checkpoint checkpoint)
+    public virtual void VehicleThroughCheckpoint(Checkpoint checkpoint, Collider vehicle)
     {
         if (checkpointsInWorldList.IndexOf(checkpoint) == nextCheckpointIndex)
         {
-
-            if (gameManager.ghostmode)
+            var vehicleManager = vehicle.GetComponent<BaseVehicleManager>();
+            
+            if (_gameManager.ghostMode)
             {
                 checkpoint.transform.GetChild(0).gameObject.SetActive(false);
-
             }
             if ((checkpointsInWorldList.IndexOf(checkpoint) + 1) < checkpointsInWorldList.Count)
             {
-                nextcheckpoint = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
-                if (gameManager.ghostmode)
+                nextCheckpoint = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
+                if (_gameManager.ghostMode)
                 {
-                    nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
+                    nextCheckpoint.transform.GetChild(0).gameObject.SetActive(true);
                 }
             }
-
-
-            currentCheckpoint = checkpointsInWorldList.IndexOf(checkpoint);
+            
+            currentCheckpointIndex = checkpointsInWorldList.IndexOf(checkpoint);
             nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
-            gameManager.CheckCheckpoint();
-            gameManager.spawnPlayerPosition = checkpoint.transform.position;
-            gameManager.spawnPlayerRotation = checkpoint.transform.rotation;
-
-            //Debug.Log("correct direction");
+            
+            var vehicleTransform = checkpoint.transform;
+            
+            vehicleManager.CheckCheckpoint(this);
+            vehicleManager.spawnPosition = vehicleTransform.position;
+            vehicleManager.spawnRotation = vehicleTransform.rotation;
         }
     }
 
     public void SetFirstCheckpointMAT()
     {
-        Checkpoint nextcheckpoint = checkpointsInWorldList[1];
-        //nextcheckpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
-        nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
+        //var nextcheckpoint = checkpointsInWorldList[1];
+        ////nextcheckpoint.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+        //nextcheckpoint.transform.GetChild(0).gameObject.SetActive(true);
     }
 }

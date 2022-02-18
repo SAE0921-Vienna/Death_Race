@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using PlayerController;
 using UnityEngine;
 
-using Weapons;
-
 public class SpaceshipLoad : MonoBehaviour
 {
     [SerializeField]

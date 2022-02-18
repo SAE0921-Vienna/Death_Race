@@ -541,12 +541,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
-  checkpoints: 0
-  currentCheckpoint: 0
+  checkpointCount: 0
+  currentCheckpointIndex: 0
   nextCheckpointIndex: 0
+  nextCheckpoint: {fileID: 0}
   checkpointEffectPrefab: {fileID: 0}
-  normalCheckpointMAT: {fileID: 2100000, guid: 91f21d47c2b9b7d4e946b81b5b39f0af, type: 2}
-  nextcheckpoint: {fileID: 0}
 --- !u!4 &59431892
 Transform:
   m_ObjectHideFlags: 0
@@ -1221,11 +1220,11 @@ PrefabInstance:
     - target: {fileID: 8482835735354933241, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 1058565173}
+      objectReference: {fileID: 8160920351366770623}
     - target: {fileID: 8482835735354933241, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 1058565173}
+      objectReference: {fileID: 8160920351366770623}
     - target: {fileID: 8482835735354933241, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 90
@@ -1767,24 +1766,14 @@ MonoBehaviour:
   raceHasStarted: 0
   raceFinished: 0
   laps: 3
-  currentLap: 0
   positions:
   - 0
   - 0
-  playerPosition: 1
-  checkpoints: 0
-  currentCheckpoint: 0
-  nextCheckpoint: 0
   roundTimer: 0
   roundTimerAsSecString: 
   roundTimerAsDeciString: 
   timeSinceStart: 0
-  offTrackTimer: 0
-  offTrackTimerLimit: 3
-  ghostmode: 0
-  spawnPlayerPosition: {x: 0, y: 0, z: 0}
-  spawnPlayerRotation: {x: 0, y: 0, z: 0, w: 0}
-  spawnPlayerYOffset: 10
+  ghostMode: 0
 --- !u!1 &221267527
 GameObject:
   m_ObjectHideFlags: 0
@@ -14340,12 +14329,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
-  checkpoints: 0
-  currentCheckpoint: 0
+  checkpointCount: 0
+  currentCheckpointIndex: 0
   nextCheckpointIndex: 0
+  nextCheckpoint: {fileID: 0}
   checkpointEffectPrefab: {fileID: 8362921943027625953, guid: 683ef400f036cc8429c097978133a41e, type: 3}
-  normalCheckpointMAT: {fileID: 2100000, guid: 91f21d47c2b9b7d4e946b81b5b39f0af, type: 2}
-  nextcheckpoint: {fileID: 0}
 --- !u!1 &1239629321
 GameObject:
   m_ObjectHideFlags: 0
@@ -23571,12 +23559,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
-  checkpoints: 0
-  currentCheckpoint: 0
+  checkpointCount: 0
+  currentCheckpointIndex: 0
   nextCheckpointIndex: 0
+  nextCheckpoint: {fileID: 0}
   checkpointEffectPrefab: {fileID: 0}
-  normalCheckpointMAT: {fileID: 0}
-  nextcheckpoint: {fileID: 0}
 --- !u!64 &1994323970
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33755,7 +33742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4813497883062652856, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4813497883062652856, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
       propertyPath: m_TagString
@@ -38500,7 +38487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8160920351366770595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38598,33 +38585,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vehicleController: {fileID: 0}
   health: 100
   healthLimit: 100
-  nitroSpeed: 800
-  nitroAccelerationBoost: 0.05
-  normalMaxSpeed: 0
-  currentSpeed: 0
-  mainCamPovBoost: 20
+  healValue: 45
   ammo: 0
   ammoAdd: 0
   ammoLimit: 0
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
-  healValue: 45
-  shield: 0
-  nitro: 0
+  currentSpeed: 0
+  hasShield: 0
+  hasNitro: 0
   canShoot: 0
-  bomb: 0
+  hasBomb: 0
   isImmortal: 0
   isOnRoadtrack: 0
-  isFacingCorrectDirection: 0
-  currentlap: 0
+  currentPositionIndex: 0
+  currentLapIndex: 0
   currentCheckpointIndex: 0
   nextCheckpointIndex: 0
   nextCheckpoint: {fileID: 0}
   timer: 0
   timerCooldown: 5
+  offTrackTimer: 0
+  offTrackTimerLimit: 5
+  spawnPosition: {x: 0, y: 0, z: 0}
+  spawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  spawnYOffset: 5
 --- !u!114 &8160920351366770617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38637,6 +38624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8770b3c08f1021a4a9feddb06ecab3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nitroSpeedModifier: 0
+  nitroAccelerationModifier: 0
+  nitroFovModifier: 0
   powerUpList: []
   powerUp: {fileID: 0}
 --- !u!114 &8160920351366770618

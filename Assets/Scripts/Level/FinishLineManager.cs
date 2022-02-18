@@ -6,7 +6,6 @@ public class FinishLineManager : MonoBehaviour
 {
 
     private GameManager gameManager;
-    private AIManager aIManager;
 
     public Transform checkpointParent;
 
@@ -14,12 +13,11 @@ public class FinishLineManager : MonoBehaviour
 
     public UIManager uiManager;
     private AICheckpointManagerMachine _aiCheckpointManager;
-
-
-
+    private CheckpointManager _checkpointManager;
+    
+    
     private void Awake()
     {
-        #region gameManager FindObjectOfType
         gameManager = FindObjectOfType<GameManager>();
         if (gameManager)
         {
@@ -29,80 +27,72 @@ public class FinishLineManager : MonoBehaviour
         {
             Debug.LogWarning("GameManager NOT Found");
         }
-        #endregion
 
-        #region aiManager FindObjectOfType
-        aIManager = FindObjectOfType<AIManager>();
-        if (aIManager)
-        {
-            //AIManager Found
-        }
-        else
-        {
-            Debug.LogWarning("AIManager NOT Found");
-
-        }
-        #endregion
-
+        _checkpointManager = FindObjectOfType<CheckpointManager>();
         transform.GetChild(0).gameObject.SetActive(true);
         _aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
-
     }
 
  
     private void OnTriggerEnter(Collider other)
     {
+        //Makes the glowing effect disappear.
         if (transform.GetChild(0) != null)
             transform.GetChild(0).gameObject.SetActive(false);
-
-        if (other.CompareTag("Player") && gameManager.currentLap == 0 && gameManager.currentCheckpoint == 0)
+        
+        if (other.CompareTag("Player") && other.GetComponent<PlayerManager>().currentLapIndex == 0 && other.GetComponent<PlayerManager>().currentCheckpointIndex == 0)
         {
-            gameManager.currentLap += 1;
-            if (gameManager.ghostmode)
+            var playerManager = other.GetComponent<PlayerManager>();
+            
+            playerManager.currentLapIndex += 1;
+            if (gameManager.ghostMode)
             {
                 checkpointParent.GetComponent<CheckpointManager>().SetFirstCheckpointMAT();
                 transform.GetChild(0).gameObject.SetActive(false);
             }
             gameManager.StartRoundTimer();
-            gameManager.CheckLaps();
+            playerManager.CheckLapCount();
             minimap.gameObject.SetActive(true);
         }
 
-        if (other.CompareTag("Player") && gameManager.currentCheckpoint == gameManager.checkpoints - 1)
+        if (other.CompareTag("Player") && other.GetComponent<PlayerManager>().currentCheckpointIndex == _checkpointManager.checkpointCount - 1)
         {
-            gameManager.currentLap += 1;
-            if (gameManager.ghostmode)
+            var playerManager = other.GetComponent<PlayerManager>();
+            
+            playerManager.currentLapIndex += 1;
+            if (gameManager.ghostMode)
             {
                 transform.GetChild(0).gameObject.SetActive(false);
                 checkpointParent.GetChild(0).GetChild(0).gameObject.SetActive(true);
             }           
-            gameManager.CheckLaps();
+            playerManager.CheckLapCount();
 
-            if (gameManager.ghostmode)
+            if (gameManager.ghostMode)
             {
                 FindObjectOfType<GhostManager>().StopRecording();
                 FindObjectOfType<GhostManager>().ghost.playGhostRecording();
-                gameManager.roundTimer = 0;
+                //gameManager.roundTimer = 0; Schaut sich Wolfi oder Tomi an.
             }
-
         }
-
-
-
-        if (other.CompareTag("AI") && aIManager.currentLap == 0 && aIManager.currentCheckpointIndex == 0)
+        
+        if (other.CompareTag("AI") && other.GetComponent<AIManager>().currentLapIndex == 0 && other.GetComponent<AIManager>().currentCheckpointIndex == 0)
         {
-            aIManager.currentLap += 1;
+            var aIManager = other.GetComponent<AIManager>();
+            
+            aIManager.currentLapIndex += 1;
             aIManager.CheckLaps();
             
-            _aiCheckpointManager.ResetCheckpoints();
+            //_aiCheckpointManager.ResetCheckpoints();
         }
 
-        if (other.CompareTag("AI") && aIManager.currentCheckpointIndex == aIManager.checkpoints - 1)
+        if (other.CompareTag("AI") && other.GetComponent<AIManager>().currentCheckpointIndex == other.GetComponent<AIManager>().currentLapIndex - 1)
         {
-            aIManager.currentLap += 1;
+            var aIManager = other.GetComponent<AIManager>();
+            
+            aIManager.currentLapIndex += 1;
             aIManager.CheckLaps();
 
-            _aiCheckpointManager.ResetCheckpoints();
+            //_aiCheckpointManager.ResetCheckpoints();
         }
 
     }

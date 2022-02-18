@@ -28,19 +28,19 @@ namespace UserInterface
 
         private void Update()
         {
-            lapsAmountUI.text = gameManager.currentLap + "/" + gameManager.laps + " LAPS";
+            lapsAmountUI.text = playerManager.currentLapIndex + "/" + gameManager.laps + " LAPS";
             //positionsUI.text = gameManager.playerPosition + "/" + gameManager.positions + " POSITION";
             //switch, st, nd, rd, th,...
-            switch (gameManager.playerPosition)
+            switch (playerManager.currentPositionIndex)
             {
                 case 1:
-                    positionsUI.text = gameManager.playerPosition + "st";
+                    positionsUI.text = playerManager.currentPositionIndex + "st";
                     break;
                 case 2:
-                    positionsUI.text = gameManager.playerPosition + "nd";
+                    positionsUI.text = playerManager.currentPositionIndex + "nd";
                     break;
                 case 3:
-                    positionsUI.text = gameManager.playerPosition + "rd";
+                    positionsUI.text = playerManager.currentPositionIndex + "rd";
                     break;
                 default:
                     break;

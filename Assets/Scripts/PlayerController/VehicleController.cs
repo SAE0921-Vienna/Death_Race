@@ -214,10 +214,9 @@ namespace PlayerController
         }
         #endregion
         
-        public float GetSpeedPercentage()
+        public int GetSpeed()
         {
-            //Returns the total percentage of speed the ship is traveling
-            return _rBody.velocity.magnitude / mMaxSpeed; //no
+            return Mathf.RoundToInt(currentSpeed * mMaxSpeed);
         }
         
         protected void OnCollisionStay(Collision collision)

@@ -11,7 +11,8 @@ namespace AI
         private CheckpointManager _checkpointManager;
         private Transform _spawnTransform;
         private Vector3 _spawnPositionVector;
-        private AI_VehicleController_ML _aiVehicleController;
+        //private AI_VehicleController_ML _aiVehicleController;
+        private AI_VehicleController _aiVehicleController;
         private AICheckpointManagerMachine _aiCheckpointManager;
     
         [HideInInspector]
@@ -21,7 +22,7 @@ namespace AI
         private void Awake()
         {
             _checkpointManager = FindObjectOfType<CheckpointManager>();
-            _aiVehicleController = GetComponent<AI_VehicleController_ML>();
+            _aiVehicleController = GetComponent<AI_VehicleController>();
             _aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
             
             var myTransform = transform;
@@ -58,7 +59,7 @@ namespace AI
             transform.position = transform.position = _spawnPositionVector + new Vector3(Random.Range(-50, 50), 0f, Random.Range(-50, 50));
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             
-            _aiCheckpointManager.ResetCheckpoints();
+            //_aiCheckpointManager.ResetCheckpoints();
         }
         
         /* Add (magnitude) reward to agent.

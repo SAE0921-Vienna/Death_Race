@@ -44,14 +44,14 @@ public class Checkpoint : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //Debug.Log("Checkpoint");
-            checkpointManager.PlayerThroughCheckpoint(this);
+            checkpointManager.VehicleThroughCheckpoint(this, other);
 
         }
         if (other.CompareTag("AI") )
         {
             //Debug.Log("Checkpoint");
-            //aicheckpointManager.AIThroughCheckpoint(this);
-            mlCheckpointManager.AIThroughCheckpoint(this);
+            aicheckpointManager.VehicleThroughCheckpoint(this, other);
+            //mlCheckpointManager.AIThroughCheckpoint(this, other);
         }
 
     }
