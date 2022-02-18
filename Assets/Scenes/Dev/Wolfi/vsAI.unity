@@ -3154,6 +3154,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   sideThrustAmount: 30
   steeringSpeed: 15
+  speedDependentAngularDragMagnitude: 0
   idleSteeringAnimationSpeedMultiplier: 1
   steeringAnimationSpeedMultiplier: 1
   downForceMultiplier: 100
@@ -3171,8 +3172,8 @@ MonoBehaviour:
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  maxRaycastDistance: 1000
-  trackSearchRadius: 0
+  maxSphereCastDistance: 0
+  sphereCastRadius: 0
   isOnRoadtrack: 1
 --- !u!114 &69791182
 MonoBehaviour:
@@ -3186,7 +3187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d918aad582b5d419e4af0947754afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aivehicleController: {fileID: 0}
+  ai_vehicleController: {fileID: 0}
   health: 100
   healthLimit: 100
   nitroSpeed: 800
@@ -5434,11 +5435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.01888886
+      value: -0.018888824
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0006469053
+      value: -0.0006469036
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5446,7 +5447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0342218
+      value: -0.034221772
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8304,6 +8305,8 @@ MonoBehaviour:
   currentCheckpoint: 0
   nextCheckpoint: 0
   roundTimer: 0
+  roundTimerAsSecString: 
+  roundTimerAsDeciString: 
   timeSinceStart: 0
   offTrackTimer: 0
   offTrackTimerLimit: 3
@@ -13171,9 +13174,7 @@ MonoBehaviour:
   boughtMaterials: 
   spaceConfig: {fileID: 0}
   milkyCoins: 0
-  starCoins: 0
   maxMilkyCoins: 9999999
-  maxStarCoins: 9999999
   highScore: 0
   lastGhostVehicleIndex: 0
   lastGhostMaterialIndex: 0
@@ -19022,11 +19023,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.01888886
+      value: -0.018888824
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0006469053
+      value: -0.0006469036
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
@@ -19034,7 +19035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0342218
+      value: -0.034221772
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -59304,6 +59305,7 @@ MonoBehaviour:
   lapsAmountUI: {fileID: 1758570696}
   positionsUI: {fileID: 1039377590}
   roundTimerUI: {fileID: 821867178}
+  roundDeciTimerUI: {fileID: 0}
   wrongDirectionUI: {fileID: 1262778278}
   highscoreUI: {fileID: 343887895}
   gameOverUI: {fileID: 1153912914}
@@ -78491,6 +78493,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   sideThrustAmount: 100
   steeringSpeed: 6
+  speedDependentAngularDragMagnitude: 0
   idleSteeringAnimationSpeedMultiplier: 0.2
   steeringAnimationSpeedMultiplier: 0.4
   downForceMultiplier: 100
@@ -78508,8 +78511,8 @@ MonoBehaviour:
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  maxRaycastDistance: 1000
-  trackSearchRadius: 300
+  maxSphereCastDistance: 1000
+  sphereCastRadius: 3
   isOnRoadtrack: 1
 --- !u!54 &8160920351366770620
 Rigidbody:

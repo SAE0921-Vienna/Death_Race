@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using PlayerController;
 using UnityEngine;
 
 using Weapons;
@@ -26,10 +27,16 @@ public class SpaceshipLoad : MonoBehaviour
     [SerializeField]
     public int currentMaterial;
 
+    private VehicleController _vehicleController;
+
 
     private void Awake()
     {
+        LoadShip();
+    }
 
+    private void LoadShip()
+    {
         if (saveLoadScript)
         {
             saveLoadScript.LoadSaveData();
@@ -44,20 +51,31 @@ public class SpaceshipLoad : MonoBehaviour
 
             GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
 
-            GameObject weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab, transform.GetChild(1).GetChild(1).transform, false);
+            GameObject weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab,
+                transform.GetChild(1).GetChild(1).transform, false);
             weaponClone.GetComponent<MeshRenderer>().material = allMaterials[currentMaterial].material;
-            weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = allMaterials[currentMaterial].material;
-            weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = allMaterials[currentMaterial].material;
+            weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material =
+                allMaterials[currentMaterial].material;
+            weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material =
+                allMaterials[currentMaterial].material;
 
             weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
+
+            SetVehicleStats();
         }
+        
         else
         {
             Debug.LogWarning("SaveLoadScript NOT found");
         }
-
-
     }
 
-
+    private void SetVehicleStats()
+    {
+        _vehicleController = GetComponent<VehicleController>();
+        _vehicleController.mMaxSpeed = allShips[currentShip].maxSpeed;
+        _vehicleController.mAccelerationConstant = allShips[currentShip].accelerationSpeed;
+        _vehicleController.steeringSpeed = allShips[currentShip].turnSpeed;
+        _vehicleController.speedDependentAngularDragMagnitude = allShips[currentShip].speedBasedAngularDrag;
+    }
 }

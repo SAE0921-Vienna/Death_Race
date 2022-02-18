@@ -11,9 +11,9 @@ namespace PlayerController
         #region Variables
 
         [Header("Acceleration and Braking")]
-        [Range(0.1f, 1f)]
+        [Range(0.15f, 0.3f)]
         public float mAccelerationConstant = 1f;
-        [Range(50f, 2500f)]
+        [Range(950f, 1200f)]
         public float mMaxSpeed;
         [HideInInspector] public float currentSpeed;
 
@@ -26,10 +26,11 @@ namespace PlayerController
         [Header("Steering")]
         [Range(0f, 1000f)]
         [SerializeField] protected float sideThrustAmount;
-        [Range(0f, 15f)]
-        [SerializeField] protected float steeringSpeed;
+        [Range(5f, 12f)]
+        public float steeringSpeed;
 
-        [Range(0f, 5)] [SerializeField] protected float speedDependentAngularDragMagnitude;
+        [Range(2f, 5f)] 
+        public float speedDependentAngularDragMagnitude;
         [Range(0f, 1f)]
         [SerializeField] protected float idleSteeringAnimationSpeedMultiplier, steeringAnimationSpeedMultiplier;
 
@@ -93,8 +94,8 @@ namespace PlayerController
             AntiGravity();
             SideThrust();
         }
-        
-        
+
+
         /// <summary>
         /// Checks if the current acceleration axis is above threshold, if true, increments interpolator of acceleration curve.
         /// It also functions as an idle-slow-down, because if false, the interpolator decrements, resulting in a loss of movement speed.

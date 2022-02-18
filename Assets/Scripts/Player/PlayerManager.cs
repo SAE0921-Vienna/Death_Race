@@ -11,23 +11,28 @@ public class PlayerManager : MonoBehaviour, IDamageable
     private UIManager uiManager;
     private GameManager gameManager;
     private PlayerShipWeapon playerShipWeapon;
+    
     [Header("Health")]
     public int health = 100;
     public int healthLimit = 100;
+    
     [Header("Nitro")]
     public float nitroSpeed = 50f;
     public float nitroAccelerationBoost = 0.05f;
     public float normalMaxSpeed;
     public float currentSpeed;
     public float mainCamPovBoost = 20f;
+    
     [Header("Ammo")]
     public int ammo;
     public int ammoAdd;
     public int ammoLimit;
     public float bombTimer = 10f;
     public Vector3 bombScale = new Vector3(5, 5, 5);
+    
     [Header("Healing Value")]
     public int healValue = 45;
+    
     [Header("PowerUp Activates")]
     public bool shield;
     public bool nitro;

@@ -6,13 +6,16 @@ namespace AI
     public class AIManager : MonoBehaviour, IDamageable
     {
         public VehicleController ai_vehicleController;
+        
         [Header("Health")]
         public int health = 100;
         public int healthLimit = 100;
+        
         [Header("Nitro")]
         public float nitroSpeed = 50f;
         public float normalMaxSpeed;
         public float currentSpeed;
+        
         [Header("Ammo")]
         public int ammo;
         //public int ammoAdd = 25;
@@ -21,6 +24,7 @@ namespace AI
         public int ammoLimit;
         public float bombTimer = 10f;
         public Vector3 bombScale = new Vector3(5, 5, 5);
+        
         [Header("PowerUp Activates")]
         public bool shield;
         public bool nitro;
@@ -33,15 +37,19 @@ namespace AI
         [Header("Laps")]
         public int laps = 3;
         public int currentLap;
+        
         [Header("Positions")]
         public int aiPosition;
+        
         [Header("Checkpoints")]
         public int checkpoints;
         public int currentCheckpointIndex;
         public int nextCheckpointIndex;
         public Checkpoint nextCheckpoint;
+        
         [Header("Round Timer")]
         public float roundTimer;
+        
         [Header("Off Track Timer")]
         public float offTrackTimer;
         public float offTrackTimerLimit = 5f;
