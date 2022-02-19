@@ -18,7 +18,7 @@ namespace AI
         [Header("Ammo")]
         public int ammo;
         public int ammoAdd;
-        public int ammoLimit;
+        //public int ammoLimit;
         public float bombTimer = 10f;
         public Vector3 bombScale = new Vector3(5, 5, 5);
         

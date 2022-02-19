@@ -4,7 +4,6 @@ using PlayerController;
 using UnityEngine;
 using UserInterface;
 
-
 public class PowerUps : MonoBehaviour
 {
     [SerializeField] private float nitroSpeedModifier;
@@ -14,11 +13,9 @@ public class PowerUps : MonoBehaviour
     public List<ScriptableObject> powerUpList;
     public PickUpScriptableObject powerUp;
     private UIManager uIManager;
-    //private PlayerWeapon playerWeapon;
-    private BaseVehicleManager _vehicleStats;
+    protected BaseVehicleManager _vehicleStats;
     private GameManager gameManager;
     private Transform powerupParent;
-    private PlayerShipWeapon playerShipWeapon;
     private int powerUpListLength = 1;
 
     private void Awake()
@@ -30,7 +27,26 @@ public class PowerUps : MonoBehaviour
         {
             Debug.LogWarning("GameManager NOT Found");
         }
-        
+
+        GetUI();
+
+        powerupParent = transform.GetChild(0);
+    }
+
+
+    private void Update()
+    {
+        PowerUpTimer();
+
+        UpdateUI();
+
+        UpdateInput();
+
+
+    }
+
+    private void GetUI()
+    {
         uIManager = FindObjectOfType<UIManager>();
         if (uIManager)
         {
@@ -40,13 +56,22 @@ public class PowerUps : MonoBehaviour
         {
             Debug.LogWarning("UIManager NOT Found");
         }
-        powerupParent = transform.GetChild(0);
     }
 
-
-    private void Update()
+    private void PowerUpTimer()
     {
         _vehicleStats.timer -= Time.deltaTime;
+
+        if (_vehicleStats.timer < 0)
+        {
+            _vehicleStats.timer = -1;
+            ResetPowerUps();
+        }
+
+    }
+
+    private void UpdateUI()
+    {
         if (uIManager)
         {
             if (uIManager.ammoAmountUI != null)
@@ -60,18 +85,16 @@ public class PowerUps : MonoBehaviour
             }
         }
 
-        if (_vehicleStats.timer < 0)
-        {
-            _vehicleStats.timer = -1;
-            ResetPowerUps();
-        }
+    }
 
+    private void UpdateInput()
+    {
         if (Input.GetKeyDown(KeyCode.Mouse1) && powerUp != null)
         {
             ActivatePowerUp(powerUp);
         }
-
     }
+
 
     /// <summary>
     /// Activates the picked up powerup
@@ -119,9 +142,9 @@ public class PowerUps : MonoBehaviour
             _vehicleStats.hasNitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
             gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV;
-            VehicleController vehicleContr = GetComponent<VehicleController>();
-            vehicleContr.mMaxSpeed -= nitroSpeedModifier;
-            vehicleContr.mAccelerationConstant -= nitroAccelerationModifier;
+            VehicleController vehicleContr = GetComponent<VehicleController>();           
+            vehicleContr.mMaxSpeed = GetComponent<SpaceshipLoad>().CurrentShip.maxSpeed;
+            vehicleContr.mAccelerationConstant = GetComponent<SpaceshipLoad>().CurrentShip.accelerationSpeed;
         }
         if (_vehicleStats.ammo <= 0 && uIManager)
         {
@@ -161,11 +184,12 @@ public class PowerUps : MonoBehaviour
     public void AmmoPowerUp()
     {
         uIManager.ammoAmountUI.gameObject.SetActive(true);
-        if (_vehicleStats.ammo < _vehicleStats.ammoLimit)
-        {
-            _vehicleStats.ammo += _vehicleStats.ammoAdd;
-            if (_vehicleStats.ammo > _vehicleStats.ammoLimit) _vehicleStats.ammo = _vehicleStats.ammoLimit;
-        }
+        //if (_vehicleStats.ammo < _vehicleStats.ammoLimit)
+        //{
+        //    _vehicleStats.ammo += _vehicleStats.ammoAdd;
+        //    if (_vehicleStats.ammo > _vehicleStats.ammoLimit) _vehicleStats.ammo = _vehicleStats.ammoLimit;
+        //}
+        _vehicleStats.ammo += _vehicleStats.ammoAdd;
         uIManager.ammoAmountUI.text = _vehicleStats.ammo.ToString();
         _vehicleStats.canShoot = true;
     }

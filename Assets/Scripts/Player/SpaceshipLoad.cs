@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using PlayerController;
 using UnityEngine;
+using AI;
 
 public class SpaceshipLoad : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class SpaceshipLoad : MonoBehaviour
     [SerializeField]
     public int currentMaterial;
 
+    private BaseVehicleManager _baseVehicleManager;
     private VehicleController _vehicleController;
 
 
@@ -60,6 +62,7 @@ public class SpaceshipLoad : MonoBehaviour
             weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
 
             SetVehicleStats();
+            SetWeaponStats();
         }
         
         else
@@ -75,5 +78,12 @@ public class SpaceshipLoad : MonoBehaviour
         _vehicleController.mAccelerationConstant = allShips[currentShip].accelerationSpeed;
         _vehicleController.steeringSpeed = allShips[currentShip].turnSpeed;
         _vehicleController.speedDependentAngularDragMagnitude = allShips[currentShip].speedBasedAngularDrag;
+    }
+
+    private void SetWeaponStats()
+    {       
+        _baseVehicleManager = GetComponent<BaseVehicleManager>();
+        _baseVehicleManager.ammo = allWeapons[currentWeapon].ammoSize;
+        _baseVehicleManager.ammoAdd = _baseVehicleManager.ammo;
     }
 }

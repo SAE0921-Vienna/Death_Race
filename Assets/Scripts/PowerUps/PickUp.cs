@@ -1,4 +1,5 @@
 using UnityEngine;
+using AI;
 
 public class PickUp : MonoBehaviour
 {
@@ -6,7 +7,8 @@ public class PickUp : MonoBehaviour
     private PickUpScriptableObject pickUpObject;
     private PowerUpManager powerUpManager;
 
-    private GameObject player;
+    private BaseVehicleManager _vehicleManager;
+    //private GameObject player;
 
     #region Rotate and Hover Points
     Vector3 pointA;
@@ -38,13 +40,13 @@ public class PickUp : MonoBehaviour
     {
         powerUpManager = FindObjectOfType<PowerUpManager>();
 
-        PlayerManager playermanager = FindObjectOfType<PlayerManager>();
-        player = playermanager.gameObject;
+        //PlayerManager playermanager = FindObjectOfType<PlayerManager>();
+        //player = playermanager.gameObject;
 
-        if (!playermanager)
-        {
-            Debug.LogWarning("PlayerManager has NOT been found");
-        }
+        //if (!playermanager)
+        //{
+        //    Debug.LogWarning("PlayerManager has NOT been found");
+        //}
     }
 
     private void Start()
@@ -79,41 +81,42 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        _vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
+
+        if (_vehicleManager.CompareTag("Player") || _vehicleManager.CompareTag("AI"))
         {
             if (!childObjectDeleted)
+        {
+            #region Manually Add one specific PowerUp
+            if (pickUpObject != null && pickUpObject.powerUpType == PickUpScriptableObject.powerUps.Random)
             {
-                #region Manually Add one specific PowerUp
-                if (pickUpObject != null && pickUpObject.powerUpType == PickUpScriptableObject.powerUps.Random)
-                {
-                    int rand = Random.Range(0, powerUpManager.powerUps.Length - 1);
-                    pickUpObject = powerUpManager.powerUps[rand];
-                    player.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
-                }
-                else if (pickUpObject != null)
-                {
-                    player.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
-
-                }
-
-                #endregion
-
-
-
-                #region Randomly Add one PowerUp from the PowerUps List
-                //int rand = Random.Range(0, powerUpManager.powerUps.Length);
-                //pickUpObject = powerUpManager.powerUps[rand];
-                //other.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
-                #endregion
-
-
-                Destroy(transform.GetChild(0).gameObject);
-                childObjectDeleted = true;
-                timer = timerCooldown;
+                int rand = Random.Range(0, powerUpManager.powerUps.Length - 1);
+                pickUpObject = powerUpManager.powerUps[rand];
+                _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+            }
+            else if (pickUpObject != null)
+            {
+                _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
             }
 
+            #endregion
+
+
+
+            #region Randomly Add one PowerUp from the PowerUps List
+            //int rand = Random.Range(0, powerUpManager.powerUps.Length);
+            //pickUpObject = powerUpManager.powerUps[rand];
+            //other.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+            #endregion
+
+
+            Destroy(transform.GetChild(0).gameObject);
+            childObjectDeleted = true;
+            timer = timerCooldown;
         }
+
     }
+}
 
     public void SpawnPrefab()
     {
