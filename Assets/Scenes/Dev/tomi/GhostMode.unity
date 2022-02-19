@@ -527,7 +527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &59431891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,12 +541,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
-  checkpoints: 0
-  currentCheckpoint: 0
+  checkpointCount: 0
+  currentCheckpointIndex: 0
   nextCheckpointIndex: 0
+  nextCheckpoint: {fileID: 0}
   checkpointEffectPrefab: {fileID: 8362921943027625953, guid: 683ef400f036cc8429c097978133a41e, type: 3}
-  normalCheckpointMAT: {fileID: 2100000, guid: 91f21d47c2b9b7d4e946b81b5b39f0af, type: 2}
-  nextcheckpoint: {fileID: 0}
 --- !u!4 &59431892
 Transform:
   m_ObjectHideFlags: 0
@@ -946,7 +945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f41764cbc93853cfbaa79f1bb4d6a4fe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f41764cbc93853cfbaa79f1bb4d6a4fe, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1251,15 +1250,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 5.3660187e-11
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.000000030035153
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.0000000020954758
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1762,22 +1761,14 @@ MonoBehaviour:
   raceHasStarted: 0
   raceFinished: 0
   laps: 3
-  currentLap: 0
   positions:
   - 0
   - 0
-  playerPosition: 1
-  checkpoints: 0
-  currentCheckpoint: 0
-  nextCheckpoint: 0
   roundTimer: 0
+  roundTimerAsSecString: 
+  roundTimerAsDeciString: 
   timeSinceStart: 0
-  offTrackTimer: 0
-  offTrackTimerLimit: 3
-  ghostmode: 1
-  spawnPlayerPosition: {x: 0, y: 0, z: 0}
-  spawnPlayerRotation: {x: 0, y: 0, z: 0, w: 0}
-  spawnPlayerYOffset: 10
+  ghostMode: 0
 --- !u!1 &221267527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,7 +2500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0d64c9fa384edb4a2ad5b56f5576a165, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0d64c9fa384edb4a2ad5b56f5576a165, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2847,7 +2838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4ac3cae3d3573801fa16db9b97d0a80f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4ac3cae3d3573801fa16db9b97d0a80f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3045,7 +3036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 148c33bde181c6c6f9eebe10854ad403, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 148c33bde181c6c6f9eebe10854ad403, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3269,9 +3260,7 @@ MonoBehaviour:
   boughtMaterials: 
   spaceConfig: {fileID: 0}
   milkyCoins: 0
-  starCoins: 0
   maxMilkyCoins: 9999999
-  maxStarCoins: 9999999
   highScore: 0
   lastGhostVehicleIndex: 0
   lastGhostMaterialIndex: 0
@@ -4853,31 +4842,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9660.831
+      value: 3534.7732
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2878.056
+      value: -807.1785
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1805.6515
+      value: 586.73157
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.010674041
+      value: -0.0034885653
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00015223942
+      value: -0.0016570783
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9992146
+      value: 0.9992388
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.03816165
+      value: 0.03881954
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8878,7 +8867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c09f15e1d8eb7cd7697dd33a3747e4d2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c09f15e1d8eb7cd7697dd33a3747e4d2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10090,8 +10079,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
+  m_sendNavigationEvents: 6
+  m_DragThreshold: 0
 --- !u!4 &1074440855
 Transform:
   m_ObjectHideFlags: 0
@@ -11512,7 +11501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 418b47268c5342d34806f7f05aa2f1b6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 418b47268c5342d34806f7f05aa2f1b6, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14039,12 +14028,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
-  checkpoints: 0
-  currentCheckpoint: 0
+  checkpointCount: 0
+  currentCheckpointIndex: 0
   nextCheckpointIndex: 0
+  nextCheckpoint: {fileID: 0}
   checkpointEffectPrefab: {fileID: 8362921943027625953, guid: 683ef400f036cc8429c097978133a41e, type: 3}
-  normalCheckpointMAT: {fileID: 2100000, guid: 91f21d47c2b9b7d4e946b81b5b39f0af, type: 2}
-  nextcheckpoint: {fileID: 0}
 --- !u!1 &1239629321
 GameObject:
   m_ObjectHideFlags: 0
@@ -17759,7 +17747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484eeebc9ee90964bb0f17f839195c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointParent: {fileID: 59431892}
+  checkpointParent: {fileID: 543450652498669738}
   minimap: {fileID: 1345818088}
   uiManager: {fileID: 1617549259}
 --- !u!1 &1605969127
@@ -17858,7 +17846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4e5b9006a13f0703d99f42a47e5e8b6f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4e5b9006a13f0703d99f42a47e5e8b6f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18007,6 +17995,7 @@ MonoBehaviour:
   lapsAmountUI: {fileID: 2050390038}
   positionsUI: {fileID: 1357592971}
   roundTimerUI: {fileID: 1814761999}
+  roundDeciTimerUI: {fileID: 0}
   wrongDirectionUI: {fileID: 1117215896}
   highscoreUI: {fileID: 838178137}
   gameOverUI: {fileID: 1153912914}
@@ -25297,7 +25286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &920426793631089053
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28105,7 +28094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3273774447912001942, guid: fd73f82be1e809a05af7f469bbea8955, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3273774447912001942, guid: fd73f82be1e809a05af7f469bbea8955, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -35317,33 +35306,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vehicleController: {fileID: 0}
   health: 100
   healthLimit: 100
-  nitroSpeed: 800
-  nitroAccelerationBoost: 0.05
-  normalMaxSpeed: 0
-  currentSpeed: 0
-  mainCamPovBoost: 20
+  healValue: 45
   ammo: 0
   ammoAdd: 0
   ammoLimit: 0
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
-  healValue: 45
-  shield: 0
-  nitro: 0
+  currentSpeed: 0
+  hasShield: 0
+  hasNitro: 0
   canShoot: 0
-  bomb: 0
+  hasBomb: 0
   isImmortal: 0
   isOnRoadtrack: 0
-  isFacingCorrectDirection: 0
-  currentlap: 0
+  currentPositionIndex: 0
+  currentLapIndex: 0
   currentCheckpointIndex: 0
   nextCheckpointIndex: 0
   nextCheckpoint: {fileID: 0}
   timer: 0
   timerCooldown: 5
+  offTrackTimer: 0
+  offTrackTimerLimit: 5
+  spawnPosition: {x: 0, y: 0, z: 0}
+  spawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  spawnYOffset: 5
 --- !u!114 &8160920351366770617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35356,6 +35345,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8770b3c08f1021a4a9feddb06ecab3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nitroSpeedModifier: 0
+  nitroAccelerationModifier: 0
+  nitroFovModifier: 0
   powerUpList: []
   powerUp: {fileID: 0}
 --- !u!114 &8160920351366770618
@@ -35469,8 +35461,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8160920351366770594}
-  m_LocalRotation: {x: 0.00023116548, y: -0.9999406, z: -0.0022536365, w: 0.010665881}
-  m_LocalPosition: {x: 9660.545, y: 2872.6167, z: 1792.1299}
+  m_LocalRotation: {x: -0.001781289, y: 0.9999884, z: 0.0029103819, w: -0.0034269362}
+  m_LocalPosition: {x: 3534.7, y: -812.6, z: 573.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8160920351684978179}
@@ -35478,7 +35470,7 @@ Transform:
   - {fileID: 834595121362430080}
   m_Father: {fileID: 1408672766}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.258, y: 181.222, z: -0.029}
+  m_LocalEulerAnglesHint: {x: -0.333, y: 180.393, z: -0.205}
 --- !u!1 &8160920351684978176
 GameObject:
   m_ObjectHideFlags: 0

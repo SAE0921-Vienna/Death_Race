@@ -14,7 +14,8 @@ namespace AI
         //private AI_VehicleController_ML _aiVehicleController;
         private AI_VehicleController _aiVehicleController;
         private AICheckpointManagerMachine _aiCheckpointManager;
-    
+        private AIManager _aiManager;
+
         [HideInInspector]
         public float[] inputActions = new float[2]; //These are the input actions for the 
                                                     //Vehicle Controller.
@@ -24,6 +25,7 @@ namespace AI
             _checkpointManager = FindObjectOfType<CheckpointManager>();
             _aiVehicleController = GetComponent<AI_VehicleController>();
             _aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
+            _aiManager = GetComponent<AIManager>();
             
             var myTransform = transform;
             
@@ -46,7 +48,7 @@ namespace AI
         public override void CollectObservations(VectorSensor sensor)
         {
             var checkpointForward = 
-                _checkpointManager.checkpointsInWorldList[_checkpointManager.nextCheckpointIndex].transform.forward;
+                _checkpointManager.checkpointsInWorldList[_aiManager.nextCheckpointIndex].transform.forward;
             
             var directionalDot = Vector3.Dot(transform.forward, checkpointForward);
             sensor.AddObservation(directionalDot);

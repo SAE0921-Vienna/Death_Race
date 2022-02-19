@@ -119,7 +119,6 @@ public class GameManager : MonoBehaviour
     {
         timeSinceStart = Time.time;
         raceHasStarted = true;
-
     }
 
     //public void CheckLaps()
@@ -156,6 +155,11 @@ public class GameManager : MonoBehaviour
     //    playerManager.currentLapIndex = currentLap;
     //}
 //
+
+    public void GameOver()
+    {
+        gameOverCanvas.gameObject.SetActive(true);
+    }
     public void ReplayLevel()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);

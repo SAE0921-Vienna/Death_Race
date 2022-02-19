@@ -45,8 +45,8 @@ namespace UserInterface
                 default:
                     break;
             }
-            roundTimerUI.text =  "TIME: " + gameManager.roundTimerAsSecString;
-            roundDeciTimerUI.text = gameManager.roundTimerAsDeciString;
+            //roundTimerUI.text =  "TIME: " + gameManager.roundTimerAsSecString;
+            //roundDeciTimerUI.text = gameManager.roundTimerAsDeciString;
         }
 
     }

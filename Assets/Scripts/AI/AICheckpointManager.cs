@@ -9,28 +9,6 @@ namespace AI
         public Vector3 targetPosition;
         private AIManager aIManager;
         
-        //public List<GameObject> aiCheckpointsList;
-        //public GameObject aiCheckpointParent;
-        //public Checkpoint nextCheckpointAI;
-
-        private void Start()
-        {
-            aIManager = FindObjectOfType<AIManager>();
-            
-            
-            targetPosition = checkpointsInWorldList[nextCheckpointIndex].transform.position;
-            aisTarget.transform.position = targetPosition;
-
-            //for (int i = 0; i < aiCheckpointParent.transform.childCount; i++)
-            //{
-            //    aiCheckpointsList.Add(aiCheckpointParent.transform.GetChild(i).gameObject);
-            //}
-
-            aIManager.nextCheckpoint = checkpointsInWorldList[0];
-            nextCheckpointIndex = 0;
-            aIManager.nextCheckpointIndex = nextCheckpointIndex;
-        }
-
 
         public override void VehicleThroughCheckpoint(Checkpoint checkpoint, Collider vehicle)
         {

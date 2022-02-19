@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode_timers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode_timers.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads/Training_Track_Checkpoints_Centered.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads/Training_Track_Checkpoints_Centered.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/GhostRecording/Resources/GhostPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/GhostRecording/Resources/GhostPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode 1_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode 1_timers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManagerMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManagerMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/FinishLineManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/FinishLineManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +204,7 @@
       <workItem from="1645134755584" duration="511000" />
       <workItem from="1645183703224" duration="3512000" />
       <workItem from="1645188759081" duration="18623000" />
+      <workItem from="1645277111546" duration="8166000" />
     </task>
     <servers />
   </component>

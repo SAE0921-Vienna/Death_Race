@@ -69,6 +69,9 @@ namespace AI
             _checkpointManager = FindObjectOfType<CheckpointManager>();
             if (!_checkpointManager)
                 Debug.LogWarning("Checkpoint Manager NOT Found");
+            
+            nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
+            nextCheckpointIndex = 0;
         }
 
         protected void Start()
@@ -152,16 +155,6 @@ namespace AI
             vehicleTransform.rotation = spawnRotation;
             
             gameObject.SetActive(true);
-        }
-        
-        /// <summary>
-        /// Checks the current checkpoint and sets it
-        /// </summary>
-        public void CheckCheckpoint(CheckpointManager checkpointManager)
-        {
-            currentCheckpointIndex = checkpointManager.currentCheckpointIndex;
-            nextCheckpoint = checkpointManager.nextCheckpoint;
-            nextCheckpointIndex = checkpointManager.nextCheckpointIndex;
         }
     }
 }

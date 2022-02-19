@@ -29,18 +29,18 @@ namespace AI
             return hit;
         }
 
-        public void CheckLaps()
-        {
-            if (currentLapIndex > _gameManager.laps)
-            {
-                currentLapIndex = _gameManager.laps;
-                //Game Finish
-                Debug.Log("YAY FINISH");
-            }
-            if (currentLapIndex < 0)
-            {
-                currentLapIndex = 0;
-            }
-        }
+        //public void CheckLaps()
+        //{
+        //    if (currentLapIndex > _gameManager.laps)
+        //    {
+        //        currentLapIndex = _gameManager.laps;
+        //        //Game Finish
+        //        Debug.Log("YAY FINISH");
+        //    }
+        //    if (currentLapIndex < 0)
+        //    {
+        //        currentLapIndex = 0;
+        //    }
+        //}
     }
 }
