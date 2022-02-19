@@ -5,27 +5,134 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode_timers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode_timers.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads/Training_Track_Checkpoints_Centered.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Training_Roads/Training_Track_Checkpoints_Centered.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/RacetrackWhiteblack_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/RacetrackWhiteblack_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Asphalt_Sides_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Asphalt_Sides_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Hexagon_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Hexagon_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Main_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Main_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Pipes_Holo_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Pipes_Holo_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Pipes_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Pipes_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Wall_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Wall_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Afterburner_VFX_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Afterburner_VFX_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Glow_VFX_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Glow_VFX_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/HeatDistortion_VFX_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/HeatDistortion_VFX_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/ImpactShape_VFX_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/ImpactShape_VFX_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Sparks_VFX_MAT.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/VFX/Sparks_VFX_MAT.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/Skin_Creation_Scene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/Skin_Creation_Scene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/VolumeSlider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/VolumeSlider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/HUDColor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/HUDColor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/PauseMenuScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/PauseMenuScript.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/AIShipWeapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/AIShipWeapon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/FieldOfView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/FieldOfView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/IDamageable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/IDamageable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/PlayerShipWeapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/PlayerShipWeapon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/ShipWeapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/ShipWeapon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/DFCK (Original Mix).mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/DFCK (Original Mix).mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Daniel Deluxe - Darkness.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Daniel Deluxe - Darkness.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Daniel Deluxe - Infiltrator.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Daniel Deluxe - Infiltrator.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/David Tort &amp; Danielle Simeone - You Got To.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/David Tort &amp; Danielle Simeone - You Got To.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Tineidae - Sky Burial.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Tineidae - Sky Burial.mp3.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/GhostRecording/Resources/GhostPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/GhostRecording/Resources/GhostPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode 1_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode 1_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Hologram/_Hologram_Rim_Flicker_Blue_MAT 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Hologram/_Hologram_Rim_Flicker_Blue_MAT 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/RacetrackWhiteblack_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/RacetrackWhiteblack_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT 4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road01_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_MAT 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_MAT 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_Pipes_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Road_Pipes_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road Materials/Track_Asphalt_Sides_MAT.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/Glow 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/Glow 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/HeatDistortion.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/HeatDistortion.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/ImpactShape.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/ImpactShape.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/ParticleAfterburner.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/ParticleAfterburner.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/Sparks.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/VFX/Sparks.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/GhostMode.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManagerMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManagerMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/FinishLineManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/FinishLineManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/AI Shooting_Test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/AI Shooting_Test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/AIShipWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/AIShipWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/FieldOfView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/FieldOfView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/HUDColor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/HUDColor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/IDamageable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/IDamageable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/PauseMenuScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/PauseMenuScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/PlayerShipWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/PlayerShipWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/Projectile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/Projectile.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/ShipWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/ShipWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/VolumeSlider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Wolfi/VolumeSlider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/tomi_Customization 1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/tomi_Customization 1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/vsAItomi.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/tomi/vsAItomi.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/DFCK (Original Mix) [pnyp84kZQWw].mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/DFCK (Original Mix) [pnyp84kZQWw].mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Daniel Deluxe - InfiltratDaniel Deluxe - Infiltrator.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Daniel Deluxe - InfiltratDaniel Deluxe - Infiltrator.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Darkness [d9URhZzvwh8].mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Darkness [d9URhZzvwh8].mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Tineidae - Sky Burial [duuA9Gzg46k].mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/Tineidae - Sky Burial [duuA9Gzg46k].mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/WipEout Omega Collection OST - David Tort &amp; Danielle Simeone - You Got To [N1-x467R2BY].mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/Music/WipEout Omega Collection OST - David Tort &amp; Danielle Simeone - You Got To [N1-x467R2BY].mp3.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +149,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/PIDController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/VolumeSlider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/ShipWeapon.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -204,7 +313,8 @@
       <workItem from="1645134755584" duration="511000" />
       <workItem from="1645183703224" duration="3512000" />
       <workItem from="1645188759081" duration="18623000" />
-      <workItem from="1645277111546" duration="8166000" />
+      <workItem from="1645277111546" duration="8927000" />
+      <workItem from="1645292092254" duration="300000" />
     </task>
     <servers />
   </component>
