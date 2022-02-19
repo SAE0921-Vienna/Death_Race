@@ -45,7 +45,6 @@ public class VolumeSlider : MonoBehaviour
         {
             VolumeDisplay();
         }
-
     }
     /// <summary>
     /// Change Volume Slider Value (Display) and Audio(Dezibel) Puffer?
