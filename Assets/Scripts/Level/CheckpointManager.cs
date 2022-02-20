@@ -15,7 +15,7 @@ public class CheckpointManager : MonoBehaviour
     private Transform checkpointParent;
 
 
-    protected void Awake()
+    private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
         GetAllCheckpoints();
@@ -29,18 +29,17 @@ public class CheckpointManager : MonoBehaviour
         //Order here is very important - in the hierarchy
         foreach (Transform checkpointsInWorld in checkpointParent)
         {
-            //Debug.Log(checkpointsInWorld);
             Checkpoint checkpoint = checkpointsInWorld.GetComponent<Checkpoint>();
             checkpointsInWorldList.Add(checkpoint);
 
-            if (_gameManager.ghostMode)
-            {
-                //var checkpointEffect = Instantiate(checkpointEffectPrefab, checkpointsInWorld.position,
-                //    checkpointsInWorld.rotation);
-                //checkpointEffect.transform.parent = checkpoint.transform;
-                //checkpointEffect.transform.localPosition = Vector3.zero;
-                //checkpointEffect.SetActive(false);
-            }
+            //if (_gameManager.ghostMode)
+            //{
+            //    //var checkpointEffect = Instantiate(checkpointEffectPrefab, checkpointsInWorld.position,
+            //    //    checkpointsInWorld.rotation);
+            //    //checkpointEffect.transform.parent = checkpoint.transform;
+            //    //checkpointEffect.transform.localPosition = Vector3.zero;
+            //    //checkpointEffect.SetActive(false);
+            //}
         }
         checkpointCount = checkpointsInWorldList.Count;
     }

@@ -8,45 +8,43 @@ namespace AI
         public Transform aisTarget;
         public Vector3 targetPosition;
         private AIManager aIManager;
-        
+
+        public Transform aiCheckpointParent;
+        public List<Transform> aiCheckpointsList;
+        private void Awake()
+        {
+            GetAllCheckpoints();
+            foreach (Transform checkpointsInWorld in aiCheckpointParent)
+            {
+                Transform checkpoint = checkpointsInWorld.transform;
+                aiCheckpointsList.Add(checkpoint);
+            }
+        }
+
 
         public override void VehicleThroughCheckpoint(Checkpoint checkpoint, Collider vehicle)
         {
             base.VehicleThroughCheckpoint(checkpoint, vehicle);
-            //Debug.Log(checkpoint.transform.name);
-            //if (checkpointsInWorldList.IndexOf(checkpoint) == nextCheckpointIndex)
-            //{
-            //    currentCheckpointIndex = checkpointsInWorldList.IndexOf(checkpoint);
-            //    
-            //    nextCheckpointIndex = (nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
-            //    aIManager.spawnPosition = checkpoint.transform.position;
-            //    aIManager.spawnRotation = checkpoint.transform.rotation;
-            //    //targetPosition = checkpointsInWorldList[nextCheckpointIndex].transform.position;
-            //    
-            //    aisTarget.transform.position = targetPosition;
-//
-            //    ////bug loop -- ai cant loop (it doesnt know how to go up and down) - so im improvising
-            //    //if (nextCheckpointIndex == 12)
-                //{
-                //    aIManager.spawnPosition = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1].transform.position;
-                //    aIManager.spawnRotation = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1].transform.rotation;
-                //    //aIManager.RespawnAI();
-                //}
-                //if (nextCheckpointIndex == checkpointCount - 2)
-                //{
-                //    currentCheckpointIndex = 0;
-                //    nextCheckpointIndex = 1;
-                //    targetPosition = aiCheckpointsList[nextCheckpointIndex].transform.position;
-                //    aisTarget.transform.position = targetPosition;
-                //}
+           
+            targetPosition = checkpointsInWorldList[aIManager.nextCheckpointIndex].transform.position;
+            aisTarget.transform.position = targetPosition;
+
+            ////bug loop -- ai cant loop (it doesnt know how to go up and down) - so im improvising
+            if (aIManager.nextCheckpointIndex == 12)
+            {
+                aIManager.spawnPosition = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1].transform.position;
+                aIManager.spawnRotation = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1].transform.rotation;
+                aIManager.RespawnVehicle();
+            }
+            if (aIManager.nextCheckpointIndex == checkpointCount - 2)
+            {
+                aIManager.currentCheckpointIndex = 0;
+                aIManager.nextCheckpointIndex = 1;
+                targetPosition = aiCheckpointsList[aIManager.nextCheckpointIndex].transform.position;
+                aisTarget.transform.position = targetPosition;
+            }
             //}
         }
 
-        private void GetAllAICheckpoints()
-        {
-            //targetPosition = aiCheckpointsList[nextCheckpointIndex].transform.position;
-            //aIManager.nextCheckpoint = nextCheckpointAI;
-            //nextCheckpointAI = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
-        }
     }
 }

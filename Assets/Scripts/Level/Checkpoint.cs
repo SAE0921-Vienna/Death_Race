@@ -23,7 +23,6 @@ public class Checkpoint : MonoBehaviour
         }
         #endregion
 
-        checkpointManager = GetComponentInParent<CheckpointManager>();
 
         #region aicheckpointManager FindObjectOfType
         //aicheckpointManager = FindObjectOfType<AICheckpointManager>();
@@ -41,6 +40,9 @@ public class Checkpoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+
+        checkpointManager = GetComponentInParent<CheckpointManager>();
+
         if (other.CompareTag("Player"))
         {
             //Debug.Log("Checkpoint");
@@ -49,8 +51,8 @@ public class Checkpoint : MonoBehaviour
         }
         if (other.CompareTag("AI") )
         {
-            //Debug.Log("Checkpoint");
-            aicheckpointManager.VehicleThroughCheckpoint(this, other);
+            Debug.Log("AI through Checkpoint");
+            checkpointManager.VehicleThroughCheckpoint(this, other);
             //mlCheckpointManager.AIThroughCheckpoint(this, other);
         }
 
