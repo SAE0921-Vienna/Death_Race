@@ -7148,8 +7148,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042297, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
+      propertyPath: m_RenderShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3965160609210042297, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_RendererIndex
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042297, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_Cameras.Array.size
