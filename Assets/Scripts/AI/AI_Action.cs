@@ -4,11 +4,12 @@ using UnityEngine;
 using PlayerController;
 using UserInterface;
 using Weapons;
+using AI;
 
 public class AI_Action : MonoBehaviour
 {
     private FieldOfView fieldOfView;
-    private PlayerManager playerManager;
+    private BaseVehicleManager baseVehicleManager;
     private PlayerWeapon playerWeapon;
     private VehicleController vehicleController;
     private ShipWeapon shipweapon;
@@ -16,7 +17,7 @@ public class AI_Action : MonoBehaviour
 
     private void Awake()
     {
-        playerManager = GetComponent<PlayerManager>();
+        baseVehicleManager = GetComponent<BaseVehicleManager>();
         fieldOfView = GetComponent<FieldOfView>();
         vehicleController = GetComponent<VehicleController>();
         playerWeapon = GetComponent<PlayerWeapon>();
@@ -43,6 +44,8 @@ public class AI_Action : MonoBehaviour
         {
             case PickUpScriptableObject.powerUps.Shield:
                 //Function
+                if()
+                aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Nitro:
                 break;

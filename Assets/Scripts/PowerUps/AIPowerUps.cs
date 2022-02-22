@@ -25,10 +25,10 @@ public class AIPowerUps : PowerUps
             ResetPowerUps();
         }
 
-        if (powerUp != null)
-        {
-            ActivatePowerUp(powerUp);
-        }
+        //if (powerUp != null)
+        //{
+        //    ActivatePowerUp(powerUp);
+        //}
 
 
     }
@@ -37,7 +37,7 @@ public class AIPowerUps : PowerUps
     /// Activates the picked up powerup
     /// </summary>
     /// <param name="powerUp"></param>
-    private void ActivatePowerUp(PickUpScriptableObject powerUp)
+    public void ActivatePowerUp(PickUpScriptableObject powerUp)
     {
         aiaction.CheckPowerUp(powerUp);
 
