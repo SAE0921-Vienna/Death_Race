@@ -104,7 +104,7 @@ public class AIShipWeapon : ShipWeapon
     {
         if (aIManager.currentSpeed >= 20)
         {
-            projectileSpeed = (aIManager.currentSpeed * 150) + projectileDefaultSpeed;
+            projectileSpeed = (aIManager.currentSpeed * 20) + projectileDefaultSpeed;
         }
         else
         {
@@ -112,7 +112,7 @@ public class AIShipWeapon : ShipWeapon
         }
 
         GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.deltaTime, ForceMode.Impulse);
+        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
 
         Destroy(projectile, projectileLifeTime);
     }

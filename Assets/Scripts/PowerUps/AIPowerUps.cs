@@ -20,10 +20,10 @@ public class AIPowerUps : PowerUps
             ResetPowerUps();
         }
 
-        if (powerUp != null)
-        {
-            ActivatePowerUp(powerUp);
-        }
+        //if (powerUp != null)
+        //{
+        //    ActivatePowerUp(powerUp);
+        //}
 
       
     }

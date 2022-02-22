@@ -74,7 +74,7 @@ public class PlayerShipWeapon : ShipWeapon
     {
         if (playerManager.currentSpeed > 0)
         {
-            projectileSpeed = (playerManager.currentSpeed * 150) + projectileDefaultSpeed;
+            projectileSpeed = (playerManager.currentSpeed * 30) + projectileDefaultSpeed;
         }
         else
         {
@@ -82,7 +82,7 @@ public class PlayerShipWeapon : ShipWeapon
         }
         //PlaySound();
         GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.deltaTime, ForceMode.Impulse);
+        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
 
         Destroy(projectile, projectileLifeTime);
     }

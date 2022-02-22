@@ -3035,6 +3035,7 @@ GameObject:
   - component: {fileID: 69791187}
   - component: {fileID: 69791188}
   - component: {fileID: 69791182}
+  - component: {fileID: 69791189}
   m_Layer: 6
   m_Name: AI
   m_TagString: AI
@@ -3167,7 +3168,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   maxSphereCastDistance: 1000
-  sphereCastRadius: 5
+  sphereCastRadius: 3
   isOnRoadtrack: 1
 --- !u!114 &69791182
 MonoBehaviour:
@@ -3321,6 +3322,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &69791188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69791177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef8752b291a8484a9a8bef4d36e7ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nitroSpeedModifier: 0
+  nitroAccelerationModifier: 0
+  nitroFovModifier: 0
+  powerUpList: []
+  powerUp: {fileID: 0}
+--- !u!114 &69791189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5441,11 +5459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.018888824
+      value: -0.01888886
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0006469036
+      value: -0.0006469053
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5453,7 +5471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.034221772
+      value: -0.0342218
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19019,11 +19037,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.018888824
+      value: -0.01888886
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0006469036
+      value: -0.0006469053
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
@@ -19031,7 +19049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.034221772
+      value: -0.0342218
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -78358,8 +78376,8 @@ MonoBehaviour:
   ammoSize: 0
   fireRate: 0
   projectileDamage: 0
-  projectileSpeed: 30000
-  projectileDefaultSpeed: 30000
+  projectileSpeed: 20000
+  projectileDefaultSpeed: 20000
   projectileLifeTime: 5
   _camera: {fileID: 2089485221}
 --- !u!114 &8160920351366770597

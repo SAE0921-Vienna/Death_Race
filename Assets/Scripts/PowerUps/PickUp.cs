@@ -86,37 +86,45 @@ public class PickUp : MonoBehaviour
         if (_vehicleManager.CompareTag("Player") || _vehicleManager.CompareTag("AI"))
         {
             if (!childObjectDeleted)
-        {
-            #region Manually Add one specific PowerUp
-            if (pickUpObject != null && pickUpObject.powerUpType == PickUpScriptableObject.powerUps.Random)
             {
-                int rand = Random.Range(0, powerUpManager.powerUps.Length - 1);
-                pickUpObject = powerUpManager.powerUps[rand];
-                _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+                #region Manually Add one specific PowerUp
+                if (pickUpObject != null && pickUpObject.powerUpType == PickUpScriptableObject.powerUps.Random)
+                {
+                    int rand = Random.Range(0, powerUpManager.powerUps.Length - 1);
+                    pickUpObject = powerUpManager.powerUps[rand];
+
+                    if (_vehicleManager.CompareTag("Player"))
+                        _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+                    else if (_vehicleManager.CompareTag("AI"))
+                        _vehicleManager.GetComponent<AIPowerUps>().AddToPowerUpList(pickUpObject);
+
+                }
+                else if (pickUpObject != null)
+                {
+                    if (_vehicleManager.CompareTag("Player"))
+                        _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+                    else if (_vehicleManager.CompareTag("AI"))
+                        _vehicleManager.GetComponent<AIPowerUps>().AddToPowerUpList(pickUpObject);
+                }
+
+                #endregion
+
+
+
+                #region Randomly Add one PowerUp from the PowerUps List
+                //int rand = Random.Range(0, powerUpManager.powerUps.Length);
+                //pickUpObject = powerUpManager.powerUps[rand];
+                //other.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+                #endregion
+
+
+                Destroy(transform.GetChild(0).gameObject);
+                childObjectDeleted = true;
+                timer = timerCooldown;
             }
-            else if (pickUpObject != null)
-            {
-                _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
-            }
 
-            #endregion
-
-
-
-            #region Randomly Add one PowerUp from the PowerUps List
-            //int rand = Random.Range(0, powerUpManager.powerUps.Length);
-            //pickUpObject = powerUpManager.powerUps[rand];
-            //other.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
-            #endregion
-
-
-            Destroy(transform.GetChild(0).gameObject);
-            childObjectDeleted = true;
-            timer = timerCooldown;
         }
-
     }
-}
 
     public void SpawnPrefab()
     {

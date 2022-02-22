@@ -12,6 +12,7 @@ public class AI_Action : MonoBehaviour
     private PlayerWeapon playerWeapon;
     private VehicleController vehicleController;
     private ShipWeapon shipweapon;
+    private AIPowerUps aiPowerUps;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class AI_Action : MonoBehaviour
         vehicleController = GetComponent<VehicleController>();
         playerWeapon = GetComponent<PlayerWeapon>();
         shipweapon = GetComponent<ShipWeapon>();
+        aiPowerUps = GetComponent<AIPowerUps>();
     }
     void Update()
     {
@@ -28,9 +30,22 @@ public class AI_Action : MonoBehaviour
             ShootingAI();
             Debug.Log(this.gameObject.name + " shootet auf " + fieldOfView.nearestObject.gameObject.name);
         }
+        if (aiPowerUps.powerUp != null)
+        {
+            CheckPowerUp();
+            aiPowerUps.ActivatePowerUp(aiPowerUps.powerUp);
+        }
     }
     private void ShootingAI()
     {
         shipweapon.Shoot();
+    }
+
+    private void CheckPowerUp()
+    {
+        switch (aiPowerUps.powerUp//Enum)
+        {
+            //case aiPowerUps.powerUp.
+        }
     }
 }
