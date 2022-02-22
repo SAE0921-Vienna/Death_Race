@@ -5,9 +5,14 @@ using AI;
 
 public class AIPowerUps : PowerUps
 {
+    AI_Action aiaction;
+
     private  void Awake()
     {
         _vehicleStats = GetComponent<BaseVehicleManager>();
+        aiaction = GetComponent<AI_Action>();
+
+        powerupParent = transform.GetChild(0);
     }
 
     private void Update()
@@ -20,12 +25,25 @@ public class AIPowerUps : PowerUps
             ResetPowerUps();
         }
 
-        //if (powerUp != null)
-        //{
-        //    ActivatePowerUp(powerUp);
-        //}
+        if (powerUp != null)
+        {
+            ActivatePowerUp(powerUp);
+        }
 
-      
+
+    }
+
+    /// <summary>
+    /// Activates the picked up powerup
+    /// </summary>
+    /// <param name="powerUp"></param>
+    private void ActivatePowerUp(PickUpScriptableObject powerUp)
+    {
+        aiaction.CheckPowerUp(powerUp);
+
+        powerUp.PowerUpAction(this.gameObject);
+        powerUpList.Remove(powerUp);
+        this.powerUp = null;
     }
 
 

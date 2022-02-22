@@ -6,16 +6,16 @@ using UserInterface;
 
 public class PowerUps : MonoBehaviour
 {
-    [SerializeField] private float nitroSpeedModifier;
-    [SerializeField] private float nitroAccelerationModifier;
-    [SerializeField] private float nitroFovModifier;
+    [SerializeField] private float nitroSpeedModifier = 200f;
+    [SerializeField] private float nitroAccelerationModifier = 0.2f;
+    [SerializeField] private float nitroFovModifier = 20f;
 
     public List<ScriptableObject> powerUpList;
     public PickUpScriptableObject powerUp;
     private UIManager uIManager;
     protected BaseVehicleManager _vehicleStats;
     private GameManager gameManager;
-    private Transform powerupParent;
+    protected Transform powerupParent;
     private int powerUpListLength = 1;
 
     private void Awake()
@@ -100,15 +100,17 @@ public class PowerUps : MonoBehaviour
     /// Activates the picked up powerup
     /// </summary>
     /// <param name="powerUp"></param>
-    public void ActivatePowerUp(PickUpScriptableObject powerUp)
+    private void ActivatePowerUp(PickUpScriptableObject powerUp)
     {
-
         powerUpList.Remove(powerUp);
-        uIManager.powerUpUI.color = new Color(0, 0, 0, 0);
+        if (_vehicleStats.CompareTag("Player"))
+        {
+            uIManager.powerUpUI.color = new Color(0, 0, 0, 0);
+        }
         powerUp.PowerUpAction(this.gameObject);
         this.powerUp = null;
     }
-    
+
     /// <summary>
     /// Adds the powerUp to the list
     /// </summary>
@@ -120,8 +122,11 @@ public class PowerUps : MonoBehaviour
             powerUpList.Clear();
         }
         powerUpList.Add(powerUp);
-        uIManager.powerUpUI.sprite = powerUp.icon;
-        uIManager.powerUpUI.color = new Color(1, 1, 1, 1);
+        if (_vehicleStats.CompareTag("Player"))
+        {
+            uIManager.powerUpUI.sprite = powerUp.icon;
+            uIManager.powerUpUI.color = new Color(1, 1, 1, 1);
+        }
         this.powerUp = powerUp;
     }
 
@@ -142,7 +147,7 @@ public class PowerUps : MonoBehaviour
             _vehicleStats.hasNitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
             gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV;
-            VehicleController vehicleContr = GetComponent<VehicleController>();           
+            VehicleController vehicleContr = GetComponent<VehicleController>();
             vehicleContr.mMaxSpeed = GetComponent<SpaceshipLoad>().CurrentShip.maxSpeed;
             vehicleContr.mAccelerationConstant = GetComponent<SpaceshipLoad>().CurrentShip.accelerationSpeed;
         }
@@ -150,7 +155,11 @@ public class PowerUps : MonoBehaviour
         {
             _vehicleStats.canShoot = false;
             _vehicleStats.ammo = 0;
-            uIManager.ammoAmountUI.gameObject.SetActive(false);
+
+            if (_vehicleStats.CompareTag("Player"))
+            {
+                uIManager.ammoAmountUI.gameObject.SetActive(false);
+            }
 
         }
         if (_vehicleStats.hasBomb)
@@ -172,7 +181,10 @@ public class PowerUps : MonoBehaviour
     {
         _vehicleStats.timer = _vehicleStats.timerCooldown;
         powerupParent.GetChild(1).gameObject.SetActive(true);
-        gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV + nitroFovModifier;
+        if (_vehicleStats.CompareTag("Player"))
+        {
+            gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV + nitroFovModifier;
+        }
         //gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(gameManager.vCamPOV, gameManager.vCamPOV + playerStats.mainCamPovBoost, Time.deltaTime);
         VehicleController vehicleContr = GetComponent<VehicleController>();
         vehicleContr.mMaxSpeed += nitroSpeedModifier;
@@ -183,14 +195,20 @@ public class PowerUps : MonoBehaviour
 
     public void AmmoPowerUp()
     {
-        uIManager.ammoAmountUI.gameObject.SetActive(true);
+        if (_vehicleStats.CompareTag("Player"))
+        {
+            uIManager.ammoAmountUI.gameObject.SetActive(true);
+        }
         //if (_vehicleStats.ammo < _vehicleStats.ammoLimit)
         //{
         //    _vehicleStats.ammo += _vehicleStats.ammoAdd;
         //    if (_vehicleStats.ammo > _vehicleStats.ammoLimit) _vehicleStats.ammo = _vehicleStats.ammoLimit;
         //}
         _vehicleStats.ammo += _vehicleStats.ammoAdd;
-        uIManager.ammoAmountUI.text = _vehicleStats.ammo.ToString();
+        if (_vehicleStats.CompareTag("Player"))
+        {
+            uIManager.ammoAmountUI.text = _vehicleStats.ammo.ToString();
+        }
         _vehicleStats.canShoot = true;
     }
 

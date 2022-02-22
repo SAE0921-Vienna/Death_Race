@@ -30,22 +30,32 @@ public class AI_Action : MonoBehaviour
             ShootingAI();
             Debug.Log(this.gameObject.name + " shootet auf " + fieldOfView.nearestObject.gameObject.name);
         }
-        if (aiPowerUps.powerUp != null)
-        {
-            CheckPowerUp();
-            aiPowerUps.ActivatePowerUp(aiPowerUps.powerUp);
-        }
+
     }
     private void ShootingAI()
     {
         shipweapon.Shoot();
     }
 
-    private void CheckPowerUp()
+    public void CheckPowerUp(PickUpScriptableObject powerUp)
     {
-        switch (aiPowerUps.powerUp//Enum)
+        switch (powerUp.powerUpType)
         {
-            //case aiPowerUps.powerUp.
+            case PickUpScriptableObject.powerUps.Shield:
+                //Function
+                break;
+            case PickUpScriptableObject.powerUps.Nitro:
+                break;
+            case PickUpScriptableObject.powerUps.Ammo:
+                break;
+            case PickUpScriptableObject.powerUps.Bomb:
+                break;
+            case PickUpScriptableObject.powerUps.Heal:
+                break;
+            case PickUpScriptableObject.powerUps.Random:
+                break;
+            default:
+                break;
         }
     }
 }

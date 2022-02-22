@@ -92,19 +92,12 @@ public class PickUp : MonoBehaviour
                 {
                     int rand = Random.Range(0, powerUpManager.powerUps.Length - 1);
                     pickUpObject = powerUpManager.powerUps[rand];
-
-                    if (_vehicleManager.CompareTag("Player"))
-                        _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
-                    else if (_vehicleManager.CompareTag("AI"))
-                        _vehicleManager.GetComponent<AIPowerUps>().AddToPowerUpList(pickUpObject);
-
+                    _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
                 }
                 else if (pickUpObject != null)
                 {
-                    if (_vehicleManager.CompareTag("Player"))
-                        _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
-                    else if (_vehicleManager.CompareTag("AI"))
-                        _vehicleManager.GetComponent<AIPowerUps>().AddToPowerUpList(pickUpObject);
+                    _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+
                 }
 
                 #endregion
