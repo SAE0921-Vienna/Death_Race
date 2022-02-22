@@ -26,25 +26,23 @@ public class GameManager : MonoBehaviour
     [Header("Positions")]
     public float[] positions = new float[5];
     [Header("Round Timer")]
-    public float roundTimer;
-    public string roundTimerAsSecString;
-    public string roundTimerAsDeciString;
-    public float timeSinceStart;
+    public string roundTimerAsString;
 
-    private float currentTimer;
-    private float currentMin;
-    private float currentSec;
-    private float currentMilliSec;
+    public float roundTimer;
+    public float currentMin;
+    public float currentSec;
+    public float currentMilliSec;
 
     public bool ghostMode;
-    
+
     private void Awake()
     {
         Time.timeScale = 1;
-        
+        roundTimerAsString = "00:00:00";
+
         raceHasStarted = false;
         raceFinished = false;
-        
+
         finishLineManager = FindObjectOfType<FinishLineManager>();
         if (!finishLineManager)
         {
@@ -71,8 +69,8 @@ public class GameManager : MonoBehaviour
     {
         if (raceHasStarted)
         {
-            roundTimer = Time.time - timeSinceStart;
             ConvertTime();
+
         }
     }
     private void ConvertTime()
@@ -81,18 +79,18 @@ public class GameManager : MonoBehaviour
         string currentSecAsString;
         string currentMiliAsString;
 
-        currentTimer += Time.deltaTime;
+        roundTimer += Time.deltaTime;
 
-        currentMilliSec = Mathf.RoundToInt(currentTimer * 100);
+        currentMilliSec = Mathf.RoundToInt(roundTimer * 100);
         if (currentSec >= 60f)
         {
             currentSec = 0;
             currentMin++;
         }
-        if(currentMilliSec >= 100f)
+        if (currentMilliSec >= 100f)
         {
             currentSec++;
-            currentTimer = 0;
+            roundTimer = 0;
         }
 
         if (currentMin < 10)
@@ -110,51 +108,13 @@ public class GameManager : MonoBehaviour
         else
             currentMiliAsString = "" + currentMilliSec;
 
-        //roundTimerAsString = currentMinAsString + ":" + currentSecAsString + ":" + currentMiliAsString;
-        roundTimerAsSecString = currentMinAsString + ":" + currentSecAsString + ":";
-        roundTimerAsDeciString = currentMiliAsString;
+        roundTimerAsString = currentMinAsString + ":" + currentSecAsString + ":" + currentMiliAsString;
     }
 
     public void StartRoundTimer()
     {
-        timeSinceStart = Time.time;
         raceHasStarted = true;
     }
-
-    //public void CheckLaps()
-    //{
-    //    if (currentLap > laps && !ghostMode)
-    //    {
-    //        currentLap = laps;
-//
-    //        raceFinished = true;
-    //        //if (FindObjectOfType<GhostManager>())
-    //        //{
-    //        //    FindObjectOfType<GhostManager>().StopRecording();
-    //        //}
-    //        //Game Finish
-//
-    //        gameOverCanvas.gameObject.SetActive(true);
-//
-    //        Debug.Log("YAY FINISH");
-    //        for (int i = 0; i < finishLineManager.checkpointParent.childCount; i++)
-    //        {
-    //            Checkpoint checkpoint = finishLineManager.checkpointParent.GetChild(i).GetComponent<Checkpoint>();
-    //            if (checkpoint.transform.GetChild(0))
-    //            {
-    //                checkpoint.transform.GetChild(0).gameObject.SetActive(false);
-    //            }
-    //        }
-    //    }
-//
-    //    if (currentLap < 0)
-    //    {
-    //        currentLap = 0;
-    //    }
-//
-    //    playerManager.currentLapIndex = currentLap;
-    //}
-//
 
     public void GameOver()
     {

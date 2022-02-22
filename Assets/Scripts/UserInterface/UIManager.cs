@@ -15,7 +15,6 @@ namespace UserInterface
         public TextMeshProUGUI lapsAmountUI;
         public TextMeshProUGUI positionsUI;
         public TextMeshProUGUI roundTimerUI;
-        public TextMeshProUGUI roundDeciTimerUI;
         public RectTransform wrongDirectionUI;
         public TextMeshProUGUI highscoreUI;
 
@@ -30,7 +29,6 @@ namespace UserInterface
         {
             lapsAmountUI.text = playerManager.currentLapIndex + "/" + gameManager.laps + " LAPS";
             //positionsUI.text = gameManager.playerPosition + "/" + gameManager.positions + " POSITION";
-            //switch, st, nd, rd, th,...
             switch (playerManager.currentPositionIndex)
             {
                 case 1:
@@ -45,8 +43,9 @@ namespace UserInterface
                 default:
                     break;
             }
-            //roundTimerUI.text =  "TIME: " + gameManager.roundTimerAsSecString;
-            //roundDeciTimerUI.text = gameManager.roundTimerAsDeciString;
+
+            roundTimerUI.text = gameManager.roundTimerAsString;
+
         }
 
     }

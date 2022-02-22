@@ -44,7 +44,6 @@ public class FinishLineManager : MonoBehaviour
 
             if (other.CompareTag("Player"))
             {
-                Debug.LogFormat("Started Race!");
                 gameManager.StartRoundTimer();
                 minimap.gameObject.SetActive(true);
             }
@@ -60,7 +59,10 @@ public class FinishLineManager : MonoBehaviour
             {
                 FindObjectOfType<GhostManager>().StopRecording();
                 FindObjectOfType<GhostManager>().ghost.playGhostRecording();
-                //gameManager.roundTimer = 0; Schaut sich Wolfi oder Tomi an.
+                gameManager.roundTimer = 0;
+                gameManager.currentMilliSec = 0;
+                gameManager.currentMin = 0;
+                gameManager.currentSec = 0;
             }
 
             //If the vehicle is on current lap of index currentLapIndex 4 and collides with the Trigger, set the lap count back to 3.
