@@ -43,11 +43,13 @@ public class AI_Action : MonoBehaviour
                 aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Nitro:
+                aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Ammo:
                 aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Bomb:
+                aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Heal:
                 if (baseVehicleManager.health < 70)
