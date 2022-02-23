@@ -16,7 +16,10 @@ public class SaveLoadScript : MonoBehaviour
     public int milkyCoins;
     public int maxMilkyCoins = 9999999;
 
-    public float highScore;
+    public float bestTime;
+    public string currentMinAsString;
+    public string currentSecAsString;
+    public string currentMiliAsString;
     public int lastGhostVehicleIndex;
     public int lastGhostMaterialIndex;
 
@@ -148,9 +151,9 @@ public class SaveLoadScript : MonoBehaviour
         }
     }
 
-    public void SaveHighScore(float highScore, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
+    public void SaveHighScore(float _bestTime, string _currentMin, string _currentSec, string _currentMilliSec, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
     {
-        SaveSystem.SaveHighscoreData(highScore, _lastGhostVehicleIndex, _lastGhostMaterialIndex);
+        SaveSystem.SaveHighscoreData(_bestTime, _currentMin, _currentSec, _currentMilliSec, _lastGhostVehicleIndex, _lastGhostMaterialIndex);
     }
     public void LoadHighScoreData()
     {
@@ -161,7 +164,10 @@ public class SaveLoadScript : MonoBehaviour
         }
         else
         {
-            highScore = data.highScore;
+            bestTime = data.bestTime;
+            currentMinAsString = data.currentMin;
+            currentSecAsString = data.currentSec;
+            currentMiliAsString = data.currentMilliSec;
             lastGhostVehicleIndex = data.lastGhostVehicleIndex;
             lastGhostMaterialIndex = data.lastGhostMaterialIndex;
 

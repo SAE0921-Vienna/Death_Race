@@ -124,13 +124,13 @@ public static class SaveSystem
 
     }
 
-    public static void SaveHighscoreData(float highScore, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
+    public static void SaveHighscoreData(float _bestTime, string _currentMin, string _currentSec, string _currentMilliSec, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/score.deathrace";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        SaveData data = new SaveData(highScore, _lastGhostVehicleIndex, _lastGhostMaterialIndex);
+        SaveData data = new SaveData(_bestTime, _currentMin, _currentSec, _currentMilliSec, _lastGhostVehicleIndex, _lastGhostMaterialIndex);
 
         formatter.Serialize(stream, data);
         stream.Close();

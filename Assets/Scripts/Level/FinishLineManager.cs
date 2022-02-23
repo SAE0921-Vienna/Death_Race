@@ -58,7 +58,7 @@ public class FinishLineManager : MonoBehaviour
             if (gameManager.ghostMode)
             {
                 FindObjectOfType<GhostManager>().StopRecording();
-                FindObjectOfType<GhostManager>().ghost.playGhostRecording();
+                //FindObjectOfType<GhostManager>().ghost.playGhostRecording();
                 gameManager.roundTimer = 0;
                 gameManager.currentMilliSec = 0;
                 gameManager.currentMin = 0;
