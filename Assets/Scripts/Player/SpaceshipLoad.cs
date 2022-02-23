@@ -33,6 +33,7 @@ public class SpaceshipLoad : MonoBehaviour
     private void Awake()
     {
         LoadShip();
+        SetVFXPrefab();
     }
 
     private void LoadShip()
@@ -85,5 +86,10 @@ public class SpaceshipLoad : MonoBehaviour
         _baseVehicleManager = GetComponent<BaseVehicleManager>();
         _baseVehicleManager.ammo = allWeapons[currentWeapon].ammoSize;
         _baseVehicleManager.ammoAdd = _baseVehicleManager.ammo;
+    }
+
+    protected void SetVFXPrefab()
+    {
+        var vfxPrefab = Instantiate(CurrentShip.vfxPrefab, GetComponentInChildren<SpaceshipRotator>().transform);
     }
 }

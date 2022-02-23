@@ -16,6 +16,7 @@ MonoBehaviour:
   priceInShop: 0
   vehicleMesh: {fileID: 4300000, guid: 841b1167232b829478d9d19650b6adec, type: 3}
   vehicleColliderMesh: {fileID: 4300000, guid: d8004ebbc859d8a4aa82c160e9391368, type: 3}
+  vfxPrefab: {fileID: 687564875257473006, guid: e242018bf456f0812ae966560e7cf502, type: 3}
   health: 100
   nitroSpeed: 200
   maxSpeed: 1050

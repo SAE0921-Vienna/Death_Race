@@ -21,7 +21,7 @@ public class CheckpointManager : MonoBehaviour
         GetAllCheckpoints();
     }
 
-    protected void GetAllCheckpoints()
+    private void GetAllCheckpoints()
     {
         checkpointParent = transform;
         checkpointsInWorldList = new List<Checkpoint>();

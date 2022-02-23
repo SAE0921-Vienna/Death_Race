@@ -9,11 +9,8 @@ namespace AI
     public class VehicleAgent : Agent
     {
         private CheckpointManager _checkpointManager;
-        private Transform _spawnTransform;
         private Vector3 _spawnPositionVector;
-        //private AI_VehicleController_ML _aiVehicleController;
         private AI_VehicleController _aiVehicleController;
-        private AICheckpointManagerMachine _aiCheckpointManager;
         private AIManager _aiManager;
 
         [HideInInspector]
@@ -24,12 +21,10 @@ namespace AI
         {
             _checkpointManager = FindObjectOfType<CheckpointManager>();
             _aiVehicleController = GetComponent<AI_VehicleController>();
-            _aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
             _aiManager = GetComponent<AIManager>();
             
             var myTransform = transform;
-            
-            _spawnTransform = myTransform;
+
             _spawnPositionVector = myTransform.position;
         }
         
