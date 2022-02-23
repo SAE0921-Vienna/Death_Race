@@ -876,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.0000000027939677
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1445,6 +1445,9 @@ MonoBehaviour:
   currentMin: 0
   currentSec: 0
   currentMilliSec: 0
+  currentMinAsString: 
+  currentSecAsString: 
+  currentMiliAsString: 
   ghostMode: 1
 --- !u!1 &222877706
 GameObject:
@@ -2804,7 +2807,10 @@ MonoBehaviour:
   spaceConfig: {fileID: 0}
   milkyCoins: 0
   maxMilkyCoins: 9999999
-  highScore: 0
+  bestTime: 0
+  currentMinAsString: 
+  currentSecAsString: 
+  currentMiliAsString: 
   lastGhostVehicleIndex: 0
   lastGhostMaterialIndex: 0
   masterVolume: 1
@@ -4972,7 +4978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.011136354
+      value: 0.011136351
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7679,8 +7685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 193.56, y: 0}
-  m_SizeDelta: {x: 387.12, y: 50}
+  m_AnchoredPosition: {x: 276.5818, y: 0}
+  m_SizeDelta: {x: 553.1637, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &838178137
 MonoBehaviour:

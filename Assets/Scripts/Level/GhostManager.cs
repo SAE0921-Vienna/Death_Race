@@ -7,6 +7,7 @@ using UserInterface;
 
 public class GhostManager : MonoBehaviour
 {
+    [ContextMenuItem(name: "Stop 'n' Save Ghost Recording", function: "StopRecording")]
 
     public GameManager gameManager;
     public SaveLoadScript saveLoadScript;
@@ -25,7 +26,15 @@ public class GhostManager : MonoBehaviour
         ghostVehicleMaterialIndex = saveLoadScript.lastGhostVehicleIndex;
         ghostVehicleMaterialIndex = saveLoadScript.lastGhostMaterialIndex;
 
-        uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.highScore.ToString();
+        if (!ghost.hasData)
+        {
+            uimanager.highscoreUI.text = "BEST TIME: ??:??:??";
+
+        }
+        else
+        {
+            uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
+        }
 
 
 
@@ -38,7 +47,7 @@ public class GhostManager : MonoBehaviour
         {
             if (ghost.hasData)
             {
-                ghost.playGhostRecording();
+                ghost.playGhostRecording();     
             }
             else
             {
@@ -47,26 +56,29 @@ public class GhostManager : MonoBehaviour
             }
             ghost.StartRecording();
             ghost.StartRecordingGhost();
-
         }
 
     }
 
+    [ContextMenu(itemName: "Stop 'n' Save Ghost Recording")]
     public void StopRecording()
     {
         ghost.StopRecordingGhost();
-  
 
-        if (saveLoadScript.highScore > gameManager.roundTimer || !ghost.hasData)
+
+        if (saveLoadScript.bestTime > gameManager.roundTimer || !ghost.hasData)
         {
             ghost.SaveGhostToFile();
-            saveLoadScript.highScore = gameManager.roundTimer;
-            saveLoadScript.SaveHighScore(gameManager.roundTimer, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
-            
+            saveLoadScript.bestTime = gameManager.roundTimer;
+            saveLoadScript.SaveHighScore(gameManager.roundTimer, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
+
         }
         ghost.loadFromFile();
         saveLoadScript.LoadHighScoreData();
-        uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.highScore.ToString();
+        ghost.playGhostRecording();
+
+
+        uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
 
     }
 
