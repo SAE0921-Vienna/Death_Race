@@ -2191,15 +2191,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 2.910383e-11
+      value: -2.910383e-11
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000007450581
+      value: 0.000000007450581
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -9.313226e-10
+      value: 4.656613e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2992,6 +2992,9 @@ MonoBehaviour:
   currentMin: 0
   currentSec: 0
   currentMilliSec: 0
+  currentMinAsString: 
+  currentSecAsString: 
+  currentMiliAsString: 
   ghostMode: 0
 --- !u!1 &221267527
 GameObject:
@@ -5377,7 +5380,10 @@ MonoBehaviour:
   spaceConfig: {fileID: 0}
   milkyCoins: 0
   maxMilkyCoins: 9999999
-  highScore: 0
+  bestTime: 0
+  currentMinAsString: 
+  currentSecAsString: 
+  currentMiliAsString: 
   lastGhostVehicleIndex: 0
   lastGhostMaterialIndex: 0
   masterVolume: 1
@@ -8869,11 +8875,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.065146744
+      value: 0.06514674
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.007204614
+      value: -0.0072046136
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
