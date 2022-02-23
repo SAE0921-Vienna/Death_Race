@@ -6,7 +6,6 @@ public class Checkpoint : MonoBehaviour
     private GameManager gameManager;
     private CheckpointManager checkpointManager;
     private AICheckpointManager aicheckpointManager;
-    private AICheckpointManagerMachine mlCheckpointManager;
 
 
     private void Awake()
@@ -22,25 +21,9 @@ public class Checkpoint : MonoBehaviour
             Debug.LogWarning("GameManager NOT Found");
         }
         #endregion
-
-
-        #region aicheckpointManager FindObjectOfType
-        //aicheckpointManager = FindObjectOfType<AICheckpointManager>();
-        mlCheckpointManager = FindObjectOfType<AICheckpointManagerMachine>();
-        if (mlCheckpointManager)
-        {
-            //AIManager Found
-        }
-        else
-        {
-            Debug.LogWarning("AIManager NOT Found");
-
-        }
-        #endregion
     }
     private void OnTriggerEnter(Collider other)
     {
-
         checkpointManager = GetComponentInParent<CheckpointManager>();
 
         if (other.CompareTag("Player"))
@@ -51,9 +34,9 @@ public class Checkpoint : MonoBehaviour
         }
         if (other.CompareTag("AI") )
         {
+            var aiCheckpointManager = other.GetComponent<AICheckpointManager>();
             Debug.Log("AI through Checkpoint");
-            checkpointManager.VehicleThroughCheckpoint(this, other);
-            //mlCheckpointManager.AIThroughCheckpoint(this, other);
+            aicheckpointManager.VehicleThroughCheckpoint(this, other);
         }
 
     }

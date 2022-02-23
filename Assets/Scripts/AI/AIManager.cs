@@ -11,8 +11,12 @@ namespace AI
         protected override void Awake()
         {
             base.Awake();
+            
             ai_vehicleController = GetComponent<AI_VehicleController>();
             ai_checkpointManager = GetComponent<AICheckpointManager>();
+
+            nextCheckpoint = ai_checkpointManager.checkpointsInWorldList[0];
+            
             spawnPosition = transform.position;
             spawnRotation = transform.rotation;
         }
