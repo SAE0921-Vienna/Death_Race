@@ -44,7 +44,7 @@ public class AI_Action : MonoBehaviour
         {
             case PickUpScriptableObject.powerUps.Shield:
                 //Function
-                if()
+                //if()
                 aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Nitro:

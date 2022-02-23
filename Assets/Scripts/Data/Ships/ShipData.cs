@@ -10,6 +10,7 @@ public class ShipData : ScriptableObject
     [Header("Visual")]
     public Mesh vehicleMesh;
     public Mesh vehicleColliderMesh;
+    public GameObject vfxPrefab;
 
     [Header("Stats")]
     [Range(75, 125)]
