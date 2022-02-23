@@ -40,7 +40,7 @@ public class BombTrigger : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((hasBeenActivated && collision.transform.CompareTag("Player") && !_playerManager.isImmortal))
+        if ((hasBeenActivated && collision.transform.CompareTag("Player")))
         {
             _explosion.Explode();
             _boomEffect.Play();

@@ -51,7 +51,7 @@ public class AIShipWeapon : ShipWeapon
 
             if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
             {
-                if (!HitTarget().GetComponent<PlayerManager>().isImmortal) //Gilt nur für 1 Spieler gegen X AI's
+                if (!HitTarget().GetComponent<BaseVehicleManager>().isImmortal) 
                     HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
                 Debug.Log(this.gameObject.name + " macht "+ HitTarget().gameObject.name + "Schaden");
             }

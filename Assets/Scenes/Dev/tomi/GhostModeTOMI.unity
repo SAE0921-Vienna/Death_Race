@@ -2991,6 +2991,7 @@ MonoBehaviour:
   audioManager: {fileID: 1632963625}
   playerManager: {fileID: 0}
   vCam: {fileID: 0}
+  overlayCam: {fileID: 1121006601}
   gameOverCanvas: {fileID: 1153912914}
   vCamPOV: 70
   raceHasStarted: 0
@@ -62657,6 +62658,7 @@ MonoBehaviour:
   hasNitro: 0
   canShoot: 0
   hasBomb: 0
+  hasHealed: 0
   isImmortal: 0
   isOnRoadtrack: 0
   currentPositionIndex: 0
@@ -62678,7 +62680,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8160920351366770594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8770b3c08f1021a4a9feddb06ecab3eb, type: 3}
   m_Name: 
@@ -62688,6 +62690,12 @@ MonoBehaviour:
   nitroFovModifier: 0
   powerUpList: []
   powerUp: {fileID: 0}
+  shieldEffect: {fileID: 0}
+  nitroEffect: {fileID: 0}
+  bombEffect: {fileID: 0}
+  lowHealthEffect: {fileID: 0}
+  healEffect: {fileID: 0}
+  munitionEffect: {fileID: 0}
 --- !u!114 &8160920351366770618
 MonoBehaviour:
   m_ObjectHideFlags: 0

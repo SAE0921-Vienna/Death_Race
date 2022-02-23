@@ -1,4 +1,5 @@
 using UnityEngine;
+using AI;
 
 namespace Weapons
 {
@@ -17,11 +18,20 @@ namespace Weapons
             //if (other.collider.CompareTag("Bullet")) return;
 
             print("Collision Detected");
-            if(other.gameObject.layer == 9 || other.gameObject.layer == 10 || other.gameObject.layer == 8 || other.gameObject.layer == 6)
-            {
-                _explosion.Explode();
+            _explosion.Explode();
 
-            }
+            //if (other.gameObject.layer == 9 || other.gameObject.layer == 10 || other.gameObject.layer == 8 || other.gameObject.layer == 6 || other.gameObject.layer == 3)
+            //{
+            //    if (other.gameObject.layer == 3 && other.gameObject.GetComponent<BaseVehicleManager>().isImmortal)
+            //    {
+            //        _explosion.Explode();
+
+            //    }
+            //    else
+            //    {
+
+            //    }
+            //}
         }
     }
 }

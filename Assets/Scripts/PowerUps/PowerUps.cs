@@ -18,6 +18,20 @@ public class PowerUps : MonoBehaviour
     protected Transform powerupParent;
     private int powerUpListLength = 1;
 
+    [Header("Effects")]
+    [SerializeField]
+    private GameObject shieldEffect;
+    [SerializeField]
+    private GameObject nitroEffect;
+    [SerializeField]
+    private GameObject bombEffect;
+    [SerializeField]
+    private GameObject lowHealthEffect;
+    [SerializeField]
+    private GameObject healEffect;
+    [SerializeField]
+    private GameObject munitionEffect;
+
     private void Awake()
     {
         _vehicleStats = GetComponent<BaseVehicleManager>();
@@ -140,12 +154,12 @@ public class PowerUps : MonoBehaviour
         {
             _vehicleStats.hasShield = false;
             _vehicleStats.isImmortal = false;
-            powerupParent.GetChild(0).gameObject.SetActive(false);
+            shieldEffect.SetActive(false);
         }
         if (_vehicleStats.hasNitro)
         {
             _vehicleStats.hasNitro = false;
-            powerupParent.GetChild(1).gameObject.SetActive(false);
+            nitroEffect.SetActive(false);
             gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV;
             gameManager.overlayCam.fieldOfView = gameManager.vCamPOV;
             VehicleController vehicleContr = GetComponent<VehicleController>();
@@ -156,6 +170,7 @@ public class PowerUps : MonoBehaviour
         {
             _vehicleStats.canShoot = false;
             _vehicleStats.ammo = 0;
+            munitionEffect.SetActive(false);
 
             if (_vehicleStats.CompareTag("Player"))
             {
@@ -167,13 +182,18 @@ public class PowerUps : MonoBehaviour
         {
             _vehicleStats.hasBomb = false;
         }
+        if (_vehicleStats.hasHealed)
+        {
+            healEffect.SetActive(false);
+            _vehicleStats.hasHealed = false;
+        }
     }
 
     #region Power Up Methods
     public void ShieldPowerUp()
     {
         _vehicleStats.timer = _vehicleStats.timerCooldown;
-        powerupParent.GetChild(0).gameObject.SetActive(true);
+        shieldEffect.SetActive(true);
         _vehicleStats.isImmortal = true;
         _vehicleStats.hasShield = true;
     }
@@ -181,7 +201,7 @@ public class PowerUps : MonoBehaviour
     public void NitroPowerUp()
     {
         _vehicleStats.timer = _vehicleStats.timerCooldown;
-        powerupParent.GetChild(1).gameObject.SetActive(true);
+        nitroEffect.SetActive(true);
         if (_vehicleStats.CompareTag("Player"))
         {
             gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV + nitroFovModifier;
@@ -206,6 +226,7 @@ public class PowerUps : MonoBehaviour
         //    _vehicleStats.ammo += _vehicleStats.ammoAdd;
         //    if (_vehicleStats.ammo > _vehicleStats.ammoLimit) _vehicleStats.ammo = _vehicleStats.ammoLimit;
         //}
+        munitionEffect.SetActive(true);
         _vehicleStats.ammo += _vehicleStats.ammoAdd;
         if (_vehicleStats.CompareTag("Player"))
         {
@@ -226,6 +247,9 @@ public class PowerUps : MonoBehaviour
 
     public void HealPowerUp()
     {
+        healEffect.SetActive(true);
+        _vehicleStats.timer = _vehicleStats.timerCooldown;
+        _vehicleStats.hasHealed = true;
         _vehicleStats.health += _vehicleStats.healValue;
         if (_vehicleStats.health >= _vehicleStats.healthLimit)
         {
