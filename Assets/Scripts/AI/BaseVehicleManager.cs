@@ -70,7 +70,7 @@ namespace AI
             if (!_checkpointManager)
                 Debug.LogWarning("Checkpoint Manager NOT Found");
             
-            nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
+            //nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
             nextCheckpointIndex = 0;
         }
 
