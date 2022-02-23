@@ -29,9 +29,9 @@ public class GameManager : MonoBehaviour
     public string roundTimerAsString;
 
     public float roundTimer;
-    public float currentMin;
-    public float currentSec;
-    public float currentMilliSec;
+    public float currentMin=0;
+    public float currentSec=0;
+    public float currentMilliSec=0;
 
     public bool ghostMode;
 
@@ -81,17 +81,26 @@ public class GameManager : MonoBehaviour
 
         roundTimer += Time.deltaTime;
 
-        currentMilliSec = Mathf.RoundToInt(roundTimer * 100);
-        if (currentSec >= 60f)
+        //currentMilliSec = Mathf.RoundToInt(roundTimer * 100);
+        //if (currentSec >= 60f)
+        //{
+        //    currentSec = 0;
+        //    currentMin++;
+        //}
+        //if (currentMilliSec >= 100f)
+        //{
+        //    currentSec++;
+        //    roundTimer = 0;
+        //}
+        if (roundTimer < 60)
+            currentSec = Mathf.Ceil(roundTimer);
+        else
         {
-            currentSec = 0;
-            currentMin++;
+            currentSec = Mathf.Floor(roundTimer - (currentMin * 60));
+            currentMin = Mathf.Floor(roundTimer * 0.0166666666f);
         }
-        if (currentMilliSec >= 100f)
-        {
-            currentSec++;
-            roundTimer = 0;
-        }
+        currentMilliSec = ((float)System.Math.Round(roundTimer - (currentMin * 60), 2) - currentSec);
+
 
         if (currentMin < 10)
             currentMinAsString = "0" + currentMin;
