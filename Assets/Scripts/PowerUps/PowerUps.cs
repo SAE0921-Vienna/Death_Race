@@ -147,6 +147,7 @@ public class PowerUps : MonoBehaviour
             _vehicleStats.hasNitro = false;
             powerupParent.GetChild(1).gameObject.SetActive(false);
             gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV;
+            gameManager.overlayCam.fieldOfView = gameManager.vCamPOV;
             VehicleController vehicleContr = GetComponent<VehicleController>();
             vehicleContr.mMaxSpeed = GetComponent<SpaceshipLoad>().CurrentShip.maxSpeed;
             vehicleContr.mAccelerationConstant = GetComponent<SpaceshipLoad>().CurrentShip.accelerationSpeed;
@@ -184,6 +185,7 @@ public class PowerUps : MonoBehaviour
         if (_vehicleStats.CompareTag("Player"))
         {
             gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV + nitroFovModifier;
+            gameManager.overlayCam.fieldOfView = gameManager.vCamPOV + nitroFovModifier;
         }
         //gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(gameManager.vCamPOV, gameManager.vCamPOV + playerStats.mainCamPovBoost, Time.deltaTime);
         VehicleController vehicleContr = GetComponent<VehicleController>();

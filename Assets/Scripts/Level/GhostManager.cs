@@ -20,20 +20,24 @@ public class GhostManager : MonoBehaviour
 
     private void Start()
     {
-        ghost.loadFromFile();
-        saveLoadScript.LoadHighScoreData();
-
-        ghostVehicleMaterialIndex = saveLoadScript.lastGhostVehicleIndex;
-        ghostVehicleMaterialIndex = saveLoadScript.lastGhostMaterialIndex;
-
-        if (!ghost.hasData)
+        if (gameManager.ghostMode)
         {
-            uimanager.highscoreUI.text = "BEST TIME: ??:??:??";
 
-        }
-        else
-        {
-            uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
+            ghost.loadFromFile();
+            saveLoadScript.LoadHighScoreData();
+
+            ghostVehicleMaterialIndex = saveLoadScript.lastGhostVehicleIndex;
+            ghostVehicleMaterialIndex = saveLoadScript.lastGhostMaterialIndex;
+
+            if (!ghost.hasData)
+            {
+                uimanager.highscoreUI.text = "BEST TIME: ??:??:??";
+
+            }
+            else
+            {
+                uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
+            }
         }
 
 
@@ -42,22 +46,23 @@ public class GhostManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.tag == "Player" )
+        if (gameManager.ghostMode)
         {
-            if (ghost.hasData)
+            if (other.tag == "Player")
             {
-                ghost.playGhostRecording();     
+                if (ghost.hasData)
+                {
+                    ghost.playGhostRecording();
+                }
+                else
+                {
+                    ghostVehicleMeshIndex = saveLoadScript.lastEquippedVehicleMesh;
+                    ghostVehicleMaterialIndex = saveLoadScript.lastEquippedMaterial;
+                }
+                ghost.StartRecording();
+                ghost.StartRecordingGhost();
             }
-            else
-            {
-                ghostVehicleMeshIndex = saveLoadScript.lastEquippedVehicleMesh;
-                ghostVehicleMaterialIndex = saveLoadScript.lastEquippedMaterial;
-            }
-            ghost.StartRecording();
-            ghost.StartRecordingGhost();
         }
-
     }
 
     [ContextMenu(itemName: "Stop 'n' Save Ghost Recording")]

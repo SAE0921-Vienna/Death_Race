@@ -12,6 +12,7 @@ public class PlayerShipWeapon : ShipWeapon
     protected override void Awake()
     {
         playerManager = GetComponent<PlayerManager>();
+        _camera = Camera.main;
         base.Awake();
     }
 
@@ -49,7 +50,7 @@ public class PlayerShipWeapon : ShipWeapon
             }
             else
             {
-                Debug.Log("MAMAMAAAAAA");
+                //Debug.Log("MAMAMAAAAAA");
             }
             //Debug.Log(HitTarget().name);
         }

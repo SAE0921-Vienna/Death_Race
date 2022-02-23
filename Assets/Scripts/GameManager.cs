@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject audioManager;
 
+    [SerializeField]
     private PlayerManager playerManager;
     public CinemachineVirtualCamera vCam;
+    public Camera overlayCam;
 
     public GameObject gameOverCanvas;
 
@@ -56,9 +58,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("Player Manager was NOT found");
         }
+
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
 
         vCamPOV = vCam.m_Lens.FieldOfView;
+        overlayCam.fieldOfView = vCamPOV;
     }
 
     private void Start()

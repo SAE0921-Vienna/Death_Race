@@ -76,6 +76,7 @@ public class PauseMenuScript : MonoBehaviour
     }
     public void Resume()
     {
+        Time.timeScale = 1;
         pausePanel.gameObject.SetActive(false);
         isPause = false;
         //Cursor.lockState = CursorLockMode.Locked;

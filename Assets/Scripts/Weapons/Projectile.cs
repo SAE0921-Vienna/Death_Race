@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private void Awake()
-    {
-        Debug.Log("Hello World!");
-    }
+   
     private void OnTriggerEnter(Collider other)
     {
         Destroy(this);
