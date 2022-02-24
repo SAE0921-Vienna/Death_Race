@@ -2,44 +2,67 @@
     "name": "root",
     "metadata": {
         "timer_format_version": "0.1.0",
-        "start_time_seconds": "1645730172",
+        "start_time_seconds": "1645732203",
         "python_version": "3.7.9 (default, Jan 30 2022, 17:35:39) \n[GCC 11.1.0]",
-        "command_line_arguments": "/home/gecovin/.pyenv/versions/3.7.9/bin/mlagents-learn /home/gecovin/python-envs/sample-env/config/VehicleDriving.yaml --run-id=ImitationLearning --time-scale=3 --force",
+        "command_line_arguments": "/home/gecovin/.pyenv/versions/3.7.9/bin/mlagents-learn /home/gecovin/python-envs/sample-env/config/VehicleDriving.yaml --time-scale=3 --run-id=ImitationLearning --force",
         "mlagents_version": "0.28.0",
         "mlagents_envs_version": "0.28.0",
         "communication_protocol_version": "1.5.0",
         "pytorch_version": "1.8.1+cu102",
         "numpy_version": "1.21.5",
-        "end_time_seconds": "1645730203"
+        "end_time_seconds": "1645732209"
     },
-    "total": 31.038820795998618,
+    "total": 5.943129684997984,
     "count": 1,
-    "self": 0.01420641199729289,
+    "self": 0.008435257997916779,
     "children": {
         "run_training.setup": {
-            "total": 0.03181515100004617,
+            "total": 0.01697785299984389,
             "count": 1,
-            "self": 0.03181515100004617
+            "self": 0.01697785299984389
         },
         "TrainerController.start_learning": {
-            "total": 30.99279923300128,
+            "total": 5.917716574000224,
             "count": 1,
-            "self": 0.0003419599997869227,
+            "self": 8.453099871985614e-05,
             "children": {
                 "TrainerController._reset_env": {
-                    "total": 30.992443686001934,
+                    "total": 5.915801478000503,
                     "count": 1,
-                    "self": 30.992443686001934
-                },
-                "trainer_threads": {
-                    "total": 1.6339981812052429e-06,
-                    "count": 1,
-                    "self": 1.6339981812052429e-06
+                    "self": 5.915413509002974,
+                    "children": {
+                        "demo_to_buffer": {
+                            "total": 0.0003879689975292422,
+                            "count": 1,
+                            "self": 3.505699714878574e-05,
+                            "children": {
+                                "load_demonstration": {
+                                    "total": 0.00035291200038045645,
+                                    "count": 1,
+                                    "self": 0.00025136899785138667,
+                                    "children": {
+                                        "read_file": {
+                                            "total": 0.00010154300252906978,
+                                            "count": 1,
+                                            "self": 0.00010154300252906978
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 },
                 "TrainerController._save_models": {
-                    "total": 1.1953001376241446e-05,
+                    "total": 0.0018305650010006502,
                     "count": 1,
-                    "self": 1.1953001376241446e-05
+                    "self": 0.0007231160016090143,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.0011074489993916359,
+                            "count": 1,
+                            "self": 0.0011074489993916359
+                        }
+                    }
                 }
             }
         }

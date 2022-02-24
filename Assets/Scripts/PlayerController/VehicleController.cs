@@ -181,8 +181,11 @@ namespace PlayerController
             var position = myTransform.position;
             var down = -myTransform.up;
 
-            isOnRoadtrack =
-                Physics.SphereCast(position, sphereCastRadius, down, out hit, maxSphereCastDistance, layerMask, QueryTriggerInteraction.Ignore);
+
+            if (Physics.SphereCast(position, sphereCastRadius, down, out hit, maxSphereCastDistance, layerMask, QueryTriggerInteraction.Ignore))
+            {
+                isOnRoadtrack = true;
+            }
             return hit;
         }
         #region Steering
