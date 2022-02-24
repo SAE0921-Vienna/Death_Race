@@ -244,7 +244,7 @@ namespace PlayerController
             _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
 
             currentSpeed = Mathf.Clamp01(currentSpeed - 0.001f * Mathf.Clamp(collision.impulse.magnitude, 0f, float.MaxValue));
-            print(collision.impulse.magnitude);
+            //print(collision.impulse.magnitude);
         }
 
         protected void OnDrawGizmos()

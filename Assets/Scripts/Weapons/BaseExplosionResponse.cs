@@ -1,5 +1,6 @@
 using Audio;
 using UnityEngine;
+using AI;
 
 namespace Weapons
 {
@@ -18,14 +19,14 @@ namespace Weapons
 
         private void DealDamage()
         {
-            var allHitTargets = Physics.SphereCastAll(transform.position, explosionRadius, Vector3.up, 1f);
+            var allHitTargets = Physics.OverlapSphere(transform.position, explosionRadius);
             foreach (var target in allHitTargets)
             {
-                if (target.collider.GetComponent<IDamageable>() != null)
-                    target.collider.GetComponent<IDamageable>().GetDamage(explosionDamage);
-                
-                if (target.rigidbody != null) 
-                    ExplosionForce(target.rigidbody);
+                if (target.GetComponentInParent<IDamageable>() != null && !target.GetComponentInParent<BaseVehicleManager>().isImmortal)
+                    target.GetComponentInParent<IDamageable>().GetDamage(explosionDamage);
+
+                if (target.gameObject.GetComponentInParent<Rigidbody>() != null && !target.GetComponentInParent<BaseVehicleManager>().isImmortal)
+                    ExplosionForce(target.gameObject.GetComponentInParent<Rigidbody>());
             }
         }
 
@@ -39,9 +40,9 @@ namespace Weapons
             boomEffect.transform.parent = null;
             boomEffect.Play();
             boomEffect.gameObject.AddComponent<DestroyParticle>();
-            
+
             AudioManager.PlaySound(AudioManager.Sound.RocketExplosion, transform.position);
-            
+
             Destroy(gameObject);
         }
     }
