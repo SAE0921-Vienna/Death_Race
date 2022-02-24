@@ -13,23 +13,27 @@ namespace PlayerController
         [Header("Acceleration and Braking")]
         [Range(0.15f, 0.3f)]
         public float mAccelerationConstant = 1f;
-        [Range(950f, 1200f)]
+        [Range(950f, 1250f)]
         public float mMaxSpeed;
-        [HideInInspector] public float currentSpeed;
+        [HideInInspector]
+        public float currentSpeed;
+        [HideInInspector]
+        public float currentBackwardsSpeed;
 
-        [Range(10f, 800f)]
+
+        [Range(10f, 1000f)]
         [SerializeField] protected float brakeForce;
         [Range(0.1f, 1f)]
-        [SerializeField] protected float decelerationConstant;
+        [SerializeField] protected float decelerationConstant = 0.3f;
         [SerializeField] protected AnimationCurve accelerationCurve;
-        
+
         [Header("Steering")]
         [Range(0f, 1000f)]
         [SerializeField] protected float sideThrustAmount;
         [Range(5f, 12f)]
         public float steeringSpeed;
 
-        [Range(2f, 5f)] 
+        [Range(2f, 5f)]
         public float speedDependentAngularDragMagnitude;
         [Range(0f, 1f)]
         [SerializeField] protected float idleSteeringAnimationSpeedMultiplier, steeringAnimationSpeedMultiplier;
@@ -50,7 +54,7 @@ namespace PlayerController
         [SerializeField] protected float sphereCastRadius;
         //[SerializeField] protected float trackSearchRadius;
         public bool isOnRoadtrack;
-        
+
         private Rigidbody _rBody;
         private InputActions _controls;
         private RaycastHit hit;
@@ -61,7 +65,7 @@ namespace PlayerController
         #endregion
 
         #region De-Initialization
-        
+
         protected virtual void Awake()
         {
             _rBody = GetComponent<Rigidbody>();
@@ -80,7 +84,7 @@ namespace PlayerController
             _controls.Disable();
         }
 
-        
+
         public virtual float AccelerationValue => _controls.Player.AccelerateDecelerate.ReadValue<float>();
         protected virtual float SteerValueRaw => _controls.Player.Steer.ReadValue<float>();
 
@@ -102,7 +106,7 @@ namespace PlayerController
         /// </summary>
         protected void Accelerate()
         {
-            currentSpeed = AccelerationValue >= 0.01f && isOnRoadtrack ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100) 
+            currentSpeed = AccelerationValue >= 0.01f && isOnRoadtrack ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100)
                 : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
             _rBody.AddForce(transform.forward * (mMaxSpeed * accelerationCurve.Evaluate(currentSpeed) - drag), ForceMode.Acceleration);
         }
@@ -113,9 +117,13 @@ namespace PlayerController
         protected void Brake()
         {
             if (AccelerationValue > 0f) return;
+
+            currentBackwardsSpeed = AccelerationValue <= -0.01f && isOnRoadtrack && currentSpeed <= 0.01f ? Mathf.Clamp01(currentBackwardsSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 200)
+                : Mathf.Clamp01(currentBackwardsSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 500);
+
             _rBody.AddForce(transform.forward * (brakeForce * AccelerationValue * Time.fixedDeltaTime * 10), ForceMode.Acceleration);
         }
-        
+
         /// <summary>
         /// Uses PID Controller to create a constant balance between gravity (down on local y-axis) and force (up on local y-axis).
         /// This creates a smooth flying experience. If it detects no ground underneath, it automatically uses the world y-axis as the gravitational direction.
@@ -128,7 +136,7 @@ namespace PlayerController
             {
                 var height = GroundInfo().distance;
                 groundNormal = GroundInfo().normal.normalized;
-                
+
                 //...use the PID controller to determine the amount of hover force needed...
                 var forcePercent = pidController.Seek(hoverHeight, height);
 
@@ -171,12 +179,12 @@ namespace PlayerController
             var position = myTransform.position;
             var down = -myTransform.up;
 
-            isOnRoadtrack = 
+            isOnRoadtrack =
                 Physics.SphereCast(position, sphereCastRadius, down, out hit, maxSphereCastDistance, layerMask, QueryTriggerInteraction.Ignore);
             return hit;
         }
         #region Steering
-        
+
         /// <summary>
         /// Applies the rotation of the local Y-Axis, by adding a torque towards an angle, resulting in somewhat realistic flying turn behavior.
         /// The amount of torque is dependent on the current speed variable, as higher speed equals higher angular drag (not of the rigidbody but added locally here).
@@ -187,10 +195,10 @@ namespace PlayerController
         {
             var steeringAngle = Vector3.up * ((steeringSpeed - speedDependentAngularDragMagnitude * currentSpeed) * SteerValueRaw * Time.fixedDeltaTime);
             _rBody.AddRelativeTorque(steeringAngle, ForceMode.VelocityChange);
-            
+
             var right = transform.right;
             var sidewaysSpeed = Vector3.Dot(_rBody.velocity, right);
-            
+
             var sideFriction = -right * (sidewaysSpeed / Time.fixedDeltaTime / 2f);
             _rBody.AddForce(sideFriction, ForceMode.Acceleration);
         }
@@ -213,16 +221,24 @@ namespace PlayerController
             return t;
         }
         #endregion
-        
+
         public int GetSpeed()
         {
-            return Mathf.RoundToInt(currentSpeed * mMaxSpeed);
+            if (currentSpeed <= 0.01f)
+            {
+                return Mathf.RoundToInt((-currentBackwardsSpeed * brakeForce) * 0.3f);
+            }
+            else
+            {
+                return Mathf.RoundToInt(currentSpeed * mMaxSpeed);
+
+            }
         }
-        
+
         protected void OnCollisionStay(Collision collision)
         {
             if (collision.gameObject.layer != LayerMask.NameToLayer("Wall")) return;
-            
+
             var up = transform.up;
             var upwardForceFromCollision = Vector3.Dot(collision.impulse, up) * up;
             _rBody.AddForce(-upwardForceFromCollision, ForceMode.Impulse);
@@ -233,7 +249,7 @@ namespace PlayerController
 
         protected void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(GroundInfo().point , sphereCastRadius);
+            Gizmos.DrawWireSphere(GroundInfo().point, sphereCastRadius);
         }
     }
 }

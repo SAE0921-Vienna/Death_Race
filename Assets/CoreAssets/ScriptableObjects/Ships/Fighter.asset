@@ -19,7 +19,7 @@ MonoBehaviour:
   vfxPrefab: {fileID: 2011949978281875520, guid: 1aa8e9015e436569fb625060a3cc4a94, type: 3}
   health: 110
   nitroSpeed: 200
-  maxSpeed: 1050
+  maxSpeed: 1100
   accelerationSpeed: 0.175
   turnSpeed: 7
   speedBasedAngularDrag: 3
