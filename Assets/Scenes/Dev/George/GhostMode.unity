@@ -2978,7 +2978,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishLine: {fileID: 1587007100}
   audioManager: {fileID: 1632963625}
+  playerManager: {fileID: 0}
   vCam: {fileID: 0}
+  overlayCam: {fileID: 1121006601}
   gameOverCanvas: {fileID: 1153912914}
   vCamPOV: 70
   raceHasStarted: 0
@@ -34272,12 +34274,49 @@ MonoBehaviour:
   x: 0
   y: -10
   z: 0
+--- !u!1 &1599765408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4813497883062652856, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
+  m_PrefabInstance: {fileID: 4813497883348378508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1599765410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599765408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ccad24a96a4d148bbc86b6b322ee3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allShips:
+  - {fileID: 11400000, guid: c78fb7984cc6fb142a5870453fe02e8c, type: 2}
+  - {fileID: 11400000, guid: 73deb3db3bc83af418dd98fe8cfe50ca, type: 2}
+  - {fileID: 11400000, guid: c49b77d23bb41fa4197f99fd9787e6b1, type: 2}
+  - {fileID: 11400000, guid: 39dddf19457ee81419265cf4245e2b91, type: 2}
+  - {fileID: 11400000, guid: 7789a5cccd0d3544a8314002c8d28824, type: 2}
+  allWeapons:
+  - {fileID: 11400000, guid: 324da42874bb52c49855aefa4e124888, type: 2}
+  allMaterials:
+  - {fileID: 11400000, guid: e465cf17d6b3cc54c8fef917f12168bc, type: 2}
+  - {fileID: 11400000, guid: 2d1f933a35881754cb988d2ccd6329d4, type: 2}
+  - {fileID: 11400000, guid: ec3f5cf026a0d614fbfbd53bbf3aca42, type: 2}
+  - {fileID: 11400000, guid: 222a1b428f7015d4d8e7b78cb8cc17cb, type: 2}
+  - {fileID: 11400000, guid: 2566e6a7bd3c3314a9c72429065b41b5, type: 2}
+  - {fileID: 11400000, guid: a62cdf3dc1aa55948938259176b54439, type: 2}
+  - {fileID: 11400000, guid: c93a02ec09ac0a34f8075a9de0fa5d3a, type: 2}
+  saveLoadScript: {fileID: 0}
+  currentShip: 0
+  currentWeapon: 0
+  currentMaterial: 0
 --- !u!114 &1599765416 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4813497883062652848, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
   m_PrefabInstance: {fileID: 4813497883348378508}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1599765408}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31f496817d2f4c3bbe02d321a58358c3, type: 3}
@@ -34556,6 +34595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9374b8c1ac81d2f4c8bb27bac54a7b06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 219298089}
   playerManager: {fileID: 8160920351366770616}
   speedUnit: {fileID: 1019388036}
   ammoAmountUI: {fileID: 1854570832}
@@ -34565,6 +34605,7 @@ MonoBehaviour:
   roundTimerUI: {fileID: 1814761999}
   wrongDirectionUI: {fileID: 1117215896}
   highscoreUI: {fileID: 838178137}
+  healthSlider: {fileID: 0}
   gameOverUI: {fileID: 1153912914}
 --- !u!4 &1617549260
 Transform:
@@ -53286,7 +53327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4813497883062652858, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
       propertyPath: Record
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4813497883062652858, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
       propertyPath: DemonstrationName
@@ -59417,6 +59458,7 @@ MonoBehaviour:
   hasNitro: 0
   canShoot: 0
   hasBomb: 0
+  hasHealed: 0
   isImmortal: 0
   isOnRoadtrack: 0
   currentPositionIndex: 0
@@ -59448,6 +59490,12 @@ MonoBehaviour:
   nitroFovModifier: 0
   powerUpList: []
   powerUp: {fileID: 0}
+  shieldEffect: {fileID: 0}
+  nitroEffect: {fileID: 0}
+  bombEffect: {fileID: 0}
+  lowHealthEffect: {fileID: 0}
+  healEffect: {fileID: 0}
+  munitionEffect: {fileID: 0}
 --- !u!114 &8160920351366770618
 MonoBehaviour:
   m_ObjectHideFlags: 0

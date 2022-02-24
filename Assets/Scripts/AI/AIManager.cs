@@ -15,11 +15,14 @@ namespace AI
             
             //ai_vehicleController = GetComponent<AI_VehicleController_ML>();
             //ai_checkpointManager = GetComponent<AICheckpointManager>();
-
-            nextCheckpoint = ai_checkpointManager.checkpointsInWorldList[0];
-            
             spawnPosition = transform.position;
             spawnRotation = transform.rotation;
+        }
+
+        protected void Start()
+        {
+            base.Start();
+            nextCheckpoint = ai_checkpointManager.checkpointsInWorldList[0];
         }
 
         protected override void Update()

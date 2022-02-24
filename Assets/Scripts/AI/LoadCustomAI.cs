@@ -11,7 +11,8 @@ public class LoadCustomAI : SpaceshipLoad
         if (gameObject.CompareTag("AI"))
         {
             LoadAI();
-            SetVehicleStatsAI();
+            SetVehicleStats();
+            //SetVehicleStatsAI();
         }
         if (gameObject.CompareTag("Ghost"))
         {
@@ -64,12 +65,12 @@ public class LoadCustomAI : SpaceshipLoad
         GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
     }
 
-    private void SetVehicleStatsAI()
-    {
-        _aiVehicleController = GetComponent<AI_VehicleController>();
-        _aiVehicleController.mMaxSpeed = allShips[currentShip].maxSpeed;
-        _aiVehicleController.mAccelerationConstant = allShips[currentShip].accelerationSpeed;
-        _aiVehicleController.steeringSpeed = allShips[currentShip].turnSpeed;
-        _aiVehicleController.speedDependentAngularDragMagnitude = allShips[currentShip].speedBasedAngularDrag;
-    }
+    //private void SetVehicleStatsAI()
+    //{
+    //    _aiVehicleController = GetComponent<AI_VehicleController>();
+    //    _aiVehicleController.mMaxSpeed = allShips[currentShip].maxSpeed;
+    //    _aiVehicleController.mAccelerationConstant = allShips[currentShip].accelerationSpeed;
+    //    _aiVehicleController.steeringSpeed = allShips[currentShip].turnSpeed;
+    //    _aiVehicleController.speedDependentAngularDragMagnitude = allShips[currentShip].speedBasedAngularDrag;
+    //}
 }

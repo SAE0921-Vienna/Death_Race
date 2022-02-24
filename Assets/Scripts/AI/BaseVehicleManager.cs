@@ -74,8 +74,8 @@ namespace AI
             //nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
             nextCheckpointIndex = 0;
 
-
-            health = GetComponent<SpaceshipLoad>().CurrentShip.health;
+            var spaceshipLoad = GetComponent<SpaceshipLoad>();
+            health = spaceshipLoad.CurrentShip.health;
             healthLimit = health;
         }
 

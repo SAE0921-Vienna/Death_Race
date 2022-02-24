@@ -35,9 +35,12 @@ namespace UserInterface
         private void Update()
         {
             roundTimerUI.text = gameManager.roundTimerAsString;
+            if (playerManager != null)
+            {
+                lapsAmountUI.text = playerManager.currentLapIndex + "/" + gameManager.laps + " LAPS";
+            }
 
-            lapsAmountUI.text = playerManager.currentLapIndex + "/" + gameManager.laps + " LAPS";
-
+            if (playerManager == null) return; 
             //positionsUI.text = gameManager.playerPosition + "/" + gameManager.positions + " POSITION";
             switch (playerManager.currentPositionIndex)
             {

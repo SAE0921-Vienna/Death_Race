@@ -27,7 +27,7 @@ public class SpaceshipLoad : MonoBehaviour
     public int currentMaterial;
 
     private BaseVehicleManager _baseVehicleManager;
-    private VehicleController _vehicleController;
+    //private VehicleController _vehicleController;
 
 
     private void Awake()
@@ -72,9 +72,10 @@ public class SpaceshipLoad : MonoBehaviour
         }
     }
 
-    private void SetVehicleStats()
+    protected void SetVehicleStats()
     {
-        _vehicleController = GetComponent<VehicleController>();
+        var _vehicleController = GetComponent<VehicleController>();
+        //_vehicleController = GetComponent<VehicleController>();
         _vehicleController.mMaxSpeed = allShips[currentShip].maxSpeed;
         _vehicleController.mAccelerationConstant = allShips[currentShip].accelerationSpeed;
         _vehicleController.steeringSpeed = allShips[currentShip].turnSpeed;
