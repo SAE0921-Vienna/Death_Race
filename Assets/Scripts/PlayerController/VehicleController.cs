@@ -186,6 +186,10 @@ namespace PlayerController
             {
                 isOnRoadtrack = true;
             }
+            else
+            {
+                isOnRoadtrack = false;
+            }
             return hit;
         }
         #region Steering
