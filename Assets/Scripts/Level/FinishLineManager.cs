@@ -33,6 +33,10 @@ public class FinishLineManager : MonoBehaviour
         }
 
         ghostManager = GetComponent<GhostManager>();
+        if(ghostManager == null)
+        {
+            Debug.Log("No GhostManager");
+        }
         //_checkpointManager = FindObjectOfType<CheckpointManager>();
         //transform.GetChild(0).gameObject.SetActive(true);
         //_aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
@@ -61,7 +65,10 @@ public class FinishLineManager : MonoBehaviour
             {
                 vehicleManager.currentLapIndex += 1;
 
-                ResetGhostMode();
+                if (gameManager.ghostMode)
+                {
+                    ResetGhostMode();
+                }
 
                 //If the vehicle is on current lap of index currentLapIndex 4 and collides with the Trigger, set the lap count back to 3.
                 if (vehicleManager.currentLapIndex > gameManager.laps && vehicleManager.gameObject.CompareTag("Player") && !gameManager.ghostMode)
