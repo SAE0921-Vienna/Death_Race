@@ -19,6 +19,7 @@ namespace Audio
             GunShotGeneric,
             RocketLauncherLaunch,
             RocketExplosion,
+            Railgunshot,
             HitWall
         }
         private static Dictionary<Sound, float> _soundTimerDictionary;
