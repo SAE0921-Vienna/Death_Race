@@ -15,8 +15,12 @@ public class PlayerManager : BaseVehicleManager
         {
             Debug.LogWarning("UIManager NOT Found");
         }
-        uiManager.healthSlider.maxValue = healthLimit;
-        uiManager.healthSlider.value = health;
+        if (!_gameManager.ghostMode)
+        {
+            uiManager.healthSlider.maxValue = healthLimit;
+            uiManager.healthSlider.value = health;
+        }
+
     }
 
     protected override void Update()

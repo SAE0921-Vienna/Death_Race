@@ -68,7 +68,7 @@ public class FinishLineManager : MonoBehaviour
                 }
 
                 //If the vehicle is on current lap of index currentLapIndex 4 and collides with the Trigger, set the lap count back to 3.
-                if (vehicleManager.currentLapIndex > gameManager.laps && vehicleManager.gameObject.CompareTag("Player"))
+                if (vehicleManager.currentLapIndex > gameManager.laps && vehicleManager.gameObject.CompareTag("Player") && !gameManager.ghostMode)
                 {
                     vehicleManager.currentLapIndex = gameManager.laps;
                     gameManager.GameOver();

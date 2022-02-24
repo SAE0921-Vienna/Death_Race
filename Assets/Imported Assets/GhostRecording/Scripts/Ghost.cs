@@ -252,9 +252,9 @@ public class Ghost : MonoBehaviour
         //Check if ghost exists or not, no reason to destroy and create it everytime.
         if (GameObject.FindWithTag("Ghost") == null)
         {
-            theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject)), FindObjectOfType<PositionHandler>().transform) as GameObject;
+            theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject))/*, FindObjectOfType<PositionHandler>().transform*/) as GameObject;
             theGhost.GetComponentInChildren<BoxCollider>().isTrigger = true;
-            
+
             theGhost.gameObject.tag = "Ghost";
 
             //Disable RigidBody
@@ -263,8 +263,11 @@ public class Ghost : MonoBehaviour
             MeshRenderer mr = theGhost.gameObject.GetComponentInChildren<MeshRenderer>();
             mr.material = Resources.Load("Ghost_Shader", typeof(Material)) as Material;
             //positionHandler.enabled = true;
-            iconFollow.followTarget = theGhost;
-            
+            if (iconFollow)
+            {
+                iconFollow.followTarget = theGhost;
+            }
+
         }
     }
 }

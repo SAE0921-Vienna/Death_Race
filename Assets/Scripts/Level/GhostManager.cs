@@ -59,8 +59,9 @@ public class GhostManager : MonoBehaviour
                     ghostVehicleMeshIndex = saveLoadScript.lastEquippedVehicleMesh;
                     ghostVehicleMaterialIndex = saveLoadScript.lastEquippedMaterial;
                 }
-                ghost.StartRecording();
                 ghost.StartRecordingGhost();
+                ghost.StartRecording();
+
             }
         }
     }
