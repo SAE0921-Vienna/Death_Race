@@ -2175,31 +2175,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -534.7412
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2142.6562
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 9397.939
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7422916
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.09143376
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.66144884
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.055932544
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8865,31 +8865,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 414.29874
+      value: 9638.908
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.493603
+      value: 2854.071
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2135.6904
+      value: 2569.8865
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7023493
+      value: 0.054819915
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.023799874
+      value: -0.011267382
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7109106
+      value: 0.9934359
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.027298154
+      value: -0.09976463
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22278,8 +22278,8 @@ MonoBehaviour:
   z: 0
 --- !u!4 &1058565173 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-  m_PrefabInstance: {fileID: 4813497883348378508}
+  m_CorrespondingSourceObject: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+  m_PrefabInstance: {fileID: 6833284010969180290}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1058816321
 GameObject:
@@ -34149,9 +34149,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484eeebc9ee90964bb0f17f839195c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointParent: {fileID: 59431892}
   minimap: {fileID: 1345818088}
   uiManager: {fileID: 1617549259}
+  _checkpointManager: {fileID: 0}
+  ghostManager: {fileID: 0}
 --- !u!1 &1598425102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1973788630167254, guid: 537d80fe3ea3e444bba8f996c41bb85c, type: 3}
@@ -34274,54 +34275,6 @@ MonoBehaviour:
   x: 0
   y: -10
   z: 0
---- !u!1 &1599765408 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4813497883062652856, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-  m_PrefabInstance: {fileID: 4813497883348378508}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1599765410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599765408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15ccad24a96a4d148bbc86b6b322ee3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allShips:
-  - {fileID: 11400000, guid: c78fb7984cc6fb142a5870453fe02e8c, type: 2}
-  - {fileID: 11400000, guid: 73deb3db3bc83af418dd98fe8cfe50ca, type: 2}
-  - {fileID: 11400000, guid: c49b77d23bb41fa4197f99fd9787e6b1, type: 2}
-  - {fileID: 11400000, guid: 39dddf19457ee81419265cf4245e2b91, type: 2}
-  - {fileID: 11400000, guid: 7789a5cccd0d3544a8314002c8d28824, type: 2}
-  allWeapons:
-  - {fileID: 11400000, guid: 324da42874bb52c49855aefa4e124888, type: 2}
-  allMaterials:
-  - {fileID: 11400000, guid: e465cf17d6b3cc54c8fef917f12168bc, type: 2}
-  - {fileID: 11400000, guid: 2d1f933a35881754cb988d2ccd6329d4, type: 2}
-  - {fileID: 11400000, guid: ec3f5cf026a0d614fbfbd53bbf3aca42, type: 2}
-  - {fileID: 11400000, guid: 222a1b428f7015d4d8e7b78cb8cc17cb, type: 2}
-  - {fileID: 11400000, guid: 2566e6a7bd3c3314a9c72429065b41b5, type: 2}
-  - {fileID: 11400000, guid: a62cdf3dc1aa55948938259176b54439, type: 2}
-  - {fileID: 11400000, guid: c93a02ec09ac0a34f8075a9de0fa5d3a, type: 2}
-  saveLoadScript: {fileID: 0}
-  currentShip: 0
-  currentWeapon: 0
-  currentMaterial: 0
---- !u!114 &1599765416 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4813497883062652848, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-  m_PrefabInstance: {fileID: 4813497883348378508}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599765408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31f496817d2f4c3bbe02d321a58358c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1601840251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3090720583043638995, guid: fd73f82be1e809a05af7f469bbea8955, type: 3}
@@ -36759,6 +36712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasData: 0
+  isRecording: 0
   positionHandler: {fileID: 0}
   iconFollow: {fileID: 1632330208}
 --- !u!1001 &1746181937
@@ -41910,9 +41864,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484eeebc9ee90964bb0f17f839195c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointParent: {fileID: 543450652828935991}
   minimap: {fileID: 1345818088}
   uiManager: {fileID: 1617549259}
+  _checkpointManager: {fileID: 0}
+  ghostManager: {fileID: 0}
 --- !u!64 &2041604646
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -44025,9 +43980,9 @@ GameObject:
   - component: {fileID: 3114650122149487342}
   - component: {fileID: 879739230}
   - component: {fileID: 879739231}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.175
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44251,9 +44206,9 @@ GameObject:
   - component: {fileID: 4639288560607943245}
   - component: {fileID: 879739238}
   - component: {fileID: 879739239}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.171
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44271,9 +44226,9 @@ GameObject:
   - component: {fileID: 6239074675973392708}
   - component: {fileID: 879739168}
   - component: {fileID: 879739169}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.206
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44291,9 +44246,9 @@ GameObject:
   - component: {fileID: 7765835654553161990}
   - component: {fileID: 879739202}
   - component: {fileID: 879739203}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.189
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44697,9 +44652,9 @@ GameObject:
   - component: {fileID: 3380633210546783683}
   - component: {fileID: 879739214}
   - component: {fileID: 879739215}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.183
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45460,9 +45415,9 @@ GameObject:
   - component: {fileID: 6885214783466460092}
   - component: {fileID: 879739244}
   - component: {fileID: 879739245}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.168
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46143,9 +46098,9 @@ GameObject:
   - component: {fileID: 543450652828935991}
   - component: {fileID: 879739151}
   - component: {fileID: 879739398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Training_Track_Checkpoints_Centered
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46171,9 +46126,9 @@ GameObject:
   - component: {fileID: 1896332863375460897}
   - component: {fileID: 879739192}
   - component: {fileID: 879739193}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.194
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47164,9 +47119,9 @@ GameObject:
   - component: {fileID: 6573925444459314887}
   - component: {fileID: 879739232}
   - component: {fileID: 879739233}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.174
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47451,9 +47406,9 @@ GameObject:
   - component: {fileID: 2048684954724500451}
   - component: {fileID: 879739156}
   - component: {fileID: 879739157}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.212
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47730,9 +47685,9 @@ GameObject:
   - component: {fileID: 6436487194997470478}
   - component: {fileID: 879739160}
   - component: {fileID: 879739161}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.210
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47804,9 +47759,9 @@ GameObject:
   - component: {fileID: 817655103988254358}
   - component: {fileID: 879739164}
   - component: {fileID: 879739165}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.208
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48238,9 +48193,9 @@ GameObject:
   - component: {fileID: 8444071167927431519}
   - component: {fileID: 879739186}
   - component: {fileID: 879739187}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.197
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48407,9 +48362,9 @@ GameObject:
   - component: {fileID: 2558559973902428478}
   - component: {fileID: 879739226}
   - component: {fileID: 879739227}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.177
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48510,9 +48465,9 @@ GameObject:
   - component: {fileID: 3584648251392775226}
   - component: {fileID: 879739248}
   - component: {fileID: 879739249}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.165
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49626,9 +49581,9 @@ GameObject:
   - component: {fileID: 7206262675350493642}
   - component: {fileID: 879739222}
   - component: {fileID: 879739223}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.179
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49646,9 +49601,9 @@ GameObject:
   - component: {fileID: 8004606671264003629}
   - component: {fileID: 879739154}
   - component: {fileID: 879739155}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.213
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49797,9 +49752,9 @@ GameObject:
   - component: {fileID: 2380264924673112072}
   - component: {fileID: 879739152}
   - component: {fileID: 879739153}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.214
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49825,9 +49780,9 @@ GameObject:
   - component: {fileID: 7991706895182221944}
   - component: {fileID: 879739176}
   - component: {fileID: 879739177}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.202
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50507,9 +50462,9 @@ GameObject:
   - component: {fileID: 2898165522670079050}
   - component: {fileID: 879739158}
   - component: {fileID: 879739159}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.211
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50568,9 +50523,9 @@ GameObject:
   - component: {fileID: 2219064354150010433}
   - component: {fileID: 879739228}
   - component: {fileID: 879739229}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.176
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51029,9 +50984,9 @@ GameObject:
   - component: {fileID: 7303786222237732752}
   - component: {fileID: 879739246}
   - component: {fileID: 879739247}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.167
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51483,9 +51438,9 @@ GameObject:
   - component: {fileID: 669276473450924564}
   - component: {fileID: 879739208}
   - component: {fileID: 879739209}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.186
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51557,9 +51512,9 @@ GameObject:
   - component: {fileID: 6083797039378077270}
   - component: {fileID: 879739236}
   - component: {fileID: 879739237}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.172
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52492,9 +52447,9 @@ GameObject:
   - component: {fileID: 2821676564228822427}
   - component: {fileID: 879739218}
   - component: {fileID: 879739219}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.181
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52754,9 +52709,9 @@ GameObject:
   - component: {fileID: 6912856217512580399}
   - component: {fileID: 879739182}
   - component: {fileID: 879739183}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.199
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53166,181 +53121,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &4813497883348378508
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1408672766}
-    m_Modifications:
-    - target: {fileID: 4813497882417245011, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_TagString
-      value: AI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497882417245037, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: iconFollow
-      value: 
-      objectReference: {fileID: 1632330208}
-    - target: {fileID: 4813497883062652848, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: hoverHeight
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652849, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: aiCheckpointParent
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652850, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652850, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: ai_checkpointManager
-      value: 
-      objectReference: {fileID: 879739398}
-    - target: {fileID: 4813497883062652850, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: ai_vehicleController
-      value: 
-      objectReference: {fileID: 1599765416}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_RayLength
-      value: 701
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_MaxRayDegrees
-      value: 138.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_RaysPerDirection
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_SphereCastRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_EndVerticalOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_RayLayerMask.m_Bits
-      value: 3584
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_StartVerticalOffset
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_DetectableTags.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652852, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_DetectableTags.Array.data[3]
-      value: Checkpoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652853, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_BehaviorType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652855, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_Model
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652855, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_BehaviorName
-      value: VehicleAI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652855, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_BehaviorType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652855, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_InferenceDevice
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652855, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_ObservableAttributeHandling
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652855, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_BrainParameters.VectorActionSize.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652855, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652856, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_Name
-      value: Empty_Ship_AI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652856, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652856, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_TagString
-      value: AI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 427.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2135.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.70275086
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.0014380431
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.71143246
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0017505279
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.027
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.703
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652857, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.258
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652858, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: Record
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652858, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: DemonstrationName
-      value: VehicleDemo
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813497883062652858, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-      propertyPath: DemonstrationDirectory
-      value: Assets/CoreAssets/MachineLearning/demos
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4813497883062652853, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-    - {fileID: 4813497883062652849, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: ae523cc507c474bbf97ae1e2ed3b8b35, type: 3}
 --- !u!33 &4817631268203196642
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -53362,9 +53142,9 @@ GameObject:
   - component: {fileID: 4756090527731592006}
   - component: {fileID: 879739166}
   - component: {fileID: 879739167}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.207
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53477,9 +53257,9 @@ GameObject:
   - component: {fileID: 4824421727430313800}
   - component: {fileID: 879739196}
   - component: {fileID: 879739197}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.192
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53641,9 +53421,9 @@ GameObject:
   - component: {fileID: 1834621864374504698}
   - component: {fileID: 879739220}
   - component: {fileID: 879739221}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.180
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53842,9 +53622,9 @@ GameObject:
   - component: {fileID: 3404059456689385028}
   - component: {fileID: 879739212}
   - component: {fileID: 879739213}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.184
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54061,9 +53841,9 @@ GameObject:
   - component: {fileID: 1184255912730845632}
   - component: {fileID: 879739190}
   - component: {fileID: 879739191}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.195
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54329,9 +54109,9 @@ GameObject:
   - component: {fileID: 5675133502856997741}
   - component: {fileID: 879739194}
   - component: {fileID: 879739195}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.193
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54869,9 +54649,9 @@ GameObject:
   - component: {fileID: 3657348200016747052}
   - component: {fileID: 879739162}
   - component: {fileID: 879739163}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.209
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55038,9 +54818,9 @@ GameObject:
   - component: {fileID: 4378150577491399687}
   - component: {fileID: 879739206}
   - component: {fileID: 879739207}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.187
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55066,9 +54846,9 @@ GameObject:
   - component: {fileID: 5566897942289335849}
   - component: {fileID: 879739174}
   - component: {fileID: 879739175}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.203
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55086,9 +54866,9 @@ GameObject:
   - component: {fileID: 8275886060568474362}
   - component: {fileID: 879739242}
   - component: {fileID: 879739243}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.169
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55516,9 +55296,9 @@ GameObject:
   - component: {fileID: 7245563067441871150}
   - component: {fileID: 879739210}
   - component: {fileID: 879739211}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.185
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56023,9 +55803,9 @@ GameObject:
   - component: {fileID: 747709225415870832}
   - component: {fileID: 879739224}
   - component: {fileID: 879739225}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.178
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56695,9 +56475,9 @@ GameObject:
   - component: {fileID: 4732255879299659110}
   - component: {fileID: 879739188}
   - component: {fileID: 879739189}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.196
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56764,6 +56544,71 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!1001 &6833284010969180290
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1408672766}
+    m_Modifications:
+    - target: {fileID: 6833284011657577654, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_Name
+      value: Empty_Ship_AI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9640.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2836.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2560.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.05407412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.01442493
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99754775
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.04203014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 173.715
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577655, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.916
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833284011657577660, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: ai_checkpointManager
+      value: 
+      objectReference: {fileID: 879739398}
+    - target: {fileID: 6833284012185526371, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
+      propertyPath: iconFollow
+      value: 
+      objectReference: {fileID: 1632330208}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 337b6c3775990ad65b509bcff4279004, type: 3}
 --- !u!1 &6843742625618404733
 GameObject:
   m_ObjectHideFlags: 0
@@ -56777,9 +56622,9 @@ GameObject:
   - component: {fileID: 8795267045434510314}
   - component: {fileID: 879739240}
   - component: {fileID: 879739241}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.170
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56893,9 +56738,9 @@ GameObject:
   - component: {fileID: 2107936788602966221}
   - component: {fileID: 879739216}
   - component: {fileID: 879739217}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.182
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57072,9 +56917,9 @@ GameObject:
   - component: {fileID: 2672611219320389701}
   - component: {fileID: 879739204}
   - component: {fileID: 879739205}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.188
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57657,9 +57502,9 @@ GameObject:
   - component: {fileID: 4531800779794742171}
   - component: {fileID: 879739234}
   - component: {fileID: 879739235}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.173
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58242,9 +58087,9 @@ GameObject:
   - component: {fileID: 39618824586317642}
   - component: {fileID: 879739198}
   - component: {fileID: 879739199}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.191
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58871,9 +58716,9 @@ GameObject:
   - component: {fileID: 4763614962011056663}
   - component: {fileID: 879739178}
   - component: {fileID: 879739179}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.201
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58891,9 +58736,9 @@ GameObject:
   - component: {fileID: 4952845979059965715}
   - component: {fileID: 879739170}
   - component: {fileID: 879739171}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.205
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59178,9 +59023,9 @@ GameObject:
   - component: {fileID: 2611480868404483}
   - component: {fileID: 879739172}
   - component: {fileID: 879739173}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.204
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59511,6 +59356,7 @@ MonoBehaviour:
   mAccelerationConstant: 0.15
   mMaxSpeed: 1200
   currentSpeed: 0
+  currentBackwardsSpeed: 0
   brakeForce: 800
   decelerationConstant: 0.2
   accelerationCurve:
@@ -80078,9 +79924,9 @@ GameObject:
   - component: {fileID: 1476026402520821072}
   - component: {fileID: 879739184}
   - component: {fileID: 879739185}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.198
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80280,9 +80126,9 @@ GameObject:
   - component: {fileID: 7384288032106207330}
   - component: {fileID: 879739180}
   - component: {fileID: 879739181}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.200
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80758,9 +80604,9 @@ GameObject:
   - component: {fileID: 8698798209016654848}
   - component: {fileID: 879739200}
   - component: {fileID: 879739201}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Road_Checkpoints.190
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

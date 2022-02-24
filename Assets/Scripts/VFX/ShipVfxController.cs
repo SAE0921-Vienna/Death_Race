@@ -17,7 +17,7 @@ namespace VFX
         [SerializeField] private Color trailStartColor, trailEndColor;
         
         [Header("Collision Sparks")]
-        [SerializeField] private ParticleSystem sparkParticleSystem;
+        public ParticleSystem sparkParticleSystem;
         
         private VehicleController _vehicleController;
         
@@ -64,23 +64,6 @@ namespace VFX
                 trail.startColor = Color.Lerp(trailStartColor, trailEndColor, _vehicleController.currentSpeed);
                 trail.endColor = Color.Lerp(trailStartColor, trailEndColor, _vehicleController.currentSpeed);
             }
-        }
-        
-        /* If the ship collides with the wall layer, move the particle system to the collision point and start playing it.
-         If it leaves the collision, the particle system will stop playing. */
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.layer != LayerMask.NameToLayer("Wall")) return;
-            
-            sparkParticleSystem.gameObject.transform.position = collision.contacts[0].point;
-            sparkParticleSystem.Play(true);
-
-            AudioManager.PlaySound(AudioManager.Sound.HitWall, 0.5f);
-        }
-    
-        private void OnCollisionExit()
-        {
-            sparkParticleSystem.Stop(true);
         }
     }
 }

@@ -1,3 +1,5 @@
+using PlayerController;
+
 namespace AI
 {
     using Unity.MLAgents;
@@ -10,7 +12,6 @@ namespace AI
     {
         private CheckpointManager _checkpointManager;
         private Vector3 _spawnPositionVector;
-        private AI_VehicleController _aiVehicleController;
         private AIManager _aiManager;
 
         [HideInInspector]
@@ -20,7 +21,6 @@ namespace AI
         private void Awake()
         {
             _checkpointManager = FindObjectOfType<CheckpointManager>();
-            _aiVehicleController = GetComponent<AI_VehicleController>();
             _aiManager = GetComponent<AIManager>();
             
             var myTransform = transform;
@@ -46,17 +46,22 @@ namespace AI
                 _checkpointManager.checkpointsInWorldList[_aiManager.nextCheckpointIndex].transform.forward;
             
             var directionalDot = Vector3.Dot(transform.forward, checkpointForward);
-            sensor.AddObservation(directionalDot);
+            var signedAngle = Vector3.SignedAngle(transform.forward,
+                _checkpointManager.checkpointsInWorldList[_aiManager.nextCheckpointIndex].transform.position,
+                Vector3.up);
+            sensor.AddObservation(signedAngle);
         }
         
         /* On each new Episode (Reset of the Vehicle) this gets called,
         meaning in this case the spaceship gets reset to the start-position. */
         public override void OnEpisodeBegin()
         {
+            var vehicleController = GetComponent<VehicleController>();
             transform.position = transform.position = _spawnPositionVector + new Vector3(Random.Range(-50, 50), 0f, Random.Range(-50, 50));
-            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             
             _aiManager.ResetCheckpoints();
+            vehicleController.ResetVehicle();
         }
         
         /* Add (magnitude) reward to agent.
@@ -81,14 +86,14 @@ namespace AI
         {
             if (collision.collider.CompareTag("Wall"))
             {
-                AddAgentReward(-.5F);
+                AddAgentReward(-1F);
                 //EndEpisode();
             }
         }
     
         public void ResetOnFalloff()
         {
-            if (_aiVehicleController.isOnRoadtrack) return;
+            if (GetComponent<VehicleController>().isOnRoadtrack) return;
             EndEpisode();
         }
     }

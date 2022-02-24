@@ -93,6 +93,6 @@ public class SpaceshipLoad : MonoBehaviour
 
     protected void SetVFXPrefab()
     {
-        var vfxPrefab = Instantiate(CurrentShip.vfxPrefab, GetComponentInChildren<SpaceshipRotator>().transform);
+        Instantiate(CurrentShip.vfxPrefab, GetComponentInChildren<SpaceshipRotator>().transform);
     }
 }

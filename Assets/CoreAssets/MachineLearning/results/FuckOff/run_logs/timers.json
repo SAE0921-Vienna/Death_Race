@@ -1,0 +1,70 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1645732569",
+        "python_version": "3.7.9 (default, Jan 30 2022, 17:35:39) \n[GCC 11.1.0]",
+        "command_line_arguments": "/home/gecovin/.pyenv/versions/3.7.9/bin/mlagents-learn /home/gecovin/python-envs/sample-env/config/VehicleDriving.yaml --time-scale=3 --run-id=FuckOff --force",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.8.1+cu102",
+        "numpy_version": "1.21.5",
+        "end_time_seconds": "1645732578"
+    },
+    "total": 8.96008822300064,
+    "count": 1,
+    "self": 0.008185864997358294,
+    "children": {
+        "run_training.setup": {
+            "total": 0.02493256700108759,
+            "count": 1,
+            "self": 0.02493256700108759
+        },
+        "TrainerController.start_learning": {
+            "total": 8.926969791002193,
+            "count": 1,
+            "self": 6.810999911976978e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 8.925827095001296,
+                    "count": 1,
+                    "self": 8.925491636000515,
+                    "children": {
+                        "demo_to_buffer": {
+                            "total": 0.00033545900078024715,
+                            "count": 1,
+                            "self": 2.1902003936702386e-05,
+                            "children": {
+                                "load_demonstration": {
+                                    "total": 0.00031355699684354477,
+                                    "count": 1,
+                                    "self": 0.00029971999902045354,
+                                    "children": {
+                                        "read_file": {
+                                            "total": 1.3836997823091224e-05,
+                                            "count": 1,
+                                            "self": 1.3836997823091224e-05
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "TrainerController._save_models": {
+                    "total": 0.0010745860017777886,
+                    "count": 1,
+                    "self": 0.0001798330013116356,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.000894753000466153,
+                            "count": 1,
+                            "self": 0.000894753000466153
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

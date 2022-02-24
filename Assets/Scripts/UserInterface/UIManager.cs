@@ -38,26 +38,21 @@ namespace UserInterface
             if (playerManager != null)
             {
                 lapsAmountUI.text = playerManager.currentLapIndex + "/" + gameManager.laps + " LAPS";
+                switch (playerManager.currentPositionIndex)
+                {
+                    case 1:
+                        positionsUI.text = playerManager.currentPositionIndex + "st";
+                        break;
+                    case 2:
+                        positionsUI.text = playerManager.currentPositionIndex + "nd";
+                        break;
+                    case 3:
+                        positionsUI.text = playerManager.currentPositionIndex + "rd";
+                        break;
+                    default:
+                        break;
+                }
             }
-
-            if (playerManager == null) return; 
-            //positionsUI.text = gameManager.playerPosition + "/" + gameManager.positions + " POSITION";
-            switch (playerManager.currentPositionIndex)
-            {
-                case 1:
-                    positionsUI.text = playerManager.currentPositionIndex + "st";
-                    break;
-                case 2:
-                    positionsUI.text = playerManager.currentPositionIndex + "nd";
-                    break;
-                case 3:
-                    positionsUI.text = playerManager.currentPositionIndex + "rd";
-                    break;
-                default:
-                    break;
-            }
-
-
         }
 
     }
