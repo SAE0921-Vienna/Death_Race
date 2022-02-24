@@ -82,7 +82,7 @@ namespace AI
             if (collision.collider.CompareTag("Wall"))
             {
                 AddAgentReward(-.5F);
-                //EndEpisode();
+                EndEpisode();
             }
         }
     

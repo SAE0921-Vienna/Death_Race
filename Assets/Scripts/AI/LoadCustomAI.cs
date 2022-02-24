@@ -18,6 +18,7 @@ public class LoadCustomAI : SpaceshipLoad
         {
             LoadGhost();
         }
+        SetVFXPrefab();
     }
     
     private void LoadAI()
