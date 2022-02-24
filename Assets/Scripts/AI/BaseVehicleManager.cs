@@ -71,8 +71,6 @@ namespace AI
             if (!_checkpointManager)
                 Debug.LogWarning("Checkpoint Manager NOT Found");
 
-            nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
-            nextCheckpointIndex = 0;
 
             var spaceshipLoad = GetComponent<SpaceshipLoad>();
             health = spaceshipLoad.CurrentShip.health;
@@ -82,6 +80,9 @@ namespace AI
         protected void Start()
         {
             AddAmmoOnStart();
+
+            nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
+            nextCheckpointIndex = 0;
         }
 
         protected virtual void Update()
