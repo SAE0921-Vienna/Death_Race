@@ -27,6 +27,7 @@ public class PlayerManager : BaseVehicleManager
     {
         base.Update();
         UpdateUIValues();
+
     }
 
     private void UpdateUIValues()

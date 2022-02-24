@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class FinishLineManager : MonoBehaviour
 {
+    [ContextMenuItem(name: "Stop 'n' Save Ghost Recording", function: "ResetGhostMode")]
 
     private GameManager gameManager;
 
-    public Transform checkpointParent;
+    //public Transform checkpointParent;
+    //private AICheckpointManagerMachine _aiCheckpointManager;
 
     public Transform minimap;
 
     public UIManager uiManager;
-    private AICheckpointManagerMachine _aiCheckpointManager;
-    private CheckpointManager _checkpointManager;
+
+    public CheckpointManager _checkpointManager;
+
+    public GhostManager ghostManager;
 
 
     private void Awake()
@@ -28,9 +32,9 @@ public class FinishLineManager : MonoBehaviour
             Debug.LogWarning("GameManager NOT Found");
         }
 
-        _checkpointManager = FindObjectOfType<CheckpointManager>();
+        //_checkpointManager = FindObjectOfType<CheckpointManager>();
         //transform.GetChild(0).gameObject.SetActive(true);
-        _aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
+        //_aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
     }
 
 
@@ -38,9 +42,10 @@ public class FinishLineManager : MonoBehaviour
     {
         if (other.CompareTag("Player") || other.CompareTag("AI"))
         {
-            if (other.GetComponentInParent<BaseVehicleManager>().currentLapIndex == 0 && other.GetComponentInParent<BaseVehicleManager>().currentCheckpointIndex == 0)
+            var vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
+
+            if (vehicleManager.currentLapIndex == 0 && vehicleManager.currentCheckpointIndex == 0)
             {
-                var vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
 
                 vehicleManager.currentLapIndex += 1;
 
@@ -51,21 +56,12 @@ public class FinishLineManager : MonoBehaviour
                 }
             }
 
-            if (other.GetComponentInParent<BaseVehicleManager>().currentCheckpointIndex == _checkpointManager.checkpointCount - 1)
+            if (vehicleManager.currentCheckpointIndex == _checkpointManager.checkpointCount - 1)
             {
-                var vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
 
                 vehicleManager.currentLapIndex += 1;
 
-                if (gameManager.ghostMode)
-                {
-                    FindObjectOfType<GhostManager>().StopRecording();
-                    //FindObjectOfType<GhostManager>().ghost.playGhostRecording();
-                    gameManager.roundTimer = 0;
-                    gameManager.currentMilliSec = 0;
-                    gameManager.currentMin = 0;
-                    gameManager.currentSec = 0;
-                }
+                ResetGhostMode();
 
                 //If the vehicle is on current lap of index currentLapIndex 4 and collides with the Trigger, set the lap count back to 3.
                 if (vehicleManager.currentLapIndex > gameManager.laps && vehicleManager.gameObject.CompareTag("Player") && !gameManager.ghostMode)
@@ -75,8 +71,20 @@ public class FinishLineManager : MonoBehaviour
                 }
                 Debug.LogFormat("Started a new Lap! {0}", vehicleManager.currentLapIndex);
             }
+          
         }
 
+    }
+
+    [ContextMenu(itemName: "Stop 'n' Save Ghost Recording")]
+    public void ResetGhostMode()
+    {
+        ghostManager.StopRecording();
+        ghostManager.ghost.playGhostRecording();
+        gameManager.roundTimer = 0;
+        gameManager.currentMilliSec = 0;
+        gameManager.currentMin = 0;
+        gameManager.currentSec = 0;
     }
 
 

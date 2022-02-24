@@ -108,8 +108,6 @@ public class GhostShot
 public class Ghost : MonoBehaviour
 {
 
-
-
     private List<GhostShot> framesList;
     private List<GhostShot> lastReplayList = null;
 
