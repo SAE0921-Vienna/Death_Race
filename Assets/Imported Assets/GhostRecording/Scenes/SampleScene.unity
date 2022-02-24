@@ -276,7 +276,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.5905e-41, y: 0, z: 0, w: 6.6193752e+10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -387,6 +387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasData: 0
+  positionHandler: {fileID: 0}
+  iconFollow: {fileID: 0}
 --- !u!1 &412138065
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,13 +548,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611018609}
-  m_LocalRotation: {x: 0.18462953, y: -0, z: -0, w: 0.9828082}
-  m_LocalPosition: {x: 0.3, y: 2.4099998, z: -23.9}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.24, z: -24.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8160920351009478912}
+  m_Father: {fileID: 1897993836}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 21.279001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &611018611
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1073,7 +1075,7 @@ GameObject:
   - component: {fileID: 1202577819}
   - component: {fileID: 1202577818}
   - component: {fileID: 1202577817}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,6 +1538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasData: 0
+  positionHandler: {fileID: 0}
+  iconFollow: {fileID: 0}
 --- !u!1 &1685082641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,6 +1843,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727726273}
   m_CullTransparentMesh: 0
+--- !u!1001 &1805883283
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5159906435697517477, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_Name
+      value: Empty_Ship (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+--- !u!4 &1897993836 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5159906435697517496, guid: f5db011c700c4554c968a6ee9046f878, type: 3}
+  m_PrefabInstance: {fileID: 1805883283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &2076626973
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -2159,6 +2225,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 04b9f866-a299-41a3-a016-22d4357b0d96
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7cb75ea0-94ab-49be-b4ed-36e1a3948a0d
+    m_ActionName: UI/PauseMenu[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -2599,7 +2669,6 @@ Transform:
   - {fileID: 8160920352032395452}
   - {fileID: 8160920352076398936}
   - {fileID: 834595121583431231}
-  - {fileID: 611018610}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2649,6 +2718,7 @@ MonoBehaviour:
   mAccelerationConstant: 0.15
   mMaxSpeed: 800
   currentSpeed: 0
+  currentBackwardsSpeed: 0
   brakeForce: 500
   decelerationConstant: 0.3
   accelerationCurve:
@@ -2686,6 +2756,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   sideThrustAmount: 100
   steeringSpeed: 8.7
+  speedDependentAngularDragMagnitude: 0
   idleSteeringAnimationSpeedMultiplier: 0.2
   steeringAnimationSpeedMultiplier: 0.4
   downForceMultiplier: 100
@@ -2703,22 +2774,9 @@ MonoBehaviour:
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  maxRaycastDistance: 1000
-  trackSearchRadius: 300
+  maxSphereCastDistance: 1000
+  sphereCastRadius: 3
   isOnRoadtrack: 1
---- !u!114 &8160920351009478918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8160920351009478941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8770b3c08f1021a4a9feddb06ecab3eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpList: []
 --- !u!114 &8160920351009478919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2731,29 +2789,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b48476824f5d6644a6b0993892860f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vehicleController: {fileID: 0}
   health: 100
   healthLimit: 100
-  nitroSpeed: 800
-  nitroAccelerationBoost: 0.05
-  normalMaxSpeed: 0
-  currentSpeed: 0
-  mainCamPovBoost: 20
+  healValue: 45
   ammo: 350
   ammoAdd: 25
-  ammoLimit: 25
   bombTimer: 10
   bombScale: {x: 5, y: 5, z: 5}
-  healValue: 45
-  shield: 0
-  nitro: 0
+  currentSpeed: 0
+  hasShield: 0
+  hasNitro: 0
   canShoot: 1
-  bomb: 0
+  hasBomb: 0
+  hasHealed: 0
   isImmortal: 0
   isOnRoadtrack: 0
-  isFacingCorrectDirection: 0
+  currentPositionIndex: 0
+  currentLapIndex: 0
+  currentCheckpointIndex: 0
+  nextCheckpointIndex: 0
+  nextCheckpoint: {fileID: 0}
   timer: 0
   timerCooldown: 5
+  offTrackTimer: 0
+  offTrackTimerLimit: 5
+  spawnPosition: {x: 0, y: 0, z: 0}
+  spawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  spawnYOffset: 5
 --- !u!1 &8160920351009478941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,7 +2828,6 @@ GameObject:
   - component: {fileID: 8160920351009478915}
   - component: {fileID: 8160920351009478919}
   - component: {fileID: 8160920351009478916}
-  - component: {fileID: 8160920351009478918}
   - component: {fileID: 8160920351009478917}
   - component: {fileID: 834595121839238197}
   - component: {fileID: 1571016415654618056}
@@ -2777,7 +2838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8160920351080674012
 Transform:
   m_ObjectHideFlags: 0
@@ -2905,7 +2966,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8160920352076398936}
   - component: {fileID: 8160920352076398937}
-  - component: {fileID: 8160920352076398942}
   - component: {fileID: 834595121240080426}
   m_Layer: 6
   m_Name: SpaceShip
@@ -2914,20 +2974,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &8160920352076398942
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8160920352076398939}
-  m_Material: {fileID: 13400000, guid: 79b1067785b283447b121aeb7fca9fad, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 8e5b88cba81fe614885fb83581396427, type: 3}
 --- !u!1 &8160920352387153096
 GameObject:
   m_ObjectHideFlags: 0

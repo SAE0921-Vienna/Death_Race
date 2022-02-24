@@ -7,7 +7,6 @@ using UserInterface;
 
 public class GhostManager : MonoBehaviour
 {
-    [ContextMenuItem(name: "Stop 'n' Save Ghost Recording", function: "StopRecording")]
 
     public GameManager gameManager;
     public SaveLoadScript saveLoadScript;
@@ -20,6 +19,8 @@ public class GhostManager : MonoBehaviour
 
     private void Start()
     {
+
+
         if (gameManager.ghostMode)
         {
 
@@ -59,25 +60,29 @@ public class GhostManager : MonoBehaviour
                     ghostVehicleMeshIndex = saveLoadScript.lastEquippedVehicleMesh;
                     ghostVehicleMaterialIndex = saveLoadScript.lastEquippedMaterial;
                 }
-                ghost.StartRecording();
-                ghost.StartRecordingGhost();
+
+                if (!ghost.isRecording)
+                {
+                    ghost.StartRecording();
+                    ghost.StartRecordingGhost();
+                }
+
+
             }
         }
     }
 
-    [ContextMenu(itemName: "Stop 'n' Save Ghost Recording")]
     public void StopRecording()
     {
         ghost.StopRecordingGhost();
-
 
         if (saveLoadScript.bestTime > gameManager.roundTimer || !ghost.hasData)
         {
             ghost.SaveGhostToFile();
             saveLoadScript.bestTime = gameManager.roundTimer;
-            saveLoadScript.SaveHighScore(gameManager.roundTimer, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
-
+            saveLoadScript.SaveHighScore(saveLoadScript.bestTime, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
         }
+
         ghost.loadFromFile();
         saveLoadScript.LoadHighScoreData();
         ghost.playGhostRecording();

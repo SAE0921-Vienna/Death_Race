@@ -108,8 +108,6 @@ public class GhostShot
 public class Ghost : MonoBehaviour
 {
 
-
-
     private List<GhostShot> framesList;
     private List<GhostShot> lastReplayList = null;
 
@@ -120,6 +118,7 @@ public class Ghost : MonoBehaviour
     private float recordTime = 0.0f;
     private float replayTime = 0.0f;
     public bool hasData;
+    public bool isRecording;
 
     public PositionHandler positionHandler;
     public IconFollow iconFollow;
@@ -184,6 +183,7 @@ public class Ghost : MonoBehaviour
         replayIndex = 0;
         recordTime = Time.time * 1000;
         recordingFrame = true;
+        isRecording = true;
         //playRecording = false;
     }
 
@@ -193,6 +193,7 @@ public class Ghost : MonoBehaviour
         recordingFrame = false;
         lastReplayList = new List<GhostShot>(framesList);
         playRecording = false;
+        isRecording = false;
         Debug.Log("Recording Stopped");
 
         //This will overwrite any previous Save
@@ -210,6 +211,7 @@ public class Ghost : MonoBehaviour
     public void StartRecordingGhost()
     {
         startRecording = true;
+        isRecording = true;
     }
 
     public void MoveGhost()
@@ -252,9 +254,9 @@ public class Ghost : MonoBehaviour
         //Check if ghost exists or not, no reason to destroy and create it everytime.
         if (GameObject.FindWithTag("Ghost") == null)
         {
-            theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject)), FindObjectOfType<PositionHandler>().transform) as GameObject;
+            theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject))/*, FindObjectOfType<PositionHandler>().transform*/) as GameObject;
             theGhost.GetComponentInChildren<BoxCollider>().isTrigger = true;
-            
+
             theGhost.gameObject.tag = "Ghost";
 
             //Disable RigidBody
@@ -263,8 +265,11 @@ public class Ghost : MonoBehaviour
             MeshRenderer mr = theGhost.gameObject.GetComponentInChildren<MeshRenderer>();
             mr.material = Resources.Load("Ghost_Shader", typeof(Material)) as Material;
             //positionHandler.enabled = true;
-            iconFollow.followTarget = theGhost;
-            
+            if (iconFollow)
+            {
+                iconFollow.followTarget = theGhost;
+            }
+
         }
     }
 }
