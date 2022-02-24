@@ -130,7 +130,10 @@ namespace AI
         /// <param name="_damage"></param>
         public void GetDamage(int _damage)
         {
-            health -= _damage;
+            if (!isImmortal)
+            {
+                health -= _damage;
+            }
         }
 
         public void CheckIfOnTrack()

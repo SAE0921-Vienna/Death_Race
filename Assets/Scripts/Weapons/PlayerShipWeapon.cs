@@ -49,7 +49,6 @@ public class PlayerShipWeapon : ShipWeapon
 
             if (tempobj != null && tempobj.GetComponent<IDamageable>() != null)
             {
-                if(!tempobj.GetComponent<BaseVehicleManager>().isImmortal) 
                 tempobj.GetComponent<IDamageable>().GetDamage(projectileDamage);
             }
             else

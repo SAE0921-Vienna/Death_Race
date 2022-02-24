@@ -15,6 +15,7 @@ namespace Weapons
         {
             DealDamage();
             ExplosionAnimation();
+
         }
 
         private void DealDamage()
@@ -22,10 +23,10 @@ namespace Weapons
             var allHitTargets = Physics.OverlapSphere(transform.position, explosionRadius);
             foreach (var target in allHitTargets)
             {
-                if (target.GetComponentInParent<IDamageable>() != null && !target.GetComponentInParent<BaseVehicleManager>().isImmortal)
+                if (target.GetComponentInParent<IDamageable>() != null)
                     target.GetComponentInParent<IDamageable>().GetDamage(explosionDamage);
 
-                if (target.gameObject.GetComponentInParent<Rigidbody>() != null && !target.GetComponentInParent<BaseVehicleManager>().isImmortal)
+                if (target.gameObject.GetComponentInParent<Rigidbody>() != null)
                     ExplosionForce(target.gameObject.GetComponentInParent<Rigidbody>());
             }
         }
@@ -44,6 +45,12 @@ namespace Weapons
             AudioManager.PlaySound(AudioManager.Sound.RocketExplosion, transform.position);
 
             Destroy(gameObject);
+        }
+
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, explosionRadius);
         }
     }
 }

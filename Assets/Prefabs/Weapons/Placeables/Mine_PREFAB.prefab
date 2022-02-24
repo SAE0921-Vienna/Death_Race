@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDamage: 33
   explosionForce: 15
-  explosionRadius: 1000
+  explosionRadius: 50
   upwardsModifier: 0
   forceMode: 1
   boomEffect: {fileID: 8487399421096006122}
