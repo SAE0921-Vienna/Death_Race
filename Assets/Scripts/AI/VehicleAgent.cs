@@ -56,7 +56,7 @@ namespace AI
             transform.position = transform.position = _spawnPositionVector + new Vector3(Random.Range(-50, 50), 0f, Random.Range(-50, 50));
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             
-            //_aiCheckpointManager.ResetCheckpoints();
+            _aiManager.ResetCheckpoints();
         }
         
         /* Add (magnitude) reward to agent.

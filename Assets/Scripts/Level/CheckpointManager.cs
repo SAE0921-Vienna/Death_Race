@@ -21,7 +21,7 @@ public class CheckpointManager : MonoBehaviour
         GetAllCheckpoints();
     }
 
-    private void GetAllCheckpoints()
+    protected void GetAllCheckpoints()
     {
         checkpointParent = transform;
         checkpointsInWorldList = new List<Checkpoint>();
@@ -50,17 +50,17 @@ public class CheckpointManager : MonoBehaviour
 
         if (checkpointsInWorldList.IndexOf(checkpoint) == vehicleManager.nextCheckpointIndex)
         {
-            if (_gameManager.ghostMode)
-            {
-                //checkpoint.transform.GetChild(0).gameObject.SetActive(false);
-            }
+            //if (_gameManager.ghostMode)
+            //{
+            //    //checkpoint.transform.GetChild(0).gameObject.SetActive(false);
+            //}
             if ((checkpointsInWorldList.IndexOf(checkpoint) + 1) < checkpointsInWorldList.Count)
             {
                 vehicleManager.nextCheckpoint = checkpointsInWorldList[checkpointsInWorldList.IndexOf(checkpoint) + 1];
-                if (_gameManager.ghostMode)
-                {
-                    //nextCheckpoint.transform.GetChild(0).gameObject.SetActive(true);
-                }
+                //if (_gameManager.ghostMode)
+                //{
+                //    //nextCheckpoint.transform.GetChild(0).gameObject.SetActive(true);
+                //}
             }
             
             vehicleManager.currentCheckpointIndex = checkpointsInWorldList.IndexOf(checkpoint);

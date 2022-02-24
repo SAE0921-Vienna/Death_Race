@@ -21,8 +21,8 @@ namespace Weapons
             var allHitTargets = Physics.SphereCastAll(transform.position, explosionRadius, Vector3.up, 1f);
             foreach (var target in allHitTargets)
             {
-                if (target.collider.GetComponent<PlayerManager>() != null)
-                    target.collider.GetComponent<PlayerManager>().health -= explosionDamage;
+                if (target.collider.GetComponent<IDamageable>() != null)
+                    target.collider.GetComponent<IDamageable>().GetDamage(explosionDamage);
                 
                 if (target.rigidbody != null) 
                     ExplosionForce(target.rigidbody);

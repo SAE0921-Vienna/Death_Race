@@ -54,7 +54,7 @@ namespace PlayerController
         private Rigidbody _rBody;
         private InputActions _controls;
         private RaycastHit hit;
-        private RaycastHit wallHit;
+        //private RaycastHit wallHit;
         private const float steerAnimationConstant = 2f;
         private float drag;
 

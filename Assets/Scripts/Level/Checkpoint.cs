@@ -5,7 +5,7 @@ public class Checkpoint : MonoBehaviour
 {
     private GameManager gameManager;
     private CheckpointManager checkpointManager;
-    private AICheckpointManager aicheckpointManager;
+    //private AICheckpointManager aicheckpointManager;
 
 
     private void Awake()
@@ -24,19 +24,17 @@ public class Checkpoint : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        checkpointManager = GetComponentInParent<CheckpointManager>();
-
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("Checkpoint");
+            checkpointManager = GetComponentInParent<CheckpointManager>();
             checkpointManager.VehicleThroughCheckpoint(this, other);
 
         }
         if (other.CompareTag("AI") )
         {
-            var aiCheckpointManager = other.GetComponent<AICheckpointManager>();
+            var aiCheckpointManager = GetComponentInParent<AICheckpointManager>();
             Debug.Log("AI through Checkpoint");
-            aicheckpointManager.VehicleThroughCheckpoint(this, other);
+            aiCheckpointManager.VehicleThroughCheckpoint(this, other);
         }
 
     }

@@ -5,63 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Periphery/Flag_MAT.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Periphery/Flag_MAT.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Periphery/Flag_Pole_MAT.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Periphery/Flag_Pole_MAT.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Periphery/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Periphery/Logo.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Redo_Checkpoints.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Redo_Checkpoints.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/FX_LightRayCube.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/FX_LightRayCube.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/HeatDistortionPS.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/HeatDistortionPS.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/ThrusterPS.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/ThrusterPS.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/Trails.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/Trails.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/WallGrindPS.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Raw-FX/WallGrindPS.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Bomber.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Bomber.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Fighter.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Fighter.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Speeder.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Speeder.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Striker.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Striker.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_X-Falcon.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_X-Falcon.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Tracks/Track_Flag (1).prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Tracks/Track_Flag (1).prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Pipes_MAT 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Pipes_MAT 1.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/Bomber.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/Bomber.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/Fighter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/Fighter.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/Speeder.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/Speeder.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/Striker.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/Striker.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/X-Falcon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/ScriptableObjects/Ships/X-Falcon.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Ship_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PolygonSciFiSpace/Materials/PolygonScifiSpace_Ship_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Periphery/Track_Flag.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Periphery/Track_Flag.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Redo_Segments.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Redo_Segments.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Redo_Segments_5.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Redo_Segments_5.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/FX_LightRayCube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/FX_LightRayCube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/HeatDistortionPS.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/HeatDistortionPS.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/ThrusterPS.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/ThrusterPS.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/Trails.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/Trails.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/WallGrindPS.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/WallGrindPS.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Track/Track_Hexagon_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Track/Track_Hexagon_MAT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Periphery/Flag_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Periphery/Flag_MAT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Redo_Segments_2.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Redo_Segments_2.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Tunnel.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Tunnel.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Tunnel_Lights.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Tunnel_Lights.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Tunnel_Pipes.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Tunnel_Pipes.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Window_Tunnel.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Roads/Road_Divided/Track_Window_Tunnel.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Fighter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/VFX_Fighter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AI_Action.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AI_Action.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Ships/ShipData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Ships/ShipData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceshipLoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceshipLoad.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AICheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Checkpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Checkpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseExplosionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseExplosionResponse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +209,9 @@
       <workItem from="1645310307342" duration="620000" />
       <workItem from="1645552533238" duration="94000" />
       <workItem from="1645552651284" duration="3754000" />
-      <workItem from="1645617955072" duration="2843000" />
+      <workItem from="1645617955072" duration="4602000" />
+      <workItem from="1645642469772" duration="789000" />
+      <workItem from="1645703130867" duration="3017000" />
     </task>
     <servers />
   </component>

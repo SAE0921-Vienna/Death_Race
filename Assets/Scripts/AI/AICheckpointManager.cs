@@ -8,28 +8,30 @@ namespace AI
         public Transform aisTarget;
         public Vector3 targetPosition;
         private AIManager aIManager;
-        private VehicleAgent _vehicleAgent;
         public Transform aiCheckpointParent;
         public List<Transform> aiCheckpointsList;
         
         private void Awake()
         {
-            foreach (Transform checkpointsInWorld in aiCheckpointParent)
-            {
-                Transform checkpoint = checkpointsInWorld.transform;
-                aiCheckpointsList.Add(checkpoint);
-            }
+            //foreach (Transform checkpointsInWorld in aiCheckpointParent)
+            //{
+            //    Transform checkpoint = checkpointsInWorld.transform;
+            //    aiCheckpointsList.Add(checkpoint);
+            //}
             
-            _vehicleAgent = GetComponent<VehicleAgent>();
+            base.GetAllCheckpoints();
         }
-
-
+        
         public override void VehicleThroughCheckpoint(Checkpoint checkpoint, Collider vehicle)
         {
+            var _vehicleAgent = vehicle.GetComponentInParent<VehicleAgent>();
+            if (checkpointsInWorldList.IndexOf(checkpoint) == vehicle.GetComponentInParent<BaseVehicleManager>().nextCheckpointIndex)
+            {
+                _vehicleAgent.AddAgentReward(1f);
+            }
             base.VehicleThroughCheckpoint(checkpoint, vehicle);
-           
-            targetPosition = checkpointsInWorldList[aIManager.nextCheckpointIndex].transform.position;
-            aisTarget.transform.position = targetPosition;
+            //targetPosition = checkpointsInWorldList[aIManager.nextCheckpointIndex].transform.position;
+            //aisTarget.transform.position = targetPosition;
 
             ////bug loop -- ai cant loop (it doesnt know how to go up and down) - so im improvising
             //if (aIManager.nextCheckpointIndex == 12)
@@ -45,8 +47,6 @@ namespace AI
             //    targetPosition = aiCheckpointsList[aIManager.nextCheckpointIndex].transform.position;
             //    aisTarget.transform.position = targetPosition;
             //}
-            _vehicleAgent.AddAgentReward(1f);
         }
-
     }
 }
