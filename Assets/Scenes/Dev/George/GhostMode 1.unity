@@ -11751,7 +11751,7 @@ PrefabInstance:
     - target: {fileID: 3965160609210042296, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: sharedProfile
       value: 
-      objectReference: {fileID: 11400000, guid: caec23420b9dbf9f180f6de15eb539d1, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f2d303659b45dfc38230ee892d015ab, type: 2}
     - target: {fileID: 3965160609210042297, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_StopNaN
       value: 0
