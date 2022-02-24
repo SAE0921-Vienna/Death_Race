@@ -5,59 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/demos/VehicleDemo.demo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/demos/VehicleDemo.demo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI.onnx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-0.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-0.onnx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-0.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-0.pt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-10843.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-10843.onnx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-10843.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-10843.pt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-1435.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-1435.onnx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-1435.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-1435.pt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-6444.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-6444.onnx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-6444.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-6444.pt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-7724.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-7724.onnx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-7724.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-7724.pt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-7916.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-7916.onnx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-7916.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-7916.pt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-8789.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-8789.onnx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-8789.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-8789.pt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/checkpoint.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/checkpoint.pt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/events.out.tfevents.1645716204.desktop.34688.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/events.out.tfevents.1645716204.desktop.34688.0.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/configuration.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/configuration.yaml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs/timers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs/timers.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs/training_status.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs/training_status.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/demos/VehicleDemo_0.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/demos/VehicleDemo_0.demo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/demos/VehicleDemo_1.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/demos/VehicleDemo_1.demo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-111067.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-111067.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-111067.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-111067.pt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-2067.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-2067.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-2067.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-2067.pt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-384.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-384.onnx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-384.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/VehicleAI-384.pt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/events.out.tfevents.1645730265.desktop.60160.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/events.out.tfevents.1645730265.desktop.60160.0.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI.onnx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/checkpoint.pt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/checkpoint.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/events.out.tfevents.1645716204.desktop.34688.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/VehicleAI/events.out.tfevents.1645716204.desktop.34688.0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/configuration.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/configuration.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs/timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs/timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs/training_status.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/MachineLearning/results/ImitationLearning/run_logs/training_status.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/GhostMode_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Machine Learning/Empty_Ship_AI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Machine Learning/Empty_Ship_AI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/GhostMode.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/LoadCustomAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/LoadCustomAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/VehicleAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceshipLoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceshipLoad.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserInterface/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserInterface/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/VehicleController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +222,8 @@
       <workItem from="1645552651284" duration="3754000" />
       <workItem from="1645617955072" duration="4602000" />
       <workItem from="1645642469772" duration="789000" />
-      <workItem from="1645703130867" duration="7786000" />
+      <workItem from="1645703130867" duration="9305000" />
+      <workItem from="1645724336037" duration="611000" />
     </task>
     <servers />
   </component>

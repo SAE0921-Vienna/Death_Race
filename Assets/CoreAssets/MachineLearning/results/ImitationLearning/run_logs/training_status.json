@@ -1,26 +1,4 @@
 {
-    "VehicleAI": {
-        "checkpoints": [
-            {
-                "steps": 1435,
-                "file_path": "results/ImitationLearning/VehicleAI/VehicleAI-1435.onnx",
-                "reward": 6.5,
-                "creation_time": 1645716720.069396,
-                "auxillary_file_paths": [
-                    "results/ImitationLearning/VehicleAI/VehicleAI-1435.pt"
-                ]
-            }
-        ],
-        "final_checkpoint": {
-            "steps": 1435,
-            "file_path": "results/ImitationLearning/VehicleAI.onnx",
-            "reward": 6.5,
-            "creation_time": 1645716720.069396,
-            "auxillary_file_paths": [
-                "results/ImitationLearning/VehicleAI/VehicleAI-1435.pt"
-            ]
-        }
-    },
     "metadata": {
         "stats_format_version": "0.3.0",
         "mlagents_version": "0.28.0",

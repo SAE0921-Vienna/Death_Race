@@ -30,6 +30,8 @@ namespace PlayerController
         [Header("Steering")]
         [Range(0f, 1000f)]
         [SerializeField] protected float sideThrustAmount;
+
+        protected Vector3 steeringAngle;
         [Range(5f, 12f)]
         public float steeringSpeed;
 
@@ -193,7 +195,7 @@ namespace PlayerController
         /// </summary>
         protected void Steer()
         {
-            var steeringAngle = Vector3.up * ((steeringSpeed - speedDependentAngularDragMagnitude * currentSpeed) * SteerValueRaw * Time.fixedDeltaTime);
+            steeringAngle = Vector3.up * ((steeringSpeed - speedDependentAngularDragMagnitude * currentSpeed) * SteerValueRaw * Time.fixedDeltaTime);
             _rBody.AddRelativeTorque(steeringAngle, ForceMode.VelocityChange);
 
             var right = transform.right;
@@ -250,6 +252,12 @@ namespace PlayerController
         protected void OnDrawGizmos()
         {
             Gizmos.DrawWireSphere(GroundInfo().point, sphereCastRadius);
+        }
+
+        public void ResetVehicle()
+        {
+            currentSpeed = 0f;
+            steeringAngle = Vector3.zero;
         }
     }
 }

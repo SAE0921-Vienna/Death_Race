@@ -24,7 +24,7 @@ behaviors:
     reward_signals:
       extrinsic:
         gamma: 0.99
-        strength: 0.1
+        strength: 0.5
         network_settings:
           normalize: false
           hidden_units: 128
@@ -48,7 +48,7 @@ behaviors:
         encoding_size: null
         use_actions: false
         use_vail: false
-        demo_path: demos/VehicleDemo.demo
+        demo_path: demos/VehicleDemo_0.demo
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
@@ -58,7 +58,7 @@ behaviors:
     threaded: false
     self_play: null
     behavioral_cloning:
-      demo_path: demos/VehicleDemo.demo
+      demo_path: demos/VehicleDemo_0.demo
       steps: 0
       strength: 0.5
       samples_per_update: 0
@@ -78,7 +78,7 @@ engine_settings:
   width: 84
   height: 84
   quality_level: 5
-  time_scale: 1.0
+  time_scale: 3.0
   target_frame_rate: -1
   capture_frame_rate: 60
   no_graphics: false
