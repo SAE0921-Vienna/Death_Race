@@ -7,7 +7,7 @@ public class SpaceshipLoad : MonoBehaviour
 {
     [SerializeField]
     protected List<ShipData> allShips;
-    public ShipData CurrentShip { get { return allShips[currentShip];} }
+    public ShipData CurrentShip { get { return allShips[currentShip]; } }
     [SerializeField]
     protected List<WeaponData> allWeapons;
     public WeaponData CurrentWeapon { get { return allWeapons[currentWeapon]; } }
@@ -58,14 +58,16 @@ public class SpaceshipLoad : MonoBehaviour
             weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material =
                 allMaterials[currentMaterial].material;
             weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material =
-                allMaterials[currentMaterial].material;
+          allMaterials[currentMaterial].material;
+
+
 
             weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
 
             SetVehicleStats();
             SetWeaponStats();
         }
-        
+
         else
         {
             Debug.LogWarning("SaveLoadScript NOT found");
@@ -83,7 +85,7 @@ public class SpaceshipLoad : MonoBehaviour
     }
 
     private void SetWeaponStats()
-    {       
+    {
         _baseVehicleManager = GetComponent<BaseVehicleManager>();
         _baseVehicleManager.ammo = allWeapons[currentWeapon].ammoSize;
         _baseVehicleManager.ammoAdd = _baseVehicleManager.ammo;

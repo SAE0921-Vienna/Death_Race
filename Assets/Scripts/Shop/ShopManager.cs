@@ -141,7 +141,7 @@ public class ShopManager : MonoBehaviour
                 }
                 Destroy(weaponClone);
                 weaponClone = Instantiate(weaponsShop[currentWeaponPrefab].weaponData.vehicleWeaponPrefab, transform.GetChild(2).transform, false);
-                weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
+                //weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
                 weaponClone.GetComponent<MeshRenderer>().material = materialsShop[currentMaterial].materialData.material;
                 weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = materialsShop[currentMaterial].materialData.material;
                 weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materialsShop[currentMaterial].materialData.material;
@@ -325,9 +325,10 @@ public class ShopManager : MonoBehaviour
     private void ChangeWeaponShop()
     {
         weaponClone = Instantiate(weaponsShop[currentWeaponPrefab].weaponData.vehicleWeaponPrefab, transform.GetChild(1).transform, false);
-        weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
+        //weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
         weaponClone.GetComponent<MeshRenderer>().material = hologramMAT;
         weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = hologramMAT;
+        if(weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material != null)
         weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = hologramMAT;
         weaponName.text = weaponsShop[currentWeaponPrefab].weaponData.name;
 

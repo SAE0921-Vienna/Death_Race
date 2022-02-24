@@ -81,10 +81,11 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
 
-        if (_vehicleManager.CompareTag("Player") || _vehicleManager.CompareTag("AI"))
+        if (other.CompareTag("Player") || other.CompareTag("AI"))
         {
+            _vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
+
             if (!childObjectDeleted)
             {
                 #region Manually Add one specific PowerUp

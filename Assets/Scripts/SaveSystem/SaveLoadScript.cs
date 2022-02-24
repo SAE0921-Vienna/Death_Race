@@ -142,6 +142,9 @@ public class SaveLoadScript : MonoBehaviour
         if (data == null)
         {
             Debug.LogWarning("Data empty");
+            masterVolume = 0.5f;
+            musicVolume = 0.5f;
+            effectVolume = 0.5f;
         }
         else
         {

@@ -11,7 +11,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
     [SerializeField] protected WeaponData currentWeapon;
     [SerializeField] protected LayerMask targetLayer;
     protected Vector3 shipWeaponPosition;
-    [SerializeField]protected Transform shipWeaponTransform;
+    [SerializeField] protected Transform shipWeaponTransform;
     [Range(0, 100)]
     [SerializeField] protected float rotationSpeed = 100;
     [SerializeField] protected Quaternion currentRotation;
@@ -29,16 +29,20 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
     protected float nextFire = 0f;
 
     // Start is called before the first frame update
-    protected virtual void Awake()
+    //protected virtual void Awake()
+    //{
+
+    //}
+    protected virtual void Start()
     {
+
         currentWeapon = GetComponent<SpaceshipLoad>().CurrentWeapon;
         shipWeaponPosition = GetComponent<SpaceshipLoad>().CurrentShip.WeaponPosition;
-        
+
         SetEquippedWeapon();
-    }
-    private void Start()
-    {
+
         shipWeaponTransform = transform.GetChild(1).GetChild(1).GetChild(0).GetChild(0).transform;
+
     }
     public int GetAmmo()
     {

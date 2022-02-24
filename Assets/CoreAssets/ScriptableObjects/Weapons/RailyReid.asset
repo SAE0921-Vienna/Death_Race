@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: RailyReid
   priceInShop: 2300
-  vehicleWeaponPrefab: {fileID: 0}
-  laserPrefab: {fileID: 0}
-  WeaponSound: 5
+  vehicleWeaponPrefab: {fileID: 3881376463280638287, guid: 11eb452ac55498d4383043d327411e00, type: 3}
+  laserPrefab: {fileID: 5654157430322735983, guid: 3b709a4bafbeee0449ac1ef41b6be79d, type: 3}
+  WeaponSound: 1
   ammoSize: 3
   fireRate: 1
   damage: 75

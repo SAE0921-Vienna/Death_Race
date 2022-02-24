@@ -9,11 +9,15 @@ public class PlayerShipWeapon : ShipWeapon
     Ray ray;
     protected PlayerManager playerManager;
 
-    protected override void Awake()
+    private void Awake()
     {
         playerManager = GetComponent<PlayerManager>();
         _camera = Camera.main;
-        base.Awake();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
     }
 
     void Update()

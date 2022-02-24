@@ -253,7 +253,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     private void ChangeWeapon()
     {
         weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, transform.GetChild(1).GetChild(1).transform, false);
-        weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
+        //weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
 
         garageManager.weaponStatsGarage.text = weapons[currentWeapon].weaponData.GetWeaponStats();
         SetWeaponStatSliders();

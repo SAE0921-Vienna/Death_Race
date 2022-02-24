@@ -15,15 +15,20 @@ public class AIShipWeapon : ShipWeapon
 
     private AIManager aIManager;
 
-    protected override void Awake()
+    private void Awake()
     {
         aIManager = GetComponent<AIManager>();
         fieldOfView = GetComponentInParent<FieldOfView>();
         weaponToTarget = new Vector3(0f, 0f, 0f);
         checkTimer = false;
         changePositionTimer = 5f;
-        base.Awake();
     }
+
+    protected override void Start()
+    {
+        base.Start();
+    }
+
     private void Update()
     {
         RotateWeapon();
