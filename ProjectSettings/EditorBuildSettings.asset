@@ -18,4 +18,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Core/Sandbox/Sandbox.unity
     guid: 4ec371442da43944bab3bbdb092da9a7
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 95069c04c6d24d1eca2c674b2342f822, type: 2}
     com.unity.ml-agents.settings: {fileID: 11400000, guid: 773d2f3eca7dec85cac96925dbc6a340, type: 2}
