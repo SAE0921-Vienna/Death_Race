@@ -6,8 +6,13 @@ namespace UserInterface
 {
     public class UIManager : MonoBehaviour
     {
+        [Header("Managers")]
+        [SerializeField]
         private GameManager gameManager;
-        public PlayerManager playerManager;
+        [SerializeField]
+        private PlayerManager playerManager;
+
+        [Header("UI References")]
 
         public TextMeshProUGUI speedUnit;
         public TextMeshProUGUI ammoAmountUI;
@@ -17,17 +22,22 @@ namespace UserInterface
         public TextMeshProUGUI roundTimerUI;
         public RectTransform wrongDirectionUI;
         public TextMeshProUGUI highscoreUI;
+        public Slider healthSlider;
 
         public GameObject gameOverUI;
 
         private void Awake()
         {
-            gameManager = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+            gameManager = FindObjectOfType<GameManager>();
+            playerManager = FindObjectOfType<PlayerManager>();
         }
 
         private void Update()
         {
+            roundTimerUI.text = gameManager.roundTimerAsString;
+
             lapsAmountUI.text = playerManager.currentLapIndex + "/" + gameManager.laps + " LAPS";
+
             //positionsUI.text = gameManager.playerPosition + "/" + gameManager.positions + " POSITION";
             switch (playerManager.currentPositionIndex)
             {
@@ -44,7 +54,6 @@ namespace UserInterface
                     break;
             }
 
-            roundTimerUI.text = gameManager.roundTimerAsString;
 
         }
 

@@ -10,8 +10,6 @@ public class AI_Action : MonoBehaviour
 {
     private FieldOfView fieldOfView;
     private BaseVehicleManager baseVehicleManager;
-    private PlayerWeapon playerWeapon;
-    private VehicleController vehicleController;
     private ShipWeapon shipweapon;
     private AIPowerUps aiPowerUps;
 
@@ -19,8 +17,6 @@ public class AI_Action : MonoBehaviour
     {
         baseVehicleManager = GetComponent<BaseVehicleManager>();
         fieldOfView = GetComponent<FieldOfView>();
-        vehicleController = GetComponent<VehicleController>();
-        playerWeapon = GetComponent<PlayerWeapon>();
         shipweapon = GetComponent<ShipWeapon>();
         aiPowerUps = GetComponent<AIPowerUps>();
     }
@@ -43,21 +39,24 @@ public class AI_Action : MonoBehaviour
         switch (powerUp.powerUpType)
         {
             case PickUpScriptableObject.powerUps.Shield:
-                //Function
-                //if()
+                if(baseVehicleManager.health < 70)
                 aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Nitro:
+                aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Ammo:
+                aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Bomb:
+                aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Heal:
-                break;
-            case PickUpScriptableObject.powerUps.Random:
+                if (baseVehicleManager.health < 70)
+                    aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             default:
+                Debug.LogWarning("Oops, something went wrong with AI PowerUps");
                 break;
         }
     }

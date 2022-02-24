@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject audioManager;
 
+    [SerializeField]
     private PlayerManager playerManager;
     public CinemachineVirtualCamera vCam;
+    public Camera overlayCam;
 
     public GameObject gameOverCanvas;
 
@@ -29,9 +31,12 @@ public class GameManager : MonoBehaviour
     public string roundTimerAsString;
 
     public float roundTimer;
-    public float currentMin;
-    public float currentSec;
-    public float currentMilliSec;
+    public float currentMin = 0;
+    public float currentSec = 0;
+    public float currentMilliSec = 0;
+    public string currentMinAsString;
+    public string currentSecAsString;
+    public string currentMiliAsString;
 
     public bool ghostMode;
 
@@ -53,9 +58,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("Player Manager was NOT found");
         }
+
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
 
         vCamPOV = vCam.m_Lens.FieldOfView;
+        overlayCam.fieldOfView = vCamPOV;
     }
 
     private void Start()
@@ -75,23 +82,14 @@ public class GameManager : MonoBehaviour
     }
     private void ConvertTime()
     {
-        string currentMinAsString;
-        string currentSecAsString;
-        string currentMiliAsString;
+
 
         roundTimer += Time.deltaTime;
 
-        currentMilliSec = Mathf.RoundToInt(roundTimer * 100);
-        if (currentSec >= 60f)
-        {
-            currentSec = 0;
-            currentMin++;
-        }
-        if (currentMilliSec >= 100f)
-        {
-            currentSec++;
-            roundTimer = 0;
-        }
+        currentMin = Mathf.Floor(roundTimer * 0.0166666666f);
+        currentSec = Mathf.Floor(roundTimer - (currentMin * 60));
+        currentMilliSec = (float)System.Math.Round(roundTimer - (currentSec + currentMin * 60), 2) * 100;
+        currentMilliSec = Mathf.Floor(currentMilliSec);
 
         if (currentMin < 10)
             currentMinAsString = "0" + currentMin;
@@ -109,6 +107,8 @@ public class GameManager : MonoBehaviour
             currentMiliAsString = "" + currentMilliSec;
 
         roundTimerAsString = currentMinAsString + ":" + currentSecAsString + ":" + currentMiliAsString;
+
+        //roundTimer = (currentSec + currentMilliSec*0.01f + currentMin * 60);
     }
 
     public void StartRoundTimer()

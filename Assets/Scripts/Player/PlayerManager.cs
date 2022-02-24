@@ -15,6 +15,8 @@ public class PlayerManager : BaseVehicleManager
         {
             Debug.LogWarning("UIManager NOT Found");
         }
+        uiManager.healthSlider.maxValue = healthLimit;
+        uiManager.healthSlider.value = health;
     }
     
     protected override void Update()
@@ -27,6 +29,7 @@ public class PlayerManager : BaseVehicleManager
     {
         if (!uiManager) return;
         if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
+        uiManager.healthSlider.value = health;
     }
     
     //public void CheckLapCount()

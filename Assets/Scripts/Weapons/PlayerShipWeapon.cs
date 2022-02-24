@@ -12,6 +12,7 @@ public class PlayerShipWeapon : ShipWeapon
     protected override void Awake()
     {
         playerManager = GetComponent<PlayerManager>();
+        _camera = Camera.main;
         base.Awake();
     }
 
@@ -44,12 +45,12 @@ public class PlayerShipWeapon : ShipWeapon
 
             if (tempobj != null && tempobj.GetComponent<IDamageable>() != null)
             {
-                if(!tempobj.GetComponent<AIManager>().isImmortal) //Gilt nur für 1 Spieler gegen X AI's
+                if(!tempobj.GetComponent<BaseVehicleManager>().isImmortal) 
                 tempobj.GetComponent<IDamageable>().GetDamage(projectileDamage);
             }
             else
             {
-                Debug.Log("MAMAMAAAAAA");
+                //Debug.Log("MAMAMAAAAAA");
             }
             //Debug.Log(HitTarget().name);
         }

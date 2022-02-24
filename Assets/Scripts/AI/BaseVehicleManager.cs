@@ -9,45 +9,46 @@ namespace AI
         protected VehicleController _vehicleController;
         protected GameManager _gameManager;
         protected CheckpointManager _checkpointManager;
-        
+
         [Header("Health")]
         public int health = 100;
         public int healthLimit = 100;
         public int healValue = 45;
-        
+
         [Header("Ammo")]
         public int ammo;
         public int ammoAdd;
         //public int ammoLimit;
         public float bombTimer = 10f;
         public Vector3 bombScale = new Vector3(5, 5, 5);
-        
+
         [Header("Speed")]
         public float currentSpeed;
-        
+
         [Header("PowerUp Activates")]
         public bool hasShield;
         public bool hasNitro;
         public bool canShoot;
         public bool hasBomb;
+        public bool hasHealed;
         public bool isImmortal;
         public bool isOnRoadtrack;
 
-        [Header("Position")] 
+        [Header("Position")]
         public int currentPositionIndex;
         public int currentLapIndex;
         public int currentCheckpointIndex;
         public int nextCheckpointIndex;
         public Checkpoint nextCheckpoint; //!
-        
+
         [Header("Power Up Timer")]
         public float timer;
         public float timerCooldown = 5f;
-        
+
         [Header("Off Track Timer")]
         public float offTrackTimer;
         public float offTrackTimerLimit = 5f;
-        
+
         [Header("Respawn Transform")]
         public Vector3 spawnPosition;
         public Quaternion spawnRotation;
@@ -61,7 +62,7 @@ namespace AI
 
             spawnPosition = transform.position;
             spawnRotation = transform.rotation;
-            
+
             _gameManager = FindObjectOfType<GameManager>();
             if (!_gameManager)
                 Debug.LogWarning("Game Manager NOT Found");
@@ -69,9 +70,13 @@ namespace AI
             _checkpointManager = FindObjectOfType<CheckpointManager>();
             if (!_checkpointManager)
                 Debug.LogWarning("Checkpoint Manager NOT Found");
-            
+
             //nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
             nextCheckpointIndex = 0;
+
+
+            health = GetComponent<SpaceshipLoad>().CurrentShip.health;
+            healthLimit = health;
         }
 
         protected void Start()
@@ -149,11 +154,11 @@ namespace AI
             _vehicleController.currentSpeed = 0f;
             _vehicleController.GetComponent<Rigidbody>().velocity = Vector3.zero;
             _vehicleController.isOnRoadtrack = true;
-            
+
             var vehicleTransform = transform;
             vehicleTransform.position = spawnPosition;
             vehicleTransform.rotation = spawnRotation;
-            
+
             gameObject.SetActive(true);
         }
     }

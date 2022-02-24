@@ -14,7 +14,10 @@ public class SaveData
 
     public int milkyCoins;
 
-    public float highScore;
+    public float bestTime;
+    public string currentMin;
+    public string currentSec;
+    public string currentMilliSec;
     public int lastGhostVehicleIndex;
     public int lastGhostMaterialIndex;
 
@@ -42,9 +45,12 @@ public class SaveData
     }
 
 
-    public SaveData(float highScore, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
+    public SaveData(float _bestTime, string _currentMin, string _currentSec, string _currentMilliSec, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
     {
-        this.highScore = highScore;
+        this.bestTime = _bestTime;
+        this.currentMin = _currentMin;
+        this.currentSec = _currentSec;
+        this.currentMilliSec = _currentMilliSec;
         this.lastGhostVehicleIndex = _lastGhostVehicleIndex;
         this.lastGhostMaterialIndex = _lastGhostMaterialIndex;
     }

@@ -2992,6 +2992,9 @@ MonoBehaviour:
   currentMin: 0
   currentSec: 0
   currentMilliSec: 0
+  currentMinAsString: 
+  currentSecAsString: 
+  currentMiliAsString: 
   ghostMode: 0
 --- !u!1 &221267527
 GameObject:
@@ -5377,7 +5380,10 @@ MonoBehaviour:
   spaceConfig: {fileID: 0}
   milkyCoins: 0
   maxMilkyCoins: 9999999
-  highScore: 0
+  bestTime: 0
+  currentMinAsString: 
+  currentSecAsString: 
+  currentMiliAsString: 
   lastGhostVehicleIndex: 0
   lastGhostMaterialIndex: 0
   masterVolume: 1
