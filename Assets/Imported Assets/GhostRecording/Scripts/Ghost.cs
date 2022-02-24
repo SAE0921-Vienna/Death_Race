@@ -118,6 +118,7 @@ public class Ghost : MonoBehaviour
     private float recordTime = 0.0f;
     private float replayTime = 0.0f;
     public bool hasData;
+    public bool isRecording;
 
     public PositionHandler positionHandler;
     public IconFollow iconFollow;
@@ -182,6 +183,7 @@ public class Ghost : MonoBehaviour
         replayIndex = 0;
         recordTime = Time.time * 1000;
         recordingFrame = true;
+        isRecording = true;
         //playRecording = false;
     }
 
@@ -191,6 +193,7 @@ public class Ghost : MonoBehaviour
         recordingFrame = false;
         lastReplayList = new List<GhostShot>(framesList);
         playRecording = false;
+        isRecording = false;
         Debug.Log("Recording Stopped");
 
         //This will overwrite any previous Save
@@ -208,6 +211,7 @@ public class Ghost : MonoBehaviour
     public void StartRecordingGhost()
     {
         startRecording = true;
+        isRecording = true;
     }
 
     public void MoveGhost()

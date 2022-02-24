@@ -32,6 +32,7 @@ public class FinishLineManager : MonoBehaviour
             Debug.LogWarning("GameManager NOT Found");
         }
 
+        ghostManager = GetComponent<GhostManager>();
         //_checkpointManager = FindObjectOfType<CheckpointManager>();
         //transform.GetChild(0).gameObject.SetActive(true);
         //_aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
@@ -58,7 +59,6 @@ public class FinishLineManager : MonoBehaviour
 
             if (vehicleManager.currentCheckpointIndex == _checkpointManager.checkpointCount - 1)
             {
-
                 vehicleManager.currentLapIndex += 1;
 
                 ResetGhostMode();
@@ -71,10 +71,12 @@ public class FinishLineManager : MonoBehaviour
                 }
                 Debug.LogFormat("Started a new Lap! {0}", vehicleManager.currentLapIndex);
             }
-          
+
         }
 
+
     }
+
 
     [ContextMenu(itemName: "Stop 'n' Save Ghost Recording")]
     public void ResetGhostMode()

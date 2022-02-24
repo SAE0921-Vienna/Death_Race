@@ -21,13 +21,13 @@ public class PlayerManager : BaseVehicleManager
             uiManager.healthSlider.value = health;
         }
 
+
     }
 
     protected override void Update()
     {
         base.Update();
         UpdateUIValues();
-
     }
 
     private void UpdateUIValues()

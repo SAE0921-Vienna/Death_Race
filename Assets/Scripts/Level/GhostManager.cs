@@ -53,15 +53,20 @@ public class GhostManager : MonoBehaviour
             {
                 if (ghost.hasData)
                 {
-                    ghost.playGhostRecording();                   
+                    ghost.playGhostRecording();
                 }
                 else
                 {
                     ghostVehicleMeshIndex = saveLoadScript.lastEquippedVehicleMesh;
                     ghostVehicleMaterialIndex = saveLoadScript.lastEquippedMaterial;
                 }
-                ghost.StartRecordingGhost();
-                ghost.StartRecording();
+
+                if (!ghost.isRecording)
+                {
+                    ghost.StartRecording();
+                    ghost.StartRecordingGhost();
+                }
+
 
             }
         }
@@ -76,8 +81,8 @@ public class GhostManager : MonoBehaviour
             ghost.SaveGhostToFile();
             saveLoadScript.bestTime = gameManager.roundTimer;
             saveLoadScript.SaveHighScore(saveLoadScript.bestTime, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
-
         }
+
         ghost.loadFromFile();
         saveLoadScript.LoadHighScoreData();
         ghost.playGhostRecording();
