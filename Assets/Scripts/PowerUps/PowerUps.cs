@@ -57,6 +57,15 @@ public class PowerUps : MonoBehaviour
         UpdateInput();
 
 
+        if (_vehicleStats.health < 40)
+        {
+            lowHealthEffect.SetActive(true);
+        }
+        else
+        {
+            lowHealthEffect.SetActive(false);
+        }
+
     }
 
     private void GetUI()

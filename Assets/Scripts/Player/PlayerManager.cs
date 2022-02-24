@@ -38,6 +38,8 @@ public class PlayerManager : BaseVehicleManager
             uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
         }
         uiManager.healthSlider.value = health;
+
+
     }
 
     //public void CheckLapCount()
