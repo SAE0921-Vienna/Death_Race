@@ -17,7 +17,7 @@ public class ShipData : ScriptableObject
     public int health;
 
     public int nitroSpeed;
-    [Range(950f, 1200f)]
+    [Range(950f, 1250f)]
     public float maxSpeed;
     [Range(0.15f,0.3f)]
     public float accelerationSpeed;

@@ -6,7 +6,7 @@ using UserInterface;
 public class PlayerManager : BaseVehicleManager
 {
     private UIManager uiManager;
-    
+
     protected override void Awake()
     {
         base.Awake();
@@ -18,7 +18,7 @@ public class PlayerManager : BaseVehicleManager
         uiManager.healthSlider.maxValue = healthLimit;
         uiManager.healthSlider.value = health;
     }
-    
+
     protected override void Update()
     {
         base.Update();
@@ -28,10 +28,13 @@ public class PlayerManager : BaseVehicleManager
     private void UpdateUIValues()
     {
         if (!uiManager) return;
-        if (uiManager.speedUnit != null) uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
+        if (uiManager.speedUnit != null)
+        {
+            uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
+        }
         uiManager.healthSlider.value = health;
     }
-    
+
     //public void CheckLapCount()
     //{
     //    if (currentLapIndex > _gameManager.laps && !_gameManager.ghostMode)
