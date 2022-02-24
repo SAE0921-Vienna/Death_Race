@@ -46897,7 +46897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   iconPos: {x: 0, y: 0, z: 0}
-  followTarget: {fileID: 0}
+  followTarget: {fileID: 1711200108}
 --- !u!23 &1482868367
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55245,7 +55245,7 @@ MonoBehaviour:
   hasData: 0
   isRecording: 0
   positionHandler: {fileID: 0}
-  iconFollow: {fileID: 1482868366}
+  iconFollow: {fileID: 1373766807}
 --- !u!65 &1668436986
 BoxCollider:
   m_ObjectHideFlags: 0
