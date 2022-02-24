@@ -51,7 +51,7 @@ public class GhostManager : MonoBehaviour
         {
             if (other.tag == "Player")
             {
-                if (ghost.hasData && !ghost.isRecording)
+                if (ghost.hasData)
                 {
                     ghost.playGhostRecording();
                 }
