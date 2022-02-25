@@ -51,22 +51,17 @@ public class GhostManager : MonoBehaviour
         {
             if (other.tag == "Player")
             {
+                StartRecording();
+
                 if (ghost.hasData)
                 {
                     ghost.playGhostRecording();
-                }
-                else
-                {
-                    ghostVehicleMeshIndex = saveLoadScript.lastEquippedVehicleMesh;
-                    ghostVehicleMaterialIndex = saveLoadScript.lastEquippedMaterial;
+                    //ResetTimer();
+
                 }
 
-                if (!ghost.isRecording)
-                {
-                    ghost.StartRecording();
-                    ghost.StartRecordingGhost();
-                }
-
+                //ghostVehicleMeshIndex = saveLoadScript.lastEquippedVehicleMesh;
+                //ghostVehicleMaterialIndex = saveLoadScript.lastEquippedMaterial;
 
             }
         }
@@ -76,20 +71,68 @@ public class GhostManager : MonoBehaviour
     {
         ghost.StopRecordingGhost();
 
-        if (saveLoadScript.bestTime > gameManager.roundTimer || !ghost.hasData)
+        if (saveLoadScript.bestTime > gameManager.roundTimer)
         {
             ghost.SaveGhostToFile();
             saveLoadScript.bestTime = gameManager.roundTimer;
-            saveLoadScript.SaveHighScore(saveLoadScript.bestTime, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
+            saveLoadScript.SaveHighScore(gameManager.roundTimer, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
+            //Debug.Log("Saved Best Time: " + gameManager.roundTimer);
         }
 
         ghost.loadFromFile();
         saveLoadScript.LoadHighScoreData();
-        ghost.playGhostRecording();
+        //Debug.Log("Best Time: " + gameManager.roundTimer);
 
+        //ghost.playGhostRecording();
+
+        ResetTimer();
 
         uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
 
+    }
+
+    public void SaveRecordingFirstTime()
+    {
+        if (!ghost.hasData)
+        {
+            ghost.StopRecordingGhost();
+
+            ghost.SaveGhostToFile();
+            saveLoadScript.bestTime = gameManager.roundTimer;
+            saveLoadScript.SaveHighScore(gameManager.roundTimer, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
+            //Debug.Log("First Time: " + gameManager.roundTimer);
+
+            ghost.loadFromFile();
+            saveLoadScript.LoadHighScoreData();
+            ghost.playGhostRecording();
+
+            ResetTimer();
+
+            uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
+        }
+        else
+        {
+            StopRecording();
+        }
+    }
+
+
+    public void StartRecording()
+    {
+        if (!ghost.isRecording)
+        {
+            ghost.StartRecording();
+            ghost.StartRecordingGhost();
+
+        }
+    }
+
+    public void ResetTimer()
+    {
+        gameManager.roundTimer = 0;
+        gameManager.currentMilliSec = 0;
+        gameManager.currentMin = 0;
+        gameManager.currentSec = 0;
     }
 
 

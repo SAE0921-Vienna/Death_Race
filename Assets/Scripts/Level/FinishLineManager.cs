@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FinishLineManager : MonoBehaviour
 {
-    [ContextMenuItem(name: "Stop 'n' Save Ghost Recording", function: "ResetGhostMode")]
+    //[ContextMenuItem(name: "Stop 'n' Save Ghost Recording", function: "ResetGhostMode")]
 
     private GameManager gameManager;
 
@@ -65,9 +65,15 @@ public class FinishLineManager : MonoBehaviour
             {
                 vehicleManager.currentLapIndex += 1;
 
-                if (gameManager.ghostMode)
+                if (gameManager.ghostMode && !ghostManager.ghost.hasData)
                 {
-                    ResetGhostMode();
+                    ghostManager.SaveRecordingFirstTime();
+                    ghostManager.ghost.isRecording = true;
+                }
+                else if (gameManager.ghostMode && ghostManager.ghost.hasData)
+                {
+                    ghostManager.StopRecording();
+                    ghostManager.StartRecording();
                 }
 
                 //If the vehicle is on current lap of index currentLapIndex 4 and collides with the Trigger, set the lap count back to 3.
@@ -85,16 +91,16 @@ public class FinishLineManager : MonoBehaviour
     }
 
 
-    [ContextMenu(itemName: "Stop 'n' Save Ghost Recording")]
-    public void ResetGhostMode()
-    {
-        ghostManager.StopRecording();
-        ghostManager.ghost.playGhostRecording();
-        gameManager.roundTimer = 0;
-        gameManager.currentMilliSec = 0;
-        gameManager.currentMin = 0;
-        gameManager.currentSec = 0;
-    }
+    //[ContextMenu(itemName: "Stop 'n' Save Ghost Recording")]
+    //public void ResetGhostMode()
+    //{
+    //    ghostManager.StopRecording();
+    //    ghostManager.ghost.playGhostRecording();
+    //    gameManager.roundTimer = 0;
+    //    gameManager.currentMilliSec = 0;
+    //    gameManager.currentMin = 0;
+    //    gameManager.currentSec = 0;
+    //}
 
 
 
