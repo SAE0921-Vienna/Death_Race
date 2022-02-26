@@ -6,10 +6,15 @@ using UserInterface;
 
 public class PowerUps : MonoBehaviour
 {
+
+    #region Nitro Power Up Values
     [SerializeField] private float nitroSpeedModifier = 200f;
     [SerializeField] private float nitroAccelerationModifier = 0.2f;
-    [SerializeField] private float nitroFovModifier = 20f;
+    [SerializeField] private float nitroFovModifier = 110f;
+    [SerializeField] private float nitroFovNormal;
+    #endregion
 
+    #region References
     public List<ScriptableObject> powerUpList;
     public PickUpScriptableObject powerUp;
     private UIManager uIManager;
@@ -31,7 +36,11 @@ public class PowerUps : MonoBehaviour
     private GameObject healEffect;
     [SerializeField]
     private GameObject munitionEffect;
+    #endregion
 
+    /// <summary>
+    /// VehicleManager and GameManager will be initialized
+    /// </summary>
     private void Awake()
     {
         _vehicleStats = GetComponent<BaseVehicleManager>();
@@ -45,9 +54,13 @@ public class PowerUps : MonoBehaviour
         GetUI();
 
         powerupParent = transform.GetChild(0);
+
+        nitroFovNormal = gameManager.vCamPOV;
     }
 
-
+    /// <summary>
+    /// UI, Input and the PowerUpTimer are being checked
+    /// </summary>
     private void Update()
     {
         PowerUpTimer();
@@ -68,6 +81,9 @@ public class PowerUps : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Gets the UI manager
+    /// </summary>
     private void GetUI()
     {
         uIManager = FindObjectOfType<UIManager>();
@@ -81,6 +97,9 @@ public class PowerUps : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// PowerUpTimer is responsible for the reseting of the PowerUp/s
+    /// </summary>
     private void PowerUpTimer()
     {
         _vehicleStats.timer -= Time.deltaTime;
@@ -93,6 +112,9 @@ public class PowerUps : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Updates the UI 
+    /// </summary>
     private void UpdateUI()
     {
         if (uIManager)
@@ -110,6 +132,9 @@ public class PowerUps : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Updates Input and Checks if the player has activated a powerup
+    /// </summary>
     private void UpdateInput()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) && powerUp != null)
@@ -117,7 +142,6 @@ public class PowerUps : MonoBehaviour
             ActivatePowerUp(powerUp);
         }
     }
-
 
     /// <summary>
     /// Activates the picked up powerup
@@ -169,23 +193,31 @@ public class PowerUps : MonoBehaviour
         {
             _vehicleStats.hasNitro = false;
             nitroEffect.SetActive(false);
-            gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV;
-            gameManager.overlayCam.fieldOfView = gameManager.vCamPOV;
+
+            gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(nitroFovModifier, nitroFovNormal, 50 * Time.deltaTime);
+            gameManager.overlayCam.fieldOfView = Mathf.Lerp(nitroFovModifier, nitroFovNormal, 50 * Time.deltaTime);
+
+
             VehicleController vehicleContr = GetComponent<VehicleController>();
             vehicleContr.mMaxSpeed = GetComponent<SpaceshipLoad>().CurrentShip.maxSpeed;
             vehicleContr.mAccelerationConstant = GetComponent<SpaceshipLoad>().CurrentShip.accelerationSpeed;
         }
+
         if (_vehicleStats.ammo <= 0 && uIManager)
         {
             _vehicleStats.canShoot = false;
             _vehicleStats.ammo = 0;
-            munitionEffect.SetActive(false);
 
             if (_vehicleStats.CompareTag("Player"))
             {
                 uIManager.ammoAmountUI.gameObject.SetActive(false);
             }
 
+        }
+        if (_vehicleStats.hasAmmoPowerUp)
+        {
+            _vehicleStats.hasAmmoPowerUp = false;
+            munitionEffect.SetActive(false);
         }
         if (_vehicleStats.hasBomb)
         {
@@ -199,6 +231,10 @@ public class PowerUps : MonoBehaviour
     }
 
     #region Power Up Methods
+
+    /// <summary>
+    /// Gives the vehicle a shield and makes it invincible
+    /// </summary>
     public void ShieldPowerUp()
     {
         _vehicleStats.timer = _vehicleStats.timerCooldown;
@@ -207,14 +243,20 @@ public class PowerUps : MonoBehaviour
         _vehicleStats.hasShield = true;
     }
 
+    /// <summary>
+    /// Gives the vehicle a nitro booster
+    /// </summary>
     public void NitroPowerUp()
     {
         _vehicleStats.timer = _vehicleStats.timerCooldown;
         nitroEffect.SetActive(true);
         if (_vehicleStats.CompareTag("Player"))
         {
-            gameManager.vCam.m_Lens.FieldOfView = gameManager.vCamPOV + nitroFovModifier;
-            gameManager.overlayCam.fieldOfView = gameManager.vCamPOV + nitroFovModifier;
+
+            gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(nitroFovNormal, nitroFovModifier, 50 * Time.deltaTime);
+            gameManager.overlayCam.fieldOfView = Mathf.Lerp(nitroFovNormal, nitroFovModifier, 50 * Time.deltaTime);
+           
+
         }
         //gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(gameManager.vCamPOV, gameManager.vCamPOV + playerStats.mainCamPovBoost, Time.deltaTime);
         VehicleController vehicleContr = GetComponent<VehicleController>();
@@ -224,6 +266,9 @@ public class PowerUps : MonoBehaviour
         _vehicleStats.hasNitro = true;
     }
 
+    /// <summary>
+    /// Adds Ammo to the Vehicle
+    /// </summary>
     public void AmmoPowerUp()
     {
         if (_vehicleStats.CompareTag("Player"))
@@ -236,6 +281,8 @@ public class PowerUps : MonoBehaviour
         //    if (_vehicleStats.ammo > _vehicleStats.ammoLimit) _vehicleStats.ammo = _vehicleStats.ammoLimit;
         //}
         munitionEffect.SetActive(true);
+        _vehicleStats.hasAmmoPowerUp = true;
+        _vehicleStats.timer = munitionEffect.GetComponent<ParticleSystem>().main.duration;
         _vehicleStats.ammo += _vehicleStats.ammoAdd;
         if (_vehicleStats.CompareTag("Player"))
         {
@@ -244,20 +291,25 @@ public class PowerUps : MonoBehaviour
         _vehicleStats.canShoot = true;
     }
 
+    /// <summary>
+    /// Drops a Bomb behind you with kinematic forces
+    /// </summary>
     public void BombPowerUp()
     {
         GameObject bombClone = Instantiate(powerUp.powerUpPrefab, powerupParent.GetChild(2).transform.position, Quaternion.identity);
         bombClone.transform.localScale = _vehicleStats.bombScale;
         bombClone.GetComponent<SphereCollider>().enabled = true;
-        //bombClone.GetComponent<Rigidbody>().useGravity = true;
         bombClone.GetComponent<BombTrigger>().hasBeenActivated = true;
         _vehicleStats.hasBomb = true;
     }
 
+    /// <summary>
+    /// Heals you for a "health" amount
+    /// </summary>
     public void HealPowerUp()
     {
         healEffect.SetActive(true);
-        _vehicleStats.timer = _vehicleStats.timerCooldown;
+        _vehicleStats.timer = healEffect.GetComponent<ParticleSystem>().main.duration;
         _vehicleStats.hasHealed = true;
         _vehicleStats.health += _vehicleStats.healValue;
         if (_vehicleStats.health >= _vehicleStats.healthLimit)

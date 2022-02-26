@@ -30,6 +30,7 @@ namespace AI
         public bool hasNitro;
         public bool canShoot;
         public bool hasBomb;
+        public bool hasAmmoPowerUp;
         public bool hasHealed;
         public bool isImmortal;
         public bool isOnRoadtrack;

@@ -1,73 +1,77 @@
 using UnityEngine;
 using AI;
 
-public class PickUp : MonoBehaviour
+public class RandomPowerUpSpawnPickUp : MonoBehaviour
 {
+    #region References 
+    protected PickUpScriptableObject pickUpObject;
+    protected PowerUpManager powerUpManager;
 
-    private PickUpScriptableObject pickUpObject;
-    private PowerUpManager powerUpManager;
-
-    private BaseVehicleManager _vehicleManager;
-    //private GameObject player;
+    protected BaseVehicleManager _vehicleManager;
+    #endregion
 
     #region Rotate and Hover Points
-    Vector3 pointA;
-    Vector3 pointB;
-    Vector3 rotation;
+    protected Vector3 pointA;
+    protected Vector3 pointB;
+    protected Vector3 rotation;
     #endregion
+
+    #region Hover Information
     [SerializeField]
     [Range(0, 10)]
-    private float hoverSpeed = 0.5f;
-    private float minhoverSpeed = 0.1f;
-    private float maxhoverSpeed = 0.9f;
+    protected float hoverSpeed = 0.5f;
+    protected float minhoverSpeed = 0.1f;
+    protected float maxhoverSpeed = 0.9f;
+    [SerializeField]
+    protected float hoverOffset = 0.5f;
     [SerializeField]
     [Range(0, 180)]
-    private float rotationSpeed = 2f;
-    private float minrotationSpeed = 1.5f;
-    private float maxrotationSpeed = 2.5f;
+    protected float rotationSpeed = 2f;
+    protected float minrotationSpeed = 45f;
+    protected float maxrotationSpeed = 80f;
 
     [SerializeField]
-    private float timer;
+    protected float timer;
     [SerializeField]
-    private float timerCooldown = 5f;
+    protected float timerCooldown = 5f;
     [SerializeField]
-    private bool childObjectDeleted;
+    protected bool childObjectDeleted;
 
     [SerializeField]
-    private GameObject powerUpPrefabClone;
+    protected GameObject powerUpPrefabClone;
 
+    #endregion
+
+    /// <summary>
+    /// Finds the powerUpManager
+    /// </summary>
     private void Awake()
     {
         powerUpManager = FindObjectOfType<PowerUpManager>();
-
-        //PlayerManager playermanager = FindObjectOfType<PlayerManager>();
-        //player = playermanager.gameObject;
-
-        //if (!playermanager)
-        //{
-        //    Debug.LogWarning("PlayerManager has NOT been found");
-        //}
     }
 
-    private void Start()
+    /// <summary>
+    /// Sets pointA, pointB and the hover/rotation speed 
+    /// </summary>
+    protected void Start()
     {
-        #region Defining Points
-        pointA = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
-        pointB = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+        pointA = new Vector3(transform.position.x, transform.position.y + hoverOffset, transform.position.z);
+        pointB = new Vector3(transform.position.x, transform.position.y - hoverOffset, transform.position.z);
         rotation = new Vector3(0, Time.deltaTime, 0);
-        #endregion
+
         childObjectDeleted = true;
         RandomRotateHoverSpeed();
-
     }
 
-    private void Update()
+    /// <summary>
+    /// Hover and Rotation Effect are being updated every frame and a new PowerUp will be spawned if timer hits 0 (or when previous PowerUp has been deleted)
+    /// </summary>
+    protected void Update()
     {
         //Hovering Effect
         transform.position = Vector3.Lerp(pointA, pointB, Mathf.PingPong(Time.deltaTime * hoverSpeed, 1));
         //Rotation Effect
         transform.Rotate(rotation, rotationSpeed * Time.deltaTime);
-
 
         timer -= Time.deltaTime;
         if (timer < 0)
@@ -78,8 +82,11 @@ public class PickUp : MonoBehaviour
 
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    /// <summary>
+    /// Adds the powerup to the player or ai (vehicleManager)
+    /// </summary>
+    /// <param name="other"></param>
+    protected void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("Player") || other.CompareTag("AI"))
@@ -120,6 +127,9 @@ public class PickUp : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Spawns from 0 to the max PowerUps Length a PowerUp
+    /// </summary>
     public void SpawnPrefab()
     {
 
@@ -140,7 +150,6 @@ public class PickUp : MonoBehaviour
 
         }
     }
-
 
     /// <summary>
     /// This method randomizes the hover and the rotationspeed for the pick up powerups
