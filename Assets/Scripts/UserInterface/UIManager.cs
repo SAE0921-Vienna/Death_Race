@@ -23,6 +23,8 @@ namespace UserInterface
         public RectTransform wrongDirectionUI;
         public TextMeshProUGUI highscoreUI;
         public Slider healthSlider;
+        public TextMeshProUGUI moneyUI;
+        public TextMeshProUGUI tempAddedMoneyUI;
 
         public GameObject gameOverUI;
 

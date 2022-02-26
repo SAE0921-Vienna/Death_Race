@@ -18,8 +18,6 @@ public class GhostManager : MonoBehaviour
 
     private void Start()
     {
-
-
         if (gameManager.ghostMode)
         {
 
@@ -38,7 +36,11 @@ public class GhostManager : MonoBehaviour
             {
                 uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
             }
+
         }
+
+        saveLoadScript.LoadMoneyData();
+        uimanager.moneyUI.text = "Milky Coins: " + saveLoadScript.milkyCoins;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -63,6 +65,9 @@ public class GhostManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Stops the Ghost Recording and Saves the best time
+    /// </summary>
     public void StopRecording()
     {
         ghost.StopRecordingGhost();
@@ -87,6 +92,9 @@ public class GhostManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Saves the first Ghost Recording (if there is no data)
+    /// </summary>
     public void SaveRecordingFirstTime()
     {
         if (!ghost.hasData)
@@ -112,7 +120,9 @@ public class GhostManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Starts the Ghost Recording
+    /// </summary>
     public void StartRecording()
     {
         if (!ghost.isRecording)
@@ -123,6 +133,9 @@ public class GhostManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Resets the Timer for the next lap
+    /// </summary>
     public void ResetTimer()
     {
         gameManager.roundTimer = 0;
@@ -131,42 +144,69 @@ public class GhostManager : MonoBehaviour
         gameManager.currentSec = 0;
     }
 
+    /// <summary>
+    /// The player gets an amount of money won by racing against their own ghost
+    /// </summary>
     public void AddMoney()
     {
-        int bonusMoney = 500;
+        int tempAddedMoney = 0;
 
         if (gameManager.roundTimer <= 80f)
         {
             //1000
-            saveLoadScript.milkyCoins += 1000;
+            tempAddedMoney += 1000;
         }
-        else if(gameManager.roundTimer > 80f && gameManager.roundTimer <= 85f) 
+        else if (gameManager.roundTimer > 80f && gameManager.roundTimer <= 85f)
         {
             //500
-            saveLoadScript.milkyCoins += 500;
+            tempAddedMoney += 500;
         }
-        else if(gameManager.roundTimer > 85f && gameManager.roundTimer <= 90f) 
+        else if (gameManager.roundTimer > 85f && gameManager.roundTimer <= 90f)
         {
             //300
-            saveLoadScript.milkyCoins += 500;
+            tempAddedMoney += 300;
         }
-        else if(gameManager.roundTimer > 90f && gameManager.roundTimer <= 95f)
+        else if (gameManager.roundTimer > 90f && gameManager.roundTimer <= 95f)
         {
             //200
+            tempAddedMoney += 200;
         }
-        else if(gameManager.roundTimer > 95f && gameManager.roundTimer <= 100f) 
+        else if (gameManager.roundTimer > 95f && gameManager.roundTimer <= 100f)
         {
             //100
+            tempAddedMoney += 100;
         }
-        else 
+        else
         {
             //50
+            tempAddedMoney += 50;
         }
         if (saveLoadScript.bestTime > gameManager.roundTimer && gameManager.roundTimer <= 100f)
         {
-            //bonusMoney
+            tempAddedMoney += 500;
         }
+
+
+        saveLoadScript.milkyCoins += tempAddedMoney;
+        StartCoroutine(ShowAddedMoney(tempAddedMoney));
         saveLoadScript.SaveMoneyData();
+        uimanager.moneyUI.text = "Milky Coins: " + saveLoadScript.milkyCoins;
+    }
+
+    /// <summary>
+    /// Displays the added money in the UI
+    /// </summary>
+    /// <param name="tempAddedMoney"></param>
+    /// <returns></returns>
+    IEnumerator ShowAddedMoney(int tempAddedMoney)
+    {
+        uimanager.tempAddedMoneyUI.gameObject.SetActive(true);
+        uimanager.tempAddedMoneyUI.text = "+" + tempAddedMoney;
+
+        yield return new WaitForSeconds(2f);
+
+        uimanager.tempAddedMoneyUI.gameObject.SetActive(false);
+
     }
 
 }
