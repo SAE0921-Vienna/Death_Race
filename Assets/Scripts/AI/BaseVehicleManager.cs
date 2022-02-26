@@ -161,7 +161,7 @@ namespace AI
             _vehicleController.isOnRoadtrack = true;
 
             var vehicleTransform = transform;
-            vehicleTransform.position = spawnPosition;
+            vehicleTransform.position = new Vector3(spawnPosition.x, spawnPosition.y + spawnYOffset, spawnPosition.z);
             vehicleTransform.rotation = spawnRotation;
 
             gameObject.SetActive(true);
