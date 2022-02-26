@@ -57,6 +57,7 @@ public class GhostManager : MonoBehaviour
                 if (ghost.hasData)
                 {
                     ghost.playGhostRecording();
+
                     //ResetTimer();
 
                 }
@@ -85,6 +86,7 @@ public class GhostManager : MonoBehaviour
         //Debug.Log("Best Time: " + gameManager.roundTimer);
 
         //ghost.playGhostRecording();
+        ghost.ChangeGhostVehicle();
 
         ResetTimer();
 

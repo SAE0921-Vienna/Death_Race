@@ -262,7 +262,6 @@ public class Ghost : MonoBehaviour
             theGhost.gameObject.tag = "Ghost";
 
             int ghostVehicleIndex = FindObjectOfType<SaveLoadScript>().lastGhostVehicleIndex;
-
             theGhost.GetComponentInChildren<MeshFilter>().mesh = theGhost.GetComponent<LoadCustomAI>().LoadGhost(ghostVehicleIndex);
 
             //Disable RigidBody
@@ -278,4 +277,11 @@ public class Ghost : MonoBehaviour
 
         }
     }
+
+    public void ChangeGhostVehicle()
+    {
+        int ghostVehicleIndex = FindObjectOfType<SaveLoadScript>().lastGhostVehicleIndex;
+        theGhost.GetComponentInChildren<MeshFilter>().mesh = theGhost.GetComponent<LoadCustomAI>().LoadGhost(ghostVehicleIndex);
+    }
+
 }
