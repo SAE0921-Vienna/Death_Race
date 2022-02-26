@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public string currentMiliAsString;
 
     public bool ghostMode;
+    public bool withEffects;
 
     private void Awake()
     {

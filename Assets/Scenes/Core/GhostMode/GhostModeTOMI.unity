@@ -582,6 +582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
   checkpointCount: 0
+  _gameManager: {fileID: 219298089}
+  checkpointEffectPrefab: {fileID: 6201535031697059883, guid: cfcff6527c149d34ba215a918f28b2bc, type: 3}
 --- !u!4 &39225572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5e55e03ad5c548504886fcd55ac7cead, type: 3}
@@ -8185,6 +8187,7 @@ MonoBehaviour:
   currentSecAsString: 
   currentMiliAsString: 
   ghostMode: 1
+  withEffects: 0
 --- !u!1 &226077717
 GameObject:
   m_ObjectHideFlags: 0
@@ -34140,6 +34143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
   checkpointCount: 0
+  _gameManager: {fileID: 0}
+  checkpointEffectPrefab: {fileID: 0}
 --- !u!64 &879739152
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -54128,6 +54133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpointsInWorldList: []
   checkpointCount: 0
+  _gameManager: {fileID: 0}
+  checkpointEffectPrefab: {fileID: 0}
   aisTarget: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   aiCheckpointParent: {fileID: 879739250}
@@ -56659,7 +56666,7 @@ MonoBehaviour:
   mMaxSpeed: 1200
   currentSpeed: 0
   currentBackwardsSpeed: 0
-  brakeForce: 800
+  brakeForce: 1200
   decelerationConstant: 0.2
   accelerationCurve:
     serializedVersion: 2
@@ -56732,6 +56739,7 @@ MonoBehaviour:
   nitroSpeedModifier: 200
   nitroAccelerationModifier: 0.2
   nitroFovModifier: 20
+  nitroFovNormal: 0
   powerUpList: []
   powerUp: {fileID: 0}
   shieldEffect: {fileID: 1542857850}
@@ -56764,6 +56772,7 @@ MonoBehaviour:
   hasNitro: 0
   canShoot: 1
   hasBomb: 0
+  hasAmmoPowerUp: 0
   hasHealed: 0
   isImmortal: 0
   isOnRoadtrack: 0
@@ -56772,6 +56781,7 @@ MonoBehaviour:
   currentCheckpointIndex: 0
   nextCheckpointIndex: 0
   nextCheckpoint: {fileID: 0}
+  previousCheckpoint: {fileID: 0}
   timer: 0
   timerCooldown: 5
   offTrackTimer: 0

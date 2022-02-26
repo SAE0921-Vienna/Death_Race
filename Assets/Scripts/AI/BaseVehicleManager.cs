@@ -5,11 +5,14 @@ namespace AI
 {
     public class BaseVehicleManager : MonoBehaviour, IDamageable
     {
+        #region References
         protected ShipWeapon _shipWeapon;
         protected VehicleController _vehicleController;
         protected GameManager _gameManager;
         protected CheckpointManager _checkpointManager;
+        #endregion
 
+        #region Stats
         [Header("Health")]
         public int health = 100;
         public int healthLimit = 100;
@@ -18,7 +21,6 @@ namespace AI
         [Header("Ammo")]
         public int ammo;
         public int ammoAdd;
-        //public int ammoLimit;
         public float bombTimer = 10f;
         public Vector3 bombScale = new Vector3(5, 5, 5);
 
@@ -34,13 +36,16 @@ namespace AI
         public bool hasHealed;
         public bool isImmortal;
         public bool isOnRoadtrack;
+        #endregion
 
+        #region Position and Timer
         [Header("Position")]
         public int currentPositionIndex;
         public int currentLapIndex;
         public int currentCheckpointIndex;
         public int nextCheckpointIndex;
-        public Checkpoint nextCheckpoint; //!
+        public Checkpoint nextCheckpoint;
+        public Checkpoint previousCheckpoint;
 
         [Header("Power Up Timer")]
         public float timer;
@@ -49,13 +54,18 @@ namespace AI
         [Header("Off Track Timer")]
         public float offTrackTimer;
         public float offTrackTimerLimit = 5f;
+        #endregion
 
+        #region Respawn Information
         [Header("Respawn Transform")]
         public Vector3 spawnPosition;
         public Quaternion spawnRotation;
         public float spawnYOffset = 5f;
+        #endregion
 
-
+        /// <summary>
+        /// Health, SpawnPosition and Weapon are initialized
+        /// </summary>
         protected virtual void Awake()
         {
             _vehicleController = GetComponent<VehicleController>(); //Could be broken idk.
@@ -78,6 +88,9 @@ namespace AI
             healthLimit = health;
         }
 
+        /// <summary>
+        /// Get and adds Ammo
+        /// </summary>
         protected void Start()
         {
             AddAmmoOnStart();
@@ -86,6 +99,9 @@ namespace AI
             nextCheckpointIndex = 0;
         }
 
+        /// <summary>
+        /// Updates the HealthUI and Checks if vehicle is on track
+        /// </summary>
         protected virtual void Update()
         {
             UpdateValues();
@@ -137,6 +153,9 @@ namespace AI
             }
         }
 
+        /// <summary>
+        /// Checks if the vehicle is on the roadtrack
+        /// </summary>
         public void CheckIfOnTrack()
         {
             if (!isOnRoadtrack)
@@ -154,6 +173,9 @@ namespace AI
             }
         }
 
+        /// <summary>
+        /// Respawns the vehicle at last saved checkpoint
+        /// </summary>
         public void RespawnVehicle()
         {
             _vehicleController.currentSpeed = 0f;

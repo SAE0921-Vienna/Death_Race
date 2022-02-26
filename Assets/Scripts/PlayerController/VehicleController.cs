@@ -21,7 +21,7 @@ namespace PlayerController
         public float currentBackwardsSpeed;
 
 
-        [Range(10f, 1000f)]
+        [Range(10f, 1500f)]
         [SerializeField] protected float brakeForce;
         [Range(0.1f, 1f)]
         [SerializeField] protected float decelerationConstant = 0.3f;

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &256129814663978862
+--- !u!1 &6201535031697059883
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,30 +8,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5591719196163529429}
+  - component: {fileID: 6198535946256661147}
   m_Layer: 0
-  m_Name: Light_Shaft_Base
+  m_Name: FX_Ghostmode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5591719196163529429
+--- !u!4 &6198535946256661147
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256129814663978862}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1.1409999, z: 0}
-  m_LocalScale: {x: 1.8000002, y: 1.0229335, z: 2}
+  m_GameObject: {fileID: 6201535031697059883}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalScale: {x: 40, y: 20, z: 3}
   m_Children:
-  - {fileID: 1269641084748595906}
-  m_Father: {fileID: 8366221263916803409}
+  - {fileID: 6204285772595863227}
+  - {fileID: 6198623756591030391}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6818837271221084878
+--- !u!1 &6201535427338282807
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,7 +40,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3492369479269306327}
+  - component: {fileID: 6204590110174868721}
   m_Layer: 0
   m_Name: Null
   m_TagString: Untagged
@@ -47,21 +48,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3492369479269306327
+--- !u!4 &6204590110174868721
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6818837271221084878}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 6201535427338282807}
+  m_LocalRotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.7949488, y: -3.985587e-16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1269641084748595906}
+  m_Father: {fileID: 6204676795294934579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7581083818803196331
+--- !u!1 &6201548186621212139
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,8 +70,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3159755685533739605}
-  - component: {fileID: 5758381603415057776}
+  - component: {fileID: 6198623756591030391}
+  - component: {fileID: 6337502066341279551}
   m_Layer: 0
   m_Name: SM_LightRay_Cube
   m_TagString: Untagged
@@ -78,27 +79,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3159755685533739605
+--- !u!4 &6198623756591030391
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7581083818803196331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.66099995, z: 5.6}
-  m_LocalScale: {x: 0.37333333, y: 1.1999999, z: 2}
+  m_GameObject: {fileID: 6201548186621212139}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.91469884, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8366221263916803409}
+  m_Father: {fileID: 6198535946256661147}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &5758381603415057776
+--- !u!137 &6337502066341279551
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7581083818803196331}
+  m_GameObject: {fileID: 6201548186621212139}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -138,15 +139,15 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300000, guid: c0421ab28574b254fb88ffc8196e209f, type: 3}
   m_Bones:
-  - {fileID: 5591719196163529429}
-  - {fileID: 1269641084748595906}
+  - {fileID: 6204285772595863227}
+  - {fileID: 6204676795294934579}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 5591719196163529429}
+  m_RootBone: {fileID: 6204285772595863227}
   m_AABB:
-    m_Center: {x: 1, y: 0, z: 0}
-    m_Extent: {x: 1, y: 1, z: 1}
+    m_Center: {x: -0.9146991, y: 0, z: 0}
+    m_Extent: {x: 0.9146991, y: 0.91469866, z: 0.9146984}
   m_DirtyAABB: 0
---- !u!1 &8362921943027625953
+--- !u!1 &6202034650465974121
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,31 +155,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8366221263916803409}
+  - component: {fileID: 6204285772595863227}
   m_Layer: 0
-  m_Name: FX_LightRayCube
+  m_Name: Light_Shaft_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8366221263916803409
+--- !u!4 &6204285772595863227
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8362921943027625953}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 70, z: 0}
-  m_LocalScale: {x: 5, y: 100, z: 5}
+  m_GameObject: {fileID: 6202034650465974121}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5591719196163529429}
-  - {fileID: 3159755685533739605}
-  m_Father: {fileID: 0}
+  - {fileID: 6204676795294934579}
+  m_Father: {fileID: 6198535946256661147}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &9208520235679943013
+--- !u!1 &6202065726881314111
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1269641084748595906}
+  - component: {fileID: 6204676795294934579}
   m_Layer: 0
   m_Name: Light_Shaft_Manip
   m_TagString: Untagged
@@ -194,18 +194,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1269641084748595906
+--- !u!4 &6204676795294934579
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9208520235679943013}
+  m_GameObject: {fileID: 6202065726881314111}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
+  m_LocalPosition: {x: -1.8293968, y: -4.062077e-16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3492369479269306327}
-  m_Father: {fileID: 5591719196163529429}
+  - {fileID: 6204590110174868721}
+  m_Father: {fileID: 6204285772595863227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
