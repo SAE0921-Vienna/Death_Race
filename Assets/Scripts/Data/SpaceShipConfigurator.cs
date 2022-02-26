@@ -139,7 +139,6 @@ public class SpaceShipConfigurator : MonoBehaviour
             else
             {
                 currentShip = 0;
-                currentShip = 0;
                 currentWeapon = 0;
                 currentMaterial = 0;
                 for (int i = 1; i < maxShips; i++)
@@ -169,6 +168,8 @@ public class SpaceShipConfigurator : MonoBehaviour
     /// </summary>
     private void ChangeShip()
     {
+        garageManager.shipName.text = ships[currentShip].shipData.name;
+        Debug.Log("garageManager.shipName.text =" + ships[currentShip].shipData.name);
         GetComponentInChildren<MeshFilter>().mesh = ships[currentShip].shipData.vehicleMesh;
         GetComponentInChildren<MeshCollider>().sharedMesh = ships[currentShip].shipData.vehicleColliderMesh;
 

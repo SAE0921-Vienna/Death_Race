@@ -119,13 +119,13 @@ public class Ghost : MonoBehaviour
     private float replayTime = 0.0f;
     public bool hasData;
     public bool isRecording;
+    //Check whether we should be recording or not
+    bool startRecording = false, recordingFrame = false; public bool playRecording = false;
 
     public PositionHandler positionHandler;
     public IconFollow iconFollow;
 
 
-    //Check whether we should be recording or not
-    bool startRecording = false, recordingFrame = false, playRecording = false;
 
     public void loadFromFile()
     {
@@ -184,7 +184,8 @@ public class Ghost : MonoBehaviour
         recordTime = Time.time * 1000;
         recordingFrame = true;
         isRecording = true;
-        //playRecording = false;
+        //playRecording = true;
+
     }
 
 
@@ -192,7 +193,7 @@ public class Ghost : MonoBehaviour
     {
         recordingFrame = false;
         lastReplayList = new List<GhostShot>(framesList);
-        playRecording = false;
+        //playRecording = true;
         isRecording = false;
         Debug.Log("Recording Stopped");
 
@@ -212,6 +213,7 @@ public class Ghost : MonoBehaviour
     {
         startRecording = true;
         isRecording = true;
+        //playRecording = true;
     }
 
     public void MoveGhost()
@@ -254,10 +256,13 @@ public class Ghost : MonoBehaviour
         //Check if ghost exists or not, no reason to destroy and create it everytime.
         if (GameObject.FindWithTag("Ghost") == null)
         {
-            theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject))/*, FindObjectOfType<PositionHandler>().transform*/) as GameObject;
+            theGhost = Instantiate(Resources.Load("GhostPrefab", typeof(GameObject))) as GameObject;
             theGhost.GetComponentInChildren<BoxCollider>().isTrigger = true;
 
             theGhost.gameObject.tag = "Ghost";
+
+            int ghostVehicleIndex = FindObjectOfType<SaveLoadScript>().lastGhostVehicleIndex;
+            theGhost.GetComponentInChildren<MeshFilter>().mesh = theGhost.GetComponent<LoadCustomAI>().LoadGhost(ghostVehicleIndex);
 
             //Disable RigidBody
             //theGhost.GetComponent<Rigidbody>().isKinematic = true;
@@ -272,4 +277,11 @@ public class Ghost : MonoBehaviour
 
         }
     }
+
+    public void ChangeGhostVehicle()
+    {
+        int ghostVehicleIndex = FindObjectOfType<SaveLoadScript>().lastGhostVehicleIndex;
+        theGhost.GetComponentInChildren<MeshFilter>().mesh = theGhost.GetComponent<LoadCustomAI>().LoadGhost(ghostVehicleIndex);
+    }
+
 }

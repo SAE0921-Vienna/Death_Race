@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class FinishLineManager : MonoBehaviour
 {
-    [ContextMenuItem(name: "Stop 'n' Save Ghost Recording", function: "ResetGhostMode")]
 
     private GameManager gameManager;
-
-    //public Transform checkpointParent;
-    //private AICheckpointManagerMachine _aiCheckpointManager;
 
     public Transform minimap;
 
@@ -33,13 +29,10 @@ public class FinishLineManager : MonoBehaviour
         }
 
         ghostManager = GetComponent<GhostManager>();
-        if(ghostManager == null)
+        if (ghostManager == null)
         {
             Debug.Log("No GhostManager");
         }
-        //_checkpointManager = FindObjectOfType<CheckpointManager>();
-        //transform.GetChild(0).gameObject.SetActive(true);
-        //_aiCheckpointManager = GetComponent<AICheckpointManagerMachine>();
     }
 
 
@@ -65,9 +58,17 @@ public class FinishLineManager : MonoBehaviour
             {
                 vehicleManager.currentLapIndex += 1;
 
-                if (gameManager.ghostMode)
+                if (gameManager.ghostMode && !ghostManager.ghost.hasData)
                 {
-                    ResetGhostMode();
+                    ghostManager.AddMoney();
+                    ghostManager.SaveRecordingFirstTime();
+                    ghostManager.ghost.isRecording = true;
+                }
+                else if (gameManager.ghostMode && ghostManager.ghost.hasData)
+                {
+                    ghostManager.AddMoney();
+                    ghostManager.StopRecording();
+                    ghostManager.StartRecording();
                 }
 
                 //If the vehicle is on current lap of index currentLapIndex 4 and collides with the Trigger, set the lap count back to 3.
@@ -84,17 +85,6 @@ public class FinishLineManager : MonoBehaviour
 
     }
 
-
-    [ContextMenu(itemName: "Stop 'n' Save Ghost Recording")]
-    public void ResetGhostMode()
-    {
-        ghostManager.StopRecording();
-        ghostManager.ghost.playGhostRecording();
-        gameManager.roundTimer = 0;
-        gameManager.currentMilliSec = 0;
-        gameManager.currentMin = 0;
-        gameManager.currentSec = 0;
-    }
 
 
 

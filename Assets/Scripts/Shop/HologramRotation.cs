@@ -27,9 +27,9 @@ public class HologramRotation : MonoBehaviour
     private void Update()
     {
         //Hovering Effect
-        transform.position = Vector3.Lerp(pointA, pointB, Mathf.PingPong(Time.time * hoverSpeed, 1));
+        transform.position = Vector3.Lerp(pointA, pointB, Mathf.PingPong(Time.deltaTime * hoverSpeed, 1));
         //Rotation Effect
-        transform.Rotate(rotation, rotationSpeed);
+        transform.Rotate(rotation, rotationSpeed * Time.deltaTime);
     }
 
 

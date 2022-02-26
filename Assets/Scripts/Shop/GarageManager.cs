@@ -23,6 +23,7 @@ public class GarageManager : MonoBehaviour
     public TextMeshProUGUI milkyCoins;
     public string maxCoinsUI = "9999999";
 
+    public TextMeshProUGUI shipShopName;
     public TextMeshProUGUI shipStatsShop;
     public TextMeshProUGUI weaponStatsShop;
     public TextMeshProUGUI materialPrice;
@@ -40,7 +41,6 @@ public class GarageManager : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1;
-
     }
 
     private void Start()

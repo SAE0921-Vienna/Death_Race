@@ -65,7 +65,7 @@ public class ShopManager : MonoBehaviour
         automaticRotation = false;
         timer = timerCooldown;
 
-        garageManager.shipName.text = shipsShop[currentShipPrefab].shipData.name;
+        garageManager.shipShopName.text = shipsShop[currentShipPrefab].shipData.name;
         garageManager.shipStatsShop.text = shipsShop[currentShipPrefab].shipData.GetShipPrice() + "\n" + shipsShop[currentShipPrefab].shipData.GetShipStats();
         SetShipStatSliders();
 
