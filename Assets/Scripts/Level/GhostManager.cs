@@ -7,7 +7,6 @@ using UserInterface;
 
 public class GhostManager : MonoBehaviour
 {
-
     public GameManager gameManager;
     public SaveLoadScript saveLoadScript;
     public UIManager uimanager;
@@ -40,9 +39,6 @@ public class GhostManager : MonoBehaviour
                 uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
             }
         }
-
-
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -135,5 +131,42 @@ public class GhostManager : MonoBehaviour
         gameManager.currentSec = 0;
     }
 
+    public void AddMoney()
+    {
+        int bonusMoney = 500;
+
+        if (gameManager.roundTimer <= 80f)
+        {
+            //1000
+            saveLoadScript.milkyCoins += 1000;
+        }
+        else if(gameManager.roundTimer > 80f && gameManager.roundTimer <= 85f) 
+        {
+            //500
+            saveLoadScript.milkyCoins += 500;
+        }
+        else if(gameManager.roundTimer > 85f && gameManager.roundTimer <= 90f) 
+        {
+            //300
+            saveLoadScript.milkyCoins += 500;
+        }
+        else if(gameManager.roundTimer > 90f && gameManager.roundTimer <= 95f)
+        {
+            //200
+        }
+        else if(gameManager.roundTimer > 95f && gameManager.roundTimer <= 100f) 
+        {
+            //100
+        }
+        else 
+        {
+            //50
+        }
+        if (saveLoadScript.bestTime > gameManager.roundTimer && gameManager.roundTimer <= 100f)
+        {
+            //bonusMoney
+        }
+        saveLoadScript.SaveMoneyData();
+    }
 
 }
