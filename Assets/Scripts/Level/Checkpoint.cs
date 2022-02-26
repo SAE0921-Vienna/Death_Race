@@ -28,18 +28,15 @@ public class Checkpoint : MonoBehaviour
         {
             checkpointManager = GetComponentInParent<CheckpointManager>();
             checkpointManager.VehicleThroughCheckpoint(this, other);
-
         }
         if (other.CompareTag("AI") )
         {
             var aiCheckpointManager = GetComponentInParent<AICheckpointManager>();
             Debug.Log("AI through Checkpoint");
-            aiCheckpointManager.VehicleThroughCheckpoint(this, other);
+            if (aiCheckpointManager != null)
+            {
+                aiCheckpointManager.VehicleThroughCheckpoint(this, other);
+            }
         }
-
     }
-
-
-
-
 }
