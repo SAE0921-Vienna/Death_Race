@@ -14,10 +14,10 @@ public class LoadCustomAI : SpaceshipLoad
             SetVehicleStats();
             //SetVehicleStatsAI();
         }
-        if (gameObject.CompareTag("Ghost"))
-        {
-            LoadGhost();
-        }
+        //if (gameObject.CompareTag("Ghost"))
+        //{
+        //    LoadGhost();
+        //}
         SetVFXPrefab();
     }
     
@@ -51,27 +51,9 @@ public class LoadCustomAI : SpaceshipLoad
         weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
     }
     
-    private void LoadGhost()
+    public Mesh LoadGhost(int ghostVehicleIndex)
     {
-        var shipRand = saveLoadScript.lastGhostMaterialIndex;
-        var materialRand = saveLoadScript.lastGhostMaterialIndex;
-
-        currentShip = shipRand;
-        currentMaterial = materialRand;
-
-        GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
-        
-        GetComponentInChildren<MeshCollider>().sharedMesh = allShips[currentShip].vehicleColliderMesh;
-
-        GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
+       return allShips[ghostVehicleIndex].vehicleMesh;       
     }
 
-    //private void SetVehicleStatsAI()
-    //{
-    //    _aiVehicleController = GetComponent<AI_VehicleController>();
-    //    _aiVehicleController.mMaxSpeed = allShips[currentShip].maxSpeed;
-    //    _aiVehicleController.mAccelerationConstant = allShips[currentShip].accelerationSpeed;
-    //    _aiVehicleController.steeringSpeed = allShips[currentShip].turnSpeed;
-    //    _aiVehicleController.speedDependentAngularDragMagnitude = allShips[currentShip].speedBasedAngularDrag;
-    //}
 }

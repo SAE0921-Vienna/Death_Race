@@ -11,11 +11,11 @@ public class GhostManager : MonoBehaviour
     public SaveLoadScript saveLoadScript;
     public UIManager uimanager;
 
-    public int ghostVehicleMeshIndex;
-    public int ghostVehicleMaterialIndex;
-
     public Ghost ghost;
 
+    /// <summary>
+    /// Checks if its in ghostmode
+    /// </summary>
     private void Start()
     {
         if (gameManager.ghostMode)
@@ -23,9 +23,6 @@ public class GhostManager : MonoBehaviour
 
             ghost.loadFromFile();
             saveLoadScript.LoadHighScoreData();
-
-            ghostVehicleMaterialIndex = saveLoadScript.lastGhostVehicleIndex;
-            ghostVehicleMaterialIndex = saveLoadScript.lastGhostMaterialIndex;
 
             if (!ghost.hasData)
             {
@@ -37,12 +34,18 @@ public class GhostManager : MonoBehaviour
                 uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
             }
 
+
+            saveLoadScript.LoadMoneyData();
+            uimanager.moneyUI.text = "Milky Coins: " + saveLoadScript.milkyCoins;
         }
 
-        saveLoadScript.LoadMoneyData();
-        uimanager.moneyUI.text = "Milky Coins: " + saveLoadScript.milkyCoins;
+ 
     }
 
+    /// <summary>
+    /// Starts Recording Ghost
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (gameManager.ghostMode)
@@ -57,9 +60,6 @@ public class GhostManager : MonoBehaviour
                     //ResetTimer();
 
                 }
-
-                //ghostVehicleMeshIndex = saveLoadScript.lastEquippedVehicleMesh;
-                //ghostVehicleMaterialIndex = saveLoadScript.lastEquippedMaterial;
 
             }
         }
@@ -76,7 +76,7 @@ public class GhostManager : MonoBehaviour
         {
             ghost.SaveGhostToFile();
             saveLoadScript.bestTime = gameManager.roundTimer;
-            saveLoadScript.SaveHighScore(gameManager.roundTimer, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
+            saveLoadScript.SaveHighScore(gameManager.roundTimer, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, saveLoadScript.lastEquippedVehicleMesh, saveLoadScript.lastEquippedMaterial);
             //Debug.Log("Saved Best Time: " + gameManager.roundTimer);
         }
 
@@ -103,7 +103,7 @@ public class GhostManager : MonoBehaviour
 
             ghost.SaveGhostToFile();
             saveLoadScript.bestTime = gameManager.roundTimer;
-            saveLoadScript.SaveHighScore(gameManager.roundTimer, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, ghostVehicleMeshIndex, ghostVehicleMaterialIndex);
+            saveLoadScript.SaveHighScore(gameManager.roundTimer, gameManager.currentMinAsString, gameManager.currentSecAsString, gameManager.currentMiliAsString, saveLoadScript.lastEquippedVehicleMesh, saveLoadScript.lastEquippedMaterial);
             //Debug.Log("First Time: " + gameManager.roundTimer);
 
             ghost.loadFromFile();

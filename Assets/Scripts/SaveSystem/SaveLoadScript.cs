@@ -156,7 +156,9 @@ public class SaveLoadScript : MonoBehaviour
 
     public void SaveHighScore(float _bestTime, string _currentMin, string _currentSec, string _currentMilliSec, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
     {
-        SaveSystem.SaveHighscoreData(_bestTime, _currentMin, _currentSec, _currentMilliSec, _lastGhostVehicleIndex, _lastGhostMaterialIndex);
+        lastGhostVehicleIndex = _lastGhostVehicleIndex;
+        lastGhostMaterialIndex = _lastGhostMaterialIndex;
+        SaveSystem.SaveHighscoreData(_bestTime, _currentMin, _currentSec, _currentMilliSec, lastGhostVehicleIndex, lastGhostMaterialIndex);
     }
     public void LoadHighScoreData()
     {
