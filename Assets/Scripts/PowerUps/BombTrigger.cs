@@ -34,7 +34,7 @@ public class BombTrigger : MonoBehaviour
         {
             _explosion.Explode();
             _boomEffect.Play();
-            _boomEffect.GetComponent<DestroyParticle>().DestroyParticleGameobject();
+            //_boomEffect.GetComponent<DestroyParticle>().DestroyParticleGameobject();
         }
     }
 
