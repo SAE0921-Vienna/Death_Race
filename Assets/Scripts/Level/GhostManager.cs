@@ -7,11 +7,13 @@ using UserInterface;
 
 public class GhostManager : MonoBehaviour
 {
+    #region References
     public GameManager gameManager;
     public SaveLoadScript saveLoadScript;
     public UIManager uimanager;
 
     public Ghost ghost;
+    #endregion
 
     /// <summary>
     /// Checks if its in ghostmode

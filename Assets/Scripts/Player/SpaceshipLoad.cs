@@ -6,10 +6,10 @@ using AI;
 public class SpaceshipLoad : MonoBehaviour
 {
     [SerializeField]
-    protected List<ShipData> allShips;
+    public List<ShipData> allShips;
     public ShipData CurrentShip { get { return allShips[currentShip]; } }
     [SerializeField]
-    protected List<WeaponData> allWeapons;
+    public List<WeaponData> allWeapons;
     public WeaponData CurrentWeapon { get { return allWeapons[currentWeapon]; } }
     [SerializeField]
     protected List<MaterialData> allMaterials;
@@ -20,14 +20,15 @@ public class SpaceshipLoad : MonoBehaviour
     protected SaveLoadScript saveLoadScript;
 
     [SerializeField]
-    protected int currentShip;
+    public int currentShip;
     [SerializeField]
-    protected int currentWeapon;
+    public int currentWeapon;
     [SerializeField]
     public int currentMaterial;
 
     private BaseVehicleManager _baseVehicleManager;
-    //private VehicleController _vehicleController;
+
+    private GameObject weaponClone;
 
 
     private void Awake()
@@ -47,13 +48,10 @@ public class SpaceshipLoad : MonoBehaviour
             currentMaterial = saveLoadScript.lastEquippedMaterial;
 
 
-            GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
-            //GetComponentInChildren<MeshCollider>().sharedMesh = allShips[currentShip].vehicleColliderMesh;
+            SetVehicleMesh();
 
-            GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
-
-            GameObject weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab,
-                transform.GetChild(1).GetChild(1).transform, false);
+            weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab,
+               transform.GetChild(1).GetChild(1).transform, false);
             weaponClone.GetComponent<MeshRenderer>().material = allMaterials[currentMaterial].material;
             weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material =
                 allMaterials[currentMaterial].material;
@@ -74,7 +72,15 @@ public class SpaceshipLoad : MonoBehaviour
         }
     }
 
-    protected void SetVehicleStats()
+    public void SetVehicleMesh()
+    {
+        GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
+        GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
+    }
+
+
+
+    public void SetVehicleStats()
     {
         var _vehicleController = GetComponent<VehicleController>();
         //_vehicleController = GetComponent<VehicleController>();
@@ -84,16 +90,22 @@ public class SpaceshipLoad : MonoBehaviour
         _vehicleController.speedDependentAngularDragMagnitude = allShips[currentShip].speedBasedAngularDrag;
     }
 
-    private void SetWeaponStats()
+    public void SetWeaponStats()
     {
         _baseVehicleManager = GetComponent<BaseVehicleManager>();
         _baseVehicleManager.ammo = allWeapons[currentWeapon].ammoSize;
         _baseVehicleManager.ammoAdd = _baseVehicleManager.ammo;
     }
 
-    protected void SetVFXPrefab()
+    public void SetVFXPrefab()
     {
         if (GetComponentInChildren<SpaceshipRotator>())
             Instantiate(CurrentShip.vfxPrefab, GetComponentInChildren<SpaceshipRotator>().transform);
     }
+
+    public void SetWeaponPosition()
+    {
+        weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
+    }
+
 }

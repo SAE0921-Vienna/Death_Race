@@ -13,7 +13,8 @@ public class HologramRotation : MonoBehaviour
     [SerializeField]
     [Range(0, 180)]
     private float rotationSpeed = 0.5f;
-
+    [SerializeField]
+    private bool randomize;
 
     private void Start()
     {
@@ -22,14 +23,21 @@ public class HologramRotation : MonoBehaviour
         pointB = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         rotation = new Vector3(0, Time.deltaTime, 0);
         #endregion
+
+        if (randomize)
+        {
+            rotationSpeed = Random.Range(0f, 100f);
+        }
     }
 
     private void Update()
     {
         //Hovering Effect
         transform.position = Vector3.Lerp(pointA, pointB, Mathf.PingPong(Time.deltaTime * hoverSpeed, 1));
-        //Rotation Effect
+        //Rotation Effect      
         transform.Rotate(rotation, rotationSpeed * Time.deltaTime);
+
+
     }
 
 
