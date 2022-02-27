@@ -9,4 +9,5 @@ public class DestroyParticle : MonoBehaviour
         Destroy(gameObject, gameObject.GetComponent<ParticleSystem>().main.duration * durationMultiplier);
     }
 
+
 }

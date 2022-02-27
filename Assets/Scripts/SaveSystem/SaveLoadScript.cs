@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SaveLoadScript : MonoBehaviour
 {
+    #region Data
     public int lastEquippedVehicleMesh;
     public int lastEquippedVehicleColliderMesh;
     public int lastEquippedWeaponPrefab;
@@ -10,26 +11,40 @@ public class SaveLoadScript : MonoBehaviour
     public bool[] boughtWeapons;
     public bool[] boughtMaterials;
 
+    public bool hasSaveData;
+    #endregion
+
+    #region References
     public SpaceShipConfigurator spaceConfig;
+    #endregion
 
-
+    #region Money
     public int milkyCoins;
     public int maxMilkyCoins = 9999999;
+    #endregion
 
+    #region Best Time
     public float bestTime;
     public string currentMinAsString;
     public string currentSecAsString;
     public string currentMiliAsString;
     public int lastGhostVehicleIndex;
     public int lastGhostMaterialIndex;
+    #endregion
 
+    #region Audio
     [Range(0.0001f, 1f)]
     public float masterVolume = 1f;
     [Range(0.0001f, 1f)]
     public float musicVolume = 1f;
     [Range(0.0001f, 1f)]
     public float effectVolume = 1f;
+    #endregion
 
+    /// <summary>
+    /// Gets all the bought ships in the game
+    /// </summary>
+    /// <returns></returns>
     public bool[] GetBoughtShips()
     {
         if (spaceConfig)
@@ -48,6 +63,10 @@ public class SaveLoadScript : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Gets all the bought weapons in the game
+    /// </summary>
+    /// <returns></returns>
     public bool[] GetBoughtWeapons()
     {
         if (spaceConfig)
@@ -66,6 +85,10 @@ public class SaveLoadScript : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Gets all the bought materials in the game
+    /// </summary>
+    /// <returns></returns>
     public bool[] GetBoughtMaterials()
     {
         if (spaceConfig)
@@ -84,13 +107,17 @@ public class SaveLoadScript : MonoBehaviour
 
     }
 
-
-    public bool hasSaveData;
-
+    /// <summary>
+    /// Saves the last equipped/saved vehicle
+    /// </summary>
     public void SaveSaveData()
     {
         SaveSystem.SaveSaveData(lastEquippedVehicleMesh, lastEquippedVehicleColliderMesh, lastEquippedWeaponPrefab, lastEquippedMaterial, GetBoughtShips(), GetBoughtWeapons(), GetBoughtMaterials());
     }
+
+    /// <summary>
+    ///  Loads the last equipped/saved vehicle
+    /// </summary>
     public void LoadSaveData()
     {
         SaveData data = SaveSystem.LoadSaveData();
@@ -112,10 +139,17 @@ public class SaveLoadScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Saves the money the player has
+    /// </summary>
     public void SaveMoneyData()
     {
         SaveSystem.SaveMoneyData(milkyCoins);
     }
+
+    /// <summary>
+    /// Loads the money the player has
+    /// </summary>
     public void LoadMoneyData()
     {
         SaveData data = SaveSystem.LoadMoneyData();
@@ -129,6 +163,12 @@ public class SaveLoadScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets and saves the audio (masterVolume, musicVolume, effectVolume)
+    /// </summary>
+    /// <param name="_masterVolume"></param>
+    /// <param name="_musicVolume"></param>
+    /// <param name="_effectVolume"></param>
     public void SaveOptionsData(float _masterVolume, float _musicVolume, float _effectVolume)
     {
         masterVolume = _masterVolume;
@@ -136,6 +176,10 @@ public class SaveLoadScript : MonoBehaviour
         effectVolume = _effectVolume;
         SaveSystem.SaveOptionsData(masterVolume, musicVolume, effectVolume);
     }
+
+    /// <summary>
+    /// Loads the audio (masterVolume, musicVolume, effectVolume)
+    /// </summary>
     public void LoadOptionsData()
     {
         SaveData data = SaveSystem.LoadOptionsData();
@@ -154,12 +198,25 @@ public class SaveLoadScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Saves the best time of the player in ghostmode + the vehicle driven at the time
+    /// </summary>
+    /// <param name="_bestTime"></param>
+    /// <param name="_currentMin"></param>
+    /// <param name="_currentSec"></param>
+    /// <param name="_currentMilliSec"></param>
+    /// <param name="_lastGhostVehicleIndex"></param>
+    /// <param name="_lastGhostMaterialIndex"></param>
     public void SaveHighScore(float _bestTime, string _currentMin, string _currentSec, string _currentMilliSec, int _lastGhostVehicleIndex, int _lastGhostMaterialIndex)
     {
         lastGhostVehicleIndex = _lastGhostVehicleIndex;
         lastGhostMaterialIndex = _lastGhostMaterialIndex;
         SaveSystem.SaveHighscoreData(_bestTime, _currentMin, _currentSec, _currentMilliSec, lastGhostVehicleIndex, lastGhostMaterialIndex);
     }
+
+    /// <summary>
+    /// Loads the best time of the player in ghostmode + the vehicle driven at the time
+    /// </summary>
     public void LoadHighScoreData()
     {
         SaveData data = SaveSystem.LoadHighscoreData();

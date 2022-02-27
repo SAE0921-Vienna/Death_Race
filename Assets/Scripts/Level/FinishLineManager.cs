@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FinishLineManager : MonoBehaviour
 {
+    #region References
 
     private GameManager gameManager;
 
@@ -15,7 +16,11 @@ public class FinishLineManager : MonoBehaviour
 
     public GhostManager ghostManager;
 
+    #endregion
 
+    /// <summary>
+    /// Gets the gameManager and the ghostManager
+    /// </summary>
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -35,7 +40,10 @@ public class FinishLineManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Checks and adds laps to the player/vehicle stats
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") || other.CompareTag("AI"))
@@ -84,9 +92,5 @@ public class FinishLineManager : MonoBehaviour
 
 
     }
-
-
-
-
 
 }
