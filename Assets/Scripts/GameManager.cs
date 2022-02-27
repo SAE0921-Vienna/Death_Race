@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
 
     public bool ghostMode;
     public bool withEffects;
+    public bool reverseTrack;
 
     private void Awake()
     {

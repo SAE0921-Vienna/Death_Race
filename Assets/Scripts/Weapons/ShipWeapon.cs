@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Weapons;
 using Audio;
+using AI;
 
 public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 {
@@ -28,6 +26,9 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
     [SerializeField] protected float projectileLifeTime = 5f;
     protected float nextFire = 0f;
 
+    protected BaseVehicleManager vehicleManager;
+    protected RaycastHit hit;
+
     // Start is called before the first frame update
     //protected virtual void Awake()
     //{
@@ -38,6 +39,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 
         currentWeapon = GetComponent<SpaceshipLoad>().CurrentWeapon;
         shipWeaponPosition = GetComponent<SpaceshipLoad>().CurrentShip.WeaponPosition;
+        vehicleManager = GetComponent<BaseVehicleManager>();
 
         SetEquippedWeapon();
 
@@ -69,7 +71,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
     {
         Ray ray = new Ray(shipWeaponTransform.position, shipWeaponTransform.forward);
         float distance = 1000f;
-        bool hitTarget = Physics.Raycast(ray, out RaycastHit hit, distance, targetLayer);
+        bool hitTarget = Physics.Raycast(ray, out hit, distance, targetLayer);
 
         if (hitTarget)
         {
@@ -84,7 +86,30 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
         }
     }
 
-    protected abstract void InstantiateProjectile();
+    protected virtual void InstantiateProjectile()
+    {
+        if (vehicleManager.currentSpeed > 0)
+        {
+            projectileSpeed = (vehicleManager.currentSpeed * 30) + projectileDefaultSpeed;
+        }
+        else
+        {
+            projectileSpeed = projectileDefaultSpeed;
+        }
+        //PlaySound();
+        GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
+        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
+
+        //if (currentWeapon.name.Equals("Raketa Avtamata"))
+        //{
+        //    Debug.Log(hit.point);
+        //    Vector3 temphitpoint = hit.point;
+        //    projectile.transform.position = Vector3.MoveTowards(shipWeaponPosition, temphitpoint, projectileSpeed);          
+
+        //}
+
+        Destroy(projectile, projectileLifeTime);
+    }
 
     public void PlaySound()
     {

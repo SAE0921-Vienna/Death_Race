@@ -38,6 +38,7 @@ namespace Weapons
 
         private void ExplosionAnimation()
         {
+            if (boomEffect == null) return;
             boomEffect.transform.parent = null;
             boomEffect.Play();
             boomEffect.gameObject.AddComponent<DestroyParticle>();

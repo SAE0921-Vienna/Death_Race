@@ -105,20 +105,20 @@ public class AIShipWeapon : ShipWeapon
     {
         changePositionTimer -= Time.deltaTime;
     }
-    protected override void InstantiateProjectile()
-    {
-        if (aIManager.currentSpeed >= 20)
-        {
-            projectileSpeed = (aIManager.currentSpeed * 20) + projectileDefaultSpeed;
-        }
-        else
-        {
-            projectileSpeed = projectileDefaultSpeed;
-        }
+    //protected override void InstantiateProjectile()
+    //{
+    //    if (aIManager.currentSpeed >= 20)
+    //    {
+    //        projectileSpeed = (aIManager.currentSpeed * 20) + projectileDefaultSpeed;
+    //    }
+    //    else
+    //    {
+    //        projectileSpeed = projectileDefaultSpeed;
+    //    }
 
-        GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
+    //    GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
+    //    projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
 
-        Destroy(projectile, projectileLifeTime);
-    }
+    //    Destroy(projectile, projectileLifeTime);
+    //}
 }

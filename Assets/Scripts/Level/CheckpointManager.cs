@@ -40,8 +40,11 @@ public class CheckpointManager : MonoBehaviour
                 checkpointEffect.SetActive(false);
             }
         }
-        
-        checkpointsInWorldList.Reverse();
+
+        if (_gameManager.reverseTrack)
+        {
+            checkpointsInWorldList.Reverse();
+        }
 
         if (_gameManager.withEffects)
         {
@@ -81,7 +84,7 @@ public class CheckpointManager : MonoBehaviour
             vehicleManager.nextCheckpointIndex = (vehicleManager.nextCheckpointIndex + 1) % checkpointsInWorldList.Count;
 
             vehicleManager.spawnPosition = checkpoint.transform.position;
-            vehicleManager.spawnRotation = vehicleManager.transform.rotation;
+            vehicleManager.spawnRotation = checkpoint.transform.rotation;
 
             Debug.LogFormat("Gone through checkpoint {0}.", vehicleManager.currentCheckpointIndex);
             Debug.LogFormat("Next Checkpoint is: {0}.", vehicleManager.nextCheckpointIndex);

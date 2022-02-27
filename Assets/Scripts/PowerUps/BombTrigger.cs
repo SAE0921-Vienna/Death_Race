@@ -1,5 +1,6 @@
 using UnityEngine;
 using Weapons;
+using AI;
 
 public class BombTrigger : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class BombTrigger : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((hasBeenActivated && collision.transform.CompareTag("Player")))
+        if ((hasBeenActivated && collision.transform.GetComponent<BaseVehicleManager>()))
         {
             _explosion.Explode();
             _boomEffect.Play();
