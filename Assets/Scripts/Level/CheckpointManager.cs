@@ -40,7 +40,8 @@ public class CheckpointManager : MonoBehaviour
                 checkpointEffect.SetActive(false);
             }
         }
-        //checkpointsInWorldList.Reverse();
+        
+        checkpointsInWorldList.Reverse();
 
         if (_gameManager.withEffects)
         {
