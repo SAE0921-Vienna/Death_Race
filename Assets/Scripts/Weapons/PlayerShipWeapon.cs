@@ -74,20 +74,20 @@ public class PlayerShipWeapon : ShipWeapon
             ? Quaternion.Slerp(currentRotation, _targetRotation, (rotationSpeed * 180 * Time.deltaTime) / angularDifference)
             : _targetRotation;
     }
-    protected override void InstantiateProjectile()
-    {
-        if (playerManager.currentSpeed > 0)
-        {
-            projectileSpeed = (playerManager.currentSpeed * 30) + projectileDefaultSpeed;
-        }
-        else
-        {
-            projectileSpeed = projectileDefaultSpeed;
-        }
-        //PlaySound();
-        GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-        projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
+    //protected override void InstantiateProjectile()
+    //{
+    //    if (playerManager.currentSpeed > 0)
+    //    {
+    //        projectileSpeed = (playerManager.currentSpeed * 30) + projectileDefaultSpeed;
+    //    }
+    //    else
+    //    {
+    //        projectileSpeed = projectileDefaultSpeed;
+    //    }
+    //    //PlaySound();
+    //    GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
+    //    projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
 
-        Destroy(projectile, projectileLifeTime);
-    }
+    //    Destroy(projectile, projectileLifeTime);
+    //}
 }
