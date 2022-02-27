@@ -8,10 +8,10 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 {
     //Weapon
     [Header("Weapon")]
-    [SerializeField] protected WeaponData currentWeapon;
+    public WeaponData currentWeapon;
     [SerializeField] protected LayerMask targetLayer;
     protected Vector3 shipWeaponPosition;
-    [SerializeField] protected Transform shipWeaponTransform;
+    public Transform shipWeaponTransform;
     [Range(0, 100)]
     [SerializeField] protected float rotationSpeed = 100;
     [SerializeField] protected Quaternion currentRotation;
@@ -56,7 +56,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 
     public abstract void Shoot();
 
-    protected void SetEquippedWeapon()
+    public void SetEquippedWeapon()
     {
         ammoSize = currentWeapon.ammoSize;
         fireRate = currentWeapon.fireRate;

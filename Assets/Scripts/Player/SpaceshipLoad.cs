@@ -28,7 +28,7 @@ public class SpaceshipLoad : MonoBehaviour
 
     private BaseVehicleManager _baseVehicleManager;
 
-    private GameObject weaponClone;
+    public GameObject weaponClone;
 
 
     private void Awake()
@@ -50,15 +50,7 @@ public class SpaceshipLoad : MonoBehaviour
 
             SetVehicleMesh();
 
-            weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab,
-               transform.GetChild(1).GetChild(1).transform, false);
-            weaponClone.GetComponent<MeshRenderer>().material = allMaterials[currentMaterial].material;
-            weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material =
-                allMaterials[currentMaterial].material;
-            weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material =
-          allMaterials[currentMaterial].material;
-
-
+            SetWeapon();
 
             weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
 
@@ -78,6 +70,21 @@ public class SpaceshipLoad : MonoBehaviour
         GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
     }
 
+    public void SetWeapon()
+    {
+        if(weaponClone != null)
+        {
+            Destroy(weaponClone);
+        }
+
+        weaponClone = Instantiate(allWeapons[currentWeapon].vehicleWeaponPrefab,
+              transform.GetChild(1).GetChild(1).transform, false);
+        weaponClone.GetComponent<MeshRenderer>().material = allMaterials[currentMaterial].material;
+        weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material =
+            allMaterials[currentMaterial].material;
+        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material =
+      allMaterials[currentMaterial].material;
+    }
 
 
     public void SetVehicleStats()
