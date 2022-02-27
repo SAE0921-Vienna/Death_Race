@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/GeneratePath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/GeneratePath.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Core/Settings/GlobalDisplaySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/PathCreator/Core/Settings/GlobalDisplaySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/CheckpointGREEN_MAT.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/GhostMode/GhostModeTOMI_AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/GhostMode/GhostModeTOMI_AI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIFollowCurve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIFollowCurve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +201,7 @@
       <workItem from="1645913229878" duration="4137000" />
       <workItem from="1645917445861" duration="3001000" />
       <workItem from="1645952687974" duration="11011000" />
+      <workItem from="1645965044673" duration="600000" />
     </task>
     <servers />
   </component>
