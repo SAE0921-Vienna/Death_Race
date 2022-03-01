@@ -327,6 +327,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     private void ChangeShipMaterial(int materialIndex)
     {
         GetComponentInChildren<MeshRenderer>().material = materials[materialIndex].materialData.material;
+        SetMaterialName();
     }
 
     /// <summary>
@@ -347,6 +348,8 @@ public class SpaceShipConfigurator : MonoBehaviour
         weaponClone.GetComponent<MeshRenderer>().material = materials[materialIndex].materialData.material;
         weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = materials[materialIndex].materialData.material;
         weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materials[materialIndex].materialData.material;
+
+        SetMaterialName();
     }
 
     /// <summary>
@@ -489,6 +492,13 @@ public class SpaceShipConfigurator : MonoBehaviour
         firerateSlider.value = weapons[currentWeapon].weaponData.fireRate;
     }
 
+    public void SetMaterialName()
+    {
+        if (garageManager)
+        {
+            garageManager.materialName.text = materials[currentMaterial].materialData.name;
+        }
+    }
 
 
     /// <summary>
