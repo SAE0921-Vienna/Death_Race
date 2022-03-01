@@ -11,6 +11,7 @@ TagManager:
   - GameManager
   - Road
   - Wall
+  - Bomb
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3023843999468754500}
   m_Layer: 0
   m_Name: Mine_PREFAB
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a218722cc266847a659fbcfbf05cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasBeenActivated: 0
+  bombHasBeenActivated: 0
+  rocketHasBeenActivated: 0
+  bombTimer: 5
+  BombScale: {x: 5, y: 5, z: 5}
 --- !u!114 &3023843999468754500
 MonoBehaviour:
   m_ObjectHideFlags: 0

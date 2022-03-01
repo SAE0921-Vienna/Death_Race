@@ -23,7 +23,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
     [SerializeField] protected int projectileDamage;
     [SerializeField] protected float projectileSpeed = 10000f;
     [SerializeField] protected float projectileDefaultSpeed = 200f;
-    [SerializeField] protected float projectileLifeTime = 5f;
+    [SerializeField] protected float projectileLifeTime = 6f;
     protected float nextFire = 0f;
 
     protected BaseVehicleManager vehicleManager;
@@ -88,6 +88,7 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 
     protected virtual void InstantiateProjectile()
     {
+        float tempProjectileLifeTime = projectileLifeTime;
         if (vehicleManager.currentSpeed > 0)
         {
             projectileSpeed = (vehicleManager.currentSpeed * 30) + projectileDefaultSpeed;
@@ -100,14 +101,16 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
         GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
         projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
 
-        //if (currentWeapon.name.Equals("Raketa Avtamata"))
-        //{
-        //    Debug.Log(hit.point);
-        //    Vector3 temphitpoint = hit.point;
-        //    projectile.transform.position = Vector3.MoveTowards(shipWeaponPosition, temphitpoint, projectileSpeed);          
+        if (currentWeapon.name.Equals("Raketa Avtamata"))
+        {
+            projectile.GetComponent<BombTrigger>().rocketHasBeenActivated = false;
+            projectile.GetComponent<SphereCollider>().enabled = true;
+            projectileLifeTime *= 1.5f;
+        }
+        else
+            projectileLifeTime = tempProjectileLifeTime; //For Sandbox
 
-        //}
-
+        if (projectile != null)
         Destroy(projectile, projectileLifeTime);
     }
 

@@ -297,9 +297,9 @@ public class PowerUps : MonoBehaviour
     public void BombPowerUp()
     {
         GameObject bombClone = Instantiate(powerUp.powerUpPrefab, powerupParent.GetChild(2).transform.position, Quaternion.identity);
-        bombClone.transform.localScale = _vehicleStats.bombScale;
+        bombClone.transform.localScale = bombClone.GetComponent<BombTrigger>().BombScale;
         bombClone.GetComponent<SphereCollider>().enabled = true;
-        bombClone.GetComponent<BombTrigger>().hasBeenActivated = true;
+        bombClone.GetComponent<BombTrigger>().bombHasBeenActivated = true;
         _vehicleStats.hasBomb = true;
     }
 
