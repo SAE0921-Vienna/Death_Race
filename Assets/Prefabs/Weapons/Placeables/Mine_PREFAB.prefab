@@ -113,7 +113,7 @@ MonoBehaviour:
   bombHasBeenActivated: 0
   rocketHasBeenActivated: 0
   bombTimer: 5
-  BombScale: {x: 5, y: 5, z: 5}
+  BombScale: {x: 7, y: 7, z: 7}
 --- !u!114 &3023843999468754500
 MonoBehaviour:
   m_ObjectHideFlags: 0
