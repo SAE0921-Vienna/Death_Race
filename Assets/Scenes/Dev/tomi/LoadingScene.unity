@@ -11001,8 +11001,8 @@ RectTransform:
   m_Father: {fileID: 1200631402}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.114, y: 0}
+  m_AnchorMax: {x: 0.114, y: 1}
   m_AnchoredPosition: {x: 5.799988, y: 7.9}
   m_SizeDelta: {x: 225.2132, y: 101.0707}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21818,7 +21818,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67269abd71e0c342947a34db64780d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  mainmenuUI: {fileID: 0}
+  garageUI: {fileID: 0}
   loadingSlider: {fileID: 1759635510}
+  loadingTitle: {fileID: 0}
+  pressanykeyUI: {fileID: 0}
+  tipsText: {fileID: 0}
+  tips: []
+  tipCount: 0
 --- !u!4 &1077866188
 Transform:
   m_ObjectHideFlags: 0
@@ -30187,7 +30195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1549750553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38008,7 +38016,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.114, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
