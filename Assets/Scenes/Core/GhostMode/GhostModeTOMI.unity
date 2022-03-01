@@ -66519,8 +66519,6 @@ MonoBehaviour:
   healValue: 45
   ammo: 0
   ammoAdd: 0
-  bombTimer: 10
-  bombScale: {x: 5, y: 5, z: 5}
   currentSpeed: 0
   hasShield: 0
   hasNitro: 0
@@ -84859,6 +84857,9 @@ MonoBehaviour:
   - Press W/A/S/D or the Arrows to move with your ship.
   - The ghost ship drives the exact same route that you drove in the best time.
   tipCount: 3
+  doAnimation: 0
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!4 &2095412006
 Transform:
   m_ObjectHideFlags: 0

@@ -25,6 +25,8 @@ namespace UserInterface
         public Slider healthSlider;
         public TextMeshProUGUI moneyUI;
         public TextMeshProUGUI tempAddedMoneyUI;
+        public Transform ammoToggle;
+        public Transform healthToggle;
 
         public GameObject gameOverUI;
 
@@ -55,6 +57,12 @@ namespace UserInterface
                         break;
                 }
             }
+
+            if(int.Parse(ammoAmountUI.text) > 999)
+            {
+                ammoAmountUI.text = "999";
+            }
+               
         }
 
     }

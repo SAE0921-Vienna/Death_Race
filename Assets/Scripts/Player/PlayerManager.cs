@@ -2,10 +2,15 @@ using System.Globalization;
 using AI;
 using UnityEngine;
 using UserInterface;
+using UnityEngine.UI;
 
 public class PlayerManager : BaseVehicleManager
 {
     private UIManager uiManager;
+
+    [Header("Cheats")]
+    [SerializeField] private bool unlimitedAmmo;
+    [SerializeField] private bool unlimitedHealth;
 
     protected override void Awake()
     {
@@ -28,6 +33,11 @@ public class PlayerManager : BaseVehicleManager
     {
         base.Update();
         UpdateUIValues();
+
+        if (!isImmortal && unlimitedHealth)
+        {
+            isImmortal = true;
+        }
     }
 
     private void UpdateUIValues()
@@ -41,6 +51,67 @@ public class PlayerManager : BaseVehicleManager
 
 
     }
+
+    public void ToggleUnlimitedAmmo()
+    {
+        unlimitedAmmo = !unlimitedAmmo;
+        if (unlimitedAmmo)
+        {
+            if (uiManager.ammoToggle)
+            {
+                uiManager.ammoToggle.GetComponent<Toggle>().isOn = unlimitedAmmo;
+                uiManager.ammoToggle.GetChild(1).GetComponent<Image>().enabled = unlimitedAmmo;
+            }
+
+            ammo = 999999999;
+            uiManager.ammoAmountUI.gameObject.SetActive(unlimitedAmmo);
+            canShoot = unlimitedAmmo;
+        }
+        else
+        {
+            if (uiManager.ammoToggle)
+            {
+                uiManager.ammoToggle.GetComponent<Toggle>().isOn = unlimitedAmmo;
+                uiManager.ammoToggle.GetChild(1).GetComponent<Image>().enabled = unlimitedAmmo;
+            }
+
+            ammo = 0;
+            AddAmmoOnStart();
+            uiManager.ammoAmountUI.gameObject.SetActive(true);
+            canShoot = true;
+
+        }
+    }
+
+    public void ToggleUnlimitedHealth()
+    {
+
+        unlimitedHealth = !unlimitedHealth;
+        if (unlimitedHealth)
+        {
+            if (uiManager.healthToggle)
+            {
+                uiManager.healthToggle.GetComponent<Toggle>().isOn = unlimitedHealth;
+                uiManager.healthToggle.GetChild(1).GetComponent<Image>().enabled = unlimitedHealth;
+            }
+
+            isImmortal = unlimitedHealth;
+        }
+        else
+        {
+            if (uiManager.healthToggle)
+            {
+                uiManager.healthToggle.GetComponent<Toggle>().isOn = unlimitedHealth;
+                uiManager.healthToggle.GetChild(1).GetComponent<Image>().enabled = unlimitedHealth;
+            }
+
+            isImmortal = unlimitedHealth;
+
+        }
+
+
+    }
+
 
     //public void CheckLapCount()
     //{

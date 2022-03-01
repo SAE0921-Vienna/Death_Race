@@ -24,11 +24,43 @@ public class LevelLoader : MonoBehaviour
     public string[] tips;
     public int tipCount;
 
+    public bool doAnimation;
+    public Animator transition;
+    public float transitionTime = 1f;
+
     public void LoadLevel(string sceneName)
     {
         backgroundImage.sprite = backgrounds[Random.Range(0, backgrounds.Length)];
 
-        #region Debugs for Exceptions
+        DeactivateUIs();
+
+        loadingScreen.SetActive(true);
+        loadingTitle.text = sceneName;
+
+        if (transition)
+        {
+            if (doAnimation)
+            {
+                StartCoroutine(StartAnimation());
+                transition.enabled = true;
+                transition.gameObject.GetComponent<CanvasGroup>().enabled = true;
+            }
+            else
+            {
+                transition.enabled = false;
+                transition.gameObject.GetComponent<CanvasGroup>().enabled = false;
+
+            }
+        }
+
+
+        StartCoroutine(LoadAsynchronously(sceneName));
+        StartCoroutine(GenerateTips());
+
+    }
+
+    public void DeactivateUIs()
+    {
         if (garageUI)
         {
             garageUI.SetActive(false);
@@ -49,12 +81,13 @@ public class LevelLoader : MonoBehaviour
             HUDUI.SetActive(false);
         }
 
-        #endregion
+    }
 
-        loadingScreen.SetActive(true);
-        loadingTitle.text = sceneName;
-        StartCoroutine(LoadAsynchronously(sceneName));
-        StartCoroutine(GenerateTips());
+    IEnumerator StartAnimation()
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
 
     }
 
