@@ -12,7 +12,24 @@ public class PlayRandomAudioClip : MonoBehaviour
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        ChangeClip();
+    }
+
+    private void ChangeClip()
+    {
         _audioSource.clip = allSongs[Random.Range(0, allSongs.Count)];
         _audioSource.Play();
+        StartCoroutine(ChangeClipTimer());
+    }
+
+    private IEnumerator ChangeClipTimer()
+    {
+        var timer = 0f;
+        while (timer <= _audioSource.clip.length)
+        {
+            timer += Time.deltaTime;
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        ChangeClip();
     }
 }
