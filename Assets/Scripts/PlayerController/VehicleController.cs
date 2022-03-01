@@ -99,6 +99,7 @@ namespace PlayerController
             Steer();
             AntiGravity();
             SideThrust();
+            GroundInfo();
         }
 
 

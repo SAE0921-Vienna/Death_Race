@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
     }
     public void ReplayLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);                
     }
 
     public void BackToMainMenu()
