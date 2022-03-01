@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/PlayableDirector.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/PlayableDirector.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayableDirector/CutsceneIntro.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayableDirector/CutsceneIntro.playable" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/GhostMode/GhostModeTOMI_AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/GhostMode/GhostModeTOMI_AI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CheckpointManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +205,9 @@
       <workItem from="1645917445861" duration="3001000" />
       <workItem from="1645952687974" duration="11011000" />
       <workItem from="1645965044673" duration="600000" />
-      <workItem from="1645980941645" duration="320000" />
+      <workItem from="1645980941645" duration="4317000" />
+      <workItem from="1646138382020" duration="1632000" />
+      <workItem from="1646152540038" duration="947000" />
     </task>
     <servers />
   </component>
