@@ -57348,7 +57348,7 @@ MonoBehaviour:
   noSpeedLimitToggle: {fileID: 0}
   countDownTimer: {fileID: 0}
   gameOverUI: {fileID: 1153912914}
-  Crossair: {fileID: 0}
+  crosshair: {fileID: 0}
 --- !u!4 &1617549260
 Transform:
   m_ObjectHideFlags: 0
@@ -75415,6 +75415,38 @@ PrefabInstance:
       propertyPath: saveLoadScript
       value: 
       objectReference: {fileID: 360780220}
+    - target: {fileID: 6385187568103588284, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
+      propertyPath: m_fontColorGradient.topLeft.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385187568103588284, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
+      propertyPath: m_fontColorGradient.topLeft.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385187568103588284, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
+      propertyPath: m_fontColorGradient.topRight.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385187568103588284, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
+      propertyPath: m_fontColorGradient.topRight.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385187568103588284, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
+      propertyPath: m_fontColorGradient.bottomLeft.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385187568103588284, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
+      propertyPath: m_fontColorGradient.bottomLeft.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385187568103588284, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385187568103588284, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.g
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2082d33713f6a34a9bc587e90982aff, type: 3}
 --- !u!1 &6385187567386148260 stripped

@@ -6477,7 +6477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1e-45
+      value: -1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
@@ -11493,7 +11493,7 @@ MonoBehaviour:
   noSpeedLimitToggle: {fileID: 1763067383}
   countDownTimer: {fileID: 0}
   gameOverUI: {fileID: 0}
-  Crossair: {fileID: 2800000, guid: 7d7e3d4c78b32f648b40888bfc6db8d0, type: 3}
+  crosshair: {fileID: 2800000, guid: 7d7e3d4c78b32f648b40888bfc6db8d0, type: 3}
 --- !u!4 &1617549260
 Transform:
   m_ObjectHideFlags: 0
@@ -13663,7 +13663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 3e-45
+      value: -1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -14412,10 +14412,10 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 0.65889686, b: 0, a: 1}
-    topRight: {r: 1, g: 0.6627451, b: 0, a: 1}
-    bottomLeft: {r: 1, g: 0.8620919, b: 0, a: 1}
-    bottomRight: {r: 1, g: 0.8627451, b: 0, a: 1}
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 11400000, guid: a9565263e5af1c74bac48c278759cf07, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
