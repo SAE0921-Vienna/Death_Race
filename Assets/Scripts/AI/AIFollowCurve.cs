@@ -25,15 +25,20 @@ public class AIFollowCurve : MonoBehaviour
 
     private void TravelAlongCurve()
     {
-        transform.position = pathCreator.path.GetPointAtDistance(_distanceTravelled, end);
+        //transform.position = pathCreator.path.GetPointAtDistance(_distanceTravelled, end);
+        transform.position = AIPosition(pathCreator.path.GetPointAtDistance(_distanceTravelled, end));
         transform.rotation = pathCreator.path.GetRotationAtDistance(_distanceTravelled, end);
         
         _distanceTravelled += speed * Time.fixedDeltaTime;
     }
 
+    Vector3 AIPosition(Vector3 curveLocation)
+    {
+        return pathCreator.path.GetPointAtDistance(_distanceTravelled, end);
+    }
+
     private void Accelerate()
     {
-        currentSpeed = Mathf.Clamp01(speed += 0.01f * accelerationConstant * Time.fixedDeltaTime);
-        speed = Mathf.Lerp(0f, maxSpeed, currentSpeed);
+        speed = Mathf.MoveTowards(speed, maxSpeed, accelerationConstant);
     }
 }
