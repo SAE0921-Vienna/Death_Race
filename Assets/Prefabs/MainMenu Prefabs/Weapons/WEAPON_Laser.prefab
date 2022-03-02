@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4536373497632422615}
   - component: {fileID: 4526419272420770757}
   - component: {fileID: 5500045499160922827}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: WEAPON_Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 4536457439791365951}
   - component: {fileID: 4526126404711746235}
   - component: {fileID: 4357654906791441738}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: SM_Prop_Turret_Gattling_Base_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 4507175351173507263}
   - component: {fileID: 4536877014707974863}
   - component: {fileID: 4526641960463234799}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: SM_Prop_Turret_Gattling_Barrel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3156105081924165600}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: InstantiationLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}

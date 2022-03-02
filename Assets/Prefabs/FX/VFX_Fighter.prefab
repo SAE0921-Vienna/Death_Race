@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 191020270}
   - component: {fileID: 191020272}
   - component: {fileID: 191020271}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4736,7 +4736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720884124}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4766,7 +4766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011949976820258838}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4798,7 +4798,7 @@ GameObject:
   - component: {fileID: 2011949976973149044}
   - component: {fileID: 2011949976973149046}
   - component: {fileID: 2011949976973149047}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9523,7 +9523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011949977435083193}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9555,7 +9555,7 @@ GameObject:
   - component: {fileID: 2011949977680800950}
   - component: {fileID: 2011949977680800944}
   - component: {fileID: 2011949977680800945}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14280,7 +14280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011949978017756722}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14311,7 +14311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011949978281875523}
   - component: {fileID: 2011949978281875522}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: VFX_Fighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14399,7 +14399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011949978518606872}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14431,7 +14431,7 @@ GameObject:
   - component: {fileID: 2009877653866213619}
   - component: {fileID: 1813814831846061917}
   - component: {fileID: 1812956440008499205}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19158,7 +19158,7 @@ GameObject:
   - component: {fileID: 2010108541335631784}
   - component: {fileID: 1813260439918435564}
   - component: {fileID: 1814286570430315728}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: WallGrindPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23916,7 +23916,7 @@ GameObject:
   - component: {fileID: 2016136486077975678}
   - component: {fileID: 1813682246474415162}
   - component: {fileID: 1814425412682093574}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: PS-SparksShip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28664,7 +28664,7 @@ GameObject:
   - component: {fileID: 2010071991279295696}
   - component: {fileID: 1813303002255603862}
   - component: {fileID: 1814487121341686962}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: HeatDistortionPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33335,7 +33335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8121711025562229494}
   - component: {fileID: 711466116855358567}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33474,7 +33474,7 @@ GameObject:
   - component: {fileID: 4013505705072018579}
   - component: {fileID: 3854419123956499261}
   - component: {fileID: 3854722262994523237}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38199,7 +38199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5803614567485918096}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38232,7 +38232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4176162577261706206}
   - component: {fileID: 6438084804999875801}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trail (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

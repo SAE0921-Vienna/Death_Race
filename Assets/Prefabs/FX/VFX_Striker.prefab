@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 687564874648720731}
   - component: {fileID: 687564874648720729}
   - component: {fileID: 687564874648720730}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4736,7 +4736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 687564874695764157}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4767,7 +4767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687564875257473005}
   - component: {fileID: 687564875257473004}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: VFX_Striker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4849,7 +4849,7 @@ GameObject:
   - component: {fileID: 685688803562653702}
   - component: {fileID: 813083932378669890}
   - component: {fileID: 814304092353184638}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: WallGrindPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9607,7 +9607,7 @@ GameObject:
   - component: {fileID: 685792441239036798}
   - component: {fileID: 813880759692642104}
   - component: {fileID: 814873529413458716}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: HeatDistortionPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14279,7 +14279,7 @@ GameObject:
   - component: {fileID: 692314332875764688}
   - component: {fileID: 813505704577155988}
   - component: {fileID: 815005334933531560}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: PS-SparksShip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19026,7 +19026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7122236521857148248}
   - component: {fileID: 1999312283825249225}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19163,7 +19163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4822174287859201086}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19196,7 +19196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3140676868704814192}
   - component: {fileID: 5420633286294827895}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trail (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

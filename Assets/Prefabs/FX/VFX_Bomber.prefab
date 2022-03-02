@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 34284644816705757}
   - component: {fileID: 195586734509980827}
   - component: {fileID: 194395907220922559}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: HeatDistortionPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4683,7 +4683,7 @@ GameObject:
   - component: {fileID: 28773204911130739}
   - component: {fileID: 195772463675406391}
   - component: {fileID: 194457620151357451}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: PS-SparksShip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9431,7 +9431,7 @@ GameObject:
   - component: {fileID: 34251372332266405}
   - component: {fileID: 195069456953481441}
   - component: {fileID: 194037850396981469}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: WallGrindPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14189,7 +14189,7 @@ GameObject:
   - component: {fileID: 33523800473968809}
   - component: {fileID: 33523800473968811}
   - component: {fileID: 33523800473968810}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18916,7 +18916,7 @@ GameObject:
   - component: {fileID: 33523800520736283}
   - component: {fileID: 33523800520736285}
   - component: {fileID: 33523800520736284}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23641,7 +23641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 33523800636617502}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23671,7 +23671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 33523800739672914}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23702,7 +23702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33523800830008398}
   - component: {fileID: 33523800830008399}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: VFX_Bomber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23790,7 +23790,7 @@ GameObject:
   - component: {fileID: 33523801287732984}
   - component: {fileID: 33523801287732986}
   - component: {fileID: 33523801287732985}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28515,7 +28515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 33523801341383454}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28545,7 +28545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 33523801587766484}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28577,7 +28577,7 @@ GameObject:
   - component: {fileID: 33523802011712156}
   - component: {fileID: 33523802011712158}
   - component: {fileID: 33523802011712157}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ThrusterPS (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33303,7 +33303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7722236598978633467}
   - component: {fileID: 1315995337642811498}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33440,7 +33440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5410631656545521565}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33473,7 +33473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2479317205163999187}
   - component: {fileID: 4811063096409671892}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Trail (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
