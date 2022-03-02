@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+using UserInterface;
 using UnityEngine.InputSystem;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -49,7 +50,8 @@ public class PauseMenuScript : MonoBehaviour
         if (pausePanel.gameObject.activeInHierarchy == false && optionsPanel.gameObject.activeInHierarchy == false)
         {
             pausePanel.gameObject.SetActive(true);
-            //Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
             Time.timeScale = 0;
 
             isPause = true;
@@ -59,9 +61,9 @@ public class PauseMenuScript : MonoBehaviour
             //Cursor.lockState = CursorLockMode.Locked;
             pausePanel.gameObject.SetActive(false);
             optionsPanel.gameObject.SetActive(false);
+            FindObjectOfType<UIManager>().SetCursor();
 
             Time.timeScale = 1;
-
             isPause = false;
         }
     }
@@ -69,6 +71,7 @@ public class PauseMenuScript : MonoBehaviour
     {
         Time.timeScale = 1;
         pausePanel.gameObject.SetActive(false);
+        FindObjectOfType<UIManager>().SetCursor();
         isPause = false;
         //Cursor.lockState = CursorLockMode.Locked;
     }
