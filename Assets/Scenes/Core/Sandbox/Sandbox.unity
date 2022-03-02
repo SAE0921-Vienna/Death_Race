@@ -1361,6 +1361,7 @@ MonoBehaviour:
   ghostMode: 0
   withEffects: 1
   reverseTrack: 0
+  startOfRaceTimer: 0
 --- !u!114 &219298090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5788,7 +5789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
@@ -7846,6 +7847,9 @@ MonoBehaviour:
   boughtWeapons: 
   boughtMaterials: 
   hasSaveData: 0
+  hasMoneyData: 0
+  hasOptionData: 0
+  hasBestTimeData: 0
   spaceConfig: {fileID: 0}
   milkyCoins: 0
   maxMilkyCoins: 9999999
@@ -11328,7 +11332,9 @@ MonoBehaviour:
   ammoToggle: {fileID: 709453183}
   healthToggle: {fileID: 521918921}
   noSpeedLimitToggle: {fileID: 1763067383}
+  countDownTimer: {fileID: 0}
   gameOverUI: {fileID: 0}
+  Crossair: {fileID: 2800000, guid: 446d3edd09ab9694e9d671c628406e0c, type: 3}
 --- !u!4 &1617549260
 Transform:
   m_ObjectHideFlags: 0
@@ -13387,7 +13393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 3e-45
+      value: -1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z

@@ -68,8 +68,6 @@ public class GameManager : MonoBehaviour
         }
 
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
-        
-        
 
         vCamPOV = vCam.m_Lens.FieldOfView;
         overlayCam.fieldOfView = vCamPOV;
@@ -95,7 +93,6 @@ public class GameManager : MonoBehaviour
         if (raceHasStarted)
         {
             ConvertTime();
-
         }
     }
     private void ConvertTime()
@@ -132,7 +129,6 @@ public class GameManager : MonoBehaviour
         raceHasStarted = true;
     }
     
-
     public void GameOver()
     {
         raceFinished = true;

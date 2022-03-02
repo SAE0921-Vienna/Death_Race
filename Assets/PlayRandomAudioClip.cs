@@ -7,7 +7,9 @@ using Random = UnityEngine.Random;
 public class PlayRandomAudioClip : MonoBehaviour
 {
     private AudioSource _audioSource;
+    private GameManager _gameManager;
     private float timer;
+    private bool startTimer;
     
     [SerializeField]
     private List<AudioClip> allSongs;
@@ -15,11 +17,14 @@ public class PlayRandomAudioClip : MonoBehaviour
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        ChangeClip();
+        _gameManager = FindObjectOfType<GameManager>();
+        _gameManager.StartOfRace += ChangeClip;
+        _gameManager.StartOfRace += () => { startTimer = true; };
     }
 
     private void Update()
     {
+        if (!startTimer) return;
         Timer();
     }
 
