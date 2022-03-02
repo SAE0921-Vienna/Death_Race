@@ -7,6 +7,7 @@ public class BombTrigger : MonoBehaviour
 {
     public bool bombHasBeenActivated;
     public bool rocketHasBeenActivated;
+    public bool bombWhenNotOnTrigger;
 
     private ParticleSystem _boomEffect;
     [SerializeField] private float bombTimer = 5f;
@@ -44,25 +45,29 @@ public class BombTrigger : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (bombHasBeenActivated && collision.transform.GetComponent<BaseVehicleManager>())
+        if (bombHasBeenActivated && (collision.gameObject.layer == LayerMask.NameToLayer("Player") || collision.gameObject.layer == LayerMask.NameToLayer("Ships")))
+            bombWhenNotOnTrigger = false;
+            StartCoroutine(CheckBomb());
+
+        Debug.Log("OCE" + collision.gameObject.name);
+
+        if (bombWhenNotOnTrigger && collision.transform.GetComponent<BaseVehicleManager>())
         {
             _explosion.Explode();
             _boomEffect.Play();
             _boomEffect.GetComponent<DestroyParticle>().DestroyParticleGameobject();
         }
     }
-    
+
     private void OnTriggerEnter(Collider other)
     {
-        if(!rocketHasBeenActivated && (other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Ships")))
+        if (!rocketHasBeenActivated && (other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Ships")))
             StartCoroutine(CheckRocketProjectile());
         else
             rocketHasBeenActivated = true;
 
-        if (bombHasBeenActivated && (other.transform.CompareTag("Bullet")|| other.transform.CompareTag("Bomb")) || (rocketHasBeenActivated && (other.gameObject.layer == LayerMask.NameToLayer("Roadtrack") || other.gameObject.layer == LayerMask.NameToLayer("Wall") || other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Ships"))))
+        if (bombHasBeenActivated && other.transform.CompareTag("Bullet") || (rocketHasBeenActivated && (other.gameObject.layer == LayerMask.NameToLayer("Roadtrack") || other.gameObject.layer == LayerMask.NameToLayer("Wall") || other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Ships") || other.transform.CompareTag("Bomb"))))
         {
-
-            //Debug.Log("ENDLICH DRINNEN");
             _explosion.Explode();
             _boomEffect.Play();
             _boomEffect.GetComponent<DestroyParticle>().DestroyParticleGameobject();
@@ -72,6 +77,11 @@ public class BombTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         rocketHasBeenActivated = true;
+    }
+    public IEnumerator CheckBomb()
+    {
+        yield return new WaitForSeconds(0.5f);
+        bombWhenNotOnTrigger = true;
     }
 }
 
