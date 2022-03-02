@@ -97,7 +97,10 @@ public class SpaceShipConfigurator : MonoBehaviour
 
         ChangeShipMaterial(currentMaterial);
 
-
+        if (!saveLoadScript.hasSaveData)
+        {
+            saveLoadScript.SaveSaveData();
+        }
 
         if (garageManager)
         {

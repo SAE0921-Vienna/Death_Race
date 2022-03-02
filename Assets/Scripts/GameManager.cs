@@ -1,5 +1,8 @@
+using System;
 using UnityEngine;
 using Cinemachine;
+using Core;
+using UserInterface;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +15,7 @@ public class GameManager : MonoBehaviour
     private PlayerManager playerManager;
     public CinemachineVirtualCamera vCam;
     public Camera overlayCam;
+    public event Action StartOfRace;
 
     public GameObject gameOverCanvas;
     public GameObject pauseCanvas;
@@ -39,6 +43,10 @@ public class GameManager : MonoBehaviour
     public bool ghostMode;
     public bool withEffects;
     public bool reverseTrack;
+    private Timer _timer;
+    
+    [Header("Start Of Race Timer")]
+    public float startOfRaceTimer;
 
     private void Awake()
     {
@@ -60,6 +68,8 @@ public class GameManager : MonoBehaviour
         }
 
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
+        
+        
 
         vCamPOV = vCam.m_Lens.FieldOfView;
         overlayCam.fieldOfView = vCamPOV;
@@ -70,6 +80,14 @@ public class GameManager : MonoBehaviour
         audioManager.transform.GetChild(0).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(1).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(2).GetComponent<VolumeSlider>().GetAudiosAtStart();
+        
+        _timer = FindObjectOfType<Timer>();
+        StartOfRaceTimer();
+    }
+    
+    private void StartOfRaceTimer()
+    {
+        _timer.CreateTimer(startOfRaceTimer, () => { StartOfRace?.Invoke(); });
     }
 
     private void Update()
@@ -82,8 +100,6 @@ public class GameManager : MonoBehaviour
     }
     private void ConvertTime()
     {
-
-
         roundTimer += Time.deltaTime;
 
         currentMin = Mathf.Floor(roundTimer * 0.0166666666f);
@@ -115,6 +131,7 @@ public class GameManager : MonoBehaviour
     {
         raceHasStarted = true;
     }
+    
 
     public void GameOver()
     {

@@ -296,11 +296,14 @@ public class PowerUps : MonoBehaviour
         _vehicleStats.hasAmmoPowerUp = true;
         _vehicleStats.timer = munitionEffect.GetComponent<ParticleSystem>().main.duration;
         _vehicleStats.ammo += _vehicleStats.ammoAdd;
+        _vehicleStats.canShoot = true;
+
+
+
         if (_vehicleStats.CompareTag("Player"))
         {
             uIManager.ammoAmountUI.text = _vehicleStats.ammo.ToString();
         }
-        _vehicleStats.canShoot = true;
     }
 
     /// <summary>

@@ -1,3 +1,4 @@
+using Core;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,8 +29,10 @@ namespace UserInterface
         public Transform ammoToggle;
         public Transform healthToggle;
         public Transform noSpeedLimitToggle;
+        public TextMeshProUGUI countDownTimer;
 
         public GameObject gameOverUI;
+        private Timer _timer;
 
         [SerializeField] private Texture2D Crossair;
 
@@ -37,9 +40,8 @@ namespace UserInterface
         {
             gameManager = FindObjectOfType<GameManager>();
             playerManager = FindObjectOfType<PlayerManager>();
-
-            if(Crossair != null)
-            Cursor.SetCursor(Crossair, Vector2.zero, CursorMode.ForceSoftware);
+            _timer = FindObjectOfType<Timer>();
+            _timer.CreateTimer(5f, () => StartCountdown());
         }
 
         private void Update()
@@ -69,6 +71,12 @@ namespace UserInterface
                 ammoAmountUI.text = "999";
             }
                
+        }
+
+        public void StartCountdown()
+        {
+            print("Started Countdown");
+            countDownTimer.GetComponent<Animation>().Play();
         }
 
     }
