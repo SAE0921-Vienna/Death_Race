@@ -30,6 +30,8 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevel(string sceneName)
     {
+        Time.timeScale = 1;
+
         backgroundImage.sprite = backgrounds[Random.Range(0, backgrounds.Length)];
 
         DeactivateUIs();
