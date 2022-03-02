@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using AI;
 using PlayerController;
@@ -12,6 +13,8 @@ public class PowerUps : MonoBehaviour
     [SerializeField] private float nitroAccelerationModifier = 0.2f;
     [SerializeField] private float nitroFovModifier = 110f;
     [SerializeField] private float nitroFovNormal;
+    [SerializeField] private float nitroDeltaSpeed;
+    private float t;
     #endregion
 
     #region References
@@ -68,6 +71,8 @@ public class PowerUps : MonoBehaviour
         UpdateUI();
 
         UpdateInput();
+        
+        SetInterpolator();
 
 
         if (_vehicleStats.health < 40)
@@ -109,7 +114,6 @@ public class PowerUps : MonoBehaviour
             _vehicleStats.timer = -1;
             ResetPowerUps();
         }
-
     }
 
     /// <summary>
@@ -198,11 +202,6 @@ public class PowerUps : MonoBehaviour
         {
             _vehicleStats.hasNitro = false;
             nitroEffect.SetActive(false);
-
-            gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(nitroFovModifier, nitroFovNormal, 50 * Time.deltaTime);
-            gameManager.overlayCam.fieldOfView = Mathf.Lerp(nitroFovModifier, nitroFovNormal, 50 * Time.deltaTime);
-
-
             VehicleController vehicleContr = GetComponent<VehicleController>();
             vehicleContr.mMaxSpeed = GetComponent<SpaceshipLoad>().CurrentShip.maxSpeed;
             vehicleContr.mAccelerationConstant = GetComponent<SpaceshipLoad>().CurrentShip.accelerationSpeed;
@@ -257,11 +256,6 @@ public class PowerUps : MonoBehaviour
         nitroEffect.SetActive(true);
         if (_vehicleStats.CompareTag("Player"))
         {
-
-            gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(nitroFovNormal, nitroFovModifier, 50 * Time.deltaTime);
-            gameManager.overlayCam.fieldOfView = Mathf.Lerp(nitroFovNormal, nitroFovModifier, 50 * Time.deltaTime);
-           
-
         }
         //gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(gameManager.vCamPOV, gameManager.vCamPOV + playerStats.mainCamPovBoost, Time.deltaTime);
         VehicleController vehicleContr = GetComponent<VehicleController>();
@@ -269,6 +263,21 @@ public class PowerUps : MonoBehaviour
         vehicleContr.mAccelerationConstant += nitroAccelerationModifier;
 
         _vehicleStats.hasNitro = true;
+    }
+
+    private void SetInterpolator()
+    {
+        if (_vehicleStats.hasNitro)
+        {
+            gameManager.vCam.m_Lens.FieldOfView =
+                    Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovModifier, nitroDeltaSpeed);
+            gameManager.overlayCam.fieldOfView = Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovModifier, nitroDeltaSpeed);
+        }
+        else 
+        {
+            gameManager.vCam.m_Lens.FieldOfView = Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovNormal, nitroDeltaSpeed);
+            gameManager.overlayCam.fieldOfView = Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovNormal, nitroDeltaSpeed);
+        }
     }
 
     /// <summary>

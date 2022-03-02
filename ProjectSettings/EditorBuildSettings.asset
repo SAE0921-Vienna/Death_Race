@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Core/Sandbox/Sandbox.unity
     guid: 4ec371442da43944bab3bbdb092da9a7
   - enabled: 1
-    path: Assets/Scenes/Core/GhostMode/GhostModeTOMI.unity
+    path: Assets/Scenes/Core/GhostMode/GhostMode.unity
     guid: b47627e3e81b65044849f25a7b8e7081
   - enabled: 1
     path: Assets/Scenes/Core/Credits/Credits.unity

@@ -22,7 +22,7 @@ namespace AI
         protected void Start()
         {
             base.Start();
-            nextCheckpoint = ai_checkpointManager.checkpointsInWorldList[0];
+            //nextCheckpoint = ai_checkpointManager.checkpointsInWorldList[0];
         }
 
         protected override void Update()
@@ -39,10 +39,10 @@ namespace AI
 
         public void ResetCheckpoints()
         {
-            nextCheckpoint = ai_checkpointManager.checkpointsInWorldList[0];
-            nextCheckpointIndex = 0;
-            currentCheckpointIndex = 0;
-            currentLapIndex = 0;
+            //nextCheckpoint = ai_checkpointManager.checkpointsInWorldList[0];
+            //nextCheckpointIndex = 0;
+            //currentCheckpointIndex = 0;
+            //currentLapIndex = 0;
         }
 
         //public void CheckLaps()

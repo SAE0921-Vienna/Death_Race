@@ -28,6 +28,7 @@ namespace AI
         private BezierPath GenerateNewPath(List<Transform> checkpoints, bool closedPath)
         {
             if (checkpoints.Count == 0) return null;
+            
             var positionsList = new List<Vector3>();
             foreach (var checkpointTransform in checkpoints)
             {
@@ -68,8 +69,5 @@ namespace AI
 
             return angle;
         }
-
-        /*Vector3.Up, Tangent, CheckpointTransform.
-         First, compare Vector3.up with Checkpoint.Transform.up, as a signed Angle on the local Tangent of the control-point.*/
     }
 }

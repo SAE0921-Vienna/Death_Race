@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8821644790740196927}
   - component: {fileID: 4083956279059268888}
   - component: {fileID: 559787810690297261}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: SM_Prop_Turret_Large_Barrel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7407631128536340476}
   - component: {fileID: 4994923076051618822}
   - component: {fileID: 4881123415644648286}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: WEAPON_Railgun_New
   m_TagString: Untagged
   m_Icon: {fileID: 0}

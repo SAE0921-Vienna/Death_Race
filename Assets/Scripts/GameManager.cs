@@ -3,9 +3,6 @@ using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject finishLine;
-
     private CheckpointManager checkpointManager;
     private FinishLineManager finishLineManager;
 
@@ -17,8 +14,9 @@ public class GameManager : MonoBehaviour
     public Camera overlayCam;
 
     public GameObject gameOverCanvas;
+    public GameObject pauseCanvas;
 
-    public float vCamPOV = 70f;
+    public float vCamPOV = 90f;
 
     public bool raceHasStarted;
     public bool raceFinished;
@@ -120,7 +118,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        raceFinished = true;
+        Time.timeScale = 0;
         gameOverCanvas.gameObject.SetActive(true);
+        pauseCanvas.gameObject.SetActive(false);
     }
     public void ReplayLevel()
     {
