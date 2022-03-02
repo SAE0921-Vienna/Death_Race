@@ -1361,6 +1361,7 @@ MonoBehaviour:
   ghostMode: 0
   withEffects: 1
   reverseTrack: 0
+  startOfRaceTimer: 0
 --- !u!114 &219298090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4124,7 +4125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.227051, y: -26.291992}
+  m_AnchoredPosition: {x: -6.227051, y: -26.291931}
   m_SizeDelta: {x: -1989.2, y: -1166.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571374637
@@ -7846,6 +7847,9 @@ MonoBehaviour:
   boughtWeapons: 
   boughtMaterials: 
   hasSaveData: 0
+  hasMoneyData: 0
+  hasOptionData: 0
+  hasBestTimeData: 0
   spaceConfig: {fileID: 0}
   milkyCoins: 0
   maxMilkyCoins: 9999999
@@ -11328,7 +11332,9 @@ MonoBehaviour:
   ammoToggle: {fileID: 709453183}
   healthToggle: {fileID: 521918921}
   noSpeedLimitToggle: {fileID: 1763067383}
+  countDownTimer: {fileID: 0}
   gameOverUI: {fileID: 0}
+  Crossair: {fileID: 2800000, guid: 7d7e3d4c78b32f648b40888bfc6db8d0, type: 3}
 --- !u!4 &1617549260
 Transform:
   m_ObjectHideFlags: 0
