@@ -114,9 +114,8 @@ public class LevelLoader : MonoBehaviour
             //Debug.Log(progress);
 
             yield return null;
-
         }
-
+       
     }
 
     public IEnumerator GenerateTips()
@@ -128,7 +127,7 @@ public class LevelLoader : MonoBehaviour
 
         while (loadingScreen.activeInHierarchy)
         {
-
+            
             yield return new WaitForSeconds(8f);
 
             //Make transition
@@ -142,6 +141,7 @@ public class LevelLoader : MonoBehaviour
             }
 
             tipsText.text = tips[tipCount];
+            
 
         }
 
