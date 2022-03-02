@@ -56,7 +56,7 @@ public class SpaceshipLoad : MonoBehaviour
             weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
 
             SetVehicleStats();
-            SetWeaponStats();
+            //SetWeaponStats();
         }
 
         else

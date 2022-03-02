@@ -1595,6 +1595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 219298088}
   - component: {fileID: 219298089}
+  - component: {fileID: 219298090}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1650,6 +1651,18 @@ MonoBehaviour:
   ghostMode: 0
   withEffects: 1
   reverseTrack: 0
+--- !u!114 &219298090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219298087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf48176db704c54b4e3531593a3265b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &223292052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,7 +3479,7 @@ GameObject:
   - component: {fileID: 463294541}
   - component: {fileID: 463294540}
   - component: {fileID: 463294539}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: SM_SignBorder_Arrow_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3943,7 +3956,7 @@ GameObject:
   - component: {fileID: 519079587}
   - component: {fileID: 519079586}
   - component: {fileID: 519079585}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5436,7 +5449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 665623145}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6130,7 +6143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -3e-45
+      value: -1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6460,7 +6473,7 @@ GameObject:
   - component: {fileID: 760835940}
   - component: {fileID: 760835939}
   - component: {fileID: 760835938}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14643,7 +14656,7 @@ GameObject:
   - component: {fileID: 33486984228688939}
   - component: {fileID: 23759298237327219}
   - component: {fileID: 65326638940149891}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: SM_SignBorder_Arrow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68363,7 +68376,7 @@ GameObject:
   - component: {fileID: 2456230187952168813}
   - component: {fileID: 2464537649016821893}
   - component: {fileID: 2488598391235544341}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: SM_SignBorder_Arrow_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93083,9 +93096,9 @@ PrefabInstance:
       propertyPath: saveLoadScript
       value: 
       objectReference: {fileID: 937050770}
-    - target: {fileID: 8063691110312021295, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
-      propertyPath: nitroFovModifier
-      value: 110
+    - target: {fileID: 8063691110312021294, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
+      propertyPath: timerDuration
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}

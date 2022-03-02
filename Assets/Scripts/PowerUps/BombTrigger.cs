@@ -80,7 +80,7 @@ public class BombTrigger : MonoBehaviour
         else
             rocketHasBeenActivated = true;
 
-        if (bombHasBeenActivated && other.transform.CompareTag("Bullet") || (rocketHasBeenActivated && (other.gameObject.layer == LayerMask.NameToLayer("Roadtrack") || other.gameObject.layer == LayerMask.NameToLayer("Wall") || other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Ships") || other.transform.CompareTag("Bomb") || other.transform.CompareTag("Environment"))))
+        if (bombHasBeenActivated && other.transform.CompareTag("Bullet") || (rocketHasBeenActivated && (other.gameObject.layer == LayerMask.NameToLayer("Roadtrack") || other.gameObject.layer == LayerMask.NameToLayer("Wall") || other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Ships") || other.transform.CompareTag("Bomb") || other.gameObject.layer == LayerMask.NameToLayer("Environment"))))
         {
             _explosion.Explode();
             _boomEffect.Play();

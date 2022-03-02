@@ -119,10 +119,10 @@ namespace AI
             {
                 StartCoroutine(SpawnEffect());
             }
-            if (isAlive)
-            {
-                AddAmmoOnStart();
-            }
+            //if (isAlive)
+            //{
+            //    AddAmmoOnStart();
+            //}
         }
 
         /// <summary>

@@ -66,6 +66,7 @@ namespace PlayerController
         private const float steerAnimationConstant = 2f;
         private float drag;
         private bool canDrive;
+        [SerializeField] private float timerDuration = 1f;
 
         #endregion
 
@@ -78,7 +79,7 @@ namespace PlayerController
             drag = mAccelerationConstant * 10 / mMaxSpeed;
             _timer = FindObjectOfType<Timer>();
 
-            _timer.CreateTimer(5f, () => { canDrive = true; Debug.Log("Timer has ended"); });
+            _timer.CreateTimer(timerDuration, () => { canDrive = true; Debug.Log("Timer has ended"); });
         }
 
         protected void OnEnable()
