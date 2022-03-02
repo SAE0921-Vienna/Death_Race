@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0036790755, g: 0.0051774327, b: 0.0072589843, a: 1}
+  m_IndirectSpecularColor: {r: 0.0036645893, g: 0.0051949015, b: 0.0072606485, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -916,7 +916,37 @@ MonoBehaviour:
 
 
 
-    GAME ASSETS
+
+
+    CODE & DESIGN
+
+    Main Menu
+
+
+    vsAI
+    Mode
+
+
+    Ghost Mode
+
+    Sandbox
+
+    Vehicle Controller
+
+    Weapons
+
+    PowerUps
+
+    AI
+
+
+    Road
+
+    Checkpoints
+
+
+    GAME
+    ASSETS
 
     Vehicle
 
@@ -930,36 +960,6 @@ MonoBehaviour:
 
     VFX
 
-
-    Skybox
-
-
-    CODE
-    & DESIGN
-
-    Main Menu
-
-
-    vsAI Mode
-
-
-    Ghost Mode
-
-    Sandbox
-
-    Vehicle
-    Controller
-
-    Weapons
-
-    PowerUps
-
-    AI
-
-
-    Road
-
-    Checkpoints
 
     Special
     Thanks
@@ -2334,13 +2334,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Wolfgang Brunner\nGeorge Weiner\nTamas Illes\nWolfgang Brunner\n\nSynty
-    Studios\nSynty Studios\nSynty Studios\nSynty Studios\nSynty Studios\nSynty Studios\nPolygon
-    Arsenal\nSpace\n\n\nWolfgang Brunner\nTamas Illes\nGeorge Weiner\nWolfgang Brunner\nTamas
-    Illes\nTamas Illes\nGeorge Weiner\nWolfgang Brunner\nTamas Illes\nGeorge Weiner\nWolfgang
-    Brunner\nGeorge Weiner\nTamas Illes\nAlex Grenus & Stillalive\nLukas P.\nEnzo
-    R.\nLukas P.\nEnzo R.\r\nDavid L.\r\nLukas K.\r\nAlina S.\r\nLeandro T.\r\nMicael
-    F.\t\r\nNuri S.\r\nJan P.\n"
+  m_text: "Wolfgang Brunner\nGeorge Weiner\nTamas Illes\nWolfgang Brunner\n\n\n\nWolfgang
+    Brunner\nTamas Illes\nGeorge Weiner\nWolfgang Brunner\nTamas Illes\nTamas Illes\nGeorge
+    Weiner\nWolfgang Brunner\nTamas Illes\nGeorge Weiner\nWolfgang Brunner\nGeorge
+    Weiner\nTamas Illes\n\nSynty Studios\nSynty Studios\nSynty Studios\nSynty Studios\nSynty
+    Studios\nSynty Studios\nPolygon Arsenal\nSpace\n\nAlex Grenus & Stillalive\nLukas
+    P.\nEnzo M.\nLukas P.\nEnzo R.\r\nDavid L.\r\nLukas K.\r\nAlina S.\r\nLeandro
+    T.\r\nMicael F.\t\r\nNuri S.\r\nJan P.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 608fad752e2637e42b5bcac6d6b2b6d6, type: 2}
   m_sharedMaterial: {fileID: -8501075081022297180, guid: 608fad752e2637e42b5bcac6d6b2b6d6, type: 2}
@@ -2868,6 +2868,133 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1994884717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994884719}
+  - component: {fileID: 1994884718}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1994884718
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994884717}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0786f057459643081b59cdde00389f90, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1994884719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994884717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26343.516, y: 2129.0474, z: -4257.2046}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001042251
 GameObject:
   m_ObjectHideFlags: 0
