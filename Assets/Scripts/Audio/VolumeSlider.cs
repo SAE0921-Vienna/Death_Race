@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using Audio;
 using TMPro;
 
 /// <summary>
@@ -125,5 +126,10 @@ public class VolumeSlider : MonoBehaviour
                 SetVolume(saveLoadScript.effectVolume);
                 break;
         }
+    }
+
+    public void PlayEffectSound()
+    {
+        AudioManager.PlaySound(AudioManager.Sound.RocketExplosion);
     }
 }
