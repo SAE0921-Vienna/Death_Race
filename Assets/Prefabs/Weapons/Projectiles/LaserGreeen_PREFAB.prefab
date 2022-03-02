@@ -9896,6 +9896,7 @@ GameObject:
   - component: {fileID: 114820465148654300}
   - component: {fileID: 8262945869184795515}
   - component: {fileID: 5827382424341585874}
+  - component: {fileID: 7604235416160466061}
   m_Layer: 0
   m_Name: LaserGreeen_PREFAB
   m_TagString: Bullet
@@ -14817,3 +14818,15 @@ CapsuleCollider:
   m_Height: 0.24
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7604235416160466061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975075621804630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123127991382f16468d511c77c823015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
