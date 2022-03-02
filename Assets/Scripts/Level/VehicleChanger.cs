@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using AI;
 
 public class VehicleChanger : MonoBehaviour
 {
@@ -10,13 +10,23 @@ public class VehicleChanger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SpaceshipLoad spaceshipLoad = other.GetComponentInParent<SpaceshipLoad>();
+            BaseVehicleManager vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
+
+
+            if (spaceshipLoad.currentShip != transform.GetSiblingIndex())
+            {
+                StartCoroutine(other.GetComponentInParent<BaseVehicleManager>().SpawnEffect());
+            }
 
             spaceshipLoad.currentShip = transform.GetSiblingIndex();
             spaceshipLoad.SetVehicleMesh();
-            spaceshipLoad.SetVehicleStats();
+            if (!vehicleManager.noSpeedLimit)
+            {
+                spaceshipLoad.SetVehicleStats();
+            }
             spaceshipLoad.SetWeaponPosition();
         }
-  
-
     }
+
+
 }

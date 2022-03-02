@@ -3,11 +3,11 @@ using AI;
 using UnityEngine;
 using UserInterface;
 using UnityEngine.UI;
+using PlayerController;
 
 public class PlayerManager : BaseVehicleManager
 {
     private UIManager uiManager;
-
 
     protected override void Awake()
     {
@@ -45,6 +45,9 @@ public class PlayerManager : BaseVehicleManager
 
     }
 
+    /// <summary>
+    /// Activates cheat and gives the player unlimited ammo
+    /// </summary>
     public void ToggleUnlimitedAmmo()
     {
         unlimitedAmmo = !unlimitedAmmo;
@@ -76,6 +79,9 @@ public class PlayerManager : BaseVehicleManager
         }
     }
 
+    /// <summary>
+    /// Activates cheat and gives the player unlimited health
+    /// </summary>
     public void ToggleUnlimitedHealth()
     {
 
@@ -101,10 +107,40 @@ public class PlayerManager : BaseVehicleManager
             isImmortal = unlimitedHealth;
 
         }
-
-
     }
 
+    /// <summary>
+    /// Activates cheat and gives the player no speed limit
+    /// </summary>
+    public void ToggleNoSpeedLimit()
+    {
+        noSpeedLimit = !noSpeedLimit;
+        if (noSpeedLimit)
+        {
+            if (uiManager.noSpeedLimitToggle)
+            {
+                uiManager.noSpeedLimitToggle.GetComponent<Toggle>().isOn = noSpeedLimit;
+                uiManager.noSpeedLimitToggle.GetChild(1).GetComponent<Image>().enabled = noSpeedLimit;
+            }
+
+            var _vehicleController = GetComponent<VehicleController>();
+            _vehicleController.mMaxSpeed = 9999f;
+            _vehicleController.mAccelerationConstant = 0.3f;
+            _vehicleController.steeringSpeed = 12f;
+            _vehicleController.speedDependentAngularDragMagnitude = 5f;
+        }
+        else
+        {
+            if (uiManager.noSpeedLimitToggle)
+            {
+                uiManager.noSpeedLimitToggle.GetComponent<Toggle>().isOn = noSpeedLimit;
+                uiManager.noSpeedLimitToggle.GetChild(1).GetComponent<Image>().enabled = noSpeedLimit;
+            }
+
+            var spaceshipLoad = GetComponent<SpaceshipLoad>();
+            spaceshipLoad.SetVehicleStats();
+        }
+    }
 
     //public void CheckLapCount()
     //{

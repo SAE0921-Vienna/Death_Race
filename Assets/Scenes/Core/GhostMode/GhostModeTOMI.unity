@@ -63833,6 +63833,8 @@ MonoBehaviour:
   healthSlider: {fileID: 8259887817249698837}
   moneyUI: {fileID: 2103411719}
   tempAddedMoneyUI: {fileID: 252614733}
+  ammoToggle: {fileID: 0}
+  healthToggle: {fileID: 0}
   gameOverUI: {fileID: 1153912914}
 --- !u!4 &1617549260
 Transform:
@@ -66528,6 +66530,9 @@ MonoBehaviour:
   hasHealed: 0
   isImmortal: 0
   isOnRoadtrack: 0
+  isAlive: 0
+  unlimitedAmmo: 0
+  unlimitedHealth: 0
   currentPositionIndex: 0
   currentLapIndex: 0
   currentCheckpointIndex: 0
@@ -66541,6 +66546,10 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 0, z: 0}
   spawnRotation: {x: 0, y: 0, z: 0, w: 0}
   spawnYOffset: 5
+  changeEffectPrefab:
+  - {fileID: 1732862054488416, guid: 98958d79521880540984f3838adbee94, type: 3}
+  effectScale: {x: 10, y: 10, z: 10}
+  spaceshipMesh: {fileID: 0}
 --- !u!54 &1711200117
 Rigidbody:
   m_ObjectHideFlags: 0

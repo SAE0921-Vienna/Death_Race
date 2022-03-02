@@ -90,7 +90,6 @@ public class SpaceshipLoad : MonoBehaviour
     public void SetVehicleStats()
     {
         var _vehicleController = GetComponent<VehicleController>();
-        //_vehicleController = GetComponent<VehicleController>();
         _vehicleController.mMaxSpeed = allShips[currentShip].maxSpeed;
         _vehicleController.mAccelerationConstant = allShips[currentShip].accelerationSpeed;
         _vehicleController.steeringSpeed = allShips[currentShip].turnSpeed;

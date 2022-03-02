@@ -27,6 +27,7 @@ namespace UserInterface
         public TextMeshProUGUI tempAddedMoneyUI;
         public Transform ammoToggle;
         public Transform healthToggle;
+        public Transform noSpeedLimitToggle;
 
         public GameObject gameOverUI;
 

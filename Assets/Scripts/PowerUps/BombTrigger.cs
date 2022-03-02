@@ -62,7 +62,7 @@ public class BombTrigger : MonoBehaviour
         if (bombHasBeenActivated && (other.transform.CompareTag("Bullet")|| other.transform.CompareTag("Bomb")) || (rocketHasBeenActivated && (other.gameObject.layer == LayerMask.NameToLayer("Roadtrack") || other.gameObject.layer == LayerMask.NameToLayer("Wall") || other.gameObject.layer == LayerMask.NameToLayer("Player") || other.gameObject.layer == LayerMask.NameToLayer("Ships"))))
         {
 
-            Debug.Log("ENDLICH DRINNEN");
+            //Debug.Log("ENDLICH DRINNEN");
             _explosion.Explode();
             _boomEffect.Play();
             _boomEffect.GetComponent<DestroyParticle>().DestroyParticleGameobject();

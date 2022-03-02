@@ -1,4 +1,5 @@
 using PlayerController;
+using System.Collections;
 using UnityEngine;
 
 namespace AI
@@ -36,12 +37,14 @@ namespace AI
         public bool hasHealed;
         public bool isImmortal;
         public bool isOnRoadtrack;
+        public bool isAlive;
         #endregion
 
 
         [Header("Cheats")]
         public bool unlimitedAmmo;
         public bool unlimitedHealth;
+        public bool noSpeedLimit;
 
         #region Position and Timer
         [Header("Position")]
@@ -66,6 +69,11 @@ namespace AI
         public Vector3 spawnPosition;
         public Quaternion spawnRotation;
         public float spawnYOffset = 5f;
+
+        [Header("Spawn Effects")]
+        public GameObject[] changeEffectPrefab;
+        [SerializeField] private Vector3 effectScale = new Vector3(10f, 10f, 10f);
+        [SerializeField] private Transform spaceshipMesh;
         #endregion
 
         /// <summary>
@@ -91,6 +99,10 @@ namespace AI
             var spaceshipLoad = GetComponent<SpaceshipLoad>();
             health = spaceshipLoad.CurrentShip.health;
             healthLimit = health;
+
+            canShoot = false;
+
+            spaceshipMesh = GetComponentInChildren<SpaceshipRotator>().transform.GetChild(0).transform;
         }
 
         /// <summary>
@@ -98,10 +110,19 @@ namespace AI
         /// </summary>
         protected void Start()
         {
-            AddAmmoOnStart();
-
             nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
             nextCheckpointIndex = 0;
+
+            isAlive = true;
+
+            if (changeEffectPrefab.Length != 0)
+            {
+                StartCoroutine(SpawnEffect());
+            }
+            if (isAlive)
+            {
+                AddAmmoOnStart();
+            }
         }
 
         /// <summary>
@@ -123,7 +144,7 @@ namespace AI
 
             if (health <= 0)
             {
-                //gameObject.SetActive(false);
+                isAlive = false;
                 RespawnVehicle();
                 health = healthLimit;
             }
@@ -140,8 +161,7 @@ namespace AI
             }
             else
             {
-                ammo = _shipWeapon.GetAmmo();
-                ammoAdd = _shipWeapon.GetAmmo();
+                StartCoroutine(GetAmmo());
                 //ammoLimit = playerShipWeapon.GetAmmo() * 3;
             }
         }
@@ -192,6 +212,33 @@ namespace AI
             vehicleTransform.rotation = spawnRotation;
 
             gameObject.SetActive(true);
+            StartCoroutine(SpawnEffect());
+            isAlive = true;
+
+        }
+
+
+        public IEnumerator SpawnEffect()
+        {
+            GameObject effectClone = Instantiate(changeEffectPrefab[Random.Range(0, changeEffectPrefab.Length)], spaceshipMesh);
+            effectClone.transform.position = new Vector3(spaceshipMesh.position.x, spaceshipMesh.position.y - 1f, spaceshipMesh.position.z);
+            effectClone.transform.localScale = effectScale;
+
+            yield return new WaitForSeconds(effectClone.GetComponent<ParticleSystem>().main.duration);
+
+            Destroy(effectClone, 1.2f);
+        }
+
+        public IEnumerator GetAmmo()
+        {
+
+            yield return new WaitForSeconds(3f);
+
+            ammo = _shipWeapon.GetAmmo();
+            ammoAdd = _shipWeapon.GetAmmo();
+            canShoot = true;
         }
     }
+
+
 }
