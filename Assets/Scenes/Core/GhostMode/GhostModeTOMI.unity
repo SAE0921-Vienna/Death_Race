@@ -63835,6 +63835,7 @@ MonoBehaviour:
   tempAddedMoneyUI: {fileID: 252614733}
   ammoToggle: {fileID: 0}
   healthToggle: {fileID: 0}
+  noSpeedLimitToggle: {fileID: 0}
   gameOverUI: {fileID: 1153912914}
 --- !u!4 &1617549260
 Transform:
@@ -66296,6 +66297,7 @@ MonoBehaviour:
   currentWeapon: 0
   currentMaterial: 0
   weaponClone: {fileID: 0}
+  vfxClone: {fileID: 0}
 --- !u!114 &1711200113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66533,6 +66535,7 @@ MonoBehaviour:
   isAlive: 0
   unlimitedAmmo: 0
   unlimitedHealth: 0
+  noSpeedLimit: 0
   currentPositionIndex: 0
   currentLapIndex: 0
   currentCheckpointIndex: 0
@@ -68121,6 +68124,8 @@ GameObject:
   - component: {fileID: 1779540874}
   - component: {fileID: 1779540876}
   - component: {fileID: 1779540875}
+  - component: {fileID: 1779540877}
+  - component: {fileID: 1779540878}
   m_Layer: 5
   m_Name: LoadingPanelBackground
   m_TagString: Untagged
@@ -68189,6 +68194,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779540873}
   m_CullTransparentMesh: 1
+--- !u!225 &1779540877
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779540873}
+  m_Enabled: 0
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!95 &1779540878
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779540873}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d77da7b4e00db2240a585ed738d94eba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1780465651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84867,7 +84903,7 @@ MonoBehaviour:
   - The ghost ship drives the exact same route that you drove in the best time.
   tipCount: 3
   doAnimation: 0
-  transition: {fileID: 0}
+  transition: {fileID: 1779540878}
   transitionTime: 1
 --- !u!4 &2095412006
 Transform:
