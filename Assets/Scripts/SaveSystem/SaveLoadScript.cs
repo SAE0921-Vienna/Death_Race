@@ -44,6 +44,14 @@ public class SaveLoadScript : MonoBehaviour
     public float effectVolume = 1f;
     #endregion
 
+    private void Awake()
+    {
+        LoadSaveData();
+        LoadMoneyData();
+        LoadOptionsData();
+        LoadHighScoreData();
+    }
+
     /// <summary>
     /// Gets all the bought ships in the game
     /// </summary>
