@@ -1634,7 +1634,7 @@ MonoBehaviour:
   vCam: {fileID: 0}
   overlayCam: {fileID: 86229794}
   gameOverCanvas: {fileID: 0}
-  vCamPOV: 70
+  vCamPOV: 90
   raceHasStarted: 0
   raceFinished: 0
   laps: 3
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   - The ghost ship drives the exact same route that you drove in the best time.
   tipCount: 3
   doAnimation: 0
-  transition: {fileID: 1780765286}
+  transition: {fileID: 0}
   transitionTime: 1
 --- !u!4 &223292054
 Transform:
@@ -12267,8 +12267,6 @@ GameObject:
   - component: {fileID: 1780765282}
   - component: {fileID: 1780765284}
   - component: {fileID: 1780765283}
-  - component: {fileID: 1780765285}
-  - component: {fileID: 1780765286}
   m_Layer: 5
   m_Name: LoadingPanelBackground
   m_TagString: Untagged
@@ -12337,37 +12335,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780765281}
   m_CullTransparentMesh: 1
---- !u!225 &1780765285
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780765281}
-  m_Enabled: 0
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
---- !u!95 &1780765286
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780765281}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d77da7b4e00db2240a585ed738d94eba, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1781291516
 GameObject:
   m_ObjectHideFlags: 0
@@ -93120,6 +93087,10 @@ PrefabInstance:
       propertyPath: saveLoadScript
       value: 
       objectReference: {fileID: 937050770}
+    - target: {fileID: 8063691110312021295, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
+      propertyPath: nitroFovModifier
+      value: 110
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
 --- !u!1 &8134144827171876756

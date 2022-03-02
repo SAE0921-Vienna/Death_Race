@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverCanvas;
 
-    public float vCamPOV = 70f;
+    public float vCamPOV = 90f;
 
     public bool raceHasStarted;
     public bool raceFinished;
