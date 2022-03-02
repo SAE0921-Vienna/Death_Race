@@ -42,6 +42,9 @@ namespace UserInterface
             playerManager = FindObjectOfType<PlayerManager>();
             _timer = FindObjectOfType<Timer>();
             _timer.CreateTimer(5f, () => StartCountdown());
+
+            if (Crossair != null)
+                Cursor.SetCursor(Crossair, Vector2.zero, CursorMode.ForceSoftware);
         }
 
         private void Update()
