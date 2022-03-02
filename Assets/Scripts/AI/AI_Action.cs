@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using PlayerController;
-using UserInterface;
-using Weapons;
 using AI;
 
 public class AI_Action : MonoBehaviour
@@ -13,6 +8,9 @@ public class AI_Action : MonoBehaviour
     private ShipWeapon shipweapon;
     private AIPowerUps aiPowerUps;
 
+    /// <summary>
+    /// Get the important information.
+    /// </summary>
     private void Awake()
     {
         baseVehicleManager = GetComponent<BaseVehicleManager>();
@@ -25,15 +23,21 @@ public class AI_Action : MonoBehaviour
         if (fieldOfView.nearestObject)
         {
             ShootingAI();
-            Debug.Log(this.gameObject.name + " shootet auf " + fieldOfView.nearestObject.gameObject.name);
+            Debug.Log(gameObject.name + " schieﬂt auf " + fieldOfView.nearestObject.gameObject.name);
         }
 
     }
+    /// <summary>
+    /// Executes the Shoot method.
+    /// </summary>
     private void ShootingAI()
     {
         shipweapon.Shoot();
     }
 
+    /// <summary>
+    /// Checks which PowerUps have been picked up and applies small behaviors.
+    /// </summary>
     public void CheckPowerUp(PickUpScriptableObject powerUp)
     {
         switch (powerUp.powerUpType)
