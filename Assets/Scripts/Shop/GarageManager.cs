@@ -56,4 +56,8 @@ public class GarageManager : MonoBehaviour
         Debug.Log("Quit Game");
     }
 
+    public void SetFullScreen(bool _isFullscreen)
+    {
+        Screen.fullScreen = _isFullscreen;
+    }
 }
