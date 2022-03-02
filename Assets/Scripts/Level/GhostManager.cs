@@ -63,7 +63,6 @@ public class GhostManager : MonoBehaviour
                     //ResetTimer();
 
                 }
-
             }
         }
     }

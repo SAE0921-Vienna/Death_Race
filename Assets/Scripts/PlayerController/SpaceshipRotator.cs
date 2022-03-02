@@ -22,6 +22,7 @@ namespace PlayerController
 
         protected void Update()
         {
+            if (_vehicleController == null) return;
             RotateSpaceshipZ(_vehicleController.AnimationInterpolator(), maxRotationZ);
         }
 
