@@ -10,16 +10,24 @@ public class PlayRandomAudioClip : MonoBehaviour
     private GameManager _gameManager;
     private float timer;
     private bool startTimer;
-    
+
     [SerializeField]
     private List<AudioClip> allSongs;
-    
+
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _gameManager = FindObjectOfType<GameManager>();
-        _gameManager.StartOfRace += ChangeClip;
-        _gameManager.StartOfRace += () => { startTimer = true; };
+        if (_gameManager == null)
+        {
+            ChangeClip();
+        }
+        else
+        {
+            _gameManager.StartOfRace += ChangeClip;
+            _gameManager.StartOfRace += () => { startTimer = true; };
+        }
+
     }
 
     private void Update()

@@ -244,6 +244,8 @@ public class SaveLoadScript : MonoBehaviour
             currentMiliAsString = data.currentMilliSec;
             lastGhostVehicleIndex = data.lastGhostVehicleIndex;
             lastGhostMaterialIndex = data.lastGhostMaterialIndex;
+            hasBestTimeData = true;
+
 
         }
     }
