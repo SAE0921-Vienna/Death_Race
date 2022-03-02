@@ -31,10 +31,15 @@ namespace UserInterface
 
         public GameObject gameOverUI;
 
+        [SerializeField] private Texture2D Crossair;
+
         private void Awake()
         {
             gameManager = FindObjectOfType<GameManager>();
             playerManager = FindObjectOfType<PlayerManager>();
+
+            if(Crossair != null)
+            Cursor.SetCursor(Crossair, Vector2.zero, CursorMode.ForceSoftware);
         }
 
         private void Update()
