@@ -82,6 +82,11 @@ public class ShopManager : MonoBehaviour
 
         garageManager.materialPrice.text = materialsShop[currentMaterial].materialData.GetPrice();
 
+        if (!saveLoadScript.hasMoneyData)
+        {
+            saveLoadScript.SaveMoneyData();
+        }
+
         ChangeMoneyUI();
 
     }

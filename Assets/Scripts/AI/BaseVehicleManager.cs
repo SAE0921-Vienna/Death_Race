@@ -119,10 +119,10 @@ namespace AI
             {
                 StartCoroutine(SpawnEffect());
             }
-            //if (isAlive)
-            //{
-            //    AddAmmoOnStart();
-            //}
+            if (isAlive)
+            {
+                AddAmmoOnStart();
+            }
         }
 
         /// <summary>
@@ -234,9 +234,9 @@ namespace AI
 
             yield return new WaitForSeconds(3f);
 
-            ammo = _shipWeapon.GetAmmo();
+            //ammo = _shipWeapon.GetAmmo();
             ammoAdd = _shipWeapon.GetAmmo();
-            canShoot = true;
+            //canShoot = true;
         }
     }
 
