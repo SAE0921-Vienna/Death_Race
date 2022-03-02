@@ -103,7 +103,6 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 
         if (currentWeapon.name.Equals("Raketa Avtamata"))
         {
-            projectile.GetComponent<BombTrigger>().rocketHasBeenActivated = false;
             projectile.GetComponent<SphereCollider>().enabled = true;
             projectileLifeTime *= 1.5f;
         }
