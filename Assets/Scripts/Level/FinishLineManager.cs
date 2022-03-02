@@ -68,13 +68,13 @@ public class FinishLineManager : MonoBehaviour
 
                 if (gameManager.ghostMode && !ghostManager.ghost.hasData)
                 {
-                    ghostManager.AddMoney();
+                    ghostManager.AddMoneyGhostMode();
                     ghostManager.SaveRecordingFirstTime();
                     ghostManager.ghost.isRecording = true;
                 }
                 else if (gameManager.ghostMode && ghostManager.ghost.hasData)
                 {
-                    ghostManager.AddMoney();
+                    ghostManager.AddMoneyGhostMode();
                     ghostManager.StopRecording();
                     ghostManager.StartRecording();
                 }
