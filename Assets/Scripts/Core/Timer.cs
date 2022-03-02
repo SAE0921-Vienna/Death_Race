@@ -16,7 +16,7 @@ namespace Core
 
         private void Update()
         {
-            if (timer > 0f)
+            if (timer >= 0f)
             {
                 timer -= Time.deltaTime;
                 if (IsTimerComplete())

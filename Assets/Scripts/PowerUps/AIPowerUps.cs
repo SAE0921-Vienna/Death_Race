@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using AI;
 
@@ -7,7 +5,10 @@ public class AIPowerUps : PowerUps
 {
     AI_Action aiaction;
 
-    private  void Awake()
+    /// <summary>
+    /// Get the important information.
+    /// </summary>
+    private void Awake()
     {
         _vehicleStats = GetComponent<BaseVehicleManager>();
         aiaction = GetComponent<AI_Action>();
@@ -24,13 +25,6 @@ public class AIPowerUps : PowerUps
             _vehicleStats.timer = -1;
             ResetPowerUps();
         }
-
-        //if (powerUp != null)
-        //{
-        //    ActivatePowerUp(powerUp);
-        //}
-
-
     }
 
     /// <summary>

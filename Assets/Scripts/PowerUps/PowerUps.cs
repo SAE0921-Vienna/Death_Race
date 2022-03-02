@@ -254,9 +254,7 @@ public class PowerUps : MonoBehaviour
     {
         _vehicleStats.timer = _vehicleStats.timerCooldown;
         nitroEffect.SetActive(true);
-        if (_vehicleStats.CompareTag("Player"))
-        {
-        }
+ 
         //gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(gameManager.vCamPOV, gameManager.vCamPOV + playerStats.mainCamPovBoost, Time.deltaTime);
         VehicleController vehicleContr = GetComponent<VehicleController>();
         vehicleContr.mMaxSpeed += nitroSpeedModifier;

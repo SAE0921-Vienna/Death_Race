@@ -150,7 +150,7 @@ public class GhostManager : MonoBehaviour
     /// <summary>
     /// The player gets an amount of money won by racing against their own ghost
     /// </summary>
-    public void AddMoney()
+    public void AddMoneyGhostMode()
     {
         int tempAddedMoney = 0;
 

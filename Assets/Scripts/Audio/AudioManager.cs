@@ -42,6 +42,7 @@ namespace Audio
 
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.PlayOneShot(GetAudioClip(sound));
+                audioSource.outputAudioMixerGroup = GetAudioMixerGroup(sound);
 
                 var destroyer = soundGameObject.AddComponent<SoundDestroyer>();
                 destroyer.DestroySoundObject(soundGameObject, GetAudioClip(sound).length);
