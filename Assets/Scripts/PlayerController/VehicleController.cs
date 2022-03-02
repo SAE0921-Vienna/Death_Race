@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using Core;
 using UnityEngine;
 
 namespace PlayerController
@@ -60,9 +61,11 @@ namespace PlayerController
         private Rigidbody _rBody;
         private InputActions _controls;
         private RaycastHit hit;
+        private Timer _timer;
         //private RaycastHit wallHit;
         private const float steerAnimationConstant = 2f;
         private float drag;
+        private bool canDrive;
 
         #endregion
 
@@ -73,6 +76,9 @@ namespace PlayerController
             _rBody = GetComponent<Rigidbody>();
             //_vehicleAgent = GetComponent<VehicleAgent>();
             drag = mAccelerationConstant * 10 / mMaxSpeed;
+            _timer = FindObjectOfType<Timer>();
+
+            _timer.CreateTimer(5f, () => { canDrive = true; Debug.Log("Timer has ended"); });
         }
 
         protected void OnEnable()
@@ -109,6 +115,8 @@ namespace PlayerController
         /// </summary>
         protected void Accelerate()
         {
+            if (!canDrive) return;
+            
             currentSpeed = AccelerationValue >= 0.01f && isOnRoadtrack ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100)
                 : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
             _rBody.AddForce(transform.forward * (mMaxSpeed * accelerationCurve.Evaluate(currentSpeed) - drag), ForceMode.Acceleration);
@@ -120,6 +128,7 @@ namespace PlayerController
         protected void Brake()
         {
             if (AccelerationValue > 0f) return;
+            if (!canDrive) return;
 
             currentBackwardsSpeed = AccelerationValue <= -0.01f && isOnRoadtrack && currentSpeed <= 0.01f ? Mathf.Clamp01(currentBackwardsSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 200)
                 : Mathf.Clamp01(currentBackwardsSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 500);
@@ -174,6 +183,7 @@ namespace PlayerController
         /// </summary>
         protected void SideThrust()
         {
+            if (!canDrive) return;
             _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime * 100), ForceMode.Force);
         }
         protected RaycastHit GroundInfo()
@@ -203,6 +213,7 @@ namespace PlayerController
         /// </summary>
         protected void Steer()
         {
+            if (!canDrive) return;
             steeringAngle = Vector3.up * ((steeringSpeed - speedDependentAngularDragMagnitude * currentSpeed) * SteerValueRaw * Time.fixedDeltaTime);
             _rBody.AddRelativeTorque(steeringAngle, ForceMode.VelocityChange);
 
@@ -241,7 +252,6 @@ namespace PlayerController
             else
             {
                 return Mathf.RoundToInt(currentSpeed * mMaxSpeed);
-
             }
         }
 

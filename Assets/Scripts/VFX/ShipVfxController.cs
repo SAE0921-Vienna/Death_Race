@@ -42,7 +42,7 @@ namespace VFX
             }
             else
             {
-                t = _aiFollowCurve.currentSpeed;
+                t = _aiFollowCurve.GetCurrentSpeed();
             }
             return t;
         }
