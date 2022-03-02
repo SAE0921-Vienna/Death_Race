@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class Credits : MonoBehaviour
 {
     public LevelLoader levelLoader;
+    [SerializeField] private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -19,6 +25,10 @@ public class Credits : MonoBehaviour
             {
                 levelLoader.LoadLevel("MainMenu");
             }
+        }
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Finished"))
+        {
+            levelLoader.LoadLevel("MainMenu");
         }
 
     }
