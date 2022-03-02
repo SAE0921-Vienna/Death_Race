@@ -12,6 +12,9 @@ public class SaveLoadScript : MonoBehaviour
     public bool[] boughtMaterials;
 
     public bool hasSaveData;
+    public bool hasMoneyData;
+    public bool hasOptionData;
+    public bool hasBestTimeData;
     #endregion
 
     #region References
@@ -113,6 +116,7 @@ public class SaveLoadScript : MonoBehaviour
     public void SaveSaveData()
     {
         SaveSystem.SaveSaveData(lastEquippedVehicleMesh, lastEquippedVehicleColliderMesh, lastEquippedWeaponPrefab, lastEquippedMaterial, GetBoughtShips(), GetBoughtWeapons(), GetBoughtMaterials());
+        hasSaveData = true;
     }
 
     /// <summary>
@@ -145,6 +149,8 @@ public class SaveLoadScript : MonoBehaviour
     public void SaveMoneyData()
     {
         SaveSystem.SaveMoneyData(milkyCoins);
+        hasMoneyData = true;
+
     }
 
     /// <summary>
@@ -155,7 +161,8 @@ public class SaveLoadScript : MonoBehaviour
         SaveData data = SaveSystem.LoadMoneyData();
         if (data == null)
         {
-            Debug.LogWarning("Data empty");
+            Debug.LogWarning("Moneydata empty");
+            hasMoneyData = false;
         }
         else
         {
@@ -175,6 +182,7 @@ public class SaveLoadScript : MonoBehaviour
         musicVolume = _musicVolume;
         effectVolume = _effectVolume;
         SaveSystem.SaveOptionsData(masterVolume, musicVolume, effectVolume);
+        hasOptionData = true;
     }
 
     /// <summary>
@@ -186,6 +194,7 @@ public class SaveLoadScript : MonoBehaviour
         if (data == null)
         {
             Debug.LogWarning("Data empty");
+            hasOptionData = false;
             masterVolume = 0.5f;
             musicVolume = 0.5f;
             effectVolume = 0.5f;
@@ -212,6 +221,7 @@ public class SaveLoadScript : MonoBehaviour
         lastGhostVehicleIndex = _lastGhostVehicleIndex;
         lastGhostMaterialIndex = _lastGhostMaterialIndex;
         SaveSystem.SaveHighscoreData(_bestTime, _currentMin, _currentSec, _currentMilliSec, lastGhostVehicleIndex, lastGhostMaterialIndex);
+        hasBestTimeData = true;
     }
 
     /// <summary>
@@ -223,6 +233,8 @@ public class SaveLoadScript : MonoBehaviour
         if (data == null)
         {
             //Debug.LogWarning("Data empty");
+            hasBestTimeData = false;
+
         }
         else
         {
