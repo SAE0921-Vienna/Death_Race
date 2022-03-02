@@ -34,14 +34,19 @@ public class WeaponChanger : MonoBehaviour
             shipWeapon.SetEquippedWeapon();
             shipWeapon.shipWeaponTransform = spaceshipLoad.weaponClone.transform.GetChild(0).transform;
 
-            vehicleManager.ammo = shipWeapon.GetAmmo();
-            vehicleManager.ammoAdd = shipWeapon.GetAmmo();
+            if (!vehicleManager.unlimitedAmmo) {
 
-            if (vehicleManager.CompareTag("Player"))
-            {
-                uIManager.ammoAmountUI.gameObject.SetActive(true);
+                vehicleManager.ammo = shipWeapon.GetAmmo();
+                vehicleManager.ammoAdd = shipWeapon.GetAmmo();
+
+                if (vehicleManager.CompareTag("Player"))
+                {
+                    uIManager.ammoAmountUI.gameObject.SetActive(true);
+                }
+                vehicleManager.canShoot = true;
             }
-            vehicleManager.canShoot = true;
+
+       
 
         }
 

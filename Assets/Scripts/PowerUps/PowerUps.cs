@@ -188,6 +188,11 @@ public class PowerUps : MonoBehaviour
             _vehicleStats.hasShield = false;
             _vehicleStats.isImmortal = false;
             shieldEffect.SetActive(false);
+
+            if (_vehicleStats.unlimitedHealth)
+            {
+                _vehicleStats.isImmortal = true;
+            }
         }
         if (_vehicleStats.hasNitro)
         {

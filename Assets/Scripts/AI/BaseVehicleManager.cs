@@ -38,6 +38,11 @@ namespace AI
         public bool isOnRoadtrack;
         #endregion
 
+
+        [Header("Cheats")]
+        public bool unlimitedAmmo;
+        public bool unlimitedHealth;
+
         #region Position and Timer
         [Header("Position")]
         public int currentPositionIndex;

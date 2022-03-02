@@ -8,9 +8,6 @@ public class PlayerManager : BaseVehicleManager
 {
     private UIManager uiManager;
 
-    [Header("Cheats")]
-    [SerializeField] private bool unlimitedAmmo;
-    [SerializeField] private bool unlimitedHealth;
 
     protected override void Awake()
     {
@@ -34,10 +31,6 @@ public class PlayerManager : BaseVehicleManager
         base.Update();
         UpdateUIValues();
 
-        if (!isImmortal && unlimitedHealth)
-        {
-            isImmortal = true;
-        }
     }
 
     private void UpdateUIValues()
