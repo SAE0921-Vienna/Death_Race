@@ -2967,15 +2967,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000024461766
+      value: 0.00000001137232
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000372529
+      value: 0.000000029802319
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000027939675
+      value: 0.0000000029103826
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10103,11 +10103,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.07414336
+      value: 0.07414333
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00122637
+      value: -0.0012263668
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
@@ -10115,7 +10115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.016490411
+      value: 0.0164904
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -20060,9 +20060,9 @@ MonoBehaviour:
       - {x: 126.91868, y: -103.607086, z: -10.880577}
       - {x: 133.77243, y: -104.13872, z: -11.590979}
       - {x: 144.59634, y: -104.97831, z: -12.7128935}
-      - {x: 152.15388, y: -95.1342, z: -13.422217}
+      - {x: 152.1539, y: -95.13421, z: -13.422211}
       - {x: 154.96698, y: -85.09579, z: -12.52624}
-      - {x: 155.8941, y: -81.787384, z: -12.230949}
+      - {x: 155.8941, y: -81.787384, z: -12.230951}
       - {x: 155.58421, y: -78.21785, z: -12.233528}
       - {x: 155.14307, y: -75.37894, z: -11.793225}
       - {x: 154.11131, y: -68.73939, z: -10.763461}
@@ -20366,7 +20366,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 90
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.25
     showTransformTool: 1
@@ -26684,6 +26684,10 @@ PrefabInstance:
       propertyPath: saveLoadScript
       value: 
       objectReference: {fileID: 360780220}
+    - target: {fileID: 8063691110312021295, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
+      propertyPath: nitroFovModifier
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
 --- !u!4 &1129407590 stripped
@@ -71525,10 +71529,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  maxSpeed: 25
+  maxSpeed: 22
   end: 0
   pathCreator: {fileID: 902319392}
-  accelerationConstant: 0.2
+  accelerationConstant: 0.15
 --- !u!4 &4813497883492878392
 Transform:
   m_ObjectHideFlags: 0

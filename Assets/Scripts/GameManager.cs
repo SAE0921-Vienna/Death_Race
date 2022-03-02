@@ -68,17 +68,11 @@ public class GameManager : MonoBehaviour
         }
 
         vCam = FindObjectOfType<CinemachineVirtualCamera>();
-        _timer = FindObjectOfType<Timer>();
         
-        StartOfRaceTimer();
+        
 
         vCamPOV = vCam.m_Lens.FieldOfView;
         overlayCam.fieldOfView = vCamPOV;
-    }
-
-    private void StartOfRaceTimer()
-    {
-        _timer.CreateTimer(startOfRaceTimer, () => { StartOfRace?.Invoke(); });
     }
 
     private void Start()
@@ -86,6 +80,14 @@ public class GameManager : MonoBehaviour
         audioManager.transform.GetChild(0).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(1).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(2).GetComponent<VolumeSlider>().GetAudiosAtStart();
+        
+        _timer = FindObjectOfType<Timer>();
+        StartOfRaceTimer();
+    }
+    
+    private void StartOfRaceTimer()
+    {
+        _timer.CreateTimer(startOfRaceTimer, () => { StartOfRace?.Invoke(); });
     }
 
     private void Update()
