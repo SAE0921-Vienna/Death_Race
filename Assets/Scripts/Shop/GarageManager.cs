@@ -56,5 +56,4 @@ public class GarageManager : MonoBehaviour
         Debug.Log("Quit Game");
     }
 
-
 }
