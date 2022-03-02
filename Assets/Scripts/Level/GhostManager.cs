@@ -184,7 +184,7 @@ public class GhostManager : MonoBehaviour
             //50
             tempAddedMoney += 50;
         }
-        if (saveLoadScript.bestTime > gameManager.roundTimer && gameManager.roundTimer <= 100f)
+        if ((saveLoadScript.bestTime > gameManager.roundTimer  && gameManager.roundTimer <= 100f) || !saveLoadScript.hasBestTimeData)
         {
             tempAddedMoney += 500;
         }
