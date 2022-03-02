@@ -123,7 +123,7 @@ public class SaveLoadScript : MonoBehaviour
         SaveData data = SaveSystem.LoadSaveData();
         if (data == null)
         {
-            Debug.LogWarning("Data empty");
+            Debug.LogWarning("Load Data empty");
             hasSaveData = false;
         }
         else
