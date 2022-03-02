@@ -29,6 +29,7 @@ public class SpaceshipLoad : MonoBehaviour
     private BaseVehicleManager _baseVehicleManager;
 
     public GameObject weaponClone;
+    public GameObject vfxClone;
 
 
     private void Awake()
@@ -105,8 +106,13 @@ public class SpaceshipLoad : MonoBehaviour
 
     public void SetVFXPrefab()
     {
+        if(vfxClone!= null)
+        {
+            Destroy(vfxClone);
+        }
+
         if (GetComponentInChildren<SpaceshipRotator>())
-            Instantiate(CurrentShip.vfxPrefab, GetComponentInChildren<SpaceshipRotator>().transform);
+            vfxClone = Instantiate(CurrentShip.vfxPrefab, GetComponentInChildren<SpaceshipRotator>().transform);
     }
 
     public void SetWeaponPosition()
