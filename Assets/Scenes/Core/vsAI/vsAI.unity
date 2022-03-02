@@ -2967,15 +2967,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00000001137232
+      value: -0.00000001137232
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000029802319
+      value: -0.000000029802319
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000029103826
+      value: -0.0000000029103826
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8715,6 +8715,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8063691110312021288, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
   m_PrefabInstance: {fileID: 1129407589}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &511308158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8063691110312021291, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
+  m_PrefabInstance: {fileID: 1129407589}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511308155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0875f827db88a9145b3ad5733cf6b841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515871216
 GameObject:
   m_ObjectHideFlags: 0
@@ -9338,7 +9349,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 511308158}
         m_TargetAssemblyTypeName: PauseMenuScript, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -10103,11 +10114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.07414333
+      value: 0.07414336
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0012263668
+      value: -0.00122637
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
@@ -10115,7 +10126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0164904
+      value: 0.016490411
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12157,7 +12168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimap: {fileID: 1948934038}
   uiManager: {fileID: 1617549259}
-  _checkpointManager: {fileID: 24448098}
+  _checkpointManager: {fileID: 2095051797}
   ghostManager: {fileID: 620429327}
 --- !u!114 &620429327
 MonoBehaviour:
@@ -28052,7 +28063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187456387}
   m_LocalRotation: {x: -0, y: -0.033171397, z: -0, w: 0.9994497}
-  m_LocalPosition: {x: 869.59985, y: -196.96474, z: 323.7}
+  m_LocalPosition: {x: 869.59985, y: -196.96474, z: 309.8}
   m_LocalScale: {x: 75, y: 36.177082, z: 3}
   m_Children: []
   m_Father: {fileID: 2095051796}
@@ -56242,9 +56253,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1121006601}
     - target: {fileID: 3931002765550088449, guid: c9b92660942f01a4a82684a1408ee5b2, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 615783157}
+    - target: {fileID: 3931002765550088449, guid: c9b92660942f01a4a82684a1408ee5b2, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1632963625}
+    - target: {fileID: 3931002765550088449, guid: c9b92660942f01a4a82684a1408ee5b2, type: 3}
+      propertyPath: reverseTrack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3931002765550088449, guid: c9b92660942f01a4a82684a1408ee5b2, type: 3}
       propertyPath: gameOverCanvas
       value: 
@@ -71306,7 +71325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4813497883390902270
 MonoBehaviour:
   m_ObjectHideFlags: 0
