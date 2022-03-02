@@ -7,7 +7,7 @@ public class BombTrigger : MonoBehaviour
 {
     public bool bombHasBeenActivated;
     public bool rocketHasBeenActivated;
-    public bool bombWhenNotOnTrigger;
+    public bool bombInstantCollision;
 
     private ParticleSystem _boomEffect;
     [SerializeField] private float bombTimer = 5f;
@@ -31,6 +31,10 @@ public class BombTrigger : MonoBehaviour
         _boomEffect = transform.GetChild(0).GetComponent<ParticleSystem>();
         _boomEffect.Stop();
     }
+    private void Start()
+    {
+        StartCoroutine(CheckBomb());
+    }
 
     private void Update()
     {
@@ -45,13 +49,17 @@ public class BombTrigger : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (bombHasBeenActivated && (collision.gameObject.layer == LayerMask.NameToLayer("Player") || collision.gameObject.layer == LayerMask.NameToLayer("Ships")))
-            bombWhenNotOnTrigger = false;
-            StartCoroutine(CheckBomb());
+        //if (bombHasBeenActivated && (collision.gameObject.layer == LayerMask.NameToLayer("Player") || collision.gameObject.layer == LayerMask.NameToLayer("Ships")))
+        //{
+        //    bombWhenNotOnTrigger = false;
+        //    StartCoroutine(CheckBomb());
+        //}
+        //else
+        //    bombWhenNotOnTrigger = true;
 
         Debug.Log("OCE" + collision.gameObject.name);
 
-        if (bombWhenNotOnTrigger && collision.transform.GetComponent<BaseVehicleManager>())
+        if (bombHasBeenActivated && bombInstantCollision && collision.transform.GetComponent<BaseVehicleManager>())
         {
             _explosion.Explode();
             _boomEffect.Play();
@@ -81,7 +89,7 @@ public class BombTrigger : MonoBehaviour
     public IEnumerator CheckBomb()
     {
         yield return new WaitForSeconds(0.5f);
-        bombWhenNotOnTrigger = true;
+        bombInstantCollision = true;
     }
 }
 

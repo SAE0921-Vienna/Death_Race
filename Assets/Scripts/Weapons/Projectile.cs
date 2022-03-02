@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this);
         Debug.Log("PROJECTILE SCRIPT");
+        Destroy(gameObject);
     }
 }
