@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8091486215703073244}
   - component: {fileID: 8140384982409764468}
   - component: {fileID: 5601322929218724506}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: SM_Prop_Turret_Missile_Base_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,6 +115,8 @@ MonoBehaviour:
   weaponOnShip: {fileID: 0}
   fieldOfView: {fileID: 0}
   weaponToTarget: {x: 0, y: 0, z: 0}
+  changePositionTimer: 0
+  checkTimer: 0
 --- !u!1 &8078238718509971270
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +128,7 @@ GameObject:
   - component: {fileID: 8075507013936392776}
   - component: {fileID: 8099275745032767598}
   - component: {fileID: 8091928291218632324}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: SM_Prop_Turret_Missile_Barrel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +211,7 @@ GameObject:
   - component: {fileID: 8091377044793161808}
   - component: {fileID: 2362197731914583521}
   - component: {fileID: 572221355257050177}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: WEAPON_Missle_AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

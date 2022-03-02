@@ -12,6 +12,7 @@ TagManager:
   - Road
   - Wall
   - Bomb
+  - LevelManager
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - Wall
   - Checkpoint
   - Minimap
-  - 
-  - 
+  - VFX
+  - Weapon
   - 
   - 
   - 
