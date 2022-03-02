@@ -13,6 +13,14 @@ public class AIFollowCurve : MonoBehaviour
     [SerializeField] private PathCreator pathCreator;
     [SerializeField] private float accelerationConstant;
     private float _distanceTravelled;
+    private GameManager _gameManager;
+    private bool _canDrive;
+
+    private void Awake()
+    {
+        _gameManager = FindObjectOfType<GameManager>();
+        _gameManager.StartOfRace += () => { _canDrive = true; };
+    }
 
 
     private void FixedUpdate()
@@ -23,7 +31,6 @@ public class AIFollowCurve : MonoBehaviour
 
     private void TravelAlongCurve()
     {
-        //transform.position = pathCreator.path.GetPointAtDistance(_distanceTravelled, end);
         transform.position = pathCreator.path.GetPointAtDistance(_distanceTravelled, end);
         transform.rotation = pathCreator.path.GetRotationAtDistance(_distanceTravelled, end);
         
@@ -33,6 +40,7 @@ public class AIFollowCurve : MonoBehaviour
 
     private void Accelerate()
     {
+        if (!_canDrive) return;
         speed = Mathf.MoveTowards(speed, maxSpeed, accelerationConstant);
     }
 

@@ -1,3 +1,4 @@
+using Core;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,13 +29,17 @@ namespace UserInterface
         public Transform ammoToggle;
         public Transform healthToggle;
         public Transform noSpeedLimitToggle;
+        public TextMeshProUGUI countDownTimer;
 
         public GameObject gameOverUI;
+        private Timer _timer;
 
         private void Awake()
         {
             gameManager = FindObjectOfType<GameManager>();
             playerManager = FindObjectOfType<PlayerManager>();
+            _timer = FindObjectOfType<Timer>();
+            _timer.CreateTimer(5f, () => StartCountdown());
         }
 
         private void Update()
@@ -64,6 +69,12 @@ namespace UserInterface
                 ammoAmountUI.text = "999";
             }
                
+        }
+
+        public void StartCountdown()
+        {
+            print("Started Countdown");
+            countDownTimer.GetComponent<Animation>().Play();
         }
 
     }

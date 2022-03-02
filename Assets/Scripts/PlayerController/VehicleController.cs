@@ -55,17 +55,16 @@ namespace PlayerController
         [SerializeField] protected LayerMask wallLayerMask;
         [SerializeField] protected float maxSphereCastDistance;
         [SerializeField] protected float sphereCastRadius;
-        //[SerializeField] protected float trackSearchRadius;
         public bool isOnRoadtrack;
 
         private Rigidbody _rBody;
         private InputActions _controls;
-        private RaycastHit hit;
-        private Timer _timer;
-        //private RaycastHit wallHit;
+        private RaycastHit _hit;
+        private float _drag;
+        private bool _canDrive;
+        private GameManager _gameManager;
+        
         private const float steerAnimationConstant = 2f;
-        private float drag;
-        private bool canDrive;
 
         #endregion
 
@@ -75,10 +74,9 @@ namespace PlayerController
         {
             _rBody = GetComponent<Rigidbody>();
             //_vehicleAgent = GetComponent<VehicleAgent>();
-            drag = mAccelerationConstant * 10 / mMaxSpeed;
-            _timer = FindObjectOfType<Timer>();
-
-            _timer.CreateTimer(5f, () => { canDrive = true; Debug.Log("Timer has ended"); });
+            _drag = mAccelerationConstant * 10 / mMaxSpeed;
+            _gameManager = FindObjectOfType<GameManager>();
+            _gameManager.StartOfRace += () => { _canDrive = true; };
         }
 
         protected void OnEnable()
@@ -115,11 +113,11 @@ namespace PlayerController
         /// </summary>
         protected void Accelerate()
         {
-            if (!canDrive) return;
+            if (!_canDrive) return;
             
             currentSpeed = AccelerationValue >= 0.01f && isOnRoadtrack ? Mathf.Clamp01(currentSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 100)
                 : Mathf.Clamp01(currentSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 100);
-            _rBody.AddForce(transform.forward * (mMaxSpeed * accelerationCurve.Evaluate(currentSpeed) - drag), ForceMode.Acceleration);
+            _rBody.AddForce(transform.forward * (mMaxSpeed * accelerationCurve.Evaluate(currentSpeed) - _drag), ForceMode.Acceleration);
         }
 
         /// <summary>
@@ -128,7 +126,7 @@ namespace PlayerController
         protected void Brake()
         {
             if (AccelerationValue > 0f) return;
-            if (!canDrive) return;
+            if (!_canDrive) return;
 
             currentBackwardsSpeed = AccelerationValue <= -0.01f && isOnRoadtrack && currentSpeed <= 0.01f ? Mathf.Clamp01(currentBackwardsSpeed += 0.01f * mAccelerationConstant * Time.fixedDeltaTime * 200)
                 : Mathf.Clamp01(currentBackwardsSpeed -= 0.01f * decelerationConstant * Time.fixedDeltaTime * 500);
@@ -183,7 +181,7 @@ namespace PlayerController
         /// </summary>
         protected void SideThrust()
         {
-            if (!canDrive) return;
+            if (!_canDrive) return;
             _rBody.AddForce(transform.right * (sideThrustAmount * SteerValueRaw * Time.fixedDeltaTime * 100), ForceMode.Force);
         }
         protected RaycastHit GroundInfo()
@@ -193,7 +191,7 @@ namespace PlayerController
             var down = -myTransform.up;
 
 
-            if (Physics.SphereCast(position, sphereCastRadius, down, out hit, maxSphereCastDistance, layerMask, QueryTriggerInteraction.Ignore))
+            if (Physics.SphereCast(position, sphereCastRadius, down, out _hit, maxSphereCastDistance, layerMask, QueryTriggerInteraction.Ignore))
             {
                 isOnRoadtrack = true;
             }
@@ -201,7 +199,7 @@ namespace PlayerController
             {
                 isOnRoadtrack = false;
             }
-            return hit;
+            return _hit;
         }
         #region Steering
 
@@ -213,7 +211,7 @@ namespace PlayerController
         /// </summary>
         protected void Steer()
         {
-            if (!canDrive) return;
+            if (!_canDrive) return;
             steeringAngle = Vector3.up * ((steeringSpeed - speedDependentAngularDragMagnitude * currentSpeed) * SteerValueRaw * Time.fixedDeltaTime);
             _rBody.AddRelativeTorque(steeringAngle, ForceMode.VelocityChange);
 
