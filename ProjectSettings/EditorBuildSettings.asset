@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Core/GhostMode/GhostModeTOMI.unity
     guid: b47627e3e81b65044849f25a7b8e7081
+  - enabled: 1
+    path: Assets/Scenes/Core/Credits/Credits.unity
+    guid: e8a4f7d0895ae99469554dfafdd3e73d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 95069c04c6d24d1eca2c674b2342f822, type: 2}
     com.unity.ml-agents.settings: {fileID: 11400000, guid: 773d2f3eca7dec85cac96925dbc6a340, type: 2}
