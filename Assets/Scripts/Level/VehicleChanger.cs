@@ -20,6 +20,7 @@ public class VehicleChanger : MonoBehaviour
 
             spaceshipLoad.currentShip = transform.GetSiblingIndex();
             spaceshipLoad.SetVehicleMesh();
+            spaceshipLoad.SetVFXPrefab();
             if (!vehicleManager.noSpeedLimit)
             {
                 spaceshipLoad.SetVehicleStats();
