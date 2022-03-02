@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/PlayableDirector.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/PlayableDirector.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayableDirector/CutsceneIntro.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayableDirector/CutsceneIntro.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Track/SpacePlaneMAT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Track/SpacePlaneMAT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayRandomAudioClip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayRandomAudioClip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/MusicPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/MusicPlayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/GhostMode/GhostModeTOMI_AI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/GhostMode/GhostModeTOMI_AI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/Sandbox/Sandbox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/Sandbox/Sandbox.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIFollowCurve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIFollowCurve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/GeneratePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/GeneratePath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceshipLoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceshipLoad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX/ShipVfxController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX/ShipVfxController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +215,7 @@
       <workItem from="1645965044673" duration="600000" />
       <workItem from="1645980941645" duration="4317000" />
       <workItem from="1646138382020" duration="1632000" />
-      <workItem from="1646152540038" duration="947000" />
+      <workItem from="1646152540038" duration="9767000" />
     </task>
     <servers />
   </component>

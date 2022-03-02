@@ -1,4 +1,3 @@
-using Audio;
 using PlayerController;
 using UnityEngine;
 
@@ -20,16 +19,32 @@ namespace VFX
         public ParticleSystem sparkParticleSystem;
         
         private VehicleController _vehicleController;
+        private AIFollowCurve _aiFollowCurve;
+        private float t;
         
         private void Awake()
         {
             _vehicleController = GetComponentInParent<VehicleController>();
+            _aiFollowCurve = GetComponentInParent<AIFollowCurve>();
         }
     
         private void Update()
         {
             ThrusterController();
             WingTrailController();
+        }
+
+        private float SetInterpolator()
+        {
+            if (_vehicleController != null)
+            {
+                t = _vehicleController.currentSpeed;
+            }
+            else
+            {
+                t = _aiFollowCurve.currentSpeed;
+            }
+            return t;
         }
     
         /// <summary>
@@ -45,7 +60,7 @@ namespace VFX
             foreach (var thruster in thrusterParticleSystems)
             {
                 var main = thruster.main;
-                main.startLifetime = Mathf.Lerp(minLifeTime, maxLifeTime, thrusterAnimationCurve.Evaluate(_vehicleController.currentSpeed));
+                main.startLifetime = Mathf.Lerp(minLifeTime, maxLifeTime, thrusterAnimationCurve.Evaluate(SetInterpolator()));
             }
         }
     
@@ -61,8 +76,8 @@ namespace VFX
             }
             foreach (var trail in trailRenderers)
             {
-                trail.startColor = Color.Lerp(trailStartColor, trailEndColor, _vehicleController.currentSpeed);
-                trail.endColor = Color.Lerp(trailStartColor, trailEndColor, _vehicleController.currentSpeed);
+                trail.startColor = Color.Lerp(trailStartColor, trailEndColor, SetInterpolator());
+                trail.endColor = Color.Lerp(trailStartColor, trailEndColor, SetInterpolator());
             }
         }
     }

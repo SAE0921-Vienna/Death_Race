@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayRandomAudioClip : MonoBehaviour
 {
     private AudioSource _audioSource;
+    private float timer;
     
     [SerializeField]
     private List<AudioClip> allSongs;
@@ -15,21 +18,24 @@ public class PlayRandomAudioClip : MonoBehaviour
         ChangeClip();
     }
 
-    private void ChangeClip()
+    private void Update()
     {
-        _audioSource.clip = allSongs[Random.Range(0, allSongs.Count)];
-        _audioSource.Play();
-        StartCoroutine(ChangeClipTimer());
+        Timer();
     }
 
-    private IEnumerator ChangeClipTimer()
+    private void ChangeClip()
     {
-        var timer = 0f;
-        while (timer <= _audioSource.clip.length)
+        _audioSource.PlayOneShot(_audioSource.clip = allSongs[Random.Range(0, allSongs.Count)]);
+    }
+
+
+    private void Timer()
+    {
+        timer += Time.deltaTime * _audioSource.pitch;
+        if (timer >= _audioSource.clip.length + 1)
         {
-            timer += Time.deltaTime;
-            yield return new WaitForSeconds(Time.deltaTime);
+            timer = 0f;
+            ChangeClip();
         }
-        ChangeClip();
     }
 }
