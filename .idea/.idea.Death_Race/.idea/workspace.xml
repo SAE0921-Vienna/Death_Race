@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Minigun.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Minigun.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Photonblaster.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Photonblaster.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Rail.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Rail.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MISC/DestroyParticleCustom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MISC/DestroyParticleCustom.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/vfx_Impact_FireBall 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/vfx_Impact_FireBall 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/vfx_Impact_FireBall 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/vfx_Impact_FireBall 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/vfx_Impact_Photonblaster.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/vfx_Impact_Photonblaster.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/LaserGreeen_PREFAB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/LaserGreeen_PREFAB.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/LaserProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/LaserProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/RailProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/RailProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MISC/DestroyParticle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MISC/DestroyParticle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +225,7 @@
       <workItem from="1645980941645" duration="4317000" />
       <workItem from="1646138382020" duration="1632000" />
       <workItem from="1646152540038" duration="12580000" />
-      <workItem from="1646241295105" duration="8678000" />
+      <workItem from="1646241295105" duration="10474000" />
     </task>
     <servers />
   </component>
