@@ -7,7 +7,7 @@ using PathCreation;
 
 public class AIFollowCurve : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    public float speed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private EndOfPathInstruction end;
     [SerializeField] private PathCreator pathCreator;

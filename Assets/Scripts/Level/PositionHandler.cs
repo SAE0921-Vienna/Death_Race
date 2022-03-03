@@ -18,6 +18,7 @@ public class PositionHandler : MonoBehaviour
 
 
     public int[] checkpointArray;
+    public int[] lapArray;
 
 
     private void Start()
@@ -30,7 +31,6 @@ public class PositionHandler : MonoBehaviour
             racers.Add(racersParent.GetChild(0).gameObject);
         }
 
-        //PositionCalc();
         PositionTest();
 
     }
@@ -69,14 +69,29 @@ public class PositionHandler : MonoBehaviour
         //AI
         checkpointArray[1] = racers[1].GetComponent<AIManager>().nextCheckpointIndex;
 
+        Array.Sort(checkpointArray);
 
-        if (checkpointArray[0] > checkpointArray[1])
+        int x = Array.IndexOf(checkpointArray, playerPosition);
+
+        switch (x)
         {
-            playerManager.currentPositionIndex = 1;
-        }
-        if (checkpointArray[1] > checkpointArray[0])
-        {
-            playerManager.currentPositionIndex = 2;
+            case 0:
+                racers[0].GetComponent<PlayerManager>().currentPositionIndex = 1;
+                break;
+            case 1:
+                racers[0].GetComponent<PlayerManager>().currentPositionIndex = 2;
+                break;
+            case 2:
+                racers[0].GetComponent<PlayerManager>().currentPositionIndex = 3;
+                break;
+            case 3:
+                racers[0].GetComponent<PlayerManager>().currentPositionIndex = 4;
+                break;
+            case 4:
+                racers[0].GetComponent<PlayerManager>().currentPositionIndex = 5;
+                break;
+            default:
+                break;
         }
     }
 
@@ -119,13 +134,9 @@ public class PositionHandler : MonoBehaviour
     public int GetLap(Transform racer)
     {
 
-        if (racer.CompareTag("AI"))
+        if (racer.GetComponent<BaseVehicleManager>())
         {
-            return racer.GetComponent<AIManager>().currentLapIndex;
-        }
-        if (racer.CompareTag("Player"))
-        {
-            return racer.GetComponent<PlayerManager>().currentLapIndex;
+            return racer.GetComponent<BaseVehicleManager>().currentLapIndex;
         }
         else
         {
@@ -136,13 +147,9 @@ public class PositionHandler : MonoBehaviour
 
     public int GetCheckpoint(Transform racer)
     {
-        if (racer.CompareTag("AI"))
+        if (racer.GetComponent<BaseVehicleManager>())
         {
-            return racer.GetComponent<AIManager>().currentCheckpointIndex;
-        }
-        if (racer.CompareTag("Player"))
-        {
-            return racer.GetComponent<PlayerManager>().currentCheckpointIndex;
+            return racer.GetComponent<BaseVehicleManager>().currentCheckpointIndex;
         }
         else
         {
