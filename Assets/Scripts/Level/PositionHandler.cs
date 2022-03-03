@@ -15,14 +15,17 @@ public class PositionHandler : MonoBehaviour
 
     public int[] checkpointArray;
     public int[] lapArray;
+    public int[] totalcpoint;
+
+    public int playerPosition;
+    public int ai1Position;
+    public int ai2Position;
+    public int ai3Position;
 
 
     public int cpoint;
     public int lpoint;
-
-    public int playerPosition;
     public int playerLaps;
-
 
     private void Start()
     {
@@ -34,17 +37,35 @@ public class PositionHandler : MonoBehaviour
         checkpointArray = new int[racers.Count];
         lapArray = new int[racers.Count];
 
-        PositionCalc();
-        LapCalc();
+        CheckPlace();
+        //PositionCalc();
+        //LapCalc();
     }
 
     private void Update()
     {
-        PositionCalc();
-        LapCalc();
+        //PositionCalc();
+        //LapCalc();
 
-
+        CheckPlace();
         //müssen noch irgendwie überprüfen ob der spieler im selben checkpoint ist wie der/ein Gegner & die checkpoints
+
+    }
+    private void CheckPlace()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            checkpointArray[i] = racers[i].GetComponent<BaseVehicleManager>().nextCheckpointIndex;
+            lapArray[i] = racers[i].GetComponent<BaseVehicleManager>().currentLapIndex;
+            totalcpoint[i] = (lapArray[i] * checkpointManager.checkpointCount) + checkpointArray[i];
+        }
+        Array.Sort(totalcpoint);
+        Array.Reverse(totalcpoint);
+
+        playerPosition = Array.IndexOf(totalcpoint, (lapArray[0] * checkpointManager.checkpointCount) + checkpointArray[0]);
+        ai1Position = Array.IndexOf(totalcpoint, (lapArray[1] * checkpointManager.checkpointCount) + checkpointArray[1]);
+        ai2Position = Array.IndexOf(totalcpoint, (lapArray[2] * checkpointManager.checkpointCount) + checkpointArray[2]);
+        ai3Position = Array.IndexOf(totalcpoint, (lapArray[3] * checkpointManager.checkpointCount) + checkpointArray[3]);
 
     }
 

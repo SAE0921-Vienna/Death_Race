@@ -54,7 +54,7 @@ namespace UserInterface
             if (playerManager != null)
             {
                 lapsAmountUI.text = playerManager.currentLapIndex + "/" + gameManager.laps + " LAPS";
-                switch (playerManager.currentPositionIndex)
+                switch (playerManager.currentPositionIndex + 1)
                 {
                     case 1:
                         positionsUI.text = playerManager.currentPositionIndex + "st";
