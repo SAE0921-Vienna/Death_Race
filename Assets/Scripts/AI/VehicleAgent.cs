@@ -60,7 +60,7 @@ namespace AI
             transform.position = transform.position = _spawnPositionVector + new Vector3(Random.Range(-50, 50), 0f, Random.Range(-50, 50));
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             
-            _aiManager.ResetCheckpoints();
+            //_aiManager.ResetCheckpoints();
             vehicleController.ResetVehicle();
         }
         

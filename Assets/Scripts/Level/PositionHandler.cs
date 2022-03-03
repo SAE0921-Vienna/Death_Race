@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using AI;
@@ -10,145 +9,159 @@ public class PositionHandler : MonoBehaviour
     public CheckpointManager checkpointManager;
     public GameManager gameManager;
 
-    public float playerPosition;
-
-
-    private Transform racersParent;
     public List<GameObject> racers;
 
 
     public int[] checkpointArray;
+    public int[] lapArray;
+
+
+    public int cpoint;
+    public int lpoint;
+
+    public int playerPosition;
+    public int playerLaps;
 
 
     private void Start()
     {
+        checkpointArray = new int[racers.Count];
+        lapArray = new int[racers.Count];
 
-        racersParent = this.transform;
-
-        for (int i = 0; i < racersParent.childCount; i++)
-        {
-            racers.Add(racersParent.GetChild(0).gameObject);
-        }
-
-        //PositionCalc();
-        PositionTest();
-
+        PositionCalc();
+        LapCalc();
     }
 
     private void Update()
     {
-        ////player
-        //DistanceToNextCheckpoint(racersParent.GetChild(0).transform, nextcheckpoint.transform);
-        ////Debug.Log(DistanceToNextCheckpoint(racersParent.GetChild(0).transform, nextcheckpoint.transform));
-        //GetLap(racersParent.GetChild(0));
-        //GetCheckpoint(racersParent.GetChild(0));
-
-        ////ai
-        //DistanceToNextCheckpoint(racersParent.GetChild(1).transform, nextcheckpoint.transform);
-        ////Debug.Log(DistanceToNextCheckpoint(racersParent.GetChild(1).transform, nextcheckpoint.transform));
-        //GetLap(racersParent.GetChild(1));
-        //GetCheckpoint(racersParent.GetChild(1));
+        PositionCalc();
+        LapCalc();
 
 
-        ////-------------------------------
+        //müssen noch irgendwie überprüfen ob der spieler im selben checkpoint ist wie der/ein Gegner & die checkpoints
 
-        //PositionCalc();
-
-        //only against one ai
-        PositionTest();
-
-
-
-    }
-
-    public void PositionTest()
-    {
-
-        //Player
-        checkpointArray[0] = racers[0].GetComponent<PlayerManager>().nextCheckpointIndex;
-        //AI
-        checkpointArray[1] = racers[1].GetComponent<AIManager>().nextCheckpointIndex;
-
-
-        if (checkpointArray[0] > checkpointArray[1])
-        {
-            playerManager.currentPositionIndex = 1;
-        }
-        if (checkpointArray[1] > checkpointArray[0])
-        {
-            playerManager.currentPositionIndex = 2;
-        }
     }
 
     public void PositionCalc()
     {
-        //playerPosition = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, racersParent.GetChild(0).GetComponent<PlayerManager>().nextCheckpoint.transform);
 
-        ////player
-        //gameManager.positions[0] = DistanceToNextCheckpoint(racersParent.GetChild(0).transform, racersParent.GetChild(0).GetComponent<PlayerManager>().nextCheckpoint.transform);
-        ////ai -s
-        //gameManager.positions[1] = DistanceToNextCheckpoint(racersParent.GetChild(1).transform, racersParent.GetChild(1).GetComponent<AIManager>().nextCheckpoint.transform);
+        //Player
+        checkpointArray[0] = playerManager.nextCheckpointIndex;
 
-        //Array.Sort(gameManager.positions);
+        //AI
+        checkpointArray[1] = racers[1].GetComponent<AIManager>().nextCheckpointIndex;
+        //checkpointArray[2] = racers[2].GetComponent<AIManager>().nextCheckpointIndex;
+        //checkpointArray[3] = racers[3].GetComponent<AIManager>().nextCheckpointIndex;
+        //checkpointArray[4] = racers[4].GetComponent<AIManager>().nextCheckpointIndex;
 
-        //int x = Array.IndexOf(gameManager.positions, playerPosition);
+        Array.Sort(checkpointArray);
+        Array.Reverse(checkpointArray);
 
-        //switch (x)
-        //{
-        //    case 0:
-        //        gameManager.playerPosition = 1;
-        //        break;
-        //    case 1:
-        //        gameManager.playerPosition = 2;
-        //        break;
-        //    case 2:
-        //        gameManager.playerPosition = 3;
-        //        break;
-        //    default:
-        //        break;
-        //}
+        cpoint = Array.IndexOf(checkpointArray, playerManager.nextCheckpointIndex);
+
+
+        switch (cpoint)
+        {
+            case 0:
+                playerPosition = 1;
+                break;
+            case 1:
+                playerPosition = 2;
+                break;
+            case 2:
+                playerPosition = 3;
+                break;
+            case 3:
+                playerPosition = 4;
+                break;
+            case 4:
+                playerPosition = 5;
+                break;
+            default:
+                break;
+        }
+
     }
 
-    public float DistanceToNextCheckpoint(Transform originPosition, Transform nextCheckpointPosition)
+    public void LapCalc()
     {
-        Physics.Raycast(originPosition.position, nextCheckpointPosition.position, out var hit);
 
-        return hit.distance;
+        //Player
+        lapArray[0] = playerManager.currentLapIndex;
+
+        //AI
+        lapArray[1] = racers[1].GetComponent<AIManager>().currentLapIndex;
+        //lapArray[2] = racers[2].GetComponent<AIManager>().currentLapIndex;
+        //lapArray[3] = racers[3].GetComponent<AIManager>().currentLapIndex;
+        //lapArray[4] = racers[4].GetComponent<AIManager>().currentLapIndex;
+
+        Array.Sort(lapArray);
+        Array.Reverse(lapArray);
+
+        lpoint = Array.IndexOf(lapArray, playerManager.currentLapIndex);
+
+
+        switch (lpoint)
+        {
+            case 0:
+                playerLaps = 1;
+                break;
+            case 1:
+                playerLaps = 2;
+                break;
+            case 2:
+                playerLaps = 3;
+                break;
+            case 3:
+                playerLaps = 4;
+                break;
+            case 4:
+                playerLaps = 5;
+                break;
+            default:
+                break;
+        }
+
     }
 
-    public int GetLap(Transform racer)
-    {
 
-        if (racer.CompareTag("AI"))
-        {
-            return racer.GetComponent<AIManager>().currentLapIndex;
-        }
-        if (racer.CompareTag("Player"))
-        {
-            return racer.GetComponent<PlayerManager>().currentLapIndex;
-        }
-        else
-        {
-            return -1;
-        }
+    //public float DistanceToNextCheckpoint(Transform originPosition, Transform nextCheckpointPosition)
+    //{
+    //    Physics.Raycast(originPosition.position, nextCheckpointPosition.position, out var hit);
 
-    }
+    //    return hit.distance;
+    //}
 
-    public int GetCheckpoint(Transform racer)
-    {
-        if (racer.CompareTag("AI"))
-        {
-            return racer.GetComponent<AIManager>().currentCheckpointIndex;
-        }
-        if (racer.CompareTag("Player"))
-        {
-            return racer.GetComponent<PlayerManager>().currentCheckpointIndex;
-        }
-        else
-        {
-            return -1;
-        }
-    }
+    //public int GetLap(Transform racer)
+    //{
+
+    //    if (racer.GetComponent<BaseVehicleManager>())
+    //    {
+    //        return racer.GetComponent<BaseVehicleManager>().currentLapIndex;
+    //    }
+    //    else
+    //    {
+    //        return -1;
+    //    }
+
+    //}
+
+    //public int GetCheckpoint(Transform racer)
+    //{
+    //    if (racer.GetComponent<BaseVehicleManager>())
+    //    {
+    //        return racer.GetComponent<BaseVehicleManager>().currentCheckpointIndex;
+    //    }
+    //    else
+    //    {
+    //        return -1;
+    //    }
+    //}
 
 }
+
+
+
+
+
 
