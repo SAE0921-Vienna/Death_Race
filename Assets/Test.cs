@@ -11,12 +11,20 @@ public class Test : MonoBehaviour
     public int[,] ai1;
     public int[,] ai2;
     public int[,] ai3;
-    public int[] place;
+    public int[][,] place;
+
 
     private void Awake()
     {
         ship = new int[labs, checkpoint];
-        //place = new(ship, ai1, ai2, ai3);
+        ai1 = new int[labs, checkpoint];
+        ai2 = new int[labs, checkpoint];
+        ai3 = new int[labs, checkpoint];
+
+        place[0] = ship;
+        place[1] = ai1;
+        place[2] = ai2;
+        place[3] = ai3;
     }
     // Update is called once per frame
     void Update()
