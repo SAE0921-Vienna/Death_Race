@@ -90,7 +90,6 @@ public class ShopManager : MonoBehaviour
         }
 
         ChangeMoneyUI();
-
     }
 
     private void Update()
@@ -102,6 +101,9 @@ public class ShopManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Changes the Money UI when buying
+    /// </summary>
     public void ChangeMoneyUI()
     {
         if (saveLoadScript && garageManager)
@@ -116,7 +118,9 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Automatically changes ship/weapon
+    /// </summary>
     public void AutomaticSWRotation()
     {
         timer -= Time.deltaTime;
@@ -154,12 +158,7 @@ public class ShopManager : MonoBehaviour
                 weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = materialsShop[currentMaterial].materialData.material;
                 swName.text = "Weapon";
                 transform.GetChild(2).localScale = new Vector3(0.3f, 0.3f, 0.3f);
-
-
             }
-
-
-
             timer = timerCooldown;
         }
     }
@@ -195,7 +194,6 @@ public class ShopManager : MonoBehaviour
 
     public void GetElementsGManager()
     {
-
         for (int i = 0; i < spaceShipConfigurator.ships.Count; i++)
         {
             shipsShop.Add(spaceShipConfigurator.ships[i]);
@@ -208,9 +206,11 @@ public class ShopManager : MonoBehaviour
         {
             materialsShop.Add(spaceShipConfigurator.materials[i]);
         }
-
     }
 
+    /// <summary>
+    /// Executes the purchase of the ship
+    /// </summary>
     public void BuyShip()
     {
         if (saveLoadScript)
@@ -226,6 +226,9 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Executes the purchase of the weapon
+    /// </summary>
     public void BuyWeapon()
     {
         if (saveLoadScript)
@@ -241,6 +244,9 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Executes the purchase of the material
+    /// </summary>
     public void BuyMaterial()
     {
         if (saveLoadScript)
@@ -256,10 +262,11 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Changes the prefab (Ship/Weapon)
+    /// </summary>
     public void SwitchPrefabs()
     {
-
         switch (currentIndexSwitch)
         {
             case 0:
@@ -272,7 +279,6 @@ public class ShopManager : MonoBehaviour
                 automaticRotation = false;
                 break;
             case 2:
-                //currentSW = 0;
                 automaticRotation = true;
                 timer = 0;
                 break;
@@ -280,11 +286,11 @@ public class ShopManager : MonoBehaviour
                 Debug.LogWarning("Error in the Shop - Switch Prefab");
                 break;
         }
-
     }
 
-
-
+    /// <summary>
+    /// 
+    /// </summary>
     private void ChangeShipShop()
     {
         transform.GetChild(0).GetComponent<MeshFilter>().mesh = shipsShop[currentShipPrefab].shipData.vehicleMesh;
@@ -297,8 +303,6 @@ public class ShopManager : MonoBehaviour
         {
             garageManager.buttonBuyShip.interactable = false;
             garageManager.buttonBuyShip.GetComponentInChildren<TextMeshProUGUI>().text = "Bought";
-
-
         }
         else
         {
@@ -307,6 +311,9 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes to the next ship
+    /// </summary>
     public void NextShipShop()
     {
         currentShipPrefab++;
@@ -318,6 +325,9 @@ public class ShopManager : MonoBehaviour
         ChangeShipShop();
     }
 
+    /// <summary>
+    /// Changes to the previous ship
+    /// </summary>
     public void PreviousShipShop()
     {
         currentShipPrefab--;

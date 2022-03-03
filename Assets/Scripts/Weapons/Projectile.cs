@@ -9,6 +9,10 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private GameObject impactFX;
 
+    /// <summary>
+    /// Adds effects on impact
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (!instaTrigger)
@@ -19,6 +23,10 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    /// <summary>
+    /// Buffer so the projectile cannot collide instantaneously
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator CheckTimer()
     {
         yield return new WaitForSeconds(0.05f);
