@@ -134,6 +134,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         gameOverCanvas.gameObject.SetActive(true);
         pauseCanvas.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
     }
     public void ReplayLevel()
     {
