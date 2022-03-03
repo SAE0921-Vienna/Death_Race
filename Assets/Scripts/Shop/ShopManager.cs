@@ -208,6 +208,14 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+
+    IEnumerator NotEnoughMoney()
+    {
+        garageManager.notEnoughMoneyTransform.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        garageManager.notEnoughMoneyTransform.gameObject.SetActive(false);
+    }
+
     /// <summary>
     /// Executes the purchase of the ship
     /// </summary>
@@ -215,16 +223,26 @@ public class ShopManager : MonoBehaviour
     {
         if (saveLoadScript)
         {
-            saveLoadScript.milkyCoins -= shipsShop[currentShipPrefab].shipData.priceInShop;
-            saveLoadScript.boughtShips[currentShipPrefab] = true;
-            shipsShop[currentShipPrefab].shipBought = true;
-            saveLoadScript.SaveSaveData();
-            saveLoadScript.SaveMoneyData();
-            ChangeMoneyUI();
-            garageManager.buttonBuyShip.interactable = false;
-            garageManager.buttonBuyShip.GetComponentInChildren<TextMeshProUGUI>().text = "Bought";
+            if (saveLoadScript.milkyCoins >= shipsShop[currentShipPrefab].shipData.priceInShop)
+            {
+                saveLoadScript.milkyCoins -= shipsShop[currentShipPrefab].shipData.priceInShop;
+                saveLoadScript.boughtShips[currentShipPrefab] = true;
+                shipsShop[currentShipPrefab].shipBought = true;
+                saveLoadScript.SaveSaveData();
+                saveLoadScript.SaveMoneyData();
+                ChangeMoneyUI();
+                garageManager.buttonBuyShip.interactable = false;
+                garageManager.buttonBuyShip.GetComponentInChildren<TextMeshProUGUI>().text = "Bought";
+            }
+            else
+            {
+                StartCoroutine(NotEnoughMoney());
+            }
+
         }
     }
+
+
 
     /// <summary>
     /// Executes the purchase of the weapon
@@ -233,14 +251,21 @@ public class ShopManager : MonoBehaviour
     {
         if (saveLoadScript)
         {
-            saveLoadScript.milkyCoins -= weaponsShop[currentWeaponPrefab].weaponData.priceInShop;
-            saveLoadScript.boughtWeapons[currentWeaponPrefab] = true;
-            weaponsShop[currentWeaponPrefab].weaponBought = true;
-            saveLoadScript.SaveSaveData();
-            saveLoadScript.SaveMoneyData();
-            ChangeMoneyUI();
-            garageManager.buttonBuyWeapon.interactable = false;
-            garageManager.buttonBuyWeapon.GetComponentInChildren<TextMeshProUGUI>().text = "Bought";
+            if (saveLoadScript.milkyCoins >= weaponsShop[currentWeaponPrefab].weaponData.priceInShop)
+            {
+                saveLoadScript.milkyCoins -= weaponsShop[currentWeaponPrefab].weaponData.priceInShop;
+                saveLoadScript.boughtWeapons[currentWeaponPrefab] = true;
+                weaponsShop[currentWeaponPrefab].weaponBought = true;
+                saveLoadScript.SaveSaveData();
+                saveLoadScript.SaveMoneyData();
+                ChangeMoneyUI();
+                garageManager.buttonBuyWeapon.interactable = false;
+                garageManager.buttonBuyWeapon.GetComponentInChildren<TextMeshProUGUI>().text = "Bought";
+            }
+            else
+            {
+                StartCoroutine(NotEnoughMoney());
+            }
         }
     }
 
@@ -251,14 +276,21 @@ public class ShopManager : MonoBehaviour
     {
         if (saveLoadScript)
         {
-            saveLoadScript.milkyCoins -= materialsShop[currentMaterial].materialData.priceInShop;
-            saveLoadScript.boughtMaterials[currentMaterial] = true;
-            materialsShop[currentMaterial].materialBought = true;
-            saveLoadScript.SaveSaveData();
-            saveLoadScript.SaveMoneyData();
-            ChangeMoneyUI();
-            garageManager.buttonBuyMaterial.interactable = false;
-            garageManager.buttonBuyMaterial.GetComponentInChildren<TextMeshProUGUI>().text = "Bought";
+            if (saveLoadScript.milkyCoins >= materialsShop[currentMaterial].materialData.priceInShop)
+            {
+                saveLoadScript.milkyCoins -= materialsShop[currentMaterial].materialData.priceInShop;
+                saveLoadScript.boughtMaterials[currentMaterial] = true;
+                materialsShop[currentMaterial].materialBought = true;
+                saveLoadScript.SaveSaveData();
+                saveLoadScript.SaveMoneyData();
+                ChangeMoneyUI();
+                garageManager.buttonBuyMaterial.interactable = false;
+                garageManager.buttonBuyMaterial.GetComponentInChildren<TextMeshProUGUI>().text = "Bought";
+            }
+            else
+            {
+                StartCoroutine(NotEnoughMoney());
+            }
         }
     }
 
@@ -345,8 +377,8 @@ public class ShopManager : MonoBehaviour
         //weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
         weaponClone.GetComponent<MeshRenderer>().material = hologramMAT;
         weaponClone.transform.GetChild(0).GetComponent<MeshRenderer>().material = hologramMAT;
-        if(weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material != null)
-        weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = hologramMAT;
+        if (weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material != null)
+            weaponClone.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().material = hologramMAT;
         weaponName.text = weaponsShop[currentWeaponPrefab].weaponData.name;
 
         garageManager.weaponStatsShop.text = weaponsShop[currentWeaponPrefab].weaponData.GetWeaponPrice() + "\n" + weaponsShop[currentWeaponPrefab].weaponData.GetWeaponStats();

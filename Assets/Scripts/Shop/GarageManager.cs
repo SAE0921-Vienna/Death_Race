@@ -30,6 +30,8 @@ public class GarageManager : MonoBehaviour
     public TextMeshProUGUI shipStatsGarage;
     public TextMeshProUGUI weaponStatsGarage;
 
+    public Transform notEnoughMoneyTransform;
+
     public GameObject audioManager;
     public void LoadScene(string _name)
     {
