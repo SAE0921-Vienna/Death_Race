@@ -23,12 +23,19 @@ public class WeaponData : ScriptableObject
     [Range(2, 75)]
     public int damage;
 
+    /// <summary>
+    /// Sets the text with the purchase value of the weapon.
+    /// </summary>
+    /// <returns></returns>
     public string GetWeaponPrice()
     {
         return @$"Price: {priceInShop}";
     }
 
-
+    /// <summary>
+    /// Sets the text for the weapon stats.
+    /// </summary>
+    /// <returns></returns>
     public string GetWeaponStats()
     {
         return @$"Damage: {damage}

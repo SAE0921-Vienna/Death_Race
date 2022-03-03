@@ -6,7 +6,28 @@ using UnityEditor;
 [CustomEditor(typeof(FieldOfView))]
 public class FieldOfViewEditor : Editor
 {
+	/// <summary>
+	/// Draws the visibility radius at the FieldOfViewEditor
+	/// </summary>
+	void OnSceneGUI()
+    {
+        FieldOfView fov = (FieldOfView)target;
+        Handles.color = Color.white;
+        Vector3 viewAngleA = fov.DirFromAngle(-fov.viewAngle / 2, false);
+        Vector3 viewAngleB = fov.DirFromAngle(fov.viewAngle / 2, false);
 
+        Handles.DrawWireArc(fov.transform.position, Vector3.up, viewAngleA, fov.viewAngle, fov.viewRadius);
+        Handles.DrawLine(fov.transform.position, fov.transform.position + viewAngleA * fov.viewRadius);
+        Handles.DrawLine(fov.transform.position, fov.transform.position + viewAngleB * fov.viewRadius);
+		
+		Handles.color = Color.red;
+		foreach (Transform visibleTarget in fov.visibleTargets)
+		{
+			Handles.DrawLine(fov.transform.position, visibleTarget.position);
+		}
+	}
+
+	//Draws the whole circle instead of just the arc
 	//void OnSceneGUI() Circle
 	//{
 	//	FieldOfView fow = (FieldOfView)target;
@@ -24,21 +45,4 @@ public class FieldOfViewEditor : Editor
 	//		Handles.DrawLine(fow.transform.position, visibleTarget.position);
 	//	}
 	//}
-    void OnSceneGUI()
-    {
-        FieldOfView fov = (FieldOfView)target;
-        Handles.color = Color.white;
-        Vector3 viewAngleA = fov.DirFromAngle(-fov.viewAngle / 2, false);
-        Vector3 viewAngleB = fov.DirFromAngle(fov.viewAngle / 2, false);
-
-        Handles.DrawWireArc(fov.transform.position, Vector3.up, viewAngleA, fov.viewAngle, fov.viewRadius);
-        Handles.DrawLine(fov.transform.position, fov.transform.position + viewAngleA * fov.viewRadius);
-        Handles.DrawLine(fov.transform.position, fov.transform.position + viewAngleB * fov.viewRadius);
-		
-		Handles.color = Color.red;
-		foreach (Transform visibleTarget in fov.visibleTargets)
-		{
-			Handles.DrawLine(fov.transform.position, visibleTarget.position);
-		}
-	}
 }

@@ -87,10 +87,6 @@ public class FinishLineManager : MonoBehaviour
                 }
                 Debug.LogFormat("Started a new Lap! {0}", vehicleManager.currentLapIndex);
             }
-
         }
-
-
     }
-
 }

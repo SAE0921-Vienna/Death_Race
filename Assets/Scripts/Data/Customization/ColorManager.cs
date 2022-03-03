@@ -26,15 +26,13 @@ public class ColorManager : MonoBehaviour
 
     private void Awake()
     {
-
-       for (int i = 0; i < spaceShipsParentMesh.transform.childCount; i++)
+        for (int i = 0; i < spaceShipsParentMesh.transform.childCount; i++)
         {
             if (spaceShipsParentMesh.transform.GetChild(i).gameObject.activeSelf == true)
             {
                 spaceShip = spaceShipsParentMesh.transform.GetChild(i).gameObject;
             }
         }
-
 
         paletteInColorManager = spaceShip.GetComponent<PaletteModifier>().palettesList;
 
@@ -50,12 +48,8 @@ public class ColorManager : MonoBehaviour
             childsChild = child.transform.GetChild(0).gameObject;
 
             childsChild.GetComponent<Image>().color = color[i];
-
         }
-
-
     }
-
 
     private void Update()
     {
@@ -63,16 +57,13 @@ public class ColorManager : MonoBehaviour
         {
             parent.GetChild(0).GetComponent<Image>().color = chosencolor;
         }
-
     }
 
     public void ColorPressed(Button button)
     {
-
         flexibleColorpicker.gameObject.SetActive(true);
 
         parent = button.transform.parent.transform;
-
 
         flexibleColorpicker.color = parent.GetChild(0).GetComponent<Image>().color;
         siblingIndex = parent.GetSiblingIndex();
@@ -83,7 +74,6 @@ public class ColorManager : MonoBehaviour
     public void OnColorChange()
     {
         chosencolor = flexibleColorpicker.color;
-
     }
 
     public void ApplyColor()
@@ -92,8 +82,6 @@ public class ColorManager : MonoBehaviour
         previouscolor = cellstorage[siblingIndex].currentCellColor;
         cellstorage[siblingIndex].currentCellColor = chosencolor;
 
-        //Debug.Log(parent.GetSiblingIndex());
-
     }
 
     //public void ResetColor()
@@ -101,9 +89,5 @@ public class ColorManager : MonoBehaviour
     //    cellstorage[siblingIndex].previousCellColor = previouscolor;
     //    chosencolor = cellstorage[siblingIndex].previousCellColor;
     //    cellstorage[siblingIndex].currentCellColor = chosencolor;
-
-
     //}
-
-
 }

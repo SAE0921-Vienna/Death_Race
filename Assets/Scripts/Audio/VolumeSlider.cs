@@ -31,8 +31,6 @@ public class VolumeSlider : MonoBehaviour
     public SaveLoadScript saveLoadScript;
     #endregion Variables
 
-
-
     /// <summary>
     /// Load Player-Settings
     /// </summary>
@@ -78,25 +76,24 @@ public class VolumeSlider : MonoBehaviour
                 volumeName = "MasterVolume";
                 saveLoadScript.masterVolume = _volume;
                 saveLoadScript.SaveOptionsData(_volume, saveLoadScript.musicVolume, saveLoadScript.effectVolume);
-                //Debug.Log("MasterVolume" + _volume);
                 break;
             case EAudioTypes.MUSIC:
                 volumeName = "MusicVolume";
                 saveLoadScript.musicVolume = _volume;
                 saveLoadScript.SaveOptionsData(saveLoadScript.masterVolume, _volume, saveLoadScript.effectVolume);
-                //Debug.Log("MusicVolume" + _volume);
                 break;
             case EAudioTypes.EFFECT:
                 volumeName = "EffectVolume";
                 saveLoadScript.effectVolume = _volume;
                 saveLoadScript.SaveOptionsData(saveLoadScript.masterVolume, saveLoadScript.musicVolume, _volume);
-                //Debug.Log("EffectVolume" + _volume);
                 break;
         }
         audioMixer.SetFloat(volumeName, Mathf.Log10(_volume) * 20);
-
     }
 
+    /// <summary>
+    /// Loads the audio settings
+    /// </summary>
     public void GetAudiosAtStart()
     {
         saveLoadScript.LoadOptionsData();
@@ -104,22 +101,18 @@ public class VolumeSlider : MonoBehaviour
         switch (EAudioTypes)
         {
             case EAudioTypes.MASTER:
-
-                //Debug.Log(saveLoadScript.masterVolume);
                 volumeSlider.value = saveLoadScript.masterVolume;
                 audioMixer.SetFloat("MasterVolume", ((Mathf.Log10(saveLoadScript.masterVolume)) * 20));
                 textVolume.text = "" + Mathf.Round(volumeSlider.value * 100);
                 SetVolume(saveLoadScript.masterVolume);
                 break;
             case EAudioTypes.MUSIC:
-                //Debug.Log(saveLoadScript.musicVolume);
                 volumeSlider.value = saveLoadScript.musicVolume;
                 audioMixer.SetFloat("MusicVolume", (Mathf.Log10(saveLoadScript.musicVolume)) * 20);
                 textVolume.text = "" + Mathf.Round(volumeSlider.value * 100);
                 SetVolume(saveLoadScript.musicVolume);
                 break;
             case EAudioTypes.EFFECT:
-                //Debug.Log(saveLoadScript.effectVolume);
                 volumeSlider.value = saveLoadScript.effectVolume;
                 audioMixer.SetFloat("EffectVolume", (Mathf.Log10(saveLoadScript.effectVolume)) * 20);
                 textVolume.text = "" + Mathf.Round(volumeSlider.value * 100);
@@ -128,6 +121,9 @@ public class VolumeSlider : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays a sound effect
+    /// </summary>
     public void PlayEffectSound()
     {
         AudioManager.PlaySound(AudioManager.Sound.RocketExplosion);

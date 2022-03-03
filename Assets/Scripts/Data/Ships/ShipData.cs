@@ -30,15 +30,21 @@ public class ShipData : ScriptableObject
     public Vector3 WeaponPosition;
 
 
-
+    /// <summary>
+    /// Sets the text with the purchase value of the ship.
+    /// </summary>
+    /// <returns></returns>
     public string GetShipPrice()
     {
        return @$"Price: {priceInShop}";
     }
 
+    /// <summary>
+    /// Sets the text for the ship stats.
+    /// </summary>
+    /// <returns></returns>
     public string GetShipStats()
     {
-
         return @$"Health: {health}
 
 Max Speed: {maxSpeed}

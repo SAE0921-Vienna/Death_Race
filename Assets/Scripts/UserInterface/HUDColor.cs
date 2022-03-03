@@ -15,5 +15,4 @@ public class HUDColor : ScriptableObject
     public float B;
     [Range(0, 1)]
     public float A;
-    
 }

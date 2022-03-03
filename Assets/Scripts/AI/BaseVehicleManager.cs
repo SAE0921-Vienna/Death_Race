@@ -106,7 +106,7 @@ namespace AI
         /// <summary>
         /// Get and adds Ammo
         /// </summary>
-        protected void Start()
+        protected virtual void Start()
         {
             nextCheckpoint = _checkpointManager.checkpointsInWorldList[0];
             nextCheckpointIndex = 0;

@@ -11,7 +11,6 @@ using UnityEditor;
 
 public class PauseMenuScript : MonoBehaviour
 {
-    //Pause Menu
     [Header("Loading/Pause/Options Menu Settings")]
     [SerializeField] RectTransform pausePanel;
     [SerializeField] GameObject pausePanelObject;
@@ -29,12 +28,8 @@ public class PauseMenuScript : MonoBehaviour
     }
     private void Start()
     {
-        currentMaterial = GetComponent<SpaceshipLoad>().currentMaterial;
-        pausePanelObject.GetComponent<Image>().color = new Color(hudColors[currentMaterial].R, hudColors[currentMaterial].G, hudColors[currentMaterial].B, hudColors[currentMaterial].A);
-        optionsPanelObject.GetComponent<Image>().color = new Color(hudColors[currentMaterial].R, hudColors[currentMaterial].G, hudColors[currentMaterial].B, hudColors[currentMaterial].A);
+        ChangeUIColor();
     }
-
-
 
     private void OnEnable()
     {
@@ -45,6 +40,19 @@ public class PauseMenuScript : MonoBehaviour
         inputActions.Disable();
     }
 
+    /// <summary>
+    /// Changes the color of the UI (to cockpit color)
+    /// </summary>
+    private void ChangeUIColor()
+    {
+        currentMaterial = GetComponent<SpaceshipLoad>().currentMaterial;
+        pausePanelObject.GetComponent<Image>().color = new Color(hudColors[currentMaterial].R, hudColors[currentMaterial].G, hudColors[currentMaterial].B, hudColors[currentMaterial].A);
+        optionsPanelObject.GetComponent<Image>().color = new Color(hudColors[currentMaterial].R, hudColors[currentMaterial].G, hudColors[currentMaterial].B, hudColors[currentMaterial].A);
+    }
+
+    /// <summary>
+    /// Opens the pause menu.
+    /// </summary>
     private void PauseMenu()
     {
         if (pausePanel.gameObject.activeInHierarchy == false && optionsPanel.gameObject.activeInHierarchy == false)
@@ -52,8 +60,8 @@ public class PauseMenuScript : MonoBehaviour
             pausePanel.gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
-            Time.timeScale = 0;
 
+            Time.timeScale = 0;
             isPause = true;
         }
         else if (pausePanel.gameObject.activeInHierarchy == true || optionsPanel.gameObject.activeInHierarchy == true)
@@ -67,6 +75,10 @@ public class PauseMenuScript : MonoBehaviour
             isPause = false;
         }
     }
+
+    /// <summary>
+    /// Resume the game.
+    /// </summary>
     public void Resume()
     {
         Time.timeScale = 1;
@@ -75,10 +87,18 @@ public class PauseMenuScript : MonoBehaviour
         isPause = false;
         //Cursor.lockState = CursorLockMode.Locked;
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
     public void BackToMenu()
     {
         SceneManager.LoadScene(0); //Menu
     }
+
+    /// <summary>
+    /// Close the game.
+    /// </summary>
     public void QuitGame()
     {
         Debug.Log("Quit!");

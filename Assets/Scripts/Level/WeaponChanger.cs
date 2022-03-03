@@ -20,9 +20,12 @@ public class WeaponChanger : MonoBehaviour
         {
             Debug.Log("UIManager NOT found");
         }
-
     }
 
+    /// <summary>
+    /// Changes the weapon when driving through.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(transform.GetSiblingIndex());
@@ -42,16 +45,13 @@ public class WeaponChanger : MonoBehaviour
             shipWeapon.SetEquippedWeapon();
             shipWeapon.shipWeaponTransform = spaceshipLoad.weaponClone.transform.GetChild(0).transform;
 
-
             if (tempWeapon != shipWeapon.currentWeapon)
             {
                 StartCoroutine(SpawnEffect(other.transform.GetChild(1).transform));
             }
 
-
             if (!vehicleManager.unlimitedAmmo)
             {
-
                 vehicleManager.ammo = shipWeapon.GetAmmo();
                 vehicleManager.ammoAdd = shipWeapon.GetAmmo();
 

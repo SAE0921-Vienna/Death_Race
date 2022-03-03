@@ -22,15 +22,12 @@ public class PlayerManager : BaseVehicleManager
             uiManager.healthSlider.maxValue = healthLimit;
             uiManager.healthSlider.value = health;
         }
-
-
     }
 
     protected override void Update()
     {
         base.Update();
         UpdateUIValues();
-
     }
 
     private void UpdateUIValues()
@@ -41,8 +38,6 @@ public class PlayerManager : BaseVehicleManager
             uiManager.speedUnit.text = currentSpeed.ToString(CultureInfo.InvariantCulture);
         }
         uiManager.healthSlider.value = health;
-
-
     }
 
     /// <summary>
@@ -75,7 +70,6 @@ public class PlayerManager : BaseVehicleManager
             AddAmmoOnStart();
             uiManager.ammoAmountUI.gameObject.SetActive(true);
             canShoot = true;
-
         }
     }
 
@@ -84,7 +78,6 @@ public class PlayerManager : BaseVehicleManager
     /// </summary>
     public void ToggleUnlimitedHealth()
     {
-
         unlimitedHealth = !unlimitedHealth;
         if (unlimitedHealth)
         {
@@ -105,7 +98,6 @@ public class PlayerManager : BaseVehicleManager
             }
 
             isImmortal = unlimitedHealth;
-
         }
     }
 

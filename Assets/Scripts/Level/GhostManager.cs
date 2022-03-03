@@ -22,26 +22,20 @@ public class GhostManager : MonoBehaviour
     {
         if (gameManager.ghostMode)
         {
-
             ghost.loadFromFile();
             saveLoadScript.LoadHighScoreData();
 
             if (!ghost.hasData)
             {
                 uimanager.highscoreUI.text = "BEST TIME: ??:??:??";
-
             }
             else
             {
                 uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
             }
-
-
             saveLoadScript.LoadMoneyData();
             uimanager.moneyUI.text = "Milky Coins: " + saveLoadScript.milkyCoins;
         }
-
- 
     }
 
     /// <summary>
@@ -61,7 +55,6 @@ public class GhostManager : MonoBehaviour
                     ghost.playGhostRecording();
 
                     //ResetTimer();
-
                 }
             }
         }
@@ -92,7 +85,6 @@ public class GhostManager : MonoBehaviour
         ResetTimer();
 
         uimanager.highscoreUI.text = "BEST TIME: " + saveLoadScript.currentMinAsString + ":" + saveLoadScript.currentSecAsString + ":" + saveLoadScript.currentMiliAsString;
-
     }
 
     /// <summary>
@@ -132,7 +124,6 @@ public class GhostManager : MonoBehaviour
         {
             ghost.StartRecording();
             ghost.StartRecordingGhost();
-
         }
     }
 
@@ -156,39 +147,32 @@ public class GhostManager : MonoBehaviour
 
         if (gameManager.roundTimer <= 80f)
         {
-            //1000
             tempAddedMoney += 1000;
         }
         else if (gameManager.roundTimer > 80f && gameManager.roundTimer <= 85f)
         {
-            //500
             tempAddedMoney += 500;
         }
         else if (gameManager.roundTimer > 85f && gameManager.roundTimer <= 90f)
         {
-            //300
             tempAddedMoney += 300;
         }
         else if (gameManager.roundTimer > 90f && gameManager.roundTimer <= 95f)
         {
-            //200
             tempAddedMoney += 200;
         }
         else if (gameManager.roundTimer > 95f && gameManager.roundTimer <= 100f)
         {
-            //100
             tempAddedMoney += 100;
         }
         else
         {
-            //50
             tempAddedMoney += 50;
         }
         if ((saveLoadScript.bestTime > gameManager.roundTimer  && gameManager.roundTimer <= 100f) || !saveLoadScript.hasBestTimeData)
         {
             tempAddedMoney += 500;
         }
-
 
         saveLoadScript.milkyCoins += tempAddedMoney;
         StartCoroutine(ShowAddedMoney(tempAddedMoney));
@@ -209,7 +193,5 @@ public class GhostManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         uimanager.tempAddedMoneyUI.gameObject.SetActive(false);
-
     }
-
 }

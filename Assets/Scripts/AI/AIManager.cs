@@ -19,7 +19,7 @@ namespace AI
             spawnRotation = transform.rotation;
         }
 
-        protected void Start()
+        protected override void Start()
         {
             base.Start();
             //nextCheckpoint = ai_checkpointManager.checkpointsInWorldList[0];

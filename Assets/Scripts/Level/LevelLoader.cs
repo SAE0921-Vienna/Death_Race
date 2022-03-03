@@ -55,17 +55,17 @@ public class LevelLoader : MonoBehaviour
             {
                 transition.enabled = false;
                 transition.gameObject.GetComponent<CanvasGroup>().enabled = false;
-
             }
         }
-
 
         StartCoroutine(LoadAsynchronously(sceneName));
         StartCoroutine(GenerateTips());
         StartCoroutine(GenerateControls());
-
     }
 
+    /// <summary>
+    /// Disables the UI.
+    /// </summary>
     public void DeactivateUIs()
     {
         if (garageUI)
@@ -87,15 +87,17 @@ public class LevelLoader : MonoBehaviour
         {
             HUDUI.SetActive(false);
         }
-
     }
 
+    /// <summary>
+    /// Starts the scroll animation.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator StartAnimation()
     {
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
-
     }
 
     IEnumerator LoadAsynchronously(string sceneName)
@@ -118,11 +120,9 @@ public class LevelLoader : MonoBehaviour
                     operation.allowSceneActivation = true;
                 }
             }
-            //Debug.Log(progress);
 
             yield return null;
         }
-       
     }
 
     public IEnumerator GenerateTips()
@@ -148,10 +148,7 @@ public class LevelLoader : MonoBehaviour
             }
 
             tipsText.text = tips[tipCount];
-            
-
         }
-
     }
 
 
@@ -160,10 +157,8 @@ public class LevelLoader : MonoBehaviour
         controlCount = Random.Range(0, controlSprites.Length);
         controlImage.sprite = controlSprites[controlCount];
 
-
         while (loadingScreen.activeInHierarchy)
         {
-
             yield return new WaitForSeconds(4f);
 
             controlCount++;
@@ -173,10 +168,6 @@ public class LevelLoader : MonoBehaviour
             }
 
             controlImage.sprite = controlSprites[controlCount];
-
-
         }
-
     }
-
 }

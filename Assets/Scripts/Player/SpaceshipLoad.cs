@@ -38,6 +38,9 @@ public class SpaceshipLoad : MonoBehaviour
         SetVFXPrefab();
     }
 
+    /// <summary>
+    /// Load the ship.
+    /// </summary>
     private void LoadShip()
     {
         if (saveLoadScript)
@@ -56,21 +59,25 @@ public class SpaceshipLoad : MonoBehaviour
             weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;
 
             SetVehicleStats();
-            //SetWeaponStats();
         }
-
         else
         {
             Debug.LogWarning("SaveLoadScript NOT found");
         }
     }
 
+    /// <summary>
+    /// Sets the vehicle's material.
+    /// </summary>
     public void SetVehicleMesh()
     {
         GetComponentInChildren<MeshFilter>().mesh = allShips[currentShip].vehicleMesh;
         GetComponentInChildren<MeshRenderer>().material = allMaterials[currentMaterial].material;
     }
 
+    /// <summary>
+    /// Sets the weapon
+    /// </summary>
     public void SetWeapon()
     {
         if(weaponClone != null)
@@ -87,7 +94,9 @@ public class SpaceshipLoad : MonoBehaviour
       allMaterials[currentMaterial].material;
     }
 
-
+    /// <summary>
+    /// Sets the vehicle stats.
+    /// </summary>
     public void SetVehicleStats()
     {
         var _vehicleController = GetComponent<VehicleController>();
@@ -98,6 +107,9 @@ public class SpaceshipLoad : MonoBehaviour
         _vehicleController.speedDependentAngularDragMagnitude = allShips[currentShip].speedBasedAngularDrag;
     }
 
+    /// <summary>
+    /// Sets the weapon stats.
+    /// </summary>
     public void SetWeaponStats()
     {
         _baseVehicleManager = GetComponent<BaseVehicleManager>();
@@ -105,6 +117,9 @@ public class SpaceshipLoad : MonoBehaviour
         _baseVehicleManager.ammoAdd = _baseVehicleManager.ammo;
     }
 
+    /// <summary>
+    /// Sets the VFX prefab.
+    /// </summary>
     public void SetVFXPrefab()
     {
         if(vfxClone!= null)
@@ -116,6 +131,9 @@ public class SpaceshipLoad : MonoBehaviour
             vfxClone = Instantiate(CurrentShip.vfxPrefab, GetComponentInChildren<SpaceshipRotator>().transform);
     }
 
+    /// <summary>
+    /// Sets the weapon position.
+    /// </summary>
     public void SetWeaponPosition()
     {
         weaponClone.transform.parent.localPosition = allShips[currentShip].WeaponPosition;

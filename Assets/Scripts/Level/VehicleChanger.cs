@@ -4,6 +4,10 @@ using AI;
 
 public class VehicleChanger : MonoBehaviour
 {
+    /// <summary>
+    /// Changes the vehicle when driving through.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(transform.GetSiblingIndex());
@@ -11,7 +15,6 @@ public class VehicleChanger : MonoBehaviour
         {
             SpaceshipLoad spaceshipLoad = other.GetComponentInParent<SpaceshipLoad>();
             BaseVehicleManager vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
-
 
             if (spaceshipLoad.currentShip != transform.GetSiblingIndex())
             {
@@ -28,6 +31,4 @@ public class VehicleChanger : MonoBehaviour
             spaceshipLoad.SetWeaponPosition();
         }
     }
-
-
 }

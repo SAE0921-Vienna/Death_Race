@@ -8,7 +8,10 @@ public class MaterialData : ScriptableObject
     public int priceInShop;
     public Material material;
 
-
+    /// <summary>
+    /// Sets the text with the purchase value of the ship material.
+    /// </summary>
+    /// <returns></returns>
     public string GetPrice()
     {
         return @$"Price: {priceInShop}";
