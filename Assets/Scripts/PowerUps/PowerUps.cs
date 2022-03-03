@@ -10,7 +10,8 @@ public class PowerUps : MonoBehaviour
 {
 
     #region Nitro Power Up Values
-    [SerializeField] private float nitroSpeedModifier = 200f;
+    [SerializeField] protected float nitroSpeedModifier = 200f;
+    [SerializeField] protected float normalSpeed;
     [SerializeField] private float nitroAccelerationModifier = 0.2f;
     [SerializeField] private float nitroFovModifier = 110f;
     [SerializeField] private float nitroFovNormal;
@@ -29,17 +30,17 @@ public class PowerUps : MonoBehaviour
 
     [Header("Effects")]
     [SerializeField]
-    private GameObject shieldEffect;
+    protected GameObject shieldEffect;
     [SerializeField]
-    private GameObject nitroEffect;
+    protected GameObject nitroEffect;
     [SerializeField]
-    private GameObject bombEffect;
+    protected GameObject bombEffect;
     [SerializeField]
-    private GameObject lowHealthEffect;
+    protected GameObject lowHealthEffect;
     [SerializeField]
-    private GameObject healEffect;
+    protected GameObject healEffect;
     [SerializeField]
-    private GameObject munitionEffect;
+    protected GameObject munitionEffect;
     #endregion
 
     /// <summary>
@@ -72,7 +73,7 @@ public class PowerUps : MonoBehaviour
         UpdateUI();
 
         UpdateInput();
-        
+
         SetFov();
 
 
@@ -202,9 +203,21 @@ public class PowerUps : MonoBehaviour
         {
             _vehicleStats.hasNitro = false;
             nitroEffect.SetActive(false);
-            VehicleController vehicleContr = GetComponent<VehicleController>();
-            vehicleContr.mMaxSpeed = GetComponent<SpaceshipLoad>().CurrentShip.maxSpeed;
-            vehicleContr.mAccelerationConstant = GetComponent<SpaceshipLoad>().CurrentShip.accelerationSpeed;
+            if (_vehicleStats.CompareTag("AI"))
+            {
+                Debug.Log(_vehicleStats.gameObject.name);
+                AIFollowCurve aIFollowCurve = GetComponent<AIFollowCurve>();
+                Debug.Log(aIFollowCurve.MaxSpeed);
+                aIFollowCurve.MaxSpeed = normalSpeed;
+                Debug.Log(aIFollowCurve.MaxSpeed);
+
+            }
+            else
+            {
+                VehicleController vehicleContr = GetComponent<VehicleController>();
+                vehicleContr.mMaxSpeed = GetComponent<SpaceshipLoad>().CurrentShip.maxSpeed;
+                vehicleContr.mAccelerationConstant = GetComponent<SpaceshipLoad>().CurrentShip.accelerationSpeed;
+            }
         }
 
         if (_vehicleStats.ammo <= 0 && uIManager)
@@ -245,7 +258,7 @@ public class PowerUps : MonoBehaviour
         shieldEffect.SetActive(true);
         _vehicleStats.isImmortal = true;
         _vehicleStats.hasShield = true;
-        
+
         AudioManager.PlaySound(AudioManager.Sound.ShieldUp);
     }
 
@@ -256,14 +269,20 @@ public class PowerUps : MonoBehaviour
     {
         _vehicleStats.timer = _vehicleStats.timerCooldown;
         nitroEffect.SetActive(true);
- 
-        //gameManager.vCam.m_Lens.FieldOfView = Mathf.Lerp(gameManager.vCamPOV, gameManager.vCamPOV + playerStats.mainCamPovBoost, Time.deltaTime);
-        VehicleController vehicleContr = GetComponent<VehicleController>();
-        vehicleContr.mMaxSpeed += nitroSpeedModifier;
-        vehicleContr.mAccelerationConstant += nitroAccelerationModifier;
+        if (_vehicleStats.CompareTag("AI"))
+        {
+            AIFollowCurve aIFollowCurve = GetComponent<AIFollowCurve>();
+            aIFollowCurve.MaxSpeed += nitroSpeedModifier;
+        }
+        else
+        {
+            VehicleController vehicleContr = GetComponent<VehicleController>();
+            vehicleContr.mMaxSpeed += nitroSpeedModifier;
+            vehicleContr.mAccelerationConstant += nitroAccelerationModifier;
+        }
 
         _vehicleStats.hasNitro = true;
-        
+
         AudioManager.PlaySound(AudioManager.Sound.NitroSound);
     }
 
@@ -277,7 +296,7 @@ public class PowerUps : MonoBehaviour
                 Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovModifier, nitroDeltaSpeed);
             gameManager.overlayCam.fieldOfView = Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovModifier, nitroDeltaSpeed);
         }
-        else 
+        else
         {
             gameManager.vCam.m_Lens.FieldOfView = Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovNormal, nitroDeltaSpeed);
             gameManager.vCamBack.m_Lens.FieldOfView =
@@ -305,7 +324,7 @@ public class PowerUps : MonoBehaviour
         _vehicleStats.timer = munitionEffect.GetComponent<ParticleSystem>().main.duration;
         _vehicleStats.ammo += _vehicleStats.ammoAdd;
         _vehicleStats.canShoot = true;
-        
+
         AudioManager.PlaySound(AudioManager.Sound.ReloadWeapon);
 
 
@@ -326,7 +345,7 @@ public class PowerUps : MonoBehaviour
         bombClone.GetComponent<SphereCollider>().enabled = true;
         bombClone.GetComponent<BombTrigger>().bombHasBeenActivated = true;
         _vehicleStats.hasBomb = true;
-        
+
         AudioManager.PlaySound(AudioManager.Sound.PlaceBomb);
     }
 

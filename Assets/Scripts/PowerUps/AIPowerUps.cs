@@ -1,9 +1,10 @@
 using UnityEngine;
 using AI;
+using Audio;
 
 public class AIPowerUps : PowerUps
 {
-    AI_Action aiaction;
+    AIFollowCurve aIFollowCurve;
 
     /// <summary>
     /// Get the important information.
@@ -11,9 +12,15 @@ public class AIPowerUps : PowerUps
     private void Awake()
     {
         _vehicleStats = GetComponent<BaseVehicleManager>();
-        aiaction = GetComponent<AI_Action>();
 
         powerupParent = transform.GetChild(0);
+
+        aIFollowCurve = GetComponent<AIFollowCurve>();
+
+        normalSpeed = aIFollowCurve.MaxSpeed;
+
+        nitroSpeedModifier = (aIFollowCurve.MaxSpeed / 100) * 20f;
+
     }
 
     private void Update()
@@ -25,11 +32,7 @@ public class AIPowerUps : PowerUps
             _vehicleStats.timer = -1;
             ResetPowerUps();
         }
-        if (powerUp != null)
-        {
-            //ActivatePowerUp(powerUp);
-            aiaction.CheckPowerUp(powerUp);
-        }
+
     }
 
     /// <summary>
@@ -38,13 +41,12 @@ public class AIPowerUps : PowerUps
     /// <param name="powerUp"></param>
     public void ActivatePowerUp(PickUpScriptableObject powerUp)
     {
-        //aiaction.CheckPowerUp(powerUp);
-
         Debug.Log(gameObject.name + " AIPOWERUP");
         powerUp.PowerUpAction(this.gameObject);
-        powerUpList.Remove(this.powerUp);
+        powerUpList.Remove(powerUp);
         this.powerUp = null;
     }
+
 
 
 }

@@ -101,10 +101,18 @@ public class RandomPowerUpSpawnPickUp : MonoBehaviour
                     int rand = Random.Range(0, powerUpManager.powerUps.Length - 1);
                     pickUpObject = powerUpManager.powerUps[rand];
                     _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+                    if (_vehicleManager.CompareTag("AI"))
+                    {
+                        _vehicleManager.GetComponent<AI_Action>().CheckPowerUp(pickUpObject);
+                    }
                 }
                 else if (pickUpObject != null)
                 {
                     _vehicleManager.GetComponent<PowerUps>().AddToPowerUpList(pickUpObject);
+                    if (_vehicleManager.CompareTag("AI"))
+                    {
+                        _vehicleManager.GetComponent<AI_Action>().CheckPowerUp(pickUpObject);
+                    }
 
                 }
 
