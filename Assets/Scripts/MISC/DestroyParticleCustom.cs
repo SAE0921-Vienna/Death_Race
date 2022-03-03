@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace MISC
@@ -5,8 +6,13 @@ namespace MISC
     public class DestroyParticleCustom : MonoBehaviour
     {
         [SerializeField] private float destroyTimer;
-        
-        public void DestroyParticle()
+
+        private void Start()
+        {
+            DestroyParticle();
+        }
+
+        private void DestroyParticle()
         {
             Destroy(gameObject, destroyTimer);
         }

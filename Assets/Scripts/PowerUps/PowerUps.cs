@@ -73,7 +73,7 @@ public class PowerUps : MonoBehaviour
 
         UpdateInput();
         
-        SetInterpolator();
+        SetFov();
 
 
         if (_vehicleStats.health < 40)
@@ -268,17 +268,21 @@ public class PowerUps : MonoBehaviour
         AudioManager.PlaySound(AudioManager.Sound.NitroSound);
     }
 
-    private void SetInterpolator()
+    private void SetFov()
     {
         if (_vehicleStats.hasNitro)
         {
             gameManager.vCam.m_Lens.FieldOfView =
                     Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovModifier, nitroDeltaSpeed);
+            gameManager.vCamBack.m_Lens.FieldOfView =
+                Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovModifier, nitroDeltaSpeed);
             gameManager.overlayCam.fieldOfView = Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovModifier, nitroDeltaSpeed);
         }
         else 
         {
             gameManager.vCam.m_Lens.FieldOfView = Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovNormal, nitroDeltaSpeed);
+            gameManager.vCamBack.m_Lens.FieldOfView =
+                Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovNormal, nitroDeltaSpeed);
             gameManager.overlayCam.fieldOfView = Mathf.MoveTowards(gameManager.vCam.m_Lens.FieldOfView, nitroFovNormal, nitroDeltaSpeed);
         }
     }

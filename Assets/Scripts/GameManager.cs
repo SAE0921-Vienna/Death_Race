@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private PlayerManager playerManager;
     public CinemachineVirtualCamera vCam;
+    public CinemachineVirtualCamera vCamBack;
     public Camera overlayCam;
     public event Action StartOfRace;
 
@@ -66,8 +67,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("Player Manager was NOT found");
         }
-
-        vCam = FindObjectOfType<CinemachineVirtualCamera>();
 
         vCamPOV = vCam.m_Lens.FieldOfView;
         overlayCam.fieldOfView = vCamPOV;
