@@ -10,6 +10,7 @@ namespace Weapons
         [SerializeField] private float explosionForce, explosionRadius, upwardsModifier;
         [SerializeField] private ForceMode forceMode;
         [SerializeField] private ParticleSystem boomEffect;
+        [SerializeField] private AudioSource explosionSound;
 
         public void Explode()
         {
@@ -52,8 +53,7 @@ namespace Weapons
             boomEffect.transform.parent = null;
             boomEffect.Play();
             boomEffect.gameObject.AddComponent<DestroyParticle>();
-
-            AudioManager.PlaySound(AudioManager.Sound.RocketExplosion, transform.position);
+            explosionSound.Play();
 
             Destroy(gameObject);
         }

@@ -9734,6 +9734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8184490902016442453}
   - component: {fileID: 5254799019258564641}
+  - component: {fileID: 4297539794468781120}
   m_Layer: 0
   m_Name: vfx_Impact_Minigun
   m_TagString: Untagged
@@ -9770,3 +9771,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTimer: 5
+--- !u!114 &4297539794468781120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6714754111256355379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f799463cacce4865a1db7c6779f19302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimer: 0
