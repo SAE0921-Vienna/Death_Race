@@ -197,7 +197,7 @@ namespace AI
             }
             if (offTrackTimer > offTrackTimerLimit)
             {
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
                 RespawnVehicle();
             }
         }
@@ -215,7 +215,7 @@ namespace AI
             vehicleTransform.position = new Vector3(spawnPosition.x, spawnPosition.y + spawnYOffset, spawnPosition.z);
             vehicleTransform.rotation = spawnRotation;
 
-            gameObject.SetActive(true);
+            //gameObject.SetActive(true);
             health = healthLimit;
             StartCoroutine(SpawnEffect());
             isAlive = true;
