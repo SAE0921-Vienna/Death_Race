@@ -32,7 +32,7 @@ public class BombTrigger : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(CheckBomb());
+        StartCoroutine(CheckTimer());
     }
 
     private void Update()
@@ -101,7 +101,7 @@ public class BombTrigger : MonoBehaviour
     /// Ensures that the bomb does not instantly explode
     /// </summary>
     /// <returns></returns>
-    public IEnumerator CheckBomb()
+    public IEnumerator CheckTimer()
     {
         yield return new WaitForSeconds(0.5f);
         bombInstantCollision = true;

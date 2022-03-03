@@ -18,6 +18,9 @@ namespace Weapons
 
         }
 
+        /// <summary>
+        /// Deals damage to any vehicle in the area
+        /// </summary>
         private void DealDamage()
         {
             var allHitTargets = Physics.OverlapSphere(transform.position, explosionRadius);
@@ -31,11 +34,18 @@ namespace Weapons
             }
         }
 
+        /// <summary>
+        /// Inflicts an explosive force on any vehicle in the area
+        /// </summary>
+        /// <param name="targetRigidbody"></param>
         private void ExplosionForce(Rigidbody targetRigidbody)
         {
             targetRigidbody.AddExplosionForce(explosionForce, transform.position, explosionRadius, upwardsModifier, forceMode);
         }
 
+        /// <summary>
+        /// Creates an explosion effects
+        /// </summary>
         private void ExplosionAnimation()
         {
             if (boomEffect == null) return;

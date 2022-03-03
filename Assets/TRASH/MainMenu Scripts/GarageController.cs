@@ -25,6 +25,10 @@ public class GarageController : MonoBehaviour
         CameraRoationLeftRight();
         CameraZoom();
     }
+
+    /// <summary>
+    /// A/D to move around the ship with the camera in the garage
+    /// </summary>
     private void CameraRoationLeftRight()
     {
         if (Input.GetButton("Horizontal"))
@@ -32,6 +36,10 @@ public class GarageController : MonoBehaviour
             targetObject.transform.Rotate(0, Input.GetAxis("Horizontal") * -roationspeed * Time.deltaTime, 0);
         }
     }
+
+    /// <summary>
+    /// A/D to zoom in and out with the camera in the garage to the ship
+    /// </summary>
     private void CameraZoom()
     {
         if (Input.GetButton("Vertical"))
@@ -40,6 +48,10 @@ public class GarageController : MonoBehaviour
             virutalCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = Mathf.Clamp(virutalCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance, cameraDistanceMin, cameraDistanceMax);
         }
     }
+
+    /// <summary>
+    /// Enables/disables stats in garage
+    /// </summary>
     public void ToggleStats()
     {
         showsStats = !showsStats;
