@@ -134,7 +134,6 @@ public class PowerUps : MonoBehaviour
                 uIManager.ammoAmountUI.text = _vehicleStats.ammo.ToString();
             }
         }
-
     }
 
     /// <summary>

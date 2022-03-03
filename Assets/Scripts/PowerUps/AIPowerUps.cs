@@ -25,6 +25,11 @@ public class AIPowerUps : PowerUps
             _vehicleStats.timer = -1;
             ResetPowerUps();
         }
+        if (powerUp != null)
+        {
+            //ActivatePowerUp(powerUp);
+            aiaction.CheckPowerUp(powerUp);
+        }
     }
 
     /// <summary>
@@ -33,10 +38,11 @@ public class AIPowerUps : PowerUps
     /// <param name="powerUp"></param>
     public void ActivatePowerUp(PickUpScriptableObject powerUp)
     {
-        aiaction.CheckPowerUp(powerUp);
+        //aiaction.CheckPowerUp(powerUp);
 
+        Debug.Log(gameObject.name + " AIPOWERUP");
         powerUp.PowerUpAction(this.gameObject);
-        powerUpList.Remove(powerUp);
+        powerUpList.Remove(this.powerUp);
         this.powerUp = null;
     }
 
