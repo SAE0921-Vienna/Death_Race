@@ -44,6 +44,8 @@ namespace UserInterface
             _timer.CreateTimer(5f, () => StartCountdown());
 
             SetCursor();
+
+            
         }
 
         private void Update()
@@ -78,6 +80,7 @@ namespace UserInterface
         public void StartCountdown()
         {
             print("Started Countdown");
+            countDownTimer.gameObject.SetActive(true);
             countDownTimer.GetComponent<Animation>().Play();
         }
 
