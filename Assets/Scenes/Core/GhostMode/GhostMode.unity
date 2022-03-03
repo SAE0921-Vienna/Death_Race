@@ -54280,7 +54280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1408672766
 Transform:
   m_ObjectHideFlags: 0
@@ -54313,11 +54313,12 @@ MonoBehaviour:
   racers:
   - {fileID: 1711200108}
   checkpointArray: 0000000000000000
-  lapArray: 
-  cpoint: 0
-  lpoint: 0
+  lapArray: 0000000000000000
+  totalcpoint: 0000000000000000
   playerPosition: 0
-  playerLaps: 0
+  ai1Position: 0
+  ai2Position: 0
+  ai3Position: 0
 --- !u!1001 &1409616883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68591,6 +68592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nitroSpeedModifier: 200
+  normalSpeed: 0
   nitroAccelerationModifier: 0.2
   nitroFovModifier: 20
   nitroFovNormal: 0

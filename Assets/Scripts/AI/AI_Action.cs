@@ -42,7 +42,6 @@ public class AI_Action : MonoBehaviour
         switch (powerUp.powerUpType)
         {
             case PickUpScriptableObject.powerUps.Shield:
-                //StartCoroutine(aiPowerUps.ActivatePowerUpWithTimer(powerUp, aiPowerUps.powerupActivationTime));
                 aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Nitro:

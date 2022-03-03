@@ -10748,6 +10748,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.033
       objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 1732862054488416, guid: 98958d79521880540984f3838adbee94, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 1973293703174828, guid: df335fb1db6375f4d96d741e3d35beff, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 1485324390469812, guid: 08860686744dee44ab69ca38418fd9d7, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 1890340069718830, guid: 6aed5a3057d00d84aabcbed62f48a79a, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 1791930136598424, guid: f1a1c60952b571c4fa485b0139d4a6b7, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[5]
+      value: 
+      objectReference: {fileID: 1243861341673150, guid: 3f26293dfafa1e447ab052cf7502a03e, type: 3}
     - target: {fileID: 3158153248187579054, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: bombEffect
       value: 
@@ -14194,7 +14222,7 @@ MonoBehaviour:
   uiManager: {fileID: 1617549259}
   _checkpointManager: {fileID: 2095051797}
   ghostManager: {fileID: 620429327}
-  positionHandler: {fileID: 0}
+  positionHandler: {fileID: 1408672767}
 --- !u!114 &620429327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42585,7 +42613,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408672765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df452743e4a743e448e1272d9b6bcf5c, type: 3}
   m_Name: 
@@ -42598,11 +42626,15 @@ MonoBehaviour:
   - {fileID: 4813497883390902269}
   - {fileID: 1356548733}
   - {fileID: 48825554}
-  checkpointArray: 0000000000000000
-  lapArray: 
+  checkpointArray: 00000000000000000000000000000000
+  lapArray: 00000000000000000000000000000000
+  totalcpoint: 00000000000000000000000000000000
+  playerPosition: 0
+  ai1Position: 0
+  ai2Position: 0
+  ai3Position: 0
   cpoint: 0
   lpoint: 0
-  playerPosition: 0
   playerLaps: 0
 --- !u!1001 &1410248217
 PrefabInstance:
@@ -59054,6 +59086,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.033
       objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 1732862054488416, guid: 98958d79521880540984f3838adbee94, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 1973293703174828, guid: df335fb1db6375f4d96d741e3d35beff, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 1485324390469812, guid: 08860686744dee44ab69ca38418fd9d7, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 1890340069718830, guid: 6aed5a3057d00d84aabcbed62f48a79a, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 1791930136598424, guid: f1a1c60952b571c4fa485b0139d4a6b7, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[5]
+      value: 
+      objectReference: {fileID: 1243861341673150, guid: 3f26293dfafa1e447ab052cf7502a03e, type: 3}
     - target: {fileID: 3158153248187579054, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: bombEffect
       value: 
@@ -64482,6 +64542,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.033
       objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 1732862054488416, guid: 98958d79521880540984f3838adbee94, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 1973293703174828, guid: df335fb1db6375f4d96d741e3d35beff, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 1485324390469812, guid: 08860686744dee44ab69ca38418fd9d7, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 1890340069718830, guid: 6aed5a3057d00d84aabcbed62f48a79a, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 1791930136598424, guid: f1a1c60952b571c4fa485b0139d4a6b7, type: 3}
+    - target: {fileID: 3158153248187123032, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: changeEffectPrefab.Array.data[5]
+      value: 
+      objectReference: {fileID: 1243861341673150, guid: 3f26293dfafa1e447ab052cf7502a03e, type: 3}
     - target: {fileID: 3158153248187579054, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: bombEffect
       value: 

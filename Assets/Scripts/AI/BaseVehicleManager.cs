@@ -149,8 +149,7 @@ namespace AI
             {
                 isAlive = false;
                 GetComponent<IExplosion>().Explode();
-                _timer.CreateTimer(3f, RespawnVehicle);
-                health = healthLimit;
+                 RespawnVehicle();
             }
         }
 
