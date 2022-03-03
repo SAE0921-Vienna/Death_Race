@@ -34,7 +34,7 @@ namespace UserInterface
         public GameObject gameOverUI;
         private Timer _timer;
 
-        [SerializeField] private Texture2D Crossair;
+        [SerializeField] private Texture2D crosshair;
 
         private void Awake()
         {
@@ -43,8 +43,7 @@ namespace UserInterface
             _timer = FindObjectOfType<Timer>();
             _timer.CreateTimer(5f, () => StartCountdown());
 
-            if (Crossair != null)
-                Cursor.SetCursor(Crossair, Vector2.zero, CursorMode.ForceSoftware);
+            SetCursor();
         }
 
         private void Update()
@@ -69,17 +68,30 @@ namespace UserInterface
                 }
             }
 
-            if(int.Parse(ammoAmountUI.text) > 999)
+            if (int.Parse(ammoAmountUI.text) > 999)
             {
                 ammoAmountUI.text = "999";
             }
-               
+
         }
 
         public void StartCountdown()
         {
             print("Started Countdown");
             countDownTimer.GetComponent<Animation>().Play();
+        }
+
+        public void SetCursor()
+        {
+            if (crosshair != null)
+                Cursor.SetCursor(crosshair, Vector2.zero, CursorMode.ForceSoftware);
+
+            if (gameManager.ghostMode)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+
+            //Debug.Log("Cursor Set");
         }
 
     }

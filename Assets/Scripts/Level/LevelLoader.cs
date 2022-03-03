@@ -28,6 +28,10 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
 
+    public Sprite[] controlSprites;
+    public Image controlImage;
+    public int controlCount;
+
     public void LoadLevel(string sceneName)
     {
         Time.timeScale = 1;
@@ -58,6 +62,7 @@ public class LevelLoader : MonoBehaviour
 
         StartCoroutine(LoadAsynchronously(sceneName));
         StartCoroutine(GenerateTips());
+        StartCoroutine(GenerateControls());
 
     }
 
@@ -149,5 +154,29 @@ public class LevelLoader : MonoBehaviour
 
     }
 
+
+    public IEnumerator GenerateControls()
+    {
+        controlCount = Random.Range(0, controlSprites.Length);
+        controlImage.sprite = controlSprites[controlCount];
+
+
+        while (loadingScreen.activeInHierarchy)
+        {
+
+            yield return new WaitForSeconds(4f);
+
+            controlCount++;
+            if (controlCount >= controlSprites.Length)
+            {
+                controlCount = 0;
+            }
+
+            controlImage.sprite = controlSprites[controlCount];
+
+
+        }
+
+    }
 
 }
