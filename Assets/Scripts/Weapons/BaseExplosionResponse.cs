@@ -11,12 +11,12 @@ namespace Weapons
         [SerializeField] private ForceMode forceMode;
         [SerializeField] private ParticleSystem boomEffect;
         [SerializeField] private AudioSource explosionSound;
+        [SerializeField] private bool destroyObject = true;
 
         public void Explode()
         {
             DealDamage();
             ExplosionAnimation();
-
         }
 
         /// <summary>
@@ -55,7 +55,8 @@ namespace Weapons
             boomEffect.gameObject.AddComponent<DestroyParticle>();
             explosionSound.Play();
 
-            Destroy(gameObject);
+            if (destroyObject)
+                Destroy(gameObject);
         }
 
 

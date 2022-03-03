@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         audioManager.transform.GetChild(1).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(2).GetComponent<VolumeSlider>().GetAudiosAtStart();
         
-        _timer = FindObjectOfType<Timer>();
+        _timer = GetComponent<Timer>();
         StartOfRaceTimer();
     }
     

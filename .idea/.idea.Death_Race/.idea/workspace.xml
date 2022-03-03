@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Empty_Ship_AI.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Spaceships/Empty_Ship_AI.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Slipknot - Before I Forget [OFFICIAL VIDEO] [qw2LU1yS7aw].wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Slipknot - Before I Forget [OFFICIAL VIDEO] [qw2LU1yS7aw].wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Woman [m0lGViwwrmA].wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Woman [m0lGViwwrmA].wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Demo/Postprocessing/Poly Universal RP 2019.3 (7.2.1) 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Demo/Postprocessing/Poly Universal RP 2019.3 (7.2.1) 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Sound/Prefabs/Missile/PolyLaserMissileSND.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Assets/Polygon Arsenal/Sound/Prefabs/Missile/PolyLaserMissileSND.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Minigun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Minigun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Photonblaster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Photonblaster.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Rail.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/Impact-FX/vfx_Impact_Rail.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Placeables/Mine_PREFAB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Placeables/Mine_PREFAB.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/LaserProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/LaserProjectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/RailProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/RailProjectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/RocketProjectile_Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Projectiles/RocketProjectile_Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayRandomAudioClip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayRandomAudioClip.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/George/ShipCamera Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/George/ShipCamera Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MISC/DestroyParticleCustom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MISC/DestroyParticleCustom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUps/PowerUps.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseExplosionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseExplosionResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +216,8 @@
       <workItem from="1646138382020" duration="1632000" />
       <workItem from="1646152540038" duration="12580000" />
       <workItem from="1646241295105" duration="12161000" />
-      <workItem from="1646300766732" duration="6529000" />
+      <workItem from="1646300766732" duration="7837000" />
+      <workItem from="1646318860972" duration="4052000" />
     </task>
     <servers />
   </component>

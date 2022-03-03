@@ -1,6 +1,8 @@
 using PlayerController;
 using System.Collections;
+using Core;
 using UnityEngine;
+using Weapons;
 
 namespace AI
 {
@@ -11,6 +13,7 @@ namespace AI
         protected VehicleController _vehicleController;
         protected GameManager _gameManager;
         protected CheckpointManager _checkpointManager;
+        protected Timer _timer;
         #endregion
 
         #region Stats
@@ -81,6 +84,7 @@ namespace AI
         {
             _vehicleController = GetComponent<VehicleController>(); //Could be broken idk.
             _shipWeapon = GetComponent<ShipWeapon>();
+            _timer = GetComponent<Timer>();
 
             spawnPosition = transform.position;
             spawnRotation = transform.rotation;
@@ -144,7 +148,8 @@ namespace AI
             if (health <= 0)
             {
                 isAlive = false;
-                RespawnVehicle();
+                GetComponent<IExplosion>().Explode();
+                _timer.CreateTimer(3f, RespawnVehicle);
                 health = healthLimit;
             }
         }
@@ -211,9 +216,9 @@ namespace AI
             vehicleTransform.rotation = spawnRotation;
 
             gameObject.SetActive(true);
+            health = healthLimit;
             StartCoroutine(SpawnEffect());
             isAlive = true;
-
         }
 
 

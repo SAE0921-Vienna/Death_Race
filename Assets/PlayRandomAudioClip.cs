@@ -27,7 +27,6 @@ public class PlayRandomAudioClip : MonoBehaviour
             _gameManager.StartOfRace += ChangeClip;
             _gameManager.StartOfRace += () => { startTimer = true; };
         }
-
     }
 
     private void Update()
@@ -39,6 +38,7 @@ public class PlayRandomAudioClip : MonoBehaviour
     private void ChangeClip()
     {
         _audioSource.PlayOneShot(_audioSource.clip = allSongs[Random.Range(0, allSongs.Count)]);
+        timer = 0f;
     }
 
 
