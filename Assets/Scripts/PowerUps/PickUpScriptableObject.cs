@@ -23,7 +23,6 @@ public class PickUpScriptableObject : ScriptableObject
 
     public void PowerUpAction(GameObject player)
     {
-
         switch (powerUpType)
         {
             case powerUps.Shield:
@@ -49,9 +48,5 @@ public class PickUpScriptableObject : ScriptableObject
             default:
                 break;
         }
-
     }
-
-
-
 }

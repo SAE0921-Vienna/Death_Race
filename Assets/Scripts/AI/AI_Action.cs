@@ -23,7 +23,6 @@ public class AI_Action : MonoBehaviour
         if (fieldOfView.nearestObject)
         {
             ShootingAI();
-            Debug.Log(gameObject.name + " schieﬂt auf " + fieldOfView.nearestObject.gameObject.name);
         }
 
     }
@@ -43,19 +42,24 @@ public class AI_Action : MonoBehaviour
         switch (powerUp.powerUpType)
         {
             case PickUpScriptableObject.powerUps.Shield:
-                if(baseVehicleManager.health < 70)
+                Debug.Log(gameObject.name + " " + "Shield");
+                if (baseVehicleManager.health < 70)
                 aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Nitro:
                 aiPowerUps.ActivatePowerUp(powerUp);
+                Debug.Log(gameObject.name + " " + "Nitro");
                 break;
             case PickUpScriptableObject.powerUps.Ammo:
+                Debug.Log(gameObject.name + " " + "Ammo");
                 aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Bomb:
+                Debug.Log(gameObject.name + " " + "Bomb");
                 aiPowerUps.ActivatePowerUp(powerUp);
                 break;
             case PickUpScriptableObject.powerUps.Heal:
+                Debug.Log(gameObject.name + " " + "Heal");
                 if (baseVehicleManager.health < 70)
                     aiPowerUps.ActivatePowerUp(powerUp);
                 break;

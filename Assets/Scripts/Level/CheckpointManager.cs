@@ -86,8 +86,8 @@ public class CheckpointManager : MonoBehaviour
             vehicleManager.spawnPosition = checkpoint.transform.position;
             //not perfect but yes (loop bug)
             vehicleManager.spawnRotation = Quaternion.Euler(checkpoint.transform.localRotation.x, checkpoint.transform.localEulerAngles.y + 180, checkpoint.transform.localRotation.z); 
-            Debug.LogFormat("Gone through checkpoint {0}.", vehicleManager.currentCheckpointIndex);
-            Debug.LogFormat("Next Checkpoint is: {0}.", vehicleManager.nextCheckpointIndex);
+            //Debug.LogFormat("Gone through checkpoint {0}.", vehicleManager.currentCheckpointIndex);
+            //Debug.LogFormat("Next Checkpoint is: {0}.", vehicleManager.nextCheckpointIndex);
         }
     }
 
