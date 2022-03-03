@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0036645893, g: 0.0051949015, b: 0.0072606485, a: 1}
+  m_IndirectSpecularColor: {r: 0.0036790755, g: 0.0051774327, b: 0.0072589843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -910,11 +910,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Concept Idea
+  m_text: 'CONCEPT IDEA
 
-    Programmers
-
-
+    PROGRAMMERS
 
 
 
@@ -961,15 +959,14 @@ MonoBehaviour:
     VFX
 
 
-    Special
-    Thanks
+
+    SPECIAL
+    THANKS TO
 
 
 
-    Game Tester
 
-
-'
+    GAME TESTER'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 608fad752e2637e42b5bcac6d6b2b6d6, type: 2}
   m_sharedMaterial: {fileID: -8501075081022297180, guid: 608fad752e2637e42b5bcac6d6b2b6d6, type: 2}
@@ -2334,13 +2331,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Wolfgang Brunner\nGeorge Weiner\nTamas Illes\nWolfgang Brunner\n\n\n\nWolfgang
+  m_text: "Wolfgang Brunner\nGeorge Weiner\nTamas Illes\nWolfgang Brunner\n\nWolfgang
     Brunner\nTamas Illes\nGeorge Weiner\nWolfgang Brunner\nTamas Illes\nTamas Illes\nGeorge
     Weiner\nWolfgang Brunner\nTamas Illes\nGeorge Weiner\nWolfgang Brunner\nGeorge
-    Weiner\nTamas Illes\n\nSynty Studios\nSynty Studios\nSynty Studios\nSynty Studios\nSynty
-    Studios\nSynty Studios\nPolygon Arsenal\nSpace\n\nAlex Grenus & Stillalive\nLukas
-    P.\nEnzo M.\nLukas P.\nEnzo R.\r\nDavid L.\r\nLukas K.\r\nAlina S.\r\nLeandro
-    T.\r\nMicael F.\t\r\nNuri S.\r\nJan P.\n"
+    Weiner\nTamas Illes\n\n\nSynty Studios\nSynty Studios\nSynty Studios\nSynty Studios\nSynty
+    Studios\nPolygon Arsenal\nDeep Space\n\nAlex Grenus & Stillalive\nLukas P.\nEnzo
+    M.\n\nLukas P.\nEnzo M.\r\nDavid L.\r\nLukas K.\r\nAlina S.\r\nLeandro T.\r\nMicael
+    F.\t\r\nNuri S.\r\nJan P."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 608fad752e2637e42b5bcac6d6b2b6d6, type: 2}
   m_sharedMaterial: {fileID: -8501075081022297180, guid: 608fad752e2637e42b5bcac6d6b2b6d6, type: 2}
