@@ -26699,6 +26699,7 @@ MonoBehaviour:
   uiManager: {fileID: 1617549259}
   _checkpointManager: {fileID: 570011635}
   ghostManager: {fileID: 620429327}
+  positionHandler: {fileID: 1408672767}
 --- !u!114 &620429327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54246,7 +54247,7 @@ GameObject:
   - component: {fileID: 1408672766}
   - component: {fileID: 1408672767}
   m_Layer: 0
-  m_Name: Racers
+  m_Name: PositionHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54278,12 +54279,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df452743e4a743e448e1272d9b6bcf5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 0}
-  checkpointManager: {fileID: 0}
+  playerManager: {fileID: 1711200116}
+  checkpointManager: {fileID: 570011635}
   gameManager: {fileID: 219298089}
-  playerPosition: 0
-  racers: []
+  racers:
+  - {fileID: 1711200108}
   checkpointArray: 0000000000000000
+  lapArray: 
+  cpoint: 0
+  lpoint: 0
+  playerPosition: 0
+  playerLaps: 0
 --- !u!1001 &1409616883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83284,6 +83290,7 @@ MonoBehaviour:
   uiManager: {fileID: 1617549259}
   _checkpointManager: {fileID: 0}
   ghostManager: {fileID: 0}
+  positionHandler: {fileID: 0}
 --- !u!64 &2041604646
 MeshCollider:
   m_ObjectHideFlags: 0

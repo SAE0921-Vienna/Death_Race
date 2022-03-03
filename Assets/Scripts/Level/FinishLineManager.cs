@@ -16,6 +16,8 @@ public class FinishLineManager : MonoBehaviour
 
     public GhostManager ghostManager;
 
+    public PositionHandler positionHandler;
+
     #endregion
 
     /// <summary>
@@ -37,6 +39,11 @@ public class FinishLineManager : MonoBehaviour
         if (ghostManager == null)
         {
             Debug.Log("No GhostManager");
+
+        }
+        if (positionHandler == null)
+        {
+            Debug.Log("No PositionHandler");
         }
     }
 
@@ -46,7 +53,7 @@ public class FinishLineManager : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("AI"))
+        if (other.CompareTag("Player") || other.CompareTag("AI") || other.CompareTag("Ghost"))
         {
             var vehicleManager = other.GetComponentInParent<BaseVehicleManager>();
 
@@ -59,6 +66,10 @@ public class FinishLineManager : MonoBehaviour
                 {
                     gameManager.StartRoundTimer();
                     minimap.gameObject.SetActive(true);
+                }
+                if (gameManager.ghostMode)
+                {
+                    positionHandler.enabled = true;
                 }
             }
 

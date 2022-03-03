@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using AI;
 using System;
+using System.Collections;
 
 public class PositionHandler : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class PositionHandler : MonoBehaviour
 
     private void Start()
     {
+        if (gameManager.ghostMode)
+        {
+            StartCoroutine("GetGhostObject", 2f);
+        }
+
         checkpointArray = new int[racers.Count];
         lapArray = new int[racers.Count];
 
@@ -49,10 +55,10 @@ public class PositionHandler : MonoBehaviour
         checkpointArray[0] = playerManager.nextCheckpointIndex;
 
         //AI
-        checkpointArray[1] = racers[1].GetComponent<AIManager>().nextCheckpointIndex;
-        //checkpointArray[2] = racers[2].GetComponent<AIManager>().nextCheckpointIndex;
-        //checkpointArray[3] = racers[3].GetComponent<AIManager>().nextCheckpointIndex;
-        //checkpointArray[4] = racers[4].GetComponent<AIManager>().nextCheckpointIndex;
+        checkpointArray[1] = racers[1].GetComponent<BaseVehicleManager>().nextCheckpointIndex;
+        //checkpointArray[2] = racers[2].GetComponent<BaseVehicleManager>().nextCheckpointIndex;
+        //checkpointArray[3] = racers[3].GetComponent<BaseVehicleManager>().nextCheckpointIndex;
+        //checkpointArray[4] = racers[4].GetComponent<BaseVehicleManager>().nextCheckpointIndex;
 
         Array.Sort(checkpointArray);
         Array.Reverse(checkpointArray);
@@ -90,10 +96,10 @@ public class PositionHandler : MonoBehaviour
         lapArray[0] = playerManager.currentLapIndex;
 
         //AI
-        lapArray[1] = racers[1].GetComponent<AIManager>().currentLapIndex;
-        //lapArray[2] = racers[2].GetComponent<AIManager>().currentLapIndex;
-        //lapArray[3] = racers[3].GetComponent<AIManager>().currentLapIndex;
-        //lapArray[4] = racers[4].GetComponent<AIManager>().currentLapIndex;
+        lapArray[1] = racers[1].GetComponent<BaseVehicleManager>().currentLapIndex;
+        //lapArray[2] = racers[2].GetComponent<BaseVehicleManager>().currentLapIndex;
+        //lapArray[3] = racers[3].GetComponent<BaseVehicleManager>().currentLapIndex;
+        //lapArray[4] = racers[4].GetComponent<BaseVehicleManager>().currentLapIndex;
 
         Array.Sort(lapArray);
         Array.Reverse(lapArray);
@@ -124,6 +130,12 @@ public class PositionHandler : MonoBehaviour
 
     }
 
+
+    IEnumerator GetGhostObject()
+    {
+        racers.Add(FindObjectOfType<LoadCustomAI>().gameObject);
+        yield return null;
+    }
 
     //public float DistanceToNextCheckpoint(Transform originPosition, Transform nextCheckpointPosition)
     //{

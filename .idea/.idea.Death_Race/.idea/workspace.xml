@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/15033 placing heavy metal cover-full.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/15033 placing heavy metal cover-full.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/Alien_Weapon_Reload_ODS-1572-098.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/Alien_Weapon_Reload_ODS-1572-098.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/MMO_Game_Magic_Source_Heal_83_Synth_Energy_Morph_Chirp.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/MMO_Game_Magic_Source_Heal_83_Synth_Energy_Morph_Chirp.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/Rocket Afterburner.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/Rocket Afterburner.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/Sci-Fi Energy Shield Up 14.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/PowerUp_SFX/Sci-Fi Energy Shield Up 14.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/Input/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/Input/InputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CoreAssets/Input/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CoreAssets/Input/InputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/Berzir Curve.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/Berzir Curve.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/GameAssets.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +219,7 @@
       <workItem from="1646138382020" duration="1632000" />
       <workItem from="1646152540038" duration="12580000" />
       <workItem from="1646241295105" duration="12161000" />
-      <workItem from="1646300766732" duration="1577000" />
+      <workItem from="1646300766732" duration="2219000" />
     </task>
     <servers />
   </component>

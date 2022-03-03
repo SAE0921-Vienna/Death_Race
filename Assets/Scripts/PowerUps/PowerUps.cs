@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using AI;
+using Audio;
 using PlayerController;
 using UnityEngine;
 using UserInterface;
@@ -245,6 +246,8 @@ public class PowerUps : MonoBehaviour
         shieldEffect.SetActive(true);
         _vehicleStats.isImmortal = true;
         _vehicleStats.hasShield = true;
+        
+        AudioManager.PlaySound(AudioManager.Sound.ShieldUp);
     }
 
     /// <summary>
@@ -261,6 +264,8 @@ public class PowerUps : MonoBehaviour
         vehicleContr.mAccelerationConstant += nitroAccelerationModifier;
 
         _vehicleStats.hasNitro = true;
+        
+        AudioManager.PlaySound(AudioManager.Sound.NitroSound);
     }
 
     private void SetInterpolator()
@@ -297,6 +302,8 @@ public class PowerUps : MonoBehaviour
         _vehicleStats.timer = munitionEffect.GetComponent<ParticleSystem>().main.duration;
         _vehicleStats.ammo += _vehicleStats.ammoAdd;
         _vehicleStats.canShoot = true;
+        
+        AudioManager.PlaySound(AudioManager.Sound.ReloadWeapon);
 
 
 
@@ -316,6 +323,8 @@ public class PowerUps : MonoBehaviour
         bombClone.GetComponent<SphereCollider>().enabled = true;
         bombClone.GetComponent<BombTrigger>().bombHasBeenActivated = true;
         _vehicleStats.hasBomb = true;
+        
+        AudioManager.PlaySound(AudioManager.Sound.PlaceBomb);
     }
 
     /// <summary>
@@ -331,6 +340,7 @@ public class PowerUps : MonoBehaviour
         {
             _vehicleStats.health = _vehicleStats.healthLimit;
         }
+        AudioManager.PlaySound(AudioManager.Sound.HealShip);
     }
 
     #endregion
