@@ -22,10 +22,13 @@ public class PlayerShipWeapon : ShipWeapon
 
     void Update()
     {
-        //Debug.DrawRay(shipWeaponTransform.position, shipWeaponTransform.forward*400, Color.green);
         RotateWeapon();
         Shoot();
     }
+
+    /// <summary>
+    /// Executes the Player Shoot method
+    /// </summary>
     public override void Shoot()
     {
         if (!playerManager.canShoot) return;
@@ -51,14 +54,11 @@ public class PlayerShipWeapon : ShipWeapon
             {
                 tempobj.GetComponent<IDamageable>().GetDamage(projectileDamage);
             }
-            else
-            {
-                //Debug.Log("MAMAMAAAAAA");
-            }
-            //Debug.Log(HitTarget().name);
         }
     }
-
+    /// <summary>
+    /// Rotates the player's weapon in the direction of the mouse pointer
+    /// </summary>
     protected override void RotateWeapon()
     {
         ray = _camera.ScreenPointToRay(Input.mousePosition);
@@ -74,20 +74,4 @@ public class PlayerShipWeapon : ShipWeapon
             ? Quaternion.Slerp(currentRotation, _targetRotation, (rotationSpeed * 180 * Time.deltaTime) / angularDifference)
             : _targetRotation;
     }
-    //protected override void InstantiateProjectile()
-    //{
-    //    if (playerManager.currentSpeed > 0)
-    //    {
-    //        projectileSpeed = (playerManager.currentSpeed * 30) + projectileDefaultSpeed;
-    //    }
-    //    else
-    //    {
-    //        projectileSpeed = projectileDefaultSpeed;
-    //    }
-    //    //PlaySound();
-    //    GameObject projectile = Instantiate(projectilePrefab, shipWeaponTransform.position, shipWeaponTransform.rotation);
-    //    projectile.GetComponent<Rigidbody>().AddForce(shipWeaponTransform.forward * projectileSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
-
-    //    Destroy(projectile, projectileLifeTime);
-    //}
 }

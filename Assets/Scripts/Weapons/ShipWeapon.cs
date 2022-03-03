@@ -4,7 +4,6 @@ using AI;
 
 public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 {
-    //Weapon
     [Header("Weapon")]
     public WeaponData currentWeapon;
     [SerializeField] protected LayerMask targetLayer;
@@ -15,7 +14,6 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
     [SerializeField] protected Quaternion currentRotation;
     protected Quaternion _targetRotation;
 
-    // Projectil
     [Header("Projectil")]
     [SerializeField] protected GameObject projectilePrefab;
     [SerializeField] protected int ammoSize;
@@ -29,14 +27,8 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
     protected BaseVehicleManager vehicleManager;
     protected RaycastHit hit;
 
-    // Start is called before the first frame update
-    //protected virtual void Awake()
-    //{
-
-    //}
     protected virtual void Start()
     {
-
         currentWeapon = GetComponent<SpaceshipLoad>().CurrentWeapon;
         shipWeaponPosition = GetComponent<SpaceshipLoad>().CurrentShip.WeaponPosition;
         vehicleManager = GetComponent<BaseVehicleManager>();
@@ -44,20 +36,33 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
         SetEquippedWeapon();
 
         shipWeaponTransform = transform.GetChild(1).GetChild(1).GetChild(0).GetChild(0).transform;
-
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public int GetAmmo()
     {
         return ammoSize;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public float GetFireRate()
     {
         return fireRate;
     }
 
+    /// <summary>
+    /// Calls the Shoot method
+    /// </summary>
     public abstract void Shoot();
 
+    /// <summary>
+    /// Set the selected weapon stats
+    /// </summary>
     public void SetEquippedWeapon()
     {
         ammoSize = currentWeapon.ammoSize;
@@ -65,8 +70,16 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
         projectileDamage = currentWeapon.damage;
         projectilePrefab = currentWeapon.laserPrefab;
     }
+
+    /// <summary>
+    /// Rotates the weapon in the aiming direction
+    /// </summary>
     protected abstract void RotateWeapon();
 
+    /// <summary>
+    /// Gets the GameObject parent
+    /// </summary>
+    /// <returns></returns>
     protected GameObject HitTarget()
     {
         Ray ray = new Ray(shipWeaponTransform.position, shipWeaponTransform.forward);
@@ -75,17 +88,16 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
 
         if (hitTarget)
         {
-            //Debug.Log(hit.transform.root.gameObject.name);
             return hit.transform.root.gameObject;
         }
         else
         {
-            //var myGameObject = new GameObject();
-            //myGameObject.name = "TEST";
             return null;
         }
     }
-
+    /// <summary>
+    /// Instantiates the weapon projectile with a force
+    /// </summary>
     protected virtual void InstantiateProjectile()
     {
         float tempProjectileLifeTime = projectileLifeTime;
@@ -113,6 +125,9 @@ public abstract class ShipWeapon : MonoBehaviour, ISoundPlayer
         Destroy(projectile, projectileLifeTime);
     }
 
+    /// <summary>
+    /// Plays the gunshot sound
+    /// </summary>
     public void PlaySound()
     {
         //AudioManager.PlaySound(currentWeapon.WeaponSound);
