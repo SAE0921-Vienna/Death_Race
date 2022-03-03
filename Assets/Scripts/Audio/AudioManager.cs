@@ -20,7 +20,12 @@ namespace Audio
             RocketLauncherLaunch,
             RocketExplosion,
             Railgunshot,
-            HitWall
+            HitWall,
+            PlaceBomb,
+            ReloadWeapon,
+            HealShip,
+            NitroSound,
+            ShieldUp
         }
         private static Dictionary<Sound, float> _soundTimerDictionary;
         private static Dictionary<Sound[], float> _soundArrayTimerDictionary;
