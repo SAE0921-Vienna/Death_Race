@@ -19,11 +19,14 @@ public class FieldOfView : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(FindTargetsWithDelay(1.0f));
+        StartCoroutine(FindTargetsWithDelay(0.5f));
     }
 
-
-
+    /// <summary>
+    /// Checks every 0.5 seconds if there is an enemy ship in the field of view radius
+    /// </summary>
+    /// <param name="delay"></param>
+    /// <returns></returns>
     IEnumerator FindTargetsWithDelay(float delay)
     {
         while (true)
@@ -33,6 +36,9 @@ public class FieldOfView : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Look for the visible opponents and target the closest one.
+    /// </summary>
     void FindVisibleTargets()
     {
         visibleTargets.Clear();
@@ -49,7 +55,6 @@ public class FieldOfView : MonoBehaviour
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && dstToTarget > GetComponentInChildren<BoxCollider>().size.x)
                 {
                     visibleTargets.Add(target);
-
                 }
             }
         }
@@ -70,9 +75,15 @@ public class FieldOfView : MonoBehaviour
                     }
                 }
             }
-            //Debug.Log(nearestObject.position);
         }
     }
+
+    /// <summary>
+    /// Returns the range in radians.
+    /// </summary>
+    /// <param name="angleInDegrees"></param>
+    /// <param name="angleIsGlobal"></param>
+    /// <returns></returns>
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
     {
         if (!angleIsGlobal)
