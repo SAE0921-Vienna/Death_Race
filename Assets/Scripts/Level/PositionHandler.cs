@@ -41,6 +41,10 @@ public class PositionHandler : MonoBehaviour
 
         CheckPlace();
         playerManager.currentPositionIndex = playerPosition + 1;
+        racers[1].GetComponent<BaseVehicleManager>().currentPositionIndex = ai1Position + 1;
+        racers[2].GetComponent<BaseVehicleManager>().currentPositionIndex = ai2Position + 1;
+        racers[3].GetComponent<BaseVehicleManager>().currentPositionIndex = ai3Position + 1;
+
 
     }
     private void CheckPlace()

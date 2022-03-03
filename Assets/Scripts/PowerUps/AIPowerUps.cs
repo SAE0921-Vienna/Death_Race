@@ -17,10 +17,13 @@ public class AIPowerUps : PowerUps
 
         aIFollowCurve = GetComponent<AIFollowCurve>();
 
+    }
+
+    private void Start()
+    {
         normalSpeed = aIFollowCurve.MaxSpeed;
 
         nitroSpeedModifier = (aIFollowCurve.MaxSpeed / 100) * 20f;
-
     }
 
     private void Update()
@@ -31,6 +34,15 @@ public class AIPowerUps : PowerUps
         {
             _vehicleStats.timer = -1;
             ResetPowerUps();
+        }
+
+        if (_vehicleStats.health < 40)
+        {
+            lowHealthEffect.SetActive(true);
+        }
+        else
+        {
+            lowHealthEffect.SetActive(false);
         }
 
     }

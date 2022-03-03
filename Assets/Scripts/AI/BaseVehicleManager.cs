@@ -149,7 +149,7 @@ namespace AI
             {
                 isAlive = false;
                 GetComponent<IExplosion>().Explode();
-                 RespawnVehicle();
+                RespawnVehicle();
             }
         }
 

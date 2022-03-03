@@ -5,11 +5,14 @@ public class AIFollowCurve : MonoBehaviour
 {
     public float MaxSpeed;
     public float Speed;
-    
+
+    [SerializeField] private float speedMaxBuff = 22.9f;
+    [SerializeField] private float speedMinBuff = 22.45f;
+
     [SerializeField] private EndOfPathInstruction end;
     [SerializeField] private PathCreator pathCreator;
     [SerializeField] private float accelerationConstant;
-    
+
     private float _distanceTravelled;
     private GameManager _gameManager;
     private bool _canDrive;
@@ -18,6 +21,8 @@ public class AIFollowCurve : MonoBehaviour
     {
         _gameManager = FindObjectOfType<GameManager>();
         _gameManager.StartOfRace += () => { _canDrive = true; };
+
+        MaxSpeed = Random.Range(speedMinBuff, speedMaxBuff);
     }
 
 
@@ -31,7 +36,7 @@ public class AIFollowCurve : MonoBehaviour
     {
         transform.position = pathCreator.path.GetPointAtDistance(_distanceTravelled, end);
         transform.rotation = pathCreator.path.GetRotationAtDistance(_distanceTravelled, end);
-        
+
         _distanceTravelled += Speed * Time.fixedDeltaTime;
     }
 
