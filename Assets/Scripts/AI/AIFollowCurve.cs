@@ -1,17 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using PathCreation;
 
 public class AIFollowCurve : MonoBehaviour
 {
-    public float speed;
-    [SerializeField] private float maxSpeed;
+    public float MaxSpeed;
+    public float Speed;
+    
     [SerializeField] private EndOfPathInstruction end;
     [SerializeField] private PathCreator pathCreator;
     [SerializeField] private float accelerationConstant;
+    
     private float _distanceTravelled;
     private GameManager _gameManager;
     private bool _canDrive;
@@ -34,18 +32,17 @@ public class AIFollowCurve : MonoBehaviour
         transform.position = pathCreator.path.GetPointAtDistance(_distanceTravelled, end);
         transform.rotation = pathCreator.path.GetRotationAtDistance(_distanceTravelled, end);
         
-        _distanceTravelled += speed * Time.fixedDeltaTime;
+        _distanceTravelled += Speed * Time.fixedDeltaTime;
     }
-    
 
     private void Accelerate()
     {
         if (!_canDrive) return;
-        speed = Mathf.MoveTowards(speed, maxSpeed, accelerationConstant);
+        Speed = Mathf.MoveTowards(Speed, MaxSpeed, accelerationConstant);
     }
 
     public float GetCurrentSpeed()
     {
-        return Mathf.InverseLerp(0f, maxSpeed, speed);
+        return Mathf.InverseLerp(0f, MaxSpeed, Speed);
     }
 }

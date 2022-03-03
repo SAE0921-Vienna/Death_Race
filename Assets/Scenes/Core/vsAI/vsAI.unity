@@ -10645,8 +10645,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: MaxSpeed
+      value: 22.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: maxSpeed
-      value: 22.5
+      value: 22.45
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: pathCreator
@@ -10654,7 +10658,7 @@ PrefabInstance:
       objectReference: {fileID: 851109482}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: accelerationConstant
-      value: 0.13
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123026, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: m_Name
@@ -10703,6 +10707,14 @@ PrefabInstance:
     - target: {fileID: 3158153248187123027, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: maxPitch
+      value: 1.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: minPitch
+      value: 0.609
       objectReference: {fileID: 0}
     - target: {fileID: 3158153249923064196, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: m_IsTrigger
@@ -58799,8 +58811,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: MaxSpeed
+      value: 22.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: maxSpeed
-      value: 23
+      value: 22.9
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: pathCreator
@@ -58808,7 +58824,7 @@ PrefabInstance:
       objectReference: {fileID: 1575347806}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: accelerationConstant
-      value: 0.15
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123026, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: m_Name
@@ -58858,6 +58874,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.033
       objectReference: {fileID: 0}
+    - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: maxPitch
+      value: 1.451
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: minPitch
+      value: 0.725
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153249496100435, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a89204fc9a9e7a030a7b06f3a4e7318c, type: 3}
     - target: {fileID: 3158153249923064196, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -64146,8 +64174,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: MaxSpeed
+      value: 22.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: maxSpeed
-      value: 22.5
+      value: 22.45
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: pathCreator
@@ -64155,7 +64187,7 @@ PrefabInstance:
       objectReference: {fileID: 1069060352}
     - target: {fileID: 3158153248187123025, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: accelerationConstant
-      value: 0.13
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 3158153248187123026, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: m_Name
@@ -64205,6 +64237,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.033
       objectReference: {fileID: 0}
+    - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: maxPitch
+      value: 1.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: minPitch
+      value: 0.526
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153249496100435, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a89204fc9a9e7a030a7b06f3a4e7318c, type: 3}
     - target: {fileID: 3158153249923064196, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: m_IsTrigger
       value: 1

@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Slipknot - Before I Forget [OFFICIAL VIDEO] [qw2LU1yS7aw].wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Slipknot - Before I Forget [OFFICIAL VIDEO] [qw2LU1yS7aw].wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Woman [m0lGViwwrmA].wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sound/Music/Woman [m0lGViwwrmA].wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/VehicleSoundAI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/VehicleSoundAI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayRandomAudioClip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayRandomAudioClip.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseExplosionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseExplosionResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIFollowCurve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIFollowCurve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/VehicleSoundAI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sound/VehicleSoundAI.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +29,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController/PIDController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/VolumeSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/ShipWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/VolumeSlider.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -218,6 +215,7 @@
       <workItem from="1646241295105" duration="12161000" />
       <workItem from="1646300766732" duration="7837000" />
       <workItem from="1646318860972" duration="4052000" />
+      <workItem from="1646337203714" duration="1215000" />
     </task>
     <servers />
   </component>
