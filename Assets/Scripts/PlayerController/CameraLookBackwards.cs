@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraLookBackwards : MonoBehaviour
 {
-    private InputActions _controls = new InputActions();
+    //private InputActions _controls = new InputActions();
     
     [SerializeField]
     private GameObject _cameraPosition;
