@@ -100,7 +100,8 @@ namespace AI
 
             canShoot = false;
 
-            spaceshipMesh = GetComponentInChildren<SpaceshipRotator>().transform.GetChild(0).transform;
+            if (GetComponentInChildren<SpaceshipRotator>())
+                spaceshipMesh = GetComponentInChildren<SpaceshipRotator>().transform.GetChild(0).transform;
         }
 
         /// <summary>
