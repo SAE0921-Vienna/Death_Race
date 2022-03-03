@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GarageManager : MonoBehaviour
 {
-
     public TextMeshProUGUI shipName;
     public TextMeshProUGUI weaponName;
     public TextMeshProUGUI materialName;
@@ -37,7 +36,6 @@ public class GarageManager : MonoBehaviour
         SceneManager.LoadScene(_name);
     }
 
-
     private void Awake()
     {
         Time.timeScale = 1;
@@ -48,15 +46,21 @@ public class GarageManager : MonoBehaviour
         audioManager.transform.GetChild(0).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(1).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(2).GetComponent<VolumeSlider>().GetAudiosAtStart();
-
     }
 
+    /// <summary>
+    /// Close the game
+    /// </summary>
     public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Quit Game");
     }
 
+    /// <summary>
+    /// Sets full screen size
+    /// </summary>
+    /// <param name="_isFullscreen"></param>
     public void SetFullScreen(bool _isFullscreen)
     {
         Screen.fullScreen = _isFullscreen;

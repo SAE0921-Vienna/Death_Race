@@ -45,6 +45,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     public int maxMaterials;
     #endregion
 
+    #region SliderStats
     [SerializeField]
     private Slider healthSlider;
     [SerializeField]
@@ -62,8 +63,7 @@ public class SpaceShipConfigurator : MonoBehaviour
     private Slider ammoSlider;
     [SerializeField]
     private Slider firerateSlider;
-
-
+    #endregion SliderStats
 
     /// <summary>
     /// Gets all the ships, weapons and materials in the game from the saved data
@@ -87,7 +87,6 @@ public class SpaceShipConfigurator : MonoBehaviour
         for (int i = 0; i < maxMaterials; i++)
         {
             materials[i].materialData = allMaterials[i];
-
         }
 
         ChangeWeapon();
@@ -108,7 +107,6 @@ public class SpaceShipConfigurator : MonoBehaviour
             garageManager.materialName.text = materials[currentMaterial].materialData.name;
             garageManager.weaponName.text = weapons[currentWeapon].weaponData.name;
         }
-
     }
 
     /// <summary>
@@ -136,7 +134,6 @@ public class SpaceShipConfigurator : MonoBehaviour
                 for (int i = 0; i < maxMaterials; i++)
                 {
                     materials[i].materialBought = saveLoadScript.boughtMaterials[i];
-
                 }
             }
             else
@@ -155,14 +152,12 @@ public class SpaceShipConfigurator : MonoBehaviour
                 for (int i = 1; i < maxMaterials; i++)
                 {
                     materials[i].materialBought = false;
-
                 }
             }
         }
         else
         {
             Debug.LogWarning("SaveLoadScript has NOT been found");
-
         }
     }
 
@@ -186,23 +181,16 @@ public class SpaceShipConfigurator : MonoBehaviour
                 ChangeWeaponMaterial(currentMaterial);
                 garageManager.saveAndCloseGarage.interactable = true;
                 garageManager.unavailablePanel.SetActive(false);
-
             }
             ChangeShipMaterial(currentMaterial);
-
-
         }
         else
         {
-
             ChangeShipMaterial(unavailableMaterial);
             ChangeWeaponMaterial(unavailableMaterial);
             garageManager.saveAndCloseGarage.interactable = false;
             garageManager.unavailablePanel.SetActive(true);
-
         }
-
-
     }
 
     /// <summary>
@@ -225,8 +213,6 @@ public class SpaceShipConfigurator : MonoBehaviour
             saveLoadScript.lastEquippedVehicleMesh = currentShip;
             saveLoadScript.lastEquippedVehicleColliderMesh = currentShip;
         }
-
-
     }
 
     /// <summary>
@@ -257,8 +243,6 @@ public class SpaceShipConfigurator : MonoBehaviour
     private void ChangeWeapon()
     {
         weaponClone = Instantiate(weapons[currentWeapon].weaponData.vehicleWeaponPrefab, transform.GetChild(1).GetChild(1).transform, false);
-        //weaponClone.GetComponentInChildren<WeaponRotator>().enabled = false;
-
         garageManager.weaponStatsGarage.text = weapons[currentWeapon].weaponData.GetWeaponStats();
         SetWeaponStatSliders();
 
@@ -267,16 +251,13 @@ public class SpaceShipConfigurator : MonoBehaviour
             ChangeWeaponMaterial(currentMaterial);
             garageManager.saveAndCloseGarage.interactable = true;
             garageManager.unavailablePanel.SetActive(false);
-
         }
         else
         {
             ChangeWeaponMaterial(unavailableMaterial);
             garageManager.saveAndCloseGarage.interactable = false;
             garageManager.unavailablePanel.SetActive(true);
-
         }
-
     }
 
     /// <summary>
@@ -299,7 +280,6 @@ public class SpaceShipConfigurator : MonoBehaviour
         {
             saveLoadScript.lastEquippedWeaponPrefab = currentWeapon;
         }
-
     }
 
     /// <summary>
@@ -393,8 +373,6 @@ public class SpaceShipConfigurator : MonoBehaviour
             {
                 NextMaterial();
             }
-
-
         }
 
         if (materials[currentMaterial].materialBought && weapons[currentWeapon].weaponBought && ships[currentShip].shipBought)
@@ -416,10 +394,7 @@ public class SpaceShipConfigurator : MonoBehaviour
             {
                 NextMaterial();
             }
-
-
         }
-
     }
 
     /// <summary>
@@ -449,8 +424,6 @@ public class SpaceShipConfigurator : MonoBehaviour
             {
                 PreviousMaterial();
             }
-
-
         }
 
         if (materials[currentMaterial].materialBought && weapons[currentWeapon].weaponBought && ships[currentShip].shipBought)
@@ -472,13 +445,12 @@ public class SpaceShipConfigurator : MonoBehaviour
             {
                 PreviousMaterial();
             }
-
-
         }
-
     }
 
-
+    /// <summary>
+    /// Sets the ships stats of the sliders
+    /// </summary>
     public void SetShipStatSliders()
     {
         healthSlider.value = ships[currentShip].shipData.health;
@@ -488,6 +460,9 @@ public class SpaceShipConfigurator : MonoBehaviour
         angularDrag.value = ships[currentShip].shipData.speedBasedAngularDrag;
     }
 
+    /// <summary>
+    /// Sets the weapon stats of the sliders
+    /// </summary>
     public void SetWeaponStatSliders()
     {
         damageSlider.value = weapons[currentWeapon].weaponData.damage;
@@ -495,6 +470,9 @@ public class SpaceShipConfigurator : MonoBehaviour
         firerateSlider.value = weapons[currentWeapon].weaponData.fireRate;
     }
 
+    /// <summary>
+    /// Sets the material name
+    /// </summary>
     public void SetMaterialName()
     {
         if (garageManager)
@@ -502,7 +480,6 @@ public class SpaceShipConfigurator : MonoBehaviour
             garageManager.materialName.text = materials[currentMaterial].materialData.name;
         }
     }
-
 
     /// <summary>
     /// Unlocks All Ships, Weapons and Materials in the game
@@ -547,9 +524,7 @@ public class SpaceShipConfigurator : MonoBehaviour
             garageManager.weaponName.text = weapons[currentWeapon].weaponData.name;
 
             garageManager.unavailablePanel.SetActive(false);
-
         }
-
     }
 
     /// <summary>
@@ -579,7 +554,6 @@ public class SpaceShipConfigurator : MonoBehaviour
         for (int i = 1; i < maxMaterials; i++)
         {
             materials[i].materialBought = false;
-
         }
         saveLoadScript.SaveSaveData();
         CheckSaveLoadScript();
@@ -595,11 +569,8 @@ public class SpaceShipConfigurator : MonoBehaviour
             garageManager.weaponName.text = weapons[currentWeapon].weaponData.name;
 
             garageManager.unavailablePanel.SetActive(false);
-
         }
-
     }
-
 }
 
 
@@ -634,4 +605,3 @@ public class MaterialConfig
     public MaterialData materialData;
     public bool materialBought;
 }
-
