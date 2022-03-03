@@ -53,6 +53,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Camera"",
+                    ""type"": ""Button"",
+                    ""id"": ""2424177f-13c7-4f3f-b0cf-32ef485bf3ba"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -273,6 +282,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""XR"",
                     ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a1469690-6dde-43d1-8522-d906cdab6e3c"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Camera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -883,6 +903,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_Player_AccelerateDecelerate = m_Player.FindAction("Accelerate / Decelerate", throwIfNotFound: true);
         m_Player_Steer = m_Player.FindAction("Steer", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+        m_Player_Camera = m_Player.FindAction("Camera", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -958,6 +979,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_AccelerateDecelerate;
     private readonly InputAction m_Player_Steer;
     private readonly InputAction m_Player_Fire;
+    private readonly InputAction m_Player_Camera;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
@@ -965,6 +987,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @AccelerateDecelerate => m_Wrapper.m_Player_AccelerateDecelerate;
         public InputAction @Steer => m_Wrapper.m_Player_Steer;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
+        public InputAction @Camera => m_Wrapper.m_Player_Camera;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -983,6 +1006,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
+                @Camera.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera;
+                @Camera.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera;
+                @Camera.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -996,6 +1022,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
+                @Camera.started += instance.OnCamera;
+                @Camera.performed += instance.OnCamera;
+                @Camera.canceled += instance.OnCamera;
             }
         }
     }
@@ -1163,6 +1192,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnAccelerateDecelerate(InputAction.CallbackContext context);
         void OnSteer(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
+        void OnCamera(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
