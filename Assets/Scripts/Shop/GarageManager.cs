@@ -48,6 +48,7 @@ public class GarageManager : MonoBehaviour
         audioManager.transform.GetChild(0).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(1).GetComponent<VolumeSlider>().GetAudiosAtStart();
         audioManager.transform.GetChild(2).GetComponent<VolumeSlider>().GetAudiosAtStart();
+
     }
 
     public void QuitGame()
