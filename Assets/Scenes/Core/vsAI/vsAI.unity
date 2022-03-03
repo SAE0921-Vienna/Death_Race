@@ -7763,31 +7763,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7968.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 591.9026
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1460.433
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.35555288
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0011850856
+      value: 0.000000028237988
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9342421
+      value: 0.0000000372529
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.027793191
+      value: 0.0000000032596286
       objectReference: {fileID: 0}
     - target: {fileID: 8482835735354933246, guid: 0015467c9cc322103900948415cd301a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21505,11 +21505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.07414332
+      value: 0.07414333
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0012263663
+      value: -0.0012263674
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.y
@@ -21517,7 +21517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.016490389
+      value: 0.016490402
       objectReference: {fileID: 0}
     - target: {fileID: 3965160609210042298, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54101,7 +54101,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3965160609210042299, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
   m_PrefabInstance: {fileID: 558402793}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287383271}
+  m_GameObject: {fileID: 1183853921}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
@@ -56635,6 +56635,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f711f09dc0707a4191dd133805d60d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1183853921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3965160609210042295, guid: fc109850a639a6c26a1721fab95d1b25, type: 3}
+  m_PrefabInstance: {fileID: 558402793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1183853922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183853921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f3bc3726c9f203bb297ceee92cdcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cameraPosition: {fileID: 758147695}
+  _cameraPositionBack: {fileID: 1051878838}
 --- !u!1 &1185431453
 GameObject:
   m_ObjectHideFlags: 0
@@ -76052,6 +76071,10 @@ MonoBehaviour:
   - {fileID: 4813497883390902269}
   checkpointArray: 0000000000000000
   lapArray: 
+  cpoint: 0
+  lpoint: 0
+  playerPosition: 0
+  playerLaps: 0
 --- !u!1001 &1410248217
 PrefabInstance:
   m_ObjectHideFlags: 0
