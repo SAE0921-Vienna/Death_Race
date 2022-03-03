@@ -67,7 +67,7 @@ public class FinishLineManager : MonoBehaviour
                     gameManager.StartRoundTimer();
                     minimap.gameObject.SetActive(true);
                 }
-                if (gameManager.ghostMode)
+                if (gameManager.ghostMode && ghostManager.ghost.hasData)
                 {
                     positionHandler.enabled = true;
                 }
