@@ -25,8 +25,7 @@ namespace AI
 
         protected override void Update()
         {
-            Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
-
+            Debug.DrawLine(transform.position, FacingInfo().point, Color.red);            
             currentSpeed = aiFollowCurve.speed;
             //isOnRoadtrack = _vehicleController.isOnRoadtrack;
 

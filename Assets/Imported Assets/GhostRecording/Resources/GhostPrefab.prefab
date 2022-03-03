@@ -5119,6 +5119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2245387158028735725}
   - component: {fileID: 1221066981794573548}
+  - component: {fileID: 4162522328762869270}
   m_Layer: 6
   m_Name: GhostPrefab
   m_TagString: Player
@@ -5177,6 +5178,20 @@ MonoBehaviour:
   currentShip: 0
   currentWeapon: 0
   currentMaterial: 0
+  weaponClone: {fileID: 0}
+  vfxClone: {fileID: 0}
+--- !u!114 &4162522328762869270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2245387158028735728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cdc8f33b28229448635d14aa32af42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2245387158099640114
 GameObject:
   m_ObjectHideFlags: 0
