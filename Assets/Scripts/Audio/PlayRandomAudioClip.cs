@@ -8,7 +8,7 @@ public class PlayRandomAudioClip : MonoBehaviour
 {
     private AudioSource _audioSource;
     private GameManager _gameManager;
-    private float timer;
+    public float timer;
     private bool startTimer;
 
     [SerializeField]
@@ -16,7 +16,9 @@ public class PlayRandomAudioClip : MonoBehaviour
 
     private void Start()
     {
+        
         _audioSource = GetComponent<AudioSource>();
+        _audioSource.Stop();
         _gameManager = FindObjectOfType<GameManager>();
         if (_gameManager == null)
         {
@@ -37,14 +39,17 @@ public class PlayRandomAudioClip : MonoBehaviour
 
     private void ChangeClip()
     {
-        _audioSource.PlayOneShot(_audioSource.clip = allSongs[Random.Range(0, allSongs.Count)]);
+        //_audioSource.PlayOneShot(_audioSource.clip = allSongs[Random.Range(0, allSongs.Count)]);
+        _audioSource.clip = allSongs[Random.Range(0, allSongs.Count)];
+        _audioSource.Play();
+
         timer = 0f;
     }
 
 
     private void Timer()
     {
-        timer += Time.deltaTime * _audioSource.pitch;
+        timer += Time.deltaTime /** _audioSource.pitch*/;
         if (timer >= _audioSource.clip.length + 1)
         {
             timer = 0f;
