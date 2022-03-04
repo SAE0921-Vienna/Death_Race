@@ -6,12 +6,19 @@ namespace Core
     public class Timer : MonoBehaviour
     {
         private Action timerCallback;
+        private Action<GameObject> timerCallbackGameObject;
         private float timer;
         
         public void CreateTimer(float timer, Action timerCallback)
         {
             this.timer = timer;
             this.timerCallback = timerCallback;
+        }
+        
+        public void CreateTimer(float timer, Action<GameObject> timerCallbackGameObject)
+        {
+            this.timer = timer;
+            this.timerCallbackGameObject = timerCallbackGameObject;
         }
 
         private void Update()

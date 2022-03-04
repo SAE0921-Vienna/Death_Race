@@ -5,9 +5,8 @@ namespace AI
 {
     public class AIManager : BaseVehicleManager
     {
-        public AICheckpointManager ai_checkpointManager;
         public AIFollowCurve aiFollowCurve;
-        
+
         protected override void Awake()
         {
             base.Awake();
@@ -18,23 +17,10 @@ namespace AI
             aiFollowCurve = GetComponent<AIFollowCurve>();
         }
 
-        protected override void Start()
-        {
-            base.Start();
-        }
-
         protected override void Update()
         {
-            Debug.DrawLine(transform.position, FacingInfo().point, Color.red);            
+            Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
             currentSpeed = aiFollowCurve.Speed;
-            //isOnRoadtrack = _vehicleController.isOnRoadtrack;
-
-            if (health <= 0)
-            {
-                isAlive = false;
-                RespawnVehicleAI();
-                health = healthLimit;
-            }
         }
 
         public RaycastHit FacingInfo()
@@ -43,16 +29,11 @@ namespace AI
             return hit;
         }
 
-        public void RespawnVehicleAI()
+        public override void RespawnVehicle()
         {
-            
-            //Respawn when dead
-
-            // Respawn when off Roadtrack
-
+            transform.position = aiFollowCurve.lastPosition;
+            aiFollowCurve.Speed = 0f;
+            base.RespawnVehicle();
         }
-
-        //CheckIfOnRoadtrack()
-
     }
 }

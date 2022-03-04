@@ -5,5 +5,6 @@ using UnityEngine;
 public interface IDamageable
 {
     public void GetDamage(int _damage);
+    public void Die();
 
 }

@@ -135,6 +135,7 @@ namespace AI
         {
             UpdateValues();
             CheckIfOnTrack();
+            Die();
         }
 
         /// <summary>
@@ -147,9 +148,8 @@ namespace AI
 
             if (health <= 0)
             {
-                isAlive = false;
-                GetComponent<IExplosion>().Explode();
-                _timer.CreateTimer(3f, RespawnVehicle);
+                
+                
                 health = healthLimit;
             }
         }
@@ -182,6 +182,16 @@ namespace AI
             }
         }
 
+        public void Die()
+        {
+            if (health <= 0f)
+            {
+                isAlive = false;
+                GetComponent<IExplosion>().Explode();
+                gameObject.SetActive(false);
+            }
+        }
+
         /// <summary>
         /// Checks if the vehicle is on the roadtrack
         /// </summary>
@@ -205,17 +215,8 @@ namespace AI
         /// <summary>
         /// Respawns the vehicle at last saved checkpoint
         /// </summary>
-        public void RespawnVehicle()
+        public virtual void RespawnVehicle()
         {
-            _vehicleController.currentSpeed = 0f;
-            _vehicleController.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            _vehicleController.isOnRoadtrack = true;
-
-            var vehicleTransform = transform;
-            vehicleTransform.position = new Vector3(spawnPosition.x, spawnPosition.y + spawnYOffset, spawnPosition.z);
-            vehicleTransform.rotation = spawnRotation;
-
-            //gameObject.SetActive(true);
             health = healthLimit;
             StartCoroutine(SpawnEffect());
             isAlive = true;

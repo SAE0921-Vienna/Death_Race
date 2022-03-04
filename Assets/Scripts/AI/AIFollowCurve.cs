@@ -5,6 +5,8 @@ public class AIFollowCurve : MonoBehaviour
 {
     public float MaxSpeed;
     public float Speed;
+
+    public Vector3 lastPosition;
     
     [SerializeField] private EndOfPathInstruction end;
     [SerializeField] private PathCreator pathCreator;

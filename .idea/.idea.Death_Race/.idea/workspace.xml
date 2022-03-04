@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="baf60d0e-4dd2-4eb4-a2af-f27b52f75919" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Death_Race/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController/CameraLookBackwards.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController/CameraLookBackwards.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Core/vsAI/vsAI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIFollowCurve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIFollowCurve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/AIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/BaseVehicleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/IDamageable.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +216,8 @@
       <workItem from="1646241295105" duration="12161000" />
       <workItem from="1646300766732" duration="7837000" />
       <workItem from="1646318860972" duration="4052000" />
-      <workItem from="1646337203714" duration="3723000" />
+      <workItem from="1646337203714" duration="11203000" />
+      <workItem from="1646388651081" duration="844000" />
     </task>
     <servers />
   </component>

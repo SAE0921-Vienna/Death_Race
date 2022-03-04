@@ -101,6 +101,22 @@ public class PlayerManager : BaseVehicleManager
         }
     }
 
+    public override void RespawnVehicle()
+    {
+        if (_vehicleController != null)
+        {
+            _vehicleController.currentSpeed = 0f;
+            _vehicleController.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            _vehicleController.isOnRoadtrack = true;
+                
+            var vehicleTransform = transform;
+            vehicleTransform.position = new Vector3(spawnPosition.x, spawnPosition.y + spawnYOffset, spawnPosition.z);
+            vehicleTransform.rotation = spawnRotation;
+        }
+        
+        base.RespawnVehicle();
+    }
+
     /// <summary>
     /// Activates cheat and gives the player no speed limit
     /// </summary>
