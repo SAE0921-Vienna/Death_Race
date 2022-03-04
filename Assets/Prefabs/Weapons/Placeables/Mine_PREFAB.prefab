@@ -134,6 +134,7 @@ MonoBehaviour:
   forceMode: 1
   boomEffect: {fileID: 8487399421096006122}
   explosionSound: {fileID: 268898883869933773}
+  destroyObject: 1
 --- !u!1001 &8608126871621201420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -215,7 +216,7 @@ AudioSource:
   m_GameObject: {fileID: 8607117957483542554}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2005802722908573363, guid: df8c052f9d7acbd42bf4181a401b6167, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9e55c4cadbb4ede4f8528c7063ed7e13, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
