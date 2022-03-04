@@ -33,6 +33,11 @@ public class GarageManager : MonoBehaviour
     public Transform notEnoughMoneyTransform;
 
     public GameObject audioManager;
+
+    public bool _isFullscreen;
+    public Transform fullScreenToggle;
+
+
     public void LoadScene(string _name)
     {
         SceneManager.LoadScene(_name);
@@ -41,6 +46,9 @@ public class GarageManager : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1;
+
+        _isFullscreen = Screen.fullScreen;
+        fullScreenToggle.GetComponent<Toggle>().isOn = _isFullscreen;
     }
 
     private void Start()
@@ -65,6 +73,7 @@ public class GarageManager : MonoBehaviour
     /// <param name="_isFullscreen"></param>
     public void SetFullScreen(bool _isFullscreen)
     {
+        this._isFullscreen = _isFullscreen;
         Screen.fullScreen = _isFullscreen;
     }
 }
