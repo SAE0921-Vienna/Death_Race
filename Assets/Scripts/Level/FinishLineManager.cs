@@ -67,10 +67,12 @@ public class FinishLineManager : MonoBehaviour
                     gameManager.StartRoundTimer();
                     minimap.gameObject.SetActive(true);
                 }
-                if (gameManager.ghostMode && ghostManager.ghost.hasData)
+                if (!gameManager.ghostMode)
                 {
-                    positionHandler.enabled = true;
+                    if (positionHandler)
+                        positionHandler.enabled = true;
                 }
+
             }
 
             if (vehicleManager.currentCheckpointIndex == _checkpointManager.checkpointCount - 1)
@@ -88,6 +90,7 @@ public class FinishLineManager : MonoBehaviour
                     ghostManager.AddMoneyGhostMode();
                     ghostManager.StopRecording();
                     ghostManager.StartRecording();
+
                 }
 
                 //If the vehicle is on current lap of index currentLapIndex 4 and collides with the Trigger, set the lap count back to 3.

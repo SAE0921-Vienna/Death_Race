@@ -38,7 +38,7 @@ public class GarageController : MonoBehaviour
     }
 
     /// <summary>
-    /// A/D to zoom in and out with the camera in the garage to the ship
+    /// W/S to zoom in and out with the camera in the garage to the ship
     /// </summary>
     private void CameraZoom()
     {

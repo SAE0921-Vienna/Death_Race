@@ -65,6 +65,9 @@ namespace UserInterface
                     case 3:
                         positionsUI.text = playerManager.currentPositionIndex + "rd";
                         break;
+                    case 4:
+                        positionsUI.text = playerManager.currentPositionIndex + "th";
+                        break;
                     default:
                         break;
                 }
