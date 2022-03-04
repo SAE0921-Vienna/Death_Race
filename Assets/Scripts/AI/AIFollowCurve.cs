@@ -7,7 +7,7 @@ public class AIFollowCurve : MonoBehaviour
     public float Speed;
 
     [SerializeField] private float speedMaxBuff = 22.9f;
-    [SerializeField] private float speedMinBuff = 22.45f;
+    [SerializeField] private float speedMinBuff = 22f;
 
     [SerializeField] private EndOfPathInstruction end;
     [SerializeField] private PathCreator pathCreator;

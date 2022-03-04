@@ -69,7 +69,8 @@ public class FinishLineManager : MonoBehaviour
                 }
                 if (!gameManager.ghostMode)
                 {
-                    positionHandler.enabled = true;
+                    if (positionHandler)
+                        positionHandler.enabled = true;
                 }
 
             }
