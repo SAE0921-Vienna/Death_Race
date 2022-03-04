@@ -50,13 +50,20 @@ namespace Weapons
         private void ExplosionAnimation()
         {
             if (boomEffect == null) return;
-            boomEffect.transform.parent = null;
-            boomEffect.Play();
-            boomEffect.gameObject.AddComponent<DestroyParticle>();
-            explosionSound.Play();
 
             if (destroyObject)
+            {
+                boomEffect.transform.parent = null;
+                boomEffect.Play();
+                boomEffect.gameObject.AddComponent<DestroyParticle>();
+                explosionSound.Play();
                 Destroy(gameObject);
+            }
+            else
+            {
+                boomEffect.Play();
+                explosionSound.Play();
+            }
         }
 
 

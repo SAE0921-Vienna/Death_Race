@@ -77,7 +77,7 @@ public class PowerUps : MonoBehaviour
         SetFov();
 
 
-        if (_vehicleStats.health < 40)
+        if (_vehicleStats.health < 40 && !_vehicleStats.isAlive)
         {
             lowHealthEffect.SetActive(true);
         }

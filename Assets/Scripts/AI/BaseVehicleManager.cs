@@ -13,6 +13,7 @@ namespace AI
         protected VehicleController _vehicleController;
         protected GameManager _gameManager;
         protected CheckpointManager _checkpointManager;
+        protected GameObject spaceShipMesh;
         protected Timer _timer;
         #endregion
 
@@ -105,7 +106,7 @@ namespace AI
             canShoot = false;
 
             if (GetComponentInChildren<SpaceshipRotator>())
-                spaceshipMesh = GetComponentInChildren<SpaceshipRotator>().transform.GetChild(0).transform;
+                spaceshipMesh = GetComponentInChildren<SpaceshipRotator>().transform;
         }
 
         /// <summary>
@@ -141,17 +142,10 @@ namespace AI
         /// <summary>
         /// Updates the required values during runtime.
         /// </summary>
-        protected void UpdateValues()
+        protected virtual void UpdateValues()
         {
             currentSpeed = _vehicleController.GetSpeed();
             isOnRoadtrack = _vehicleController.isOnRoadtrack;
-
-            if (health <= 0)
-            {
-                
-                
-                health = healthLimit;
-            }
         }
 
         /// <summary>
@@ -182,13 +176,18 @@ namespace AI
             }
         }
 
-        public void Die()
+        public virtual void Die()
         {
             if (health <= 0f)
             {
-                isAlive = false;
-                GetComponent<IExplosion>().Explode();
-                gameObject.SetActive(false);
+                if (isAlive == true)
+                {
+                    Invoke(nameof(RespawnVehicle), 2f);
+                    spaceshipMesh.gameObject.SetActive(false);
+                    GetComponent<ShipWeapon>().enabled = false;
+                    GetComponent<IExplosion>().Explode();
+                    isAlive = false;
+                }
             }
         }
 
@@ -219,9 +218,10 @@ namespace AI
         {
             health = healthLimit;
             StartCoroutine(SpawnEffect());
+            spaceshipMesh.gameObject.SetActive(true);
+            GetComponent<ShipWeapon>().enabled = true;
             isAlive = true;
         }
-
 
         public IEnumerator SpawnEffect()
         {
@@ -236,7 +236,6 @@ namespace AI
 
         public IEnumerator GetAmmo()
         {
-
             yield return new WaitForSeconds(3f);
 
             //ammo = _shipWeapon.GetAmmo();

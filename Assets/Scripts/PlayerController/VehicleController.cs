@@ -61,7 +61,7 @@ namespace PlayerController
         private InputActions _controls;
         private RaycastHit _hit;
         private float _drag;
-        private bool _canDrive;
+        public bool _canDrive;
         private GameManager _gameManager;
         
         private const float steerAnimationConstant = 2f;

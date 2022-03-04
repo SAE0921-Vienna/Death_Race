@@ -1,3 +1,4 @@
+using System;
 using PlayerController;
 using UnityEngine;
 
@@ -19,6 +20,21 @@ namespace AI
 
         protected override void Update()
         {
+            UpdateValues();
+            Die();
+        }
+
+        public override void Die()
+        {
+            if (health <= 0f)
+            {
+                aiFollowCurve.Speed = 0f;
+                base.Die();
+            }
+        }
+
+        protected override void UpdateValues()
+        {
             Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
             currentSpeed = aiFollowCurve.Speed;
         }
@@ -32,7 +48,6 @@ namespace AI
         public override void RespawnVehicle()
         {
             transform.position = aiFollowCurve.lastPosition;
-            aiFollowCurve.Speed = 0f;
             base.RespawnVehicle();
         }
     }

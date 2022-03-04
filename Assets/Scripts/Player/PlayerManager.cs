@@ -28,6 +28,16 @@ public class PlayerManager : BaseVehicleManager
     {
         base.Update();
         UpdateUIValues();
+        Die();
+    }
+
+    public override void Die()
+    {
+        if (health <= 0f)
+        {
+            _vehicleController._canDrive = false;
+            base.Die();
+        }
     }
 
     private void UpdateUIValues()
@@ -108,6 +118,7 @@ public class PlayerManager : BaseVehicleManager
             _vehicleController.currentSpeed = 0f;
             _vehicleController.GetComponent<Rigidbody>().velocity = Vector3.zero;
             _vehicleController.isOnRoadtrack = true;
+            _vehicleController._canDrive = true;
                 
             var vehicleTransform = transform;
             vehicleTransform.position = new Vector3(spawnPosition.x, spawnPosition.y + spawnYOffset, spawnPosition.z);

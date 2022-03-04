@@ -1,4 +1,6 @@
+using System;
 using PlayerController;
+using UnityEditor;
 using UnityEngine;
 
 namespace VFX
@@ -27,7 +29,16 @@ namespace VFX
             _vehicleController = GetComponentInParent<VehicleController>();
             _aiFollowCurve = GetComponentInParent<AIFollowCurve>();
         }
-    
+
+        private void Start()
+        {
+            gameObject.layer = transform.root.gameObject.layer;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.layer = transform.root.gameObject.layer;
+            }
+        }
+
         private void Update()
         {
             ThrusterController();
