@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class SaveLoadScript : MonoBehaviour
 {
+    [ContextMenuItem(name: "Save Data", function: "SaveInEditor")]
+    [ContextMenuItem(name: "Load Data", function: "LoadInEditor")]
+
     #region Data
     public int lastEquippedVehicleMesh;
     public int lastEquippedVehicleColliderMesh;
@@ -256,6 +259,18 @@ public class SaveLoadScript : MonoBehaviour
 
 
         }
+    }
+
+    [ContextMenu(itemName: "Save Data")]
+    public void SaveInEditor()
+    {
+        SaveSaveData();
+    }
+
+    [ContextMenu(itemName: "Load Data")]
+    public void LoadInEditor()
+    {
+        LoadSaveData();
     }
 }
 

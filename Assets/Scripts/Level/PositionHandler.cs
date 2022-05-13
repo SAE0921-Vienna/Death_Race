@@ -51,7 +51,7 @@ public class PositionHandler : MonoBehaviour
     {
         for (int i = 0; i < racers.Count; i++)
         {
-            checkpointArray[i] = racers[i].GetComponent<BaseVehicleManager>().nextCheckpointIndex;
+            checkpointArray[i] = racers[i].GetComponent<BaseVehicleManager>().currentCheckpointIndex;
             lapArray[i] = racers[i].GetComponent<BaseVehicleManager>().currentLapIndex;
             totalcpoint[i] = (lapArray[i] * checkpointManager.checkpointCount) + checkpointArray[i];
         }
