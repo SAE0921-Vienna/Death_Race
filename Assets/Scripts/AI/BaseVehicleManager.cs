@@ -56,6 +56,7 @@ namespace AI
         public int nextCheckpointIndex;
         public Checkpoint nextCheckpoint;
         public Checkpoint previousCheckpoint;
+        public float distance;
 
         [Header("Power Up Timer")]
         public float timer;
@@ -137,6 +138,7 @@ namespace AI
             UpdateValues();
             CheckIfOnTrack();
             Die();
+
         }
 
         /// <summary>
@@ -146,6 +148,7 @@ namespace AI
         {
             currentSpeed = _vehicleController.GetSpeed();
             isOnRoadtrack = _vehicleController.isOnRoadtrack;
+            distance = Vector3.Distance(transform.position, nextCheckpoint.transform.position);
         }
 
         /// <summary>

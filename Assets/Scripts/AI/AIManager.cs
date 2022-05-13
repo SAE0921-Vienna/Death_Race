@@ -37,6 +37,7 @@ namespace AI
         {
             Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
             currentSpeed = aiFollowCurve.Speed;
+            distance = Vector3.Distance(transform.position, nextCheckpoint.transform.position);
         }
 
         public RaycastHit FacingInfo()
@@ -50,5 +51,6 @@ namespace AI
             transform.position = aiFollowCurve.lastPosition;
             base.RespawnVehicle();
         }
+
     }
 }
