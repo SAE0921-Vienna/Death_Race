@@ -11613,6 +11613,10 @@ PrefabInstance:
       propertyPath: powerupActivationTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187579055, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: missChance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: maxPitch
       value: 1.304
@@ -44358,7 +44362,8 @@ MonoBehaviour:
   - {fileID: 48825554}
   checkpointArray: 00000000000000000000000000000000
   lapArray: 00000000000000000000000000000000
-  totalcpoint: 00000000000000000000000000000000
+  distanceArray: []
+  totalcpoint: []
   playerPosition: 0
   ai1Position: 0
   ai2Position: 0
@@ -60922,6 +60927,10 @@ PrefabInstance:
       propertyPath: powerupActivationTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187579055, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: missChance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: maxPitch
       value: 1.451
@@ -66187,6 +66196,10 @@ PrefabInstance:
     - target: {fileID: 3158153248187579054, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: powerupActivationTime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158153248187579055, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
+      propertyPath: missChance
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3158153249496100434, guid: 35c8c913d0c6329f88126138935364a4, type: 3}
       propertyPath: maxPitch

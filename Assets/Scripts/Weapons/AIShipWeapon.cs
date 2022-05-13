@@ -12,6 +12,8 @@ public class AIShipWeapon : ShipWeapon
     private float changePositionTimer;
     [SerializeField]
     private bool checkTimer;
+    [SerializeField] 
+    private float missChance = .5f;
 
     private AIManager aIManager;
 
@@ -56,13 +58,20 @@ public class AIShipWeapon : ShipWeapon
 
             if (HitTarget() != null && HitTarget().GetComponent<IDamageable>() != null)
             {
-                if (!HitTarget().GetComponent<BaseVehicleManager>().isImmortal) 
-                    HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
+                if (!HitTarget().GetComponent<BaseVehicleManager>().isImmortal)
+                {
+                    var randomChance = Random.Range(0f, 1f);
+                    if (randomChance >= missChance)
+                    {
+                        HitTarget().GetComponent<IDamageable>().GetDamage(projectileDamage);
+                    }
+                }
+                    
                 Debug.Log(this.gameObject.name + " macht "+ HitTarget().gameObject.name + "Schaden");
             }
             else
             {
-                Debug.Log("HitTarget für IDamageable nicht gefunden (root - no parent?)");
+                Debug.Log("HitTarget fï¿½r IDamageable nicht gefunden (root - no parent?)");
             }
         }
     }
