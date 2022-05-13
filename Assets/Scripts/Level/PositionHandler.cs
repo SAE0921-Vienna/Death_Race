@@ -30,6 +30,7 @@ public class PositionHandler : MonoBehaviour
         {
             StartCoroutine("GetGhostObject", 2f);
         }
+       
 
         checkpointArray = new int[racers.Count];
         lapArray = new int[racers.Count];

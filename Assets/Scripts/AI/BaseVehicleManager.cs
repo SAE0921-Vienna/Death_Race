@@ -148,7 +148,9 @@ namespace AI
         {
             currentSpeed = _vehicleController.GetSpeed();
             isOnRoadtrack = _vehicleController.isOnRoadtrack;
-            distance = Vector3.Distance(transform.position, nextCheckpoint.transform.position);
+            if (nextCheckpoint != null)
+
+                distance = Vector3.Distance(transform.position, nextCheckpoint.transform.position);
         }
 
         /// <summary>

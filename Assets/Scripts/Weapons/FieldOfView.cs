@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using AI;
 
 public class FieldOfView : MonoBehaviour
 {
@@ -52,7 +53,10 @@ public class FieldOfView : MonoBehaviour
             {
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && dstToTarget > GetComponentInChildren<BoxCollider>().size.x)
+                BoxCollider boxCollider = GetComponentInChildren<BoxCollider>();
+                if (boxCollider == null) return;
+
+                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask) && dstToTarget > boxCollider.size.x)
                 {
                     visibleTargets.Add(target);
                 }
@@ -74,6 +78,7 @@ public class FieldOfView : MonoBehaviour
                         nearestObject = vT;
                     }
                 }
+
             }
         }
     }

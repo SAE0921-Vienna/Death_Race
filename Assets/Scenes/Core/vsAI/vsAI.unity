@@ -33036,6 +33036,10 @@ PrefabInstance:
       propertyPath: spaceshipMesh
       value: 
       objectReference: {fileID: 560650661}
+    - target: {fileID: 8063691110312021280, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
+      propertyPath: spaceshipWeaponMesh
+      value: 
+      objectReference: {fileID: 1311209524}
     - target: {fileID: 8063691110312021282, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -33086,6 +33090,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8063691110312021288, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063691110312021289, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8063691110312021289, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
@@ -37668,6 +37676,11 @@ Transform:
   m_Father: {fileID: 92860284}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1311209524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8063691108814396702, guid: c9ce23dd41cd68df592947af9e04d241, type: 3}
+  m_PrefabInstance: {fileID: 1129407589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1312386429
 GameObject:
   m_ObjectHideFlags: 0
@@ -44363,7 +44376,11 @@ MonoBehaviour:
   checkpointArray: 00000000000000000000000000000000
   lapArray: 00000000000000000000000000000000
   distanceArray: []
-  totalcpoint: []
+  totalcpoint:
+  - 0
+  - 0
+  - 0
+  - 0
   playerPosition: 0
   ai1Position: 0
   ai2Position: 0

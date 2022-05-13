@@ -37,7 +37,8 @@ namespace AI
         {
             Debug.DrawLine(transform.position, FacingInfo().point, Color.red);
             currentSpeed = aiFollowCurve.Speed;
-            distance = Vector3.Distance(transform.position, nextCheckpoint.transform.position);
+            if (nextCheckpoint != null)
+                distance = Vector3.Distance(transform.position, nextCheckpoint.transform.position);
         }
 
         public RaycastHit FacingInfo()
